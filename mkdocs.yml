@@ -1,0 +1,6 @@
+site_name: HNZ Engineering Standards
+site_url: https://nosureyet.com
+plugins:
+  - include-markdown
+theme:
+  name: material

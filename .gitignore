@@ -1,0 +1,27 @@
+# Agentic
+.github/
+
+# IDE and editor
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.factorypath
+.settings/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Hugo and generated content
+.generated/
+public/
+resources/_gen/
+.tools/
+.hugo_build.lock
+
+# Python
+*.pyc
+**/__pycache__/
