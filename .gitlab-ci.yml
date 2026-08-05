@@ -2,8 +2,7 @@ pages:
   stage: deploy
   image: astral/uv:python3.13-trixie
   script:
-    - cp README.md docs/index.md
-    - uv pip install
+    - uv install
     - uv run mkdocs build --site-dir public
   cache:
     key: ${CI_COMMIT_REF_SLUG}
