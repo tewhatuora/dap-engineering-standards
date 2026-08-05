@@ -63,7 +63,7 @@ These principles verify security controls through testing rather than assuming t
 
 #### References
 
-[Application Security Testing (SAST, DAST, Penetration Testing)](../standards/quality-engineering/application-security-testing.md)
+[Application Security Testing](../standards/quality-engineering/application-security-testing.md)
 
 ### Managing Vulnerability & Supply Chain Risk
 

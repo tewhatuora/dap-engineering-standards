@@ -71,5 +71,5 @@ These principles design a non-functional characteristic to be verifiable through
 #### References
 
 [Performance & Load Testing](../standards/quality-engineering/performance-load-testing.md)\
-[Application Security Testing (SAST, DAST, Penetration Testing)](../standards/quality-engineering/application-security-testing.md)\
+[Application Security Testing](../standards/quality-engineering/application-security-testing.md)\
 [Accessibility Testing](../standards/quality-engineering/accessibility-testing.md)

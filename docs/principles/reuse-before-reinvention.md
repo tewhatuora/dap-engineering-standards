@@ -47,5 +47,4 @@ These principles expose a stable, versioned interface so other teams can adopt a
 
 #### References
 
-[API Design & Standards](../standards/architecture-system-design/api-design-standards.md)\
-[Dependency & Runtime Management](../standards/code-implementation/dependency-runtime-management.md)
+[API Design & Standards](../standards/architecture-system-design/api-design-standards.md)
