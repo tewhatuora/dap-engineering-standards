@@ -1,0 +1,82 @@
+# Performance & Scalability by Design
+
+## Objective
+
+Performance & Scalability by Design establishes the expectation that systems are designed with defined performance targets and an appropriate scaling approach, rather than having performance and capacity addressed only after a problem is observed in production. It directs engineering effort toward identifying scaling constraints, choosing a scaling model suited to expected demand, and validating that performance and capacity targets are actually met.
+
+## Principles
+
+### Treating Performance and Scale as an Architectural Decision
+
+These principles make how a service performs and scales under load an explicit architectural decision at design time.
+
+1. How a service will perform and scale under load must be treated as an architectural decision, made at design time.
+2. A design must not be signed off before its expected load and scaling approach have been thought through.
+
+### Defining Performance & Capacity Requirements
+
+These principles define load, throughput, latency, and error rate as explicit non-functional requirements.
+
+1. Expected load, throughput, concurrency, acceptable response time or latency, and error rate must be defined as explicit non-functional requirements for a service.
+2. Performance and capacity requirements should be based on realistic current or projected demand.
+
+### Designing for Horizontal & Elastic Scaling
+
+These principles prefer horizontal, elastic scaling over scaling a single instance vertically.
+
+1. A service should be designed to scale horizontally, by adding or removing instances to meet demand, in preference to scaling a single instance vertically.
+2. The runtime model selected for a workload should support the scaling approach its performance and capacity requirements demand.
+3. Where elastic scaling is used, capacity should adjust automatically to a sustained change in demand rather than relying on manual intervention.
+
+#### References
+
+[Stateless First](stateless-first.md)\
+[Runtime Architecture](../standards/architecture-system-design/runtime-architecture.md)\
+[Container Orchestration](../standards/platform-infrastructure/container-orchestration.md)\
+[Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)\
+[Managed Services Standards](../standards/platform-infrastructure/managed-services-standards.md)
+
+### Identifying & Addressing Scaling Constraints and Bottlenecks
+
+These principles identify a scaling constraint during design and address or explicitly accept it.
+
+1. A component that cannot scale independently of the rest of a service, or that constitutes a single point of contention under load, must be identified during design.
+2. An identified scaling constraint must be addressed or explicitly accepted as a bounded limitation; it must not remain unrecognised until it causes a failure in production.
+
+#### References
+
+[Service & Domain Design](../standards/architecture-system-design/service-domain-design.md)
+
+### Efficient Data Access at Scale
+
+These principles design data access to avoid unnecessary latency or load as demand grows.
+
+1. A data access pattern should be designed to avoid unnecessary latency or load as demand grows, including through caching, pagination, and appropriate indexing.
+2. A cache must have a defined invalidation or expiry approach, so it does not serve stale data indefinitely.
+
+#### References
+
+[Schema Design & Evolution](../standards/architecture-system-design/schema-design-evolution.md)
+
+### Verifying Performance & Scalability Through Testing
+
+These principles validate a performance or capacity target through testing before it is relied on in production.
+
+1. A defined performance or capacity target must be validated through load or performance testing before it is relied on in production.
+2. Performance and load testing should be repeated as a service evolves.
+
+#### References
+
+[Performance & Load Testing](../standards/quality-engineering/performance-load-testing.md)\
+[Testability by Design](testability-by-design.md)
+
+### Outgrowing a Scaling Approach
+
+These principles re-validate a scaling assumption as usage grows beyond what it was designed for.
+
+1. Performance and scalability assumptions made at design time should be re-validated as usage and scale grow beyond the level they were originally defined for, rather than treated as fixed indefinitely.
+2. Sustained performance degradation, or a component approaching a known scaling limit identified earlier in design, should trigger a reassessment of the scaling approach.
+
+#### References
+
+[Metrics, Monitoring & Alerting](../standards/operations-observability/metrics-monitoring-alerting.md)

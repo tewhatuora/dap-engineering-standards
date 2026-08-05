@@ -1,0 +1,9 @@
+# Progressive Delivery Strategies (Blue/Green, Canary)
+
+## Objective
+
+_To be defined._
+
+## Standards
+
+_To be defined._
