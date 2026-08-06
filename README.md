@@ -1,3 +1,4 @@
+<!--include-start-->
 # Health New Zealand Engineering Principles & Standards
 
 Engineering principles and standards for delivering software and services for Health New Zealand.
@@ -50,6 +51,7 @@ Each principle and standard follows a consistent format:
 
 Principles and standards are technology-neutral unless a specific technology is explicitly in scope, and are written to be measurable, auditable, and enforceable rather than descriptive or tutorial in nature. Where a requirement is already defined by another principle or standard, it is named in the References section rather than restated or linked inline.
 
+<!--include-end-->
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the required review process, local validation and Hugo build commands, draft and version-publishing workflow, and generated-site preview guidance.
