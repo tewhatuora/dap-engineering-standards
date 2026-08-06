@@ -30,7 +30,7 @@ These requirements guide which dependency a codebase adopts, weighing its publis
 These requirements keep a dependency's licence compatible with how a service uses it.
 
 1. A dependency's licence must be reviewed for compatibility with how the service will use it before the dependency is adopted; a dependency whose licence is incompatible or unclear must not be adopted.
-2. A licence incompatibility discovered in an already-adopted dependency must be remediated, whether by replacing the dependency, isolating it, or obtaining a compatible licence grant.
+2. A licence incompatibility discovered in an already-adopted dependency must be remediated, whether by replacing the dependency, isolating it, or obtaining a compatible licence.
 
 ### Transitive Dependency Responsibility
 
