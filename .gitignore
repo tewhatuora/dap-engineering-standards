@@ -15,12 +15,9 @@
 .DS_Store
 Thumbs.db
 
-# Hugo and generated content
-.generated/
+# mkdocs and generated content
+.cache/
 public/
-resources/_gen/
-.tools/
-.hugo_build.lock
 
 # Python
 *.pyc
