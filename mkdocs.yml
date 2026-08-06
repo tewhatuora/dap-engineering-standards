@@ -1,4 +1,4 @@
-site_name: HNZ Engineering Standards
+site_name: HealthNZ Engineering Standards
 site_url: https://notsureyet.com
 plugins:
   - include-markdown
@@ -8,6 +8,12 @@ plugins:
   - search
 theme:
   name: material
+  features:
+    - navigation.indexes
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - toc.follow
   custom_dir: theme-overrides
 markdown_extensions:
   - pymdownx.superfences:
@@ -16,7 +22,8 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
-  - Engineering Standards and Principles: index.md
+  #- Engineering Standards and Principles: index.md
+  - Home: index.md
   - Principles:
     - Accessibility by Design: principles/accessibility-by-design.md
     - AI Assisted Engineering Accountability: principles/ai-assisted-engineering-accountability.md
