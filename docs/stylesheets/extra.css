@@ -13,6 +13,7 @@
   --md-primary-fg-color:        rgb(0, 85, 140);
   --md-typeset-color:           rgb(0, 85, 140);
   --md-text-font-family:        "Poppins",-apple-system,BlinkMacSystemFont,"Ubuntu","Roboto","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  --md-footer-bg-color:       #041836;
 }
 
 .md-header {
@@ -43,6 +44,20 @@
 .md-typeset h2 {
   font-size: 1.15rem;
   margin: 1.8em 0 0.9em;
+}
+
+/* .md-typeset h3 {
+  font-size: 1rem;
+  margin: 1.5em 0 0.75em;
+} */
+
+.md-typeset a {
+  text-decoration: underline;
+}
+
+.md-typeset a:focus, .md-typeset a:hover {
+    color: #0c818f;
+    text-decoration-color: #2dccd3;
 }
 
 .md-nav {
