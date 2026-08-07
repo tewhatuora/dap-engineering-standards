@@ -10,11 +10,17 @@ theme:
   name: material
   features:
     - navigation.indexes
-    - navigation.tabs
-    - navigation.tabs.sticky
+    # - navigation.tabs
+    # - navigation.tabs.sticky
     - navigation.top
     - toc.follow
+  logo: assets/two.svg
+  favicon: assets/favicon-32x32.png
+  palette:
+    primary: custom
   custom_dir: theme-overrides
+extra_css:
+  - stylesheets/extra.css
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
