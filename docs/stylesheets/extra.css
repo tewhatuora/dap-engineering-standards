@@ -77,3 +77,19 @@
 .md-sidebar--secondary .md-sidebar__scrollwrap {
   border-left: 1px solid rgb(218, 221, 225);
 }
+
+@media screen and (min-width: 60em) {
+  .md-search .md-search__form {
+    background-color: rgb(235, 237, 240);
+    border-radius: .8rem;
+    height: 1.8rem;
+  }
+}
+
+.md-search__form label.md-search__icon {
+  color:            rgb(68, 73, 80);
+}
+
+.md-search__form input::placeholder {
+  color: #bec3c9;
+}
