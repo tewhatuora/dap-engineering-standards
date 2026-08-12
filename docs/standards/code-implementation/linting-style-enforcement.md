@@ -2,16 +2,16 @@
 
 ## Objective
 
-Linting & Style Enforcement treats checking a codebase against its adopted coding conventions as a continuous, automated part of engineering work. This ensures a deviation is caught early and resolved through a disciplined, reviewed process.
+Linting & Style Enforcement treats checking a codebase against its adopted ruleset as a continuous, automated part of engineering work. This ensures a deviation is caught early and resolved through a reviewed process.
 
 ## Standards
 
 ### Linting Coverage
 
-These requirements set out the scope of automated linting across a codebase.
+These requirements set out how automated linting coverage is scoped across a codebase.
 
 1. Each language in use within a codebase, including one used to define infrastructure or a pipeline, must be checked by an automated linter appropriate to it.
-2. Generated code should be excluded from linting scope, rather than tracked as a violation.
+2. Generated code must be excluded from linting scope, rather than tracked as a violation.
 3. An established, actively maintained linter should be preferred over a custom-built or unmaintained one for a language it already covers.
 4. The linters in use for a codebase must be documented and discoverable, such as through a repository's `README` or a location linked from it.
 
@@ -35,8 +35,9 @@ These requirements address how a linter's configuration is controlled across a c
 These requirements describe how a change's progression through the delivery pipeline is gated according to a lint violation's severity.
 
 1. A lint check must run as part of the delivery pipeline.
-2. Each lint rule must be classified by severity, distinguishing a violation that must block progression from one that is advisory only.
-3. A change must not merge or deploy while a non-baselined violation at blocking severity remains outstanding.
+2. Each lint rule must be classified by severity, where supported by the linter, distinguishing a violation that must block progression from one that is advisory only.
+3. A lint rule not classified by severity must be treated as advisory only.
+4. A change must not merge or deploy while a non-baselined violation at blocking severity remains outstanding.
 
 #### References
 [Automation First](../../principles/automation-first.md)
@@ -78,10 +79,10 @@ These requirements guide how a change to the adopted ruleset is governed.
 
 ### Baselining Pre-Existing Violations
 
-These requirements set out the baseline available for a pre-existing violation when adopting a linter or a new rule on an existing codebase.
+These requirements set out how a pre-existing violation is baselined when a linter or a new rule is adopted on an existing codebase.
 
-1. Adopting a linter or a new rule on an existing codebase may add its existing violations to the exception list as a baseline exempt from the pipeline gate.
-2. A violation introduced after a baseline is established must not be added to that baseline.
+1. Adopting a linter or a new rule on an existing codebase may treat its existing violations as a baseline, recorded either as an explicit exception list or as a fixed point in the codebase's history.
+2. A violation introduced after a baseline is established, whether as an exception list or a fixed point in the codebase's history, must not be treated as baselined.
 3. A baselined violation must be tracked and remediated as technical debt.
 
 #### References
