@@ -2,7 +2,7 @@
 
 ## Objective
 
-Version Control establishes the version-controlled repository as a codebase's sole authoritative source, holding every change to it in a history that stays clean, accurate, and free of sensitive or extraneous content. It keeps a codebase's current state and its complete history of change verifiable and attributable, so how a codebase reached its present form is never in doubt.
+Version Control establishes the version-controlled repository as a codebase's sole authoritative source, holding every change to it in a history that stays clean, accurate, and free of sensitive or extraneous content. It keeps a codebase's current state and its complete history of change verifiable and attributable, so every change can be traced to the person or process responsible for it.
 
 ## Standards
 
@@ -77,8 +77,8 @@ These requirements set out how a secret, credential, or other sensitive value is
 
 1. A secret, credential, private key, or other sensitive value must not be committed to a repository; removing it from a later commit does not remove it from the repository's history, so it must never be introduced in the first place.
 2. This prohibition extends beyond file content to a repository's metadata, such as a commit message, branch name, tag, or change description; a sensitive value must not be placed in any of these either.
-3. A repository must be scanned automatically for a sensitive value before it is committed or merged, so an accidental commit is caught before it reaches shared history.
-4. Where a sensitive value is found to have been committed, it must be rotated immediately and purged from the repository's history, not merely removed from its current state.
+3. A merge request must be scanned automatically for a sensitive value before it can be merged, so sensitive data is never accidentally merged into a protected branch.
+4. Where a sensitive value is found to have been merged, it must be rotated immediately and purged from the repository's history, not merely removed from its current state.
 
 #### References
 

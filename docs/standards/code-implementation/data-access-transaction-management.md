@@ -8,7 +8,7 @@ Data Access & Transaction Management governs how a service's code interacts with
 
 ### Data Access Layer Abstraction
 
-These requirements centralise a service's interaction with its data store behind a defined data access layer, so query logic and store-specific detail are not duplicated or scattered through business logic.
+These requirements set out how a service's interaction with its data store is centralised behind a defined data access layer, so query logic and store-specific detail are not duplicated or scattered through business logic.
 
 1. A service must access its data store through a defined data access layer or set of interfaces, not by embedding a raw query directly within business logic or presentation code.
 2. A data access layer must provide a purpose-named method for each operation a service performs, such as retrieving a patient's active referrals, rather than a generic method that passes through a filter or query fragment, so the data store stays replaceable without changing the code that calls it.
@@ -21,7 +21,7 @@ These requirements centralise a service's interaction with its data store behind
 
 ### Object-Relational Mapping Usage
 
-These requirements manage how a service may use an object-relational mapper (ORM) or similar data access abstraction, so its convenience does not come at the cost of performance or correctness.
+These requirements cover how an object-relational mapper (ORM) or similar data access abstraction is used, so its convenience does not come at the cost of performance or correctness.
 
 1. Use of an ORM is optional; a service may use raw queries or a lighter-weight data access technology instead, where an ORM does not provide a genuine benefit.
 2. An eager or lazy loading strategy must be an explicit, deliberate choice for each relationship an ORM defines, not left to its default for every relationship.
@@ -36,7 +36,7 @@ These requirements manage how a service may use an object-relational mapper (ORM
 
 ### Parameterised Queries & Injection Prevention
 
-These requirements prevent untrusted input from altering a query's structure, so a data store cannot be manipulated through injection.
+These requirements address how a query sent to a data store is constructed, so untrusted input cannot alter its structure or manipulate the data store through injection.
 
 1. A query or command sent to a data store must be constructed using a parameterised query, prepared statement, or equivalent binding mechanism provided by the data access technology in use.
 2. Untrusted input, including a value originating from a user, an external system, or another service, must not be concatenated or interpolated directly into a query string.
@@ -46,9 +46,9 @@ These requirements prevent untrusted input from altering a query's structure, so
 [Security by Design](../../principles/security-by-design.md)\
 [Secure Software Development Practices](../security-identity/secure-software-development-practices.md)
 
-### Data Store Error Handling & Disclosure
+### Error Handling & Disclosure
 
-These requirements limit what a data store's error reveals externally while keeping enough detail available internally to diagnose it.
+These requirements describe how an error returned by a data store is handled, so enough detail remains available internally to diagnose it without exposing it externally.
 
 1. An error returned by a data store must not be disclosed to a caller in a form that reveals a query's structure or the underlying schema.
 2. The full error, including its underlying cause, must still be logged for internal diagnosis, without logging a sensitive parameter value the query contained.
@@ -61,7 +61,7 @@ These requirements limit what a data store's error reveals externally while keep
 
 ### Connection Management & Pooling
 
-These requirements keep a connection to a data store bounded, reusable, and reliably released, so a service does not exhaust its own or a shared data store's connection capacity.
+These requirements set out how a connection to a data store is obtained, pooled, and released, so a service does not exhaust its own or a shared data store's connection capacity.
 
 1. A service must obtain a connection to a data store from a connection pool, rather than opening a new connection for each operation.
 2. A connection pool's size must be bounded and configured to suit the data store's actual connection capacity and the service's expected concurrency.
@@ -75,7 +75,7 @@ These requirements keep a connection to a data store bounded, reusable, and reli
 
 ### Least-Privilege Data Store Credentials
 
-These requirements grant a service's data store credential only the access its role requires, so a compromised credential cannot be used beyond it.
+These requirements guide how a service's data store credential is granted and scoped, so a compromised credential cannot be used beyond the access its role requires.
 
 1. A service's data store credential must be granted only the operations and objects its role requires, such as read, create, update, or delete access to specific tables, collections, or stored procedures.
 2. A credential's granted access must be reviewed when a service's role changes, and revoked where no longer required.
@@ -88,7 +88,7 @@ These requirements grant a service's data store credential only the access its r
 
 ### Transaction Boundaries & Atomicity
 
-These requirements keep a transaction's boundary explicit and scoped to the unit of work it protects, so related changes succeed or fail together and the transaction does not stay open longer than necessary.
+These requirements address how a transaction's boundary stays explicit and scoped to the unit of work it protects, so related changes succeed or fail together and the transaction does not stay open longer than necessary.
 
 1. A transaction's start and end must be explicitly defined in code, rather than left to a data access technology's default behaviour, such as auto-committing each statement as its own implicit transaction.
 2. Writes belonging to the same unit of work must be executed within a single transaction and rolled back in full where any part fails.
@@ -101,7 +101,7 @@ These requirements keep a transaction's boundary explicit and scoped to the unit
 
 ### Isolation Levels & Concurrency Control
 
-These requirements govern how a transaction's isolation level and concurrency control are chosen, so a concurrent write cannot cause a lost update.
+These requirements describe how a transaction's isolation level and concurrency control are chosen, so a concurrent write cannot cause a lost update.
 
 1. A transaction's isolation level must be deliberately chosen to match the consistency and concurrency needs of the operation it protects.
 2. Optimistic concurrency control, such as a version or timestamp column checked at write time, should be used where write conflicts are infrequent.
@@ -112,9 +112,9 @@ These requirements govern how a transaction's isolation level and concurrency co
 
 [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
 
-### Transient Failure Handling
+### Timeouts & Retries
 
-These requirements bound how long an operation may take and retry only a genuinely transient failure, so a retry resolves the failure without repeating its effect.
+These requirements cover how an operation against a data store is bounded by a timeout and when a failure is safe to retry, so a retry resolves the failure without repeating its effect.
 
 1. An operation executed against a data store must be bound by a timeout, so a service does not block indefinitely waiting for it to complete.
 2. An operation against a data store that fails with a transient error, such as a network or I/O error, should be retried automatically, using a bounded number of attempts with minimal delay between them.
@@ -126,9 +126,9 @@ These requirements bound how long an operation may take and retry only a genuine
 [Reliability & Resilience](../../principles/reliability-resilience.md)\
 [Stateless First](../../principles/stateless-first.md)
 
-### Avoiding Distributed Transactions Across Services
+### Cross-Service Transaction Consistency
 
-These requirements extend transaction management across a service boundary, so data consistency between services does not depend on a distributed transaction spanning them.
+These requirements set out how data consistency is maintained across a service boundary, so it does not depend on a distributed transaction spanning more than one service's data store.
 
 1. A transaction must not span more than one service's own data store; each service's data must be committed within its own transaction boundary.
 2. Where an operation must keep data consistent across more than one service, it must use an eventual-consistency pattern, such as a saga with compensating actions, rather than a distributed transaction or two-phase commit spanning services.
@@ -155,7 +155,7 @@ These requirements guide how a read is served at scale, so growing read demand d
 
 ### Write Efficiency
 
-These requirements keep a write efficient at scale, so growing write demand does not degrade performance or place unnecessary load on a data store.
+These requirements describe how a write stays efficient at scale, so growing write demand does not degrade performance or place unnecessary load on a data store.
 
 1. A data access layer should batch multiple writes to the same table or collection into a single round trip where feasible, rather than issuing a separate write per record.
 2. A batch write affecting a large volume of data should be bounded to a reasonable chunk size, so a single write does not lock or overload the data store.
@@ -167,7 +167,7 @@ These requirements keep a write efficient at scale, so growing write demand does
 
 ### Data Access Observability
 
-These requirements make a service's interaction with its data store observable, so a performance or reliability problem can be detected and diagnosed rather than discovered only once it causes a wider failure.
+These requirements address how a service's interaction with its data store stays observable, so a performance or reliability problem can be detected and diagnosed rather than discovered only once it causes a wider failure.
 
 1. A query's execution time must be observable, so a slow query can be identified before it degrades a service's wider performance.
 2. A query's outcome, whether it succeeded, failed, or was retried, must be observable, so a failure pattern can be investigated rather than treated as routine.

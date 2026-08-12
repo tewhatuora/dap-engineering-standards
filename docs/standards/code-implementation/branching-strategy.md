@@ -6,9 +6,9 @@ Branching Strategy establishes a consistent model for creating, integrating, and
 
 ## Standards
 
-### Deliberate, Documented Branching Model
+### Defined Branching Model
 
-These requirements keep a repository's branching model explicit, documented, and applied consistently to every kind of code it holds.
+These requirements describe how a repository's branching model stays deliberate and documented.
 
 1. A repository must use a single, explicitly defined branching model.
 2. The branching model in use must be documented in the repository's `README` or a location linked from it.
@@ -20,7 +20,7 @@ These requirements keep a repository's branching model explicit, documented, and
 
 ### Approved Branching Models
 
-These requirements limit a repository to trunk-based development or Gitflow, matching the model to its release pattern.
+These requirements address how a branching model is chosen to match a repository's release pattern.
 
 1. A repository must adopt either trunk-based development or Gitflow as its branching model.
 2. Under either branching model, a branch must not be created to represent a deployment environment, such as a staging or production branch; environment-specific behaviour must be managed independently of the branching model.
@@ -35,7 +35,7 @@ These requirements limit a repository to trunk-based development or Gitflow, mat
 
 ### Short-Lived Branches
 
-These requirements merge a branch quickly and keep it in sync with the branch it will merge into.
+These requirements cover how a branch stays short-lived and in sync with the branch it will merge into.
 
 1. A branch created for a discrete unit of work, such as a feature, fix, or routine maintenance task, should be merged within a few days of creation, so its changes are integrated and tested while still fresh.
 2. A branch should be kept in sync with the integration branch it will merge into, through frequent rebasing or merging, to limit divergence and merge conflict risk.
@@ -43,7 +43,7 @@ These requirements merge a branch quickly and keep it in sync with the branch it
 
 ### Branch Naming Conventions
 
-These requirements make a branch's purpose and origin identifiable from its name alone.
+These requirements set out how a branch's name makes its purpose and origin identifiable.
 
 1. A branch name should follow the pattern below, using one of the recommended prefixes, and include a short, descriptive reference to the work it contains, such as a ticket or issue identifier.
 2. A branch naming convention, once adopted, must be applied consistently across a repository so a branch's purpose and origin can be determined from its name alone.
@@ -65,7 +65,7 @@ These requirements make a branch's purpose and origin identifiable from its name
 
 ### Protected Branches & Required Checks
 
-These requirements protect a branch from direct pushes and require its checks and approvals before merge.
+These requirements guide how a protected branch is changed only through a reviewed merge request that has passed its required checks.
 
 1. An integration, release, or hotfix branch must be protected from direct pushes; a change must be merged only through a merge request that has received the review and approval required for the repository.
 2. A merge request must not be merged until its required automated checks, such as build, test, and static analysis, have passed.
@@ -80,14 +80,14 @@ These requirements protect a branch from direct pushes and require its checks an
 [Security by Design](../../principles/security-by-design.md)\
 [Identity & Access Management](../security-identity/identity-access-management.md)
 
-### Merge Strategy & Commit History Integrity
+### Merge Strategy & History Integrity
 
-These requirements define a repository's merge strategy, document it, and keep commit history intact.
+These requirements describe how a repository's commit history stays intact and traceable under one documented merge strategy.
 
 1. A repository must use one defined merge strategy, such as squash merging or fast-forward merging, applied consistently for merges into a protected branch.
 2. The merge strategy in use must be documented in the repository's `README` or a location linked from it.
 3. The commit history of a protected branch must not be rewritten, such as through a force-push that alters existing commits, once another contributor may have based work on it.
-4. A merge into a protected branch should remain traceable to the merge request that introduced it, including its review and approval record.
+4. A merge into a protected branch must remain traceable to the merge request that introduced it, including its review and approval record.
 
 #### References
 
@@ -95,7 +95,7 @@ These requirements define a repository's merge strategy, document it, and keep c
 
 ### Release & Hotfix Branches
 
-These requirements govern how a release or hotfix branch is created, scoped, and merged back.
+These requirements address how a release or hotfix branch stays scoped to the work it was created to stabilise or fix.
 
 1. Where a release branch is used, it should be created from a specific, identifiable point on the integration branch, and should remain open only for the stabilisation period leading up to that release.
 2. Where a hotfix branch is used to forward-fix a production issue rather than resolve it through a rollback, it should be created from the released state it is fixing, and its change must be merged back into every branch that requires the fix once validated.
@@ -108,7 +108,7 @@ These requirements govern how a release or hotfix branch is created, scoped, and
 
 ### Branch Cleanup & Staleness Review
 
-These requirements remove a merged branch and periodically review a repository for stale ones.
+These requirements cover how a repository stays free of merged and stale branches.
 
 1. A branch must be deleted once it has been merged, unless it is a protected branch.
 2. A repository should be reviewed periodically for stale, unmerged branches, and a branch with no active work should be merged, rebased, or deleted.

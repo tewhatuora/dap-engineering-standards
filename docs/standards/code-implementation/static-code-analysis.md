@@ -2,16 +2,16 @@
 
 ## Objective
 
-Static Code Analysis treats automated inspection of source code for defects, security weaknesses, and maintainability decay as a continuous part of engineering work. This keeps each visible and addressed as it occurs.
+Static Code Analysis treats automated inspection of source code for defects, security weaknesses, and maintainability decline as a continuous part of engineering work. This keeps each visible and addressed before it materially affects the codebase.
 
 ## Standards
 
 ### Static Analysis Coverage
 
-These requirements set out the scope of static analysis across a codebase, distinct from a narrower style or formatting check.
+These requirements set out how static analysis coverage is scoped across a codebase, distinct from a narrower style or formatting check.
 
 1. Each language in use within a codebase, including one used to define infrastructure, must be checked using static analysis appropriate to it.
-2. Generated code and a path not held under version control, such as a build output directory, should be excluded from static analysis scope.
+2. Generated code and a path not held under version control, such as a build output directory, must be excluded from static analysis scope.
 3. Static analysis must check for a likely bug pattern, such as a null dereference, a resource leak, or an unreachable code path; a maintainability issue or code smell; and a known class of security weakness.
 4. Where a language supports static type checking, type checking must be enabled and treated as part of a codebase's static analysis coverage.
 
@@ -20,9 +20,9 @@ These requirements set out the scope of static analysis across a codebase, disti
 [Application Security Testing](../quality-engineering/application-security-testing.md)\
 [Security by Design](../../principles/security-by-design.md)
 
-### Complexity & Maintainability Measurement
+### Maintainability Analysis
 
-These requirements keep a codebase's maintainability measured through static analysis, so a decline is identified as it occurs.
+These requirements describe how a codebase's maintainability is assessed through static analysis, so a decline is identified as it occurs.
 
 1. Static analysis must be used to measure a maintainability indicator, such as complexity or duplication, for code as it is written.
 2. A degrading trend in a measured indicator must be visible to the team responsible for the code, so it can be addressed before it materially affects maintainability.
@@ -35,9 +35,9 @@ These requirements keep a codebase's maintainability measured through static ana
 
 These requirements address how static analysis tooling's configuration is controlled and shared across the organisation.
 
-1. A ruleset must be configured and managed within the analysis tool itself, so the same ruleset can be shared consistently across the organisation.
-2. The same rule definitions and tool version must apply locally and in the delivery pipeline.
-3. The organisation's default ruleset should be adopted wherever it meets a codebase's needs; a customisation should be added only where an actual need justifies it.
+1. A ruleset must be configured and managed either within the analysis tool itself or as version-controlled configuration, whichever the tool supports, so the same ruleset can be shared consistently across the organisation.
+2. The same rule definitions and tool version must apply locally, where supported by the tool, and in the delivery pipeline.
+3. The analysis tool's default ruleset should be adopted wherever it meets a codebase's needs; a customisation should be added only where an actual need justifies it.
 
 #### References
 [Platform Alignment](../../principles/platform-alignment.md)\
@@ -63,7 +63,7 @@ These requirements describe how a change's progression through the delivery pipe
 
 These requirements cover how a static analysis finding is surfaced locally, before a change is submitted for review.
 
-1. Static analysis should be available to run locally through IDE integration, so a finding is visible before a change is submitted for review.
+1. Static analysis should be available to run locally through IDE integration, where supported by the tool, so a finding is visible before a change is submitted for review.
 2. Static analysis running through IDE integration should analyse a file incrementally as it is written, rather than only through a manual, whole-codebase scan, so feedback remains immediate.
 
 #### References
@@ -75,8 +75,8 @@ These requirements address how a static analysis finding is suppressed without w
 
 1. A finding must not be suppressed by disabling a rule broadly, unless a genuine investigation shows every occurrence it would otherwise flag is a false positive.
 2. A suppression must identify the specific finding it addresses, and must include a documented reason.
-3. A suppression must receive the same review scrutiny as the change it appears in.
-4. A suppression or exception must be tracked through the analysis tool's own dismissal mechanism or a version-controlled list, so it remains auditable.
+3. A suppression or exception must be tracked through the analysis tool's own dismissal mechanism or a version-controlled list, so it remains auditable.
+4. A suppression recorded in a version-controlled list must be reviewed alongside the change it appears in; a suppression tracked through the analysis tool's own dismissal mechanism must be restricted to an authorised role.
 
 #### References
 [Code Review](code-review.md)\
@@ -86,20 +86,21 @@ These requirements address how a static analysis finding is suppressed without w
 
 These requirements guide how a change to the adopted ruleset is governed.
 
-1. A change to the adopted ruleset, including adding, removing, or weakening a rule, must be restricted to an authorised role and reviewed with the same rigor as a code change.
-2. A ruleset must not be weakened unilaterally to let a specific failing change pass.
-3. The ruleset should be reviewed periodically, so it keeps pace with a newly identified bug pattern, language feature, or evolving engineering practice.
+1. A change to the adopted ruleset, including adding, removing, or weakening a rule, must be restricted to an authorised role.
+2. A change made as version-controlled configuration must be reviewed with the same rigor as a code change; a change made within the analysis tool itself must remain visible in the tool's own audit trail.
+3. A ruleset must not be weakened unilaterally to let a specific failing change pass.
+4. The ruleset should be reviewed periodically, so it keeps pace with a newly identified bug pattern, language feature, or evolving engineering practice.
 
 #### References
 [Code Review](code-review.md)
 
 ### Baselining Pre-Existing Findings
 
-These requirements set out the baseline available for a pre-existing finding when adopting static analysis or a new rule on an existing codebase.
+These requirements set out how a pre-existing finding is baselined when adopting static analysis or a new rule on an existing codebase.
 
-1. Adopting static analysis or a new rule on an existing codebase may exempt its existing findings from the pipeline gate as a baseline.
-2. A finding introduced after a baseline is established must not be added to that baseline.
-3. A baselined finding must be tracked and remediated as technical debt.
+1. Adopting static analysis or a new rule on an existing codebase may treat its existing violations as a baseline, recorded either as an explicit exception list or as a fixed point in the codebase's history.
+2. A violation introduced after a baseline is established, whether as an exception list or a fixed point in the codebase's history, must not be treated as baselined.
+3. A baselined violation must be tracked and remediated as technical debt.
 
 #### References
 [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
