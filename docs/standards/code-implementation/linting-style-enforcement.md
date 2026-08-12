@@ -16,7 +16,7 @@ These requirements set out how automated linting coverage is scoped across a cod
 4. The linters in use for a codebase must be documented and discoverable, such as through a repository's `README` or a location linked from it.
 
 #### References
-[Coding Standards & Formatting](coding-standards-formatting.md)
+- [Coding Standards & Formatting](coding-standards-formatting.md)
 
 ### Linter Configuration
 
@@ -27,8 +27,8 @@ These requirements address how a linter's configuration is controlled across a c
 3. A linter's default ruleset should be adopted wherever it meets a codebase's needs; a customisation should be added only where an actual need justifies it.
 
 #### References
-[Everything as Code](../../principles/everything-as-code.md)\
-[Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Everything as Code](../../principles/everything-as-code.md)
+- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
 
 ### Severity-Based Pipeline Gate
 
@@ -40,7 +40,7 @@ These requirements describe how a change's progression through the delivery pipe
 4. A change must not merge or deploy while a non-baselined violation at blocking severity remains outstanding.
 
 #### References
-[Automation First](../../principles/automation-first.md)
+- [Automation First](../../principles/automation-first.md)
 
 ### Local Detection
 
@@ -50,7 +50,7 @@ These requirements cover how a lint violation is surfaced locally, before a chan
 2. A local lint run should check only the files affected by a change where practical, rather than the entire codebase, to keep local feedback fast.
 
 #### References
-[Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
 
 ### Suppression & Exception Discipline
 
@@ -62,8 +62,8 @@ These requirements address how a lint violation is suppressed without weakening 
 4. A suppression or exception list, including one held in a dedicated file rather than inline, must be version-controlled within the codebase it applies to.
 
 #### References
-[Code Review](code-review.md)\
-[Everything as Code](../../principles/everything-as-code.md)
+- [Code Review](code-review.md)
+- [Everything as Code](../../principles/everything-as-code.md)
 
 ### Ruleset Governance
 
@@ -74,8 +74,8 @@ These requirements guide how a change to the adopted ruleset is governed.
 3. The ruleset should be reviewed periodically, so it stays current with the codebase's adopted conventions and evolving engineering practice.
 
 #### References
-[Code Review](code-review.md)\
-[Everything as Code](../../principles/everything-as-code.md)
+- [Code Review](code-review.md)
+- [Everything as Code](../../principles/everything-as-code.md)
 
 ### Baselining Pre-Existing Violations
 
@@ -86,4 +86,4 @@ These requirements set out how a pre-existing violation is baselined when a lint
 3. A baselined violation must be tracked and remediated as technical debt.
 
 #### References
-[Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)

@@ -17,8 +17,8 @@ These requirements address how a change to a database's schema or data is applie
 
 #### References
 
-[Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)\
-[Everything as Code](../../principles/everything-as-code.md)
+- [Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
+- [Everything as Code](../../principles/everything-as-code.md)
 
 ### Versioned & Repeatable Migrations
 
@@ -31,8 +31,8 @@ These requirements set out how a versioned migration is identified, ordered, and
 
 #### References
 
-[Version Control](version-control.md)\
-[Branching Strategy](branching-strategy.md)
+- [Version Control](version-control.md)
+- [Branching Strategy](branching-strategy.md)
 
 ### Migration History Integrity
 
@@ -45,7 +45,7 @@ These requirements describe how a database instance's applied-migration history 
 
 #### References
 
-[Data Access & Transaction Management](data-access-transaction-management.md)
+- [Data Access & Transaction Management](data-access-transaction-management.md)
 
 ### Baselining an Existing Database
 
@@ -56,7 +56,7 @@ These requirements cover how migration tooling is adopted for a database whose s
 
 #### References
 
-[Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
+- [Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
 
 ### Migration Review & Approval
 
@@ -67,8 +67,8 @@ These requirements cover how a migration is reviewed and approved by the DBA tea
 
 #### References
 
-[Code Review](code-review.md)\
-[Continuous Delivery & Deployment](../delivery-release/continuous-delivery-deployment.md)
+- [Code Review](code-review.md)
+- [Continuous Delivery & Deployment](../delivery-release/continuous-delivery-deployment.md)
 
 ### Pipeline-Driven Execution
 
@@ -81,10 +81,10 @@ These requirements guide how a migration is executed within a deployment pipelin
 
 #### References
 
-[Automation First](../../principles/automation-first.md)\
-[Continuous Delivery & Deployment](../delivery-release/continuous-delivery-deployment.md)\
-[Observability by Default](../../principles/observability-by-default.md)\
-[Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Automation First](../../principles/automation-first.md)
+- [Continuous Delivery & Deployment](../delivery-release/continuous-delivery-deployment.md)
+- [Observability by Default](../../principles/observability-by-default.md)
+- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
 
 ### Rollback & Irreversible Changes
 
@@ -96,9 +96,9 @@ These requirements address how a migration is reversed or, where reversal is not
 
 #### References
 
-[Rollback Strategy](../delivery-release/rollback-strategy.md)\
-[Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)\
-[Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Rollback Strategy](../delivery-release/rollback-strategy.md)
+- [Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)
+- [Reliability & Resilience](../../principles/reliability-resilience.md)
 
 ### Locking & Performance Impact
 
@@ -110,7 +110,7 @@ These requirements describe how a migration's locking behaviour and performance 
 
 #### References
 
-[Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
 
 ### Testing Migrations Before Production
 
@@ -122,6 +122,6 @@ These requirements set out how a migration is verified before it reaches product
 
 #### References
 
-[Test Data Management](../quality-engineering/test-data-management.md)\
-[Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)\
-[Testability by Design](../../principles/testability-by-design.md)
+- [Test Data Management](../quality-engineering/test-data-management.md)
+- [Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
+- [Testability by Design](../../principles/testability-by-design.md)

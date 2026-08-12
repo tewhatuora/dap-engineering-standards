@@ -22,7 +22,7 @@ This requirement sets the default format a service is packaged in.
 
 #### References
 
-[Containerisation Standards](../platform-infrastructure/containerisation-standards.md)
+- [Containerisation Standards](../platform-infrastructure/containerisation-standards.md)
 
 ### Serverless and Managed Services: When to Consider Each
 
@@ -36,11 +36,11 @@ These requirements set out when serverless or a managed service is the better fi
 
 #### References
 
-[Managed Services Standards](../platform-infrastructure/managed-services-standards.md)\
-[Serverless Standards](../platform-infrastructure/serverless-standards.md)\
-[Cost Awareness by Design](../../principles/cost-awareness-by-design.md)\
-[Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)\
-[Stateless First](../../principles/stateless-first.md)
+- [Managed Services Standards](../platform-infrastructure/managed-services-standards.md)
+- [Serverless Standards](../platform-infrastructure/serverless-standards.md)
+- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Stateless First](../../principles/stateless-first.md)
 
 ### Constraining Runtime Options to Supported Platform Capability
 
@@ -51,7 +51,7 @@ These requirements limit runtime model choice to platform capability the organis
 
 #### References
 
-[Platform Alignment](../../principles/platform-alignment.md)
+- [Platform Alignment](../../principles/platform-alignment.md)
 
 ### Vendor Coupling Introduced by Runtime Model Choice
 
@@ -63,7 +63,7 @@ These requirements ensure the vendor coupling a runtime model choice introduces 
 
 #### References
 
-[Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
+- [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
 
 ### Public, Private & Micro Cloud Selection
 
@@ -78,5 +78,5 @@ These requirements govern the choice between public, private, and micro cloud de
 
 #### References
 
-[Data Residency & Sovereignty](../../principles/data-residency-sovereignty.md)
+- [Data Residency & Sovereignty](../../principles/data-residency-sovereignty.md)
 

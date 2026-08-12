@@ -15,7 +15,7 @@ These principles keep all application and service code in version control as its
 
 #### References
 
-[Version Control](../standards/code-implementation/version-control.md)
+- [Version Control](../standards/code-implementation/version-control.md)
 
 ### Systems & Environments Defined as Code
 
@@ -26,7 +26,7 @@ These principles require infrastructure, environments, and platform resources to
 
 #### References
 
-[Infrastructure as Code](../standards/platform-infrastructure/infrastructure-as-code.md)
+- [Infrastructure as Code](../standards/platform-infrastructure/infrastructure-as-code.md)
 
 ### Code as the Single Source of Truth
 
@@ -38,7 +38,7 @@ These principles keep a system's version-controlled code as the single source of
 
 #### References
 
-[Automation First](automation-first.md)
+- [Automation First](automation-first.md)
 
 ### Same Review Discipline as Application Code
 
@@ -49,7 +49,7 @@ These principles hold infrastructure, configuration, pipeline, and policy code t
 
 #### References
 
-[Code Review](../standards/code-implementation/code-review.md)
+- [Code Review](../standards/code-implementation/code-review.md)
 
 ### Reproducible, Consistent Environments
 
@@ -60,7 +60,7 @@ These principles ensure an environment can be reproduced consistently from its c
 
 #### References
 
-[Environment Strategy](../standards/platform-infrastructure/environment-strategy.md)
+- [Environment Strategy](../standards/platform-infrastructure/environment-strategy.md)
 
 ### Configuration, Pipelines & Schema as Code
 
@@ -71,11 +71,11 @@ These principles extend the as-code approach to application configuration, deliv
 
 #### References
 
-[Configuration Management](../standards/code-implementation/configuration-management.md)\
-[Continuous Integration](../standards/delivery-release/continuous-integration.md)\
-[Continuous Delivery & Deployment](../standards/delivery-release/continuous-delivery-deployment.md)\
-[Schema Design & Evolution](../standards/architecture-system-design/schema-design-evolution.md)\
-[Database Migration Tooling](../standards/code-implementation/database-migration-tooling.md)
+- [Configuration Management](../standards/code-implementation/configuration-management.md)
+- [Continuous Integration](../standards/delivery-release/continuous-integration.md)
+- [Continuous Delivery & Deployment](../standards/delivery-release/continuous-delivery-deployment.md)
+- [Schema Design & Evolution](../standards/architecture-system-design/schema-design-evolution.md)
+- [Database Migration Tooling](../standards/code-implementation/database-migration-tooling.md)
 
 ### Excluding Secrets from Code Definitions
 
@@ -86,7 +86,7 @@ These principles keep secrets and credentials out of code definitions entirely.
 
 #### References
 
-[Secrets Management & Scanning](../standards/security-identity/secrets-management-scanning.md)
+- [Secrets Management & Scanning](../standards/security-identity/secrets-management-scanning.md)
 
 ### Documentation as Code
 
@@ -97,4 +97,4 @@ These principles keep engineering documentation under version control and curren
 
 #### References
 
-[Engineering Documentation Standards](../standards/documentation-collaboration/engineering-documentation-standards.md)
+- [Engineering Documentation Standards](../standards/documentation-collaboration/engineering-documentation-standards.md)

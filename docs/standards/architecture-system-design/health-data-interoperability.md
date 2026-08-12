@@ -22,9 +22,9 @@ These requirements govern which health data exchange standards and implementatio
 
 #### References
 
-[Interoperability by Design](../../principles/interoperability-by-design.md)\
-[API Design & Standards](api-design-standards.md)\
-[Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
+- [Interoperability by Design](../../principles/interoperability-by-design.md)
+- [API Design & Standards](api-design-standards.md)
+- [Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
 
 ### Standardised Clinical Terminology & Coding Systems
 
@@ -37,8 +37,8 @@ These requirements govern how clinical data is represented, so its meaning stays
 
 #### References
 
-[Reliability & Resilience](../../principles/reliability-resilience.md)\
-[Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
 
 ### Interoperability Across Organisational & Sector Boundaries
 
@@ -50,7 +50,7 @@ These requirements ensure health data exchanged across an organisational or sect
 
 #### References
 
-[Data Residency & Sovereignty](../../principles/data-residency-sovereignty.md)
+- [Data Residency & Sovereignty](../../principles/data-residency-sovereignty.md)
 
 ### Conformance Testing Against Implementation Guides
 
@@ -62,4 +62,4 @@ These requirements verify an implementation's conformance to the Implementation 
 
 #### References
 
-[Integration Testing](../quality-engineering/integration-testing.md)
+- [Integration Testing](../quality-engineering/integration-testing.md)

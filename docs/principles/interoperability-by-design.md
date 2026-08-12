@@ -23,8 +23,8 @@ These principles expose what a service shares with other systems through an expl
 
 #### References
 
-[API Design & Standards](../standards/architecture-system-design/api-design-standards.md)\
-[Service & Domain Design](../standards/architecture-system-design/service-domain-design.md)
+- [API Design & Standards](../standards/architecture-system-design/api-design-standards.md)
+- [Service & Domain Design](../standards/architecture-system-design/service-domain-design.md)
 
 ### Preference for Open, Widely-Adopted Standards
 
@@ -35,7 +35,7 @@ These principles prefer an open, widely-adopted standard over a proprietary alte
 
 #### References
 
-[Health Data Interoperability](../standards/architecture-system-design/health-data-interoperability.md)
+- [Health Data Interoperability](../standards/architecture-system-design/health-data-interoperability.md)
 
 ### Backward-Compatible Evolution of Interfaces
 
@@ -47,7 +47,7 @@ These principles preserve compatibility for existing consumers as a published in
 
 #### References
 
-[Schema Design & Evolution](../standards/architecture-system-design/schema-design-evolution.md)
+- [Schema Design & Evolution](../standards/architecture-system-design/schema-design-evolution.md)
 
 ### Consistent Data Formats & Semantics Across Systems
 
@@ -79,4 +79,4 @@ These principles verify an integration point through contract or integration tes
 
 #### References
 
-[Integration Testing](../standards/quality-engineering/integration-testing.md)
+- [Integration Testing](../standards/quality-engineering/integration-testing.md)

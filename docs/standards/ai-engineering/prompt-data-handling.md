@@ -15,7 +15,7 @@ These requirements prohibit submitting certain categories of data to an AI tool 
 
 #### References
 
-[Approved AI Tooling](approved-ai-tooling.md)
+- [Approved AI Tooling](approved-ai-tooling.md)
 
 ### Data Minimisation
 

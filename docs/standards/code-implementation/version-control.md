@@ -16,9 +16,9 @@ These requirements set out how a codebase is held to a single, authoritative ver
 
 #### References
 
-[Everything as Code](../../principles/everything-as-code.md)\
-[Reliability & Resilience](../../principles/reliability-resilience.md)\
-[Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)
+- [Everything as Code](../../principles/everything-as-code.md)
+- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)
 
 ### Atomic, Well-Described Commits
 
@@ -32,9 +32,9 @@ These requirements address how a commit is scoped to one coherent logical change
 
 #### References
 
-[Coding Standards & Formatting](coding-standards-formatting.md)\
-[Database Migration Tooling](database-migration-tooling.md)\
-[Branching Strategy](branching-strategy.md)
+- [Coding Standards & Formatting](coding-standards-formatting.md)
+- [Database Migration Tooling](database-migration-tooling.md)
+- [Branching Strategy](branching-strategy.md)
 
 ### Commit Authorship Integrity
 
@@ -46,8 +46,8 @@ These requirements cover how every commit is tied to the individual or automated
 
 #### References
 
-[Identity & Access Management](../security-identity/identity-access-management.md)\
-[AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
+- [Identity & Access Management](../security-identity/identity-access-management.md)
+- [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
 
 ### Change Traceability
 
@@ -59,10 +59,10 @@ These requirements describe how a change stays traceable through every stage of 
 
 #### References
 
-[Branching Strategy](branching-strategy.md)\
-[Code Review](code-review.md)\
-[Release Strategy](../delivery-release/release-strategy.md)\
-[AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
+- [Branching Strategy](branching-strategy.md)
+- [Code Review](code-review.md)
+- [Release Strategy](../delivery-release/release-strategy.md)
+- [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
 
 ### Repository Hygiene & Exclusions
 
@@ -82,6 +82,6 @@ These requirements set out how a secret, credential, or other sensitive value is
 
 #### References
 
-[Security by Design](../../principles/security-by-design.md)\
-[Automation First](../../principles/automation-first.md)\
-[Secrets Management & Scanning](../security-identity/secrets-management-scanning.md)
+- [Security by Design](../../principles/security-by-design.md)
+- [Automation First](../../principles/automation-first.md)
+- [Secrets Management & Scanning](../security-identity/secrets-management-scanning.md)

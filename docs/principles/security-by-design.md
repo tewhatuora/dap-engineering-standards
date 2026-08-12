@@ -23,7 +23,7 @@ These principles grant a service or identity only the access its defined functio
 
 #### References
 
-[Identity & Access Management](../standards/security-identity/identity-access-management.md)
+- [Identity & Access Management](../standards/security-identity/identity-access-management.md)
 
 ### Secure Defaults & Minimising Attack Surface
 
@@ -50,9 +50,9 @@ These principles apply secure coding, static analysis, and review scrutiny acros
 
 #### References
 
-[Secure Software Development Practices](../standards/security-identity/secure-software-development-practices.md)\
-[Static Code Analysis](../standards/code-implementation/static-code-analysis.md)\
-[Code Review](../standards/code-implementation/code-review.md)
+- [Secure Software Development Practices](../standards/security-identity/secure-software-development-practices.md)
+- [Static Code Analysis](../standards/code-implementation/static-code-analysis.md)
+- [Code Review](../standards/code-implementation/code-review.md)
 
 ### Verifying Security Through Testing
 
@@ -63,7 +63,7 @@ These principles verify security controls through testing rather than assuming t
 
 #### References
 
-[Application Security Testing](../standards/quality-engineering/application-security-testing.md)
+- [Application Security Testing](../standards/quality-engineering/application-security-testing.md)
 
 ### Managing Vulnerability & Supply Chain Risk
 
@@ -74,8 +74,8 @@ These principles keep dependencies and build tooling current, scanned, and prote
 
 #### References
 
-[Vulnerability & Dependency Management](../standards/security-identity/vulnerability-dependency-management.md)\
-[Software Supply Chain Security](../standards/security-identity/software-supply-chain-security.md)
+- [Vulnerability & Dependency Management](../standards/security-identity/vulnerability-dependency-management.md)
+- [Software Supply Chain Security](../standards/security-identity/software-supply-chain-security.md)
 
 ### Protection of Secrets & Credentials
 
@@ -86,4 +86,4 @@ These principles keep credentials, keys, and tokens out of source control and ma
 
 #### References
 
-[Secrets Management & Scanning](../standards/security-identity/secrets-management-scanning.md)
+- [Secrets Management & Scanning](../standards/security-identity/secrets-management-scanning.md)

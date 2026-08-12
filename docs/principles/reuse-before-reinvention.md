@@ -16,7 +16,7 @@ These principles require discovery and evaluation of existing solutions before n
 
 #### References
 
-[Cost Awareness by Design](cost-awareness-by-design.md)
+- [Cost Awareness by Design](cost-awareness-by-design.md)
 
 ### Preference Order for Meeting a Need
 
@@ -27,8 +27,8 @@ These principles set a preference order for meeting a need: reuse, then adopt, t
 
 #### References
 
-[Technology Stack Governance](../standards/architecture-system-design/technology-stack-governance.md)\
-[Platform Alignment](platform-alignment.md)
+- [Technology Stack Governance](../standards/architecture-system-design/technology-stack-governance.md)
+- [Platform Alignment](platform-alignment.md)
 
 ### Justifying a New Build
 
@@ -47,4 +47,4 @@ These principles expose a stable, versioned interface so other teams can adopt a
 
 #### References
 
-[API Design & Standards](../standards/architecture-system-design/api-design-standards.md)
+- [API Design & Standards](../standards/architecture-system-design/api-design-standards.md)

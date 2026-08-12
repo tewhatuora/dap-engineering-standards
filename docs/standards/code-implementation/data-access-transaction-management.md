@@ -16,8 +16,8 @@ These requirements set out how a service's interaction with its data store is ce
 
 #### References
 
-[Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)\
-[Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
+- [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
+- [Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
 
 ### Object-Relational Mapping Usage
 
@@ -31,8 +31,8 @@ These requirements cover how an object-relational mapper (ORM) or similar data a
 
 #### References
 
-[Database Migration Tooling](database-migration-tooling.md)\
-[Observability by Default](../../principles/observability-by-default.md)
+- [Database Migration Tooling](database-migration-tooling.md)
+- [Observability by Default](../../principles/observability-by-default.md)
 
 ### Parameterised Queries & Injection Prevention
 
@@ -43,8 +43,8 @@ These requirements address how a query sent to a data store is constructed, so u
 
 #### References
 
-[Security by Design](../../principles/security-by-design.md)\
-[Secure Software Development Practices](../security-identity/secure-software-development-practices.md)
+- [Security by Design](../../principles/security-by-design.md)
+- [Secure Software Development Practices](../security-identity/secure-software-development-practices.md)
 
 ### Error Handling & Disclosure
 
@@ -55,9 +55,9 @@ These requirements describe how an error returned by a data store is handled, so
 
 #### References
 
-[Security by Design](../../principles/security-by-design.md)\
-[Observability by Default](../../principles/observability-by-default.md)\
-[Privacy by Design](../../principles/privacy-by-design.md)
+- [Security by Design](../../principles/security-by-design.md)
+- [Observability by Default](../../principles/observability-by-default.md)
+- [Privacy by Design](../../principles/privacy-by-design.md)
 
 ### Connection Management & Pooling
 
@@ -71,7 +71,7 @@ These requirements set out how a connection to a data store is obtained, pooled,
 
 #### References
 
-[Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Reliability & Resilience](../../principles/reliability-resilience.md)
 
 ### Least-Privilege Data Store Credentials
 
@@ -83,8 +83,8 @@ These requirements guide how a service's data store credential is granted and sc
 
 #### References
 
-[Security by Design](../../principles/security-by-design.md)\
-[Identity & Access Management](../security-identity/identity-access-management.md)
+- [Security by Design](../../principles/security-by-design.md)
+- [Identity & Access Management](../security-identity/identity-access-management.md)
 
 ### Transaction Boundaries & Atomicity
 
@@ -96,8 +96,8 @@ These requirements address how a transaction's boundary stays explicit and scope
 
 #### References
 
-[Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)\
-[Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-resilience.md)
 
 ### Isolation Levels & Concurrency Control
 
@@ -110,7 +110,7 @@ These requirements describe how a transaction's isolation level and concurrency 
 
 #### References
 
-[Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
+- [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
 
 ### Timeouts & Retries
 
@@ -123,8 +123,8 @@ These requirements cover how an operation against a data store is bounded by a t
 
 #### References
 
-[Reliability & Resilience](../../principles/reliability-resilience.md)\
-[Stateless First](../../principles/stateless-first.md)
+- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Stateless First](../../principles/stateless-first.md)
 
 ### Cross-Service Transaction Consistency
 
@@ -136,8 +136,8 @@ These requirements set out how data consistency is maintained across a service b
 
 #### References
 
-[Service & Domain Design](../architecture-system-design/service-domain-design.md)\
-[Event-Driven Messaging Standards](../architecture-system-design/event-driven-messaging-standards.md)
+- [Service & Domain Design](../architecture-system-design/service-domain-design.md)
+- [Event-Driven Messaging Standards](../architecture-system-design/event-driven-messaging-standards.md)
 
 ### Read Efficiency & Replica Awareness
 
@@ -151,7 +151,7 @@ These requirements guide how a read is served at scale, so growing read demand d
 
 #### References
 
-[Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
 
 ### Write Efficiency
 
@@ -163,7 +163,7 @@ These requirements describe how a write stays efficient at scale, so growing wri
 
 #### References
 
-[Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
 
 ### Data Access Observability
 
@@ -176,6 +176,6 @@ These requirements address how a service's interaction with its data store stays
 
 #### References
 
-[Observability by Default](../../principles/observability-by-default.md)\
-[Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)\
-[Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Observability by Default](../../principles/observability-by-default.md)
+- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-resilience.md)

@@ -36,9 +36,9 @@ These principles let a service scale horizontally and replace an instance withou
 
 #### References
 
-[Runtime Architecture](../standards/architecture-system-design/runtime-architecture.md)\
-[Container Orchestration](../standards/platform-infrastructure/container-orchestration.md)\
-[Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)
+- [Runtime Architecture](../standards/architecture-system-design/runtime-architecture.md)
+- [Container Orchestration](../standards/platform-infrastructure/container-orchestration.md)
+- [Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)
 
 ### Idempotency & Safe Retries
 
@@ -56,4 +56,4 @@ These principles allow a genuinely stateful component to retain state directly, 
 
 #### References
 
-[Backup & Disaster Recovery](../standards/operations-observability/backup-disaster-recovery.md)
+- [Backup & Disaster Recovery](../standards/operations-observability/backup-disaster-recovery.md)

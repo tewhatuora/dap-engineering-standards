@@ -23,7 +23,7 @@ These requirements guide how a dependency is selected for adoption.
 
 #### References
 
-[Technology Stack Governance](../architecture-system-design/technology-stack-governance.md)
+- [Technology Stack Governance](../architecture-system-design/technology-stack-governance.md)
 
 ### Licence Compatibility
 
@@ -41,7 +41,7 @@ These requirements cover how a team's responsibility extends beyond a codebase's
 
 #### References
 
-[Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
+- [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
 
 ### Governed Dependency Sources
 
@@ -53,8 +53,8 @@ These requirements describe how a dependency is sourced only through a governed 
 
 #### References
 
-[Security by Design](../../principles/security-by-design.md)\
-[Software Supply Chain Security](../security-identity/software-supply-chain-security.md)
+- [Security by Design](../../principles/security-by-design.md)
+- [Software Supply Chain Security](../security-identity/software-supply-chain-security.md)
 
 ### Reproducible Dependency Resolution
 
@@ -66,7 +66,7 @@ Where a codebase's package ecosystem supports a lockfile, these requirements set
 
 #### References
 
-[Build & Artifact Management](../delivery-release/build-artifact-management.md)
+- [Build & Artifact Management](../delivery-release/build-artifact-management.md)
 
 ### Software Bill of Materials (SBOM)
 
@@ -80,9 +80,9 @@ These requirements set out how a software bill of materials (SBOM) is generated,
 
 #### References
 
-[Build & Artifact Management](../delivery-release/build-artifact-management.md)\
-[Software Supply Chain Security](../security-identity/software-supply-chain-security.md)\
-[Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
+- [Build & Artifact Management](../delivery-release/build-artifact-management.md)
+- [Software Supply Chain Security](../security-identity/software-supply-chain-security.md)
+- [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
 
 ### Dependency Currency & Removal
 
@@ -98,12 +98,12 @@ These requirements guide how a codebase's dependencies are kept current on a rou
 
 #### References
 
-[Simplicity & Maintainability](../../principles/simplicity-maintainability.md)\
-[Security by Design](../../principles/security-by-design.md)\
-[Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)\
-[Automation First](../../principles/automation-first.md)\
-[Unit Testing](../quality-engineering/unit-testing.md)\
-[Integration Testing](../quality-engineering/integration-testing.md)
+- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Security by Design](../../principles/security-by-design.md)
+- [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
+- [Automation First](../../principles/automation-first.md)
+- [Unit Testing](../quality-engineering/unit-testing.md)
+- [Integration Testing](../quality-engineering/integration-testing.md)
 
 ### Pipeline & Workflow Dependencies
 
@@ -115,8 +115,8 @@ These requirements address how a build or deployment pipeline's own workflow dep
 
 #### References
 
-[Continuous Integration](../delivery-release/continuous-integration.md)\
-[Software Supply Chain Security](../security-identity/software-supply-chain-security.md)
+- [Continuous Integration](../delivery-release/continuous-integration.md)
+- [Software Supply Chain Security](../security-identity/software-supply-chain-security.md)
 
 ### Runtime Currency & Retirement
 
@@ -128,8 +128,8 @@ These requirements describe how a service's runtime version is held to one still
 
 #### References
 
-[Technology Stack Governance](../architecture-system-design/technology-stack-governance.md)\
-[Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
+- [Technology Stack Governance](../architecture-system-design/technology-stack-governance.md)
+- [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
 
 ### Version Maturity & Soak Period
 
@@ -140,4 +140,4 @@ These requirements cover how mature a dependency or runtime version's release is
 
 #### References
 
-[Software Supply Chain Security](../security-identity/software-supply-chain-security.md)
+- [Software Supply Chain Security](../security-identity/software-supply-chain-security.md)

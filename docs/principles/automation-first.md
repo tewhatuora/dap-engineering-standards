@@ -16,9 +16,9 @@ These principles make automation the default approach for repeatable delivery pi
 
 #### References
 
-[Continuous Integration](../standards/delivery-release/continuous-integration.md)\
-[Continuous Delivery & Deployment](../standards/delivery-release/continuous-delivery-deployment.md)\
-[Infrastructure as Code](../standards/platform-infrastructure/infrastructure-as-code.md)
+- [Continuous Integration](../standards/delivery-release/continuous-integration.md)
+- [Continuous Delivery & Deployment](../standards/delivery-release/continuous-delivery-deployment.md)
+- [Infrastructure as Code](../standards/platform-infrastructure/infrastructure-as-code.md)
 
 ### Automation Applies Beyond the Delivery Pipeline
 
@@ -38,9 +38,9 @@ These principles automate mechanical, rule-based checks without reducing the hum
 
 #### References
 
-[Static Code Analysis](../standards/code-implementation/static-code-analysis.md)\
-[Code Review](../standards/code-implementation/code-review.md)\
-[AI Usage & Verification in Code Review](../standards/ai-engineering/ai-usage-verification-in-code-review.md)
+- [Static Code Analysis](../standards/code-implementation/static-code-analysis.md)
+- [Code Review](../standards/code-implementation/code-review.md)
+- [AI Usage & Verification in Code Review](../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 
 ### Reducing Operational Toil
 
@@ -60,7 +60,7 @@ These principles keep automation logic version-controlled and maintained like an
 
 #### References
 
-[Everything as Code](everything-as-code.md)
+- [Everything as Code](everything-as-code.md)
 
 ### Human Judgement Reserved for Non-Repeatable Decisions
 

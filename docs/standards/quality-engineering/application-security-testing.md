@@ -16,9 +16,9 @@ These requirements integrate automated static analysis into a service's build pi
 
 #### References
 
-[Static Code Analysis](../code-implementation/static-code-analysis.md)\
-[Continuous Integration](../delivery-release/continuous-integration.md)\
-[Security by Design](../../principles/security-by-design.md)
+- [Static Code Analysis](../code-implementation/static-code-analysis.md)
+- [Continuous Integration](../delivery-release/continuous-integration.md)
+- [Security by Design](../../principles/security-by-design.md)
 
 ### Dynamic Application Security Testing (DAST)
 
@@ -31,9 +31,9 @@ These requirements test a running instance of a service for vulnerabilities that
 
 #### References
 
-[Environment Strategy](../platform-infrastructure/environment-strategy.md)\
-[Continuous Delivery & Deployment](../delivery-release/continuous-delivery-deployment.md)\
-[Security by Design](../../principles/security-by-design.md)
+- [Environment Strategy](../platform-infrastructure/environment-strategy.md)
+- [Continuous Delivery & Deployment](../delivery-release/continuous-delivery-deployment.md)
+- [Security by Design](../../principles/security-by-design.md)
 
 ### Fuzz Testing
 
@@ -44,8 +44,8 @@ These requirements apply automated fuzz testing to a service where its input han
 
 #### References
 
-[Test Data Management](test-data-management.md)\
-[Continuous Integration](../delivery-release/continuous-integration.md)
+- [Test Data Management](test-data-management.md)
+- [Continuous Integration](../delivery-release/continuous-integration.md)
 
 ### Penetration Testing
 
@@ -57,7 +57,7 @@ These requirements apply independent, specialist testing to a service beyond wha
 
 #### References
 
-[Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-by-design.md)
 
 ### Findings Classification, Remediation & Release Gating
 
@@ -69,4 +69,4 @@ These requirements define how findings are classified, remediated, and verified 
 
 #### References
 
-[Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
+- [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)

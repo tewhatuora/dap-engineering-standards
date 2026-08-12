@@ -29,7 +29,7 @@ These principles keep data at rest and in processing within its approved jurisdi
 
 #### References
 
-[Runtime Architecture](../standards/architecture-system-design/runtime-architecture.md)
+- [Runtime Architecture](../standards/architecture-system-design/runtime-architecture.md)
 
 ### Controlling Cross-Border Data Flows
 
@@ -40,7 +40,7 @@ These principles require a cross-border data flow to go through a defined, appro
 
 #### References
 
-[API Design & Standards](../standards/architecture-system-design/api-design-standards.md)
+- [API Design & Standards](../standards/architecture-system-design/api-design-standards.md)
 
 ### Vendor & Sub-Processor Data Location Transparency
 
@@ -57,7 +57,7 @@ This principle extends jurisdictional requirements to a service's backup and rec
 
 #### References
 
-[Backup & Disaster Recovery](../standards/operations-observability/backup-disaster-recovery.md)
+- [Backup & Disaster Recovery](../standards/operations-observability/backup-disaster-recovery.md)
 
 ### Verifying Data Location Through Configuration Audit
 

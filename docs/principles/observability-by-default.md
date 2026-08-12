@@ -22,8 +22,8 @@ These principles emit enough logs, metrics, and traces to determine a service's 
 
 #### References
 
-[Structured Logging](../standards/operations-observability/structured-logging.md)\
-[Metrics, Monitoring & Alerting](../standards/operations-observability/metrics-monitoring-alerting.md)
+- [Structured Logging](../standards/operations-observability/structured-logging.md)
+- [Metrics, Monitoring & Alerting](../standards/operations-observability/metrics-monitoring-alerting.md)
 
 ### Correlation & End-to-End Traceability
 
@@ -34,7 +34,7 @@ These principles make telemetry correlatable across service boundaries, so a sin
 
 #### References
 
-[Distributed Tracing](../standards/operations-observability/distributed-tracing.md)
+- [Distributed Tracing](../standards/operations-observability/distributed-tracing.md)
 
 ### Consistent Instrumentation Across Services
 
@@ -45,8 +45,8 @@ These principles standardise instrumentation across services, rather than leavin
 
 #### References
 
-[Telemetry Instrumentation Standards](../standards/operations-observability/telemetry-instrumentation-standards.md)\
-[Observability Platform Integration](../standards/operations-observability/observability-platform-integration.md)
+- [Telemetry Instrumentation Standards](../standards/operations-observability/telemetry-instrumentation-standards.md)
+- [Observability Platform Integration](../standards/operations-observability/observability-platform-integration.md)
 
 ### Actionable, Low-Noise Telemetry
 
@@ -58,7 +58,7 @@ These principles limit telemetry to what is actionable, tied to real impact, and
 
 #### References
 
-[Cost Awareness by Design](cost-awareness-by-design.md)
+- [Cost Awareness by Design](cost-awareness-by-design.md)
 
 ### Observability Supporting Incident Detection & Response
 
@@ -69,8 +69,8 @@ These principles detect an operational issue early and validate incident-respons
 
 #### References
 
-[Runbooks](../standards/operations-observability/runbooks.md)\
-[Reliability & Resilience](reliability-resilience.md)
+- [Runbooks](../standards/operations-observability/runbooks.md)
+- [Reliability & Resilience](reliability-resilience.md)
 
 ### Privacy & Data Minimisation in Telemetry
 
@@ -81,7 +81,7 @@ These principles minimise personal, health, or sensitive data captured in teleme
 
 #### References
 
-[Privacy by Design](privacy-by-design.md)
+- [Privacy by Design](privacy-by-design.md)
 
 ### Shared Ownership of Observability
 

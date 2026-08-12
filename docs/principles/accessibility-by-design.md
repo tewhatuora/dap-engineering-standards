@@ -50,8 +50,8 @@ These principles verify accessibility conformance through testing rather than as
 
 #### References
 
-[Accessibility Testing](../standards/quality-engineering/accessibility-testing.md)\
-[Testability by Design](testability-by-design.md)
+- [Accessibility Testing](../standards/quality-engineering/accessibility-testing.md)
+- [Testability by Design](testability-by-design.md)
 
 ### Remediating Identified Accessibility Barriers
 

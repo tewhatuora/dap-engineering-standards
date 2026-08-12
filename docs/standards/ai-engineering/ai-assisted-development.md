@@ -16,7 +16,7 @@ These requirements keep the submitting developer accountable for AI-assisted cod
 
 #### References
 
-[AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
+- [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
 
 ### Human Oversight Requirement
 
@@ -28,7 +28,7 @@ These requirements require a human to review and understand AI-generated output 
 
 #### References
 
-[AI Usage & Verification in Code Review](ai-usage-verification-in-code-review.md)
+- [AI Usage & Verification in Code Review](ai-usage-verification-in-code-review.md)
 
 ### Quality, Testing & Security Parity
 
@@ -40,9 +40,9 @@ These requirements hold AI-assisted work to the same quality, testing, and secur
 
 #### References
 
-[Coding Standards & Formatting](../code-implementation/coding-standards-formatting.md)\
-[Linting & Style Enforcement](../code-implementation/linting-style-enforcement.md)\
-[Static Code Analysis](../code-implementation/static-code-analysis.md)
+- [Coding Standards & Formatting](../code-implementation/coding-standards-formatting.md)
+- [Linting & Style Enforcement](../code-implementation/linting-style-enforcement.md)
+- [Static Code Analysis](../code-implementation/static-code-analysis.md)
 
 ### Restricted & High-Risk Use Cases
 
@@ -53,7 +53,7 @@ These requirements increase scrutiny of AI-generated code in security-critical, 
 
 #### References
 
-[Secure Software Development Practices](../security-identity/secure-software-development-practices.md)
+- [Secure Software Development Practices](../security-identity/secure-software-development-practices.md)
 
 ### Intellectual Property & Licensing Risk
 
@@ -64,4 +64,4 @@ These requirements protect against intellectual property and licensing risk intr
 
 #### References
 
-[Prompt Data Handling](prompt-data-handling.md)
+- [Prompt Data Handling](prompt-data-handling.md)

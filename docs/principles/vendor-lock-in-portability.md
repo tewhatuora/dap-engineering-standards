@@ -15,7 +15,7 @@ These principles weigh the lock-in a technology, vendor, or platform choice woul
 
 #### References
 
-[Technology Stack Governance](../standards/architecture-system-design/technology-stack-governance.md)
+- [Technology Stack Governance](../standards/architecture-system-design/technology-stack-governance.md)
 
 ### Proprietary Coupling as a Deliberate, Justified Choice
 
@@ -26,9 +26,9 @@ These principles accept proprietary coupling only where a genuine, explicit bene
 
 #### References
 
-[Managed Services Standards](../standards/platform-infrastructure/managed-services-standards.md)\
-[Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)\
-[Runtime Architecture](../standards/architecture-system-design/runtime-architecture.md)
+- [Managed Services Standards](../standards/platform-infrastructure/managed-services-standards.md)
+- [Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)
+- [Runtime Architecture](../standards/architecture-system-design/runtime-architecture.md)
 
 ### Abstracting Vendor-Specific Dependencies Where Practical
 

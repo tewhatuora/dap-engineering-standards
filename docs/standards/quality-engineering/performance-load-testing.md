@@ -17,8 +17,8 @@ These requirements identify when each performance test type should be considered
 
 #### References
 
-[Testability by Design](../../principles/testability-by-design.md)\
-[Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Testability by Design](../../principles/testability-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-resilience.md)
 
 ### Triggers & Recurrence
 
@@ -30,7 +30,7 @@ These requirements identify the events that trigger performance testing, and req
 
 #### References
 
-[Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
 
 ### Performance & Capacity Targets
 
@@ -41,7 +41,7 @@ These requirements validate a service against its defined performance and capaci
 
 #### References
 
-[Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
 
 ### Test Environment & Data Representativeness
 
@@ -53,9 +53,9 @@ These requirements keep the environment and data used for performance testing re
 
 #### References
 
-[Environment Strategy](../platform-infrastructure/environment-strategy.md)\
-[Test Data Management](test-data-management.md)\
-[Privacy by Design](../../principles/privacy-by-design.md)
+- [Environment Strategy](../platform-infrastructure/environment-strategy.md)
+- [Test Data Management](test-data-management.md)
+- [Privacy by Design](../../principles/privacy-by-design.md)
 
 ### Execution & Dependencies
 
@@ -69,9 +69,9 @@ These requirements constrain how and where a performance test executes, and how 
 
 #### References
 
-[Environment Strategy](../platform-infrastructure/environment-strategy.md)\
-[Integration Testing](integration-testing.md)\
-[Automation First](../../principles/automation-first.md)
+- [Environment Strategy](../platform-infrastructure/environment-strategy.md)
+- [Integration Testing](integration-testing.md)
+- [Automation First](../../principles/automation-first.md)
 
 ### Observability & Diagnostics During Execution
 
@@ -83,8 +83,8 @@ These requirements define the telemetry captured during a performance test's exe
 
 #### References
 
-[Observability by Default](../../principles/observability-by-default.md)\
-[Metrics, Monitoring & Alerting](../operations-observability/metrics-monitoring-alerting.md)
+- [Observability by Default](../../principles/observability-by-default.md)
+- [Metrics, Monitoring & Alerting](../operations-observability/metrics-monitoring-alerting.md)
 
 ### Result Evaluation, Gating & Documentation
 
@@ -98,5 +98,5 @@ These requirements govern how a performance test's result is evaluated and acted
 
 #### References
 
-[Runbooks](../operations-observability/runbooks.md)\
-[Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Runbooks](../operations-observability/runbooks.md)
+- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)

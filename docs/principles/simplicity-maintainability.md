@@ -24,8 +24,8 @@ These principles write code to be readily understood by another engineer, with c
 
 #### References
 
-[Coding Standards & Formatting](../standards/code-implementation/coding-standards-formatting.md)\
-[Linting & Style Enforcement](../standards/code-implementation/linting-style-enforcement.md)
+- [Coding Standards & Formatting](../standards/code-implementation/coding-standards-formatting.md)
+- [Linting & Style Enforcement](../standards/code-implementation/linting-style-enforcement.md)
 
 ### Modularity & Clear Boundaries
 
@@ -37,7 +37,7 @@ These principles keep a component's responsibility, boundary, and interface clea
 
 #### References
 
-[Service & Domain Design](../standards/architecture-system-design/service-domain-design.md)
+- [Service & Domain Design](../standards/architecture-system-design/service-domain-design.md)
 
 ### Managing Complexity & Technical Debt Over Time
 
@@ -57,8 +57,8 @@ These principles justify a new dependency and minimise the number of distinct te
 
 #### References
 
-[Dependency & Runtime Management](../standards/code-implementation/dependency-runtime-management.md)\
-[Technology Stack Governance](../standards/architecture-system-design/technology-stack-governance.md)
+- [Dependency & Runtime Management](../standards/code-implementation/dependency-runtime-management.md)
+- [Technology Stack Governance](../standards/architecture-system-design/technology-stack-governance.md)
 
 ### Removing Unused or Dead Code
 
@@ -76,5 +76,5 @@ These principles evaluate complexity and maintainability through code review and
 
 #### References
 
-[Code Review](../standards/code-implementation/code-review.md)\
-[Static Code Analysis](../standards/code-implementation/static-code-analysis.md)
+- [Code Review](../standards/code-implementation/code-review.md)
+- [Static Code Analysis](../standards/code-implementation/static-code-analysis.md)

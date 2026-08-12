@@ -33,7 +33,7 @@ These requirements hold an AI-disclosed submission to the same reviewer scrutiny
 
 #### References
 
-[Code Review](../code-implementation/code-review.md)
+- [Code Review](../code-implementation/code-review.md)
 
 ### Use of AI Tools by Reviewers
 
@@ -45,8 +45,8 @@ These requirements govern how a reviewer may use AI tools to assist their own re
 
 #### References
 
-[Approved AI Tooling](approved-ai-tooling.md)\
-[Prompt Data Handling](prompt-data-handling.md)
+- [Approved AI Tooling](approved-ai-tooling.md)
+- [Prompt Data Handling](prompt-data-handling.md)
 
 ### Approval Accountability
 
@@ -58,4 +58,4 @@ These requirements keep approval accountability with a human reviewer, regardles
 
 #### References
 
-[AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
+- [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)

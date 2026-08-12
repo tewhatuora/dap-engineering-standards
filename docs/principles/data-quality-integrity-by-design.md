@@ -22,7 +22,7 @@ These principles validate data as close to its point of entry as possible, rathe
 
 #### References
 
-[API Design & Standards](../standards/architecture-system-design/api-design-standards.md)
+- [API Design & Standards](../standards/architecture-system-design/api-design-standards.md)
 
 ### Enforcing Structural & Referential Integrity
 
@@ -34,7 +34,7 @@ These principles enforce structural and referential integrity at the data layer,
 
 #### References
 
-[Schema Design & Evolution](../standards/architecture-system-design/schema-design-evolution.md)
+- [Schema Design & Evolution](../standards/architecture-system-design/schema-design-evolution.md)
 
 ### Preventing Duplicate & Conflicting Records
 
@@ -62,7 +62,7 @@ These principles detect data quality degradation through ongoing monitoring, rat
 
 #### References
 
-[Metrics, Monitoring & Alerting](../standards/operations-observability/metrics-monitoring-alerting.md)
+- [Metrics, Monitoring & Alerting](../standards/operations-observability/metrics-monitoring-alerting.md)
 
 ### Remediating Identified Data Quality Issues
 
@@ -74,7 +74,7 @@ These principles correct a confirmed data quality issue at its root cause and tr
 
 #### References
 
-[Runbooks](../standards/operations-observability/runbooks.md)
+- [Runbooks](../standards/operations-observability/runbooks.md)
 
 ### Verifying Data Quality Rules Through Automated Testing
 
@@ -85,5 +85,5 @@ These principles verify a validation or quality rule through automated testing r
 
 #### References
 
-[Unit Testing](../standards/quality-engineering/unit-testing.md)\
-[Test Data Management](../standards/quality-engineering/test-data-management.md)
+- [Unit Testing](../standards/quality-engineering/unit-testing.md)
+- [Test Data Management](../standards/quality-engineering/test-data-management.md)

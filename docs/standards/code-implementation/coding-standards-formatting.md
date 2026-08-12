@@ -32,8 +32,8 @@ These requirements describe how formatting configuration is held and scoped with
 
 #### References
 
-[Everything as Code](../../principles/everything-as-code.md)\
-[Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Everything as Code](../../principles/everything-as-code.md)
+- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
 
 ### Consistent Application Across a Codebase
 
@@ -44,9 +44,9 @@ These requirements cover how the adopted style guide is applied uniformly across
 
 #### References
 
-[Simplicity & Maintainability](../../principles/simplicity-maintainability.md)\
-[AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)\
-[Everything as Code](../../principles/everything-as-code.md)
+- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
+- [Everything as Code](../../principles/everything-as-code.md)
 
 ### Code Comments & Inline Documentation
 
@@ -58,8 +58,8 @@ These requirements guide how comments and inline documentation are used, so they
 
 #### References
 
-[Simplicity & Maintainability](../../principles/simplicity-maintainability.md)\
-[API Design & Standards](../architecture-system-design/api-design-standards.md)
+- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [API Design & Standards](../architecture-system-design/api-design-standards.md)
 
 ### Formatting of Generated Files
 
@@ -77,9 +77,9 @@ These requirements address how coding standards are applied through automated to
 
 #### References
 
-[Automation First](../../principles/automation-first.md)\
-[Linting & Style Enforcement](linting-style-enforcement.md)\
-[AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
+- [Automation First](../../principles/automation-first.md)
+- [Linting & Style Enforcement](linting-style-enforcement.md)
+- [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
 
 ### Formatting in Code Review
 
@@ -90,7 +90,7 @@ These requirements describe how a formatting concern is kept out of code review'
 
 #### References
 
-[Code Review](code-review.md)
+- [Code Review](code-review.md)
 
 ### Formatting Change Separation
 
@@ -101,4 +101,4 @@ These requirements cover how a formatting-only change is kept separate from a fu
 
 #### References
 
-[Version Control](version-control.md)
+- [Version Control](version-control.md)

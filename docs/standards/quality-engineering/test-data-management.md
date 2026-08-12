@@ -19,7 +19,7 @@ These requirements govern which test data source populates a non-production envi
 
 #### References
 
-[Privacy by Design](../../principles/privacy-by-design.md)
+- [Privacy by Design](../../principles/privacy-by-design.md)
 
 ### Representative, Minimal Test Data
 
@@ -30,8 +30,8 @@ These requirements keep a test dataset scoped to the test it supports, rather th
 
 #### References
 
-[Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)\
-[Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
+- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
 
 ### Test Data Lifecycle
 
@@ -45,10 +45,10 @@ These requirements govern how a test dataset is provisioned and deleted without 
 
 #### References
 
-[Testability by Design](../../principles/testability-by-design.md)\
-[Environment Strategy](../platform-infrastructure/environment-strategy.md)\
-[Privacy by Design](../../principles/privacy-by-design.md)\
-[Security by Design](../../principles/security-by-design.md)\
-[Reliability & Resilience](../../principles/reliability-resilience.md)\
-[Automation First](../../principles/automation-first.md)\
-[Runbooks](../operations-observability/runbooks.md)
+- [Testability by Design](../../principles/testability-by-design.md)
+- [Environment Strategy](../platform-infrastructure/environment-strategy.md)
+- [Privacy by Design](../../principles/privacy-by-design.md)
+- [Security by Design](../../principles/security-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Automation First](../../principles/automation-first.md)
+- [Runbooks](../operations-observability/runbooks.md)

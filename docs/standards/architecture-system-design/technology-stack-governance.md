@@ -15,9 +15,9 @@ These requirements ensure a technology is selected for a clear, justified purpos
 
 #### References
 
-[Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)\
-[Security by Design](../../principles/security-by-design.md)\
-[Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
+- [Security by Design](../../principles/security-by-design.md)
+- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
 
 ### Supportable & Proven Technology Selection
 
@@ -38,7 +38,7 @@ These requirements classify every technology in use as approved, trial, or depre
 
 #### References
 
-[Technology Stack Register](technology-stack-register.md)
+- [Technology Stack Register](technology-stack-register.md)
 
 ### New Technology Introduction & Approval
 
@@ -49,8 +49,8 @@ These requirements route a new technology, however it was proposed, through the 
 
 #### References
 
-[Platform Alignment](../../principles/platform-alignment.md)\
-[AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
+- [Platform Alignment](../../principles/platform-alignment.md)
+- [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
 
 ### Deprecation & Migration Planning
 
@@ -60,4 +60,4 @@ This requirement ensures a deprecated technology still in use has a planned path
 
 #### References
 
-[Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
+- [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)

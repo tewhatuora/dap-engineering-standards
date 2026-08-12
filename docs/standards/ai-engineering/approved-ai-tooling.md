@@ -25,7 +25,7 @@ These requirements prohibit using an AI tool that is not on the Approved Tooling
 
 #### References
 
-[AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
+- [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
 
 ### Licensing & Provisioning Requirements
 

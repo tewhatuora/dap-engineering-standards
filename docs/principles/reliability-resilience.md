@@ -32,7 +32,7 @@ These principles protect a service from being overwhelmed by excess demand.
 
 #### References
 
-[API Design & Standards](../standards/architecture-system-design/api-design-standards.md)
+- [API Design & Standards](../standards/architecture-system-design/api-design-standards.md)
 
 ### Graceful Degradation
 
@@ -50,7 +50,7 @@ These principles define a service's recovery objectives and test its recovery ca
 
 #### References
 
-[Backup & Disaster Recovery](../standards/operations-observability/backup-disaster-recovery.md)
+- [Backup & Disaster Recovery](../standards/operations-observability/backup-disaster-recovery.md)
 
 ### Reducing the Risk of Change
 
@@ -62,9 +62,9 @@ These principles reduce the risk a deployment introduces, through rollback capab
 
 #### References
 
-[Rollback Strategy](../standards/delivery-release/rollback-strategy.md)\
-[Progressive Delivery Strategies (Blue/Green, Canary)](../standards/delivery-release/progressive-delivery-strategies.md)\
-[Feature Flagging](../standards/delivery-release/feature-flagging.md)
+- [Rollback Strategy](../standards/delivery-release/rollback-strategy.md)
+- [Progressive Delivery Strategies (Blue/Green, Canary)](../standards/delivery-release/progressive-delivery-strategies.md)
+- [Feature Flagging](../standards/delivery-release/feature-flagging.md)
 
 ### Operational Readiness & Learning from Failure
 
@@ -76,4 +76,4 @@ These principles document a response procedure and track corrective action from 
 
 #### References
 
-[Runbooks](../standards/operations-observability/runbooks.md)
+- [Runbooks](../standards/operations-observability/runbooks.md)

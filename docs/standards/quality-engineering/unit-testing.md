@@ -16,7 +16,7 @@ These requirements define what qualifies as a unit test and the boundary that se
 
 #### References
 
-[Integration Testing](integration-testing.md)
+- [Integration Testing](integration-testing.md)
 
 ### Isolating Dependencies with Test Doubles
 
@@ -28,7 +28,7 @@ These requirements govern how a unit's external dependency is substituted with a
 
 #### References
 
-[Testability by Design](../../principles/testability-by-design.md)
+- [Testability by Design](../../principles/testability-by-design.md)
 
 ### Coverage of Critical Paths & Edge Cases
 
@@ -42,8 +42,8 @@ These requirements direct unit test coverage toward a change's critical paths an
 
 #### References
 
-[Testability by Design](../../principles/testability-by-design.md)\
-[Feature Flagging](../delivery-release/feature-flagging.md)
+- [Testability by Design](../../principles/testability-by-design.md)
+- [Feature Flagging](../delivery-release/feature-flagging.md)
 
 ### Coverage Measurement & Reporting
 
@@ -54,7 +54,7 @@ These requirements govern how code coverage is measured and reported.
 
 #### References
 
-[Continuous Integration](../delivery-release/continuous-integration.md)
+- [Continuous Integration](../delivery-release/continuous-integration.md)
 
 ### Test Structure, Naming & Maintainability
 
@@ -68,9 +68,9 @@ These requirements keep a unit test's purpose and outcome clear to an engineer o
 
 #### References
 
-[Simplicity & Maintainability](../../principles/simplicity-maintainability.md)\
-[Fast Feedback by Design](../../principles/fast-feedback-by-design.md)\
-[Testability by Design](../../principles/testability-by-design.md)
+- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Testability by Design](../../principles/testability-by-design.md)
 
 ### Independent, Parallel-Safe Execution
 
@@ -82,7 +82,7 @@ These requirements keep a unit test's outcome independent of other tests and the
 
 #### References
 
-[Testability by Design](../../principles/testability-by-design.md)
+- [Testability by Design](../../principles/testability-by-design.md)
 
 ### Fast, Fully Automated Execution
 
@@ -94,10 +94,10 @@ These requirements keep a unit test suite fast and its execution fully automated
 
 #### References
 
-[Automation First](../../principles/automation-first.md)\
-[Fast Feedback by Design](../../principles/fast-feedback-by-design.md)\
-[Branching Strategy](../code-implementation/branching-strategy.md)\
-[Continuous Integration](../delivery-release/continuous-integration.md)
+- [Automation First](../../principles/automation-first.md)
+- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Branching Strategy](../code-implementation/branching-strategy.md)
+- [Continuous Integration](../delivery-release/continuous-integration.md)
 
 ### Blocking Progression on Unit Test Failure
 
@@ -109,8 +109,8 @@ These requirements make a failing unit test block progression.
 
 #### References
 
-[Continuous Integration](../delivery-release/continuous-integration.md)\
-[Automation First](../../principles/automation-first.md)
+- [Continuous Integration](../delivery-release/continuous-integration.md)
+- [Automation First](../../principles/automation-first.md)
 
 ### Unit Test Code as a Maintained Engineering Artifact
 
@@ -122,8 +122,8 @@ These requirements hold unit test code to the same engineering standards as the 
 
 #### References
 
-[Coding Standards & Formatting](../code-implementation/coding-standards-formatting.md)\
-[Code Review](../code-implementation/code-review.md)
+- [Coding Standards & Formatting](../code-implementation/coding-standards-formatting.md)
+- [Code Review](../code-implementation/code-review.md)
 
 ### Self-Contained, Minimal & Deterministic Test Data
 
@@ -135,5 +135,5 @@ These requirements keep the data a unit test depends on scoped to the test itsel
 
 #### References
 
-[Testability by Design](../../principles/testability-by-design.md)\
-[Test Data Management](test-data-management.md)
+- [Testability by Design](../../principles/testability-by-design.md)
+- [Test Data Management](test-data-management.md)

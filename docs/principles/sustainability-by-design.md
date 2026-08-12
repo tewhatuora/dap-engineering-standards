@@ -23,9 +23,9 @@ These principles size compute and storage to actual demand, preferring models th
 
 #### References
 
-[Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)\
-[Managed Services Standards](../standards/platform-infrastructure/managed-services-standards.md)\
-[Resource Efficiency & Optimisation](../standards/cost-sustainability/resource-efficiency-optimisation.md)
+- [Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)
+- [Managed Services Standards](../standards/platform-infrastructure/managed-services-standards.md)
+- [Resource Efficiency & Optimisation](../standards/cost-sustainability/resource-efficiency-optimisation.md)
 
 ### Data Minimisation & Storage Lifecycle Management
 
@@ -51,8 +51,8 @@ These principles measure and attribute a service's environmental impact through 
 
 #### References
 
-[Metrics, Monitoring & Alerting](../standards/operations-observability/metrics-monitoring-alerting.md)\
-[Cost Monitoring & Attribution](../standards/cost-sustainability/cost-monitoring-attribution.md)
+- [Metrics, Monitoring & Alerting](../standards/operations-observability/metrics-monitoring-alerting.md)
+- [Cost Monitoring & Attribution](../standards/cost-sustainability/cost-monitoring-attribution.md)
 
 ### Design-Time Environmental Assumptions Have a Shelf Life
 

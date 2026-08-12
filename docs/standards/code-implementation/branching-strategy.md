@@ -16,7 +16,7 @@ These requirements describe how a repository's branching model stays deliberate 
 
 #### References
 
-[Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/everything-as-code.md)
 
 ### Approved Branching Models
 
@@ -30,8 +30,8 @@ These requirements address how a branching model is chosen to match a repository
 
 #### References
 
-[Environment Strategy](../platform-infrastructure/environment-strategy.md)\
-[Feature Flagging](../delivery-release/feature-flagging.md)
+- [Environment Strategy](../platform-infrastructure/environment-strategy.md)
+- [Feature Flagging](../delivery-release/feature-flagging.md)
 
 ### Short-Lived Branches
 
@@ -73,12 +73,12 @@ These requirements guide how a protected branch is changed only through a review
 
 #### References
 
-[Code Review](code-review.md)\
-[Automation First](../../principles/automation-first.md)\
-[Continuous Integration](../delivery-release/continuous-integration.md)\
-[Static Code Analysis](static-code-analysis.md)\
-[Security by Design](../../principles/security-by-design.md)\
-[Identity & Access Management](../security-identity/identity-access-management.md)
+- [Code Review](code-review.md)
+- [Automation First](../../principles/automation-first.md)
+- [Continuous Integration](../delivery-release/continuous-integration.md)
+- [Static Code Analysis](static-code-analysis.md)
+- [Security by Design](../../principles/security-by-design.md)
+- [Identity & Access Management](../security-identity/identity-access-management.md)
 
 ### Merge Strategy & History Integrity
 
@@ -91,7 +91,7 @@ These requirements describe how a repository's commit history stays intact and t
 
 #### References
 
-[Version Control](version-control.md)
+- [Version Control](version-control.md)
 
 ### Release & Hotfix Branches
 
@@ -103,8 +103,8 @@ These requirements address how a release or hotfix branch stays scoped to the wo
 
 #### References
 
-[Release Strategy](../delivery-release/release-strategy.md)\
-[Rollback Strategy](../delivery-release/rollback-strategy.md)
+- [Release Strategy](../delivery-release/release-strategy.md)
+- [Rollback Strategy](../delivery-release/rollback-strategy.md)
 
 ### Branch Cleanup & Staleness Review
 

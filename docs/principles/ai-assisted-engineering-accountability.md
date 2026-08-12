@@ -15,7 +15,7 @@ These principles hold AI-assisted work to every applicable principle and standar
 
 #### References
 
-[AI-Assisted Development](../standards/ai-engineering/ai-assisted-development.md)
+- [AI-Assisted Development](../standards/ai-engineering/ai-assisted-development.md)
 
 ### Human Accountability Cannot Be Delegated to AI
 
@@ -34,7 +34,7 @@ These principles require an engineer to understand AI-assisted output well enoug
 
 #### References
 
-[AI Usage & Verification in Code Review](../standards/ai-engineering/ai-usage-verification-in-code-review.md)
+- [AI Usage & Verification in Code Review](../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 
 ### Confining AI Use to Governed, Approved Tooling
 
@@ -45,7 +45,7 @@ These principles limit AI use to tooling sanctioned through the organisation's g
 
 #### References
 
-[Approved AI Tooling](../standards/ai-engineering/approved-ai-tooling.md)
+- [Approved AI Tooling](../standards/ai-engineering/approved-ai-tooling.md)
 
 ### Guarding Against Intellectual Property & Confidentiality Risk
 
@@ -56,5 +56,5 @@ These principles guard against the intellectual property and confidentiality ris
 
 #### References
 
-[AI-Assisted Development](../standards/ai-engineering/ai-assisted-development.md)\
-[Prompt Data Handling](../standards/ai-engineering/prompt-data-handling.md)
+- [AI-Assisted Development](../standards/ai-engineering/ai-assisted-development.md)
+- [Prompt Data Handling](../standards/ai-engineering/prompt-data-handling.md)

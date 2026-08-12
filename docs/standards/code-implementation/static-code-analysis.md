@@ -16,9 +16,9 @@ These requirements set out how static analysis coverage is scoped across a codeb
 4. Where a language supports static type checking, type checking must be enabled and treated as part of a codebase's static analysis coverage.
 
 #### References
-[Linting & Style Enforcement](linting-style-enforcement.md)\
-[Application Security Testing](../quality-engineering/application-security-testing.md)\
-[Security by Design](../../principles/security-by-design.md)
+- [Linting & Style Enforcement](linting-style-enforcement.md)
+- [Application Security Testing](../quality-engineering/application-security-testing.md)
+- [Security by Design](../../principles/security-by-design.md)
 
 ### Maintainability Analysis
 
@@ -29,7 +29,7 @@ These requirements describe how a codebase's maintainability is assessed through
 3. Static analysis should be used to identify unused or dead code, so it can be removed.
 
 #### References
-[Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
 
 ### Ruleset Configuration
 
@@ -40,8 +40,8 @@ These requirements address how static analysis tooling's configuration is contro
 3. The analysis tool's default ruleset should be adopted wherever it meets a codebase's needs; a customisation should be added only where an actual need justifies it.
 
 #### References
-[Platform Alignment](../../principles/platform-alignment.md)\
-[Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Platform Alignment](../../principles/platform-alignment.md)
+- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
 
 ### Severity-Based Pipeline Gate
 
@@ -54,10 +54,10 @@ These requirements describe how a change's progression through the delivery pipe
 5. A finding must be reported in a standard, machine-readable format, such as SARIF. A proprietary or tool-specific format must not be the only format produced.
 
 #### References
-[Automation First](../../principles/automation-first.md)\
-[Continuous Integration](../delivery-release/continuous-integration.md)\
-[Code Review](code-review.md)\
-[Interoperability by Design](../../principles/interoperability-by-design.md)
+- [Automation First](../../principles/automation-first.md)
+- [Continuous Integration](../delivery-release/continuous-integration.md)
+- [Code Review](code-review.md)
+- [Interoperability by Design](../../principles/interoperability-by-design.md)
 
 ### Local Detection
 
@@ -67,7 +67,7 @@ These requirements cover how a static analysis finding is surfaced locally, befo
 2. Static analysis running through IDE integration should analyse a file incrementally as it is written, rather than only through a manual, whole-codebase scan, so feedback remains immediate.
 
 #### References
-[Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
 
 ### Suppression & Exception Discipline
 
@@ -79,8 +79,8 @@ These requirements address how a static analysis finding is suppressed without w
 4. A suppression recorded in a version-controlled list must be reviewed alongside the change it appears in; a suppression tracked through the analysis tool's own dismissal mechanism must be restricted to an authorised role.
 
 #### References
-[Code Review](code-review.md)\
-[Everything as Code](../../principles/everything-as-code.md)
+- [Code Review](code-review.md)
+- [Everything as Code](../../principles/everything-as-code.md)
 
 ### Ruleset Governance
 
@@ -92,7 +92,7 @@ These requirements guide how a change to the adopted ruleset is governed.
 4. The ruleset should be reviewed periodically, so it keeps pace with a newly identified bug pattern, language feature, or evolving engineering practice.
 
 #### References
-[Code Review](code-review.md)
+- [Code Review](code-review.md)
 
 ### Baselining Pre-Existing Findings
 
@@ -103,4 +103,4 @@ These requirements set out how a pre-existing finding is baselined when adopting
 3. A baselined violation must be tracked and remediated as technical debt.
 
 #### References
-[Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)

@@ -30,11 +30,11 @@ These principles prefer horizontal, elastic scaling over scaling a single instan
 
 #### References
 
-[Stateless First](stateless-first.md)\
-[Runtime Architecture](../standards/architecture-system-design/runtime-architecture.md)\
-[Container Orchestration](../standards/platform-infrastructure/container-orchestration.md)\
-[Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)\
-[Managed Services Standards](../standards/platform-infrastructure/managed-services-standards.md)
+- [Stateless First](stateless-first.md)
+- [Runtime Architecture](../standards/architecture-system-design/runtime-architecture.md)
+- [Container Orchestration](../standards/platform-infrastructure/container-orchestration.md)
+- [Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)
+- [Managed Services Standards](../standards/platform-infrastructure/managed-services-standards.md)
 
 ### Identifying & Addressing Scaling Constraints and Bottlenecks
 
@@ -45,7 +45,7 @@ These principles identify a scaling constraint during design and address or expl
 
 #### References
 
-[Service & Domain Design](../standards/architecture-system-design/service-domain-design.md)
+- [Service & Domain Design](../standards/architecture-system-design/service-domain-design.md)
 
 ### Efficient Data Access at Scale
 
@@ -56,7 +56,7 @@ These principles design data access to avoid unnecessary latency or load as dema
 
 #### References
 
-[Schema Design & Evolution](../standards/architecture-system-design/schema-design-evolution.md)
+- [Schema Design & Evolution](../standards/architecture-system-design/schema-design-evolution.md)
 
 ### Verifying Performance & Scalability Through Testing
 
@@ -67,8 +67,8 @@ These principles validate a performance or capacity target through testing befor
 
 #### References
 
-[Performance & Load Testing](../standards/quality-engineering/performance-load-testing.md)\
-[Testability by Design](testability-by-design.md)
+- [Performance & Load Testing](../standards/quality-engineering/performance-load-testing.md)
+- [Testability by Design](testability-by-design.md)
 
 ### Outgrowing a Scaling Approach
 
@@ -79,4 +79,4 @@ These principles re-validate a scaling assumption as usage grows beyond what it 
 
 #### References
 
-[Metrics, Monitoring & Alerting](../standards/operations-observability/metrics-monitoring-alerting.md)
+- [Metrics, Monitoring & Alerting](../standards/operations-observability/metrics-monitoring-alerting.md)

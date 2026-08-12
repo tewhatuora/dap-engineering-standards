@@ -25,7 +25,7 @@ These principles keep a cost decision proportionate to the risk and value it sup
 
 #### References
 
-[Backup & Disaster Recovery](../standards/operations-observability/backup-disaster-recovery.md)
+- [Backup & Disaster Recovery](../standards/operations-observability/backup-disaster-recovery.md)
 
 ### Reuse and Build-vs-Buy Cost Discipline
 
@@ -36,8 +36,8 @@ These principles weigh the total cost of reusing an existing solution against bu
 
 #### References
 
-[Reuse Before Reinvention](reuse-before-reinvention.md)\
-[Technology Stack Governance](../standards/architecture-system-design/technology-stack-governance.md)
+- [Reuse Before Reinvention](reuse-before-reinvention.md)
+- [Technology Stack Governance](../standards/architecture-system-design/technology-stack-governance.md)
 
 ### Cost Visibility & Attribution by Design
 
@@ -47,7 +47,7 @@ This principle makes a service's cost measurable and attributable to its respons
 
 #### References
 
-[Cost Monitoring & Attribution](../standards/cost-sustainability/cost-monitoring-attribution.md)
+- [Cost Monitoring & Attribution](../standards/cost-sustainability/cost-monitoring-attribution.md)
 
 ### Avoiding Unnecessary Resource Consumption
 
@@ -59,10 +59,10 @@ These principles avoid unnecessary or wasteful resource consumption, preferring 
 
 #### References
 
-[Resource Efficiency & Optimisation](../standards/cost-sustainability/resource-efficiency-optimisation.md)\
-[Runtime Architecture](../standards/architecture-system-design/runtime-architecture.md)\
-[Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)\
-[Managed Services Standards](../standards/platform-infrastructure/managed-services-standards.md)
+- [Resource Efficiency & Optimisation](../standards/cost-sustainability/resource-efficiency-optimisation.md)
+- [Runtime Architecture](../standards/architecture-system-design/runtime-architecture.md)
+- [Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)
+- [Managed Services Standards](../standards/platform-infrastructure/managed-services-standards.md)
 
 ### Extending Cost Awareness to AI-Assisted Engineering Tooling
 
@@ -73,7 +73,7 @@ These principles extend cost awareness to the token and usage-based spend AI-ass
 
 #### References
 
-[AI Cost Considerations & Optimisation](../standards/ai-engineering/ai-cost-considerations-optimisation.md)
+- [AI Cost Considerations & Optimisation](../standards/ai-engineering/ai-cost-considerations-optimisation.md)
 
 ### Revisiting Cost Decisions as Usage and Pricing Change
 

@@ -22,7 +22,7 @@ These principles keep local development feedback fast and independent of a share
 
 #### References
 
-[Local Development Environment Standards](../standards/developer-experience/local-development-environment-standards.md)
+- [Local Development Environment Standards](../standards/developer-experience/local-development-environment-standards.md)
 
 ### Fast, Prioritised Feedback in Delivery Pipelines
 
@@ -33,8 +33,8 @@ These principles order a delivery pipeline's checks so the fastest, highest-sign
 
 #### References
 
-[Continuous Integration](../standards/delivery-release/continuous-integration.md)\
-[Build & Test Feedback Loops](../standards/developer-experience/build-test-feedback-loops.md)
+- [Continuous Integration](../standards/delivery-release/continuous-integration.md)
+- [Build & Test Feedback Loops](../standards/developer-experience/build-test-feedback-loops.md)
 
 ### Feedback That Is Clear and Actionable
 
@@ -59,9 +59,9 @@ These principles detect a production change's impact soon enough after release t
 
 #### References
 
-[Observability by Default](observability-by-default.md)\
-[Progressive Delivery Strategies (Blue/Green, Canary)](../standards/delivery-release/progressive-delivery-strategies.md)\
-[Feature Flagging](../standards/delivery-release/feature-flagging.md)
+- [Observability by Default](observability-by-default.md)
+- [Progressive Delivery Strategies (Blue/Green, Canary)](../standards/delivery-release/progressive-delivery-strategies.md)
+- [Feature Flagging](../standards/delivery-release/feature-flagging.md)
 
 ### Measuring & Improving Feedback Loop Speed Over Time
 

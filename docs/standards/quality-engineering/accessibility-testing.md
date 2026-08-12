@@ -15,7 +15,7 @@ These requirements integrate automated accessibility scanning into a service's d
 
 #### References
 
-[Continuous Integration](../delivery-release/continuous-integration.md)
+- [Continuous Integration](../delivery-release/continuous-integration.md)
 
 ### Manual & Assistive Technology Verification
 
@@ -26,8 +26,8 @@ These requirements use real assistive technologies to verify a user interface, s
 
 #### References
 
-[Accessibility by Design](../../principles/accessibility-by-design.md)\
-[Testability by Design](../../principles/testability-by-design.md)
+- [Accessibility by Design](../../principles/accessibility-by-design.md)
+- [Testability by Design](../../principles/testability-by-design.md)
 
 ### Independent & Third-Party Verification
 
@@ -46,7 +46,7 @@ These requirements tie a test case to a specific success criterion of the adopte
 
 #### References
 
-[Accessibility by Design](../../principles/accessibility-by-design.md)
+- [Accessibility by Design](../../principles/accessibility-by-design.md)
 
 ### Public-Facing & Internal Interface Scope
 
@@ -57,7 +57,7 @@ These requirements extend accessibility testing to an internal or administrative
 
 #### References
 
-[Accessibility by Design](../../principles/accessibility-by-design.md)
+- [Accessibility by Design](../../principles/accessibility-by-design.md)
 
 ### Re-verification After Change or Standard Update
 
@@ -68,4 +68,4 @@ These requirements re-verify accessibility beyond routine automated scanning, as
 
 #### References
 
-[Accessibility by Design](../../principles/accessibility-by-design.md)
+- [Accessibility by Design](../../principles/accessibility-by-design.md)

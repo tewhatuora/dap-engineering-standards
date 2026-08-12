@@ -28,7 +28,7 @@ These requirements govern how a column or field's data type is chosen, so storag
 
 #### References
 
-[Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
 
 ### Schema Ownership
 
@@ -38,7 +38,7 @@ This requirement keeps a schema owned by exactly one service.
 
 #### References
 
-[Service & Domain Design](service-domain-design.md)
+- [Service & Domain Design](service-domain-design.md)
 
 ### Constraints, Triggers & Stored Procedures
 
@@ -51,8 +51,8 @@ These requirements control how a relational schema enforces integrity and uses t
 
 #### References
 
-[Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)\
-[Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
+- [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
+- [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
 
 ### Audit, Traceability & Deletion Representation
 
@@ -70,7 +70,7 @@ These requirements keep an index aligned with a schema's actual query patterns.
 
 #### References
 
-[Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
 
 ### Backward-Compatible, Additive Schema Changes
 
@@ -82,7 +82,7 @@ These requirements prefer an additive, backward-compatible schema change over on
 
 #### References
 
-[Interoperability by Design](../../principles/interoperability-by-design.md)
+- [Interoperability by Design](../../principles/interoperability-by-design.md)
 
 ### Managing Breaking Schema Changes
 
@@ -101,5 +101,5 @@ These requirements ensure a schema change is applied consistently, as version-co
 
 #### References
 
-[Everything as Code](../../principles/everything-as-code.md)\
-[Database Migration Tooling](../code-implementation/database-migration-tooling.md)
+- [Everything as Code](../../principles/everything-as-code.md)
+- [Database Migration Tooling](../code-implementation/database-migration-tooling.md)

@@ -15,7 +15,7 @@ These principles decide how a component's correctness will be verified through t
 
 #### References
 
-[Unit Testing](../standards/quality-engineering/unit-testing.md)
+- [Unit Testing](../standards/quality-engineering/unit-testing.md)
 
 ### Isolating Behaviour Through Substitutable Dependencies
 
@@ -47,7 +47,7 @@ These principles size automated test coverage to a change's risk, criticality, a
 
 #### References
 
-[Integration Testing](../standards/quality-engineering/integration-testing.md)
+- [Integration Testing](../standards/quality-engineering/integration-testing.md)
 
 ### Test Data & Environment Support
 
@@ -58,8 +58,8 @@ These principles support execution against controlled test data in an environmen
 
 #### References
 
-[Test Data Management](../standards/quality-engineering/test-data-management.md)\
-[Environment Strategy](../standards/platform-infrastructure/environment-strategy.md)
+- [Test Data Management](../standards/quality-engineering/test-data-management.md)
+- [Environment Strategy](../standards/platform-infrastructure/environment-strategy.md)
 
 ### Testability of Non-Functional Characteristics
 
@@ -70,6 +70,6 @@ These principles design a non-functional characteristic to be verifiable through
 
 #### References
 
-[Performance & Load Testing](../standards/quality-engineering/performance-load-testing.md)\
-[Application Security Testing](../standards/quality-engineering/application-security-testing.md)\
-[Accessibility Testing](../standards/quality-engineering/accessibility-testing.md)
+- [Performance & Load Testing](../standards/quality-engineering/performance-load-testing.md)
+- [Application Security Testing](../standards/quality-engineering/application-security-testing.md)
+- [Accessibility Testing](../standards/quality-engineering/accessibility-testing.md)

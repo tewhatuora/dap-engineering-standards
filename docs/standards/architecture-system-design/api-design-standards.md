@@ -21,7 +21,7 @@ These requirements govern how an API is designed and which protocols it may use,
 
 #### References
 
-[Interoperability by Design](../../principles/interoperability-by-design.md)
+- [Interoperability by Design](../../principles/interoperability-by-design.md)
 
 ### Contract-First Design
 
@@ -33,7 +33,7 @@ These requirements ensure an API's interface is specified and verified, so a con
 
 #### References
 
-[Integration Testing](../quality-engineering/integration-testing.md)
+- [Integration Testing](../quality-engineering/integration-testing.md)
 
 ### Versioning, Deprecation & Retirement
 
@@ -47,7 +47,7 @@ These requirements govern how a published API version changes, is deprecated, an
 
 #### References
 
-[Interoperability by Design](../../principles/interoperability-by-design.md)
+- [Interoperability by Design](../../principles/interoperability-by-design.md)
 
 ### Service Level Commitments
 
@@ -67,7 +67,7 @@ These requirements govern who may call an API and what they are permitted to do,
 
 #### References
 
-[Identity & Access Management](../security-identity/identity-access-management.md)
+- [Identity & Access Management](../security-identity/identity-access-management.md)
 
 ### Data Redaction & Jurisdictional Controls
 
@@ -79,7 +79,7 @@ These requirements control which data an API may expose to a caller, based on th
 
 #### References
 
-[Data Residency & Sovereignty](../../principles/data-residency-sovereignty.md)
+- [Data Residency & Sovereignty](../../principles/data-residency-sovereignty.md)
 
 ### Input Validation & Error Handling
 
@@ -92,7 +92,7 @@ These requirements govern how an API validates input and surfaces errors, so a c
 
 #### References
 
-[Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
+- [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
 
 ### Rate Limiting & Response Compression
 
@@ -106,7 +106,7 @@ These requirements govern how an API manages demand and response size, so a cons
 
 #### References
 
-[Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Reliability & Resilience](../../principles/reliability-resilience.md)
 
 ### Discoverability & Documentation
 
@@ -118,4 +118,4 @@ These requirements define how a published API is discovered and understood by a 
 
 #### References
 
-[Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
+- [Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)

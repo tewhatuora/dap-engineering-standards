@@ -16,7 +16,7 @@ These requirements define what an integration test must verify.
 
 #### References
 
-[Unit Testing](unit-testing.md)
+- [Unit Testing](unit-testing.md)
 
 ### Isolated Environments & Controlled Test Data
 
@@ -31,9 +31,9 @@ These requirements keep an integration test's environment and data isolated and 
 
 #### References
 
-[Environment Strategy](../platform-infrastructure/environment-strategy.md)\
-[Test Data Management](test-data-management.md)\
-[Testability by Design](../../principles/testability-by-design.md)
+- [Environment Strategy](../platform-infrastructure/environment-strategy.md)
+- [Test Data Management](test-data-management.md)
+- [Testability by Design](../../principles/testability-by-design.md)
 
 ### Simulating Dependencies Outside the Team's Control
 
@@ -45,7 +45,7 @@ These requirements determine how an integration test handles a dependency operat
 
 #### References
 
-[Testability by Design](../../principles/testability-by-design.md)
+- [Testability by Design](../../principles/testability-by-design.md)
 
 ### Contract Testing
 
@@ -57,9 +57,9 @@ These requirements verify that a published interface or schema behaves as its co
 
 #### References
 
-[Interoperability by Design](../../principles/interoperability-by-design.md)\
-[API Design & Standards](../architecture-system-design/api-design-standards.md)\
-[Event-Driven Messaging Standards](../architecture-system-design/event-driven-messaging-standards.md)
+- [Interoperability by Design](../../principles/interoperability-by-design.md)
+- [API Design & Standards](../architecture-system-design/api-design-standards.md)
+- [Event-Driven Messaging Standards](../architecture-system-design/event-driven-messaging-standards.md)
 
 ### Automated Execution Within Delivery Pipelines
 
@@ -72,9 +72,9 @@ These requirements govern how integration test execution is automated and placed
 
 #### References
 
-[Continuous Integration](../delivery-release/continuous-integration.md)\
-[Branching Strategy](../code-implementation/branching-strategy.md)\
-[Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Continuous Integration](../delivery-release/continuous-integration.md)
+- [Branching Strategy](../code-implementation/branching-strategy.md)
+- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
 
 ### Blocking Progression on Integration Test Failure
 
@@ -86,8 +86,8 @@ These requirements make a failing integration test block progression.
 
 #### References
 
-[Continuous Integration](../delivery-release/continuous-integration.md)\
-[Automation First](../../principles/automation-first.md)
+- [Continuous Integration](../delivery-release/continuous-integration.md)
+- [Automation First](../../principles/automation-first.md)
 
 ### Integration Test Code as a Maintained Engineering Artifact
 
@@ -99,8 +99,8 @@ These requirements hold integration test code to the same engineering standards 
 
 #### References
 
-[Coding Standards & Formatting](../code-implementation/coding-standards-formatting.md)\
-[Code Review](../code-implementation/code-review.md)
+- [Coding Standards & Formatting](../code-implementation/coding-standards-formatting.md)
+- [Code Review](../code-implementation/code-review.md)
 
 ### Diagnosing Integration Test Failures
 
@@ -111,5 +111,5 @@ These requirements make an integration test failure indicate its cause, given th
 
 #### References
 
-[Fast Feedback by Design](../../principles/fast-feedback-by-design.md)\
-[Observability by Default](../../principles/observability-by-default.md)
+- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Observability by Default](../../principles/observability-by-default.md)

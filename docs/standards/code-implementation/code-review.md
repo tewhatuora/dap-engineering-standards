@@ -17,7 +17,7 @@ These requirements set out how a change is independently reviewed and approved b
 
 #### References
 
-[Branching Strategy](branching-strategy.md)
+- [Branching Strategy](branching-strategy.md)
 
 ### Risk-Proportionate Review Rigor
 
@@ -36,7 +36,7 @@ This requirement sets out how the same review process applies across every kind 
 
 #### References
 
-[Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/everything-as-code.md)
 
 ### Assessing Correctness, Complexity & Security
 
@@ -49,11 +49,11 @@ These requirements cover how a change is evaluated beyond whether it merely func
 
 #### References
 
-[Simplicity & Maintainability](../../principles/simplicity-maintainability.md)\
-[Coding Standards & Formatting](coding-standards-formatting.md)\
-[Security by Design](../../principles/security-by-design.md)\
-[Static Code Analysis](static-code-analysis.md)\
-[AI Usage & Verification in Code Review](../ai-engineering/ai-usage-verification-in-code-review.md)
+- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Coding Standards & Formatting](coding-standards-formatting.md)
+- [Security by Design](../../principles/security-by-design.md)
+- [Static Code Analysis](static-code-analysis.md)
+- [AI Usage & Verification in Code Review](../ai-engineering/ai-usage-verification-in-code-review.md)
 
 ### Assessing Operational Readiness
 
@@ -68,13 +68,13 @@ These requirements set out how a change's operational readiness is considered du
 
 #### References
 
-[Reliability & Resilience](../../principles/reliability-resilience.md)\
-[Observability by Default](../../principles/observability-by-default.md)\
-[Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)\
-[Interoperability by Design](../../principles/interoperability-by-design.md)\
-[Runbooks](../operations-observability/runbooks.md)\
-[Feature Flagging](../delivery-release/feature-flagging.md)\
-[Progressive Delivery Strategies (Blue/Green, Canary)](../delivery-release/progressive-delivery-strategies.md)
+- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Observability by Default](../../principles/observability-by-default.md)
+- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Interoperability by Design](../../principles/interoperability-by-design.md)
+- [Runbooks](../operations-observability/runbooks.md)
+- [Feature Flagging](../delivery-release/feature-flagging.md)
+- [Progressive Delivery Strategies (Blue/Green, Canary)](../delivery-release/progressive-delivery-strategies.md)
 
 ### Right-Sized, Reviewable Changes
 
@@ -87,7 +87,7 @@ These requirements guide how a change stays scoped and described well enough for
 
 #### References
 
-[Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
+- [Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
 
 ### Resolving Review Feedback Before Merge
 
@@ -114,7 +114,7 @@ These requirements cover how a review request is actioned before it delays the c
 
 #### References
 
-[Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
 
 ### Emergency Change Review
 
@@ -126,7 +126,7 @@ These requirements guide how a change merges under an expedited review path duri
 
 #### References
 
-[Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Reliability & Resilience](../../principles/reliability-resilience.md)
 
 ### Approval Recording & Traceability
 
@@ -137,5 +137,5 @@ These requirements describe how an approval decision stays explicit, attributabl
 
 #### References
 
-[Branching Strategy](branching-strategy.md)\
-[AI Usage & Verification in Code Review](../ai-engineering/ai-usage-verification-in-code-review.md)
+- [Branching Strategy](branching-strategy.md)
+- [AI Usage & Verification in Code Review](../ai-engineering/ai-usage-verification-in-code-review.md)

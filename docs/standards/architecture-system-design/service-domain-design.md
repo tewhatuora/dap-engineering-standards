@@ -15,7 +15,7 @@ These requirements scope a service around a single, cohesive business domain.
 
 #### References
 
-[Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
 
 ### Single Ownership of a Service's Data
 
@@ -25,7 +25,7 @@ This requirement keeps a service's data owned by that service alone.
 
 #### References
 
-[Schema Design & Evolution](schema-design-evolution.md)
+- [Schema Design & Evolution](schema-design-evolution.md)
 
 ### Independent Deployability
 
@@ -36,7 +36,7 @@ These requirements let a service be deployed and scaled without coordinating wit
 
 #### References
 
-[Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
 
 ### Interaction Only Through Published Interfaces
 
@@ -47,9 +47,9 @@ These requirements confine service-to-service interaction to a well-defined, pub
 
 #### References
 
-[Interoperability by Design](../../principles/interoperability-by-design.md)\
-[API Design & Standards](api-design-standards.md)\
-[Event-Driven Messaging Standards](event-driven-messaging-standards.md)
+- [Interoperability by Design](../../principles/interoperability-by-design.md)
+- [API Design & Standards](api-design-standards.md)
+- [Event-Driven Messaging Standards](event-driven-messaging-standards.md)
 
 ### Right-Sizing Service Granularity
 
@@ -75,4 +75,4 @@ These requirements prevent a core business rule from being independently reimple
 
 #### References
 
-[Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
+- [Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)

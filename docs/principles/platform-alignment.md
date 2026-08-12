@@ -16,13 +16,13 @@ These principles make the organisation's shared platforms the default for comput
 
 #### References
 
-[Runtime Architecture](../standards/architecture-system-design/runtime-architecture.md)\
-[Containerisation Standards](../standards/platform-infrastructure/containerisation-standards.md)\
-[Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)\
-[Container Orchestration](../standards/platform-infrastructure/container-orchestration.md)\
-[Managed Services Standards](../standards/platform-infrastructure/managed-services-standards.md)\
-[Environment Strategy](../standards/platform-infrastructure/environment-strategy.md)\
-[Infrastructure as Code](../standards/platform-infrastructure/infrastructure-as-code.md)
+- [Runtime Architecture](../standards/architecture-system-design/runtime-architecture.md)
+- [Containerisation Standards](../standards/platform-infrastructure/containerisation-standards.md)
+- [Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)
+- [Container Orchestration](../standards/platform-infrastructure/container-orchestration.md)
+- [Managed Services Standards](../standards/platform-infrastructure/managed-services-standards.md)
+- [Environment Strategy](../standards/platform-infrastructure/environment-strategy.md)
+- [Infrastructure as Code](../standards/platform-infrastructure/infrastructure-as-code.md)
 
 ### Platform as the Path of Least Resistance
 
@@ -42,7 +42,7 @@ These principles require a deviation from the shared platform to be justified, a
 
 #### References
 
-[Technology Stack Governance](../standards/architecture-system-design/technology-stack-governance.md)
+- [Technology Stack Governance](../standards/architecture-system-design/technology-stack-governance.md)
 
 ### Reducing Fragmentation & Duplication
 
@@ -53,7 +53,7 @@ These principles consolidate platform capability built independently by more tha
 
 #### References
 
-[Reuse Before Reinvention](reuse-before-reinvention.md)
+- [Reuse Before Reinvention](reuse-before-reinvention.md)
 
 ### Evaluating New or Alternative Capability
 

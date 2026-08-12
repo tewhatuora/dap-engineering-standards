@@ -16,7 +16,7 @@ These requirements set out how a setting that varies by environment or deploymen
 
 #### References
 
-[Build & Artifact Management](../delivery-release/build-artifact-management.md)
+- [Build & Artifact Management](../delivery-release/build-artifact-management.md)
 
 ### Configuration as Code
 
@@ -28,9 +28,9 @@ These requirements describe how non-secret configuration is version-controlled a
 
 #### References
 
-[Everything as Code](../../principles/everything-as-code.md)\
-[Version Control](version-control.md)\
-[Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Everything as Code](../../principles/everything-as-code.md)
+- [Version Control](version-control.md)
+- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
 
 ### Secrets Excluded from Configuration
 
@@ -41,9 +41,9 @@ These requirements address how a secret or credential is kept out of configurati
 
 #### References
 
-[Everything as Code](../../principles/everything-as-code.md)\
-[Security by Design](../../principles/security-by-design.md)\
-[Secrets Management & Scanning](../security-identity/secrets-management-scanning.md)
+- [Everything as Code](../../principles/everything-as-code.md)
+- [Security by Design](../../principles/security-by-design.md)
+- [Secrets Management & Scanning](../security-identity/secrets-management-scanning.md)
 
 ### Consistent Structure Across Environments
 
@@ -55,7 +55,7 @@ These requirements cover how a configuration's structure stays fixed across envi
 
 #### References
 
-[Environment Strategy](../platform-infrastructure/environment-strategy.md)
+- [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 
 ### Validation & Fail-Fast
 
@@ -66,7 +66,7 @@ These requirements guide how an invalid or incomplete configuration is caught be
 
 #### References
 
-[Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
 
 ### Change Control & Traceability
 
@@ -78,9 +78,9 @@ These requirements set out how an approved configuration change is deployed and 
 
 #### References
 
-[Code Review](code-review.md)\
-[Automation First](../../principles/automation-first.md)\
-[Everything as Code](../../principles/everything-as-code.md)
+- [Code Review](code-review.md)
+- [Automation First](../../principles/automation-first.md)
+- [Everything as Code](../../principles/everything-as-code.md)
 
 ### Runtime & Dynamic Configuration
 
@@ -92,5 +92,5 @@ These requirements address how a setting deliberately designed to change at runt
 
 #### References
 
-[Feature Flagging](../delivery-release/feature-flagging.md)\
-[Rollback Strategy](../delivery-release/rollback-strategy.md)
+- [Feature Flagging](../delivery-release/feature-flagging.md)
+- [Rollback Strategy](../delivery-release/rollback-strategy.md)

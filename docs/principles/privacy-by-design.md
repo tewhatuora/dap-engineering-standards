@@ -36,8 +36,8 @@ These principles prefer synthetic or de-identified data over production personal
 
 #### References
 
-[Test Data Management](../standards/quality-engineering/test-data-management.md)\
-[Prompt Data Handling](../standards/ai-engineering/prompt-data-handling.md)
+- [Test Data Management](../standards/quality-engineering/test-data-management.md)
+- [Prompt Data Handling](../standards/ai-engineering/prompt-data-handling.md)
 
 ### Privacy Risk Assessment for New or Changed Data Flows
 
@@ -56,7 +56,7 @@ These principles define and enforce how long personal or health data, including 
 
 #### References
 
-[Backup & Disaster Recovery](../standards/operations-observability/backup-disaster-recovery.md)
+- [Backup & Disaster Recovery](../standards/operations-observability/backup-disaster-recovery.md)
 
 ### Access Restricted to Legitimate Need
 
@@ -67,4 +67,4 @@ These principles restrict access to personal or health data to the narrowest, le
 
 #### References
 
-[Identity & Access Management](../standards/security-identity/identity-access-management.md)
+- [Identity & Access Management](../standards/security-identity/identity-access-management.md)

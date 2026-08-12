@@ -18,7 +18,7 @@ These requirements govern when a service uses asynchronous, event-driven communi
 
 #### References
 
-[Interoperability by Design](../../principles/interoperability-by-design.md)
+- [Interoperability by Design](../../principles/interoperability-by-design.md)
 
 ### Event & Message Schema Contracts
 
@@ -33,7 +33,7 @@ These requirements ensure every event or message is defined by an owned, documen
 
 #### References
 
-[Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/everything-as-code.md)
 
 ### Backward-Compatible Schema Evolution & Versioning
 
@@ -44,7 +44,7 @@ These requirements keep a published schema's changes backward-compatible, so exi
 
 #### References
 
-[Schema Design & Evolution](schema-design-evolution.md)
+- [Schema Design & Evolution](schema-design-evolution.md)
 
 ### Delivery Semantics & Ordering Guarantees
 
@@ -73,7 +73,7 @@ These requirements require a consumer to handle a duplicate or redelivered messa
 
 #### References
 
-[Stateless First](../../principles/stateless-first.md)
+- [Stateless First](../../principles/stateless-first.md)
 
 ### Dead-Letter & Poison Message Handling
 
@@ -91,7 +91,7 @@ These requirements protect a consumer from demand it cannot keep up with.
 
 #### References
 
-[Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Reliability & Resilience](../../principles/reliability-resilience.md)
 
 ### Message Broker & Platform Alignment
 
@@ -102,7 +102,7 @@ These requirements limit which messaging infrastructure a service may use.
 
 #### References
 
-[Platform Alignment](../../principles/platform-alignment.md)
+- [Platform Alignment](../../principles/platform-alignment.md)
 
 ### Channel Access Control & Payload Confidentiality
 
@@ -115,10 +115,10 @@ These requirements control who can access a channel and what data its payloads m
 
 #### References
 
-[Identity & Access Management](../security-identity/identity-access-management.md)\
-[Security by Design](../../principles/security-by-design.md)\
-[Privacy by Design](../../principles/privacy-by-design.md)\
-[Data Residency & Sovereignty](../../principles/data-residency-sovereignty.md)
+- [Identity & Access Management](../security-identity/identity-access-management.md)
+- [Security by Design](../../principles/security-by-design.md)
+- [Privacy by Design](../../principles/privacy-by-design.md)
+- [Data Residency & Sovereignty](../../principles/data-residency-sovereignty.md)
 
 ### Choreography vs Orchestration for Multi-Service Workflows
 
@@ -136,9 +136,9 @@ These requirements ensure an asynchronous event flow can be traced and monitored
 
 #### References
 
-[Observability by Default](../../principles/observability-by-default.md)\
-[Distributed Tracing](../operations-observability/distributed-tracing.md)\
-[Metrics, Monitoring & Alerting](../operations-observability/metrics-monitoring-alerting.md)
+- [Observability by Default](../../principles/observability-by-default.md)
+- [Distributed Tracing](../operations-observability/distributed-tracing.md)
+- [Metrics, Monitoring & Alerting](../operations-observability/metrics-monitoring-alerting.md)
 
 ### Verifying Event Contracts Through Testing
 
@@ -149,4 +149,4 @@ These requirements verify that an event or message schema behaves as its contrac
 
 #### References
 
-[Integration Testing](../quality-engineering/integration-testing.md)
+- [Integration Testing](../quality-engineering/integration-testing.md)
