@@ -6,44 +6,44 @@ This standard defines requirements for managing and optimising the cost of AI-as
 
 ## Standards
 
-### Context Scoping & Token Efficiency
+### Context Scoping
 
-These requirements keep an AI tool request scoped to only the context a task actually needs.
+These requirements set out how an AI tool request is scoped to the context a task actually needs.
 
 1. AI tool requests must be scoped to the minimum context necessary to complete the task, such as a specific file or selection, rather than an entire repository.
 2. Broad, whole-repository context should be reserved for cases where narrower, targeted context has already failed.
 
 ### Model Selection & Reasoning Effort
 
-These requirements match model choice and reasoning effort to a task's actual complexity.
+These requirements address how model choice and reasoning effort are matched to a task's actual complexity.
 
 1. AI tools should default to automatic or cost-aware model selection, rather than a fixed, higher-cost model for all tasks.
 2. Maximum reasoning effort or extended-thinking modes should be reserved for genuinely complex or ambiguous tasks, not routine work.
 
 ### Custom Instructions & Tooling Hygiene
 
-These requirements keep custom instructions and enabled tooling lean, so requests stay cheap to process.
+These requirements describe how custom instructions and enabled tooling are kept lean, so a request stays cheap to process.
 
 1. Organisation-wide and project-level custom instructions must be concise and should remain stable between requests, to benefit from provider-side caching and avoid repeated cost.
 2. Tools, extensions, or integrations not required for the current project should be disabled, as their definitions may be included in every request regardless of use.
 
 ### Session & Context Management
 
-These requirements prevent an AI tool session from accumulating unbounded, no-longer-relevant context.
+These requirements cover how an AI tool session is managed so it does not accumulate unbounded, no-longer-relevant context.
 
 1. A new AI tool session should be started when switching between unrelated tasks, rather than continuing a session whose history is no longer relevant.
 2. Developers should periodically reset or summarise long-running sessions to prevent unbounded context accumulation.
 
-### Cost Monitoring & Vendor Billing Awareness
+### Cost Monitoring & Billing Awareness
 
-These requirements make AI tooling cost visible and responsive to vendor pricing changes.
+These requirements guide how AI tooling cost is tracked and kept visible as vendor pricing changes.
 
 1. Cost or usage attributable to AI tooling should be monitored and attributed.
 2. Personnel responsible for AI tooling adoption must stay informed of material changes to a vendor's billing or pricing model and reassess usage practices accordingly.
 
-### Periodic Review of Cost-Optimisation Practices
+### Periodic Cost-Optimisation Review
 
-These requirements ensure a cost-optimisation practice is periodically re-evaluated rather than assumed to remain effective.
+These requirements describe how a cost-optimisation practice is periodically re-evaluated rather than assumed to remain effective.
 
 1. Teams should periodically measure their AI tool usage and cost against this standard's practices, rather than assuming a practice remains effective indefinitely.
 2. A cost-optimisation practice's effectiveness may vary by model, workload, and codebase, and should be evaluated in the team's own context rather than assumed from general guidance.

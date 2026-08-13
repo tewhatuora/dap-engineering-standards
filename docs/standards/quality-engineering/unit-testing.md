@@ -2,13 +2,13 @@
 
 ## Objective
 
-Unit Testing defines the requirements for verifying an individual unit of code's behaviour in isolation from its external dependencies. It directs engineering effort toward substitutable dependencies, critical-path coverage, and self-contained, independent test execution, so a unit test suite stays fast, reliable, and properly maintained as code changes over time.
+This standard defines requirements for verifying an individual unit of code's behaviour in isolation from its external dependencies. It keeps a unit test suite fast, reliable, and properly maintained as code changes over time.
 
 ## Standards
 
 ### Scope & Boundaries of a Unit Test
 
-These requirements define what qualifies as a unit test and the boundary that separates it from an integration test.
+These requirements describe what qualifies as a unit test and the boundary that separates it from an integration test.
 
 1. A unit test must verify the behaviour of a single unit of code, such as a function, method, or class, in isolation from other units.
 2. A unit test must not depend on a network call, a database, a filesystem, an external service, or another out-of-process dependency.
@@ -20,7 +20,7 @@ These requirements define what qualifies as a unit test and the boundary that se
 
 ### Isolating Dependencies with Test Doubles
 
-These requirements govern how a unit's external dependency is substituted with a controlled test double during a unit test.
+These requirements set out how a unit's external dependency is substituted with a controlled test double during a unit test.
 
 1. An external dependency accessed by a unit under test, such as another service, a data store, or the system clock, must be substituted with a test double, such as a mock, stub, or fake.
 2. A test double must simulate only the behaviour of the dependency relevant to the scenario being verified, such as a return value, error condition, or invocation, sufficient to exercise that scenario.
@@ -30,9 +30,9 @@ These requirements govern how a unit's external dependency is substituted with a
 
 - [Testability by Design](../../principles/testability-by-design.md)
 
-### Coverage of Critical Paths & Edge Cases
+### Coverage Expectations
 
-These requirements direct unit test coverage toward a change's critical paths and edge cases, and define what a unit test must exercise beyond its primary success path.
+These requirements address how unit test coverage is scoped across a change's logic, beyond its primary success path.
 
 1. Code on a critical path must be covered by unit tests.
 2. Branching logic should have a unit test for each distinct branch, so no path through the logic goes unverified.
@@ -47,7 +47,7 @@ These requirements direct unit test coverage toward a change's critical paths an
 
 ### Coverage Measurement & Reporting
 
-These requirements govern how code coverage is measured and reported.
+These requirements guide how code coverage is measured and reported.
 
 1. A test must not be written solely to raise a coverage number without genuinely verifying the code's behaviour.
 2. A code coverage report must be made available as part of a build pipeline's continuous integration stage.
@@ -56,9 +56,9 @@ These requirements govern how code coverage is measured and reported.
 
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 
-### Test Structure, Naming & Maintainability
+### Test Clarity & Maintainability
 
-These requirements keep a unit test's purpose and outcome clear to an engineer other than its author.
+These requirements cover how a unit test's purpose and outcome stay clear to an engineer other than its author.
 
 1. A unit test must verify a single behaviour or scenario; a test that verifies multiple unrelated behaviours must be split into separate tests.
 2. A unit test's name must describe the behaviour being verified and the expected outcome, so its purpose is clear without reading its implementation.
@@ -74,7 +74,7 @@ These requirements keep a unit test's purpose and outcome clear to an engineer o
 
 ### Independent, Parallel-Safe Execution
 
-These requirements keep a unit test's outcome independent of other tests and the order in which it runs.
+These requirements describe how a unit test's outcome stays independent of other tests and the order in which it runs.
 
 1. A unit test must produce the same outcome regardless of the order in which it executes relative to other tests.
 2. A unit test must not depend on shared mutable state that could cause it to interfere with, or be affected by, another test.
@@ -86,7 +86,7 @@ These requirements keep a unit test's outcome independent of other tests and the
 
 ### Fast, Fully Automated Execution
 
-These requirements keep a unit test suite fast and its execution fully automated.
+These requirements set out how a unit test suite stays fast and its execution fully automated.
 
 1. A unit test suite must run automatically on every push to a branch, on a merge request, and after it merges into a protected branch.
 2. A unit test suite must be runnable on demand from a developer's own machine, independent of the delivery pipeline.
@@ -101,7 +101,7 @@ These requirements keep a unit test suite fast and its execution fully automated
 
 ### Blocking Progression on Unit Test Failure
 
-These requirements make a failing unit test block progression.
+These requirements address how a failing unit test blocks progression through the delivery pipeline until the failure is resolved.
 
 1. A failing unit test must block a change from merging or progressing to the next stage of the delivery pipeline, until the failure is resolved.
 2. A failing or flaky unit test must not be silently commented out or disabled to obtain a passing result.
@@ -112,9 +112,9 @@ These requirements make a failing unit test block progression.
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 - [Automation First](../../principles/automation-first.md)
 
-### Unit Test Code as a Maintained Engineering Artifact
+### Test Code Quality & Maintenance
 
-These requirements hold unit test code to the same engineering standards as the production code it verifies.
+These requirements cover how unit test code is held to the same engineering standards as the production code it verifies.
 
 1. Unit test code must be held to the same coding, formatting, and review standards as the production code it verifies.
 2. Unit test code must be reviewed with the same rigor as the production code it accompanies, rather than approved on the assumption that its presence alone is sufficient.
@@ -125,9 +125,9 @@ These requirements hold unit test code to the same engineering standards as the 
 - [Coding Standards & Formatting](../code-implementation/coding-standards-formatting.md)
 - [Code Review](../code-implementation/code-review.md)
 
-### Self-Contained, Minimal & Deterministic Test Data
+### Test Data Scope & Determinism
 
-These requirements keep the data a unit test depends on scoped to the test itself, rather than a shared fixture.
+These requirements guide how the data a unit test depends on stays scoped to the test itself, rather than a shared fixture.
 
 1. Data a unit test depends on should be defined within the test itself or a small, dedicated helper, rather than sourced from a shared fixture or dataset.
 2. Test data used by a unit test should be minimal and limited to what the scenario being verified requires, while remaining representative of realistic input.

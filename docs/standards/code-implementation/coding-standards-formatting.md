@@ -2,7 +2,7 @@
 
 ## Objective
 
-Coding Standards & Formatting establishes the naming, formatting, and layout conventions applied when writing code, so a codebase reads consistently regardless of who wrote a given part of it or whether it was produced with AI assistance.
+This standard defines requirements for the naming, formatting, and layout conventions applied when writing code. It ensures a codebase reads consistently, regardless of who wrote a given part of it or whether it was produced with AI assistance.
 
 ## Standards
 
