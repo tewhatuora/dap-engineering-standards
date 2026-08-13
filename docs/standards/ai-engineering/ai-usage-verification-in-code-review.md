@@ -8,24 +8,24 @@ This standard defines requirements governing the intersection of AI tools and th
 
 ### Disclosure of AI-Assisted Contributions
 
-These requirements require an author to disclose material AI involvement in a submission.
+These requirements set out how material AI involvement in a submission is disclosed.
 
 1. Authors must disclose when a submission contains material AI-generated or AI-modified content by completing the AI disclosure section of the standard pull or merge request template.
 2. Where AI assistance is not applied uniformly across a change, disclosure must be specific enough for a reviewer to identify which parts of the change were AI-assisted.
 3. Authors must not omit or obscure disclosure of AI involvement, and must not remove or bypass the template's disclosure section.
 
-### Pre-Submission Verification Requirements
+### Pre-Submission Verification
 
-These requirements require an author to verify AI-generated code before it is submitted for review.
+These requirements describe how AI-generated or AI-modified code is verified before it is submitted for review.
 
 1. Authors must independently verify the correctness and intended behaviour of AI-generated or AI-modified code before submitting it for review; AI output must not be submitted unexamined.
 2. Authors must confirm that applicable automated tests, linting, and static analysis pass, and that test coverage adequately reflects the change, before submission.
 3. Authors must check AI-generated code for hallucinated or non-existent dependencies, packages, and APIs before submission.
 4. Authors must screen AI-generated code for security weaknesses.
 
-### Reviewer Scrutiny of AI-Assisted Submissions
+### Reviewer Scrutiny of AI-Disclosed Submissions
 
-These requirements hold an AI-disclosed submission to the same reviewer scrutiny as any other.
+These requirements address how an AI-disclosed submission is scrutinised by a reviewer.
 
 1. Reviewers must apply scrutiny to AI-disclosed submissions at least equivalent to that applied to human-authored code.
 2. Reviewers must not approve a submission solely on an author's disclosure statement or the plausibility of AI-generated code's appearance.
@@ -37,7 +37,7 @@ These requirements hold an AI-disclosed submission to the same reviewer scrutiny
 
 ### Use of AI Tools by Reviewers
 
-These requirements govern how a reviewer may use AI tools to assist their own review.
+These requirements cover how AI tools are used by a reviewer to assist their own review activity.
 
 1. Reviewers may use AI tools to assist review activity, such as summarising changes, surfacing potential defects, or checking adherence to coding standards.
 2. AI tools used by reviewers must be limited to approved tooling.
@@ -50,7 +50,7 @@ These requirements govern how a reviewer may use AI tools to assist their own re
 
 ### Approval Accountability
 
-These requirements keep approval accountability with a human reviewer, regardless of AI involvement.
+These requirements guide how approval accountability is held by a human reviewer, regardless of any AI involvement.
 
 1. An AI tool must not be recorded, configured, or represented as an approver of a code change.
 2. At least one qualified human reviewer must review and approve the change, regardless of any AI assistance used by the author or reviewer.

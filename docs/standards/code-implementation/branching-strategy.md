@@ -2,7 +2,7 @@
 
 ## Objective
 
-Branching Strategy establishes a consistent model for creating, integrating, and retiring branches within a version-controlled repository. It keeps a change moving through a defined path from branch to merge, so work can be reviewed and integrated before it diverges from the rest of the repository.
+This standard defines requirements for how a branch is created, integrated, and retired within a version-controlled repository. It keeps a change on one predictable, agreed path, so it is reviewed and merged before it diverges from the rest of the repository.
 
 ## Standards
 

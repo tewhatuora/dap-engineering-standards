@@ -2,7 +2,7 @@
 
 ## Objective
 
-Data Access & Transaction Management governs how a service's code interacts with its data store, from constructing and scoping a query or transaction to managing the connections and credentials that interaction depends on. It directs engineering effort toward data access that remains safe, efficient, and observable, and toward data that stays consistent under concurrent access and transient failure.
+This standard defines requirements for how a service's code interacts with its data store, from constructing and scoping a query or transaction to managing the connections and credentials that interaction depends on. It keeps data access safe, efficient, and observable, and keeps data consistent under concurrent access and transient failure.
 
 ## Standards
 

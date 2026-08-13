@@ -2,7 +2,7 @@
 
 ## Objective
 
-Static Code Analysis treats automated inspection of source code for defects, security weaknesses, and maintainability decline as a continuous part of engineering work. This keeps each visible and addressed before it materially affects the codebase.
+This standard defines requirements for automated inspection of source code for defects, security weaknesses, and maintainability decline as a continuous part of engineering work. It keeps each visible and addressed before it materially affects the codebase.
 
 ## Standards
 

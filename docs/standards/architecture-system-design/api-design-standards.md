@@ -2,7 +2,7 @@
 
 ## Objective
 
-API Design & Standards establishes consistent, technology-neutral expectations for designing, versioning, securing, and operating APIs across the organisation, regardless of the protocol or specification style used. It directs engineering teams toward predictable, well-documented, and stable interfaces, so an API consumer can integrate with confidence and a provider can evolve an API without breaking its existing consumers.
+This standard defines requirements for designing, versioning, securing, and operating an API consistently across the organisation, regardless of the protocol or specification style used. It keeps an API predictable, well-documented, and stable, so a consumer can integrate with confidence and a provider can evolve it without breaking existing consumers.
 
 Developers and vendors delivering APIs for the organisation should also consult the [Health New Zealand | Te Whatu Ora API Standards](https://apistandards.digital.health.nz) for detailed, protocol-specific design and implementation guidance alongside the requirements set out here.
 
@@ -10,7 +10,7 @@ Developers and vendors delivering APIs for the organisation should also consult 
 
 ### API Design Conventions
 
-These requirements govern how an API is designed and which protocols it may use, so its conventions remain consistent across the organisation.
+These requirements set out how an API is designed and which protocol it is built on, so its conventions remain consistent across the organisation.
 
 1. An API should be designed around resource-oriented, business-meaningful entities rather than mirroring internal data structures or implementation detail, at a granularity that avoids both excessive fragmentation and excessive coarseness.
 2. An API should encapsulate a multi-step internal business process behind a single operation rather than requiring a consumer to orchestrate the steps itself; where a consumer-visible sequence of calls cannot be avoided, it must be part of the documented contract rather than left for a consumer to discover.
@@ -25,7 +25,7 @@ These requirements govern how an API is designed and which protocols it may use,
 
 ### Contract-First Design
 
-These requirements ensure an API's interface is specified and verified, so a consumer can rely on accurate, up-to-date documentation of its behaviour.
+These requirements address how an API's interface is specified and verified, so a consumer relies on accurate, up-to-date documentation of its behaviour.
 
 1. An API's interface must be defined in a machine-readable specification, such as the [OpenAPI Specification](https://spec.openapis.org/oas/latest.html).
 2. The specification must be kept current with the API's actual behaviour, so a consumer can rely on it without needing to seek guidance from the provider.
@@ -35,9 +35,9 @@ These requirements ensure an API's interface is specified and verified, so a con
 
 - [Integration Testing](../quality-engineering/integration-testing.md)
 
-### Versioning, Deprecation & Retirement
+### Version Lifecycle
 
-These requirements govern how a published API version changes, is deprecated, and is retired, so its existing consumers are not broken without notice.
+These requirements describe how a published API version changes, is deprecated, and is retired, so its existing consumers are not broken without notice.
 
 1. A published API version must not be changed in a way that breaks compatibility for its existing consumers; a breaking change must instead be introduced as a new version.
 2. An additive, non-breaking change should be preferred over introducing a new API version.
@@ -51,14 +51,14 @@ These requirements govern how a published API version changes, is deprecated, an
 
 ### Service Level Commitments
 
-These requirements set the availability and performance commitments a published API makes to its consumers.
+These requirements cover how a published API's availability and performance commitment is defined and communicated to its consumers, so a consumer knows what to expect before depending on it.
 
 1. A published API must have a defined minimum availability and performance commitment, appropriate to the criticality of its consumers' dependence on it.
 2. A material change to that commitment must be communicated to its known consumers before it takes effect.
 
 ### Authentication & Authorisation
 
-These requirements govern who may call an API and what they are permitted to do, so every caller remains individually accountable.
+These requirements guide how a caller is authenticated and authorised, so every caller remains individually accountable.
 
 1. Every API must require authentication and authorisation by default; an API may be deliberately designed for anonymous access where public consumption is the intended use case, but this must be an explicit design decision, not a fallback.
 2. An API should use a recognised, standards-based authentication and authorisation protocol, such as [OAuth 2.0](https://www.rfc-editor.org/info/rfc6749/) or [OpenID Connect (OIDC)](https://openid.net/specs/openid-connect-core-1_0.html) with a standard token format such as [JSON Web Tokens (JWT)](https://www.rfc-editor.org/info/rfc7519/), rather than a bespoke scheme or a static-credential mechanism such as HTTP Basic authentication.
@@ -71,7 +71,7 @@ These requirements govern who may call an API and what they are permitted to do,
 
 ### Data Redaction & Jurisdictional Controls
 
-These requirements control which data an API may expose to a caller, based on their authorisation and jurisdiction.
+These requirements set out how data exposed to a caller is limited by their authorisation and jurisdiction.
 
 1. An API response must not include a confidential or sensitive field that the calling consumer is not authorised to view; such a field must be redacted or omitted rather than returned and left for the consumer to disregard.
 2. An API exposing data subject to a residency or sovereignty requirement must be able to restrict access by the caller's jurisdiction.
@@ -83,7 +83,7 @@ These requirements control which data an API may expose to a caller, based on th
 
 ### Input Validation & Error Handling
 
-These requirements govern how an API validates input and surfaces errors, so a consumer can rely on it safely and predictably.
+These requirements address how an API's input is validated and how its errors are returned, so a consumer relies on it safely and predictably.
 
 1. An API must validate all input against its specification and reject input that does not conform.
 2. Input received from a consumer must be treated as untrusted; where it is passed to a database, command shell, or other interpreter, it must be handled through parameterisation or an equivalent safe mechanism, rather than relying on specification conformance alone to prevent [injection](https://owasp.org/Top10/).
@@ -96,7 +96,7 @@ These requirements govern how an API validates input and surfaces errors, so a c
 
 ### Rate Limiting & Response Compression
 
-These requirements govern how an API manages demand and response size, so a consumer can plan its own usage accordingly.
+These requirements describe how demand and response size for an API are managed, so a consumer plans its own usage accordingly.
 
 1. An API should protect itself against excessive demand from a single consumer through rate limiting or throttling.
 2. An API's rate limit or throttling threshold must be communicated to its consumers, so a consumer can design its own usage to remain within it.
@@ -110,7 +110,7 @@ These requirements govern how an API manages demand and response size, so a cons
 
 ### Discoverability & Documentation
 
-These requirements define how a published API is discovered and understood by a prospective consumer.
+These requirements cover how a published API is discovered and understood by a prospective consumer.
 
 1. A published API must be discoverable by a prospective consumer without requiring direct access to the provider's source code or engineering team.
 2. Published documentation must describe the API's purpose, its resources and operations, and example usage, and must be kept current with the API's actual behaviour.

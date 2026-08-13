@@ -2,13 +2,13 @@
 
 ## Objective
 
-Runtime Architecture establishes the expectation that a workload's packaging, runtime model, and deployment location are each chosen deliberately. It gives concrete, workload-specific criteria for each decision, so the resulting choice remains fit for purpose as the workload evolves.
+This standard defines requirements for how a workload's packaging, runtime model, and deployment location are each chosen deliberately. It gives concrete, workload-specific criteria for each decision, so the resulting choice remains fit for purpose as the workload evolves.
 
 ## Standards
 
-### Runtime Model Selection as a Deliberate Architectural Decision
+### Runtime Model Selection
 
-These requirements ensure a workload's runtime model is selected deliberately and justified against its own characteristics.
+These requirements address how a workload's runtime model is selected as an explicit, justified decision made during design.
 
 1. The runtime model a workload will execute on must be an explicit, justified decision made during design.
 2. A workload must not proceed to implementation before its runtime model is selected and justified against the workload's own characteristics.
@@ -16,7 +16,7 @@ These requirements ensure a workload's runtime model is selected deliberately an
 
 ### Default Packaging Format
 
-This requirement sets the default format a service is packaged in.
+This requirement describes how a service is packaged by default.
 
 1. Services should be packaged as a container image by default, since this provides a consistent, portable artifact.
 
@@ -24,7 +24,7 @@ This requirement sets the default format a service is packaged in.
 
 - [Containerisation Standards](../platform-infrastructure/containerisation-standards.md)
 
-### Serverless and Managed Services: When to Consider Each
+### Serverless & Managed Services
 
 These requirements set out when serverless or a managed service is the better fit for a workload, and when it is not.
 
@@ -42,9 +42,9 @@ These requirements set out when serverless or a managed service is the better fi
 - [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
 - [Stateless First](../../principles/stateless-first.md)
 
-### Constraining Runtime Options to Supported Platform Capability
+### Runtime Options & Platform Capability
 
-These requirements limit runtime model choice to platform capability the organisation already operates or has approved.
+These requirements cover how the runtime models evaluated for a workload are constrained to platform capability the organisation already operates or has approved.
 
 1. The runtime models evaluated for a workload must be limited to those the organisation operates or has approved for operational use.
 2. A runtime model requiring a new, unapproved platform capability must not be adopted until that capability is approved through the organisation's governance process.
@@ -53,9 +53,9 @@ These requirements limit runtime model choice to platform capability the organis
 
 - [Platform Alignment](../../principles/platform-alignment.md)
 
-### Vendor Coupling Introduced by Runtime Model Choice
+### Vendor Coupling
 
-These requirements ensure the vendor coupling a runtime model choice introduces is identified and deliberately weighed.
+These requirements guide how the vendor coupling a runtime model choice introduces is identified and weighed against the capability it provides.
 
 1. Where a candidate runtime model is a managed service or serverless offering, the vendor coupling it introduces must be identified and weighed against the capability it provides.
 2. A runtime model may be selected for the cloud-native capability it provides, even where this introduces vendor coupling.
@@ -65,9 +65,9 @@ These requirements ensure the vendor coupling a runtime model choice introduces 
 
 - [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
 
-### Public, Private & Micro Cloud Selection
+### Cloud Deployment Selection
 
-These requirements govern the choice between public, private, and micro cloud deployment for a workload.
+These requirements set out how a workload's deployment is chosen between public cloud, private cloud, and micro cloud.
 
 1. The choice between public cloud, private cloud, and micro cloud deployment must be an explicit decision for a workload, based on its own requirements.
 2. Public cloud should be the default deployment model, since it provides the widest access to cloud-native capabilities such as managed services, serverless offerings, and elastic scaling; private or micro cloud may be selected where a specific requirement, such as data residency, connectivity, or proximity to a local data source, justifies it.

@@ -2,13 +2,13 @@
 
 ## Objective
 
-Integration Testing defines requirements for verifying that components, services, and systems function correctly together, including their interaction with a data store, message channel, or external dependency. It directs engineering effort toward automated, repeatable verification of these integration points, so components can be changed with confidence that they continue to integrate correctly.
+This standard defines requirements for verifying that components, services, and systems function correctly together, including their interaction with a data store, message channel, or external dependency. It keeps this verification automated and repeatable, so components can be changed with confidence that they continue to integrate correctly.
 
 ## Standards
 
-### Scope of Integration Test Verification
+### Verification Scope
 
-These requirements define what an integration test must verify.
+These requirements set out how an integration test's verification responsibility is scoped, distinct from a unit test's.
 
 1. An integration test must verify that two or more components, services, or systems function correctly together, rather than the isolated logic of a single component.
 2. Integration test coverage must include representative failure conditions, not only the expected success path.
@@ -18,9 +18,9 @@ These requirements define what an integration test must verify.
 
 - [Unit Testing](unit-testing.md)
 
-### Isolated Environments & Controlled Test Data
+### Isolated Environments & Test Data
 
-These requirements keep an integration test's environment and data isolated and controlled for a dependency within the team's own control, whether self-hosted or a managed cloud service.
+These requirements address how a dependency's test environment and its test data stay isolated and repeatable across test suite runs.
 
 1. An integration test must not depend on a persistent instance of a dependency, whether self-hosted or cloud-hosted, that exists independently of that test suite run.
 2. A dependency the team can run itself, such as a database or message broker, must run as a real instance created fresh for each test suite run, for example a container started, seeded with test data, and torn down once that run completes.
@@ -35,9 +35,9 @@ These requirements keep an integration test's environment and data isolated and 
 - [Test Data Management](test-data-management.md)
 - [Testability by Design](../../principles/testability-by-design.md)
 
-### Simulating Dependencies Outside the Team's Control
+### External Dependency Simulation
 
-These requirements determine how an integration test handles a dependency operated by a different team or organisation, such as an internal service owned by another team, a partner organisation's API, or a vendor's system.
+These requirements describe how a dependency outside the team's own control, such as an internal service owned by another team, a partner organisation's API, or a vendor's system, is simulated for routine test execution and kept aligned with its real behaviour.
 
 1. Routine, repeated test execution must simulate such a dependency using a test double or service virtualisation, to avoid the flakiness, cost, and rate limits of calling it directly.
 2. This simulation must be kept aligned with the dependency's current behaviour, so it cannot mask a real integration defect.
@@ -49,7 +49,7 @@ These requirements determine how an integration test handles a dependency operat
 
 ### Contract Testing
 
-These requirements verify that a published interface or schema behaves as its contract describes.
+These requirements cover how an implementation's conformance to a published API or event contract is verified, including by the real consumers that rely on it.
 
 1. An API or event/message implementation must be tested for conformance against its published, machine-readable contract, so its behaviour cannot silently diverge from what it documents.
 2. A published contract should be verified periodically, such as a scheduled check or before a contract change is released, using a consumer-driven contract test or, where a shared environment makes it practical, directly against real consumers.
@@ -61,9 +61,9 @@ These requirements verify that a published interface or schema behaves as its co
 - [API Design & Standards](../architecture-system-design/api-design-standards.md)
 - [Event-Driven Messaging Standards](../architecture-system-design/event-driven-messaging-standards.md)
 
-### Automated Execution Within Delivery Pipelines
+### Automated Pipeline Execution
 
-These requirements govern how integration test execution is automated and placed within the delivery pipeline.
+These requirements guide how integration test execution is automated and timed within the delivery pipeline.
 
 1. Integration tests must be automated and executed as part of the delivery pipeline, rather than performed manually or only on an ad hoc basis.
 2. Integration tests need not run on every push to a branch; they must run on a merge request and again after it merges to a protected branch, so a branch's development loop stays fast.
@@ -76,9 +76,9 @@ These requirements govern how integration test execution is automated and placed
 - [Branching Strategy](../code-implementation/branching-strategy.md)
 - [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
 
-### Blocking Progression on Integration Test Failure
+### Failure Gating & Quarantine
 
-These requirements make a failing integration test block progression.
+These requirements set out how a failing integration test blocks progression, and how a quarantined test is tracked until it is remediated.
 
 1. A failing integration test must block a change from merging or progressing to the next stage of the delivery pipeline, until the failure is resolved.
 2. A failing or flaky integration test must not be silently commented out or disabled to obtain a passing result.
@@ -89,9 +89,9 @@ These requirements make a failing integration test block progression.
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 - [Automation First](../../principles/automation-first.md)
 
-### Integration Test Code as a Maintained Engineering Artifact
+### Test Code Maintenance
 
-These requirements hold integration test code to the same engineering standards as the production code it verifies.
+These requirements address how integration test code is held to the same engineering standard as the production code it verifies, and kept current as that code changes.
 
 1. Integration test code must be held to the same coding, formatting, and review standards as the production code it verifies.
 2. Integration test code must be reviewed with the same rigor as the production code it accompanies, rather than approved on the assumption that its presence alone is sufficient.
@@ -102,9 +102,9 @@ These requirements hold integration test code to the same engineering standards 
 - [Coding Standards & Formatting](../code-implementation/coding-standards-formatting.md)
 - [Code Review](../code-implementation/code-review.md)
 
-### Diagnosing Integration Test Failures
+### Failure Diagnosis
 
-These requirements make an integration test failure indicate its cause, given that more than one component is involved.
+These requirements describe how the integration point, dependency, or component responsible for a test failure is identified, since more than one is always involved.
 
 1. An integration test failure must indicate which integration point, dependency, or component is responsible, not merely that the test failed.
 2. An integration test should capture diagnostic detail at the point of failure, such as the request, response, dependency state, and a correlation or trace ID, so the failure can be diagnosed without reproducing it locally.

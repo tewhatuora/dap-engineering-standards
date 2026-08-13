@@ -2,7 +2,7 @@
 
 ## Objective
 
-Code Review establishes the process by which a change to a version-controlled repository is evaluated by other engineers before it takes effect. It directs review effort toward catching defects, security weaknesses, and unnecessary complexity while a change is still easy to correct, and establishes clear accountability for the decision to merge it.
+This standard defines requirements for how a change to a version-controlled repository is reviewed and approved by other engineers before it takes effect. It ensures a defect, security weakness, or unnecessary complexity is caught while a change is still easy to correct, and keeps the decision to merge it clearly accountable.
 
 ## Standards
 

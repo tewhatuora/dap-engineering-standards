@@ -2,13 +2,13 @@
 
 ## Objective
 
-This standard defines the register of AI tools approved for engineering use, and the licensing and provisioning conditions under which they must be used. It limits AI tool usage to vetted, organisation-provisioned tooling, reducing the data, security, and compliance exposure created by unsanctioned AI use.
+This standard defines the register of AI tools approved for engineering use, and the licensing and provisioning conditions under which they must be used. Engineering use of AI tools is limited to vetted, organisation-provisioned tooling, reducing the data, security, and compliance exposure created by unsanctioned AI use.
 
 ## Standards
 
 ### Approved Tooling Register
 
-The following AI tools are the exhaustive list approved for engineering use; an unlisted AI tool must not be used for organisational work.
+These requirements set out which AI tools are approved for engineering use; an unlisted AI tool must not be used for organisational work.
 
 | Tool | Licence Tier | Data Classification Authorised |
 |---|---|---|
@@ -17,7 +17,7 @@ The following AI tools are the exhaustive list approved for engineering use; an 
 
 ### Prohibition of Unapproved Tooling
 
-These requirements prohibit using an AI tool that is not on the Approved Tooling Register.
+These requirements address how use of an AI tool outside the Approved Tooling Register is prohibited.
 
 1. Personnel must not use AI tools not on the Approved Tooling Register for any activity involving organisational code, data, or systems.
 2. Use of unapproved ("shadow AI") tools, including consumer-grade or free public AI services, for organisational engineering work is prohibited.
@@ -27,9 +27,9 @@ These requirements prohibit using an AI tool that is not on the Approved Tooling
 
 - [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
 
-### Licensing & Provisioning Requirements
+### Licensing & Provisioning
 
-These requirements keep AI tooling access tied to organisation-provisioned, individually attributable licences.
+These requirements describe how AI tooling access is tied to organisation-provisioned, individually attributable licences.
 
 1. AI tools must only be used under licences provisioned and administered by Health New Zealand and tied to the individual's organisational identity.
 2. Personal, free-tier, trial, or other independently obtained accounts must not be used to access AI tooling for organisational work, even where the tool is on the Approved Tooling Register.

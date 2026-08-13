@@ -2,27 +2,27 @@
 
 ## Objective
 
-Performance & Scalability by Design establishes the expectation that systems are designed with defined performance targets and an appropriate scaling approach, rather than having performance and capacity addressed only after a problem is observed in production. It directs engineering effort toward identifying scaling constraints, choosing a scaling model suited to expected demand, and validating that performance and capacity targets are actually met.
+This principle establishes the expectation that systems are designed with defined performance targets and an appropriate scaling approach. It keeps a scaling constraint identified and a service's performance and capacity targets validated against expected demand.
 
 ## Principles
 
-### Treating Performance and Scale as an Architectural Decision
+### Performance & Scaling Decisions
 
-These principles make how a service performs and scales under load an explicit architectural decision at design time.
+These principles set out how a service's performance and scaling under load become an explicit architectural decision at design time.
 
 1. How a service will perform and scale under load must be treated as an architectural decision, made at design time.
 2. A design must not be signed off before its expected load and scaling approach have been thought through.
 
-### Defining Performance & Capacity Requirements
+### Performance & Capacity Requirements
 
-These principles define load, throughput, latency, and error rate as explicit non-functional requirements.
+These principles describe how load, throughput, latency, and error rate are defined as explicit non-functional requirements.
 
 1. Expected load, throughput, concurrency, acceptable response time or latency, and error rate must be defined as explicit non-functional requirements for a service.
 2. Performance and capacity requirements should be based on realistic current or projected demand.
 
-### Designing for Horizontal & Elastic Scaling
+### Horizontal & Elastic Scaling
 
-These principles prefer horizontal, elastic scaling over scaling a single instance vertically.
+These principles address how horizontal, elastic scaling is preferred over scaling a single instance vertically.
 
 1. A service should be designed to scale horizontally, by adding or removing instances to meet demand, in preference to scaling a single instance vertically.
 2. The runtime model selected for a workload should support the scaling approach its performance and capacity requirements demand.
@@ -36,9 +36,9 @@ These principles prefer horizontal, elastic scaling over scaling a single instan
 - [Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)
 - [Managed Services Standards](../standards/platform-infrastructure/managed-services-standards.md)
 
-### Identifying & Addressing Scaling Constraints and Bottlenecks
+### Scaling Constraints
 
-These principles identify a scaling constraint during design and address or explicitly accept it.
+These principles set out how a scaling constraint is identified during design and addressed or explicitly accepted.
 
 1. A component that cannot scale independently of the rest of a service, or that constitutes a single point of contention under load, must be identified during design.
 2. An identified scaling constraint must be addressed or explicitly accepted as a bounded limitation; it must not remain unrecognised until it causes a failure in production.
@@ -49,7 +49,7 @@ These principles identify a scaling constraint during design and address or expl
 
 ### Efficient Data Access at Scale
 
-These principles design data access to avoid unnecessary latency or load as demand grows.
+These principles cover how data access is designed to avoid unnecessary latency or load as demand grows.
 
 1. A data access pattern should be designed to avoid unnecessary latency or load as demand grows, including through caching, pagination, and appropriate indexing.
 2. A cache must have a defined invalidation or expiry approach, so it does not serve stale data indefinitely.
@@ -58,9 +58,9 @@ These principles design data access to avoid unnecessary latency or load as dema
 
 - [Schema Design & Evolution](../standards/architecture-system-design/schema-design-evolution.md)
 
-### Verifying Performance & Scalability Through Testing
+### Performance Target Testing
 
-These principles validate a performance or capacity target through testing before it is relied on in production.
+These principles describe how a performance or capacity target is validated through testing before it is relied on in production.
 
 1. A defined performance or capacity target must be validated through load or performance testing before it is relied on in production.
 2. Performance and load testing should be repeated as a service evolves.
@@ -72,7 +72,7 @@ These principles validate a performance or capacity target through testing befor
 
 ### Outgrowing a Scaling Approach
 
-These principles re-validate a scaling assumption as usage grows beyond what it was designed for.
+These principles guide how a scaling assumption is re-validated as usage grows beyond what it was designed for.
 
 1. Performance and scalability assumptions made at design time should be re-validated as usage and scale grow beyond the level they were originally defined for, rather than treated as fixed indefinitely.
 2. Sustained performance degradation, or a component approaching a known scaling limit identified earlier in design, should trigger a reassessment of the scaling approach.

@@ -2,13 +2,13 @@
 
 ## Objective
 
-Technology Stack Governance establishes a team's accountability for selecting and retiring the technology (any language, framework, platform, or tool) its service depends on, consistent with the organisation's approved, trial, or deprecated classification. It directs engineering teams toward technology decisions that are deliberate, supportable, and reviewed through the organisation's approval process before they take effect.
+This standard defines requirements for how a team selects and retires the technology, meaning any language, framework, platform, or tool, its service depends on, consistent with the organisation's approved, trial, or deprecated classification. It keeps a technology decision deliberate, supportable, and reviewed through the organisation's approval process before it takes effect.
 
 ## Standards
 
-### Deliberate, Justified Technology Selection
+### Justified Technology Selection
 
-These requirements ensure a technology is selected for a clear, justified purpose, weighing the risk and cost it introduces.
+These requirements set out how a technology is selected for a clear, justified purpose, and how its risk and cost are weighed against the value it provides.
 
 1. A technology must be selected for a clear engineering purpose; the team responsible for the service it supports must be able to explain why it is used and what problem it solves.
 2. The degree of vendor lock-in, supply chain risk, operational effort, and cost a technology choice would introduce must be weighed against the value it provides before it is adopted.
@@ -19,9 +19,9 @@ These requirements ensure a technology is selected for a clear, justified purpos
 - [Security by Design](../../principles/security-by-design.md)
 - [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
 
-### Supportable & Proven Technology Selection
+### Supportable & Proven Technology
 
-These requirements favour technology that is proven, actively maintained, and not dependent on a single person's knowledge.
+These requirements address how a proven, actively maintained technology is preferred over a newer alternative, and how working knowledge of it extends beyond a single team member.
 
 1. A mature, proven technology should be preferred over a newer alternative unless the newer option provides clear value that justifies the additional risk it introduces.
 2. A technology should show evidence of active maintenance and support from its publisher, such as regular updates or responsive issue handling; publisher size or reputation alone should not substitute for this evidence.
@@ -29,7 +29,7 @@ These requirements favour technology that is proven, actively maintained, and no
 
 ### Technology Lifecycle Classification
 
-These requirements classify every technology in use as approved, trial, or deprecated, and keep that classification current.
+These requirements describe how a technology in use is classified as approved, trial, or deprecated, and kept current throughout its lifecycle.
 
 1. Every technology in use must be classified as approved, trial, or deprecated. An approved technology must be the default choice for new development. A trial technology may be used for limited, justified experimentation or constrained adoption. A deprecated technology must not be used in new development and should be targeted for phased retirement.
 2. An approved technology should be reassessed and reclassified as deprecated if it no longer meets the criteria for approval, such as a lapse in maintenance or support, a material increase in its supply chain risk, or a materially better alternative becoming available.
@@ -40,9 +40,9 @@ These requirements classify every technology in use as approved, trial, or depre
 
 - [Technology Stack Register](technology-stack-register.md)
 
-### New Technology Introduction & Approval
+### Technology Introduction & Approval
 
-These requirements route a new technology, however it was proposed, through the organisation's approval process before adoption.
+These requirements guide how a new technology, however it was proposed, is routed through the organisation's approval process before adoption.
 
 1. A technology not already classified as approved or trial in the register must be reviewed and approved through the organisation's governance process before it is adopted, with the decision and its reasoning captured in the [DACI Register](https://mohits.atlassian.net/wiki/spaces/SEDSD/pages/5078091042/Decisions+Catalogue).
 2. A technology introduced through AI-generated or AI-assisted suggestions must undergo the same evaluation and approval as a technology proposed by an engineer; it must not be adopted solely because it was AI-suggested.
@@ -54,7 +54,7 @@ These requirements route a new technology, however it was proposed, through the 
 
 ### Deprecation & Migration Planning
 
-This requirement ensures a deprecated technology still in use has a planned path to migration or retirement.
+This requirement covers how a deprecated technology still in use is planned for migration, replacement, or retirement.
 
 1. Where a service still relies on a deprecated technology, the responsible team should plan its migration, replacement, or retirement, prioritising cases with known, unresolved security vulnerabilities.
 

@@ -2,13 +2,13 @@
 
 ## Objective
 
-Test Data Management establishes requirements for how data populating a non-production environment is sourced, scoped, and deleted, so that testing does not depend on unauthorised use of production data. It directs engineering effort toward test datasets that remain representative of production and safe to hold outside it.
+This standard defines requirements for how data populating a non-production environment is sourced, scoped, and deleted. It keeps a test dataset representative of production and safe to hold outside it, so testing does not depend on unauthorised use of production data.
 
 ## Standards
 
-### Test Data Source Requirements
+### Test Data Sourcing
 
-These requirements govern which test data source populates a non-production environment, and the safeguards a production-derived source must meet.
+These requirements set out how a non-production environment is populated with test data, and the safeguards that apply when a production-derived source is used.
 
 1. Synthetic or fixture data should be preferred over a de-identified or masked production extract, which should be reserved for a need synthetic data cannot satisfy, such as performance testing's realistic volume or reproducing a specific production issue.
 2. A non-production environment must be populated only from synthetic data, a de-identified or masked production extract, or a purpose-built fixture dataset.
@@ -21,9 +21,9 @@ These requirements govern which test data source populates a non-production envi
 
 - [Privacy by Design](../../principles/privacy-by-design.md)
 
-### Representative, Minimal Test Data
+### Test Data Scope
 
-These requirements keep a test dataset scoped to the test it supports, rather than defaulting to whatever data is already available.
+These requirements describe how a test dataset is scoped to the test it supports, rather than defaulting to whatever data is already available.
 
 1. A test dataset must be representative of the conditions relevant to the test it supports, such as realistic volume, distribution, or boundary values.
 2. A test dataset should be limited to the volume and scope a test genuinely requires, not a full-scale replica of production.
@@ -35,7 +35,7 @@ These requirements keep a test dataset scoped to the test it supports, rather th
 
 ### Test Data Lifecycle
 
-These requirements govern how a test dataset is provisioned and deleted without disrupting production.
+These requirements address how a test dataset is provisioned and deleted without disrupting production.
 
 1. Provisioning and deletion of a test dataset must each be available to a team on demand through an automated process that is documented well enough for the team to operate and maintain it.
 2. An individual team member must not need personal access to a production environment to run this process; the access required must be held by the process itself, scoped to least privilege.

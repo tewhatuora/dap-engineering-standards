@@ -2,22 +2,22 @@
 
 ## Objective
 
-Schema Design & Evolution establishes the expectation that a service's data model is deliberately designed for its actual access patterns and evolved through controlled, backward-compatible change, rather than shaped by ad hoc or unreviewed modification. It directs engineering effort toward well-owned schemas that evolve safely over time without breaking the owning service's own running instances during deployment.
+This standard defines requirements for how a service's data model is deliberately designed for its actual access patterns and evolved through controlled, backward-compatible change. It keeps a schema owned by a single service and able to evolve safely over time, without breaking the owning service's own running instances during deployment.
 
 ## Standards
 
-### Data Modelling Approach Suited to Access Patterns
+### Data Model & Key Strategy
 
-These requirements ensure a schema's data model and key strategy are chosen to fit a workload's actual access patterns.
+These requirements set out how a schema's data model and key strategy are chosen to fit a workload's actual access patterns.
 
 1. A schema's data model, whether relational, document, key-value, wide-column, or another structure, must be selected based on a workload's actual access patterns, consistency requirements, and query needs.
 2. A relational schema should be normalised to at least Third Normal Form (3NF) to eliminate redundant and inconsistent data, with denormalisation applied only where a specific, demonstrated performance need justifies it.
 3. A schema's primary key strategy must suit the workload's write concurrency and indexing needs; an auto-incrementing key can become a write hotspot under high concurrency, while a randomly-generated key can reduce index locality.
 4. Changing an existing schema's data model paradigm should be justified by a genuine shift in access pattern, consistency requirement, or query need.
 
-### Data Type Selection & Storage Efficiency
+### Data Type Selection
 
-These requirements govern how a column or field's data type is chosen, so storage is used efficiently and data is represented accurately.
+These requirements describe how a column or field's data type is chosen, so storage is used efficiently and data is represented accurately.
 
 1. A column or field must use the data type that most accurately fits the value it stores and its expected range, avoiding wasteful storage consumption at scale.
 2. A date or timestamp value must be stored in UTC using a date-time or timestamp type, not as a Unix epoch integer or in a local timezone, so it can be reliably converted to any timezone.
@@ -32,7 +32,7 @@ These requirements govern how a column or field's data type is chosen, so storag
 
 ### Schema Ownership
 
-This requirement keeps a schema owned by exactly one service.
+This requirement addresses how a schema is owned by exactly one service.
 
 1. A schema must be owned by exactly one service; another service must not directly access or modify a data store it does not own.
 
@@ -40,9 +40,9 @@ This requirement keeps a schema owned by exactly one service.
 
 - [Service & Domain Design](service-domain-design.md)
 
-### Constraints, Triggers & Stored Procedures
+### Schema Logic & Portability
 
-These requirements control how a relational schema enforces integrity and uses triggers or stored procedures.
+These requirements guide how a relational schema's logic is implemented and kept portable across database engines.
 
 1. In a relational database, referential integrity must be enforced using primary key, foreign key, and other applicable constraints, not application code alone.
 2. A trigger should not be used; a trigger may be used only where no other mechanism can achieve the same outcome, since a trigger introduces control flow that is not visible in application code.
@@ -54,16 +54,16 @@ These requirements control how a relational schema enforces integrity and uses t
 - [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
 - [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
 
-### Audit, Traceability & Deletion Representation
+### Traceability & Deletion Representation
 
-These requirements determine how a change to data informing an operational, financial, or clinical decision is traced, and how its deletion is represented.
+These requirements cover how a change to decision-informing data is traced, and how a table or collection's deletion is represented.
 
 1. A table or collection whose data informs an operational, financial, or clinical decision must include audit columns, such as created and last-modified timestamps, and identify the actor or process responsible for a change.
 2. A table or collection's deletion representation, whether a soft delete using a flag or timestamp column or a hard delete that removes the row, must be a deliberate, documented choice.
 
-### Designing Indexes for Performance
+### Index Alignment
 
-These requirements keep an index aligned with a schema's actual query patterns.
+These requirements set out how an index is kept aligned with a schema's actual query patterns.
 
 1. An index should be designed to support a schema's actual query patterns.
 2. An index must be reassessed when the query patterns it supports change materially, since an unused or mismatched index still carries a write and storage cost.
@@ -72,9 +72,9 @@ These requirements keep an index aligned with a schema's actual query patterns.
 
 - [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
 
-### Backward-Compatible, Additive Schema Changes
+### Non-Breaking Schema Changes
 
-These requirements prefer an additive, backward-compatible schema change over one that alters or removes an existing structure.
+These requirements describe how a schema change is kept additive and backward-compatible.
 
 1. An additive schema change, such as adding a new optional column or field, should be preferred over a change that alters or removes an existing structure.
 2. A schema change must remain compatible with instances of the owning service still running previous code during a rolling deployment, so old and new instances can operate correctly until the deployment completes.
@@ -84,16 +84,16 @@ These requirements prefer an additive, backward-compatible schema change over on
 
 - [Interoperability by Design](../../principles/interoperability-by-design.md)
 
-### Managing Breaking Schema Changes
+### Breaking Schema Changes
 
-These requirements set out how a schema change that cannot be made additively is safely rolled out.
+These requirements address how a non-additive schema change is safely rolled out.
 
 1. Where a schema change cannot be made additively, it should use an expand-and-contract approach: add the new structure alongside the old, migrate the owning service's code to use it, then retire the old structure.
 2. The old structure should remain in place for a defined period after the owning service's code is fully upgraded, so a rollback to previous code remains possible without data loss.
 
-### Applying Schema Changes Through Automated Migration Tooling
+### Automated Migration Tooling
 
-These requirements ensure a schema change is applied consistently, as version-controlled, tested migration code.
+These requirements cover how a schema change is applied consistently through version-controlled, tested migration code.
 
 1. A schema change must be defined as version-controlled, reviewable migration code, not applied through manual or ad hoc execution against a live data store.
 2. A migration must be applied consistently across environments using the same automated process, so an environment's schema cannot silently diverge from what its migration history describes.

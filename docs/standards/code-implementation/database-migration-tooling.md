@@ -2,7 +2,7 @@
 
 ## Objective
 
-Database Migration Tooling governs how a change to a database's schema, or a bulk or corrective change to its data, is defined as version-controlled migration code and executed automatically, rather than applied by hand against a live database. It keeps every environment's database state reproducible from the same migration history, and keeps that execution reversible where feasible and free of avoidable disruption to a running service.
+This standard defines requirements for how a change to a database's schema, or a bulk or corrective change to its data, is defined as version-controlled migration code and executed automatically through dedicated tooling. It keeps every environment's database state reproducible from the same migration history, and keeps that execution reversible where feasible and free of avoidable disruption to a running service.
 
 ## Standards
 

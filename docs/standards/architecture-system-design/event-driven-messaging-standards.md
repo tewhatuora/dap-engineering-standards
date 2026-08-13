@@ -2,13 +2,13 @@
 
 ## Objective
 
-Event-Driven Messaging Standards establishes the expectation that asynchronous events and messages exchanged between services are governed by an explicit contract, delivery guarantee, access control, and failure-handling behaviour, rather than treated as an implicit or best-effort mechanism. It directs engineering effort toward decoupled, reliable, and traceable asynchronous communication, so a producer and its consumers can evolve and scale independently without silent data loss, duplication, or unbounded coupling.
+This standard defines requirements for how an asynchronous event or message exchanged between services is governed by an explicit contract, delivery guarantee, access control, and failure-handling behaviour. It keeps asynchronous communication decoupled, reliable, and traceable, so a producer and its consumers can evolve and scale independently without silent data loss, duplication, or unbounded coupling.
 
 ## Standards
 
-### Choosing Event-Driven Communication Deliberately
+### Synchronous vs Event-Driven Communication
 
-These requirements govern when a service uses asynchronous, event-driven communication instead of a direct, synchronous call.
+These requirements set out how communication between two services is chosen as synchronous or event-driven, based on an interaction's coupling, latency, and consistency needs.
 
 1. Whether a service communicates synchronously or through an asynchronous event or message must be an explicit design decision based on the coupling, latency, and consistency needs of the interaction.
 2. Asynchronous, event-driven communication should be preferred over repeated point-to-point calls where a producer does not require an immediate response, or where the same event needs to reach more than one consumer.
@@ -22,7 +22,7 @@ These requirements govern when a service uses asynchronous, event-driven communi
 
 ### Event & Message Schema Contracts
 
-These requirements ensure every event or message is defined by an owned, documented schema before it is published.
+These requirements address how an event or message type's schema is defined, owned, and relied on as a contract between a producer and its consumers.
 
 1. Every event or message type must be defined by a documented, machine-readable schema, such as the [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest) or [JSON Schema](https://json-schema.org/specification), before it is published.
 2. An event's envelope metadata, such as its type, source, and timestamp, should use a consistent, standard format, such as the [CloudEvents Specification](https://cloudevents.io/), so a consumer can process events from any producer uniformly.
@@ -35,9 +35,9 @@ These requirements ensure every event or message is defined by an owned, documen
 
 - [Everything as Code](../../principles/everything-as-code.md)
 
-### Backward-Compatible Schema Evolution & Versioning
+### Backward-Compatible Schema Evolution
 
-These requirements keep a published schema's changes backward-compatible, so existing consumers are not broken.
+These requirements cover how a published schema is evolved without breaking an existing consumer.
 
 1. A published event or message schema must not be changed in a way that breaks compatibility for its existing consumers; a breaking change must instead be introduced as a new schema version.
 2. An additive, non-breaking change, such as a new optional field, should be preferred over introducing a new schema version.
@@ -48,7 +48,7 @@ These requirements keep a published schema's changes backward-compatible, so exi
 
 ### Delivery Semantics & Ordering Guarantees
 
-These requirements set the delivery and ordering guarantees a channel provides, so a consumer knows exactly what it can rely on.
+These requirements describe how a channel's delivery and ordering guarantees are defined and documented, so a consumer knows exactly what to rely on.
 
 1. A channel's delivery guarantee, such as at-least-once, at-most-once, or exactly-once delivery, must be explicitly defined and documented.
 2. Whether a channel guarantees ordering, and at what scope, such as globally or only within a partition or key, must be explicitly defined and documented.
@@ -59,14 +59,14 @@ These requirements set the delivery and ordering guarantees a channel provides, 
 
 ### Reliable Event Publication
 
-These requirements ensure an event is published reliably, without silent loss.
+These requirements cover how an event is published reliably and without silent loss.
 
 1. Publishing an event and committing the state change it represents must happen as a single atomic unit, such as through a transactional outbox, so neither can occur without the other.
 2. A failure to publish an event must be logged and monitored, so it can be detected and remediated.
 
 ### Idempotent & Duplicate-Tolerant Consumers
 
-These requirements require a consumer to handle a duplicate or redelivered message safely.
+These requirements describe how a duplicate or redelivered message is handled safely by a consumer.
 
 1. A consumer must process a duplicate or redelivered message safely, without producing inconsistent or duplicate side effects, since most channels provide at-least-once rather than exactly-once delivery.
 2. Where a consumer's processing cannot be made idempotent, it must apply another safeguard, such as a processed-message record, to prevent a redelivered message being applied more than once.
@@ -75,16 +75,16 @@ These requirements require a consumer to handle a duplicate or redelivered messa
 
 - [Stateless First](../../principles/stateless-first.md)
 
-### Dead-Letter & Poison Message Handling
+### Dead-Letter Handling
 
-These requirements define what happens to a message that repeatedly fails processing.
+These requirements set out how a message that repeatedly fails processing is dead-lettered and remediated.
 
 1. A message that repeatedly fails processing must be moved to a dead-letter mechanism after a bounded number of attempts, rather than retried indefinitely or discarded silently.
 2. A message held in a dead-letter mechanism must be monitored and have a defined remediation path, such as redriving it once the underlying cause is resolved.
 
-### Protecting Against Consumer Overload & Backpressure
+### Consumer Overload Protection
 
-These requirements protect a consumer from demand it cannot keep up with.
+These requirements address how a consumer is protected from demand that exceeds its capacity.
 
 1. A consumer should be able to signal backpressure or scale to match demand, so growth in queue depth or consumer lag does not cause unbounded delay or resource exhaustion.
 2. A high-volume or poison message source should be isolated from other consumers sharing the same channel, so it cannot exhaust capacity they need.
@@ -95,7 +95,7 @@ These requirements protect a consumer from demand it cannot keep up with.
 
 ### Message Broker & Platform Alignment
 
-These requirements limit which messaging infrastructure a service may use.
+These requirements set out which messaging infrastructure a service uses.
 
 1. A service must use the organisation's approved shared message broker or event-streaming platform, rather than an independently operated or introduced equivalent.
 2. A messaging capability not met by the shared platform must be evaluated and approved through the organisation's defined governance process before it is adopted.
@@ -104,9 +104,9 @@ These requirements limit which messaging infrastructure a service may use.
 
 - [Platform Alignment](../../principles/platform-alignment.md)
 
-### Channel Access Control & Payload Confidentiality
+### Access Control & Payload Confidentiality
 
-These requirements control who can access a channel and what data its payloads may expose.
+These requirements guide how a channel's access is controlled and how a payload's confidentiality is protected.
 
 1. Access to publish or subscribe to a channel must be authenticated and authorised by default; a channel may be deliberately designed for unauthenticated access where public consumption is the intended use case, but this must be an explicit design decision, not a fallback.
 2. Access granted to a producer or consumer must be limited to the specific channels it requires.
@@ -122,14 +122,14 @@ These requirements control who can access a channel and what data its payloads m
 
 ### Choreography vs Orchestration for Multi-Service Workflows
 
-These requirements determine how a multi-service business process is coordinated.
+These requirements describe how a multi-service business process is coordinated.
 
 1. A business process spanning multiple services must use a deliberately chosen coordination style, either decentralised choreography or a central orchestrator, not one that emerges by accident from how events are produced and consumed.
 2. Where a multi-service workflow cannot be completed as a single transaction, its compensating action for partial failure must be defined alongside the workflow itself.
 
 ### Observability & Traceability of Event Flows
 
-These requirements ensure an asynchronous event flow can be traced and monitored end-to-end.
+These requirements cover how an asynchronous event flow is traced and monitored end-to-end.
 
 1. A correlation identifier must be attached to an event or message when it is produced, and propagated by every consumer that acts on it, so a single business transaction can be traced end-to-end across asynchronous boundaries.
 2. A channel's throughput, queue depth, consumer lag, and error rate must be observable, so degraded processing can be detected before it causes a material backlog or data loss.
@@ -140,9 +140,9 @@ These requirements ensure an asynchronous event flow can be traced and monitored
 - [Distributed Tracing](../operations-observability/distributed-tracing.md)
 - [Metrics, Monitoring & Alerting](../operations-observability/metrics-monitoring-alerting.md)
 
-### Verifying Event Contracts Through Testing
+### Event Contract Verification
 
-These requirements verify that an event or message schema behaves as its contract describes.
+These requirements guide how an event or message schema is verified against its contract through testing.
 
 1. An event or message schema must be verified through contract and integration testing.
 2. A change to a published schema should be verified against a consumer-driven contract test before release, or tested against actual consumers where a shared integration environment makes that practical.
