@@ -33,6 +33,7 @@ nav:
   #- Engineering Standards and Principles: index.md
   - Home: index.md
   - Principles:
+    - principles/index.md
     - Accessibility by Design: principles/accessibility-by-design.md
     - AI Assisted Engineering Accountability: principles/ai-assisted-engineering-accountability.md
     - Automation First: principles/automation-first.md
@@ -55,13 +56,16 @@ nav:
     - Testability by Design: principles/testability-by-design.md
     - Vendor Lock in Portability: principles/vendor-lock-in-portability.md
   - Standards:
+    - standards/index.md
     - AI Engineering:
+      - standards/ai-engineering/index.md
       - AI Assisted Development: standards/ai-engineering/ai-assisted-development.md
       - AI Cost Considerations Optimisation: standards/ai-engineering/ai-cost-considerations-optimisation.md
       - AI Usage Verification in Code Review: standards/ai-engineering/ai-usage-verification-in-code-review.md
       - Approved AI Tooling: standards/ai-engineering/approved-ai-tooling.md
       - Prompt Data Handling: standards/ai-engineering/prompt-data-handling.md
     - Architecture System Design:
+      - standards/architecture-system-design/index.md
       - Api Design Standards: standards/architecture-system-design/api-design-standards.md
       - Event Driven Messaging Standards: standards/architecture-system-design/event-driven-messaging-standards.md
       - Health Data Interoperability: standards/architecture-system-design/health-data-interoperability.md
@@ -71,6 +75,7 @@ nav:
       - Technology Stack Governance: standards/architecture-system-design/technology-stack-governance.md
       - Technology Stack Register: standards/architecture-system-design/technology-stack-register.md
     - Code Implementation:
+      - standards/code-implementation/index.md
       - Branching Strategy: standards/code-implementation/branching-strategy.md
       - Code Review: standards/code-implementation/code-review.md
       - Coding Standards Formatting: standards/code-implementation/coding-standards-formatting.md
@@ -82,9 +87,11 @@ nav:
       - Static Code Analysis: standards/code-implementation/static-code-analysis.md
       - Version Control: standards/code-implementation/version-control.md
     - Cost Sustainability:
+      - standards/cost-sustainability/index.md
       - Cost Monitoring Attribution: standards/cost-sustainability/cost-monitoring-attribution.md
       - Resource Efficiency Optimisation: standards/cost-sustainability/resource-efficiency-optimisation.md
     - Delivery Release:
+      - standards/delivery-release/index.md
       - Build Artifact Management: standards/delivery-release/build-artifact-management.md
       - Continuous Delivery Deployment: standards/delivery-release/continuous-delivery-deployment.md
       - Continuous Integration: standards/delivery-release/continuous-integration.md
@@ -93,12 +100,15 @@ nav:
       - Release Strategy: standards/delivery-release/release-strategy.md
       - Rollback Strategy: standards/delivery-release/rollback-strategy.md
     - Developer Experience:
+      - standards/developer-experience/index.md
       - Build Test Feedback Loops: standards/developer-experience/build-test-feedback-loops.md
       - Local Development Environment Standards: standards/developer-experience/local-development-environment-standards.md
     - Documentation Collaboration:
+      - standards/documentation-collaboration/index.md
       - Api Documentation: standards/documentation-collaboration/api-documentation.md
       - Engineering Documentation Standards: standards/documentation-collaboration/engineering-documentation-standards.md
     - Operations Observability:
+      - standards/operations-observability/index.md
       - Backup Disaster Recovery: standards/operations-observability/backup-disaster-recovery.md
       - Distributed Tracing: standards/operations-observability/distributed-tracing.md
       - Metrics Monitoring Alerting: standards/operations-observability/metrics-monitoring-alerting.md
@@ -107,6 +117,7 @@ nav:
       - Structured Logging: standards/operations-observability/structured-logging.md
       - Telemetry Instrumentation Standards: standards/operations-observability/telemetry-instrumentation-standards.md
     - Platform Infrastructure:
+      - standards/platform-infrastructure/index.md
       - Container Orchestration: standards/platform-infrastructure/container-orchestration.md
       - Containerisation Standards: standards/platform-infrastructure/containerisation-standards.md
       - Environment Strategy: standards/platform-infrastructure/environment-strategy.md
@@ -114,6 +125,7 @@ nav:
       - Managed Services Standards: standards/platform-infrastructure/managed-services-standards.md
       - Serverless Standards: standards/platform-infrastructure/serverless-standards.md
     - Quality Engineering:
+      - standards/quality-engineering/index.md
       - Accessibility Testing: standards/quality-engineering/accessibility-testing.md
       - Application Security Testing: standards/quality-engineering/application-security-testing.md
       - Integration Testing: standards/quality-engineering/integration-testing.md
@@ -121,6 +133,7 @@ nav:
       - Test Data Management: standards/quality-engineering/test-data-management.md
       - Unit Testing: standards/quality-engineering/unit-testing.md
     - Security Identity:
+      - standards/security-identity/index.md
       - Identity Access Management: standards/security-identity/identity-access-management.md
       - Secrets Management Scanning: standards/security-identity/secrets-management-scanning.md
       - Secure Software Development Practices: standards/security-identity/secure-software-development-practices.md
