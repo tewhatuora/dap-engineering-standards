@@ -2,7 +2,7 @@
 
 ## Objective
 
-This standard defines requirements for verifying that a service's code and running behaviour are free of exploitable security weaknesses. It ensures each class of vulnerability is caught by the technique best suited to detect it, and keeps a finding remediated before it reaches production.
+This standard defines requirements for verifying that a service's code and running behaviour are free of exploitable security weaknesses. It ensures each class of vulnerability is caught by the technique best suited to detect it, and keeps a finding remediated once identified.
 
 ## Standards
 
@@ -24,8 +24,8 @@ These requirements set out how automated static analysis is integrated into a se
 
 These requirements address how a running instance of a service is tested for vulnerabilities that only become exploitable at runtime.
 
-1. A service exposing a network-reachable interface must be tested using DAST tooling against a running instance, in an environment isolated from production but representative of it.
-2. DAST must be performed automatically as part of a service's release pipeline, before it reaches production.
+1. A service exposing a network-reachable interface must be tested using DAST tooling against its running production instance.
+2. DAST must be performed automatically as part of a service's release pipeline, after it reaches production.
 3. DAST must also be repeated on a recurring, risk-proportionate schedule, so a continuously deployed service remains verified between releases.
 4. DAST scope must cover every externally reachable interface and API a service exposes, not only its primary user-facing entry point.
 
@@ -61,12 +61,13 @@ These requirements cover how independent, specialist testing is applied to a ser
 
 ### Findings Lifecycle
 
-These requirements guide how a finding progresses from classification to verified remediation before a service is released.
+These requirements guide how a finding progresses from classification to verified remediation.
 
 1. Findings must be classified by severity using a recognised scoring method, such as the Common Vulnerability Scoring System (CVSS).
-2. A critical or high-severity finding must be remediated within a risk-proportionate timeframe, and its release must be blocked until it is remediated or formally risk-accepted.
+2. A critical or high-severity finding identified before a release must have that release blocked until the finding is remediated or formally risk-accepted; a finding identified after deployment must instead be triaged and mitigated according to the response process required for a post-deployment finding.
 3. Remediation of a finding must be verified using the same technique that identified it, before the finding is closed.
 
 #### References
 
 - [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
+- [Continuous Delivery & Deployment](../delivery-release/continuous-delivery-deployment.md)
