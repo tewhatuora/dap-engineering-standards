@@ -63,7 +63,7 @@ These principles describe how the risk a deployment introduces is reduced, throu
 #### References
 
 - [Rollback Strategy](../standards/delivery-release/rollback-strategy.md)
-- [Progressive Delivery Strategies (Blue/Green, Canary)](../standards/delivery-release/progressive-delivery-strategies.md)
+- [Progressive Delivery Strategies](../standards/delivery-release/progressive-delivery-strategies.md)
 - [Feature Flagging](../standards/delivery-release/feature-flagging.md)
 
 ### Readiness & Incident Learning

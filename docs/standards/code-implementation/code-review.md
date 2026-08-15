@@ -74,7 +74,7 @@ These requirements set out how a change's operational readiness is considered du
 - [Interoperability by Design](../../principles/interoperability-by-design.md)
 - [Runbooks](../operations-observability/runbooks.md)
 - [Feature Flagging](../delivery-release/feature-flagging.md)
-- [Progressive Delivery Strategies (Blue/Green, Canary)](../delivery-release/progressive-delivery-strategies.md)
+- [Progressive Delivery Strategies](../delivery-release/progressive-delivery-strategies.md)
 
 ### Right-Sized, Reviewable Changes
 

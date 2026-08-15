@@ -11,7 +11,7 @@ This standard defines requirements for how a feature flag governs the activation
 These requirements set out how a flag is declared, owned, and governed before it controls any capability.
 
 1. A flag must be declared, with a unique name, a defined purpose, and an accountable owning team, before it is used to control any capability.
-2. A flag's expected removal must be recorded in a linked, tracked work item before it is used to control any capability.
+2. A flag's expected removal date must be recorded in a linked, tracked work item before it is used to control any capability.
 3. A flag's purpose may be a release toggle used to decouple deployment from release, or an operational toggle used to control a service's behaviour in production, such as isolating a newly introduced dependency that risks destabilising the service.
 4. A flag must be short-lived and should be usable as a kill switch to disable the capability it controls, regardless of its purpose.
 5. A flag's declaration must be maintained as version-controlled, declarative code, so every flag in use remains discoverable without inspecting the code that consumes it.
@@ -24,6 +24,9 @@ These requirements set out how a flag is declared, owned, and governed before it
 - [Configuration Management](../code-implementation/configuration-management.md)
 - [Platform Alignment](../../principles/platform-alignment.md)
 - [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
+- [Branching Strategy](../code-implementation/branching-strategy.md)
+- [Performance & Load Testing](../quality-engineering/performance-load-testing.md)
+- [Code Review](../code-implementation/code-review.md)
 
 ### Justified, Single-Capability Use
 
@@ -42,16 +45,17 @@ These requirements describe how a flag's introduction stays justified, and its r
 These requirements address how a flag's use is bounded and how its own states remain independently verifiable.
 
 1. A flag must not be used to defer testing required for the capability it controls, avoid remediating a known defect, conceal incomplete work indefinitely, or mask unstable code.
-2. A flag must not be used as a substitute for configuration management; a setting whose value does not vary by user, cohort, or percentage of traffic must be managed as configuration, not declared as a flag.
-3. A flag must not be retained as a long-lived toggle to permanently differentiate a capability by user or cohort; that is an authorisation decision, served by an access control mechanism instead.
-4. A flag must not be used to control a difference in behaviour between environments; that need is served by configuration instead.
-5. A flag's evaluation must be overridable with a controlled value during automated testing, so both states of the capability it controls can be verified without depending on the flag management platform.
+2. A flag must not be retained as a long-lived toggle to permanently differentiate a capability by user or cohort; that is an authorisation decision, served by an access control mechanism instead.
+3. A flag must not be used to control a difference in behaviour between environments; that need is served by configuration instead.
+4. A flag's evaluation must be overridable with a controlled value during automated testing, so both states of the capability it controls can be verified without depending on the flag management platform.
 
 #### References
 
 - [Configuration Management](../code-implementation/configuration-management.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 - [Testability by Design](../../principles/testability-by-design.md)
+- [Unit Testing](../quality-engineering/unit-testing.md)
+- [Integration Testing](../quality-engineering/integration-testing.md)
 
 ### Decoupling Flag State from Deployment
 

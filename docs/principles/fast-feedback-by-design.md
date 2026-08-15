@@ -60,7 +60,7 @@ These principles describe how a production change's impact is detected soon enou
 #### References
 
 - [Observability by Default](observability-by-default.md)
-- [Progressive Delivery Strategies (Blue/Green, Canary)](../standards/delivery-release/progressive-delivery-strategies.md)
+- [Progressive Delivery Strategies](../standards/delivery-release/progressive-delivery-strategies.md)
 - [Feature Flagging](../standards/delivery-release/feature-flagging.md)
 
 ### Feedback Loop Speed

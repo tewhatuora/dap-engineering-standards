@@ -13,10 +13,12 @@ These requirements set out how an integration test's verification responsibility
 1. An integration test must verify that two or more components, services, or systems function correctly together, rather than the isolated logic of a single component.
 2. Integration test coverage must include representative failure conditions, not only the expected success path.
 3. Integration testing must not be substituted for exhaustive coverage of a single component's internal logic, which remains the responsibility of unit-level testing.
+4. Where a capability under test is controlled by a feature flag and its integration behaviour differs between states, integration test coverage should include both states.
 
 #### References
 
 - [Unit Testing](unit-testing.md)
+- [Feature Flagging](../delivery-release/feature-flagging.md)
 
 ### Isolated Environments & Test Data
 

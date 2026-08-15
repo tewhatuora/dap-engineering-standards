@@ -25,12 +25,14 @@ These requirements guide which performance test type is applicable to a service,
 These requirements set out when performance testing is triggered, and how often it recurs as a service continues to evolve.
 
 1. Performance testing must be performed before a service, or a capability with a defined performance or capacity target, is first released to production.
-2. Performance testing should be performed before an event anticipated to generate demand materially above a service's normal operating level.
-3. Beyond these triggers, performance testing should also be repeated at a regular interval as a service continues to evolve after its initial release.
+2. Where a capability with a defined performance or capacity target is controlled by a feature flag, performance testing must be performed before that flag's activation for production traffic.
+3. Performance testing should be performed before an event anticipated to generate demand materially above a service's normal operating level.
+4. Beyond these triggers, performance testing should also be repeated at a regular interval as a service continues to evolve after its initial release.
 
 #### References
 
 - [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Feature Flagging](../delivery-release/feature-flagging.md)
 
 ### Performance & Capacity Targets
 
