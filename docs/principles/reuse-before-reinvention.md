@@ -48,3 +48,4 @@ These principles cover how a component, service, or library exposes a stable, ve
 #### References
 
 - [API Design & Standards](../standards/architecture-system-design/api-design-standards.md)
+- [Build & Artifact Management](../standards/delivery-release/build-artifact-management.md)
