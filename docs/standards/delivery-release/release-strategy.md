@@ -2,8 +2,80 @@
 
 ## Objective
 
-_To be defined._
+This standard defines requirements for how and when a deployed change is made available to users as a release. It keeps a release a deliberate, accountable decision, recorded and communicated separately from its underlying deployment.
 
 ## Standards
 
-_To be defined._
+### Release Versus Deployment
+
+These requirements set out how a release is distinguished from the deployment it depends on, and how the decision to release is made independently of the decision to deploy.
+
+1. A release must be treated as the deliberate decision to make a deployed change available to its intended users; a deployment must not itself be treated as that decision.
+2. The decision to release a deployed change must be made independently of the decision to deploy it, whether or not the two occur at the same time.
+3. A release must be recorded as an explicit act in its own right, separate from the record of any deployment.
+
+#### References
+
+- [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
+- [Feature Flagging](feature-flagging.md)
+
+### Release Cadence
+
+These requirements cover how frequently a service releases, and how that frequency relates to its branching model.
+
+1. A release should follow its underlying deployment without delay by default; a release toggle should be used where release timing must diverge from deployment timing.
+2. A scheduled, batched release must be supported only where the branching model defines a stabilisation period.
+
+#### References
+
+- [Branching Strategy](../code-implementation/branching-strategy.md)
+- [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
+- [Feature Flagging](feature-flagging.md)
+
+### Release Notes & Communication
+
+These requirements address how a release's content is communicated to its stakeholders, and how that content is maintained as a version-controlled record.
+
+1. A release must have release notes describing the change it introduces, in language appropriate for its intended audience.
+2. Release notes must be published no later than the point a release becomes available to its users.
+3. Release notes must be communicated directly to stakeholders, in addition to being published.
+4. A release-bearing repository should maintain its release notes in a version-controlled changelog, such as a `CHANGELOG.md` file.
+5. A changelog entry should be categorised by type of change, such as added, changed, fixed, or security, following a convention such as [Keep a Changelog](https://keepachangelog.com/).
+6. A repository's changelog must be updated automatically at the point of release, without a separate manual step.
+7. Release notes may also be published elsewhere; where they are, the changelog remains the authoritative source, and any release notes published elsewhere must be kept consistent with it.
+
+#### References
+
+- [Version Control](../code-implementation/version-control.md)
+
+### Release Approval
+
+These requirements guide how the decision to release a deployed change is authorised and recorded, separately from the change's deployment.
+
+1. The decision to release a deployed change to its intended users must be authorised by an accountable product owner, distinct from the change control approval required for its deployment.
+2. An emergency release made to address an active incident may be authorised without the standard approval, but must be reviewed retrospectively as soon as practicable.
+3. The accountable owner must confirm every applicable prerequisite, such as an available rollback path or prepared release notes, is actually satisfied, not merely scheduled or in progress.
+4. A release's approval, including who granted it and when, must be retained as a record, so the release can be audited after the fact.
+
+#### References
+
+- [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
+- [Rollback Strategy](rollback-strategy.md)
+- [Feature Flagging](feature-flagging.md)
+
+### Cross-Service Release Coordination
+
+These requirements describe how a release depending on or affecting another service's release is planned and sequenced deliberately.
+
+1. A release must be independently releasable by default; a dependency on another service's release must be treated as an exception requiring deliberate coordination.
+2. A breaking change should be avoided, such as by versioning the API or schema instead, so the dependent services require no coordination at all.
+3. A release toggle should be used to sequence a coordinated release, so each dependent service's exposure can be verified and enabled independently, rather than requiring simultaneous deployment.
+4. Where a release toggle is not practical, the affected services' release timing must instead be planned and agreed between their owning teams before either proceeds.
+5. A coordinated release must have a defined fallback if one of its dependent services fails to release as planned, so the remaining services are not left in an incompatible state.
+
+#### References
+
+- [API Design & Standards](../architecture-system-design/api-design-standards.md)
+- [Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
+- [Rollback Strategy](rollback-strategy.md)
+- [Feature Flagging](feature-flagging.md)
