@@ -13,11 +13,10 @@ These requirements set out how a flag is declared, owned, and governed before it
 1. A flag must be declared, with a unique name, a defined purpose, and an accountable owning team, before it is used to control any capability.
 2. A flag's expected removal date must be recorded in a linked, tracked work item before it is used to control any capability.
 3. A flag's purpose may be a release toggle used to decouple deployment from release, or an operational toggle used to control a service's behaviour in production, such as isolating a newly introduced dependency that risks destabilising the service.
-4. A flag must be short-lived and should be usable as a kill switch to disable the capability it controls, regardless of its purpose.
-5. A flag's declaration must be maintained as version-controlled, declarative code, so every flag in use remains discoverable without inspecting the code that consumes it.
-6. A flag must be managed through the organisation's designated flag management platform; it must not be managed through simple in-code configuration.
-7. A service should access the flag management platform through an internal abstraction, so switching platforms does not require changing every call site.
-8. The commit introducing code behind a release toggle must be marked as internal rather than user-facing, so it triggers no changelog entry.
+4. A flag's declaration must be maintained as version-controlled, declarative code, so every flag in use remains discoverable without inspecting the code that consumes it.
+5. A flag must be managed through the organisation's designated flag management platform; it must not be managed through simple in-code configuration.
+6. A service should access the flag management platform through an internal abstraction, so switching platforms does not require changing every call site.
+7. The commit introducing code behind a release toggle must be marked as internal rather than user-facing, so it triggers no changelog entry.
 
 #### References
 
@@ -82,12 +81,15 @@ These requirements describe how a flag's state changes independently of the arti
 These requirements cover how authorisation for a production flag change is granted.
 
 1. A flag's production state must be changeable only by an individual or automated process authorised for that flag, such as its owning team or an approved deployment pipeline.
-2. A flag change whose impact on users is materially equivalent to a deployment, such as a full rollout to the entire user base, must be approved through the organisation's formal change control process.
-3. An emergency flag change, such as using a kill switch to disable functionality causing an active incident, may be made without prior approval, but must be reviewed retrospectively as soon as practicable.
+2. A flag change materially equivalent to a deployment, such as an operational toggle's full activation in production, must be approved through the organisation's formal change control process; a release toggle reaching full rollout is instead a release and must be authorised as one.
+3. A flag should be usable as a kill switch to disable the capability it controls, regardless of its purpose.
+4. An emergency flag change, such as using a kill switch to disable functionality causing an active incident, may be made without prior approval, but must be reviewed retrospectively as soon as practicable.
 
 #### References
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
+- [Rollback Strategy](rollback-strategy.md)
+- [Release Strategy](release-strategy.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 
 ### Safe Default & Failure Behaviour
@@ -132,12 +134,13 @@ These requirements set out how a flag's state is captured alongside other operat
 
 These requirements cover how a flag no longer needed is removed, and how flags sharing a code path stay limited and independent.
 
-1. A flag must be removed once its rollout is complete or a decision on the capability it controls has been finalised.
-2. A flag's removal must remove the conditional logic, the discontinued code path, and the automation tests written for that path.
-3. A flag approaching or past its expected removal date must be identified and reviewed, so flag proliferation and the code complexity it adds stay in check.
-4. Where more than one flag affects the same component or code path, their number should be limited and every combination of their states tested, so the combinations requiring verification remain finite and testable.
-5. A flag should not depend on another flag's state, unless the capability it controls requires the other's capability to already be active.
-6. The commit that retires a release toggle and its conditional logic must be marked as the user-facing change it completes, so it triggers the changelog entry and release notes.
+1. A flag must be short-lived, regardless of its purpose.
+2. A flag must be removed once its rollout is complete or a decision on the capability it controls has been finalised.
+3. A flag's removal must remove the conditional logic, the discontinued code path, and the automation tests written for that path.
+4. A flag approaching or past its expected removal date must be identified and reviewed, so flag proliferation and the code complexity it adds stay in check.
+5. Where more than one flag affects the same component or code path, their number should be limited and every combination of their states tested, so the combinations requiring verification remain bounded.
+6. A flag should not depend on another flag's state, unless the capability it controls requires the other's capability to already be active.
+7. The commit that retires a release toggle and its conditional logic must be marked as the user-facing change it completes, so it triggers the changelog entry and release notes.
 
 #### References
 

@@ -2,15 +2,15 @@
 
 ## Objective
 
-This standard defines requirements for how a release is deployed to production through a progressive delivery technique that limits its initial exposure to a subset of production traffic before reaching every user. It keeps a release's impact observable and reversible while exposure is still limited, so a defect or regression is caught and contained before it affects the full user base.
+This standard defines requirements for how a change is deployed to production through a progressive delivery technique that limits its initial exposure to a subset of production traffic. It keeps a change's impact observable and reversible while exposure is still limited, so a defect or regression is caught and contained before that exposure is complete.
 
 ## Standards
 
-### Proportionate Technique Selection
+### Technique Selection
 
 These requirements set out how a progressive delivery technique is always used for a production deployment, and how the specific technique is selected.
 
-1. A deployment to production must use a progressive delivery technique; a change must not be deployed to the full user base all at once.
+1. A deployment to production must use a progressive delivery technique; a change must not be exposed to all of production traffic at once.
 2. A blue/green deployment should be chosen over a canary release or rolling deployment where a change would create a materially inconsistent experience for users served by different versions at the same time.
 3. A canary release should be chosen over a rolling deployment where deliberate cohort targeting is needed, since a rolling deployment cannot target specific users.
 4. A canary release should also be chosen where a rolling deployment is not feasible for the service's architecture.
@@ -18,6 +18,7 @@ These requirements set out how a progressive delivery technique is always used f
 
 #### References
 
+- [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
 - [Reliability & Resilience](../../principles/reliability-resilience.md)
 - [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
 - [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
@@ -28,7 +29,7 @@ These requirements set out how a progressive delivery technique is always used f
 
 These requirements describe how a canary release's traffic stages and promotion criteria are defined, so its use remains consistent and auditable.
 
-1. A canary release's traffic percentage at each stage, and the criteria for progressing to the next stage, must be defined before the release begins; they must not be decided ad hoc as the rollout proceeds.
+1. A canary release's traffic percentage at each stage, and the criteria for progressing to the next stage, must be defined before the rollout begins; they must not be decided ad hoc as the rollout proceeds.
 2. A canary release's initial stage must expose the new version to no more than a small, defined percentage of production traffic, so an undetected regression's impact is bounded before exposure increases.
 3. A canary release must remain at each stage for a defined minimum duration or request volume before progressing further, so there is a genuine opportunity to detect a regression at that stage.
 4. A canary release needing to consistently serve the same version to a user should use a stateless mechanism, such as a deterministic hash of a user identifier, rather than session affinity.
@@ -64,11 +65,11 @@ These requirements address how a rolling deployment's batches and capacity are g
 
 ### Cross-Version Data Compatibility
 
-These requirements cover how a schema or data change's compatibility with the previous version is maintained.
+These requirements cover how a schema or data change's compatibility with the service's old version is maintained.
 
-1. A schema or data change must remain compatible with the previous version for the full duration both versions may run concurrently, regardless of which progressive delivery technique is used.
-2. A schema or data change may remain applied after a progressive delivery technique's rollout is aborted, provided it remains compatible with the previous version.
-3. The old structure introduced to maintain compatibility must not be removed until the progressive delivery technique's rollout has fully completed and its defined grace period has passed.
+1. A schema or data change must remain compatible with the service's old version for the full duration both old and new versions may run concurrently, regardless of which progressive delivery technique is used.
+2. A schema or data change may remain applied after a progressive delivery technique's rollout is aborted, provided it remains compatible with the service's old version.
+3. The structure retained to maintain compatibility must not be removed until the progressive delivery technique's rollout has fully completed and its defined grace period has passed; its removal requires its own subsequent deployment.
 
 #### References
 
@@ -76,20 +77,6 @@ These requirements cover how a schema or data change's compatibility with the pr
 - [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
 - [Database Migration Tooling](../code-implementation/database-migration-tooling.md)
 - [Rollback Strategy](rollback-strategy.md)
-
-### Automated Rollout Analysis
-
-These requirements guide how a progressive delivery technique's rollout is evaluated automatically against defined metrics, and how it is advanced or reversed based on that evaluation.
-
-1. A progressive delivery technique's rollout must be evaluated automatically against a defined success metric and threshold.
-2. Where a rollout's evaluation shows a defined threshold has been breached, the rollout must be halted and traffic reverted to the previously deployed version automatically, without waiting for manual intervention.
-3. A rollout that completes its evaluation without breaching a threshold should be promoted automatically to its next stage or, where no further stage remains, to full traffic.
-
-#### References
-
-- [Automation First](../../principles/automation-first.md)
-- [Observability by Default](../../principles/observability-by-default.md)
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
 
 ### Feature Flag Boundary
 

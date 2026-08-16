@@ -31,12 +31,13 @@ These requirements set out how a service exposing a network-reachable interface 
 
 1. A pipeline deploying a service that exposes a network-reachable interface, such as an API endpoint, must include both dynamic application security testing (DAST) and fuzz testing against that service's running production instance after deployment.
 2. Where a finding is raised by runtime security testing, it must be triaged and confirmed before it is treated as genuine, so response effort is not misdirected by a false positive.
-3. Where a confirmed finding is critical or high-severity, the affected deployment must be rolled back immediately, rather than left exposed until a code fix is developed and deployed through the normal pipeline.
+3. Where a confirmed finding is critical or high-severity, the affected capability must be disabled or the affected deployment rolled back immediately, rather than left exposed until a code fix is developed and deployed through the normal pipeline.
 
 #### References
 
 - [Application Security Testing](../quality-engineering/application-security-testing.md)
 - [Security by Design](../../principles/security-by-design.md)
+- [Rollback Strategy](rollback-strategy.md)
 
 ### Deployment Readiness
 
