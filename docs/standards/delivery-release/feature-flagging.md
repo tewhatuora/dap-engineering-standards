@@ -17,6 +17,7 @@ These requirements set out how a flag is declared, owned, and governed before it
 5. A flag's declaration must be maintained as version-controlled, declarative code, so every flag in use remains discoverable without inspecting the code that consumes it.
 6. A flag must be managed through the organisation's designated flag management platform; it must not be managed through simple in-code configuration.
 7. A service should access the flag management platform through an internal abstraction, so switching platforms does not require changing every call site.
+8. The commit introducing code behind a release toggle must be marked as internal rather than user-facing, so it triggers no changelog entry.
 
 #### References
 
@@ -27,6 +28,8 @@ These requirements set out how a flag is declared, owned, and governed before it
 - [Branching Strategy](../code-implementation/branching-strategy.md)
 - [Performance & Load Testing](../quality-engineering/performance-load-testing.md)
 - [Code Review](../code-implementation/code-review.md)
+- [Release Strategy](release-strategy.md)
+- [Version Control](../code-implementation/version-control.md)
 
 ### Justified, Single-Capability Use
 
@@ -134,8 +137,11 @@ These requirements cover how a flag no longer needed is removed, and how flags s
 3. A flag approaching or past its expected removal date must be identified and reviewed, so flag proliferation and the code complexity it adds stay in check.
 4. Where more than one flag affects the same component or code path, their number should be limited and every combination of their states tested, so the combinations requiring verification remain finite and testable.
 5. A flag should not depend on another flag's state, unless the capability it controls requires the other's capability to already be active.
+6. The commit that retires a release toggle and its conditional logic must be marked as the user-facing change it completes, so it triggers the changelog entry and release notes.
 
 #### References
 
 - [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
 - [Testability by Design](../../principles/testability-by-design.md)
+- [Release Strategy](release-strategy.md)
+- [Version Control](../code-implementation/version-control.md)

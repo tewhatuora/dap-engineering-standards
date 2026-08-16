@@ -27,14 +27,17 @@ These requirements address how a commit is scoped to one coherent logical change
 1. A commit should represent one coherent, logical change; an unrelated change must not be combined into the same commit.
 2. A commit message must describe the change's purpose and effect clearly enough to be understood without consulting its author directly.
 3. A commit message should follow a structured, consistent convention, such as [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), so a repository's history can be processed automatically, for example to generate a `CHANGELOG.md`.
-4. A commit message that is generic or non-descriptive, such as one stating only that work is in progress or that a fix was made without describing it, must not be used.
-5. A correction to content already merged into a protected branch must be made through a new, subsequent commit; the historical record of the original change must not be altered or deleted to make the correction.
+4. An adopted commit message convention must distinguish a user-facing change from an internal one, such as Conventional Commits' `feat`/`fix` versus `chore`/`docs`/`refactor` types, to drive automated changelog generation.
+5. A commit message that is generic or non-descriptive, such as one stating only that work is in progress or that a fix was made without describing it, must not be used.
+6. A correction to content already merged into a protected branch must be made through a new, subsequent commit; the historical record of the original change must not be altered or deleted to make the correction.
 
 #### References
 
 - [Coding Standards & Formatting](coding-standards-formatting.md)
 - [Database Migration Tooling](database-migration-tooling.md)
 - [Branching Strategy](branching-strategy.md)
+- [Release Strategy](../delivery-release/release-strategy.md)
+- [Feature Flagging](../delivery-release/feature-flagging.md)
 
 ### Commit Authorship Integrity
 

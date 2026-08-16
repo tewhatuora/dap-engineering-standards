@@ -23,7 +23,7 @@ These requirements set out how a release is distinguished from the deployment it
 
 These requirements cover how frequently a service releases, and how that frequency relates to its branching model.
 
-1. A release should follow its underlying deployment without delay by default; a release toggle should be used where release timing must diverge from deployment timing.
+1. A release should immediately follow its underlying deployment by default; a release toggle should be used where release timing must diverge from deployment timing.
 2. A scheduled, batched release must be supported only where the branching model defines a stabilisation period.
 
 #### References
@@ -34,19 +34,20 @@ These requirements cover how frequently a service releases, and how that frequen
 
 ### Release Notes & Communication
 
-These requirements address how a release's content is communicated to its stakeholders, and how that content is maintained as a version-controlled record.
+These requirements address how a release's notes are generated and communicated to its stakeholders, and how they are maintained as a version-controlled record.
 
 1. A release must have release notes describing the change it introduces, in language appropriate for its intended audience.
-2. Release notes must be published no later than the point a release becomes available to its users.
-3. Release notes must be communicated directly to stakeholders, in addition to being published.
-4. A release-bearing repository should maintain its release notes in a version-controlled changelog, such as a `CHANGELOG.md` file.
-5. A changelog entry should be categorised by type of change, such as added, changed, fixed, or security, following a convention such as [Keep a Changelog](https://keepachangelog.com/).
-6. A repository's changelog must be updated automatically at the point of release, without a separate manual step.
+2. Release notes must be communicated directly to stakeholders, in addition to being published.
+3. A release-bearing repository should maintain its release notes in a version-controlled changelog, such as a `CHANGELOG.md` file.
+4. A changelog entry should be categorised by type of change, such as added, changed, fixed, or security, following a convention such as [Keep a Changelog](https://keepachangelog.com/).
+5. Where a change carries no feature flag, its merge commit must use the convention for a user-facing change, so the pipeline generates the changelog entry from that same commit.
+6. Where a change is hidden behind a feature flag, its changelog entry is instead generated only once that flag is retired and the capability is confirmed stable, not when the flag is first enabled for users.
 7. Release notes may also be published elsewhere; where they are, the changelog remains the authoritative source, and any release notes published elsewhere must be kept consistent with it.
 
 #### References
 
 - [Version Control](../code-implementation/version-control.md)
+- [Feature Flagging](feature-flagging.md)
 
 ### Release Approval
 
