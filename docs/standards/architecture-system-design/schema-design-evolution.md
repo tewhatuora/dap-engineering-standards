@@ -1,5 +1,9 @@
 # Schema Design & Evolution
 
+## Summary
+
+> A schema is owned by exactly one service, and changed only through version-controlled, backward-compatible migrations.
+
 ## Objective
 
 This standard defines requirements for how a service's data model is deliberately designed for its actual access patterns and evolved through controlled, backward-compatible change. It keeps a schema owned by a single service and able to evolve safely over time, without breaking the owning service's own running instances during deployment.

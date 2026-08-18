@@ -1,5 +1,9 @@
 # Service & Domain Design
 
+## Summary
+
+> A service is scoped to one business domain, so it can be built, deployed, and evolved independently.
+
 ## Objective
 
 This standard defines requirements for how a service's scope, data ownership, and boundaries are deliberately aligned to a single business domain. It keeps a service independently deployable with a clearly defined domain boundary, so each can evolve, scale, and be maintained without unintended coupling to another service's internal implementation.

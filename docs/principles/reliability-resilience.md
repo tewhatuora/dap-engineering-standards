@@ -1,5 +1,9 @@
 # Reliability & Resilience
 
+## Summary
+
+> Design every service assuming its dependencies will fail, and contain that failure before it spreads.
+
 ## Objective
 
 This principle establishes the expectation that systems and services are designed to withstand, absorb, and recover from failure. It keeps a failure mode anticipated and its impact contained, so recovery stays fast and reliable when it occurs.

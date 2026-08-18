@@ -1,5 +1,9 @@
 # Test Data Management
 
+## Summary
+
+> Populate a non-production environment only with synthetic, de-identified, or purpose-built data, never raw production data.
+
 ## Objective
 
 This standard defines requirements for how data populating a non-production environment is sourced, scoped, and deleted. It keeps a test dataset representative of production and safe to hold outside it, so testing does not depend on unauthorised use of production data.

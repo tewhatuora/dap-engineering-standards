@@ -34,42 +34,35 @@ nav:
   - Home: index.md
   - Principles:
     - principles/index.md
-    - Everything As Code: principles/everything-as-code.md
+    - Everything as Code: principles/everything-as-code.md
     - Automation First: principles/automation-first.md
-    - Simplicity Maintainability: principles/simplicity-maintainability.md
+    - Simplicity & Maintainability: principles/simplicity-maintainability.md
     - Reuse Before Reinvention: principles/reuse-before-reinvention.md
     - Stateless First: principles/stateless-first.md
     - Testability by Design: principles/testability-by-design.md
     - Fast Feedback by Design: principles/fast-feedback-by-design.md
     - Observability by Default: principles/observability-by-default.md
-    - Reliability Resilience: principles/reliability-resilience.md
-    - Performance Scalability by Design: principles/performance-scalability-by-design.md
+    - Reliability & Resilience: principles/reliability-resilience.md
+    - Performance & Scalability by Design: principles/performance-scalability-by-design.md
     - Interoperability by Design: principles/interoperability-by-design.md
     - Platform Alignment: principles/platform-alignment.md
-    - Vendor Lock in Portability: principles/vendor-lock-in-portability.md
+    - Vendor Lock-in & Portability: principles/vendor-lock-in-portability.md
     - Security by Design: principles/security-by-design.md
     - Privacy by Design: principles/privacy-by-design.md
-    - Data Quality Integrity by Design: principles/data-quality-integrity-by-design.md
-    - Data Residency Sovereignty: principles/data-residency-sovereignty.md
+    - Data Quality & Integrity by Design: principles/data-quality-integrity-by-design.md
+    - Data Residency & Sovereignty: principles/data-residency-sovereignty.md
     - Accessibility by Design: principles/accessibility-by-design.md
     - Cost Awareness by Design: principles/cost-awareness-by-design.md
     - Sustainability by Design: principles/sustainability-by-design.md
-    - AI Assisted Engineering Accountability: principles/ai-assisted-engineering-accountability.md
+    - AI-Assisted Engineering Accountability: principles/ai-assisted-engineering-accountability.md
   - Standards:
     - standards/index.md
-    - AI Engineering:
-      - standards/ai-engineering/index.md
-      - Approved AI Tooling: standards/ai-engineering/approved-ai-tooling.md
-      - Prompt Data Handling: standards/ai-engineering/prompt-data-handling.md
-      - AI Assisted Development: standards/ai-engineering/ai-assisted-development.md
-      - AI Usage Verification in Code Review: standards/ai-engineering/ai-usage-verification-in-code-review.md
-      - AI Cost Considerations Optimisation: standards/ai-engineering/ai-cost-considerations-optimisation.md
-    - Architecture System Design:
+    - Architecture & System Design:
       - standards/architecture-system-design/index.md
-      - Service Domain Design: standards/architecture-system-design/service-domain-design.md
-      - Schema Design Evolution: standards/architecture-system-design/schema-design-evolution.md
-      - Api Design Standards: standards/architecture-system-design/api-design-standards.md
-      - Event Driven Messaging Standards: standards/architecture-system-design/event-driven-messaging-standards.md
+      - Service & Domain Design: standards/architecture-system-design/service-domain-design.md
+      - Schema Design & Evolution: standards/architecture-system-design/schema-design-evolution.md
+      - API Design & Standards: standards/architecture-system-design/api-design-standards.md
+      - Event-Driven Messaging Standards: standards/architecture-system-design/event-driven-messaging-standards.md
       - Health Data Interoperability: standards/architecture-system-design/health-data-interoperability.md
       - Runtime Architecture: standards/architecture-system-design/runtime-architecture.md
       - Technology Stack Governance: standards/architecture-system-design/technology-stack-governance.md
@@ -78,65 +71,72 @@ nav:
       - standards/code-implementation/index.md
       - Version Control: standards/code-implementation/version-control.md
       - Branching Strategy: standards/code-implementation/branching-strategy.md
-      - Coding Standards Formatting: standards/code-implementation/coding-standards-formatting.md
-      - Linting Style Enforcement: standards/code-implementation/linting-style-enforcement.md
+      - Coding Standards & Formatting: standards/code-implementation/coding-standards-formatting.md
+      - Linting & Style Enforcement: standards/code-implementation/linting-style-enforcement.md
       - Static Code Analysis: standards/code-implementation/static-code-analysis.md
       - Code Review: standards/code-implementation/code-review.md
       - Configuration Management: standards/code-implementation/configuration-management.md
-      - Dependency Runtime Management: standards/code-implementation/dependency-runtime-management.md
-      - Data Access Transaction Management: standards/code-implementation/data-access-transaction-management.md
+      - Dependency & Runtime Management: standards/code-implementation/dependency-runtime-management.md
+      - Data Access & Transaction Management: standards/code-implementation/data-access-transaction-management.md
       - Database Migration Tooling: standards/code-implementation/database-migration-tooling.md
-    - Cost Sustainability:
-      - standards/cost-sustainability/index.md
-      - Cost Monitoring Attribution: standards/cost-sustainability/cost-monitoring-attribution.md
-      - Resource Efficiency Optimisation: standards/cost-sustainability/resource-efficiency-optimisation.md
-    - Delivery Release:
-      - standards/delivery-release/index.md
-      - Continuous Integration: standards/delivery-release/continuous-integration.md
-      - Build Artifact Management: standards/delivery-release/build-artifact-management.md
-      - Continuous Delivery Deployment: standards/delivery-release/continuous-delivery-deployment.md
-      - Progressive Delivery Strategies: standards/delivery-release/progressive-delivery-strategies.md
-      - Feature Flagging: standards/delivery-release/feature-flagging.md
-      - Release Strategy: standards/delivery-release/release-strategy.md
-      - Rollback Strategy: standards/delivery-release/rollback-strategy.md
-    - Developer Experience:
-      - standards/developer-experience/index.md
-      - Build Test Feedback Loops: standards/developer-experience/build-test-feedback-loops.md
-      - Local Development Environment Standards: standards/developer-experience/local-development-environment-standards.md
-    - Documentation Collaboration:
-      - standards/documentation-collaboration/index.md
-      - Api Documentation: standards/documentation-collaboration/api-documentation.md
-      - Engineering Documentation Standards: standards/documentation-collaboration/engineering-documentation-standards.md
-    - Operations Observability:
-      - standards/operations-observability/index.md
-      - Backup Disaster Recovery: standards/operations-observability/backup-disaster-recovery.md
-      - Distributed Tracing: standards/operations-observability/distributed-tracing.md
-      - Metrics Monitoring Alerting: standards/operations-observability/metrics-monitoring-alerting.md
-      - Observability Platform Integration: standards/operations-observability/observability-platform-integration.md
-      - Runbooks: standards/operations-observability/runbooks.md
-      - Structured Logging: standards/operations-observability/structured-logging.md
-      - Telemetry Instrumentation Standards: standards/operations-observability/telemetry-instrumentation-standards.md
-    - Platform Infrastructure:
-      - standards/platform-infrastructure/index.md
-      - Container Orchestration: standards/platform-infrastructure/container-orchestration.md
-      - Containerisation Standards: standards/platform-infrastructure/containerisation-standards.md
-      - Environment Strategy: standards/platform-infrastructure/environment-strategy.md
-      - Infrastructure As Code: standards/platform-infrastructure/infrastructure-as-code.md
-      - Managed Services Standards: standards/platform-infrastructure/managed-services-standards.md
-      - Serverless Standards: standards/platform-infrastructure/serverless-standards.md
     - Quality Engineering:
       - standards/quality-engineering/index.md
       - Unit Testing: standards/quality-engineering/unit-testing.md
       - Integration Testing: standards/quality-engineering/integration-testing.md
       - Test Data Management: standards/quality-engineering/test-data-management.md
-      - Performance Load Testing: standards/quality-engineering/performance-load-testing.md
+      - Performance & Load Testing: standards/quality-engineering/performance-load-testing.md
       - Application Security Testing: standards/quality-engineering/application-security-testing.md
       - Accessibility Testing: standards/quality-engineering/accessibility-testing.md
-    - Security Identity:
+    - Delivery & Release:
+      - standards/delivery-release/index.md
+      - Continuous Integration: standards/delivery-release/continuous-integration.md
+      - Build & Artifact Management: standards/delivery-release/build-artifact-management.md
+      - Continuous Delivery & Deployment: standards/delivery-release/continuous-delivery-deployment.md
+      - Progressive Delivery Strategies: standards/delivery-release/progressive-delivery-strategies.md
+      - Feature Flagging: standards/delivery-release/feature-flagging.md
+      - Release Strategy: standards/delivery-release/release-strategy.md
+      - Rollback Strategy: standards/delivery-release/rollback-strategy.md
+    - Platform & Infrastructure:
+      - standards/platform-infrastructure/index.md
+      - Containerisation Standards: standards/platform-infrastructure/containerisation-standards.md
+      - Container Orchestration: standards/platform-infrastructure/container-orchestration.md
+      - Serverless Standards: standards/platform-infrastructure/serverless-standards.md
+      - Managed Services Standards: standards/platform-infrastructure/managed-services-standards.md
+      - Environment Strategy: standards/platform-infrastructure/environment-strategy.md
+      - Infrastructure as Code: standards/platform-infrastructure/infrastructure-as-code.md
+    - Operations & Observability:
+      - standards/operations-observability/index.md
+      - Structured Logging: standards/operations-observability/structured-logging.md
+      - Metrics, Monitoring & Alerting: standards/operations-observability/metrics-monitoring-alerting.md
+      - Distributed Tracing: standards/operations-observability/distributed-tracing.md
+      - Telemetry Instrumentation Standards: standards/operations-observability/telemetry-instrumentation-standards.md
+      - Observability Platform Integration: standards/operations-observability/observability-platform-integration.md
+      - Backup & Disaster Recovery: standards/operations-observability/backup-disaster-recovery.md
+      - Runbooks: standards/operations-observability/runbooks.md
+    - Security & Identity:
       - standards/security-identity/index.md
-      - Identity Access Management: standards/security-identity/identity-access-management.md
-      - Secrets Management Scanning: standards/security-identity/secrets-management-scanning.md
+      - Identity & Access Management: standards/security-identity/identity-access-management.md
       - Secure Software Development Practices: standards/security-identity/secure-software-development-practices.md
+      - Vulnerability & Dependency Management: standards/security-identity/vulnerability-dependency-management.md
       - Software Supply Chain Security: standards/security-identity/software-supply-chain-security.md
-      - Vulnerability Dependency Management: standards/security-identity/vulnerability-dependency-management.md
+      - Secrets Management & Scanning: standards/security-identity/secrets-management-scanning.md
+    - Cost & Sustainability:
+      - standards/cost-sustainability/index.md
+      - Cost Monitoring & Attribution: standards/cost-sustainability/cost-monitoring-attribution.md
+      - Resource Efficiency & Optimisation: standards/cost-sustainability/resource-efficiency-optimisation.md
+    - AI Engineering:
+      - standards/ai-engineering/index.md
+      - Approved AI Tooling: standards/ai-engineering/approved-ai-tooling.md
+      - Prompt Data Handling: standards/ai-engineering/prompt-data-handling.md
+      - AI-Assisted Development: standards/ai-engineering/ai-assisted-development.md
+      - AI Usage & Verification in Code Review: standards/ai-engineering/ai-usage-verification-in-code-review.md
+      - AI Cost Considerations & Optimisation: standards/ai-engineering/ai-cost-considerations-optimisation.md
+    - Developer Experience:
+      - standards/developer-experience/index.md
+      - Local Development Environment Standards: standards/developer-experience/local-development-environment-standards.md
+      - Build & Test Feedback Loops: standards/developer-experience/build-test-feedback-loops.md
+    - Documentation & Collaboration:
+      - standards/documentation-collaboration/index.md
+      - Engineering Documentation Standards: standards/documentation-collaboration/engineering-documentation-standards.md
+      - API Documentation: standards/documentation-collaboration/api-documentation.md
 

@@ -1,5 +1,9 @@
 # Simplicity & Maintainability
 
+## Summary
+
+> Add no more complexity than an actual requirement justifies, and remove what is no longer needed.
+
 ## Objective
 
 This principle establishes the expectation that systems and code are built to be as simple as a requirement allows and kept straightforward to understand, change, and support. It keeps complexity and technical debt limited, so a system can be maintained efficiently by engineers other than its original authors.

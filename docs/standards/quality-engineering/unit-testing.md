@@ -1,5 +1,9 @@
 # Unit Testing
 
+## Summary
+
+> Verify one unit of code in isolation, with every external dependency replaced by a test double.
+
 ## Objective
 
 This standard defines requirements for verifying an individual unit of code's behaviour in isolation from its external dependencies. It keeps a unit test suite fast, reliable, and properly maintained as code changes over time.

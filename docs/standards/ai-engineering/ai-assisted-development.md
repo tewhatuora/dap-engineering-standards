@@ -1,5 +1,9 @@
 # AI-Assisted Development
 
+## Summary
+
+> AI may write the code, but the submitting developer remains fully accountable for it.
+
 ## Objective
 
 This standard defines requirements for using artificial intelligence (AI) coding assistants and generative AI tools across the software development lifecycle, including producing, modifying, testing, and documenting software. It ensures AI-assisted development maintains the same quality, security, accountability, and compliance as human-authored work, while enabling teams to benefit from AI-assisted productivity gains.

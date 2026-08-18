@@ -1,5 +1,9 @@
 # Event-Driven Messaging Standards
 
+## Summary
+
+> Every event has a documented schema and a defined delivery guarantee; every consumer tolerates duplicates safely.
+
 ## Objective
 
 This standard defines requirements for how an asynchronous event or message exchanged between services is governed by an explicit contract, delivery guarantee, access control, and failure-handling behaviour. It keeps asynchronous communication decoupled, reliable, and traceable, so a producer and its consumers can evolve and scale independently without silent data loss, duplication, or unbounded coupling.

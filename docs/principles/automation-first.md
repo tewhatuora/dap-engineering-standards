@@ -1,5 +1,9 @@
 # Automation First
 
+## Summary
+
+> Automate every repeatable task by default, and reserve human judgement for what automation genuinely cannot decide.
+
 ## Objective
 
 This principle establishes automation as the default approach for repeatable engineering and operational work. It reduces reliance on manual execution and keeps engineering effort focused on the design, judgement, and improvement work automation cannot replace.

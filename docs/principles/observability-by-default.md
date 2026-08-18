@@ -1,5 +1,9 @@
 # Observability by Default
 
+## Summary
+
+> Instrument a service with enough logging, metrics, and tracing to explain its behaviour at any time.
+
 ## Objective
 
 This principle establishes the expectation that systems and services are built with sufficient logging, metrics, and tracing to understand their behaviour, health, and performance from the moment they are built. It supports timely detection, diagnosis, and resolution of operational issues, grounding engineering and operational decisions in actual system behaviour.

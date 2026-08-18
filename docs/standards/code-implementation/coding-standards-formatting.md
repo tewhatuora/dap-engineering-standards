@@ -1,5 +1,9 @@
 # Coding Standards & Formatting
 
+## Summary
+
+> One style guide per language, applied consistently regardless of whether a person or an AI wrote the code.
+
 ## Objective
 
 This standard defines requirements for the naming, formatting, and layout conventions applied when writing code. It ensures a codebase reads consistently, regardless of who wrote a given part of it or whether it was produced with AI assistance.

@@ -1,56 +1,44 @@
 # Health New Zealand Engineering Principles & Standards
 <!--include-start-->
-Engineering principles and standards for delivering software and services for Health New Zealand.
 
 ## Purpose
 
-Software and services delivered for Health New Zealand MUST be designed, developed, deployed, and supported in accordance with these engineering principles and standards.
+These engineering principles and standards guide how software and services are delivered for Health New Zealand, keeping expectations consistent across projects while allowing implementation details to evolve.
 
-Principles set out the engineering values that inform good decision-making; standards translate them into specific, measurable requirements. Together they establish consistent engineering expectations across all projects while allowing implementation details to evolve over time. Detailed guidance, patterns, examples, and technology-specific implementation instructions are maintained separately within the organisation's engineering knowledge base.
+Technology-specific implementation instructions are maintained separately within the organisation's engineering knowledge base.
 
-## Audience
+## Parts
 
-Vendors, partners, contractors, third parties, and internal staff who deliver, support, or govern software and services for Health New Zealand MUST comply with these principles and standards.
+These principles and standards are published in two parts.
 
-## Scope
+### Part A: Principles
 
-These principles and standards apply to all software, services, infrastructure, platforms, integrations, and automation deliverables produced or operated for Health New Zealand.
+The engineering values that inform good decision-making. See the [Principles Overview](docs/principles/index.md).
 
-- New, re-architected, or rewritten software and services MUST comply in full.
-- Existing software and services undergoing re-platforming or lift-and-shift MAY adopt these principles and standards progressively, provided a documented plan and target date for reaching full compliance exists; progressive adoption MUST NOT be treated as a permanent or indefinite exemption.
-- This scope applies throughout these principles and standards; individual principles and standards do not restate it, and instead define only their own specific subject-matter boundaries and cross-references.
+### Part B: Standards
 
-## Compliance
+Specific, measurable requirements that implement the principles, organised by engineering theme. See the [Standards Overview](docs/standards/index.md).
 
-- An accountable team or group MUST be assigned for each project or service to own compliance with applicable principles and standards, declared in the `CODEOWNERS` file of each repository belonging to the project or service; accountability MUST NOT be attributed to an individual.
-- Compliance MUST be maintained for the full delivery lifecycle of a project or service, from initial design through operation and decommissioning, and following any material change, not only at the time compliance was first established.
-- Non-compliance MUST NOT be resolved by unilaterally reinterpreting, narrowing, or disregarding an applicable principle or standard.
+## Target Audience
 
-## Principles and Standards Language
+These principles and standards apply to everyone involved in the delivery of software and services for Health New Zealand, including vendors, partners, contractors, third parties, and internal staff.
 
-The key words **MUST**, **MUST NOT**, **REQUIRED**, **SHALL**, **SHALL NOT**, **SHOULD**, **SHOULD NOT**, **RECOMMENDED**, **MAY**, and **OPTIONAL** are to be interpreted as described in RFC 2119.
+Part A is written for anyone making engineering decisions, including architects, technical leads, and delivery teams weighing a choice no specific standard covers. Part B is written for the engineers designing, building, and operating a specific solution.
 
-Unless explicitly stated otherwise:
+## Accountability
 
-| Keyword | Meaning |
-|---|---|
-| `MUST` / `REQUIRED` / `SHALL` | Absolute requirement |
-| `MUST NOT` / `SHALL NOT` | Absolute prohibition |
-| `SHOULD` / `RECOMMENDED` | Recommended practice, expected unless a justified reason exists |
-| `SHOULD NOT` | Generally discouraged practice |
-| `MAY` / `OPTIONAL` | Optional capability |
+Compliance ownership is a standing team responsibility, not a one-time individual task.
 
-## How principles and standards are structured
+- An accountable team **MUST** be assigned for each project or service to own compliance with these principles and standards; accountability **MUST NOT** be attributed to an individual.
+- Compliance **MUST** be maintained for the life of a project or service, not only when it was first established.
 
-Each principle and standard follows a consistent format:
+## Documentation Terminology
 
-- **Objective**: the purpose of the principle or standard and the engineering outcome it supports.
-- **Principles** or **Standards**, matching the topic's type: normative requirements grouped into logical subsections, using the language defined above.
-- **References**: links to other principles and standards it relies on or relates to, listed rather than cited inline.
+In order to enhance the precision and consistency of these engineering principles and standards, we have adopted the terminology defined in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119.txt). This document provides a set of well-defined terms that convey specific meanings when used in requirements and recommendations.
 
-Principles and standards are technology-neutral unless a specific technology is explicitly in scope, and are written to be measurable, auditable, and enforceable rather than descriptive or tutorial in nature. Where a requirement is already defined by another principle or standard, it is named in the References section rather than restated or linked inline.
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
 <!--include-end-->
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the required review process, local validation and Hugo build commands, draft and version-publishing workflow, and generated-site preview guidance.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the required review process, local validation and build commands, and generated-site preview guidance.

@@ -1,5 +1,9 @@
 # Application Security Testing
 
+## Summary
+
+> Catch each class of vulnerability using the technique suited to detect it, and verify every finding's fix.
+
 ## Objective
 
 This standard defines requirements for verifying that a service's code and running behaviour are free of exploitable security weaknesses. It ensures each class of vulnerability is caught by the technique best suited to detect it, and keeps a finding remediated once identified.

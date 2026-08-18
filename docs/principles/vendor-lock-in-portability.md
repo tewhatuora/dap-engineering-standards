@@ -1,5 +1,9 @@
 # Vendor Lock-in & Portability
 
+## Summary
+
+> Weigh the lock-in a vendor or technology choice introduces, and keep a practical way to exit it.
+
 ## Objective
 
 This principle establishes the expectation that dependence on a specific vendor, platform, or proprietary technology is a deliberate, risk-assessed engineering decision. It keeps a proportionate, practical ability to migrate or operate without a given vendor, so a vendor's pricing, availability, or strategic changes do not leave a system unable to adapt.

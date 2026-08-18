@@ -1,5 +1,9 @@
 # Code Review
 
+## Summary
+
+> Every change is reviewed and approved by someone other than its author, with scrutiny proportionate to its risk.
+
 ## Objective
 
 This standard defines requirements for how a change to a version-controlled repository is reviewed and approved by other engineers before it takes effect. It ensures a defect, security weakness, or unnecessary complexity is caught while a change is still easy to correct, and keeps the decision to merge it clearly accountable.

@@ -1,5 +1,9 @@
 # Health Data Interoperability
 
+## Summary
+
+> Exchange health data through recognised standards such as FHIR and shared clinical terminology, not a proprietary format.
+
 ## Objective
 
 This standard defines requirements for how health data is exchanged using recognised, standards-based formats and terminology across the health sector. It keeps clinical and administrative information moving safely and consistently between systems, reducing the risk of misinterpreted or unusable data at the point of exchange.

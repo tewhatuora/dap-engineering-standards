@@ -1,5 +1,9 @@
 # Database Migration Tooling
 
+## Summary
+
+> Define every schema or data change as version-controlled migration code, never as an ad hoc query.
+
 ## Objective
 
 This standard defines requirements for how a change to a database's schema, or a bulk or corrective change to its data, is defined as version-controlled migration code and executed automatically through dedicated tooling. It keeps every environment's database state reproducible from the same migration history, and keeps that execution reversible where feasible and free of avoidable disruption to a running service.

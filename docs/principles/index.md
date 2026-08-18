@@ -1,85 +1,132 @@
-# Principles Overview
+# Principles
 
-## [Everything as Code](everything-as-code.md)
+## Overview
+Principles are the engineering values that inform good decision-making: they explain the reasoning behind a choice, not just prescribe the choice itself.
 
-_Code is the single source of truth; a manual change to a running system is drift to fix._
+Choose a principle below to read its full reasoning.
 
-## [Automation First](automation-first.md)
+**Everything as Code**
 
-_Automate every repeatable task by default, and reserve human judgement for what automation genuinely cannot decide._
+> Code is the single source of truth; a manual change to a running system is drift to fix.
 
-## [Simplicity & Maintainability](simplicity-maintainability.md)
+[Read more](everything-as-code.md).
 
-_Add no more complexity than an actual requirement justifies, and remove what is no longer needed._
+**Automation First**
 
-## [Reuse Before Reinvention](reuse-before-reinvention.md)
+> Automate every repeatable task by default, and reserve human judgement for what automation genuinely cannot decide.
 
-_Reuse an existing solution before adopting one, and adopt before building anything new._
+[Read more](automation-first.md).
 
-## [Stateless First](stateless-first.md)
+**Simplicity & Maintainability**
 
-_Design a service so any instance can handle any request, with required state held externally._
+> Add no more complexity than an actual requirement justifies, and remove what is no longer needed.
 
-## [Testability by Design](testability-by-design.md)
+[Read more](simplicity-maintainability.md).
 
-_Design every component so its correctness can be verified automatically, with every dependency substitutable for testing._
+**Reuse Before Reinvention**
 
-## [Fast Feedback by Design](fast-feedback-by-design.md)
+> Reuse an existing solution before adopting one, and adopt before building anything new.
 
-_Surface feedback on a change at the earliest stage capable of producing it, clearly and reliably._
+[Read more](reuse-before-reinvention.md).
 
-## [Observability by Default](observability-by-default.md)
+**Stateless First**
 
-_Instrument a service with enough logging, metrics, and tracing to explain its behaviour at any time._
+> Design a service so any instance can handle any request, with required state held externally.
 
-## [Reliability & Resilience](reliability-resilience.md)
+[Read more](stateless-first.md).
 
-_Design every service assuming its dependencies will fail, and contain that failure before it spreads._
+**Testability by Design**
 
-## [Performance & Scalability by Design](performance-scalability-by-design.md)
+> Design every component so its correctness can be verified automatically, with every dependency substitutable for testing.
 
-_Define a service's performance and capacity targets at design time, and validate them through testing._
+[Read more](testability-by-design.md).
 
-## [Interoperability by Design](interoperability-by-design.md)
+**Fast Feedback by Design**
 
-_Expose what a service shares through a documented interface, preferring an open standard over a proprietary one._
+> Surface feedback on a change at the earliest stage capable of producing it, clearly and reliably.
 
-## [Platform Alignment](platform-alignment.md)
+[Read more](fast-feedback-by-design.md).
 
-_Build on the organisation's shared platform by default, and justify any deviation from it._
+**Observability by Default**
 
-## [Vendor Lock-in & Portability](vendor-lock-in-portability.md)
+> Instrument a service with enough logging, metrics, and tracing to explain its behaviour at any time.
 
-_Weigh the lock-in a vendor or technology choice introduces, and keep a practical way to exit it._
+[Read more](observability-by-default.md).
 
-## [Security by Design](security-by-design.md)
+**Reliability & Resilience**
 
-_Build in least privilege and secure defaults from the outset, and verify every control through testing._
+> Design every service assuming its dependencies will fail, and contain that failure before it spreads.
 
-## [Privacy by Design](privacy-by-design.md)
+[Read more](reliability-resilience.md).
 
-_Collect only the personal or health data a purpose needs, defaulting to the most private option._
+**Performance & Scalability by Design**
 
-## [Data Quality & Integrity by Design](data-quality-integrity-by-design.md)
+> Define a service's performance and capacity targets at design time, and validate them through testing.
 
-_Validate data at its point of entry, and correct a quality issue at its root cause._
+[Read more](performance-scalability-by-design.md).
 
-## [Data Residency & Sovereignty](data-residency-sovereignty.md)
+**Interoperability by Design**
 
-_Treat the legal jurisdiction over data as a deliberate choice, not an assumption from a vendor's claim._
+> Expose what a service shares through a documented interface, preferring an open standard over a proprietary one.
 
-## [Accessibility by Design](accessibility-by-design.md)
+[Read more](interoperability-by-design.md).
 
-_Design for assistive technology from a feature's earliest stage, and verify conformance through testing, not assumption._
+**Platform Alignment**
 
-## [Cost Awareness by Design](cost-awareness-by-design.md)
+> Build on the organisation's shared platform by default, and justify any deviation from it.
 
-_Weigh cost alongside reliability, performance, and security at design time, proportionate to the value it protects._
+[Read more](platform-alignment.md).
 
-## [Sustainability by Design](sustainability-by-design.md)
+**Vendor Lock-in & Portability**
 
-_Weigh a design's energy and carbon impact alongside its other requirements, and size resources to actual demand._
+> Weigh the lock-in a vendor or technology choice introduces, and keep a practical way to exit it.
 
-## [AI-Assisted Engineering Accountability](ai-assisted-engineering-accountability.md)
+[Read more](vendor-lock-in-portability.md).
 
-_Hold AI-assisted work to the same standards as any other, with the directing engineer fully accountable._
+**Security by Design**
+
+> Build in least privilege and secure defaults from the outset, and verify every control through testing.
+
+[Read more](security-by-design.md).
+
+**Privacy by Design**
+
+> Collect only the personal or health data a purpose needs, defaulting to the most private option.
+
+[Read more](privacy-by-design.md).
+
+**Data Quality & Integrity by Design**
+
+> Validate data at its point of entry, and correct a quality issue at its root cause.
+
+[Read more](data-quality-integrity-by-design.md).
+
+**Data Residency & Sovereignty**
+
+> Treat the legal jurisdiction over data as a deliberate choice, not an assumption from a vendor's claim.
+
+[Read more](data-residency-sovereignty.md).
+
+**Accessibility by Design**
+
+> Design for assistive technology from a feature's earliest stage, and verify conformance through testing, not assumption.
+
+[Read more](accessibility-by-design.md).
+
+**Cost Awareness by Design**
+
+> Weigh cost alongside reliability, performance, and security at design time, proportionate to the value it protects.
+
+[Read more](cost-awareness-by-design.md).
+
+**Sustainability by Design**
+
+> Weigh a design's energy and carbon impact alongside its other requirements, and size resources to actual demand.
+
+[Read more](sustainability-by-design.md).
+
+**AI-Assisted Engineering Accountability**
+
+> Hold AI-assisted work to the same standards as any other, with the directing engineer fully accountable.
+
+[Read more](ai-assisted-engineering-accountability.md).

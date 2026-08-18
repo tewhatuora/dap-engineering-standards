@@ -1,5 +1,9 @@
 # Data Quality & Integrity by Design
 
+## Summary
+
+> Validate data at its point of entry, and correct a quality issue at its root cause.
+
 ## Objective
 
 This principle establishes the expectation that data is correct, complete, consistent, and free of unresolved duplication or contradiction throughout its lifecycle. It keeps a data quality issue caught and corrected close to its source, so decisions, reporting, and downstream systems can rely on the data they consume.

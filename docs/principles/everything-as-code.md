@@ -1,5 +1,9 @@
 # Everything as Code
 
+## Summary
+
+> Code is the single source of truth; a manual change to a running system is drift to fix.
+
 ## Objective
 
 This principle establishes version-controlled, declarative code as the authoritative definition for application and service code, infrastructure, environments, configuration, and other engineering artifacts traditionally managed through manual, ad hoc action. It reduces reliance on unreviewed changes made directly to a running system and makes engineering state reproducible, reviewable, and traceable.

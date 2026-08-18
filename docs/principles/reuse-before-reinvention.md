@@ -1,5 +1,9 @@
 # Reuse Before Reinvention
 
+## Summary
+
+> Reuse an existing solution before adopting one, and adopt before building anything new.
+
 ## Objective
 
 This principle establishes the expectation that engineering teams actively seek out and adopt an existing, proven solution before building a new one, across code, libraries, services, and components at any level. It reduces duplicated engineering effort, shortens delivery timelines, and concentrates maintenance and improvement effort on a smaller number of well-supported solutions.

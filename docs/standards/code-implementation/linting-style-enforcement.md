@@ -1,5 +1,9 @@
 # Linting & Style Enforcement
 
+## Summary
+
+> A linter checks every codebase continuously, and a blocking violation must be fixed, not silently suppressed.
+
 ## Objective
 
 This standard defines requirements for checking a codebase against its adopted linting ruleset as a continuous, automated part of engineering work. It ensures a deviation is caught early and resolved through a reviewed process.

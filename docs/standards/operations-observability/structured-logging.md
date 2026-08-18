@@ -1,5 +1,9 @@
 # Structured Logging
 
+## Summary
+
+_To be defined._
+
 ## Objective
 
 _To be defined._

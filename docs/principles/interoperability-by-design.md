@@ -1,5 +1,9 @@
 # Interoperability by Design
 
+## Summary
+
+> Expose what a service shares through a documented interface, preferring an open standard over a proprietary one.
+
 ## Objective
 
 This principle establishes the expectation that systems and services are designed to exchange data and functionality with other systems predictably and consistently. It keeps an interface well-defined and compatible with open standards, so systems can be integrated, extended, and evolved without accumulating brittle or one-off integrations.

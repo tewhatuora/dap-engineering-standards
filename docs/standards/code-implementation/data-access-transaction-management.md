@@ -1,5 +1,9 @@
 # Data Access & Transaction Management
 
+## Summary
+
+> Access a data store only through a defined layer, using parameterised queries and bounded, explicit transactions.
+
 ## Objective
 
 This standard defines requirements for how a service's code interacts with its data store, from constructing and scoping a query or transaction to managing the connections and credentials that interaction depends on. It keeps data access safe, efficient, and observable, and keeps data consistent under concurrent access and transient failure.

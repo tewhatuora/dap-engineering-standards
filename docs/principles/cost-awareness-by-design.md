@@ -1,5 +1,9 @@
 # Cost Awareness by Design
 
+## Summary
+
+> Weigh cost alongside reliability, performance, and security at design time, proportionate to the value it protects.
+
 ## Objective
 
 This principle treats cost as a design-time consideration, weighed alongside reliability, performance, and security. It keeps spending deliberate and proportionate, so it remains traceable to the value delivered.

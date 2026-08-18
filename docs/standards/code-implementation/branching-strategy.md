@@ -1,5 +1,9 @@
 # Branching Strategy
 
+## Summary
+
+> Every repository follows one defined branching model, with short-lived branches merged only through reviewed changes.
+
 ## Objective
 
 This standard defines requirements for how a branch is created, integrated, and retired within a version-controlled repository. It keeps a change on one predictable, agreed path, so it is reviewed and merged before it diverges from the rest of the repository.

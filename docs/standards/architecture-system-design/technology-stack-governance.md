@@ -1,5 +1,9 @@
 # Technology Stack Governance
 
+## Summary
+
+> Every technology is classified as approved, trial, or deprecated, and reviewed through governance before it is adopted.
+
 ## Objective
 
 This standard defines requirements for how a team selects and retires the technology, meaning any language, framework, platform, or tool, its service depends on, consistent with the organisation's approved, trial, or deprecated classification. It keeps a technology decision deliberate, supportable, and reviewed through the organisation's approval process before it takes effect.

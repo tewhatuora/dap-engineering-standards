@@ -1,5 +1,9 @@
 # Sustainability by Design
 
+## Summary
+
+> Weigh a design's energy and carbon impact alongside its other requirements, and size resources to actual demand.
+
 ## Objective
 
 This principle treats the environmental impact of engineering decisions, including energy consumption and carbon footprint, as a design-time consideration. It keeps a technology choice, data practice, and infrastructure decision resource-efficient, so unnecessary environmental impact is reduced.

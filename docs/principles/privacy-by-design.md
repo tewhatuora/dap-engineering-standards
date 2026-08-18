@@ -1,5 +1,9 @@
 # Privacy by Design
 
+## Summary
+
+> Collect only the personal or health data a purpose needs, defaulting to the most private option.
+
 ## Objective
 
 This principle establishes the expectation that protections for personal and health data are built into systems and services from the outset. It supports data minimisation, purpose-limited processing, and defensible, auditable handling of personal and health data throughout the engineering lifecycle.

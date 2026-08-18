@@ -1,5 +1,9 @@
 # Stateless First
 
+## Summary
+
+> Design a service so any instance can handle any request, with required state held externally.
+
 ## Objective
 
 This principle establishes the expectation that services are designed without reliance on state retained between requests, so that any instance can serve any request. It keeps genuinely required state externalised, so a service can scale horizontally, tolerate instance failure, and be replaced or restarted without loss of continuity for in-flight work.

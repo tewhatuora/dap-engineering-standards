@@ -1,5 +1,9 @@
 # AI Cost Considerations & Optimisation
 
+## Summary
+
+> Match context size, model choice, and session length to what the task actually needs.
+
 ## Objective
 
 This standard defines requirements for managing and optimising the cost of AI-assisted development tooling, including context scoping, model selection, tooling hygiene, and session management practices that materially affect token and usage-based costs. It ensures AI tool adoption delivers productivity gains without uncontrolled cost growth.

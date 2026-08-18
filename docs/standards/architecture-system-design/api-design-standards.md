@@ -1,5 +1,9 @@
 # API Design & Standards
 
+## Summary
+
+> Design and version every API contract-first, so a breaking change never surprises an existing consumer.
+
 ## Objective
 
 This standard defines requirements for designing, versioning, securing, and operating an API consistently across the organisation, regardless of the protocol or specification style used. It keeps an API predictable, well-documented, and stable, so a consumer can integrate with confidence and a provider can evolve it without breaking existing consumers.

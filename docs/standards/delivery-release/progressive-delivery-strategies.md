@@ -1,5 +1,9 @@
 # Progressive Delivery Strategies
 
+## Summary
+
+> Limit a new change to a small share of production traffic before it reaches everyone.
+
 ## Objective
 
 This standard defines requirements for how a change is deployed to production through a progressive delivery technique that limits its initial exposure to a subset of production traffic. It keeps a change's impact observable and reversible while exposure is still limited, so a defect or regression is caught and contained before that exposure is complete.

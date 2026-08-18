@@ -1,5 +1,9 @@
 # Prompt Data Handling
 
+## Summary
+
+> A prompt is a data disclosure; never include secrets, patient data, or more than a task needs.
+
 ## Objective
 
 This standard defines requirements for data, code, and content submitted as input ("prompts") to AI tools, including prohibited data categories, minimisation, vendor data use and retention constraints, and incident handling. It ensures AI tool use does not result in unauthorised disclosure or retention of sensitive, personal, or confidential information.

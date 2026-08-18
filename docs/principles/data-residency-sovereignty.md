@@ -1,5 +1,9 @@
 # Data Residency & Sovereignty
 
+## Summary
+
+> Treat the legal jurisdiction over data as a deliberate choice, not an assumption from a vendor's claim.
+
 ## Objective
 
 This principle establishes the expectation that the jurisdiction in which data is stored, processed, and legally accessible is a deliberate engineering decision. It keeps a cloud provider, location, and vendor choice aligned with applicable jurisdictional requirements, with ongoing visibility of where data actually resides.

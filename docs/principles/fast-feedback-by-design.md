@@ -1,5 +1,9 @@
 # Fast Feedback by Design
 
+## Summary
+
+> Surface feedback on a change at the earliest stage capable of producing it, clearly and reliably.
+
 ## Objective
 
 This principle establishes the speed and earliness of feedback as a deliberate engineering concern across the development lifecycle, from local development through delivery pipelines to production. It keeps the time between an engineering action and the information needed to judge its correctness or impact as short as possible, so problems are found and corrected while they remain cheap and easy to fix.

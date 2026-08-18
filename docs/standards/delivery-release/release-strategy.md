@@ -1,5 +1,9 @@
 # Release Strategy
 
+## Summary
+
+> A release is a deliberate decision, not a side effect of a pipeline finishing.
+
 ## Objective
 
 This standard defines requirements for how and when a deployed change is made available to users as a release. It keeps a release a deliberate, accountable decision, recorded and communicated separately from its underlying deployment.
