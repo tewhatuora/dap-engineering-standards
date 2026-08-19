@@ -9,7 +9,7 @@ help:
 	@echo "  make build  - Build the documentation into the public directory"
 
 init:
-	@uv install
+	@uv sync
 
 serve:
 	@uv run mkdocs serve
