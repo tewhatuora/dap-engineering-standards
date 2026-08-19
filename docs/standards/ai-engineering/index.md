@@ -9,7 +9,7 @@ Choose a standard below to see its full requirements.
 
 #### Approved AI Tooling
 
-> Only vetted, organisation-provisioned AI tools may be used for engineering work.
+> Only vetted, organisation-provisioned AI tools **MAY** be used for engineering work.
 
 [Read more](approved-ai-tooling.md).
 
@@ -21,7 +21,7 @@ Choose a standard below to see its full requirements.
 
 #### AI-Assisted Development
 
-> AI may write the code, but the submitting developer remains fully accountable for it.
+> AI **MAY** write the code, but the submitting developer remains fully accountable for it.
 
 [Read more](ai-assisted-development.md).
 

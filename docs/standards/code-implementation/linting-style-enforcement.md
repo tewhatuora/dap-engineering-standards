@@ -2,7 +2,7 @@
 
 ## Summary
 
-> A linter checks every codebase continuously, and a blocking violation must be fixed, not silently suppressed.
+> A linter checks every codebase continuously, and a blocking violation **MUST** be fixed, not silently suppressed.
 
 ## Objective
 
@@ -14,10 +14,10 @@ This standard defines requirements for checking a codebase against its adopted l
 
 These requirements set out how automated linting coverage is scoped across a codebase.
 
-1. Each language in use within a codebase, including one used to define infrastructure or a pipeline, must be checked by an automated linter appropriate to it.
-2. Generated code must be excluded from linting scope, rather than tracked as a violation.
-3. An established, actively maintained linter should be preferred over a custom-built or unmaintained one for a language it already covers.
-4. The linters in use for a codebase must be documented and discoverable, such as through a repository's `README` or a location linked from it.
+1. Each language in use within a codebase, including one used to define infrastructure or a pipeline, **MUST** be checked by an automated linter appropriate to it.
+2. Generated code **MUST** be excluded from linting scope, rather than tracked as a violation.
+3. An established, actively maintained linter **SHOULD** be preferred over a custom-built or unmaintained one for a language it already covers.
+4. The linters in use for a codebase **MUST** be documented and discoverable, such as through a repository's `README` or a location linked from it.
 
 #### References
 - [Coding Standards & Formatting](coding-standards-formatting.md)
@@ -26,9 +26,9 @@ These requirements set out how automated linting coverage is scoped across a cod
 
 These requirements address how a linter's configuration is controlled across a codebase.
 
-1. A linter's ruleset must be defined as version-controlled configuration, whether declared directly within the codebase it governs or extended from a version-controlled shared baseline.
-2. The same ruleset and linter version must be applied wherever linting runs, whether locally, at pre-commit, or in the delivery pipeline.
-3. A linter's default ruleset should be adopted wherever it meets a codebase's needs; a customisation should be added only where an actual need justifies it.
+1. A linter's ruleset **MUST** be defined as version-controlled configuration, whether declared directly within the codebase it governs or extended from a version-controlled shared baseline.
+2. The same ruleset and linter version **MUST** be applied wherever linting runs, whether locally, at pre-commit, or in the delivery pipeline.
+3. A linter's default ruleset **SHOULD** be adopted wherever it meets a codebase's needs; a customisation **SHOULD** be added only where an actual need justifies it.
 
 #### References
 - [Everything as Code](../../principles/everything-as-code.md)
@@ -38,10 +38,10 @@ These requirements address how a linter's configuration is controlled across a c
 
 These requirements describe how a change's progression through the delivery pipeline is gated according to a lint violation's severity.
 
-1. A lint check must run as part of the delivery pipeline.
-2. Each lint rule must be classified by severity, where supported by the linter, distinguishing a violation that must block progression from one that is advisory only.
-3. A lint rule not classified by severity must be treated as advisory only.
-4. A change must not merge or deploy while a non-baselined violation at blocking severity remains outstanding.
+1. A lint check **MUST** run as part of the delivery pipeline.
+2. Each lint rule **MUST** be classified by severity, where supported by the linter, distinguishing a violation that must block progression from one that is advisory only.
+3. A lint rule not classified by severity **MUST** be treated as advisory only.
+4. A change **MUST NOT** merge or deploy while a non-baselined violation at blocking severity remains outstanding.
 
 #### References
 - [Automation First](../../principles/automation-first.md)
@@ -50,8 +50,8 @@ These requirements describe how a change's progression through the delivery pipe
 
 These requirements cover how a lint violation is surfaced locally, before a change is submitted for review.
 
-1. Linting should be available to run locally, through IDE integration, or as a pre-commit hook, so a violation is visible before a change is submitted for review.
-2. A local lint run should check only the files affected by a change where practical, rather than the entire codebase, to keep local feedback fast.
+1. Linting **SHOULD** be available to run locally, through IDE integration, or as a pre-commit hook, so a violation is visible before a change is submitted for review.
+2. A local lint run **SHOULD** check only the files affected by a change where practical, rather than the entire codebase, to keep local feedback fast.
 
 #### References
 - [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
@@ -60,10 +60,10 @@ These requirements cover how a lint violation is surfaced locally, before a chan
 
 These requirements address how a lint violation is suppressed without weakening a codebase's overall linting discipline.
 
-1. A lint violation must not be suppressed by disabling a rule broadly, such as file-wide or project-wide, to silence a single occurrence.
-2. A suppression must be scoped to the specific line and rule it addresses, and must include a documented reason.
-3. A suppression must receive the same review scrutiny as the change it appears in.
-4. A suppression or exception list, including one held in a dedicated file rather than inline, must be version-controlled within the codebase it applies to.
+1. A lint violation **MUST NOT** be suppressed by disabling a rule broadly, such as file-wide or project-wide, to silence a single occurrence.
+2. A suppression **MUST** be scoped to the specific line and rule it addresses, and **MUST** include a documented reason.
+3. A suppression **MUST** receive the same review scrutiny as the change it appears in.
+4. A suppression or exception list, including one held in a dedicated file rather than inline, **MUST** be version-controlled within the codebase it applies to.
 
 #### References
 - [Code Review](code-review.md)
@@ -73,9 +73,9 @@ These requirements address how a lint violation is suppressed without weakening 
 
 These requirements guide how a change to the adopted ruleset is governed.
 
-1. A change to the adopted ruleset, including adding, removing, or weakening a rule, must go through the same review process required for a code change.
-2. A ruleset must not be weakened unilaterally to let a specific failing change pass.
-3. The ruleset should be reviewed periodically, so it stays current with the codebase's adopted conventions and evolving engineering practice.
+1. A change to the adopted ruleset, including adding, removing, or weakening a rule, **MUST** go through the same review process required for a code change.
+2. A ruleset **MUST NOT** be weakened unilaterally to let a specific failing change pass.
+3. The ruleset **SHOULD** be reviewed periodically, so it stays current with the codebase's adopted conventions and evolving engineering practice.
 
 #### References
 - [Code Review](code-review.md)
@@ -85,9 +85,9 @@ These requirements guide how a change to the adopted ruleset is governed.
 
 These requirements set out how a pre-existing violation is baselined when a linter or a new rule is adopted on an existing codebase.
 
-1. Adopting a linter or a new rule on an existing codebase may treat its existing violations as a baseline, recorded either as an explicit exception list or as a fixed point in the codebase's history.
-2. A violation introduced after a baseline is established, whether as an exception list or a fixed point in the codebase's history, must not be treated as baselined.
-3. A baselined violation must be tracked and remediated as technical debt.
+1. Adopting a linter or a new rule on an existing codebase **MAY** treat its existing violations as a baseline, recorded either as an explicit exception list or as a fixed point in the codebase's history.
+2. A violation introduced after a baseline is established, whether as an exception list or a fixed point in the codebase's history, **MUST NOT** be treated as baselined.
+3. A baselined violation **MUST** be tracked and remediated as technical debt.
 
 #### References
 - [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)

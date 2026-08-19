@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Only vetted, organisation-provisioned AI tools may be used for engineering work.
+> Only vetted, organisation-provisioned AI tools **MAY** be used for engineering work.
 
 ## Objective
 
@@ -12,7 +12,7 @@ This standard defines the register of AI tools approved for engineering use, and
 
 ### Approved Tooling Register
 
-These requirements set out which AI tools are approved for engineering use; an unlisted AI tool must not be used for organisational work.
+These requirements set out which AI tools are approved for engineering use; an unlisted AI tool **MUST NOT** be used for organisational work.
 
 | Tool | Licence Tier | Data Classification Authorised |
 |---|---|---|
@@ -23,9 +23,9 @@ These requirements set out which AI tools are approved for engineering use; an u
 
 These requirements address how use of an AI tool outside the Approved Tooling Register is prohibited.
 
-1. Personnel must not use AI tools not on the Approved Tooling Register for any activity involving organisational code, data, or systems.
+1. Personnel **MUST NOT** use AI tools not on the Approved Tooling Register for any activity involving organisational code, data, or systems.
 2. Use of unapproved ("shadow AI") tools, including consumer-grade or free public AI services, for organisational engineering work is prohibited.
-3. Use of an unapproved tool must not be justified retroactively; a need for an additional tool must be raised for approval before use.
+3. Use of an unapproved tool **MUST NOT** be justified retroactively; a need for an additional tool **MUST** be raised for approval before use.
 
 #### References
 
@@ -35,6 +35,6 @@ These requirements address how use of an AI tool outside the Approved Tooling Re
 
 These requirements describe how AI tooling access is tied to organisation-provisioned, individually attributable licences.
 
-1. AI tools must only be used under licences provisioned and administered by Health New Zealand and tied to the individual's organisational identity.
-2. Personal, free-tier, trial, or other independently obtained accounts must not be used to access AI tooling for organisational work, even where the tool is on the Approved Tooling Register.
-3. Access to licensed AI tooling must be provisioned upon personnel onboarding, adjusted upon role change, and revoked upon offboarding.
+1. AI tools **MUST** only be used under licences provisioned and administered by Health New Zealand and tied to the individual's organisational identity.
+2. Personal, free-tier, trial, or other independently obtained accounts **MUST NOT** be used to access AI tooling for organisational work, even where the tool is on the Approved Tooling Register.
+3. Access to licensed AI tooling **MUST** be provisioned upon personnel onboarding, adjusted upon role change, and revoked upon offboarding.

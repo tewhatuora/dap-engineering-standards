@@ -14,8 +14,8 @@ This principle establishes that engineering work produced or materially assisted
 
 These principles set out how AI-assisted work is held to every applicable principle and standard, to the same extent as human-authored work.
 
-1. Work produced or materially assisted by an AI tool must meet every applicable principle and standard to the same extent as work authored entirely by a human.
-2. The use of an AI tool must not be offered or accepted as justification for reduced compliance with an applicable principle or standard.
+1. Work produced or materially assisted by an AI tool **MUST** meet every applicable principle and standard to the same extent as work authored entirely by a human.
+2. The use of an AI tool **MUST NOT** be offered or accepted as justification for reduced compliance with an applicable principle or standard.
 
 #### References
 
@@ -25,16 +25,16 @@ These principles set out how AI-assisted work is held to every applicable princi
 
 These principles set out how the directing engineer remains accountable for AI-assisted work, across every kind of engineering artifact.
 
-1. The engineer directing AI-assisted work must remain fully accountable for its correctness, quality, security, and compliance, regardless of how much of the work an AI tool produced.
-2. Accountability must not be limited to source code; it extends to any engineering artifact produced with AI assistance, including infrastructure definitions, tests, data pipelines, and documentation.
+1. The engineer directing AI-assisted work **MUST** remain fully accountable for its correctness, quality, security, and compliance, regardless of how much of the work an AI tool produced.
+2. Accountability **MUST NOT** be limited to source code; it extends to any engineering artifact produced with AI assistance, including infrastructure definitions, tests, data pipelines, and documentation.
 
 ### Understanding as a Precondition for Adoption
 
 These principles describe how an engineer's understanding of AI-assisted output becomes a precondition for adopting it.
 
-1. AI-assisted output must not be adopted into a project or service unless the responsible engineer understands its behaviour well enough to explain, justify, and maintain it.
-2. The speed of producing output through AI assistance must not be prioritised over the engineer's own understanding of that output.
-3. An engineer must be able to account for AI-assisted work they submit or approve if questioned on its behaviour or implementation.
+1. AI-assisted output **MUST NOT** be adopted into a project or service unless the responsible engineer understands its behaviour well enough to explain, justify, and maintain it.
+2. The speed of producing output through AI assistance **MUST NOT** be prioritised over the engineer's own understanding of that output.
+3. An engineer **MUST** be able to account for AI-assisted work they submit or approve if questioned on its behaviour or implementation.
 
 #### References
 
@@ -44,8 +44,8 @@ These principles describe how an engineer's understanding of AI-assisted output 
 
 These principles address how AI use is limited to tooling sanctioned through the organisation's governance process.
 
-1. AI tools used for engineering work must be limited to tooling sanctioned through the organisation's governance process, regardless of engineering discipline or task.
-2. A tool's perceived capability, convenience, or cost must not justify its use outside that governance process.
+1. AI tools used for engineering work **MUST** be limited to tooling sanctioned through the organisation's governance process, regardless of engineering discipline or task.
+2. A tool's perceived capability, convenience, or cost **MUST NOT** justify its use outside that governance process.
 
 #### References
 
@@ -55,8 +55,8 @@ These principles address how AI use is limited to tooling sanctioned through the
 
 These principles cover how the intellectual property and confidentiality risk of AI-assisted work is mitigated.
 
-1. AI-assisted output must not be adopted where it appears to reproduce third-party material without the right to use it, such as a retained licence header or attribution comment.
-2. Confidential or proprietary material must not be submitted to an AI tool in a manner that grants the tool provider rights to reuse or retain it.
+1. AI-assisted output **MUST NOT** be adopted where it appears to reproduce third-party material without the right to use it, such as a retained licence header or attribution comment.
+2. Confidential or proprietary material **MUST NOT** be submitted to an AI tool in a manner that grants the tool provider rights to reuse or retain it.
 
 #### References
 

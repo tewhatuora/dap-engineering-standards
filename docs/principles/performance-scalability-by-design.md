@@ -14,23 +14,23 @@ This principle establishes the expectation that systems are designed with define
 
 These principles set out how a service's performance and scaling under load become an explicit architectural decision at design time.
 
-1. How a service will perform and scale under load must be treated as an architectural decision, made at design time.
-2. A design must not be signed off before its expected load and scaling approach have been thought through.
+1. How a service will perform and scale under load **MUST** be treated as an architectural decision, made at design time.
+2. A design **MUST NOT** be signed off before its expected load and scaling approach have been thought through.
 
 ### Performance & Capacity Requirements
 
 These principles describe how load, throughput, latency, and error rate are defined as explicit non-functional requirements.
 
-1. Expected load, throughput, concurrency, acceptable response time or latency, and error rate must be defined as explicit non-functional requirements for a service.
-2. Performance and capacity requirements should be based on realistic current or projected demand.
+1. Expected load, throughput, concurrency, acceptable response time or latency, and error rate **MUST** be defined as explicit non-functional requirements for a service.
+2. Performance and capacity requirements **SHOULD** be based on realistic current or projected demand.
 
 ### Horizontal & Elastic Scaling
 
 These principles address how horizontal, elastic scaling is preferred over scaling a single instance vertically.
 
-1. A service should be designed to scale horizontally, by adding or removing instances to meet demand, in preference to scaling a single instance vertically.
-2. The runtime model selected for a workload should support the scaling approach its performance and capacity requirements demand.
-3. Where elastic scaling is used, capacity should adjust automatically to a sustained change in demand rather than relying on manual intervention.
+1. A service **SHOULD** be designed to scale horizontally, by adding or removing instances to meet demand, in preference to scaling a single instance vertically.
+2. The runtime model selected for a workload **SHOULD** support the scaling approach its performance and capacity requirements demand.
+3. Where elastic scaling is used, capacity **SHOULD** adjust automatically to a sustained change in demand rather than relying on manual intervention.
 
 #### References
 
@@ -44,8 +44,8 @@ These principles address how horizontal, elastic scaling is preferred over scali
 
 These principles set out how a scaling constraint is identified during design and addressed or explicitly accepted.
 
-1. A component that cannot scale independently of the rest of a service, or that constitutes a single point of contention under load, must be identified during design.
-2. An identified scaling constraint must be addressed or explicitly accepted as a bounded limitation; it must not remain unrecognised until it causes a failure in production.
+1. A component that cannot scale independently of the rest of a service, or that constitutes a single point of contention under load, **MUST** be identified during design.
+2. An identified scaling constraint **MUST** be addressed or explicitly accepted as a bounded limitation; it **MUST NOT** remain unrecognised until it causes a failure in production.
 
 #### References
 
@@ -55,8 +55,8 @@ These principles set out how a scaling constraint is identified during design an
 
 These principles cover how data access is designed to avoid unnecessary latency or load as demand grows.
 
-1. A data access pattern should be designed to avoid unnecessary latency or load as demand grows, including through caching, pagination, and appropriate indexing.
-2. A cache must have a defined invalidation or expiry approach, so it does not serve stale data indefinitely.
+1. A data access pattern **SHOULD** be designed to avoid unnecessary latency or load as demand grows, including through caching, pagination, and appropriate indexing.
+2. A cache **MUST** have a defined invalidation or expiry approach, so it does not serve stale data indefinitely.
 
 #### References
 
@@ -66,8 +66,8 @@ These principles cover how data access is designed to avoid unnecessary latency 
 
 These principles describe how a performance or capacity target is validated through testing before it is relied on in production.
 
-1. A defined performance or capacity target must be validated through load or performance testing before it is relied on in production.
-2. Performance and load testing should be repeated as a service evolves.
+1. A defined performance or capacity target **MUST** be validated through load or performance testing before it is relied on in production.
+2. Performance and load testing **SHOULD** be repeated as a service evolves.
 
 #### References
 
@@ -78,8 +78,8 @@ These principles describe how a performance or capacity target is validated thro
 
 These principles guide how a scaling assumption is re-validated as usage grows beyond what it was designed for.
 
-1. Performance and scalability assumptions made at design time should be re-validated as usage and scale grow beyond the level they were originally defined for, rather than treated as fixed indefinitely.
-2. Sustained performance degradation, or a component approaching a known scaling limit identified earlier in design, should trigger a reassessment of the scaling approach.
+1. Performance and scalability assumptions made at design time **SHOULD** be re-validated as usage and scale grow beyond the level they were originally defined for, rather than treated as fixed indefinitely.
+2. Sustained performance degradation, or a component approaching a known scaling limit identified earlier in design, **SHOULD** trigger a reassessment of the scaling approach.
 
 #### References
 

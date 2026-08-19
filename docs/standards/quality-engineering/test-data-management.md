@@ -14,12 +14,12 @@ This standard defines requirements for how data populating a non-production envi
 
 These requirements set out how a non-production environment is populated with test data, and the safeguards that apply when a production-derived source is used.
 
-1. Synthetic or fixture data should be preferred over a de-identified or masked production extract, which should be reserved for a need synthetic data cannot satisfy, such as performance testing's realistic volume or reproducing a specific production issue.
-2. A non-production environment must be populated only from synthetic data, a de-identified or masked production extract, or a purpose-built fixture dataset.
-3. Unmodified production data must not be copied, replicated, or restored into a non-production environment.
-4. A de-identification or masking technique applied to a production-derived extract must be irreversible, preserve referential relationships, and be verified resistant to re-identification before use.
-5. Use of a de-identified or masked production extract must be authorised in advance and recorded with an expiry.
-6. Each production-derived extract populating a non-production environment must be logged, recording its source, destination, and the authorisation it was approved under.
+1. Synthetic or fixture data **SHOULD** be preferred over a de-identified or masked production extract, which **SHOULD** be reserved for a need synthetic data cannot satisfy, such as performance testing's realistic volume or reproducing a specific production issue.
+2. A non-production environment **MUST** be populated only from synthetic data, a de-identified or masked production extract, or a purpose-built fixture dataset.
+3. Unmodified production data **MUST NOT** be copied, replicated, or restored into a non-production environment.
+4. A de-identification or masking technique applied to a production-derived extract **MUST** be irreversible, preserve referential relationships, and be verified resistant to re-identification before use.
+5. Use of a de-identified or masked production extract **MUST** be authorised in advance and recorded with an expiry.
+6. Each production-derived extract populating a non-production environment **MUST** be logged, recording its source, destination, and the authorisation it was approved under.
 
 #### References
 
@@ -29,8 +29,8 @@ These requirements set out how a non-production environment is populated with te
 
 These requirements describe how a test dataset is scoped to the test it supports, rather than defaulting to whatever data is already available.
 
-1. A test dataset must be representative of the conditions relevant to the test it supports, such as realistic volume, distribution, or boundary values.
-2. A test dataset should be limited to the volume and scope a test genuinely requires, not a full-scale replica of production.
+1. A test dataset **MUST** be representative of the conditions relevant to the test it supports, such as realistic volume, distribution, or boundary values.
+2. A test dataset **SHOULD** be limited to the volume and scope a test genuinely requires, not a full-scale replica of production.
 
 #### References
 
@@ -41,11 +41,11 @@ These requirements describe how a test dataset is scoped to the test it supports
 
 These requirements address how a test dataset is provisioned and deleted without disrupting production.
 
-1. Provisioning and deletion of a test dataset must each be available to a team on demand through an automated process that is documented well enough for the team to operate and maintain it.
-2. An individual team member must not need personal access to a production environment to run this process; the access required must be held by the process itself, scoped to least privilege.
-3. Retrieval of data from a production source by this process must not degrade the production environment's performance.
-4. Masking or de-identification of a production-derived extract must be performed automatically as part of this process, rather than as a separate manual step.
-5. A test dataset derived from production must be deleted once the testing activity it supports concludes.
+1. Provisioning and deletion of a test dataset **MUST** each be available to a team on demand through an automated process that is documented well enough for the team to operate and maintain it.
+2. An individual team member **MUST NOT** need personal access to a production environment to run this process; the access required **MUST** be held by the process itself, scoped to least privilege.
+3. Retrieval of data from a production source by this process **MUST NOT** degrade the production environment's performance.
+4. Masking or de-identification of a production-derived extract **MUST** be performed automatically as part of this process, rather than as a separate manual step.
+5. A test dataset derived from production **MUST** be deleted once the testing activity it supports concludes.
 
 #### References
 
