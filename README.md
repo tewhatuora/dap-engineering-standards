@@ -1,4 +1,4 @@
-# Health New Zealand Engineering Principles & Standards
+# Health New Zealand Engineering Standards
 <!--include-start-->
 
 ## Purpose

@@ -1,7 +1,7 @@
 [project]
 name = "standards-mkdocs-trial"
 version = "0.1.0"
-description = "HNZ Engineering Standards"
+description = "Health New Zealand Engineering Standards"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [

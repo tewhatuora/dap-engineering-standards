@@ -1,4 +1,4 @@
-site_name: HealthNZ Engineering Standards
+site_name: Health New Zealand Engineering Standards
 site_url: https://notsureyet.com
 plugins:
   - include-markdown
