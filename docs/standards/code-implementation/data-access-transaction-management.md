@@ -31,7 +31,7 @@ These requirements cover how an object-relational mapper (ORM) or similar data a
 2. An eager or lazy loading strategy **MUST** be an explicit, deliberate choice for each relationship an ORM defines, not left to its default for every relationship.
 3. A lazy-loaded relationship or collection **MUST NOT** be accessed once the transaction or connection that would resolve it has ended.
 4. The actual query an ORM executes against a data store **MUST** be visible for diagnosis, not hidden behind the abstraction.
-5. An ORM's automatic schema synchronisation or migration generation feature **MUST NOT** be used to modify a data store; schema changes **MUST** still be applied through the service's migration tooling.
+5. An ORM's automatic schema synchronisation or migration generation feature **SHOULD NOT** be used to modify a data store; schema changes **SHOULD** still be applied through the service's migration tooling.
 
 #### References
 

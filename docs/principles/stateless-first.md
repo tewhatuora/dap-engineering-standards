@@ -55,7 +55,7 @@ These principles cover how a request handler becomes idempotent, or otherwise sa
 
 These principles describe how a genuinely stateful component retains state directly, provided it is durable and replicated proportionately.
 
-1. A component whose defined purpose is to hold state, such as a database, message broker, or cache, **MAY** retain state directly and is not **REQUIRED** to be stateless.
+1. A component whose defined purpose is to hold state, such as a database, message broker, or cache, **MAY** retain state directly and is not required to be stateless.
 2. State held by such a component **MUST** be made durable and replicated in a manner proportionate to the criticality of the data it holds.
 
 #### References

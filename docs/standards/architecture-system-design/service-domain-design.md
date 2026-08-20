@@ -36,7 +36,7 @@ This requirement addresses how a service's data is owned exclusively by that ser
 These requirements describe how a service is deployed and scaled independently of other services.
 
 1. A service **MUST** be deployable and scalable independently of other services, without requiring a coordinated, simultaneous release.
-2. A service's internal implementation **MAY** change freely provided its published interface's contract is preserved, so a dependent service is not **REQUIRED** to change in step.
+2. A service's internal implementation **MAY** change freely provided its published interface's contract is preserved, so a dependent service is not required to change in step.
 
 #### References
 

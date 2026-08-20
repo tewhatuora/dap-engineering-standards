@@ -14,7 +14,7 @@ This principle establishes the expectation that data is correct, complete, consi
 
 These principles set out how a data item's quality expectations are specified as part of a service's design, before implementation begins.
 
-1. The accuracy, completeness, consistency, and uniqueness a data item must exhibit **MUST** be specified as part of a service or feature's design.
+1. A data item's expected accuracy, completeness, consistency, and uniqueness **MUST** be specified as part of a service or feature's design.
 2. A service or feature that produces, transforms, or stores data **MUST NOT** proceed to implementation before these expectations are specified.
 
 ### Point-of-Entry Validation
