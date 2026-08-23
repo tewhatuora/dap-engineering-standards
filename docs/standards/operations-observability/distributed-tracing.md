@@ -51,7 +51,9 @@ These requirements guide how a sampling decision is made and followed across eve
 - [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
 - [OpenTelemetry Sampling Specification](https://opentelemetry.io/docs/specs/otel/trace/sdk/#sampling)
 
-### Illustrative Example
+## Illustrative Examples
+
+### Failed Cross-Service Request
 
 This example traces a distributed request across services that ultimately fails due to a downstream database query timeout. It demonstrates trace context propagation, span structure, and sampling in practice.
 
@@ -90,6 +92,7 @@ The health identifier itself (`ZZZ0016`) is tokenised at the collection layer, i
 The `traceparent` suffix `-01` marks this trace as kept. Even if the head-based sampler had not already selected it, the query timeout and resulting `ERROR` status independently guarantee its retention, so every downstream service still forwards `-01` and the full trace reaches the APM backend.
 
 #### 1. Patient Service: Inbound HTTP Server Span
+
 This is the root span of the distributed trace. It features no `parent_id` because Patient Service sits at the system's public trust boundary and discards the externally supplied trace context rather than propagate it, generating a fresh trace instead.
 
 ```json
@@ -124,6 +127,7 @@ This is the root span of the distributed trace. It features no `parent_id` becau
 ```
 
 #### 2. Patient Service: Outbound HTTP Client Span
+
 This span models the outbound boundary crossing from the caller's perspective. It measures the lifecycle of the network request sent to the Clinical Data Service, capturing any transit latencies. Its `span_id` matches the parent block injected into the outbound W3C header.
 
 ```json
@@ -156,6 +160,7 @@ This span models the outbound boundary crossing from the caller's perspective. I
 ```
 
 #### 3. Clinical Data Service: Inbound HTTP Server Span
+
 This server span tracks the execution from the receiver's perspective. It initializes when the Clinical Data Service extracts the incoming W3C `traceparent` header, pointing back to the caller's client span via `parent_id`.
 
 ```json
@@ -190,6 +195,7 @@ This server span tracks the execution from the receiver's perspective. It initia
 ```
 
 #### 4. Clinical Data Service to Database: Outbound DB Client Span
+
 This client span tracks the database query driver session, and is where the transaction's failure actually originates. Its `ERROR` status and exception event record the query timeout in enough detail to identify the cause, which the two upstream spans then propagate without needing to repeat. The query text itself is fully parameterized, so no patient identifier appears in this span's telemetry.
 
 ```json
