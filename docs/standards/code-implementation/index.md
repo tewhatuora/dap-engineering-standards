@@ -27,7 +27,7 @@ Choose a standard below to see its full requirements.
 
 #### Linting & Style Enforcement
 
-> A linter checks every codebase continuously, and a blocking violation **MUST** be fixed, not silently suppressed.
+> A linter checks every codebase continuously, and a blocking violation is fixed, not silently suppressed.
 
 [Read more](linting-style-enforcement.md).
 

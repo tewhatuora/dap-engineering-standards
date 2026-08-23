@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Recovery from a failed deployment **MUST** be fast and rehearsed, not improvised under pressure.
+> Recovery from a failed deployment is fast and rehearsed, not improvised under pressure.
 
 ## Objective
 

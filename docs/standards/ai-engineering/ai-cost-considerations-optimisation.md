@@ -29,7 +29,7 @@ These requirements address how model choice and reasoning effort are matched to 
 These requirements describe how custom instructions and enabled tooling are kept lean, so a request stays cheap to process.
 
 1. Organisation-wide and project-level custom instructions **MUST** be concise and **SHOULD** remain stable between requests, to benefit from provider-side caching and avoid repeated cost.
-2. Tools, extensions, or integrations not required for the current project should be disabled, as their definitions may be included in every request regardless of use.
+2. Tools, extensions, or integrations not required for the current project **SHOULD** be disabled, as their definitions may be included in every request regardless of use.
 
 ### Session & Context Management
 

@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Only vetted, organisation-provisioned AI tools **MAY** be used for engineering work.
+> Only vetted, organisation-provisioned AI tools are approved for engineering work.
 
 ## Objective
 

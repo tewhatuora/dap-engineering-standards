@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Design a service so any instance can handle any request, with required state held externally.
+> Design a service so any instance can handle any request, with necessary state held externally.
 
 ## Objective
 

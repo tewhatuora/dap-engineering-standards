@@ -2,7 +2,7 @@
 
 ## Summary
 
-> A linter checks every codebase continuously, and a blocking violation **MUST** be fixed, not silently suppressed.
+> A linter checks every codebase continuously, and a blocking violation is fixed, not silently suppressed.
 
 ## Objective
 

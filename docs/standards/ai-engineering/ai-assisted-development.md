@@ -2,7 +2,7 @@
 
 ## Summary
 
-> AI **MAY** write the code, but the submitting developer remains fully accountable for it.
+> AI can write code, but the submitting developer remains fully accountable for it.
 
 ## Objective
 

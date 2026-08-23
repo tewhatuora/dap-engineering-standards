@@ -1,7 +1,7 @@
 # Delivery & Release
 
 ## Overview
-Software changes **SHOULD** be built, deployed, and released in a controlled and repeatable way, and this section sets out the standards that ensure changes can be released safely, progressively, and reliably.
+Software changes are built, deployed, and released in a controlled and repeatable way, and this section sets out the standards that ensure changes can be released safely, progressively, and reliably.
 
 Choose a standard below to see its full requirements.
 
@@ -45,6 +45,6 @@ Choose a standard below to see its full requirements.
 
 #### Rollback Strategy
 
-> Recovery from a failed deployment **MUST** be fast and rehearsed, not improvised under pressure.
+> Recovery from a failed deployment is fast and rehearsed, not improvised under pressure.
 
 [Read more](rollback-strategy.md).

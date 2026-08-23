@@ -33,7 +33,7 @@ Choose a principle below to read its full reasoning.
 
 #### Stateless First
 
-> Design a service so any instance can handle any request, with required state held externally.
+> Design a service so any instance can handle any request, with necessary state held externally.
 
 [Read more](stateless-first.md).
 
