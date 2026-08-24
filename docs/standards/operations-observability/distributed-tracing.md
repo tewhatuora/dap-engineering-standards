@@ -29,7 +29,7 @@ These requirements set out how a trace identifier is generated and carried acros
 These requirements describe how a span is structured and populated so a trace remains accurate and usable.
 
 1. A span's start and end boundaries, and its parent-child relationship to other spans, **MUST** reflect the actual call graph of the transaction.
-2. A boundary crossing between two instrumented services, whether a call's client and server sides or a message's producing and consuming sides, **MUST** be recorded as distinct spans, not collapsed into one, so a trace distinguishes an outgoing call from its incoming handling.
+2. When a call or message crosses between two instrumented services, each side of that crossing **MUST** be recorded as its own span: the client and server for a call, or the producer and consumer for a message. A single span **MUST NOT** represent both sides, so a trace distinguishes an outgoing call from its incoming handling.
 3. A span's name **MUST** be consistent and low-cardinality; a variable value, such as a raw identifier, **MUST** be recorded as a span attribute rather than embedded in the span name.
 4. A span representing a failed operation **MUST** record that failure, including sufficient detail to identify the cause, so a trace clearly shows where within a transaction it failed.
 
@@ -81,7 +81,7 @@ sequenceDiagram
     A-->>Client: 500 Internal Server Error
 ```
 
-This end-to-end transaction generates four individual OpenTelemetry spans. The Patient Service to Clinical Data Service crossing, the only hop between two instrumented services, is modeled with a matching `CLIENT` and `SERVER` span pair; the client and database boundaries remain single-sided, since neither the client nor the database is itself an instrumented participant in the trace.
+This end-to-end transaction generates four individual OpenTelemetry spans. The Patient Service to Clinical Data Service crossing, the only hop between two instrumented services, is modelled with a matching `CLIENT` and `SERVER` span pair; the client and database boundaries remain single-sided, since neither the client nor the database is itself an instrumented participant in the trace.
 
 Because the database query timed out, the failure bubbles up the call stack, marking every span in the distributed trace with an `ERROR` status.
 
@@ -161,7 +161,7 @@ This span models the outbound boundary crossing from the caller's perspective. I
 
 #### 3. Clinical Data Service: Inbound HTTP Server Span
 
-This server span tracks the execution from the receiver's perspective. It initializes when the Clinical Data Service extracts the incoming W3C `traceparent` header, pointing back to the caller's client span via `parent_id`.
+This server span tracks the execution from the receiver's perspective. It initialises when the Clinical Data Service extracts the incoming W3C `traceparent` header, pointing back to the caller's client span via `parent_id`.
 
 ```json
 {
@@ -196,7 +196,7 @@ This server span tracks the execution from the receiver's perspective. It initia
 
 #### 4. Clinical Data Service to Database: Outbound DB Client Span
 
-This client span tracks the database query driver session, and is where the transaction's failure actually originates. Its `ERROR` status and exception event record the query timeout in enough detail to identify the cause, which the two upstream spans then propagate without needing to repeat. The query text itself is fully parameterized, so no patient identifier appears in this span's telemetry.
+This client span tracks the database query driver session, and is where the transaction's failure actually originates. Its `ERROR` status and exception event record the query timeout in enough detail to identify the cause, which the two upstream spans then propagate without needing to repeat. The query text itself is fully parameterised, so no patient identifier appears in this span's telemetry.
 
 ```json
 {

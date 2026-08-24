@@ -17,7 +17,7 @@ These requirements set out how a metric is recorded using the type that matches 
 1. A metric **MUST** be recorded using the metric type that matches its semantics, such as a monotonically increasing count as a counter, a point-in-time value as a gauge, or a distribution of values as a histogram.
 2. A value that can both increase and decrease, such as a queue depth or the number of claims currently awaiting assessment, **MUST** be recorded as a gauge rather than a counter, since a counter cannot represent a decrease.
 3. A value where the distribution of measurements matters, such as request latency or the time taken to reach a claim determination, **MUST** be recorded as a histogram rather than a gauge or counter, so a percentile remains derivable.
-4. The metric type recorded for an existing metric **MUST NOT** be changed once a dashboard, alert, or other consumer depends on it, without a coordinated migration.
+4. The metric type recorded for an existing metric **MUST NOT** be changed once a dashboard, an alert, or another consumer depends on it, without a coordinated migration.
 
 #### References
 
@@ -57,7 +57,7 @@ These requirements guide how an alert is defined and operated, so it reliably re
 2. An alert **MUST** automatically notify its responsible team once triggered, rather than depending on manual checking to discover it.
 3. An alert's severity **MUST** be proportionate to the operational or business impact of the condition it signals, distinguishing a condition requiring an immediate response from one that is informational only.
 4. An alert's threshold **SHOULD** be defined against a service level objective, where one exists, rather than an arbitrary static value.
-5. An alert **SHOULD** reference the response procedure expected of its recipient, such as a runbook, so the appropriate action does not depend on that recipient's individual knowledge.
+5. An alert **SHOULD** reference a runbook that a person or an AI tool, whether a directed assistant or an autonomous AI agent, can follow.
 6. An alert or dashboard relied on for incident response **MUST** be proven to work in advance; an alert **MUST** be tested in a non-production environment, and a dashboard **MUST** be validated.
 
 #### References
@@ -65,6 +65,7 @@ These requirements guide how an alert is defined and operated, so it reliably re
 - [Automation First](../../principles/automation-first.md)
 - [Observability by Default](../../principles/observability-by-default.md)
 - [Runbooks](runbooks.md)
+- [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)
 
 ### Alert Fatigue Governance
 
