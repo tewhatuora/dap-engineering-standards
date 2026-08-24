@@ -20,6 +20,7 @@ These requirements set out how a service's logs, metrics, and traces are collect
 #### References
 
 - [Observability by Default](../../principles/observability-by-default.md)
+- [Technology Stack Register](../architecture-system-design/technology-stack-register.md)
 
 ### Telemetry Transport
 

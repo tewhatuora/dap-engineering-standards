@@ -14,10 +14,11 @@ This standard defines the register of AI tools approved for engineering use, and
 
 These requirements set out which AI tools are approved for engineering use; an unlisted AI tool **MUST NOT** be used for organisational work.
 
-| Tool | Licence Tier | Data Classification Authorised |
-|---|---|---|
-| GitHub Copilot | Enterprise | General engineering data only (excludes PII and health data) |
-| AWS Kiro | Pro | General engineering data only (excludes PII and health data) |
+| Tool | Type | Licence Tier | Reason for Use |
+|---|---|---|---|
+| GitHub Copilot | Assistant | Enterprise | AI-Assisted Development |
+| AWS Kiro | Assistant | Pro | AI-Assisted Development |
+| Datadog Bits AI SRE | Agent | Usage-based (credits) | AI-Assisted Incident Investigation |
 
 ### Prohibition of Unapproved Tooling
 

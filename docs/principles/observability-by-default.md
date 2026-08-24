@@ -81,7 +81,7 @@ These principles describe how an operational issue is detected early and inciden
 These principles address how personal, health, or sensitive data captured in telemetry is minimised.
 
 1. Telemetry **MUST NOT** capture personal, health, or other sensitive data beyond what is strictly necessary for observability purposes.
-2. Where sensitive data cannot be avoided in telemetry, it **MUST** be masked, redacted, or otherwise protected before storage or display.
+2. Where sensitive data cannot be avoided in telemetry, it **MUST** be masked, redacted, or tokenised before it is recorded or transmitted.
 
 #### References
 

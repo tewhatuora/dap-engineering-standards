@@ -57,7 +57,7 @@ These requirements guide how a business decision or outcome recorded in log outp
 These requirements cover how personal, health, and credential data are kept out of a service's log output.
 
 1. A service **MUST NOT** log a secret, credential, access token, or cryptographic key.
-2. Personal or health data, such as a name, address, contact detail, or health identifier, **MUST NOT** be written to a service's log output unless that specific log entry needs it.
+2. Personal or health data, such as a name or health identifier, **MUST NOT** be written to a service's log output unless that specific log entry needs it.
 3. Where personal or health data cannot be omitted from a log entry, it **MUST** be masked, redacted, or tokenised before that entry is written.
 4. A masking or redaction technique applied to a log entry **MUST NOT** allow the original value to be reconstructed, whether from the masked output alone or in combination with other logged fields.
 

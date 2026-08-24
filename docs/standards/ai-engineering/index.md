@@ -31,6 +31,12 @@ Choose a standard below to see its full requirements.
 
 [Read more](ai-usage-verification-in-code-review.md).
 
+#### AI-Assisted Incident Investigation
+
+> AI-assisted incident investigation draws on standard telemetry, remains under human control, and is recorded and reviewed.
+
+[Read more](ai-assisted-incident-investigation.md).
+
 #### AI Cost Considerations & Optimisation
 
 > Match context size, model choice, and session length to what the task actually needs.

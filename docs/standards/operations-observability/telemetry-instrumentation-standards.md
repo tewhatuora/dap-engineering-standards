@@ -21,6 +21,7 @@ These requirements describe how a service adopts a common instrumentation mechan
 
 - [Interoperability by Design](../../principles/interoperability-by-design.md)
 - [Observability by Default](../../principles/observability-by-default.md)
+- [Technology Stack Register](../architecture-system-design/technology-stack-register.md)
 
 ### Common Telemetry Semantics
 
@@ -35,6 +36,17 @@ These requirements set out how a shared telemetry attribute carries the same nam
 
 - [Interoperability by Design](../../principles/interoperability-by-design.md)
 - [Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
+
+### Sensitive Telemetry Attributes
+
+These requirements guide how a metric label or span attribute avoids revealing the personal or health data it represents.
+
+1. Personal or health data, such as a name or health identifier, carried in a metric label or span attribute **MUST** be masked, redacted, or tokenised before it is recorded or transmitted.
+2. The masking, redaction, or tokenisation applied **MUST NOT** allow the original value to be reconstructed, whether from the masked output alone or in combination with other telemetry attributes.
+
+#### References
+
+- [Privacy by Design](../../principles/privacy-by-design.md)
 
 ### Breaking Telemetry Changes
 

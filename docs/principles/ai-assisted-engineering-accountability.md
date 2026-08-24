@@ -28,6 +28,10 @@ These principles set out how the directing engineer remains accountable for AI-a
 1. The engineer directing AI-assisted work **MUST** remain fully accountable for its correctness, quality, security, and compliance, regardless of how much of the work an AI tool produced.
 2. Accountability **MUST NOT** be limited to source code; it extends to any engineering artifact produced with AI assistance, including infrastructure definitions, tests, data pipelines, and documentation.
 
+#### References
+
+- [AI-Assisted Incident Investigation](../standards/ai-engineering/ai-assisted-incident-investigation.md)
+
 ### Understanding as a Precondition for Adoption
 
 These principles describe how an engineer's understanding of AI-assisted output becomes a precondition for adopting it.
@@ -39,6 +43,7 @@ These principles describe how an engineer's understanding of AI-assisted output 
 #### References
 
 - [AI Usage & Verification in Code Review](../standards/ai-engineering/ai-usage-verification-in-code-review.md)
+- [AI-Assisted Incident Investigation](../standards/ai-engineering/ai-assisted-incident-investigation.md)
 
 ### Approved AI Tooling
 

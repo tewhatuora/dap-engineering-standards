@@ -130,6 +130,7 @@ nav:
       - Prompt Data Handling: standards/ai-engineering/prompt-data-handling.md
       - AI-Assisted Development: standards/ai-engineering/ai-assisted-development.md
       - AI Usage & Verification in Code Review: standards/ai-engineering/ai-usage-verification-in-code-review.md
+      - AI-Assisted Incident Investigation: standards/ai-engineering/ai-assisted-incident-investigation.md
       - AI Cost Considerations & Optimisation: standards/ai-engineering/ai-cost-considerations-optimisation.md
     - Developer Experience:
       - standards/developer-experience/index.md
