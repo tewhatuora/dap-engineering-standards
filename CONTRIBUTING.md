@@ -2,6 +2,10 @@
 
 Thank you for helping maintain Health New Zealand's engineering principles and standards.
 
+## Scope
+
+A principle or standard **MUST** only cover what its [target audience](README.md#target-audience) should consider for the topic it addresses. Content describing Health New Zealand's internal governance or process **MUST NOT** be included, even if it relates to that topic; if it needs to be documented, it belongs elsewhere, not in this repository.
+
 ## Proposing Changes
 
 New principles or standards, and changes to existing ones, **MUST** be proposed via merge request.
