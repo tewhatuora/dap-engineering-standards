@@ -2,7 +2,7 @@
 
 ## Summary
 
-> A service's disaster recovery strategy is selected deliberately for its defined RPO and RTO, then validated periodically.
+> Design and validate recovery against defined objectives.
 
 ## Objective
 

@@ -2,7 +2,7 @@
 
 ## Summary
 
-> A service's log output is structured, traceable, and free of sensitive data or unnecessary noise.
+> A service's log output is structured, traceable, and free of sensitive data or unnecessary detail.
 
 ## Objective
 

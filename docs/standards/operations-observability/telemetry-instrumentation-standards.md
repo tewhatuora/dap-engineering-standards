@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Telemetry stays consistent across services, safe to introduce, and delivered alongside the change it observes.
+> Telemetry remains consistent across services, safe to introduce, and delivered alongside the change it observes.
 
 ## Objective
 

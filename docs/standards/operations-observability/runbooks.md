@@ -2,7 +2,7 @@
 
 ## Summary
 
-> A runbook documents the steps to resolve a known failure or carry out a high-risk procedure.
+> A runbook documents and validates the steps to resolve known failures and perform high-risk procedures.
 
 ## Objective
 

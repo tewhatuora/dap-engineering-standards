@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Propagate trace context end-to-end, structure every span accurately, and sample deliberately.
+> Propagate trace context end-to-end, structure spans accurately, and sample deliberately.
 
 ## Objective
 

@@ -2,7 +2,7 @@
 
 ## Summary
 
-> A service's telemetry is shipped to one centralised observability platform that remains available independent of the services it monitors.
+> Centralise telemetry, preserve portability, and engineer for resilient observability.
 
 ## Objective
 

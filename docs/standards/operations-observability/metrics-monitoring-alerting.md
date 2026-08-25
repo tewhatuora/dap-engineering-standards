@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Keep a service's metrics visible, correctly typed, and bounded, with alerts that stay automated and actionable.
+> Keep a service's metrics accurate, visible, and bounded, with alerts that remain automated and actionable.
 
 ## Objective
 
