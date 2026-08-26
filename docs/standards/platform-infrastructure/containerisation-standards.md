@@ -4,10 +4,6 @@
 
 > A container image is kept minimal, current, and operated with least privilege by default.
 
-## Objective
-
-This standard defines requirements for how a service is packaged and run as a container. It keeps a container image trustworthy and current, so it can be operated safely without needing independent inspection.
-
 ## Standards
 
 ### Minimal Image Footprint

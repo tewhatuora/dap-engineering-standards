@@ -4,10 +4,6 @@
 
 > Apply automated linting consistently, with blocking violations resolved through the normal engineering process.
 
-## Objective
-
-This standard defines requirements for checking a codebase against its adopted linting ruleset as a continuous, automated part of engineering work. It ensures a deviation is caught early and resolved through a reviewed process.
-
 ## Standards
 
 ### Linting Coverage

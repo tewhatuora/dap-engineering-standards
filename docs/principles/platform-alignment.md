@@ -4,10 +4,6 @@
 
 > Build on the organisation's shared platform by default, and justify any deviation from it.
 
-## Objective
-
-This principle establishes the organisation's shared platforms and tooling as the default foundation for delivering software. It keeps engineering effort focused on adopting and improving shared platform capability, reducing duplicated infrastructure effort and fragmented operational practice across teams.
-
 ## Principles
 
 ### Shared Platforms as the Default

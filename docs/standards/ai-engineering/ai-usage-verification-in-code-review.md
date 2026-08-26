@@ -4,10 +4,6 @@
 
 > Disclose AI involvement, and give it exactly the same scrutiny as any other change.
 
-## Objective
-
-This standard defines requirements governing the intersection of AI tools and the code review process: the verification an author must perform on AI-generated or AI-assisted code before submitting it for review, and the conditions under which reviewers may use AI tools to assist their own review activity. It ensures AI involvement does not reduce the rigor, accountability, or reliability of review.
-
 ## Standards
 
 ### Disclosure of AI-Assisted Contributions

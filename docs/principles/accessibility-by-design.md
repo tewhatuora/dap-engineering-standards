@@ -4,10 +4,6 @@
 
 > Design for assistive technology from the earliest stage, and verify conformance through testing, not assumption.
 
-## Objective
-
-This principle establishes the expectation that software is designed and built to be usable by people with a wide range of abilities, including those relying on assistive technologies. It keeps accessibility requirements measurable and verified through testing, so a barrier is remediated as a routine part of the engineering lifecycle.
-
 ## Principles
 
 ### Early Accessibility Requirements

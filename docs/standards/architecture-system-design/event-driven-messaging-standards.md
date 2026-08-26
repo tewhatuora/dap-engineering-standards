@@ -4,10 +4,6 @@
 
 > Every event has a defined contract and delivery guarantee; every consumer safely tolerates duplicates.
 
-## Objective
-
-This standard defines requirements for how an asynchronous event or message exchanged between services is governed by an explicit contract, delivery guarantee, access control, and failure-handling behaviour. It keeps asynchronous communication decoupled, reliable, and traceable, so a producer and its consumers can evolve and scale independently without silent data loss, duplication, or unbounded coupling.
-
 ## Standards
 
 ### Synchronous vs Event-Driven Communication

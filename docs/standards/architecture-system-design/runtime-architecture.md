@@ -4,10 +4,6 @@
 
 > Choose a workload's packaging, runtime model, and deployment location deliberately, based on its requirements.
 
-## Objective
-
-This standard defines requirements for how a workload's packaging, runtime model, and deployment location are each chosen deliberately. It gives concrete, workload-specific criteria for each decision, so the resulting choice remains fit for purpose as the workload evolves.
-
 ## Standards
 
 ### Runtime Model Selection

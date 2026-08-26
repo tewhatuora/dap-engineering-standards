@@ -4,10 +4,6 @@
 
 > Version-controlled code is the source of truth; manual changes to running systems are drift to fix.
 
-## Objective
-
-This principle establishes version-controlled, declarative code as the authoritative definition for application and service code, infrastructure, environments, configuration, and other engineering artifacts traditionally managed through manual, ad hoc action. It reduces reliance on unreviewed changes made directly to a running system and makes engineering state reproducible, reviewable, and traceable.
-
 ## Principles
 
 ### Version-Controlled Source Code

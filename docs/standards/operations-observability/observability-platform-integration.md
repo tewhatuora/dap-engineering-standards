@@ -4,10 +4,6 @@
 
 > Centralise telemetry, preserve portability, and engineer for resilient observability.
 
-## Objective
-
-This standard defines requirements for how a service's telemetry is integrated with the organisation's observability platform. That platform is itself a critical dependency every service relies on for diagnosis, and is held to the same engineering standard as any other critical dependency.
-
 ## Standards
 
 ### Centralised Telemetry Ingestion

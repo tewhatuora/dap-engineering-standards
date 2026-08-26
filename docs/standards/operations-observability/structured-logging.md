@@ -4,10 +4,6 @@
 
 > A service's log output is structured, traceable, and free of sensitive data or unnecessary detail.
 
-## Objective
-
-This standard defines requirements for the log output a service produces. It keeps that output consistent, safe, and usable across services, so operational behaviour can be diagnosed without relying on ad hoc, service-specific interpretation.
-
 ## Standards
 
 ### Structured Format

@@ -4,10 +4,6 @@
 
 > AI-assisted incident investigation uses approved tools and standard telemetry, with human verification and traceable outcomes.
 
-## Objective
-
-This standard defines requirements for using an AI tool, whether a directed assistant or an autonomous AI agent, to investigate a production alert or incident from a service's telemetry. It ensures AI-assisted incident investigation is held to the same accountability requirements as any other AI use, while helping a team resolve an incident faster.
-
 ## Standards
 
 ### AI Tool Approval

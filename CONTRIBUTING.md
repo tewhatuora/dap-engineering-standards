@@ -15,7 +15,6 @@ New principles or standards, and changes to existing ones, **MUST** be proposed 
 Each principle and standard **MUST** follow this structure:
 
 - **Summary**: one blockquoted sentence capturing the core idea, directly under the title.
-- **Objective**: the purpose of the principle or standard and the engineering outcome it supports.
 - **Principles** or **Standards**, matching the topic's type: normative requirements grouped into logical subsections.
 - **References**: relative Markdown links to related principles and standards, listed at the end of the subsection rather than cited inline.
 

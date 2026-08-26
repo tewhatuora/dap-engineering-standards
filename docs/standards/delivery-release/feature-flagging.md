@@ -4,10 +4,6 @@
 
 > Decouple deploying code from releasing it.
 
-## Objective
-
-This standard defines requirements for how a feature flag governs the activation of a capability independently of its deployment to production. It keeps a flag's state controlled and short-lived, so a capability can be rolled out, disabled, or retired without introducing uncontrolled risk.
-
 ## Standards
 
 ### Flag Declaration & Ownership

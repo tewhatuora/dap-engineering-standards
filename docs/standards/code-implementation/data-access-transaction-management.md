@@ -4,10 +4,6 @@
 
 > Centralise data access behind a defined layer, with safe queries and explicit, bounded transactions.
 
-## Objective
-
-This standard defines requirements for how a service's code interacts with its data store, from constructing and scoping a query or transaction to managing the connections and credentials that interaction depends on. It keeps data access safe, efficient, and observable, and keeps data consistent under concurrent access and transient failure.
-
 ## Standards
 
 ### Data Access Layer Abstraction

@@ -4,10 +4,6 @@
 
 > Automate every repeatable task, and reserve human judgement for decisions automation cannot make.
 
-## Objective
-
-This principle establishes automation as the default approach for repeatable engineering and operational work. It reduces reliance on manual execution and keeps engineering effort focused on the design, judgement, and improvement work automation cannot replace.
-
 ## Principles
 
 ### Delivery Pipeline Automation

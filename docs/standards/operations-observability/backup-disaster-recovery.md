@@ -4,10 +4,6 @@
 
 > Design and validate recovery against defined objectives.
 
-## Objective
-
-This standard defines requirements for how a service's data and configuration are backed up, and how a service recovers from a disaster affecting its normal operation. It keeps a service's actual recovery capability aligned with its defined recovery point objectives (RPO) and recovery time objectives (RTO), so data loss and downtime stay within what the service can sustain.
-
 ## Standards
 
 ### Recovery Strategy Selection

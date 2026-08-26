@@ -4,10 +4,6 @@
 
 > Recovery from a failed deployment is fast and rehearsed, not improvised under pressure.
 
-## Objective
-
-This standard defines requirements for how a deployment that has caused a defect, regression, or an incident in production is reverted to a previously verified, working version. It keeps a rollback compatible and predictable, so a service recovers quickly when reverting proves the safest response to an incident.
-
 ## Standards
 
 ### Rollback Triggers

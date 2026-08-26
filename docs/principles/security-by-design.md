@@ -4,10 +4,6 @@
 
 > Build in least privilege and secure defaults from the outset, and verify security controls through testing.
 
-## Objective
-
-This principle establishes the expectation that protection against unauthorised access, misuse, and compromise is built into systems and services from the outset. It keeps attack surface reduced, the impact of a compromise limited, and security controls verifiable throughout the engineering lifecycle.
-
 ## Principles
 
 ### Early Threat Modelling

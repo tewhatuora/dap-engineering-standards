@@ -4,10 +4,6 @@
 
 > Design every component to be easily verified through automated testing.
 
-## Objective
-
-This principle establishes the expectation that systems and code are designed to be easily and reliably verified through automated testing. It keeps a system's correctness verifiable throughout its lifecycle, through an architectural and implementation choice such as a substitutable dependency or deterministic behaviour.
-
 ## Principles
 
 ### Early Testability Decisions

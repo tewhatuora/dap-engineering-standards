@@ -4,10 +4,6 @@
 
 > Define a service's performance and capacity targets at design time, and validate them through testing.
 
-## Objective
-
-This principle establishes the expectation that systems are designed with defined performance targets and an appropriate scaling approach. It keeps a scaling constraint identified and a service's performance and capacity targets validated against expected demand.
-
 ## Principles
 
 ### Performance & Scaling Decisions

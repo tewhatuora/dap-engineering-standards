@@ -4,9 +4,7 @@
 
 > Design and version every API contract-first, so a breaking change never surprises an existing consumer.
 
-## Objective
-
-This standard defines requirements for designing, versioning, securing, and operating an API consistently across the organisation, regardless of the protocol or specification style used. It keeps an API predictable, well-documented, and stable, so a consumer can integrate with confidence and a provider can evolve it without breaking existing consumers.
+## External Standards
 
 Developers and vendors delivering APIs for the organisation **SHOULD** also consult the [Health New Zealand | Te Whatu Ora API Standards](https://apistandards.digital.health.nz) for detailed, protocol-specific design and implementation guidance alongside the requirements set out here.
 

@@ -4,10 +4,6 @@
 
 > Validate a service against its defined performance and capacity targets under realistic, representative demand.
 
-## Objective
-
-This standard defines requirements for verifying that a service meets its defined performance and capacity targets under realistic and adverse demand. It keeps testing representative and repeatable, so a capacity constraint or performance regression surfaces while it remains cheap to address.
-
 ## Standards
 
 ### Performance Test Types

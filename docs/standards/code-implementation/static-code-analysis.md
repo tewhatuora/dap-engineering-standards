@@ -4,10 +4,6 @@
 
 > Static analysis continuously checks code for defects, security weaknesses, and maintainability issues, beyond style and formatting.
 
-## Objective
-
-This standard defines requirements for automated inspection of source code for defects, security weaknesses, and maintainability decline as a continuous part of engineering work. It keeps each visible and addressed before it materially affects the codebase.
-
 ## Standards
 
 ### Static Analysis Coverage

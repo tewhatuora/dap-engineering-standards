@@ -4,10 +4,6 @@
 
 > Only approved, organisation-provisioned AI tools may be used for engineering work.
 
-## Objective
-
-This standard defines the register of AI tools approved for engineering use, and the licensing and provisioning conditions under which they must be used. Engineering use of AI tools is limited to vetted, organisation-provisioned tooling, reducing the data, security, and compliance exposure created by unsanctioned AI use.
-
 ## Standards
 
 ### Approved Tooling Register

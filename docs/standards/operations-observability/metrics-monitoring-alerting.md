@@ -4,10 +4,6 @@
 
 > Keep a service's metrics accurate, visible, and bounded, with alerts that remain automated and actionable.
 
-## Objective
-
-This standard defines requirements for a service's metrics and the monitoring and alerting built on them. It keeps a degradation in a service's health or business impact visible and actionable, so a team can detect and respond to it before it materially affects users or the business relying on it.
-
 ## Standards
 
 ### Metric Types

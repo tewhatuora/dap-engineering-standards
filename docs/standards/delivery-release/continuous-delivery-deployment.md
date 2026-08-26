@@ -4,10 +4,6 @@
 
 > Make deployment routine, automated, and low-risk, not a rare, high-stakes event.
 
-## Objective
-
-This standard defines requirements for how a change that has already passed its required build, test, static analysis, and security scanning validation is deployed to an environment through the delivery pipeline. It keeps deployment consistent, controlled, and reversible across every environment, so a change reaches production reliably and can be withdrawn quickly if it causes an incident.
-
 ## Standards
 
 ### Automated, Repeatable Deployment Pipeline

@@ -4,10 +4,6 @@
 
 > Telemetry remains consistent across services, safe to introduce, and delivered alongside the change it observes.
 
-## Objective
-
-This standard defines requirements for how a service is instrumented to produce telemetry. It keeps that telemetry consistent and interoperable across services, and its instrumentation safe to introduce and delivered alongside the change it observes.
-
 ## Standards
 
 ### Standardised Instrumentation

@@ -4,10 +4,6 @@
 
 > Propagate trace context end-to-end, structure spans accurately, and sample deliberately.
 
-## Objective
-
-This standard defines requirements for how a transaction is traced as it moves across service boundaries. It keeps a distributed transaction correlatable end-to-end, so its path and behaviour can be reconstructed across every service it passes through.
-
 ## Standards
 
 ### Trace Context Propagation

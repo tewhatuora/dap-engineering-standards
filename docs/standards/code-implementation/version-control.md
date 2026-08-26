@@ -4,10 +4,6 @@
 
 > Keep every codebase in one authoritative, traceable repository, and keep secrets out of its history.
 
-## Objective
-
-This standard defines requirements for how a codebase's source code and history are held in one authoritative, version-controlled repository, kept clean, accurate, and free of sensitive or extraneous content. It keeps a codebase's current state and its complete history of change verifiable and attributable, so every change can be traced to the person or process responsible for it.
-
 ## Standards
 
 ### Mandatory, Authoritative Repository

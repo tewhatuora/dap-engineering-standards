@@ -4,13 +4,9 @@
 
 > Exchange health data using recognised interoperability standards and shared clinical terminology, not proprietary formats.
 
-## Objective
-
-This standard defines requirements for how health data is exchanged using recognised, standards-based formats and terminology across the health sector. It keeps clinical and administrative information moving safely and consistently between systems, reducing the risk of misinterpreted or unusable data at the point of exchange.
+## External Standards
 
 Developers and vendors implementing health data exchange **SHOULD** also consult the [Health New Zealand | Te Whatu Ora API Standards](https://apistandards.digital.health.nz) for detailed, protocol-specific design and implementation guidance alongside the requirements set out here.
-
-Clinical terminology and code sets **SHOULD** be sourced from the [NZ Health Terminology Service (NZHTS)](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/data-and-standards/health-information-standards/nz-health-terminology-service-nzhts), the organisation's authoritative source for this content.
 
 ## Standards
 

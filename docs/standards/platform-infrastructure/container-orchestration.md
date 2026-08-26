@@ -4,10 +4,6 @@
 
 > A containerised workload is right-sized, scales automatically with demand, and remains isolated from other workloads.
 
-## Objective
-
-This standard defines requirements for how a containerised workload is deployed, scaled, and operated on an orchestration platform. It keeps a workload's resource use right-sized, its capacity elastic to demand, and its instances isolated from other workloads by default, so it runs efficiently without manual oversight.
-
 ## Standards
 
 ### Declarative Configuration
@@ -15,7 +11,7 @@ This standard defines requirements for how a containerised workload is deployed,
 These requirements set out how a workload's orchestration configuration is defined as code and remains the authoritative source for what is running.
 
 1. A workload's orchestration configuration, such as its deployment, scaling, and networking definitions, **MUST** be held as version-controlled, declarative code rather than created or modified manually against a running cluster.
-2. A change made directly to a workload's running state, such as one made to resolve an incident, **MUST** be incorporated into its version-controlled configuration before that configuration's next deployment.
+2. A change made directly to a workload's running state, such as one made to resolve an incident, **MUST** be incorporated into its version-controlled configuration before that workload's next deployment.
 
 #### References
 

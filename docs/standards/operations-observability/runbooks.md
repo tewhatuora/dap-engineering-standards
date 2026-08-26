@@ -4,10 +4,6 @@
 
 > A runbook documents and validates the steps to resolve known failures and perform high-risk procedures.
 
-## Objective
-
-This standard defines requirements for the runbooks used to respond to a known failure mode and to carry out a high-risk or recurring operational procedure. These requirements keep a runbook from depending on informal or undocumented knowledge, so it can be followed consistently by any team member or AI tool.
-
 ## Standards
 
 ### Runbook Coverage

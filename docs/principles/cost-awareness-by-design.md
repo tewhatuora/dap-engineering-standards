@@ -4,10 +4,6 @@
 
 > Weigh cost alongside reliability, performance, and security, keeping spend proportionate to the value it delivers.
 
-## Objective
-
-This principle treats cost as a design-time consideration, weighed alongside reliability, performance, and security. It keeps spending deliberate and proportionate, so it remains traceable to the value delivered.
-
 ## Principles
 
 ### Cost as a Design Constraint

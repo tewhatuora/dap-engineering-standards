@@ -4,10 +4,6 @@
 
 > Build once, and run that same artifact everywhere.
 
-## Objective
-
-This standard defines requirements for how a service's source code is built into a deployable artifact and how that artifact is managed throughout its lifecycle. It keeps every artifact traceable to the source and build that produced it, and unchanged from the point it is built.
-
 ## Standards
 
 ### Automated, Traceable Builds

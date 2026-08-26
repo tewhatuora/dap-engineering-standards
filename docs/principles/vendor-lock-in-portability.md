@@ -4,10 +4,6 @@
 
 > Choose vendor dependencies deliberately, and preserve the ability to change.
 
-## Objective
-
-This principle establishes the expectation that dependence on a specific vendor, platform, or proprietary technology is a deliberate, risk-assessed engineering decision. It keeps a proportionate, practical ability to migrate or operate without a given vendor, so a vendor's pricing, availability, or strategic changes do not leave a system unable to adapt.
-
 ## Principles
 
 ### Lock-in Risk Evaluation

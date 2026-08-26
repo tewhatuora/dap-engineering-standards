@@ -4,10 +4,6 @@
 
 > Verify one unit of code in isolation, with external dependencies replaced by controlled test doubles.
 
-## Objective
-
-This standard defines requirements for verifying an individual unit of code's behaviour in isolation from its external dependencies. It keeps a unit test suite fast, reliable, and properly maintained as code changes over time.
-
 ## Standards
 
 ### Scope & Boundaries of a Unit Test

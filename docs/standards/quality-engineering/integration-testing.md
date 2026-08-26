@@ -4,10 +4,6 @@
 
 > Verify that components work correctly together in a fresh, isolated, and repeatable environment.
 
-## Objective
-
-This standard defines requirements for verifying that components, services, and systems function correctly together, including their interaction with a data store, message channel, or external dependency. It keeps this verification automated and repeatable, so components can be changed with confidence that they continue to integrate correctly.
-
 ## Standards
 
 ### Verification Scope

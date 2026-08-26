@@ -4,10 +4,6 @@
 
 > Hold AI-assisted work to the same standards as any other, with human accountability and understanding.
 
-## Objective
-
-This principle establishes that engineering work produced or materially assisted by an AI tool is held to the same principles and standards, and the same human accountability, as work produced without AI assistance. It ensures AI adoption accelerates engineering delivery without diminishing responsibility or understanding for the resulting work.
-
 ## Principles
 
 ### Authorship-Neutral Compliance

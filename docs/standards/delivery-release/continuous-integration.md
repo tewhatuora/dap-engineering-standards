@@ -4,10 +4,6 @@
 
 > Build, test, and scan every change before it merges, catching security and quality issues early.
 
-## Objective
-
-This standard defines requirements for how a change is automatically built, tested, scanned for security and quality issues, and integrated into a shared branch through the delivery pipeline. It keeps the shared branch continuously in a working, verified state, so a defect or security weakness is found and fixed before it compounds into a costlier failure.
-
 ## Standards
 
 ### Automated Build & Test Execution

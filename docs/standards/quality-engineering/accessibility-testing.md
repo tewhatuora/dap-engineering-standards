@@ -4,10 +4,6 @@
 
 > Verify accessibility with automated scanning and real assistive technology, across every interface including internal ones.
 
-## Objective
-
-This standard defines requirements for verifying that a service's user interface conforms to its adopted accessibility standard. It keeps an accessibility barrier identified and addressed before it reaches production.
-
 ## Standards
 
 ### Automated Scanning in Delivery Pipelines

@@ -4,10 +4,6 @@
 
 > Externalise a setting that varies by environment, and never let a secret live in configuration.
 
-## Objective
-
-This standard defines requirements for how a service's configurable settings are externalised from its source code, validated, and changed, while keeping a secret or credential out of configuration entirely. It keeps a service's behaviour adjustable across environments without a code change, and keeps every setting's value and change traceable.
-
 ## Standards
 
 ### Externalised, Non-Hardcoded Configuration

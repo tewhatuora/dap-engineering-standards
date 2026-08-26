@@ -4,10 +4,6 @@
 
 > Expose what a service shares through a documented interface, using open standards and preserving compatibility as it evolves.
 
-## Objective
-
-This principle establishes the expectation that systems and services are designed to exchange data and functionality with other systems predictably and consistently. It keeps an interface well-defined and compatible with open standards, so systems can be integrated, extended, and evolved without accumulating brittle or one-off integrations.
-
 ## Principles
 
 ### Early Integration Needs

@@ -4,10 +4,6 @@
 
 > Select every dependency and runtime deliberately, source it only through governed channels, and keep it current.
 
-## Objective
-
-This standard defines requirements for how a service's dependencies and runtimes are selected, sourced, and kept current throughout their lifecycle. It keeps the risk a dependency or runtime carries visible and actively managed for as long as a service relies on it.
-
 ## Standards
 
 ### Explicit Dependency Declaration
