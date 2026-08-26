@@ -1,7 +1,7 @@
 # Quality Engineering
 
 ## Overview
-A defect is cheaper to fix before a change reaches production than afterwards, and this section sets out the standards that ensure a change is correct, performant, secure, and accessible.
+Finding defects early makes them cheaper to address before they reach production. This section defines the engineering standards for verifying that changes are correct, performant, secure, and accessible.
 
 Choose a standard below to see its full requirements.
 
@@ -9,19 +9,19 @@ Choose a standard below to see its full requirements.
 
 #### Unit Testing
 
-> Verify one unit of code in isolation, with every external dependency replaced by a test double.
+> Verify one unit of code in isolation, with external dependencies replaced by controlled test doubles.
 
 [Read more](unit-testing.md).
 
 #### Integration Testing
 
-> Verify that components work correctly together, in a fresh, isolated environment created for each test run.
+> Verify that components work correctly together in a fresh, isolated, and repeatable environment.
 
 [Read more](integration-testing.md).
 
 #### Test Data Management
 
-> Populate a non-production environment only with synthetic, de-identified, or purpose-built data, never raw production data.
+> Populate non-production environments with synthetic, de-identified, or purpose-built data, never unmodified production data.
 
 [Read more](test-data-management.md).
 
@@ -33,12 +33,12 @@ Choose a standard below to see its full requirements.
 
 #### Application Security Testing
 
-> Catch each class of vulnerability using the technique suited to detect it, and verify every finding's fix.
+> Catch each class of vulnerability using the technique best suited to detect it, and verify every finding's fix.
 
 [Read more](application-security-testing.md).
 
 #### Accessibility Testing
 
-> Verify accessibility with both automated scanning and real assistive technology, across every interface, including internal ones.
+> Verify accessibility with automated scanning and real assistive technology, across every interface including internal ones.
 
 [Read more](accessibility-testing.md).

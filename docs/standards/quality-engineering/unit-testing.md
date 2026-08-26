@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Verify one unit of code in isolation, with every external dependency replaced by a test double.
+> Verify one unit of code in isolation, with external dependencies replaced by controlled test doubles.
 
 ## Objective
 

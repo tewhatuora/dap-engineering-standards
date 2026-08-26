@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Verify accessibility with both automated scanning and real assistive technology, across every interface, including internal ones.
+> Verify accessibility with automated scanning and real assistive technology, across every interface including internal ones.
 
 ## Objective
 

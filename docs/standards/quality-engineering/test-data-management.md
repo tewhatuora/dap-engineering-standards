@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Populate a non-production environment only with synthetic, de-identified, or purpose-built data, never raw production data.
+> Populate non-production environments with synthetic, de-identified, or purpose-built data, never unmodified production data.
 
 ## Objective
 

@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Verify that components work correctly together, in a fresh, isolated environment created for each test run.
+> Verify that components work correctly together in a fresh, isolated, and repeatable environment.
 
 ## Objective
 

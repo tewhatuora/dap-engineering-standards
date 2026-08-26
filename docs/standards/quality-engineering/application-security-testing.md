@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Catch each class of vulnerability using the technique suited to detect it, and verify every finding's fix.
+> Catch each class of vulnerability using the technique best suited to detect it, and verify every finding's fix.
 
 ## Objective
 
