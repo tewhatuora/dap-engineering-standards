@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Define every schema or data change as version-controlled migration code, never as an ad hoc query.
+> Define every schema or data change as version-controlled migration code, applied consistently through dedicated tooling.
 
 ## Objective
 

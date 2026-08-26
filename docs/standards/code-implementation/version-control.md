@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Hold all code in one authoritative, attributable repository, and never let a secret enter its history.
+> Keep every codebase in one authoritative, traceable repository, and keep secrets out of its history.
 
 ## Objective
 

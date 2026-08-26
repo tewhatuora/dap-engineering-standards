@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Static analysis continuously inspects code for defects, security weaknesses, and maintainability decline, not just style.
+> Static analysis continuously checks code for defects, security weaknesses, and maintainability issues, beyond style and formatting.
 
 ## Objective
 

@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Every repository follows one defined branching model, with short-lived branches merged only through reviewed changes.
+> Every repository follows one defined branching model, with short-lived branches merged through reviewed and verified changes.
 
 ## Objective
 

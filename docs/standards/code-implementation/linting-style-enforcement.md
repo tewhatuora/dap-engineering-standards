@@ -2,7 +2,7 @@
 
 ## Summary
 
-> A linter checks every codebase continuously, and a blocking violation is fixed, not silently suppressed.
+> Apply automated linting consistently, with blocking violations resolved through the normal engineering process.
 
 ## Objective
 

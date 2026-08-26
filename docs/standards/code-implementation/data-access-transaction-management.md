@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Access a data store only through a defined layer, using parameterised queries and bounded, explicit transactions.
+> Centralise data access behind a defined layer, with safe queries and explicit, bounded transactions.
 
 ## Objective
 

@@ -1,7 +1,7 @@
 # Code Implementation
 
 ## Overview
-The way software is implemented affects how consistently it can be understood, reviewed, maintained, and changed, and this section sets out the standards that ensure implementation remains consistent, controlled, and secure.
+How software is implemented affects how easily it can be understood, reviewed, maintained, and changed. This section defines the engineering standards for consistent, maintainable, traceable, and secure implementation.
 
 Choose a standard below to see its full requirements.
 
@@ -9,13 +9,13 @@ Choose a standard below to see its full requirements.
 
 #### Version Control
 
-> Hold all code in one authoritative, attributable repository, and never let a secret enter its history.
+> Keep every codebase in one authoritative, traceable repository, and keep secrets out of its history.
 
 [Read more](version-control.md).
 
 #### Branching Strategy
 
-> Every repository follows one defined branching model, with short-lived branches merged only through reviewed changes.
+> Every repository follows one defined branching model, with short-lived branches merged through reviewed and verified changes.
 
 [Read more](branching-strategy.md).
 
@@ -27,13 +27,13 @@ Choose a standard below to see its full requirements.
 
 #### Linting & Style Enforcement
 
-> A linter checks every codebase continuously, and a blocking violation is fixed, not silently suppressed.
+> Apply automated linting consistently, with blocking violations resolved through the normal engineering process.
 
 [Read more](linting-style-enforcement.md).
 
 #### Static Code Analysis
 
-> Static analysis continuously inspects code for defects, security weaknesses, and maintainability decline, not just style.
+> Static analysis continuously checks code for defects, security weaknesses, and maintainability issues, beyond style and formatting.
 
 [Read more](static-code-analysis.md).
 
@@ -57,12 +57,12 @@ Choose a standard below to see its full requirements.
 
 #### Data Access & Transaction Management
 
-> Access a data store only through a defined layer, using parameterised queries and bounded, explicit transactions.
+> Centralise data access behind a defined layer, with safe queries and explicit, bounded transactions.
 
 [Read more](data-access-transaction-management.md).
 
 #### Database Migration Tooling
 
-> Define every schema or data change as version-controlled migration code, never as an ad hoc query.
+> Define every schema or data change as version-controlled migration code, applied consistently through dedicated tooling.
 
 [Read more](database-migration-tooling.md).
