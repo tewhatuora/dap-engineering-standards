@@ -2,7 +2,7 @@
 
 ## Summary
 
-> A schema is owned by exactly one service, and changed only through version-controlled, backward-compatible migrations.
+> A schema is owned by exactly one service, and evolved through version-controlled, backward-compatible changes.
 
 ## Objective
 

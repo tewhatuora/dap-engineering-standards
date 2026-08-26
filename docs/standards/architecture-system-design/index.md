@@ -1,7 +1,7 @@
 # Architecture & System Design
 
 ## Overview
-System design and technology choices have a lasting impact on how a system can be operated, modified, and integrated with other systems, and this section sets out the standards that ensure those decisions are made deliberately and consistently.
+System design and technology choices have a lasting impact on how a system can be operated, modified, and integrated with other systems. This section defines the engineering standards for making those decisions deliberately and consistently.
 
 Choose a standard below to see its full requirements.
 
@@ -15,7 +15,7 @@ Choose a standard below to see its full requirements.
 
 #### Schema Design & Evolution
 
-> A schema is owned by exactly one service, and changed only through version-controlled, backward-compatible migrations.
+> A schema is owned by exactly one service, and evolved through version-controlled, backward-compatible changes.
 
 [Read more](schema-design-evolution.md).
 
@@ -27,25 +27,25 @@ Choose a standard below to see its full requirements.
 
 #### Event-Driven Messaging Standards
 
-> Every event has a documented schema and a defined delivery guarantee; every consumer tolerates duplicates safely.
+> Every event has a defined contract and delivery guarantee; every consumer safely tolerates duplicates.
 
 [Read more](event-driven-messaging-standards.md).
 
 #### Health Data Interoperability
 
-> Exchange health data through recognised standards such as FHIR and shared clinical terminology, not a proprietary format.
+> Exchange health data using recognised interoperability standards and shared clinical terminology, not proprietary formats.
 
 [Read more](health-data-interoperability.md).
 
 #### Runtime Architecture
 
-> Choose a workload's packaging, runtime model, and deployment location deliberately, not by default.
+> Choose a workload's packaging, runtime model, and deployment location deliberately, based on its requirements.
 
 [Read more](runtime-architecture.md).
 
 #### Technology Stack Governance
 
-> Every technology is classified as approved, trial, or deprecated, and reviewed through governance before it is adopted.
+> Every technology is classified as approved, trial, or deprecated, with new technologies subject to governance before adoption.
 
 [Read more](technology-stack-governance.md).
 

@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Every technology is classified as approved, trial, or deprecated, and reviewed through governance before it is adopted.
+> Every technology is classified as approved, trial, or deprecated, with new technologies subject to governance before adoption.
 
 ## Objective
 

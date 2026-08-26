@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Choose a workload's packaging, runtime model, and deployment location deliberately, not by default.
+> Choose a workload's packaging, runtime model, and deployment location deliberately, based on its requirements.
 
 ## Objective
 

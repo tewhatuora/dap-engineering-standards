@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Every event has a documented schema and a defined delivery guarantee; every consumer tolerates duplicates safely.
+> Every event has a defined contract and delivery guarantee; every consumer safely tolerates duplicates.
 
 ## Objective
 

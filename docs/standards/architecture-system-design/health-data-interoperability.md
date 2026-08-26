@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Exchange health data through recognised standards such as FHIR and shared clinical terminology, not a proprietary format.
+> Exchange health data using recognised interoperability standards and shared clinical terminology, not proprietary formats.
 
 ## Objective
 
