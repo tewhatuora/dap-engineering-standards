@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Build, test, and scan every change for security and quality issues before it merges.
+> Build, test, and scan every change before it merges, catching security and quality issues early.
 
 ## Objective
 

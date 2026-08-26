@@ -1,7 +1,7 @@
 # Delivery & Release
 
 ## Overview
-Software changes are built, deployed, and released in a controlled and repeatable way, and this section sets out the standards that ensure changes can be released safely, progressively, and reliably.
+Software changes move from build to release through verified, automated, and reversible delivery practices. This section sets out the standards that ensure changes are traceable, progressively delivered, deliberately released, and quickly recoverable when things go wrong.
 
 Choose a standard below to see its full requirements.
 
@@ -9,7 +9,7 @@ Choose a standard below to see its full requirements.
 
 #### Continuous Integration
 
-> Build, test, and scan every change for security and quality issues before it merges.
+> Build, test, and scan every change before it merges, catching security and quality issues early.
 
 [Read more](continuous-integration.md).
 
