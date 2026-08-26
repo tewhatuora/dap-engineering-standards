@@ -1,7 +1,7 @@
 # Delivery & Release
 
 ## Overview
-Software changes move from build to release through verified, automated, and reversible delivery practices. This section sets out the standards that ensure changes are traceable, progressively delivered, deliberately released, and quickly recoverable when things go wrong.
+Software changes move from build to release through verified, automated, and reversible delivery practices. This section defines the engineering standards for traceable builds, progressive delivery, deliberate release, and rapid recovery when things go wrong.
 
 Choose a standard below to see its full requirements.
 
