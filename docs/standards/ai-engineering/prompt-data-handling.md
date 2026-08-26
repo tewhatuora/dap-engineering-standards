@@ -2,7 +2,7 @@
 
 ## Summary
 
-> A prompt is a data disclosure; never include secrets, patient data, or more than a task needs.
+> Treat every prompt as a data disclosure; never include secrets, patient data, or more than a task needs.
 
 ## Objective
 

@@ -1,7 +1,7 @@
 # AI Engineering
 
 ## Overview
-AI tools are now a routine part of engineering work, and this section sets out the standards that keep their use safe, responsible, and cost-effective.
+AI tools can improve engineering productivity, but their use introduces new security, accountability, and governance risks. This section defines the engineering standards for responsible, accountable, and efficient use of AI throughout the software development lifecycle.
 
 Choose a standard below to see its full requirements.
 
@@ -9,13 +9,13 @@ Choose a standard below to see its full requirements.
 
 #### Approved AI Tooling
 
-> Only vetted, organisation-provisioned AI tools are approved for engineering work.
+> Only approved, organisation-provisioned AI tools may be used for engineering work.
 
 [Read more](approved-ai-tooling.md).
 
 #### Prompt Data Handling
 
-> A prompt is a data disclosure; never include secrets, patient data, or more than a task needs.
+> Treat every prompt as a data disclosure; never include secrets, patient data, or more than a task needs.
 
 [Read more](prompt-data-handling.md).
 
@@ -33,7 +33,7 @@ Choose a standard below to see its full requirements.
 
 #### AI-Assisted Incident Investigation
 
-> AI-assisted incident investigation draws on standard telemetry, remains under human control, and is recorded and reviewed.
+> AI-assisted incident investigation uses approved tools and standard telemetry, with human verification and traceable outcomes.
 
 [Read more](ai-assisted-incident-investigation.md).
 

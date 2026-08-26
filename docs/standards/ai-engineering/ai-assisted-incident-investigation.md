@@ -2,7 +2,7 @@
 
 ## Summary
 
-> AI-assisted incident investigation draws on standard telemetry, remains under human control, and is recorded and reviewed.
+> AI-assisted incident investigation uses approved tools and standard telemetry, with human verification and traceable outcomes.
 
 ## Objective
 
