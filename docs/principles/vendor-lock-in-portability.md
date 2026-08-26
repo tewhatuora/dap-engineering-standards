@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Weigh the lock-in a vendor or technology choice introduces, and keep a practical way to exit it.
+> Choose vendor dependencies deliberately, and preserve the ability to change.
 
 ## Objective
 

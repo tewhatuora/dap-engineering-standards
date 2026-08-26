@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Automate every repeatable task by default, and reserve human judgement for what automation genuinely cannot decide.
+> Automate every repeatable task, and reserve human judgement for decisions automation cannot make.
 
 ## Objective
 

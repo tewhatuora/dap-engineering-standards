@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Design every component so its correctness can be verified automatically, with every dependency substitutable for testing.
+> Design every component to be easily verified through automated testing.
 
 ## Objective
 

@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Hold AI-assisted work to the same standards as any other, with the directing engineer fully accountable.
+> Hold AI-assisted work to the same standards as any other, with human accountability and understanding.
 
 ## Objective
 

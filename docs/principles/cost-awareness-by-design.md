@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Weigh cost alongside reliability, performance, and security at design time, proportionate to the value it protects.
+> Weigh cost alongside reliability, performance, and security, keeping spend proportionate to the value it delivers.
 
 ## Objective
 

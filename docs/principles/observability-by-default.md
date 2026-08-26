@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Instrument a service with enough logging, metrics, and tracing to explain its behaviour at any time.
+> Instrument a service with enough logging, metrics, and tracing to explain its behaviour when needed.
 
 ## Objective
 

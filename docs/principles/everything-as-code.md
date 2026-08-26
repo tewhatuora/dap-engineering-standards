@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Code is the single source of truth; a manual change to a running system is drift to fix.
+> Version-controlled code is the source of truth; manual changes to running systems are drift to fix.
 
 ## Objective
 

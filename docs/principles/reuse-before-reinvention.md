@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Reuse an existing solution before adopting one, and adopt before building anything new.
+> Reuse before adopting, and adopt before building.
 
 ## Objective
 

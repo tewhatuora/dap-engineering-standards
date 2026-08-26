@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Validate data at its point of entry, and correct a quality issue at its root cause.
+> Validate data at its point of entry, and fix quality issues at their root cause.
 
 ## Objective
 

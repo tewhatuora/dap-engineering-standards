@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Weigh a design's energy and carbon impact alongside its other requirements, and size resources to actual demand.
+> Design for efficient resource use, with environmental impact considered from the start.
 
 ## Objective
 

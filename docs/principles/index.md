@@ -9,13 +9,13 @@ Choose a principle below to read its full reasoning.
 
 #### Everything as Code
 
-> Code is the single source of truth; a manual change to a running system is drift to fix.
+> Version-controlled code is the source of truth; manual changes to running systems are drift to fix.
 
 [Read more](everything-as-code.md).
 
 #### Automation First
 
-> Automate every repeatable task by default, and reserve human judgement for what automation genuinely cannot decide.
+> Automate every repeatable task, and reserve human judgement for decisions automation cannot make.
 
 [Read more](automation-first.md).
 
@@ -27,19 +27,19 @@ Choose a principle below to read its full reasoning.
 
 #### Reuse Before Reinvention
 
-> Reuse an existing solution before adopting one, and adopt before building anything new.
+> Reuse before adopting, and adopt before building.
 
 [Read more](reuse-before-reinvention.md).
 
 #### Stateless First
 
-> Design a service so any instance can handle any request, with necessary state held externally.
+> Any instance can serve any request, with necessary state held externally.
 
 [Read more](stateless-first.md).
 
 #### Testability by Design
 
-> Design every component so its correctness can be verified automatically, with every dependency substitutable for testing.
+> Design every component to be easily verified through automated testing.
 
 [Read more](testability-by-design.md).
 
@@ -51,13 +51,13 @@ Choose a principle below to read its full reasoning.
 
 #### Observability by Default
 
-> Instrument a service with enough logging, metrics, and tracing to explain its behaviour at any time.
+> Instrument a service with enough logging, metrics, and tracing to explain its behaviour when needed.
 
 [Read more](observability-by-default.md).
 
 #### Reliability & Resilience
 
-> Design every service assuming its dependencies will fail, and contain that failure before it spreads.
+> Design every service assuming failure, and contain its impact before it spreads.
 
 [Read more](reliability-resilience.md).
 
@@ -69,7 +69,7 @@ Choose a principle below to read its full reasoning.
 
 #### Interoperability by Design
 
-> Expose what a service shares through a documented interface, preferring an open standard over a proprietary one.
+> Expose what a service shares through a documented interface, using open standards and preserving compatibility as it evolves.
 
 [Read more](interoperability-by-design.md).
 
@@ -81,13 +81,13 @@ Choose a principle below to read its full reasoning.
 
 #### Vendor Lock-in & Portability
 
-> Weigh the lock-in a vendor or technology choice introduces, and keep a practical way to exit it.
+> Choose vendor dependencies deliberately, and preserve the ability to change.
 
 [Read more](vendor-lock-in-portability.md).
 
 #### Security by Design
 
-> Build in least privilege and secure defaults from the outset, and verify every control through testing.
+> Build in least privilege and secure defaults from the outset, and verify security controls through testing.
 
 [Read more](security-by-design.md).
 
@@ -99,36 +99,36 @@ Choose a principle below to read its full reasoning.
 
 #### Data Quality & Integrity by Design
 
-> Validate data at its point of entry, and correct a quality issue at its root cause.
+> Validate data at its point of entry, and fix quality issues at their root cause.
 
 [Read more](data-quality-integrity-by-design.md).
 
 #### Data Residency & Sovereignty
 
-> Treat the legal jurisdiction over data as a deliberate choice, not an assumption from a vendor's claim.
+> Treat the legal jurisdiction over data as a deliberate choice, not an assumption from where it is hosted.
 
 [Read more](data-residency-sovereignty.md).
 
 #### Accessibility by Design
 
-> Design for assistive technology from a feature's earliest stage, and verify conformance through testing, not assumption.
+> Design for assistive technology from the earliest stage, and verify conformance through testing, not assumption.
 
 [Read more](accessibility-by-design.md).
 
 #### Cost Awareness by Design
 
-> Weigh cost alongside reliability, performance, and security at design time, proportionate to the value it protects.
+> Weigh cost alongside reliability, performance, and security, keeping spend proportionate to the value it delivers.
 
 [Read more](cost-awareness-by-design.md).
 
 #### Sustainability by Design
 
-> Weigh a design's energy and carbon impact alongside its other requirements, and size resources to actual demand.
+> Design for efficient resource use, with environmental impact considered from the start.
 
 [Read more](sustainability-by-design.md).
 
 #### AI-Assisted Engineering Accountability
 
-> Hold AI-assisted work to the same standards as any other, with the directing engineer fully accountable.
+> Hold AI-assisted work to the same standards as any other, with human accountability and understanding.
 
 [Read more](ai-assisted-engineering-accountability.md).

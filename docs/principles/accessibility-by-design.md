@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Design for assistive technology from a feature's earliest stage, and verify conformance through testing, not assumption.
+> Design for assistive technology from the earliest stage, and verify conformance through testing, not assumption.
 
 ## Objective
 

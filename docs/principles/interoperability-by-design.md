@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Expose what a service shares through a documented interface, preferring an open standard over a proprietary one.
+> Expose what a service shares through a documented interface, using open standards and preserving compatibility as it evolves.
 
 ## Objective
 

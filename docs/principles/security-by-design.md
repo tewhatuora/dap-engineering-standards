@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Build in least privilege and secure defaults from the outset, and verify every control through testing.
+> Build in least privilege and secure defaults from the outset, and verify security controls through testing.
 
 ## Objective
 

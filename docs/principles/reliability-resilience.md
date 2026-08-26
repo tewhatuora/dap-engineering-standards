@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Design every service assuming its dependencies will fail, and contain that failure before it spreads.
+> Design every service assuming failure, and contain its impact before it spreads.
 
 ## Objective
 

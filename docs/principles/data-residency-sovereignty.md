@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Treat the legal jurisdiction over data as a deliberate choice, not an assumption from a vendor's claim.
+> Treat the legal jurisdiction over data as a deliberate choice, not an assumption from where it is hosted.
 
 ## Objective
 
