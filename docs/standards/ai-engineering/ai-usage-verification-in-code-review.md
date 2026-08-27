@@ -23,6 +23,11 @@ An author independently verifies AI-generated code, its tests, and its dependenc
 3. Authors **MUST** check AI-generated code for hallucinated or non-existent dependencies, packages, and APIs before submission.
 4. Authors **MUST** screen AI-generated code for security weaknesses.
 
+#### References
+
+- [Linting & Style Enforcement](../code-implementation/linting-style-enforcement.md)
+- [Static Code Analysis](../code-implementation/static-code-analysis.md)
+
 ### Reviewer Scrutiny of AI-Disclosed Submissions
 
 A reviewer gives an AI-disclosed submission at least the same scrutiny as human-authored code.

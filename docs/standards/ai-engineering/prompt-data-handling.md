@@ -40,6 +40,10 @@ Health or personal data is de-identified or synthetic before it reaches a prompt
 1. Where health or personal data is relevant to a development task, it **MUST** be de-identified, synthetic, or masked before inclusion in a prompt, wherever feasible.
 2. Synthetic or de-identified data **MUST** be preferred over production data for AI-assisted testing, debugging, and documentation.
 
+#### References
+
+- [Test Data Management](../quality-engineering/test-data-management.md)
+
 ### Incident Handling
 
 A suspected prompt data exposure is reported and handled as a security incident before it is remediated.

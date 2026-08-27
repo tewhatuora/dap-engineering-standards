@@ -62,3 +62,7 @@ A new platform capability is trialled through a defined evaluation process, not 
 1. A team **MAY** trial a new or alternative platform capability through a defined evaluation process rather than adopting it unilaterally into production.
 2. A successful evaluation **SHOULD** be fed back into the shared platform for broader adoption, rather than remaining a one-off, team-specific exception.
 3. An unsuccessful or discontinued evaluation **MUST** be decommissioned rather than left running unmanaged.
+
+#### References
+
+- [Technology Stack Governance](../standards/architecture-system-design/technology-stack-governance.md)

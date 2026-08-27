@@ -63,6 +63,10 @@ An interface is designed to reasonably support a future consumer too, not couple
 1. An interface **SHOULD** be designed to reasonably support additional or future consumers, not only the specific system it was first built to integrate with.
 2. An interface **MUST NOT** be coupled to a single consumer's internal implementation detail.
 
+#### References
+
+- [Health Data Interoperability](../standards/architecture-system-design/health-data-interoperability.md)
+
 ### Shared Integration Mechanisms
 
 A shared, reusable integration mechanism is preferred over repeating the same bespoke, bilateral integration.

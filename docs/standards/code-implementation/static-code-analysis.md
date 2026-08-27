@@ -16,6 +16,7 @@ Every language in a codebase is checked by static analysis for bugs, maintainabi
 4. Where a language supports static type checking, type checking **MUST** be enabled and treated as part of a codebase's static analysis coverage.
 
 #### References
+
 - [Linting & Style Enforcement](linting-style-enforcement.md)
 - [Application Security Testing](../quality-engineering/application-security-testing.md)
 - [Security by Design](../../principles/security-by-design.md)
@@ -29,6 +30,7 @@ Static analysis measures a maintainability indicator continuously, so a degradin
 3. Static analysis **SHOULD** be used to identify unused or dead code, so it can be removed.
 
 #### References
+
 - [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
 
 ### Ruleset Configuration
@@ -40,6 +42,7 @@ A static analysis ruleset is version-controlled and shared consistently across t
 3. The analysis tool's default ruleset **SHOULD** be adopted wherever it meets a codebase's needs; a customisation **SHOULD** be added only where an actual need justifies it.
 
 #### References
+
 - [Platform Alignment](../../principles/platform-alignment.md)
 - [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
 
@@ -54,6 +57,7 @@ A static analysis finding's severity decides whether it blocks a change, reporte
 5. A finding **MUST** be reported in a standard, machine-readable format, such as SARIF. A proprietary or tool-specific format **MUST NOT** be the only format produced.
 
 #### References
+
 - [Automation First](../../principles/automation-first.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 - [Code Review](code-review.md)
@@ -67,6 +71,7 @@ A static analysis finding surfaces locally as code is written, before a change i
 2. Static analysis running through IDE integration **SHOULD** analyse a file incrementally as it is written, rather than only through a manual, whole-codebase scan, so feedback remains immediate.
 
 #### References
+
 - [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
 
 ### Suppression & Exception Discipline
@@ -79,6 +84,7 @@ A static analysis suppression identifies its finding, gives a documented reason,
 4. A suppression recorded in a version-controlled list **MUST** be reviewed alongside the change it appears in; a suppression tracked through the analysis tool's own dismissal mechanism **MUST** be restricted to an authorised role.
 
 #### References
+
 - [Code Review](code-review.md)
 - [Everything as Code](../../principles/everything-as-code.md)
 
@@ -92,7 +98,9 @@ A change to the static analysis ruleset is restricted to an authorised role and 
 4. The ruleset **SHOULD** be reviewed periodically, so it keeps pace with a newly identified bug pattern, language feature, or evolving engineering practice.
 
 #### References
+
 - [Code Review](code-review.md)
+- [Everything as Code](../../principles/everything-as-code.md)
 
 ### Baselining Pre-Existing Findings
 
@@ -103,4 +111,5 @@ A pre-existing finding can be baselined when static analysis is adopted, but sta
 3. A baselined violation **MUST** be tracked and remediated as technical debt.
 
 #### References
+
 - [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)

@@ -72,6 +72,7 @@ A log entry carries the same trace identifier propagated across service boundari
 
 #### References
 
+- [Observability by Default](../../principles/observability-by-default.md)
 - [Distributed Tracing](distributed-tracing.md)
 
 ### Log Volume & Noise Control

@@ -2,7 +2,7 @@
 
 ## Summary
 
-> Build serverless functions that are bounded, observable, portable, secure, and designed for reliable operation.
+> A serverless function is sized to its workload, designed with portability in mind, and traceable as part of a distributed transaction.
 
 ## Standards
 
@@ -88,7 +88,7 @@ Make every invocation traceable end-to-end, and its duration and cost attributab
 
 Keep business logic separable from the platform's proprietary triggers, and package it for portability.
 
-1. A function's business logic **MUST** be kept separable from the platform's proprietary trigger and event format, such as via an adapter, so it can be ported to a different runtime model without a rewrite.
+1. A function's business logic **SHOULD** be kept separable from the platform's proprietary trigger and event format, such as via an adapter, so it can be ported to a different runtime model without a rewrite.
 2. A function **SHOULD** be packaged as a container image for portability, rather than the platform's own proprietary archive format.
 
 #### References

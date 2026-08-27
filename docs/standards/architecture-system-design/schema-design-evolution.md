@@ -61,6 +61,10 @@ Decision-informing data carries an audit trail, and a table's deletion approach 
 1. A table or collection whose data informs an operational, financial, or clinical decision **MUST** include audit columns, such as created and last-modified timestamps, and identify the actor or process responsible for a change.
 2. A table or collection's deletion representation, whether a soft delete using a flag or timestamp column or a hard delete that removes the row, **MUST** be a deliberate, documented choice.
 
+#### References
+
+- [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
+
 ### Index Alignment
 
 An index matches the schema's actual query patterns, and is reassessed when those patterns change.

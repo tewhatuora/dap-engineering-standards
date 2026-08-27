@@ -35,6 +35,7 @@ An API's interface is defined in a machine-readable specification, kept current,
 
 #### References
 
+- [Interoperability by Design](../../principles/interoperability-by-design.md)
 - [Integration Testing](../quality-engineering/integration-testing.md)
 
 ### Version Lifecycle
@@ -69,6 +70,7 @@ Every caller is authenticated and individually accountable by default, using a s
 
 #### References
 
+- [Security by Design](../../principles/security-by-design.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 
 ### Data Redaction & Jurisdictional Controls

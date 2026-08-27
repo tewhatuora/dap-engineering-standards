@@ -16,6 +16,7 @@ A service's logs, metrics, and traces ship to the organisation's one established
 #### References
 
 - [Observability by Default](../../principles/observability-by-default.md)
+- [Platform Alignment](../../principles/platform-alignment.md)
 - [Technology Stack Register](../architecture-system-design/technology-stack-register.md)
 
 ### Telemetry Transport

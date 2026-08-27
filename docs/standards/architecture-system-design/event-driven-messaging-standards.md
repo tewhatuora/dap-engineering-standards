@@ -44,6 +44,7 @@ A published schema evolves additively, and a breaking change ships as a new sche
 
 #### References
 
+- [Interoperability by Design](../../principles/interoperability-by-design.md)
 - [Schema Design & Evolution](schema-design-evolution.md)
 
 ### Delivery Semantics & Ordering Guarantees
@@ -63,6 +64,10 @@ An event's publication and the state change it represents commit as one atomic u
 
 1. Publishing an event and committing the state change it represents **MUST** happen as a single atomic unit, such as through a transactional outbox, so neither can occur without the other.
 2. A failure to publish an event **MUST** be logged and monitored, so it can be detected and remediated.
+
+#### References
+
+- [Data Access & Transaction Management](../code-implementation/data-access-transaction-management.md)
 
 ### Idempotent & Duplicate-Tolerant Consumers
 
@@ -149,4 +154,5 @@ An event schema is verified through contract and integration testing before a ch
 
 #### References
 
+- [Interoperability by Design](../../principles/interoperability-by-design.md)
 - [Integration Testing](../quality-engineering/integration-testing.md)

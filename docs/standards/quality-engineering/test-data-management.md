@@ -30,7 +30,7 @@ A test dataset is scoped and representative of what its own test actually needs,
 
 #### References
 
-- [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
+- [Testability by Design](../../principles/testability-by-design.md)
 - [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
 
 ### Test Data Lifecycle

@@ -13,6 +13,10 @@ Higher-risk work undergoes a threat model or security design review before imple
 1. A service or feature that introduces new attack surface, handles sensitive functionality, or processes sensitive data **MUST** undergo a security design review or threat model before implementation begins.
 2. Security requirements identified through this review **MUST** be addressed as part of the design.
 
+#### References
+
+- [Application Security Testing](../standards/quality-engineering/application-security-testing.md)
+
 ### Least Privilege by Default
 
 A service or identity is granted only the access its defined function needs, revoked the moment it is no longer needed.

@@ -27,6 +27,10 @@ A service does not depend on session affinity as a substitute for externalising 
 1. A service **SHOULD NOT** depend on session affinity or sticky sessions to route a client's repeat requests to the same instance as a substitute for externalising state.
 2. Where session affinity is used for performance reasons, the service **MUST** still be able to serve the session correctly from a different instance if affinity is lost.
 
+#### References
+
+- [Progressive Delivery Strategies](../standards/delivery-release/progressive-delivery-strategies.md)
+
 ### Stateless Scaling & Resilience
 
 A service scales horizontally and replaces an instance at any time, without coordinating in-process state between them.
@@ -46,6 +50,11 @@ A request handler is idempotent where feasible, or otherwise guarded so a retry 
 
 1. A request handler **SHOULD** be designed to be idempotent where feasible, so a retried request does not produce inconsistent or duplicate side effects.
 2. Where an operation cannot be made idempotent, the service **MUST** provide another safeguard, such as a duplicate-request check, to prevent a retried request being applied more than once.
+
+#### References
+
+- [Event-Driven Messaging Standards](../standards/architecture-system-design/event-driven-messaging-standards.md)
+- [Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)
 
 ### Stateful Components
 

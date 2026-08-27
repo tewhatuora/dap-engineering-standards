@@ -16,6 +16,7 @@ Every language in a codebase is checked by an appropriate, actively maintained l
 4. The linters in use for a codebase **MUST** be documented and discoverable, such as through a repository's `README` or a location linked from it.
 
 #### References
+
 - [Coding Standards & Formatting](coding-standards-formatting.md)
 
 ### Linter Configuration
@@ -27,6 +28,7 @@ A linter's ruleset is version-controlled configuration, applied identically wher
 3. A linter's default ruleset **SHOULD** be adopted wherever it meets a codebase's needs; a customisation **SHOULD** be added only where an actual need justifies it.
 
 #### References
+
 - [Everything as Code](../../principles/everything-as-code.md)
 - [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
 
@@ -40,6 +42,7 @@ A lint violation's severity decides whether it merely advises or blocks a change
 4. A change **MUST NOT** merge or deploy while a non-baselined violation at blocking severity remains outstanding.
 
 #### References
+
 - [Automation First](../../principles/automation-first.md)
 
 ### Local Detection
@@ -50,6 +53,7 @@ A lint violation surfaces locally, through an IDE or pre-commit hook, before a c
 2. A local lint run **SHOULD** check only the files affected by a change where practical, rather than the entire codebase, to keep local feedback fast.
 
 #### References
+
 - [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
 
 ### Suppression & Exception Discipline
@@ -62,6 +66,7 @@ A lint suppression is scoped to one line with a documented reason, and reviewed 
 4. A suppression or exception list, including one held in a dedicated file rather than inline, **MUST** be version-controlled within the codebase it applies to.
 
 #### References
+
 - [Code Review](code-review.md)
 - [Everything as Code](../../principles/everything-as-code.md)
 
@@ -74,6 +79,7 @@ A change to the linting ruleset goes through the same review as a code change, a
 3. The ruleset **SHOULD** be reviewed periodically, so it stays current with the codebase's adopted conventions and evolving engineering practice.
 
 #### References
+
 - [Code Review](code-review.md)
 - [Everything as Code](../../principles/everything-as-code.md)
 
@@ -86,4 +92,5 @@ A pre-existing violation can be baselined when a linter is adopted, but stays tr
 3. A baselined violation **MUST** be tracked and remediated as technical debt.
 
 #### References
+
 - [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)

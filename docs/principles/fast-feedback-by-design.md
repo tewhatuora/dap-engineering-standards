@@ -43,12 +43,24 @@ A failure signal states its cause and the change responsible clearly enough to a
 1. A failure signal, such as a build error, test failure, or automated gate rejection, **MUST** clearly indicate its cause and the change responsible, so it can be acted on without further investigation.
 2. Feedback that is frequently ignored or bypassed **SHOULD** be treated as a sign that its speed, clarity, or reliability needs improvement, not that the check itself should be removed.
 
+#### References
+
+- [Continuous Integration](../standards/delivery-release/continuous-integration.md)
+- [Unit Testing](../standards/quality-engineering/unit-testing.md)
+- [Integration Testing](../standards/quality-engineering/integration-testing.md)
+
 ### Unreliable Feedback
 
 A feedback mechanism that gives inconsistent results is fixed or removed, never worked around by re-running or ignoring it.
 
 1. A feedback mechanism that produces inconsistent results for the same input, such as a flaky test or an intermittent pipeline failure, **SHOULD** be fixed or removed.
 2. Unreliable feedback **MUST NOT** be worked around by re-running, ignoring, or suppressing it, since doing so erodes confidence in genuine failures.
+
+#### References
+
+- [Continuous Integration](../standards/delivery-release/continuous-integration.md)
+- [Unit Testing](../standards/quality-engineering/unit-testing.md)
+- [Integration Testing](../standards/quality-engineering/integration-testing.md)
 
 ### Limited-Exposure Rollouts
 

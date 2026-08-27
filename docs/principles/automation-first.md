@@ -39,6 +39,7 @@ Mechanical checks run through automated gates, and human review still applies on
 #### References
 
 - [Static Code Analysis](../standards/code-implementation/static-code-analysis.md)
+- [Linting & Style Enforcement](../standards/code-implementation/linting-style-enforcement.md)
 - [Code Review](../standards/code-implementation/code-review.md)
 - [AI Usage & Verification in Code Review](../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 

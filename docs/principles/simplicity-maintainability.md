@@ -47,6 +47,11 @@ Complexity and technical debt are tracked as work proceeds, and debt that impair
 2. Technical debt that materially impairs a service's maintainability **MUST** be remediated; it **MUST NOT** be deferred indefinitely without a plan.
 3. Refactoring **SHOULD** be treated as ongoing engineering practice.
 
+#### References
+
+- [Linting & Style Enforcement](../standards/code-implementation/linting-style-enforcement.md)
+- [Static Code Analysis](../standards/code-implementation/static-code-analysis.md)
+
 ### Dependency & Technology Diversity
 
 A new dependency is justified against the maintenance burden it introduces, and one no longer needed is removed.
@@ -66,6 +71,10 @@ Code, features, or configuration no longer needed is removed, not left carrying 
 
 1. Code, features, or configuration no longer required **SHOULD** be removed, since unused code still carries a comprehension and maintenance cost.
 2. Functionality retired from use **MUST** have its code removed within a reasonable period, rather than left in place indefinitely alongside its replacement.
+
+#### References
+
+- [Feature Flagging](../standards/delivery-release/feature-flagging.md)
 
 ### Complexity & Maintainability Checks
 

@@ -88,6 +88,7 @@ A failing integration test blocks progression, and a quarantined test stays trac
 
 #### References
 
+- [Testability by Design](../../principles/testability-by-design.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 - [Automation First](../../principles/automation-first.md)
 

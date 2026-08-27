@@ -62,4 +62,5 @@ An implementation is tested for conformance against its Implementation Guide bef
 
 #### References
 
+- [Interoperability by Design](../../principles/interoperability-by-design.md)
 - [Integration Testing](../quality-engineering/integration-testing.md)

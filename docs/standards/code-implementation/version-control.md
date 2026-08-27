@@ -34,7 +34,6 @@ A commit represents one coherent change, described clearly enough to stand alone
 #### References
 
 - [Coding Standards & Formatting](coding-standards-formatting.md)
-- [Database Migration Tooling](database-migration-tooling.md)
 - [Branching Strategy](branching-strategy.md)
 - [Release Strategy](../delivery-release/release-strategy.md)
 - [Feature Flagging](../delivery-release/feature-flagging.md)
@@ -50,7 +49,6 @@ Every commit is attributable to the individual or automated process that actuall
 #### References
 
 - [Identity & Access Management](../security-identity/identity-access-management.md)
-- [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
 
 ### Change Traceability
 

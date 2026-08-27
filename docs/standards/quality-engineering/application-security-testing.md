@@ -44,6 +44,7 @@ Fuzz testing targets a service that parses untrusted input or holds memory-unsaf
 
 #### References
 
+- [Security by Design](../../principles/security-by-design.md)
 - [Test Data Management](test-data-management.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 

@@ -22,8 +22,6 @@ Every production deployment uses a progressive delivery technique, chosen by wha
 - [Reliability & Resilience](../../principles/reliability-resilience.md)
 - [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
 - [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
-- [Sustainability by Design](../../principles/sustainability-by-design.md)
 
 ### Canary Releases
 
@@ -61,7 +59,7 @@ A rolling deployment's batch size is defined upfront, and each batch must pass a
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-resilience.md)
 
 ### Cross-Version Data Compatibility
 
@@ -74,7 +72,7 @@ A schema or data change stays compatible with the old version for as long as bot
 #### References
 
 - [Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
-- [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
+- [Interoperability by Design](../../principles/interoperability-by-design.md)
 - [Database Migration Tooling](../code-implementation/database-migration-tooling.md)
 - [Rollback Strategy](rollback-strategy.md)
 

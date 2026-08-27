@@ -80,6 +80,7 @@ Every release generates a machine-readable SBOM of its actual resolved dependenc
 
 #### References
 
+- [Security by Design](../../principles/security-by-design.md)
 - [Build & Artifact Management](../delivery-release/build-artifact-management.md)
 - [Software Supply Chain Security](../security-identity/software-supply-chain-security.md)
 - [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)

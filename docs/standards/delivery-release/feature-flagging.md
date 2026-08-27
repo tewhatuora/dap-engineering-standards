@@ -25,7 +25,6 @@ A flag is declared as version-controlled code, with a named owner and a tracked 
 - [Platform Alignment](../../principles/platform-alignment.md)
 - [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
 - [Branching Strategy](../code-implementation/branching-strategy.md)
-- [Performance & Load Testing](../quality-engineering/performance-load-testing.md)
 - [Code Review](../code-implementation/code-review.md)
 - [Release Strategy](release-strategy.md)
 - [Version Control](../code-implementation/version-control.md)
@@ -72,7 +71,6 @@ A flag's state changes without a new build or deployment, propagating consistent
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
 - [Reliability & Resilience](../../principles/reliability-resilience.md)
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
 - [Progressive Delivery Strategies](progressive-delivery-strategies.md)
 - [Stateless First](../../principles/stateless-first.md)
 

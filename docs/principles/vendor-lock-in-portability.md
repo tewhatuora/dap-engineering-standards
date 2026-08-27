@@ -37,12 +37,21 @@ An abstraction shields a system from a vendor-specific dependency where it can, 
 1. Where an abstraction layer, such as a defined interface or adapter, can shield the rest of a system from a vendor-specific dependency without disproportionate cost or complexity, it **SHOULD** be used.
 2. An abstraction introduced to reduce lock-in **MUST NOT** itself introduce disproportionate complexity relative to the lock-in risk it mitigates.
 
+#### References
+
+- [Data Access & Transaction Management](../standards/code-implementation/data-access-transaction-management.md)
+- [Serverless Standards](../standards/platform-infrastructure/serverless-standards.md)
+
 ### Data Portability & Export
 
 Data held in a vendor or platform stays extractable in a usable, non-proprietary format, verified periodically.
 
 1. Data held within a vendor or platform **MUST** be extractable in a usable, non-proprietary format, so it remains usable if that vendor or platform is later replaced.
 2. The ability to export data from a vendor or platform **SHOULD** be verified periodically, rather than assumed to remain available and unchanged.
+
+#### References
+
+- [Observability Platform Integration](../standards/operations-observability/observability-platform-integration.md)
 
 ### Commitment Exit Paths
 

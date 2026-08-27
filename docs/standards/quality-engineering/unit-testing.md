@@ -109,6 +109,7 @@ A failing unit test blocks the pipeline until resolved, and a flaky one is track
 
 #### References
 
+- [Testability by Design](../../principles/testability-by-design.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 - [Automation First](../../principles/automation-first.md)
 

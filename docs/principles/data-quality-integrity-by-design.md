@@ -52,6 +52,10 @@ A change to decision-informing data stays traceable to its source, timing, and r
 2. The transformation a data item undergoes between its origin and its current state **SHOULD** be traceable, so its current value can be explained without reconstructing the transformation from informal knowledge.
 3. Traceability information **MUST** be retained for a period sufficient to support audit and incident investigation.
 
+#### References
+
+- [Schema Design & Evolution](../standards/architecture-system-design/schema-design-evolution.md)
+
 ### Ongoing Quality Monitoring
 
 Data quality is monitored continuously after initial validation, so a later degradation is detected, not assumed absent.

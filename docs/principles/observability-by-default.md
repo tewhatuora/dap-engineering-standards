@@ -13,6 +13,10 @@ Observability is built in from the start, not added reactively once a production
 1. Observability **MUST** be treated as a first-class design requirement, established during design and development so it does not need to be added reactively after a production incident.
 2. A service or feature change **MUST NOT** be considered complete until its logging, metrics, and tracing instrumentation is in place.
 
+#### References
+
+- [Telemetry Instrumentation Standards](../standards/operations-observability/telemetry-instrumentation-standards.md)
+
 ### Signal Coverage
 
 A service emits enough logs, metrics, and traces to explain its own behaviour and its dependencies, without inspecting running state.
@@ -59,6 +63,7 @@ Telemetry stays actionable and tied to real impact; a signal that informs no dec
 #### References
 
 - [Cost Awareness by Design](cost-awareness-by-design.md)
+- [Metrics, Monitoring & Alerting](../standards/operations-observability/metrics-monitoring-alerting.md)
 
 ### Incident Detection & Response
 
@@ -69,7 +74,7 @@ Observability detects an operational issue as early as possible, and its inciden
 
 #### References
 
-- [Runbooks](../standards/operations-observability/runbooks.md)
+- [Metrics, Monitoring & Alerting](../standards/operations-observability/metrics-monitoring-alerting.md)
 - [Reliability & Resilience](reliability-resilience.md)
 
 ### Telemetry Data Minimisation
@@ -82,6 +87,8 @@ Telemetry never captures personal or health data beyond what observability stric
 #### References
 
 - [Privacy by Design](privacy-by-design.md)
+- [Telemetry Instrumentation Standards](../standards/operations-observability/telemetry-instrumentation-standards.md)
+- [Structured Logging](../standards/operations-observability/structured-logging.md)
 
 ### Team-Owned Observability
 
@@ -89,3 +96,7 @@ The team that builds and operates a service owns its observability, and that own
 
 1. The team that builds and operates a service **MUST** own the observability of that service rather than relying solely on a separate, central team.
 2. Observability ownership **MUST** transfer with a service when responsibility for it is handed over between teams; it **MUST NOT** lapse during a handover.
+
+#### References
+
+- [Metrics, Monitoring & Alerting](../standards/operations-observability/metrics-monitoring-alerting.md)

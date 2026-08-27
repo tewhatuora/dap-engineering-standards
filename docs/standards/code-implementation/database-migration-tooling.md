@@ -43,10 +43,6 @@ A database's applied-migration history is checksum-verified and never edited by 
 3. A database instance's applied-migration history **MUST NOT** be edited manually; only the migration tool **MAY** modify it.
 4. A migration tool **MUST NOT** re-apply a versioned migration already recorded in that history.
 
-#### References
-
-- [Data Access & Transaction Management](data-access-transaction-management.md)
-
 ### Baselining an Existing Database
 
 Adopting migration tooling for an existing database starts with a deliberate baseline and a clearly identified owner.

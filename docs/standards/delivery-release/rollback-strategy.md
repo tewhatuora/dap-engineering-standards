@@ -54,7 +54,6 @@ A rollback never runs an incompatible version against the current data or schema
 #### References
 
 - [Database Migration Tooling](../code-implementation/database-migration-tooling.md)
-- [Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)
 - [Progressive Delivery Strategies](progressive-delivery-strategies.md)
 
 ### Rollback Scope & Coordination

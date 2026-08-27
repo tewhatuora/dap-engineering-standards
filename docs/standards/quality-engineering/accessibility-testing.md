@@ -15,6 +15,7 @@ Automated accessibility scanning runs in the delivery pipeline, catching a progr
 
 #### References
 
+- [Accessibility by Design](../../principles/accessibility-by-design.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 
 ### Manual & Assistive Technology Verification
@@ -36,6 +37,10 @@ A higher-reach service's accessibility is independently verified, including by s
 1. A service with a large user base, or one more likely to be used by people who rely on assistive technology, **MAY** undergo accessibility testing performed by a party independent of the team that built it, such as an external provider.
 2. Independent accessibility testing **SHOULD** include a person with lived experience of using assistive technology, so a barrier that a specialist might otherwise miss is still identified.
 3. Independent verification supplements a delivery team's own automated and manual testing; it **MUST NOT** substitute for it.
+
+#### References
+
+- [Accessibility by Design](../../principles/accessibility-by-design.md)
 
 ### Conformance Criteria & Test Mapping
 

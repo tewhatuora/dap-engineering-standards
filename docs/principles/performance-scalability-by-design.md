@@ -20,6 +20,10 @@ Load, throughput, latency, and error rate are defined as explicit requirements, 
 1. Expected load, throughput, concurrency, acceptable response time or latency, and error rate **MUST** be defined as explicit non-functional requirements for a service.
 2. Performance and capacity requirements **SHOULD** be based on realistic current or projected demand.
 
+#### References
+
+- [API Design & Standards](../standards/architecture-system-design/api-design-standards.md)
+
 ### Horizontal & Elastic Scaling
 
 A service scales horizontally by default, with capacity adjusting automatically to a sustained change in demand.
@@ -57,6 +61,7 @@ Data access uses caching, pagination, and indexing to avoid unnecessary latency 
 #### References
 
 - [Schema Design & Evolution](../standards/architecture-system-design/schema-design-evolution.md)
+- [Data Access & Transaction Management](../standards/code-implementation/data-access-transaction-management.md)
 
 ### Performance Target Testing
 

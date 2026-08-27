@@ -24,6 +24,10 @@ An external dependency is accessed through a seam that lets a test double substi
 1. A dependency on an external system, another component, the system clock, or a source of randomness **MUST** be accessed through an interface or seam that allows it to be substituted with a controlled test double.
 2. A component **MUST NOT** rely on a hard-coded, global, or statically constructed dependency that cannot be substituted during testing.
 
+#### References
+
+- [Unit Testing](../standards/quality-engineering/unit-testing.md)
+
 ### Deterministic Tests
 
 A test produces the same result on every run by controlling time, randomness, and execution order, and a flaky test is fixed, not ignored.
@@ -31,12 +35,22 @@ A test produces the same result on every run by controlling time, randomness, an
 1. A test **SHOULD** be designed to produce the same result on every execution given the same input, by controlling non-deterministic factors such as time, randomness, external calls, and execution order.
 2. A test that intermittently passes or fails without a corresponding code change **MUST** be treated as a defect to be fixed, not retried, ignored, or removed to obtain a passing result.
 
+#### References
+
+- [Unit Testing](../standards/quality-engineering/unit-testing.md)
+- [Continuous Integration](../standards/delivery-release/continuous-integration.md)
+- [Integration Testing](../standards/quality-engineering/integration-testing.md)
+
 ### Observable Outcomes
 
 A component exposes its outcome through its own interface, verifiable without inspecting internals or a side effect.
 
 1. A component **MUST** expose the outcome of its behaviour, such as a return value, resulting state, or emitted event, through its defined interface so the outcome can be verified by a test.
 2. A component **MUST NOT** rely on a side effect that can only be confirmed by inspecting its internal implementation or through manual observation.
+
+#### References
+
+- [Unit Testing](../standards/quality-engineering/unit-testing.md)
 
 ### Proportionate Test Coverage
 

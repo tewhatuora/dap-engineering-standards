@@ -43,6 +43,7 @@ AI-assisted code meets the same quality, testing, and security gates as any othe
 - [Coding Standards & Formatting](../code-implementation/coding-standards-formatting.md)
 - [Linting & Style Enforcement](../code-implementation/linting-style-enforcement.md)
 - [Static Code Analysis](../code-implementation/static-code-analysis.md)
+- [Unit Testing](../quality-engineering/unit-testing.md)
 
 ### Restricted & High-Risk Use Cases
 
