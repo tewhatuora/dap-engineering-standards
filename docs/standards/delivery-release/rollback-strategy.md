@@ -8,7 +8,7 @@
 
 ### Rollback Triggers
 
-These requirements set out how a rollback is triggered, based on a decision by the team responsible for the service.
+A rollback is triggered by the responsible team's own reviewed decision, not an automated signal acting alone.
 
 1. An automated signal **SHOULD** be raised where a breached production error-rate or latency threshold, or a critical or high-severity finding from runtime security testing, is attributable to a recent deployment.
 2. A rollback **SHOULD** be triggered only after that signal has been reviewed and judged to warrant a rollback rather than a forward-fix.
@@ -23,7 +23,7 @@ These requirements set out how a rollback is triggered, based on a decision by t
 
 ### Rollback Versus Forward-Fix
 
-These requirements describe the criteria for choosing a rollback over a forward-fix, or a forward-fix over a rollback.
+A rollback is the default choice over a forward-fix, unless reverting itself would cause a material loss of function or data.
 
 1. A rollback **SHOULD** be chosen over a forward-fix by default, since reverting to a previously verified version is faster and carries lower risk than developing and verifying a new fix under time pressure.
 2. A forward-fix **SHOULD** be chosen over a rollback only where reverting would itself cause a material loss of function or data, or where the failure is unrelated to the most recent deployment.
@@ -34,7 +34,7 @@ These requirements describe the criteria for choosing a rollback over a forward-
 
 ### Target Version & Recovery Objective
 
-These requirements address how a rollback's target version is determined and how quickly the rollback completes.
+A rollback defaults to the most recently verified version, and completes within the service's recovery time objective.
 
 1. A rollback's target version **MUST** default to the version most recently verified through the service's own deployment history; using an older version **MUST** be a deliberate choice.
 2. A rollback **MUST** be capable of being fully executed within the service's defined recovery time objective.
@@ -46,7 +46,7 @@ These requirements address how a rollback's target version is determined and how
 
 ### Data & Schema Compatibility
 
-These requirements cover how a rollback's target version remains compatible with data or schema changes made since it was last running.
+A rollback never runs an incompatible version against the current data or schema state; a forward-fix is used instead.
 
 1. A version being rolled back to **MUST** remain compatible with the current state of any data or schema that a subsequent version has already changed.
 2. A rollback **MUST NOT** proceed where doing so would run an incompatible version against the current data or schema state; a forward-fix **MUST** be used instead until compatibility is restored.
@@ -59,7 +59,7 @@ These requirements cover how a rollback's target version remains compatible with
 
 ### Rollback Scope & Coordination
 
-These requirements guide how the set of services affected by a rollback is determined and sequenced.
+A rollback reverts every genuinely dependent service, in a pre-defined sequence, and nothing beyond that.
 
 1. A coordinated rollback **MUST** revert every service with a genuine dependency on the failing change, not only the one where the failure was first observed.
 2. A service without such a dependency **MUST NOT** be included in the rollback.
@@ -71,7 +71,7 @@ These requirements guide how the set of services affected by a rollback is deter
 
 ### Post-Rollback Verification
 
-These requirements set out how a rollback's own success is confirmed once it has been executed.
+A rollback is verified against the same automated health checks as any deployment before it counts as successful.
 
 1. A rollback **MUST** be verified against the same automated health checks required of any deployment, supplemented by manual testing where warranted, before it is deemed successful.
 
@@ -81,7 +81,7 @@ These requirements set out how a rollback's own success is confirmed once it has
 
 ### Post-Rollback Review
 
-These requirements describe how a rollback feeds into a service's incident review and recovery-objective tracking.
+A rollback triggered by a failure is always classified as an incident, and its recovery time measured against the objective.
 
 1. A rollback triggered by a production failure **MUST** be classified as an incident for the purposes of root cause review, regardless of how quickly it was resolved.
 2. The time taken to complete a rollback **SHOULD** be measured against the service's defined recovery time objective, so a gap between actual and required recovery speed is identified and addressed.

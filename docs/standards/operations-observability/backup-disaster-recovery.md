@@ -8,7 +8,7 @@
 
 ### Recovery Strategy Selection
 
-These requirements set out how a service always has a defined disaster recovery strategy, chosen based on its defined RPO and RTO.
+A service's disaster recovery strategy is chosen deliberately during design, matched to its own RPO and RTO.
 
 1. A service's disaster recovery strategy **MUST** be decided during its design, not deferred until implementation or chosen reactively after a disaster occurs.
 2. Backup and restore **SHOULD** be chosen where a service's defined RPO and RTO can tolerate the time needed to provision infrastructure and restore data from backup.
@@ -25,7 +25,7 @@ These requirements set out how a service always has a defined disaster recovery 
 
 ### Backup Scope & Coverage
 
-These requirements set out how a service's data and configuration are identified for backup.
+Every data and configuration source a service depends on is identified and covered by backup before it goes to production.
 
 1. A service **MUST** identify the data and configuration it depends on to be restored to an operable state, and confirm each item is captured by a backup.
 2. A new data store or configuration source a service depends on **MUST** be added to that service's backup coverage before it is relied on in production.
@@ -34,7 +34,7 @@ These requirements set out how a service's data and configuration are identified
 
 ### Backup Frequency & Retention
 
-These requirements describe how a backup's frequency and retention period are set relative to a service's recovery objectives.
+A backup's frequency meets the service's RPO, and its retention period is defined, proportionate, and enforced.
 
 1. A backup's frequency **MUST** be set so that the maximum data loss between successive backups does not exceed the service's defined RPO.
 2. A backup's retention period **MUST** be defined and proportionate to the cost of retaining it and any applicable legal or regulatory retention requirement.
@@ -49,7 +49,7 @@ These requirements describe how a backup's frequency and retention period are se
 
 ### Backup Reliability
 
-These requirements address how a backup is created and its failure detected without depending on manual intervention.
+A backup is created automatically, and a failed backup automatically alerts the team responsible for it.
 
 1. A backup **MUST** be created through an automated process, rather than performed manually.
 2. A failed backup **MUST** automatically trigger an alert to the team responsible for the service it protects.
@@ -61,7 +61,7 @@ These requirements address how a backup is created and its failure detected with
 
 ### Backup Isolation & Redundancy
 
-These requirements cover how a backup is isolated from the system it protects, and how it is duplicated for redundancy purposes.
+A backup lives separately from the system it protects, protected from deletion, and kept as more than one copy.
 
 1. A backup **MUST** be kept in a location and access domain separate from the system it protects, so a failure, compromise, or deletion affecting that system does not also affect the backup.
 2. A backup **MUST** be protected against modification or deletion throughout its retention period, even from a person or process with administrative access to the system it protects.
@@ -74,7 +74,7 @@ These requirements cover how a backup is isolated from the system it protects, a
 
 ### Infrastructure Provisioning for Recovery
 
-These requirements guide how a service's infrastructure is defined for quick, reliable provisioning during a disaster.
+A service's infrastructure provisions from its own code definition, with that time accounted for in its RTO.
 
 1. The infrastructure a service depends on to be restored **MUST** be capable of being provisioned from its own code definition, so a disaster recovery plan does not depend on undocumented manual action to rebuild it.
 2. Where a service's infrastructure is not already running, the service's defined RTO **MUST** account for the time needed to provision that infrastructure from its code definition.
@@ -86,7 +86,7 @@ These requirements guide how a service's infrastructure is defined for quick, re
 
 ### Disaster Recovery Plan
 
-These requirements guide how a service has a documented disaster recovery plan in place before it is needed.
+A service has a documented recovery plan, maintained as a runbook, before it is ever actually needed.
 
 1. A service **MUST** have a documented disaster recovery plan describing how it is restored following a disaster affecting its normal operation, including a scenario in which a site it depends on is unavailable.
 2. A disaster recovery plan **MUST** record the service's defined recovery objectives, so its recovery capability can be measured against them.
@@ -102,7 +102,7 @@ These requirements guide how a service has a documented disaster recovery plan i
 
 ### Disaster Recovery Validation
 
-These requirements set out how a service's recovery capability is proven through periodic, realistic testing.
+A service's recovery capability is tested periodically against realistic conditions, and the result measured against its objectives.
 
 1. A service's recovery capability, from an individual backup restore or standby failover to a full simulated site loss, **MUST** be exercised periodically against production, or a non-production environment representative of production, to confirm it meets its recovery objectives.
 2. A service's infrastructure provisioning and deployment **SHOULD** be regularly exercised in a lower or ephemeral environment, without manual intervention, so a gap in its code definition is caught early.

@@ -8,7 +8,7 @@
 
 ### Data Model & Key Strategy
 
-These requirements set out how a schema's data model and key strategy are chosen to fit a workload's actual access patterns.
+A schema's data model and key strategy fit the workload's actual access patterns, not a default structure.
 
 1. A schema's data model, whether relational, document, key-value, wide-column, or another structure, **MUST** be selected based on a workload's actual access patterns, consistency requirements, and query needs.
 2. A relational schema **SHOULD** be normalised to at least Third Normal Form (3NF) to eliminate redundant and inconsistent data, with denormalisation applied only where a specific, demonstrated performance need justifies it.
@@ -17,7 +17,7 @@ These requirements set out how a schema's data model and key strategy are chosen
 
 ### Data Type Selection
 
-These requirements describe how a column or field's data type is chosen, so storage is used efficiently and data is represented accurately.
+A column's data type, encoding, and nullability accurately represent its value and use storage efficiently.
 
 1. A column or field **MUST** use the data type that most accurately fits the value it stores and its expected range, avoiding wasteful storage consumption at scale.
 2. A date or timestamp value **MUST** be stored in UTC using a date-time or timestamp type, not as a Unix epoch integer or in a local timezone, so it can be reliably converted to any timezone.
@@ -32,7 +32,7 @@ These requirements describe how a column or field's data type is chosen, so stor
 
 ### Schema Ownership
 
-This requirement addresses how a schema is owned by exactly one service.
+A schema is owned by exactly one service; no other service accesses or modifies it directly.
 
 1. A schema **MUST** be owned by exactly one service; another service **MUST NOT** directly access or modify a data store it does not own.
 
@@ -42,7 +42,7 @@ This requirement addresses how a schema is owned by exactly one service.
 
 ### Schema Logic & Portability
 
-These requirements guide how a relational schema's logic is implemented and kept portable across database engines.
+A relational schema enforces integrity through constraints, and its SQL stays portable across database engines.
 
 1. In a relational database, referential integrity **MUST** be enforced using primary key, foreign key, and other applicable constraints, not application code alone.
 2. A trigger **SHOULD NOT** be used; a trigger **MAY** be used only where no other mechanism can achieve the same outcome, since a trigger introduces control flow that is not visible in application code.
@@ -56,14 +56,14 @@ These requirements guide how a relational schema's logic is implemented and kept
 
 ### Traceability & Deletion Representation
 
-These requirements cover how a change to decision-informing data is traced, and how a table or collection's deletion is represented.
+Decision-informing data carries an audit trail, and a table's deletion approach is a deliberate, documented choice.
 
 1. A table or collection whose data informs an operational, financial, or clinical decision **MUST** include audit columns, such as created and last-modified timestamps, and identify the actor or process responsible for a change.
 2. A table or collection's deletion representation, whether a soft delete using a flag or timestamp column or a hard delete that removes the row, **MUST** be a deliberate, documented choice.
 
 ### Index Alignment
 
-These requirements set out how an index is kept aligned with a schema's actual query patterns.
+An index matches the schema's actual query patterns, and is reassessed when those patterns change.
 
 1. An index **SHOULD** be designed to support a schema's actual query patterns.
 2. An index **MUST** be reassessed when the query patterns it supports change materially, since an unused or mismatched index still carries a write and storage cost.
@@ -74,7 +74,7 @@ These requirements set out how an index is kept aligned with a schema's actual q
 
 ### Non-Breaking Schema Changes
 
-These requirements describe how a schema change is kept additive and backward-compatible.
+A schema change stays additive and compatible with instances still running the previous code during rollout.
 
 1. An additive schema change, such as adding a new optional column or field, **SHOULD** be preferred over a change that alters or removes an existing structure.
 2. A schema change **MUST** remain compatible with instances of the owning service still running previous code during a rolling deployment, so old and new instances can operate correctly until the deployment completes.
@@ -86,14 +86,14 @@ These requirements describe how a schema change is kept additive and backward-co
 
 ### Breaking Schema Changes
 
-These requirements address how a non-additive schema change is safely rolled out.
+A non-additive schema change rolls out through expand-and-contract, keeping the old structure until rollback is no longer needed.
 
 1. Where a schema change cannot be made additively, it **SHOULD** use an expand-and-contract approach: add the new structure alongside the old, migrate the owning service's code to use it, then retire the old structure.
 2. The old structure **SHOULD** remain in place for a defined period after the owning service's code is fully upgraded, so a rollback to previous code remains possible without data loss.
 
 ### Automated Migration Tooling
 
-These requirements cover how a schema change is applied consistently through version-controlled, tested migration code.
+A schema change is version-controlled migration code, applied consistently across environments, and tested first.
 
 1. A schema change **MUST** be defined as version-controlled, reviewable migration code, not applied through manual or ad hoc execution against a live data store.
 2. A migration **MUST** be applied consistently across environments using the same automated process, so an environment's schema cannot silently diverge from what its migration history describes.

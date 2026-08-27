@@ -8,7 +8,7 @@
 
 ### Test Data Sourcing
 
-These requirements set out how a non-production environment is populated with test data, and the safeguards that apply when a production-derived source is used.
+A non-production environment is populated with synthetic or fixture data first, and a production extract only where authorised and logged.
 
 1. Synthetic or fixture data **SHOULD** be preferred over a de-identified or masked production extract, which **SHOULD** be reserved for a need synthetic data cannot satisfy, such as performance testing's realistic volume or reproducing a specific production issue.
 2. A non-production environment **MUST** be populated only from synthetic data, a de-identified or masked production extract, or a purpose-built fixture dataset.
@@ -23,7 +23,7 @@ These requirements set out how a non-production environment is populated with te
 
 ### Test Data Scope
 
-These requirements describe how a test dataset is scoped to the test it supports, rather than defaulting to whatever data is already available.
+A test dataset is scoped and representative of what its own test actually needs, not a full-scale copy of production.
 
 1. A test dataset **MUST** be representative of the conditions relevant to the test it supports, such as realistic volume, distribution, or boundary values.
 2. A test dataset **SHOULD** be limited to the volume and scope a test genuinely requires, not a full-scale replica of production.
@@ -35,7 +35,7 @@ These requirements describe how a test dataset is scoped to the test it supports
 
 ### Test Data Lifecycle
 
-These requirements address how a test dataset is provisioned and deleted without disrupting production.
+A test dataset provisions and deletes through an automated process, without an individual needing direct production access.
 
 1. Provisioning and deletion of a test dataset **MUST** each be available to a team on demand through an automated process that is documented well enough for the team to operate and maintain it.
 2. An individual team member **MUST NOT** need personal access to a production environment to run this process; the access required **MUST** be held by the process itself, scoped to least privilege.

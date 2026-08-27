@@ -8,7 +8,7 @@
 
 ### Flag Declaration & Ownership
 
-These requirements set out how a flag is declared, owned, and governed before it controls any capability.
+A flag is declared as version-controlled code, with a named owner and a tracked removal date, before it controls anything.
 
 1. A flag **MUST** be declared, with a unique name, a defined purpose, and an accountable owning team, before it is used to control any capability.
 2. A flag's expected removal date **MUST** be recorded in a linked, tracked work item before it is used to control any capability.
@@ -32,7 +32,7 @@ These requirements set out how a flag is declared, owned, and governed before it
 
 ### Justified, Single-Capability Use
 
-These requirements describe how a flag's introduction stays justified, and its relationship to the capability it controls stays one-to-one over its lifetime.
+A flag exists for a genuine need and controls exactly one capability for its whole lifetime, never reused for another.
 
 1. A flag **MUST** be justified by a genuine operational, delivery, or risk-management need; it **MUST NOT** be introduced as habit or as a substitute for sound design, adequate testing, or disciplined release control.
 2. A capability spanning multiple domains or services **SHOULD** be controlled by a single flag, evaluated consistently across all of them, rather than by an independent flag per domain or service.
@@ -44,7 +44,7 @@ These requirements describe how a flag's introduction stays justified, and its r
 
 ### Flag Use Boundaries
 
-These requirements address how a flag's use is bounded and how its own states remain independently verifiable.
+A flag never substitutes for testing or masks unstable code, and both of its states stay independently testable.
 
 1. A flag **MUST NOT** be used to defer testing required for the capability it controls, avoid remediating a known defect, conceal incomplete work indefinitely, or mask unstable code.
 2. A flag **MUST NOT** be retained as a long-lived toggle to permanently differentiate a capability by user or cohort; that is an authorisation decision, served by an access control mechanism instead.
@@ -61,7 +61,7 @@ These requirements address how a flag's use is bounded and how its own states re
 
 ### Decoupling Flag State from Deployment
 
-These requirements describe how a flag's state changes independently of the artifact that packages the capability it controls, without a new build or deployment.
+A flag's state changes without a new build or deployment, propagating consistently to every running instance.
 
 1. A flag **MUST** be changeable without rebuilding or redeploying the artifact that packages the capability it controls.
 2. A change to a flag's state **MUST** propagate to every running instance of a service within a bounded period, so a request's outcome does not depend on which instance served it.
@@ -78,7 +78,7 @@ These requirements describe how a flag's state changes independently of the arti
 
 ### Flag Change Control
 
-These requirements cover how authorisation for a production flag change is granted.
+A production flag change is authorised for the specific individual or pipeline making it, at the same rigor as a deployment.
 
 1. A flag's production state **MUST** be changeable only by an individual or automated process authorised for that flag, such as its owning team or an approved deployment pipeline.
 2. A flag change materially equivalent to a deployment, such as an operational toggle's full activation in production, **MUST** be approved through the organisation's formal change control process; a release toggle reaching full rollout is instead a release and **MUST** be authorised as one.
@@ -94,7 +94,7 @@ These requirements cover how authorisation for a production flag change is grant
 
 ### Safe Default & Failure Behaviour
 
-These requirements guide how a service behaves when a flag fails to evaluate.
+A flag has an explicit, least-disruptive default for when it fails to evaluate, and a service never crashes because of it.
 
 1. A flag **MUST** have an explicit default state for when its state is absent, stale, misconfigured, or otherwise fails to evaluate, such as when the flag management platform is unreachable.
 2. A service **MUST NOT** crash or behave unpredictably when a flag fails to evaluate.
@@ -107,7 +107,7 @@ These requirements guide how a service behaves when a flag fails to evaluate.
 
 ### Evaluation Data Protection
 
-These requirements address how data involved in a flag's evaluation stays limited and protected from exposure.
+Data sent to evaluate a flag stays limited to what evaluation needs, and its targeting rules never reach an untrusted client.
 
 1. Data sent to the flag management platform to evaluate a flag, such as a user or cohort identifier, **MUST** be limited to what evaluation requires and **MUST NOT** include personal or sensitive data beyond that need.
 2. A flag's targeting rules and evaluation context **MUST NOT** be exposed to an untrusted client, such as a browser or mobile application; a client-facing surface **MUST** receive only the evaluated outcome, not the underlying configuration.
@@ -119,7 +119,7 @@ These requirements address how data involved in a flag's evaluation stays limite
 
 ### Flag State Observability
 
-These requirements set out how a flag's state is captured alongside other operational telemetry.
+The flags affecting a service at any point in time are captured, so an incident can be correlated with their state.
 
 1. The set of flags and their states affecting a service at a given point in time **MUST** be captured, so an incident or anomaly can be correlated with the flag configuration in effect when it occurred.
 2. Telemetry distinguishing behaviour by flag state **MUST** be captured for a flag used in a progressive or cohort-based rollout, so its impact on each cohort can be evaluated independently.
@@ -132,7 +132,7 @@ These requirements set out how a flag's state is captured alongside other operat
 
 ### Flag Retirement & Proliferation Control
 
-These requirements cover how a flag no longer needed is removed, and how flags sharing a code path stay limited and independent.
+A flag is short-lived and removed, code path and all, once its rollout completes or its decision is finalised.
 
 1. A flag **MUST** be short-lived, regardless of its purpose.
 2. A flag **MUST** be removed once its rollout is complete or a decision on the capability it controls has been finalised.

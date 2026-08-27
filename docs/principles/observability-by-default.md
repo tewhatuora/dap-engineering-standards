@@ -8,14 +8,14 @@
 
 ### Early Observability Design
 
-These principles set out how observability is built in from the start, rather than added reactively after an incident.
+Observability is built in from the start, not added reactively once a production incident forces the question.
 
 1. Observability **MUST** be treated as a first-class design requirement, established during design and development so it does not need to be added reactively after a production incident.
 2. A service or feature change **MUST NOT** be considered complete until its logging, metrics, and tracing instrumentation is in place.
 
 ### Signal Coverage
 
-These principles describe how a service emits enough logs, metrics, and traces to determine its behaviour, health, and performance.
+A service emits enough logs, metrics, and traces to explain its own behaviour and its dependencies, without inspecting running state.
 
 1. A service **MUST** emit structured logs, metrics, and traces sufficient to determine its behaviour, health, and performance without requiring direct inspection of its running state.
 2. Signal coverage **MUST** extend to a service's dependencies and integration points, not only its own internal logic.
@@ -27,7 +27,7 @@ These principles describe how a service emits enough logs, metrics, and traces t
 
 ### Cross-Service Correlation
 
-These principles address how telemetry becomes correlatable across service boundaries, so a single transaction is traced end-to-end.
+Telemetry stays correlatable across service boundaries through a shared identifier, propagated to every downstream call.
 
 1. Telemetry emitted across service boundaries **MUST** be correlatable using a shared identifier, such as a trace or request identifier, to support end-to-end diagnosis of a single transaction.
 2. A service **MUST** propagate any correlation identifier it receives to every downstream call it makes.
@@ -38,7 +38,7 @@ These principles address how telemetry becomes correlatable across service bound
 
 ### Consistent Instrumentation Across Services
 
-These principles set out how instrumentation is standardised across services, rather than left to ad hoc, per-team conventions.
+Instrumentation follows one organisation-defined approach, not an ad hoc, per-team convention a new service invents.
 
 1. Instrumentation **MUST** follow a consistent, organisation-defined approach across services rather than ad hoc, per-team conventions, so telemetry remains comparable and interoperable.
 2. A new service **MUST** adopt the established instrumentation approach; an alternative approach **MUST NOT** be introduced without justification.
@@ -50,7 +50,7 @@ These principles set out how instrumentation is standardised across services, ra
 
 ### Actionable, Low-Noise Telemetry
 
-These principles cover how telemetry is limited to what is actionable, tied to real impact, and free of unnecessary noise.
+Telemetry stays actionable and tied to real impact; a signal that informs no decision is not collected at all.
 
 1. Telemetry **MUST** be actionable; a signal that does not inform a decision or response **SHOULD NOT** be collected or alerted on.
 2. Alerting **SHOULD** be tied to observable user or business impact rather than raw infrastructure metrics alone, to avoid alert fatigue.
@@ -62,7 +62,7 @@ These principles cover how telemetry is limited to what is actionable, tied to r
 
 ### Incident Detection & Response
 
-These principles describe how an operational issue is detected early and incident-response telemetry is validated in advance.
+Observability detects an operational issue as early as possible, and its incident telemetry is tested before it is ever needed.
 
 1. Observability **MUST** provide sufficient signal to detect an operational issue as early as possible, rather than relying primarily on user-reported problems.
 2. Telemetry and dashboards relied on for incident response **MUST** be tested and validated in advance, not assumed to work correctly when first needed during an incident.
@@ -74,7 +74,7 @@ These principles describe how an operational issue is detected early and inciden
 
 ### Telemetry Data Minimisation
 
-These principles address how personal, health, or sensitive data captured in telemetry is minimised.
+Telemetry never captures personal or health data beyond what observability strictly needs, masked where it cannot be avoided.
 
 1. Telemetry **MUST NOT** capture personal, health, or other sensitive data beyond what is strictly necessary for observability purposes.
 2. Where sensitive data cannot be avoided in telemetry, it **MUST** be masked, redacted, or tokenised before it is recorded or transmitted.
@@ -85,7 +85,7 @@ These principles address how personal, health, or sensitive data captured in tel
 
 ### Team-Owned Observability
 
-These principles guide how observability ownership is assigned to the team that builds and operates a service.
+The team that builds and operates a service owns its observability, and that ownership transfers with the service.
 
 1. The team that builds and operates a service **MUST** own the observability of that service rather than relying solely on a separate, central team.
 2. Observability ownership **MUST** transfer with a service when responsibility for it is handed over between teams; it **MUST NOT** lapse during a handover.

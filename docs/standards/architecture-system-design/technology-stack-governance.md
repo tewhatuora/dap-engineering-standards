@@ -8,7 +8,7 @@
 
 ### Justified Technology Selection
 
-These requirements set out how a technology is selected for a clear, justified purpose, and how its risk and cost are weighed against the value it provides.
+A technology is chosen for a clear, explainable purpose, with its risk and cost weighed against its value.
 
 1. A technology **MUST** be selected for a clear engineering purpose; the team responsible for the service it supports **MUST** be able to explain why it is used and what problem it solves.
 2. The degree of vendor lock-in, supply chain risk, operational effort, and cost a technology choice would introduce **MUST** be weighed against the value it provides before it is adopted.
@@ -21,7 +21,7 @@ These requirements set out how a technology is selected for a clear, justified p
 
 ### Supportable & Proven Technology
 
-These requirements address how a proven, actively maintained technology is preferred over a newer alternative, and how working knowledge of it extends beyond a single team member.
+A proven, actively maintained technology is preferred, and working knowledge of it extends beyond one team member.
 
 1. A mature, proven technology **SHOULD** be preferred over a newer alternative unless the newer option provides clear value that justifies the additional risk it introduces.
 2. A technology **SHOULD** show evidence of active maintenance and support from its publisher, such as regular updates or responsive issue handling; publisher size or reputation alone **SHOULD NOT** substitute for this evidence.
@@ -29,7 +29,7 @@ These requirements address how a proven, actively maintained technology is prefe
 
 ### Technology Lifecycle Classification
 
-These requirements describe how a technology in use is classified as approved, trial, or deprecated, and kept current throughout its lifecycle.
+Every technology in use is classified as approved, trial, or deprecated, and reassessed as that status changes.
 
 1. Every technology in use **MUST** be classified as approved, trial, or deprecated. An approved technology **MUST** be the default choice for new development. A trial technology **MAY** be used for limited, justified experimentation or constrained adoption. A deprecated technology **MUST NOT** be used in new development and **SHOULD** be targeted for phased retirement.
 2. An approved technology **SHOULD** be reassessed and reclassified as deprecated if it no longer meets the criteria for approval, such as a lapse in maintenance or support, a material increase in its supply chain risk, or a materially better alternative becoming available.
@@ -42,7 +42,7 @@ These requirements describe how a technology in use is classified as approved, t
 
 ### Technology Introduction & Approval
 
-These requirements guide how a new technology, however it was proposed, is routed through the organisation's approval process before adoption.
+A new technology, however it was proposed, goes through the same approval process before it is adopted.
 
 1. A technology not already classified as approved or trial in the register **MUST** be reviewed and approved through the organisation's governance process before it is adopted, with the decision and its reasoning captured in the [DACI Register](https://mohits.atlassian.net/wiki/spaces/SEDSD/pages/5078091042/Decisions+Catalogue).
 2. A technology introduced through AI-generated or AI-assisted suggestions **MUST** undergo the same evaluation and approval as a technology proposed by an engineer; it **MUST NOT** be adopted solely because it was AI-suggested.
@@ -54,7 +54,7 @@ These requirements guide how a new technology, however it was proposed, is route
 
 ### Deprecation & Migration Planning
 
-This requirement covers how a deprecated technology still in use is planned for migration, replacement, or retirement.
+A deprecated technology still in use has a planned migration, replacement, or retirement, prioritised by risk.
 
 1. Where a service still relies on a deprecated technology, the responsible team **SHOULD** plan its migration, replacement, or retirement, prioritising cases with known, unresolved security vulnerabilities.
 

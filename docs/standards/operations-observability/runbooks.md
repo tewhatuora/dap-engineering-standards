@@ -8,7 +8,7 @@
 
 ### Runbook Coverage
 
-These requirements set out how a known failure mode and a high-risk or recurring operational procedure are matched to a documented runbook.
+A known failure mode or high-risk procedure has a documented runbook, followed as the response rather than reinvented each time.
 
 1. A known or recurring failure mode referenced by an alert **MUST** have a corresponding runbook describing its response.
 2. A high-risk or recurring operational procedure, such as remediating a data quality issue or executing a standby failover, **MUST** be captured in a runbook rather than left to informal or undocumented knowledge.
@@ -22,7 +22,7 @@ These requirements set out how a known failure mode and a high-risk or recurring
 
 ### Runbook Content
 
-These requirements describe how a runbook is written to be executable by a team member or an AI tool, whether a directed assistant or an autonomous AI agent.
+A runbook spells out its steps, applicability, and resolution outcome in enough detail for a person or an AI tool to execute.
 
 1. A runbook **MUST** describe the steps needed to diagnose and resolve a failure mode or carry out an operational procedure, in enough detail to execute them.
 2. A runbook **MUST** state the condition under which it applies and the outcome confirming the failure mode's resolution or the operational procedure's completion.
@@ -34,7 +34,7 @@ These requirements describe how a runbook is written to be executable by a team 
 
 ### Runbook Currency
 
-These requirements address how a runbook remains accurate and relevant, as the failure mode, procedure, or service it documents changes.
+A runbook is version-controlled alongside its service, updated in the same change, and retired once it no longer applies.
 
 1. A runbook **MUST** be version-controlled as `Markdown` within the same repository as the service it is documented for.
 2. A runbook **MUST** be updated in the same change that alters the procedure, service behaviour, or failure mode it documents.
@@ -48,7 +48,7 @@ These requirements address how a runbook remains accurate and relevant, as the f
 
 ### Runbook Discoverability
 
-These requirements cover how a runbook is reachable from the alert, dashboard, or other trigger condition prompting its use, or found independently of any such trigger.
+An alert or dashboard links directly to its runbook, and every runbook is also published somewhere findable on its own.
 
 1. An alert or dashboard indicator tied to a failure mode **MUST** link directly to the runbook covering it, rather than leaving its recipient, whether a team member or an AI tool, without direct access to the runbook.
 2. A runbook **MUST** be published through one of the organisation's established documentation sites, so it can be found without requiring direct access to its source repository.
@@ -61,7 +61,7 @@ These requirements cover how a runbook is reachable from the alert, dashboard, o
 
 ### Runbook Validation
 
-These requirements guide how a runbook's steps are proven correct, and how problems found in them are corrected.
+A runbook is tested in a representative environment, and any gap found is corrected immediately, not deferred.
 
 1. A runbook **MUST** be tested in a representative non-production environment when first written and whenever the failure mode, procedure, or service it documents changes.
 2. A gap or inaccuracy found while testing a runbook **MUST** be corrected immediately, in place, rather than deferred until the runbook is next relied on.
@@ -74,7 +74,7 @@ These requirements guide how a runbook's steps are proven correct, and how probl
 
 ### Runbook Automation
 
-These requirements set out how a runbook is maintained once part or all of what it describes is automated.
+A failure response is automated where possible, and its runbook still documents how to confirm and intervene in that automation.
 
 1. A failure mode's response or an operational procedure's execution **SHOULD** be automated rather than a runbook continuing to depend on a team member or an AI tool to carry out its steps manually.
 2. Where automated, the runbook **MUST** document how to confirm the automation executed correctly and how to intervene where it does not, rather than being discarded.

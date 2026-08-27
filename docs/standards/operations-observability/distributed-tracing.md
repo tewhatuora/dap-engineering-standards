@@ -8,7 +8,7 @@
 
 ### Trace Context Propagation
 
-These requirements set out how a trace identifier is generated and carried across every boundary a transaction crosses.
+A trace identifier propagates across every boundary a transaction crosses, using a standard, interoperable format.
 
 1. A service **MUST** propagate a transaction's trace identifier, whether carried by the transaction or newly generated, to every downstream call, including one across an asynchronous boundary such as a message queue or event stream.
 2. Trace context **SHOULD** be propagated using a standard, interoperable format, such as [W3C Trace Context](https://www.w3.org/TR/trace-context/), rather than a bespoke or service-specific header scheme.
@@ -22,7 +22,7 @@ These requirements set out how a trace identifier is generated and carried acros
 
 ### Span Structure
 
-These requirements describe how a span is structured and populated so a trace remains accurate and usable.
+A span's structure mirrors the transaction's real call graph, with a consistent name and any failure clearly recorded.
 
 1. A span's start and end boundaries, and its parent-child relationship to other spans, **MUST** reflect the actual call graph of the transaction.
 2. When a call or message crosses between two instrumented services, each side of that crossing **MUST** be recorded as its own span: the client and server for a call, or the producer and consumer for a message. A single span **MUST NOT** represent both sides, so a trace distinguishes an outgoing call from its incoming handling.
@@ -36,7 +36,7 @@ These requirements describe how a span is structured and populated so a trace re
 
 ### Trace Sampling
 
-These requirements guide how a sampling decision is made and followed across every service a trace passes through.
+A trace's sampling decision is made deliberately once, and every service it passes through honours that same decision.
 
 1. A service **MUST** decide deliberately how much of its traffic to keep as traces, weighing transaction volume against how valuable that data is, rather than keeping or dropping traces without a clear, defined basis.
 2. Once a decision is made to keep or drop a trace, every service that transaction passes through **MUST** follow that same decision, rather than each service deciding independently for itself.

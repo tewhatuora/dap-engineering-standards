@@ -8,7 +8,7 @@
 
 ### Mandatory, Independent Review
 
-These requirements set out how a change is independently reviewed and approved before it merges.
+Every change is reviewed and approved by someone other than its author before it merges, regardless of size or urgency.
 
 1. A change **MUST** be reviewed and approved by at least one reviewer, other than its author, familiar with the affected code, system, or domain, before it is merged into a shared or protected branch.
 2. Approval **MUST NOT** be granted as part of a reciprocal arrangement in which reviewers approve each other's changes without applying meaningful scrutiny.
@@ -21,7 +21,7 @@ These requirements set out how a change is independently reviewed and approved b
 
 ### Risk-Proportionate Review Rigor
 
-These requirements describe how review rigor scales with the risk a change carries.
+A higher-risk change receives broader scrutiny and a reviewer with expertise matching that risk.
 
 1. A change **MUST** be classified as higher-risk if it is security-relevant, makes a breaking schema change, spans multiple services or components, or is hard to roll back.
 2. Review scrutiny for a higher-risk change **MUST** be broader than for a routine change, covering its impact and reversibility.
@@ -30,7 +30,7 @@ These requirements describe how review rigor scales with the risk a change carri
 
 ### Review Across Code Types
 
-This requirement sets out how the same review process applies across every kind of code a repository holds.
+The same review process applies to every kind of code a repository holds, not just its application code.
 
 1. The review and approval process **MUST** apply equally to application code, infrastructure code, configuration, pipeline definitions, and documentation held in the same repository.
 
@@ -40,7 +40,7 @@ This requirement sets out how the same review process applies across every kind 
 
 ### Assessing Correctness, Complexity & Security
 
-These requirements cover how a change is evaluated beyond whether it merely functions as intended.
+A reviewer checks a change's correctness, complexity, and security, building on what automated tooling already found.
 
 1. A reviewer **MUST** confirm a change is functionally correct and meets its stated requirement before approving it.
 2. A reviewer **MUST** assess whether a change introduces unnecessary complexity or departs from adopted coding and style conventions.
@@ -57,7 +57,7 @@ These requirements cover how a change is evaluated beyond whether it merely func
 
 ### Assessing Operational Readiness
 
-These requirements set out how a change's operational readiness is considered during review, beyond its immediate correctness.
+A reviewer also considers a change's rollback, observability, performance, and documentation impact, not just its correctness.
 
 1. A reviewer **SHOULD** consider whether a change can be rolled back if it does not behave as expected.
 2. A reviewer **SHOULD** consider whether a change meets its observability requirements, such as logging, metrics, or alerting adequate to detect a problem with it after release.
@@ -78,7 +78,7 @@ These requirements set out how a change's operational readiness is considered du
 
 ### Right-Sized, Reviewable Changes
 
-These requirements guide how a change stays scoped and described well enough for a reviewer to assess its effect.
+A change stays scoped to the smallest reviewable unit, described well enough to assess without consulting its author.
 
 1. A change **SHOULD** be scoped to the smallest coherent unit of work that can be reviewed and merged independently.
 2. A change description **SHOULD** give a reviewer enough context to understand its purpose, effect, and validation without needing to consult the author directly.
@@ -91,7 +91,7 @@ These requirements guide how a change stays scoped and described well enough for
 
 ### Resolving Review Feedback Before Merge
 
-These requirements set out how review feedback is resolved before a change merges, and how a materially revised change is re-reviewed.
+A change does not merge while blocking feedback remains open, and a materially revised change is re-reviewed.
 
 1. A reviewer **MUST** distinguish feedback that must be resolved before approval (blocking feedback) from feedback that is advisory or optional.
 2. Advisory feedback deferred rather than addressed before merge **SHOULD** be recorded in a tracking system so it is not lost.
@@ -100,14 +100,14 @@ These requirements set out how review feedback is resolved before a change merge
 
 ### Constructive Review Conduct
 
-These requirements address how feedback stays specific and constructive, and how review stays rigorous without becoming adversarial.
+Review feedback stays specific enough to act on, and rigorous without becoming adversarial.
 
 1. Review feedback **MUST** be specific enough that the author understands both the concern and the change needed to resolve it.
 2. Review **SHOULD** remain rigorous without being adversarial; its purpose is to improve the change and the shared codebase, not to create friction between the author and reviewer.
 
 ### Timely Review Turnaround
 
-These requirements cover how a review request is actioned before it delays the change it blocks.
+A review request is actioned within an agreed timeframe, or reassigned to a reviewer who can.
 
 1. A review request **SHOULD** be actioned within an agreed, reasonable timeframe appropriate to the repository or team.
 2. A reviewer unable to review a request within that timeframe **SHOULD** reassign or flag it so another reviewer can act on it.
@@ -118,7 +118,7 @@ These requirements cover how a review request is actioned before it delays the c
 
 ### Emergency Change Review
 
-These requirements guide how a change merges under an expedited review path during a genuine emergency, without this becoming a routine shortcut around normal review.
+An emergency change can merge through an expedited, auditable review path, and always receives a postmortem afterwards.
 
 1. A change **MAY** merge under an expedited review path only where normal review would materially increase operational or safety risk, and only through an approved, auditable emergency process.
 2. Review **MUST** still be performed to the greatest extent practical before an emergency change merges.
@@ -130,7 +130,7 @@ These requirements guide how a change merges under an expedited review path duri
 
 ### Approval Recording & Traceability
 
-These requirements describe how an approval decision stays explicit, attributable, and traceable to the change it covers.
+An approval is recorded through the merge request mechanism, attributable to its reviewer and traceable to the change.
 
 1. Approval **MUST** be recorded through the repository's merge request review mechanism, attributable to the reviewer who granted it.
 2. An approval record **MUST** remain traceable to the change it covers for as long as the change's history is retained.

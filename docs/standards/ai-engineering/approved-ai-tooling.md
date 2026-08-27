@@ -8,7 +8,7 @@
 
 ### Approved Tooling Register
 
-These requirements set out which AI tools are approved for engineering use; an unlisted AI tool **MUST NOT** be used for organisational work.
+Only a tool listed on the Approved Tooling Register is available for engineering use.
 
 | Tool | Type | Licence Tier | Reason for Use |
 |---|---|---|---|
@@ -18,7 +18,7 @@ These requirements set out which AI tools are approved for engineering use; an u
 
 ### Prohibition of Unapproved Tooling
 
-These requirements address how use of an AI tool outside the Approved Tooling Register is prohibited.
+An unapproved or shadow AI tool is never used for organisational work, no retroactive justification.
 
 1. Personnel **MUST NOT** use AI tools not on the Approved Tooling Register for any activity involving organisational code, data, or systems.
 2. Use of unapproved ("shadow AI") tools, including consumer-grade or free public AI services, for organisational engineering work is prohibited.
@@ -30,7 +30,7 @@ These requirements address how use of an AI tool outside the Approved Tooling Re
 
 ### Licensing & Provisioning
 
-These requirements describe how AI tooling access is tied to organisation-provisioned, individually attributable licences.
+AI tooling access is tied to an individually attributable, organisation-provisioned licence, never a personal account.
 
 1. AI tools **MUST** only be used under licences provisioned and administered by Health New Zealand and tied to the individual's organisational identity.
 2. Personal, free-tier, trial, or other independently obtained accounts **MUST NOT** be used to access AI tooling for organisational work, even where the tool is on the Approved Tooling Register.

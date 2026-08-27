@@ -8,7 +8,7 @@
 
 ### Style Guide Adoption
 
-These requirements set out how a style guide is chosen for a codebase and made discoverable.
+A codebase adopts one defined, discoverable style guide per language, preferring a widely recognised one.
 
 1. A codebase **MUST** adopt a single, defined style guide for each programming language in use.
 2. A widely recognised, published style guide, such as `PEP 8` for Python or the `Google Style Guides` for Java, **SHOULD** be preferred over a bespoke or self-written one for a language it already covers.
@@ -16,7 +16,7 @@ These requirements set out how a style guide is chosen for a codebase and made d
 
 ### Consistent Formatting & Layout
 
-These requirements address how formatting and layout stay consistent across a codebase.
+Formatting and layout follow the adopted style guide consistently, applied deterministically by automated tooling.
 
 1. A formatting or layout concern defined by the adopted style guide, such as indentation, line length, or whitespace, **MUST** be applied consistently throughout a codebase.
 2. Where an individual author's formatting or layout preference conflicts with the adopted style guide, the style guide **MUST** take precedence.
@@ -24,7 +24,7 @@ These requirements address how formatting and layout stay consistent across a co
 
 ### Repository-Controlled Formatting Configuration
 
-These requirements describe how formatting configuration is held and scoped within a codebase, rather than left to individual tooling.
+Formatting configuration lives in a codebase's own versioned settings, not an individual's local editor.
 
 1. Formatting behaviour **MUST** be defined in a versioned configuration held within a codebase, such as an `.editorconfig` file, not left to an individual contributor's local editor or workstation settings.
 2. A codebase **SHOULD** define formatting configuration for each in-scope file type it holds.
@@ -37,7 +37,7 @@ These requirements describe how formatting configuration is held and scoped with
 
 ### Consistent Application Across a Codebase
 
-These requirements cover how the adopted style guide is applied uniformly across every kind of code in a codebase.
+The adopted style guide applies uniformly, whether code was written by an engineer or produced with AI assistance.
 
 1. The adopted style guide **MUST** apply uniformly across a codebase, regardless of whether a given part of it was authored by an engineer or produced with AI assistance.
 2. Coding standards **MUST** be applied to every kind of code a repository holds, including application code, infrastructure code, and pipeline definitions.
@@ -50,7 +50,7 @@ These requirements cover how the adopted style guide is applied uniformly across
 
 ### Code Comments & Inline Documentation
 
-These requirements guide how comments and inline documentation are used, so they add genuine clarity rather than noise.
+A comment explains why code exists, not what it already makes clear, and commented-out code is deleted, not kept.
 
 1. A comment **SHOULD** explain why a piece of code exists or behaves as it does, rather than restate what the code already makes clear.
 2. Commented-out code **MUST NOT** be left in a codebase; code no longer required **MUST** be deleted.
@@ -63,14 +63,14 @@ These requirements guide how comments and inline documentation are used, so they
 
 ### Formatting of Generated Files
 
-These requirements set out how a generated file's formatting is kept consistent with its generation process, rather than adjusted by hand.
+A generated file's formatting comes from its generation process, never a manual hand-edit.
 
 1. A generated file **SHOULD NOT** be manually reformatted; where it must conform to the adopted style guide, its generation process **SHOULD** be adjusted instead.
 2. Where a generated file is committed to a codebase, regenerating it without an underlying change **SHOULD NOT** produce an unnecessary formatting difference.
 
 ### Standards Automation
 
-These requirements address how coding standards are applied through automated tooling as engineering work proceeds, including when a tool is AI-assisted.
+Coding standards are applied through automated tooling as work proceeds, including code an AI tool formats.
 
 1. Coding standards **SHOULD** be applied through automated tooling, such as an IDE-integrated tool or a pre-commit hook.
 2. Formatting applied or modified by an AI tool **MUST** still conform to the adopted style guide through the same automated mechanism used for other content, not applied ad hoc by the tool itself.
@@ -83,7 +83,7 @@ These requirements address how coding standards are applied through automated to
 
 ### Formatting in Code Review
 
-These requirements describe how a formatting concern is kept out of code review's focus, since automated tooling addresses it instead.
+A formatting concern is automated tooling's job to catch, not a reviewer's.
 
 1. A reviewer **SHOULD NOT** be expected to identify or comment on a formatting concern that automated tooling could address instead.
 2. A formatting concern that recurs across multiple reviews **SHOULD** be treated as a signal that automation needs improvement.
@@ -94,7 +94,7 @@ These requirements describe how a formatting concern is kept out of code review'
 
 ### Formatting Change Separation
 
-These requirements cover how a formatting-only change is kept separate from a functional one, so each stays distinguishable in a codebase's history.
+A formatting-only change stays separate from a functional one, so each remains distinguishable in the history.
 
 1. A formatting-only change **SHOULD** be kept separate from a functional change, so the two remain distinguishable in the change history.
 2. A broad or codebase-wide reformatting change **SHOULD NOT** be combined with a refactor, feature change, or dependency upgrade in the same change.

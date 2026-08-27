@@ -8,7 +8,7 @@
 
 ### Automated Build & Test Execution
 
-These requirements set out how a change is built and its automated test suite executed without manual intervention.
+Every change automatically triggers a build and its full test suite, and a failing build or test always fails the pipeline.
 
 1. A change pushed to a shared branch, or proposed through a merge request, **MUST** trigger an automated build and execution of the automated test suite defined for the repository.
 2. A build or test run **MUST NOT** depend on a manual step to start once its trigger condition is met.
@@ -23,7 +23,7 @@ These requirements set out how a change is built and its automated test suite ex
 
 ### Minimum Pipeline Checks
 
-These requirements cover how a pipeline's required checks are scoped before a deployable artifact is produced.
+A pipeline building a deployable artifact scans it for security weaknesses, secrets, and vulnerable dependencies.
 
 1. A required check **MUST** run automatically as part of the pipeline, without depending on a manual step to start it.
 2. A pipeline that builds a deployable artifact **MUST** include static application security testing (SAST) of the source it builds.
@@ -47,7 +47,7 @@ These requirements cover how a pipeline's required checks are scoped before a de
 
 ### Pipeline Defined as Code
 
-These requirements describe how a pipeline's own definition is held and reviewed as version-controlled code.
+A pipeline's own definition is version-controlled code, reviewed like any other change and built from shared templates.
 
 1. A build pipeline's definition **MUST** be held as version-controlled configuration in the repository it builds.
 2. A change to a build pipeline's definition **MUST** go through the same review required for a code change.
@@ -63,7 +63,7 @@ These requirements describe how a pipeline's own definition is held and reviewed
 
 ### Pipeline as Merge Gate
 
-These requirements address how a change's merge into a shared branch depends on a passing pipeline run against its final state.
+A change only merges once its pipeline has passed against its final state, and a failing shared branch is fixed first.
 
 1. A merge request **MUST NOT** be merged into a shared branch until its pipeline run has completed and passed.
 2. Where a shared branch changes after a merge request's pipeline run started, that run **MUST** be repeated against the merge request's final state before the merge is permitted.
@@ -76,7 +76,7 @@ These requirements address how a change's merge into a shared branch depends on 
 
 ### Build Environment Integrity
 
-These requirements describe how a pipeline run executes in a clean, isolated, and consistently configured environment.
+A pipeline run executes in a freshly provisioned, isolated environment with a pinned, version-controlled toolchain.
 
 1. A pipeline run **MUST** execute in a freshly provisioned environment, so a prior run's leftover state cannot influence its result.
 2. A pipeline run's toolchain, including its compiler, runtime, and package manager versions, **MUST** be pinned to a known, consistent version.
@@ -91,7 +91,7 @@ These requirements describe how a pipeline run executes in a clean, isolated, an
 
 ### Pipeline Cost Efficiency
 
-These requirements guide how a pipeline is designed to keep its compute and storage consumption efficient.
+A pipeline caches dependencies between runs, and its compute and storage cost stays measured and bounded.
 
 1. A pipeline **SHOULD** persist a dependency cache between runs, keyed to a hash of the manifest or lock file that declares those dependencies, so unchanged dependencies are not re-downloaded or re-resolved on every run.
 2. A pipeline **SHOULD** measure the compute cost of its stages, so a disproportionately expensive stage, such as a long-running integration test suite, is identified and optimised.
@@ -107,7 +107,7 @@ These requirements guide how a pipeline is designed to keep its compute and stor
 
 ### Pipeline Performance & Check Ordering
 
-These requirements cover how a pipeline's checks are ordered and kept fast enough to return an early result.
+A pipeline runs its fastest, highest-signal checks first, and halts immediately at the stage that fails.
 
 1. A pipeline **SHOULD** run its fastest, highest-signal checks before a slower or more resource-intensive check, so an early failure is reported without waiting for the full pipeline to complete.
 2. A pipeline **MUST** halt at the stage that fails; it **MUST NOT** continue executing a later stage whose outcome depends on the failed stage having passed.
@@ -122,7 +122,7 @@ These requirements cover how a pipeline's checks are ordered and kept fast enoug
 
 ### Build Status Visibility
 
-These requirements guide how a pipeline's outcome stays visible to the team responsible for a change, with prompt notice of a failure.
+A pipeline's status stays visible to the team responsible for it, with a failure signalled promptly to whoever caused it.
 
 1. A pipeline's current and historical run status **MUST** be visible to every team member responsible for the branch or change it validates.
 2. A pipeline failure **MUST** be signalled to the individual whose change triggered it, through a notification mechanism that does not require actively checking the pipeline to discover it.
@@ -135,7 +135,7 @@ These requirements guide how a pipeline's outcome stays visible to the team resp
 
 ### Single Verified Build Artifact
 
-These requirements set out how a single build artifact, once verified, is promoted unchanged through later environments.
+A pipeline produces exactly one build artifact, promoted unchanged and never rebuilt for a later environment.
 
 1. A pipeline run that passes its required validation **MUST** produce exactly one build artifact for the change it validates.
 2. That artifact **MUST** be uniquely identified and stored so it can be retrieved unchanged for every later environment it is promoted to.
@@ -150,7 +150,7 @@ These requirements set out how a single build artifact, once verified, is promot
 
 ### Pipeline Execution Security
 
-These requirements address how a pipeline run's credentials and third-party components stay protected against untrusted or malicious use.
+A pipeline run receives only the minimum credentials its job needs, and a third-party component is pinned to a specific commit.
 
 1. A pipeline run **MUST** execute with only the minimum credentials and access required for the specific job it performs; a credential granting broader access **MUST NOT** be provided to every job by default.
 2. A secret or credential **MUST NOT** be hardcoded in a pipeline's definition or source; it **MUST** be supplied to a pipeline run through a mechanism designed to store and inject it securely.

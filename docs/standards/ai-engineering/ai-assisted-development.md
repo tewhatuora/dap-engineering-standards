@@ -8,7 +8,7 @@
 
 ### Developer Accountability & Ownership
 
-These requirements set out how accountability for AI-assisted code remains with the submitting developer, regardless of how it was produced.
+Accountability for AI-assisted code always stays with the submitting developer, regardless of how it was produced.
 
 1. The developer who submits or merges code **MUST** remain fully accountable for its correctness, security, quality, and compliance, regardless of AI assistance used in its creation.
 2. AI tools **MUST NOT** be recorded or represented as the author of record; authorship and accountability **MUST** always attach to the submitting human developer.
@@ -20,7 +20,7 @@ These requirements set out how accountability for AI-assisted code remains with 
 
 ### Human Oversight
 
-These requirements describe how AI-generated output is reviewed by a human before it takes effect.
+A developer reviews and understands AI-generated output before it is committed, merged, or deployed.
 
 1. Developers **MUST** review and understand AI-generated or AI-modified output before committing, merging, or deploying it.
 2. Developers **MUST NOT** submit AI-generated code that they cannot explain, justify, or maintain.
@@ -32,7 +32,7 @@ These requirements describe how AI-generated output is reviewed by a human befor
 
 ### Quality, Testing & Security Parity
 
-These requirements address how AI-assisted work is held to the same quality, testing, and security gates as any other change.
+AI-assisted code meets the same quality, testing, and security gates as any other change.
 
 1. Code produced with AI assistance **MUST** meet the same coding, linting, static analysis, and test coverage requirements as code without AI assistance.
 2. AI-assisted contributions **MUST NOT** bypass, weaken, or be exempted from applicable quality gates, security scanning, or approval workflows.
@@ -46,7 +46,7 @@ These requirements address how AI-assisted work is held to the same quality, tes
 
 ### Restricted & High-Risk Use Cases
 
-These requirements cover how AI-generated code is scrutinised more heavily in security-critical, safety-critical, or regulatory-critical contexts.
+AI-generated code receives extra scrutiny in security-critical, safety-critical, or regulatory-critical work.
 
 1. AI-generated code **MUST** be subject to heightened scrutiny in security-critical, safety-critical, or regulatory-critical contexts, including authentication, authorisation, cryptography, and clinical or patient-safety logic.
 2. Teams **SHOULD** restrict unsupervised use of AI-generated implementations in these contexts; where used, the output **MUST** undergo additional review by personnel with relevant domain expertise.
@@ -57,7 +57,7 @@ These requirements cover how AI-generated code is scrutinised more heavily in se
 
 ### Intellectual Property & Licensing Risk
 
-These requirements guide how intellectual property and licensing risk from AI tool use is identified and contained.
+Check AI-generated code for copied third-party material, and keep proprietary code out of a tool's reuse rights.
 
 1. Developers **MUST** review AI-generated code for indicators of copied third-party material, such as retained licence headers or attribution comments, before inclusion.
 2. Confidential or proprietary source code **MUST NOT** be submitted to an AI tool in a manner that grants the tool provider rights to reuse or retain it.
