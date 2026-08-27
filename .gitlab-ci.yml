@@ -2,7 +2,7 @@ pages:
   stage: deploy
   image: astral/uv:python3.13-trixie
   script:
-    - apt update && apt install -y nodejs npm
+    - curl -fsSL https://raw.githubusercontent.com/mklement0/n-install/stable/bin/n-install | bash -s 24
     - npm install
     - npx puppeteer browsers install chrome-headless-shell
     - uv sync
