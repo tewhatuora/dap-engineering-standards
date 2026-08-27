@@ -2,11 +2,11 @@ pages:
   stage: deploy
   image: astral/uv:python3.13-trixie
   script:
-    - curl -fsSL https://raw.githubusercontent.com/mklement0/n-install/stable/bin/n-install | bash -s -- -y 24
-    - export N_PREFIX="$HOME/n"
-    - export PATH="$N_PREFIX/bin:$PATH"
-    - npm install
-    - npx puppeteer browsers install chrome-headless-shell
+    # - curl -fsSL https://raw.githubusercontent.com/mklement0/n-install/stable/bin/n-install | bash -s -- -y 24
+    # - export N_PREFIX="$HOME/n"
+    # - export PATH="$N_PREFIX/bin:$PATH"
+    # - npm install
+    # - DEBUG=puppeteer:* npx puppeteer browsers install chrome-headless-shell
     - uv sync
     - uv run mkdocs build --site-dir public
   cache:

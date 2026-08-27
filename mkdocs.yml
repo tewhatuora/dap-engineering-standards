@@ -1,22 +1,21 @@
 site_name: Health New Zealand Engineering Standards
-#site_url: https://dap-engineering-standards-6efaca.gitlab.io/
-site_url: https://notsureyet.com
+site_url: https://dap-engineering-standards-6efaca.gitlab.io/
 plugins:
   - include-markdown
   - meta
   #- optimize  # Disabled due to dependency installation complexity (eg Cairo Graphics native dependencies)
   - privacy
   - search
-  - mermaid-to-svg:
-      image_id_enabled: true
-      image_id_prefix: mermaid-diagram
-      # Disable HTML labels for PDF compatibility
-      mermaid_config:
-        htmlLabels: false
-        flowchart:
-          htmlLabels: false
-        class:
-          htmlLabels: false
+  # - mermaid-to-svg:
+  #     image_id_enabled: true
+  #     image_id_prefix: mermaid-diagram
+  #     # Disable HTML labels for PDF compatibility
+  #     mermaid_config:
+  #       htmlLabels: false
+  #       flowchart:
+  #         htmlLabels: false
+  #       class:
+  #         htmlLabels: false
   # - to-pdf:  # When used with PDF generation plugins
   #     enabled_if_env: ENABLE_PDF_EXPORT
 theme:
@@ -35,7 +34,7 @@ theme:
 extra_css:
   - stylesheets/extra.css
 markdown_extensions:
-  - attr_list
+  # - attr_list
   - toc:
       toc_depth: "2-3"   # include H2 and H3 only, hide H4+
   - pymdownx.superfences:
