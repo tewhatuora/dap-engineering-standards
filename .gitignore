@@ -22,3 +22,6 @@ public/
 # Python
 *.pyc
 **/__pycache__/
+
+# Javascript / Typescript
+node_modules
