@@ -8,7 +8,7 @@
 
 ### Domain-Aligned Service Boundaries
 
-A service's boundary is scoped to a single business domain, identifiable without inspecting its internals.
+> A service's boundary is scoped to a single business domain, identifiable without inspecting its internals.
 
 1. A service **MUST** be scoped around a single, cohesive business domain or subdomain, not an arbitrary technical or organisational division.
 2. A service's responsibility **MUST** be identifiable from its domain boundary alone, without inspecting its internal implementation.
@@ -19,7 +19,7 @@ A service's boundary is scoped to a single business domain, identifiable without
 
 ### Single Ownership of a Service's Data
 
-A service's data is owned exclusively by that service; no other service reads or writes to it directly.
+> A service's data is owned exclusively by that service; no other service reads or writes to it directly.
 
 1. A service's data **MUST** be owned exclusively by that service; another service **MUST NOT** read from or write to a data store it does not own.
 
@@ -29,7 +29,7 @@ A service's data is owned exclusively by that service; no other service reads or
 
 ### Independent Deployability & Scalability
 
-A service deploys and scales independently of other services, without a coordinated, simultaneous release.
+> A service deploys and scales independently of other services, without a coordinated, simultaneous release.
 
 1. A service **MUST** be deployable and scalable independently of other services, without requiring a coordinated, simultaneous release.
 2. A service's internal implementation **MAY** change freely provided its published interface's contract is preserved, so a dependent service is not required to change in step.
@@ -40,7 +40,7 @@ A service deploys and scales independently of other services, without a coordina
 
 ### Interaction Only Through Published Interfaces
 
-A service interacts with another service only through its well-defined, published interface, never direct access.
+> A service interacts with another service only through its well-defined, published interface, never direct access.
 
 1. A service **MUST** communicate with another service only through a well-defined, published interface; direct access to another service's internal code or underlying infrastructure **MUST NOT** be used as an integration mechanism.
 2. A service's published interface **MUST** be the only path another service or consumer relies on, regardless of the underlying communication mechanism used.
@@ -53,7 +53,7 @@ A service interacts with another service only through its well-defined, publishe
 
 ### Right-Sizing Service Granularity
 
-A service's granularity follows domain cohesion, evaluated for decomposition or consolidation when it drifts.
+> A service's granularity follows domain cohesion, evaluated for decomposition or consolidation when it drifts.
 
 1. Service granularity **SHOULD** be driven by domain cohesion, not decomposed to an arbitrarily fine or coarse level.
 2. A service spanning more than one distinct business domain **SHOULD** be evaluated for decomposition.
@@ -61,14 +61,14 @@ A service's granularity follows domain cohesion, evaluated for decomposition or 
 
 ### Single Team Accountability for a Service
 
-Exactly one team is accountable for a service, and reviews every change to it regardless of who contributes.
+> Exactly one team is accountable for a service, and reviews every change to it regardless of who contributes.
 
 1. A service **MUST** have exactly one team or group accountable for it, declared as the code owner in a `CODEOWNERS` file for its repository, regardless of how many teams contribute changes to it.
 2. A contribution from a team other than a service's accountable team **MUST** still be reviewed and approved by the accountable team before being merged.
 
 ### Duplicated Domain Logic Across Services
 
-A core business rule has one authoritative implementation, reused rather than reimplemented across services.
+> A core business rule has one authoritative implementation, reused rather than reimplemented across services.
 
 1. A core business rule or domain concept **MUST** have a single authoritative implementation; it **MUST NOT** be independently reimplemented across multiple services.
 2. Where more than one service requires the same domain logic, it **SHOULD** be obtained from its owning service's interface or a shared, reusable component, rather than duplicated.

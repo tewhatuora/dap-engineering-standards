@@ -8,7 +8,7 @@
 
 ### Dedicated Migration Tooling
 
-A schema or data change goes only through dedicated migration tooling, never a direct, ad hoc query against a database.
+> A schema or data change goes only through dedicated migration tooling, never a direct, ad hoc query against a database.
 
 1. A change to a database's schema, or a bulk or corrective change to its data, **MUST** be applied exclusively through a dedicated migration tool; it **MUST NOT** be applied through the direct, ad hoc execution of a query, statement, or script against any database instance.
 2. A migration tool **MUST** support version-controlled migration files, track which migration has been applied to a given instance, and integrate with the service's automated deployment pipeline.
@@ -22,7 +22,7 @@ A schema or data change goes only through dedicated migration tooling, never a d
 
 ### Versioned & Repeatable Migrations
 
-A versioned migration is ordered and immutable once merged; a repeatable migration instead re-applies automatically.
+> A versioned migration is ordered and immutable once merged; a repeatable migration instead re-applies automatically.
 
 1. A versioned migration **MUST** be defined in its own version-controlled file, identified by a unique, monotonically ordered identifier, such as a timestamp or sequence number, together with a short descriptive name.
 2. A migration tool **MUST** apply a service's versioned migrations strictly in the order defined by their identifiers.
@@ -36,7 +36,7 @@ A versioned migration is ordered and immutable once merged; a repeatable migrati
 
 ### Migration History Integrity
 
-A database's applied-migration history is checksum-verified and never edited by hand, so its schema state stays trustworthy.
+> A database's applied-migration history is checksum-verified and never edited by hand, so its schema state stays trustworthy.
 
 1. A migration tool **MUST** record, within the target database or an equivalent authoritative store, which migration has been applied to that specific instance, together with a checksum of that migration's content.
 2. A migration tool **MUST** verify an already-applied versioned migration's checksum against its recorded value before applying a later migration; a mismatch **MUST** halt execution rather than proceed against an untrustworthy migration history.
@@ -45,7 +45,7 @@ A database's applied-migration history is checksum-verified and never edited by 
 
 ### Baselining an Existing Database
 
-Adopting migration tooling for an existing database starts with a deliberate baseline and a clearly identified owner.
+> Adopting migration tooling for an existing database starts with a deliberate baseline and a clearly identified owner.
 
 1. Where migration tooling is adopted for a database whose schema already exists outside that tooling's history, a baseline **MUST** be recorded marking that schema as the starting point for the database's applied-migration history.
 2. Where more than one service currently reads from or writes to a database being baselined, an owning service **MUST** be identified as part of that baseline work.
@@ -56,7 +56,7 @@ Adopting migration tooling for an existing database starts with a deliberate bas
 
 ### Migration Review & Approval
 
-A migration is reviewed and approved by the DBA team before it reaches production.
+> A migration is reviewed and approved by the DBA team before it reaches production.
 
 1. The path holding a service's migration files **MUST** have a DBA team declared as its owner in `CODEOWNERS`, so that team's review is enforced before a migration file can merge.
 2. Where a migration tool can preview its change, a DBA team member other than the author **MUST** approve that preview through a manual pipeline step before the migration reaches production.
@@ -68,7 +68,7 @@ A migration is reviewed and approved by the DBA team before it reaches productio
 
 ### Pipeline-Driven Execution
 
-A migration runs automatically within the deployment pipeline, and a failed migration halts that pipeline.
+> A migration runs automatically within the deployment pipeline, and a failed migration halts that pipeline.
 
 1. A migration **MUST** be executed automatically as part of a service's automated deployment pipeline; it **MUST NOT** be run manually against a live database by an individual.
 2. A deployment pipeline **MUST NOT** deploy a service's application code to an environment before that environment's required migration has completed successfully.
@@ -84,7 +84,7 @@ A migration runs automatically within the deployment pipeline, and a failed migr
 
 ### Rollback & Irreversible Changes
 
-A migration is reversible where possible, and backed by a verified recovery point where it is not.
+> A migration is reversible where possible, and backed by a verified recovery point where it is not.
 
 1. A migration **SHOULD** provide a corresponding reverse migration capable of returning a database instance's schema to its state prior to that migration's application.
 2. A migration that cannot be safely reversed, such as one that deletes data or performs an irreversible transformation, **MUST** have a verified backup or equivalent recovery point in place before it is applied to a production database.
@@ -98,7 +98,7 @@ A migration is reversible where possible, and backed by a verified recovery poin
 
 ### Locking & Performance Impact
 
-A migration's locking behaviour and performance impact are assessed beforehand, and a large backfill runs in batches.
+> A migration's locking behaviour and performance impact are assessed beforehand, and a large backfill runs in batches.
 
 1. A migration **MUST** be assessed for its locking behaviour and performance impact before it is applied, particularly where it affects a large or heavily-accessed table.
 2. A large data backfill or transformation **MUST** be defined as its own migration, separate from a structural schema change, so it does not extend that change's lock duration.
@@ -110,7 +110,7 @@ A migration's locking behaviour and performance impact are assessed beforehand, 
 
 ### Testing Migrations Before Production
 
-A migration is verified in a production-like lower environment before it is ever applied to production.
+> A migration is verified in a production-like lower environment before it is ever applied to production.
 
 1. A migration, including a reverse migration where one exists, **MUST** be executed and verified in a lower environment before it is applied to production.
 2. A lower environment used to verify a migration **SHOULD** hold data representative of production's volume and shape, so a migration's performance and behaviour are validated realistically.

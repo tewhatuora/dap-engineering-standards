@@ -8,7 +8,7 @@
 
 ### Data Model & Key Strategy
 
-A schema's data model and key strategy fit the workload's actual access patterns, not a default structure.
+> A schema's data model and key strategy fit the workload's actual access patterns, not a default structure.
 
 1. A schema's data model, whether relational, document, key-value, wide-column, or another structure, **MUST** be selected based on a workload's actual access patterns, consistency requirements, and query needs.
 2. A relational schema **SHOULD** be normalised to at least Third Normal Form (3NF) to eliminate redundant and inconsistent data, with denormalisation applied only where a specific, demonstrated performance need justifies it.
@@ -17,7 +17,7 @@ A schema's data model and key strategy fit the workload's actual access patterns
 
 ### Data Type Selection
 
-A column's data type, encoding, and nullability accurately represent its value and use storage efficiently.
+> A column's data type, encoding, and nullability accurately represent its value and use storage efficiently.
 
 1. A column or field **MUST** use the data type that most accurately fits the value it stores and its expected range, avoiding wasteful storage consumption at scale.
 2. A date or timestamp value **MUST** be stored in UTC using a date-time or timestamp type, not as a Unix epoch integer or in a local timezone, so it can be reliably converted to any timezone.
@@ -32,7 +32,7 @@ A column's data type, encoding, and nullability accurately represent its value a
 
 ### Schema Ownership
 
-A schema is owned by exactly one service; no other service accesses or modifies it directly.
+> A schema is owned by exactly one service; no other service accesses or modifies it directly.
 
 1. A schema **MUST** be owned by exactly one service; another service **MUST NOT** directly access or modify a data store it does not own.
 
@@ -42,7 +42,7 @@ A schema is owned by exactly one service; no other service accesses or modifies 
 
 ### Schema Logic & Portability
 
-A relational schema enforces integrity through constraints, and its SQL stays portable across database engines.
+> A relational schema enforces integrity through constraints, and its SQL stays portable across database engines.
 
 1. In a relational database, referential integrity **MUST** be enforced using primary key, foreign key, and other applicable constraints, not application code alone.
 2. A trigger **SHOULD NOT** be used; a trigger **MAY** be used only where no other mechanism can achieve the same outcome, since a trigger introduces control flow that is not visible in application code.
@@ -56,7 +56,7 @@ A relational schema enforces integrity through constraints, and its SQL stays po
 
 ### Traceability & Deletion Representation
 
-Decision-informing data carries an audit trail, and a table's deletion approach is a deliberate, documented choice.
+> Decision-informing data carries an audit trail, and a table's deletion approach is a deliberate, documented choice.
 
 1. A table or collection whose data informs an operational, financial, or clinical decision **MUST** include audit columns, such as created and last-modified timestamps, and identify the actor or process responsible for a change.
 2. A table or collection's deletion representation, whether a soft delete using a flag or timestamp column or a hard delete that removes the row, **MUST** be a deliberate, documented choice.
@@ -67,7 +67,7 @@ Decision-informing data carries an audit trail, and a table's deletion approach 
 
 ### Index Alignment
 
-An index matches the schema's actual query patterns, and is reassessed when those patterns change.
+> An index matches the schema's actual query patterns, and is reassessed when those patterns change.
 
 1. An index **SHOULD** be designed to support a schema's actual query patterns.
 2. An index **MUST** be reassessed when the query patterns it supports change materially, since an unused or mismatched index still carries a write and storage cost.
@@ -78,7 +78,7 @@ An index matches the schema's actual query patterns, and is reassessed when thos
 
 ### Non-Breaking Schema Changes
 
-A schema change stays additive and compatible with instances still running the previous code during rollout.
+> A schema change stays additive and compatible with instances still running the previous code during rollout.
 
 1. An additive schema change, such as adding a new optional column or field, **SHOULD** be preferred over a change that alters or removes an existing structure.
 2. A schema change **MUST** remain compatible with instances of the owning service still running previous code during a rolling deployment, so old and new instances can operate correctly until the deployment completes.
@@ -90,14 +90,14 @@ A schema change stays additive and compatible with instances still running the p
 
 ### Breaking Schema Changes
 
-A non-additive schema change rolls out through expand-and-contract, keeping the old structure until rollback is no longer needed.
+> A non-additive schema change rolls out through expand-and-contract, keeping the old structure until rollback is no longer needed.
 
 1. Where a schema change cannot be made additively, it **SHOULD** use an expand-and-contract approach: add the new structure alongside the old, migrate the owning service's code to use it, then retire the old structure.
 2. The old structure **SHOULD** remain in place for a defined period after the owning service's code is fully upgraded, so a rollback to previous code remains possible without data loss.
 
 ### Automated Migration Tooling
 
-A schema change is version-controlled migration code, applied consistently across environments, and tested first.
+> A schema change is version-controlled migration code, applied consistently across environments, and tested first.
 
 1. A schema change **MUST** be defined as version-controlled, reviewable migration code, not applied through manual or ad hoc execution against a live data store.
 2. A migration **MUST** be applied consistently across environments using the same automated process, so an environment's schema cannot silently diverge from what its migration history describes.

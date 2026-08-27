@@ -8,7 +8,7 @@
 
 ### Release Versus Deployment
 
-A release is its own deliberate, recorded decision, made independently of the deployment it depends on.
+> A release is its own deliberate, recorded decision, made independently of the deployment it depends on.
 
 1. A release **MUST** be treated as the deliberate decision to make a deployed change available to its intended users; a deployment **MUST NOT** itself be treated as that decision.
 2. The decision to release a deployed change **MUST** be made independently of the decision to deploy it, whether or not the two occur at the same time.
@@ -21,7 +21,7 @@ A release is its own deliberate, recorded decision, made independently of the de
 
 ### Release Cadence
 
-A release follows its deployment immediately by default, unless a release toggle or the branching model says otherwise.
+> A release follows its deployment immediately by default, unless a release toggle or the branching model says otherwise.
 
 1. A release **SHOULD** immediately follow its underlying deployment by default; a release toggle **SHOULD** be used where release timing must diverge from deployment timing.
 2. A scheduled, batched release **MUST** be supported only where the branching model defines a stabilisation period.
@@ -34,7 +34,7 @@ A release follows its deployment immediately by default, unless a release toggle
 
 ### Release Notes & Communication
 
-A release has notes communicated directly to stakeholders, maintained as an authoritative, version-controlled changelog.
+> A release has notes communicated directly to stakeholders, maintained as an authoritative, version-controlled changelog.
 
 1. A release **MUST** have release notes describing the change it introduces, in language appropriate for its intended audience.
 2. Release notes **MUST** be communicated directly to stakeholders, in addition to being published.
@@ -51,7 +51,7 @@ A release has notes communicated directly to stakeholders, maintained as an auth
 
 ### Release Approval
 
-A release is authorised by an accountable product owner who confirms every prerequisite is actually satisfied.
+> A release is authorised by an accountable product owner who confirms every prerequisite is actually satisfied.
 
 1. The decision to release a deployed change to its intended users **MUST** be authorised by an accountable product owner, distinct from the change control approval required for its deployment.
 2. An emergency release made to address an active incident **MAY** be authorised without the standard approval, but **MUST** be reviewed retrospectively as soon as practicable.
@@ -66,7 +66,7 @@ A release is authorised by an accountable product owner who confirms every prere
 
 ### Cross-Service Release Coordination
 
-A release is independently releasable by default; depending on another service's release requires deliberate coordination.
+> A release is independently releasable by default; depending on another service's release requires deliberate coordination.
 
 1. A release **MUST** be independently releasable by default; a dependency on another service's release **MUST** be treated as an exception requiring deliberate coordination.
 2. A breaking change **SHOULD** be avoided, such as by versioning the API or schema instead, so the dependent services require no coordination at all.

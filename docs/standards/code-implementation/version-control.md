@@ -8,7 +8,7 @@
 
 ### Mandatory, Authoritative Repository
 
-A codebase lives in exactly one authoritative, backed-up Git repository; no fork or local copy is ever a source of truth.
+> A codebase lives in exactly one authoritative, backed-up Git repository; no fork or local copy is ever a source of truth.
 
 1. A codebase's source code, infrastructure definitions, and pipeline definitions **MUST** be held in one designated, Git-based repository, which serves as the definitive record for that codebase's current and historical state.
 2. A fork, mirror, or local copy of a repository **MUST** never be treated as an alternative source of truth; a change intended for adoption **MUST** be merged back into the designated repository.
@@ -22,7 +22,7 @@ A codebase lives in exactly one authoritative, backed-up Git repository; no fork
 
 ### Atomic, Well-Described Commits
 
-A commit represents one coherent change, described clearly enough to stand alone as part of the repository's history.
+> A commit represents one coherent change, described clearly enough to stand alone as part of the repository's history.
 
 1. A commit **SHOULD** represent one coherent, logical change; an unrelated change **MUST NOT** be combined into the same commit.
 2. A commit message **MUST** describe the change's purpose and effect clearly enough to be understood without consulting its author directly.
@@ -40,7 +40,7 @@ A commit represents one coherent change, described clearly enough to stand alone
 
 ### Commit Authorship Integrity
 
-Every commit is attributable to the individual or automated process that actually authored it, never a shared account.
+> Every commit is attributable to the individual or automated process that actually authored it, never a shared account.
 
 1. A commit **MUST** be attributable to the individual engineer or the specific automated process, such as Dependabot, that authored it; a shared, generic, or anonymous account **MUST NOT** be used to author a commit.
 2. Where a repository supports commit verification, such as a signature tied to its author's identity, it **SHOULD** be enabled for a protected branch.
@@ -52,7 +52,7 @@ Every commit is attributable to the individual or automated process that actuall
 
 ### Change Traceability
 
-A change stays traceable from the branch that introduced it through to the tag that marks its release.
+> A change stays traceable from the branch that introduced it through to the tag that marks its release.
 
 1. A change **MUST** remain traceable from the branch that introduced it, through the merge request that proposed it and the commit that integrated it into a protected branch, to the tag that marks its release where one applies.
 2. A tag marking a released or published state **MUST** be immutable once created; it **MUST NOT** be moved, deleted, or reused to reference different content.
@@ -67,14 +67,14 @@ A change stays traceable from the branch that introduced it through to the tag t
 
 ### Repository Hygiene & Exclusions
 
-Generated, editor-specific, and large binary content stays out of a repository's tracked history.
+> Generated, editor-specific, and large binary content stays out of a repository's tracked history.
 
 1. A file that is generated or built from a repository's own tracked source, such as a compiled artifact or an installed dependency directory, or that is specific to an individual's editor, operating system, or workstation, **MUST** be excluded from version control through an ignore mechanism rather than committed.
 2. A binary asset not reproducible from source and large enough to degrade a repository's performance, such as a media file or dataset, **SHOULD** be stored through a mechanism designed for that content, not committed directly to a repository.
 
 ### No Sensitive Data
 
-A secret never enters a repository, not even its metadata, and is rotated immediately if one ever is merged.
+> A secret never enters a repository, not even its metadata, and is rotated immediately if one ever is merged.
 
 1. A secret, credential, private key, or other sensitive value **MUST NOT** be committed to a repository; removing it from a later commit does not remove it from the repository's history, so it **MUST** never be introduced in the first place.
 2. This prohibition extends beyond file content to a repository's metadata, such as a commit message, branch name, tag, or change description; a sensitive value **MUST NOT** be placed in any of these either.

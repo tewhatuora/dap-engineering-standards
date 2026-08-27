@@ -8,7 +8,7 @@
 
 ### Prohibited & Restricted Data
 
-Patient data and secrets never go into an AI prompt unless the tool is explicitly authorised for that data.
+> Patient data and secrets never go into an AI prompt unless the tool is explicitly authorised for that data.
 
 1. Patient data, health information, and other personal information (PII) **MUST NOT** be submitted to an AI tool unless the tool is explicitly authorised for that data classification and use case.
 2. Secrets, credentials, API keys, access tokens, and cryptographic material **MUST NOT** be submitted to an AI tool under any circumstances.
@@ -19,7 +19,7 @@ Patient data and secrets never go into an AI prompt unless the tool is explicitl
 
 ### Data Minimisation
 
-A prompt includes only the minimum data a task needs, not a whole file, dataset, or repository.
+> A prompt includes only the minimum data a task needs, not a whole file, dataset, or repository.
 
 1. Prompts **MUST** include only the minimum data reasonably necessary for the task.
 2. Whole files, datasets, or repositories **SHOULD NOT** be submitted where a smaller, relevant excerpt is sufficient.
@@ -27,7 +27,7 @@ A prompt includes only the minimum data a task needs, not a whole file, dataset,
 
 ### Vendor Data Use & Retention
 
-A vendor's use and retention of submitted data is governed by contract, confirmed before a tool is approved.
+> A vendor's use and retention of submitted data is governed by contract, confirmed before a tool is approved.
 
 1. Data submitted to an approved AI tool **MUST NOT** be used by the vendor to train shared or public models, or made available to parties outside the organisation's agreement with the vendor.
 2. Data retention, storage location, and deletion for prompt content **MUST** be governed by the organisation's contractual terms with the vendor.
@@ -35,7 +35,7 @@ A vendor's use and retention of submitted data is governed by contract, confirme
 
 ### De-identification & Synthetic Data
 
-Health or personal data is de-identified or synthetic before it reaches a prompt, wherever feasible.
+> Health or personal data is de-identified or synthetic before it reaches a prompt, wherever feasible.
 
 1. Where health or personal data is relevant to a development task, it **MUST** be de-identified, synthetic, or masked before inclusion in a prompt, wherever feasible.
 2. Synthetic or de-identified data **MUST** be preferred over production data for AI-assisted testing, debugging, and documentation.
@@ -46,7 +46,7 @@ Health or personal data is de-identified or synthetic before it reaches a prompt
 
 ### Incident Handling
 
-A suspected prompt data exposure is reported and handled as a security incident before it is remediated.
+> A suspected prompt data exposure is reported and handled as a security incident before it is remediated.
 
 1. A suspected or confirmed submission of prohibited data to an AI tool **MUST** be reported and handled as a security incident.
 2. Personnel **MUST NOT** remediate a suspected prompt data exposure before it has been reported as a security incident.

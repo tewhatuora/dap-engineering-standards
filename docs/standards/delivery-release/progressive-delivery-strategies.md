@@ -8,7 +8,7 @@
 
 ### Technique Selection
 
-Every production deployment uses a progressive delivery technique, chosen by what the change and service actually need.
+> Every production deployment uses a progressive delivery technique, chosen by what the change and service actually need.
 
 1. A deployment to production **MUST** use a progressive delivery technique; a change **MUST NOT** be exposed to all of production traffic at once.
 2. A blue/green deployment **SHOULD** be chosen over a canary release or rolling deployment where a change would create a materially inconsistent experience for users served by different versions at the same time.
@@ -25,7 +25,7 @@ Every production deployment uses a progressive delivery technique, chosen by wha
 
 ### Canary Releases
 
-A canary release's traffic stages and promotion criteria are defined upfront, never decided ad hoc mid-rollout.
+> A canary release's traffic stages and promotion criteria are defined upfront, never decided ad hoc mid-rollout.
 
 1. A canary release's traffic percentage at each stage, and the criteria for progressing to the next stage, **MUST** be defined before the rollout begins; they **MUST NOT** be decided ad hoc as the rollout proceeds.
 2. A canary release's initial stage **MUST** expose the new version to no more than a small, defined percentage of production traffic, so an undetected regression's impact is bounded before exposure increases.
@@ -38,7 +38,7 @@ A canary release's traffic stages and promotion criteria are defined upfront, ne
 
 ### Blue/Green Deployments
 
-A blue/green deployment verifies the new version on an idle stack first, and keeps the old stack ready to switch back to.
+> A blue/green deployment verifies the new version on an idle stack first, and keeps the old stack ready to switch back to.
 
 1. A blue/green deployment's idle stack **MUST** match the active stack's configuration and capacity before it is used as a deployment target.
 2. A new version **MUST** be deployed to the idle stack and verified there before any production traffic is directed to it.
@@ -51,7 +51,7 @@ A blue/green deployment verifies the new version on an idle stack first, and kee
 
 ### Rolling Deployments
 
-A rolling deployment's batch size is defined upfront, and each batch must pass a health check before the next begins.
+> A rolling deployment's batch size is defined upfront, and each batch must pass a health check before the next begins.
 
 1. A rolling deployment's batch size, whether a fixed count or a percentage of the stack's instances, **MUST** be defined before the rollout begins; it **MUST NOT** be decided ad hoc as the rollout proceeds.
 2. Each batch of newly updated instances **MUST** pass a health check before the next batch begins, so an unhealthy update is detected before it spreads further across the stack.
@@ -63,7 +63,7 @@ A rolling deployment's batch size is defined upfront, and each batch must pass a
 
 ### Cross-Version Data Compatibility
 
-A schema or data change stays compatible with the old version for as long as both versions can run side by side.
+> A schema or data change stays compatible with the old version for as long as both versions can run side by side.
 
 1. A schema or data change **MUST** remain compatible with the service's old version for the full duration both old and new versions may run concurrently, regardless of which progressive delivery technique is used.
 2. A schema or data change **MAY** remain applied after a progressive delivery technique's rollout is aborted, provided it remains compatible with the service's old version.
@@ -78,7 +78,7 @@ A schema or data change stays compatible with the old version for as long as bot
 
 ### Feature Flag Boundary
 
-A progressive delivery technique never substitutes for a feature flag; an aborted rollout's flag state is checked independently.
+> A progressive delivery technique never substitutes for a feature flag; an aborted rollout's flag state is checked independently.
 
 1. A progressive delivery technique **MUST NOT** be treated as a substitute for a feature flag; the two **MAY** be used together, such as a canary release paired with an independently controlled flag.
 2. An active feature flag within an aborted rollout **MUST NOT** be assumed to have reverted with it; its state **MUST** be assessed independently.

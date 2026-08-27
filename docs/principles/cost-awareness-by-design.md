@@ -8,7 +8,7 @@
 
 ### Cost as a Design Constraint
 
-Cost is weighed alongside every functional and non-functional requirement, as a design constraint from the outset.
+> Cost is weighed alongside every functional and non-functional requirement, as a design constraint from the outset.
 
 1. Cost implications **MUST** be evaluated alongside functional and non-functional requirements, including technology selection, data storage, and scaling model.
 2. A design decision with materially higher recurring cost **MUST NOT** be adopted without assessing its value against lower-cost alternatives.
@@ -16,7 +16,7 @@ Cost is weighed alongside every functional and non-functional requirement, as a 
 
 ### Proportionate Cost Decisions
 
-A cost decision stays proportionate to the risk and value it supports, never traded off against reliability or security.
+> A cost decision stays proportionate to the risk and value it supports, never traded off against reliability or security.
 
 1. Cost decisions **MUST** be proportionate to the risk and value of the service they support.
 2. A design **MUST NOT** reduce cost in a way that introduces disproportionate risk to reliability, performance, or security.
@@ -29,7 +29,7 @@ A cost decision stays proportionate to the risk and value it supports, never tra
 
 ### Build-vs-Buy Cost Discipline
 
-An existing, proven solution is evaluated on total cost of ownership before a team builds its own.
+> An existing, proven solution is evaluated on total cost of ownership before a team builds its own.
 
 1. Engineering teams **MUST** evaluate existing, proven solutions before building a new one.
 2. Technology and vendor selection **SHOULD** account for total cost of ownership, including licensing, operational, and maintenance cost, not just upfront cost.
@@ -41,7 +41,7 @@ An existing, proven solution is evaluated on total cost of ownership before a te
 
 ### Cost Visibility & Attribution
 
-A service is designed so its cost can be measured and attributed to its responsible team from the outset.
+> A service is designed so its cost can be measured and attributed to its responsible team from the outset.
 
 1. A service **SHOULD** be designed so its cost can be measured and attributed to the responsible team from the outset.
 
@@ -51,7 +51,7 @@ A service is designed so its cost can be measured and attributed to its responsi
 
 ### Efficient Resource Consumption
 
-Compute and storage choices avoid waste by default, preferring serverless and managed services that eliminate idle capacity.
+> Compute and storage choices avoid waste by default, preferring serverless and managed services that eliminate idle capacity.
 
 1. Design and implementation choices **SHOULD** avoid unnecessary or wasteful consumption of compute or storage.
 2. Serverless compute models **SHOULD** be preferred where they eliminate payment for idle or over-provisioned capacity.
@@ -66,7 +66,7 @@ Compute and storage choices avoid waste by default, preferring serverless and ma
 
 ### AI Tooling Spend
 
-AI tooling's token and usage-based cost is weighed as deliberately as any other recurring engineering spend.
+> AI tooling's token and usage-based cost is weighed as deliberately as any other recurring engineering spend.
 
 1. The token or usage-based cost of AI-assisted engineering tooling **MUST** be weighed as deliberately as any other recurring engineering cost.
 2. AI tool usage **SHOULD** be scoped and configured to avoid unnecessary spend, such as processing more context or selecting a higher-cost model than a task requires.
@@ -77,7 +77,7 @@ AI tooling's token and usage-based cost is weighed as deliberately as any other 
 
 ### Ongoing Cost Reassessment
 
-A cost decision is checked against actual usage once a service is running, not treated as fixed indefinitely.
+> A cost decision is checked against actual usage once a service is running, not treated as fixed indefinitely.
 
 1. A cost decision made at design time **SHOULD** be checked against actual usage and spend once a service is operating, rather than treated as fixed indefinitely.
 2. A sustained rise in the cost of a service, or a material change in vendor pricing, **SHOULD** trigger a reassessment of its design against current usage and value.

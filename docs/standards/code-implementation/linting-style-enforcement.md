@@ -8,7 +8,7 @@
 
 ### Linting Coverage
 
-Every language in a codebase is checked by an appropriate, actively maintained linter, documented and discoverable.
+> Every language in a codebase is checked by an appropriate, actively maintained linter, documented and discoverable.
 
 1. Each language in use within a codebase, including one used to define infrastructure or a pipeline, **MUST** be checked by an automated linter appropriate to it.
 2. Generated code **MUST** be excluded from linting scope, rather than tracked as a violation.
@@ -21,7 +21,7 @@ Every language in a codebase is checked by an appropriate, actively maintained l
 
 ### Linter Configuration
 
-A linter's ruleset is version-controlled configuration, applied identically wherever linting runs.
+> A linter's ruleset is version-controlled configuration, applied identically wherever linting runs.
 
 1. A linter's ruleset **MUST** be defined as version-controlled configuration, whether declared directly within the codebase it governs or extended from a version-controlled shared baseline.
 2. The same ruleset and linter version **MUST** be applied wherever linting runs, whether locally, at pre-commit, or in the delivery pipeline.
@@ -34,7 +34,7 @@ A linter's ruleset is version-controlled configuration, applied identically wher
 
 ### Severity-Based Pipeline Gate
 
-A lint violation's severity decides whether it merely advises or blocks a change from merging or deploying.
+> A lint violation's severity decides whether it merely advises or blocks a change from merging or deploying.
 
 1. A lint check **MUST** run as part of the delivery pipeline.
 2. Each lint rule **MUST** be classified by severity, where supported by the linter, distinguishing a violation that must block progression from one that is advisory only.
@@ -47,7 +47,7 @@ A lint violation's severity decides whether it merely advises or blocks a change
 
 ### Local Detection
 
-A lint violation surfaces locally, through an IDE or pre-commit hook, before a change is ever submitted for review.
+> A lint violation surfaces locally, through an IDE or pre-commit hook, before a change is ever submitted for review.
 
 1. Linting **SHOULD** be available to run locally, through IDE integration, or as a pre-commit hook, so a violation is visible before a change is submitted for review.
 2. A local lint run **SHOULD** check only the files affected by a change where practical, rather than the entire codebase, to keep local feedback fast.
@@ -58,7 +58,7 @@ A lint violation surfaces locally, through an IDE or pre-commit hook, before a c
 
 ### Suppression & Exception Discipline
 
-A lint suppression is scoped to one line with a documented reason, and reviewed with the same scrutiny as any change.
+> A lint suppression is scoped to one line with a documented reason, and reviewed with the same scrutiny as any change.
 
 1. A lint violation **MUST NOT** be suppressed by disabling a rule broadly, such as file-wide or project-wide, to silence a single occurrence.
 2. A suppression **MUST** be scoped to the specific line and rule it addresses, and **MUST** include a documented reason.
@@ -72,7 +72,7 @@ A lint suppression is scoped to one line with a documented reason, and reviewed 
 
 ### Ruleset Governance
 
-A change to the linting ruleset goes through the same review as a code change, and is never weakened to pass one failure.
+> A change to the linting ruleset goes through the same review as a code change, and is never weakened to pass one failure.
 
 1. A change to the adopted ruleset, including adding, removing, or weakening a rule, **MUST** go through the same review process required for a code change.
 2. A ruleset **MUST NOT** be weakened unilaterally to let a specific failing change pass.
@@ -85,7 +85,7 @@ A change to the linting ruleset goes through the same review as a code change, a
 
 ### Baselining Pre-Existing Violations
 
-A pre-existing violation can be baselined when a linter is adopted, but stays tracked and remediated as technical debt.
+> A pre-existing violation can be baselined when a linter is adopted, but stays tracked and remediated as technical debt.
 
 1. Adopting a linter or a new rule on an existing codebase **MAY** treat its existing violations as a baseline, recorded either as an explicit exception list or as a fixed point in the codebase's history.
 2. A violation introduced after a baseline is established, whether as an exception list or a fixed point in the codebase's history, **MUST NOT** be treated as baselined.

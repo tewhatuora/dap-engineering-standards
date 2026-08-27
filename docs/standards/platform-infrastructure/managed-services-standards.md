@@ -8,7 +8,7 @@
 
 ### Service Quotas & Limits
 
-Identify a managed service's quota against expected demand, and request an increase before usage reaches it.
+> Identify a managed service's quota against expected demand, and request an increase before usage reaches it.
 
 1. A managed service's quota relevant to a workload's expected demand **MUST** be identified before the workload depends on that service in production.
 2. A managed service's quota usage **MUST** be monitored on an ongoing basis, and an increase requested before expected demand reaches the quota, so a breach does not cause an incident.
@@ -19,7 +19,7 @@ Identify a managed service's quota against expected demand, and request an incre
 
 ### Automatic Patching
 
-Leave automatic patching enabled, and set its maintenance window to a low-impact time, not the vendor's default.
+> Leave automatic patching enabled, and set its maintenance window to a low-impact time, not the vendor's default.
 
 1. Automatic patching **SHOULD** remain enabled for a managed service instance, rather than disabled to avoid a potentially disruptive change.
 2. A managed service instance's maintenance window **SHOULD** be set to a period of low impact to end users, rather than left at the vendor's default.
@@ -31,7 +31,7 @@ Leave automatic patching enabled, and set its maintenance window to a low-impact
 
 ### Availability Configuration
 
-Enable redundancy across failure domains only where the workload's own RTO actually needs it.
+> Enable redundancy across failure domains only where the workload's own RTO actually needs it.
 
 1. Where a workload's defined RTO cannot tolerate the loss of a single failure domain, a managed service it depends on **MUST** have its redundancy across failure domains enabled.
 2. A workload whose defined RTO can tolerate the loss of a single failure domain **SHOULD** use a managed service's lower-redundancy configuration, rather than a higher-redundancy option its RTO does not require.
@@ -44,7 +44,7 @@ Enable redundancy across failure domains only where the workload's own RTO actua
 
 ### Backup Configuration & Verification
 
-Set a managed service's built-in backup to the workload's own RPO and RTO, and prove it restores through DR testing.
+> Set a managed service's built-in backup to the workload's own RPO and RTO, and prove it restores through DR testing.
 
 1. Where a managed service's built-in backup is relied on instead of a separate one, its frequency and retention **MUST** meet the workload's defined RPO and RTO, rather than the vendor's default.
 2. A backup produced by a managed service's built-in mechanism **MUST** be restored as part of the organisation's disaster recovery testing, rather than assumed restorable simply because the vendor manages it.
@@ -56,7 +56,7 @@ Set a managed service's built-in backup to the workload's own RPO and RTO, and p
 
 ### Telemetry & Alerting Integration
 
-Route a managed service's telemetry and alerts into the organisation's centralised platform.
+> Route a managed service's telemetry and alerts into the organisation's centralised platform.
 
 1. A managed service's telemetry, including its logs and metrics, **MUST** be integrated into the organisation's centralised observability platform, rather than left visible only in the vendor's own console.
 2. A managed service's own native alerting **SHOULD** be configured to notify through the organisation's centralised alerting mechanism, rather than operate as a separate channel.

@@ -8,7 +8,7 @@
 
 ### Automated, Repeatable Deployment Pipeline
 
-Every environment deploys through the same automated pipeline, never a manual or divergent process.
+> Every environment deploys through the same automated pipeline, never a manual or divergent process.
 
 1. A deployment to an environment beyond local development, including a change to that environment's infrastructure or database schema, **MUST** be performed only through an automated pipeline; it **MUST NOT** be performed as a manual or ad hoc action.
 2. A deployment pipeline **MUST** consume only an artifact that has already passed the build, test, static analysis, and security scanning validation required for it; the deployment pipeline itself **MUST NOT** be relied upon to perform that validation.
@@ -27,7 +27,7 @@ Every environment deploys through the same automated pipeline, never a manual or
 
 ### Runtime Security Testing & Response
 
-A network-reachable service is tested for security after deployment, and a confirmed critical finding is acted on immediately.
+> A network-reachable service is tested for security after deployment, and a confirmed critical finding is acted on immediately.
 
 1. A pipeline deploying a service that exposes a network-reachable interface, such as an API endpoint, **MUST** include both dynamic application security testing (DAST) and fuzz testing against that service's running production instance after deployment.
 2. Where a finding is raised by runtime security testing, it **MUST** be triaged and confirmed before it is treated as genuine, so response effort is not misdirected by a false positive.
@@ -41,7 +41,7 @@ A network-reachable service is tested for security after deployment, and a confi
 
 ### Deployment Readiness
 
-A verified change stays ready to deploy at any time, moving through the pipeline in small, frequent increments.
+> A verified change stays ready to deploy at any time, moving through the pipeline in small, frequent increments.
 
 1. A change that has passed the verification required for its target environment **MUST** remain ready for deployment at any time; it **MUST NOT** be withheld to accumulate into a larger, scheduled release, except where the repository's branching model requires a defined stabilisation period before release.
 2. Deployment **SHOULD** proceed in small, frequent increments, so the risk and impact of any single deployment stays limited.
@@ -54,7 +54,7 @@ A verified change stays ready to deploy at any time, moving through the pipeline
 
 ### Environment Progression
 
-A change progresses through a defined, consistent sequence of environments on its way to production.
+> A change progresses through a defined, consistent sequence of environments on its way to production.
 
 1. A defined, ordered sequence of environments **MUST** govern how a change progresses from initial validation to production.
 2. A change **MUST** progress through each environment in that sequence via the deployment pipeline; an environment **MUST NOT** be skipped except through a defined, approved exception process, such as an emergency fix.
@@ -66,7 +66,7 @@ A change progresses through a defined, consistent sequence of environments on it
 
 ### Production Deployment Approval
 
-A production deployment is authorised through formal change control, separately from the decision to release it.
+> A production deployment is authorised through formal change control, separately from the decision to release it.
 
 1. A deployment to a production environment **MUST** be approved through the organisation's formal change control process before it proceeds.
 2. This approval is distinct from the product owner's decision to release the change to its intended users, whether or not the two occur at the same time.
@@ -77,7 +77,7 @@ A production deployment is authorised through formal change control, separately 
 
 ### Deployment Verification
 
-A deployment counts as successful only once it passes automated health checks that exercise real functionality.
+> A deployment counts as successful only once it passes automated health checks that exercise real functionality.
 
 1. A deployment **MUST** be verified against automated health checks before it is considered complete.
 2. Where a deployment's health checks fail, the pipeline **MUST** halt further progression of that deployment and raise an alert to the team responsible for it.
@@ -90,7 +90,7 @@ A deployment counts as successful only once it passes automated health checks th
 
 ### Decoupling Deployment from Release
 
-A deployment to production stays separate from releasing it to users, controlled through a flag until release is decided.
+> A deployment to production stays separate from releasing it to users, controlled through a flag until release is decided.
 
 1. Deploying a change to a production environment **MUST** be treated as distinct from releasing that change to its users; a deployed change **MAY** remain inactive or hidden from users until release is decided separately.
 2. Where a change must remain inactive or hidden from users after deployment, it **MUST** be controlled through a feature flag or progressive delivery technique, not by delaying the deployment itself.
@@ -103,7 +103,7 @@ A deployment to production stays separate from releasing it to users, controlled
 
 ### Rollback Readiness
 
-A deployment has a tested rollback or forward-fix path before it reaches production, ready before it is ever needed.
+> A deployment has a tested rollback or forward-fix path before it reaches production, ready before it is ever needed.
 
 1. A deployment **MUST NOT** proceed to a production environment unless a viable rollback or forward-fix path exists for the change being deployed.
 2. A rollback path **MUST** be established and tested in a non-production environment representative of production, before deploying to a production environment.

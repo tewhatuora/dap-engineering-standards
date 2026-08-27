@@ -8,7 +8,7 @@
 
 ### Runtime Model Selection
 
-A workload's runtime model is an explicit, justified decision made during design, not assumed from another workload.
+> A workload's runtime model is an explicit, justified decision made during design, not assumed from another workload.
 
 1. The runtime model a workload will execute on **MUST** be an explicit, justified decision made during design.
 2. A workload **MUST NOT** proceed to implementation before its runtime model is selected and justified against the workload's own characteristics.
@@ -16,7 +16,7 @@ A workload's runtime model is an explicit, justified decision made during design
 
 ### Default Packaging Format
 
-A service is packaged as a container image by default, for a consistent, portable artifact.
+> A service is packaged as a container image by default, for a consistent, portable artifact.
 
 1. Services **SHOULD** be packaged as a container image by default, since this provides a consistent, portable artifact.
 
@@ -26,7 +26,7 @@ A service is packaged as a container image by default, for a consistent, portabl
 
 ### Serverless & Managed Services
 
-Serverless or a managed service is chosen only where the workload's own characteristics actually fit it.
+> Serverless or a managed service is chosen only where the workload's own characteristics actually fit it.
 
 1. Serverless **SHOULD** be considered for event-driven or highly variable demand, since it scales to zero, is cost-efficient at low or spiky usage, and shifts operational effort to the provider.
 2. Serverless **SHOULD NOT** be used where a workload runs continuously, is cold-start sensitive, needs resources such as a GPU beyond the platform's limits, or holds state directly rather than externalising it.
@@ -44,7 +44,7 @@ Serverless or a managed service is chosen only where the workload's own characte
 
 ### Runtime Options & Platform Capability
 
-A workload's runtime model options stay limited to platform capability the organisation already operates or approves.
+> A workload's runtime model options stay limited to platform capability the organisation already operates or approves.
 
 1. The runtime models evaluated for a workload **MUST** be limited to those the organisation operates or has approved for operational use.
 2. A runtime model requiring a new, unapproved platform capability **MUST NOT** be adopted until that capability is approved through the organisation's governance process.
@@ -55,7 +55,7 @@ A workload's runtime model options stay limited to platform capability the organ
 
 ### Vendor Coupling
 
-The vendor coupling a runtime model introduces is identified and weighed against the capability it provides.
+> The vendor coupling a runtime model introduces is identified and weighed against the capability it provides.
 
 1. Where a candidate runtime model is a managed service or serverless offering, the vendor coupling it introduces **MUST** be identified and weighed against the capability it provides.
 2. A runtime model **MAY** be selected for the cloud-native capability it provides, even where this introduces vendor coupling.
@@ -67,7 +67,7 @@ The vendor coupling a runtime model introduces is identified and weighed against
 
 ### Cloud Deployment Selection
 
-A workload's deployment location is an explicit choice between public, private, and micro cloud, not a default.
+> A workload's deployment location is an explicit choice between public, private, and micro cloud, not a default.
 
 1. The choice between public cloud, private cloud, and micro cloud deployment **MUST** be an explicit decision for a workload, based on its own requirements.
 2. Public cloud **SHOULD** be the default deployment model, since it provides the widest access to cloud-native capabilities such as managed services, serverless offerings, and elastic scaling; private or micro cloud **MAY** be selected where a specific requirement, such as data residency, connectivity, or proximity to a local data source, justifies it.

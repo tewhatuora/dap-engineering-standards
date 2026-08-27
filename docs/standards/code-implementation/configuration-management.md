@@ -8,7 +8,7 @@
 
 ### Externalised, Non-Hardcoded Configuration
 
-A setting that varies by environment comes from outside a service's source code, so the same build runs everywhere unmodified.
+> A setting that varies by environment comes from outside a service's source code, so the same build runs everywhere unmodified.
 
 1. A setting whose value varies by environment or deployment **MUST** be supplied to a service from an external source, such as an environment variable or configuration file, rather than hardcoded in its source code.
 2. A build artifact **MUST NOT** be modified or rebuilt to change a configuration value; the same build **MUST** be deployable to every environment unchanged.
@@ -20,7 +20,7 @@ A setting that varies by environment comes from outside a service's source code,
 
 ### Configuration as Code
 
-Non-secret configuration is version-controlled as code, and removed the moment it is no longer read.
+> Non-secret configuration is version-controlled as code, and removed the moment it is no longer read.
 
 1. Configuration that is not a secret or credential **MUST** be stored in a version-controlled repository as its authoritative source.
 2. Configuration **SHOULD** be stored as a structured, declarative file, such as YAML, JSON, or `.env`.
@@ -34,7 +34,7 @@ Non-secret configuration is version-controlled as code, and removed the moment i
 
 ### Secrets Excluded from Configuration
 
-A secret never appears in configuration in plain text; a service references it through a secrets management mechanism.
+> A secret never appears in configuration in plain text; a service references it through a secrets management mechanism.
 
 1. A configuration file, environment variable definition, or other configuration artifact **MUST NOT** contain a secret, credential, or other sensitive value in plain text.
 2. Where a service requires a secret at runtime, its configuration **MUST** reference the secret's location in a dedicated secrets management mechanism, rather than embedding the secret's value.
@@ -47,7 +47,7 @@ A secret never appears in configuration in plain text; a service references it t
 
 ### Consistent Structure Across Environments
 
-A configuration's structure stays identical across environments; only its values differ between them.
+> A configuration's structure stays identical across environments; only its values differ between them.
 
 1. A configuration's structure, such as its keys, sections, or schema, **MUST** remain identical across every environment; only the value assigned to a setting **MAY** differ between environments.
 2. A setting required in one environment **MUST** resolve to a value in every other environment's configuration, whether declared directly or inherited from a shared base configuration, rather than added or removed for a single environment only.
@@ -59,7 +59,7 @@ A configuration's structure stays identical across environments; only its values
 
 ### Validation & Fail-Fast
 
-A service validates its configuration at startup, and fails fast with a clear error rather than starting in an undefined state.
+> A service validates its configuration at startup, and fails fast with a clear error rather than starting in an undefined state.
 
 1. A service **MUST** validate its configuration, including required settings, types, and permitted values, before completing startup.
 2. A service **MUST** fail to start, and report an error identifying the invalid or missing setting, where its configuration fails validation.
@@ -70,7 +70,7 @@ A service validates its configuration at startup, and fails fast with a clear er
 
 ### Change Control & Traceability
 
-A configuration change deploys through the same automated pipeline as code, traceable to who authorised it.
+> A configuration change deploys through the same automated pipeline as code, traceable to who authorised it.
 
 1. A configuration change **MUST** be deployed through the same automated pipeline used for a source code change, rather than applied manually to a running instance.
 2. A configuration change affecting a production environment **MUST** be traceable to the individual or automated process that applied it, and to the review that authorised it.
@@ -84,7 +84,7 @@ A configuration change deploys through the same automated pipeline as code, trac
 
 ### Runtime & Dynamic Configuration
 
-A runtime configuration change stays authorised, logged, and reversible, even outside the usual version-controlled path.
+> A runtime configuration change stays authorised, logged, and reversible, even outside the usual version-controlled path.
 
 1. Where a setting can be changed at runtime without redeploying a service, such as through a configuration service, the change **MUST** still be authorised, logged, and attributable to its source.
 2. A runtime configuration change **MUST** be reversible, so a service can be returned to its prior configuration without a redeployment.

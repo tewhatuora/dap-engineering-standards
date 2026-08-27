@@ -12,7 +12,7 @@ Developers and vendors implementing health data exchange **SHOULD** also consult
 
 ### Recognised Standards & Implementation Guides
 
-Health data exchange uses FHIR and builds on an existing Implementation Guide rather than a proprietary format.
+> Health data exchange uses FHIR and builds on an existing Implementation Guide rather than a proprietary format.
 
 1. Health data exchange **SHOULD** use [HL7](https://www.hl7.org/)'s [Fast Healthcare Interoperability Resources (FHIR)](https://www.hl7.org/fhir/) standard where an appropriate FHIR resource exists, in preference to a proprietary or organisation-specific format.
 2. An existing [HL7 Version 2 (V2)](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185) messaging integration **MAY** continue to operate; FHIR **SHOULD** be used for new development.
@@ -28,7 +28,7 @@ Health data exchange uses FHIR and builds on an existing Implementation Guide ra
 
 ### Clinical Terminology & Coding Systems
 
-Clinical data is coded using a recognised terminology, sourced from NZHTS, not free text or a local copy.
+> Clinical data is coded using a recognised terminology, sourced from NZHTS, not free text or a local copy.
 
 1. Clinical data **SHOULD** be represented using a recognised clinical terminology or coding system rather than free text or an organisation-specific code, so its meaning is consistent and machine-interpretable across consuming systems.
 2. Clinical terminology and code sets **SHOULD** be sourced from the [NZ Health Terminology Service (NZHTS)](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/data-and-standards/health-information-standards/nz-health-terminology-service-nzhts) rather than an independently maintained or organisation-specific copy.
@@ -42,7 +42,7 @@ Clinical data is coded using a recognised terminology, sourced from NZHTS, not f
 
 ### Interoperability Across Organisational & Sector Boundaries
 
-Health data crossing an organisational or sector boundary meets the same conformance as data exchanged within one.
+> Health data crossing an organisational or sector boundary meets the same conformance as data exchanged within one.
 
 1. Health data exchanged across an organisational or sector boundary **MUST** meet the same conformance expectations as data exchanged within a single organisation; crossing a boundary **MUST NOT** justify a proprietary or lower-conformance alternative.
 2. An interface crossing an organisational or sector boundary **SHOULD** be designed for more than one prospective consuming organisation, not just the first it was built for.
@@ -54,7 +54,7 @@ Health data crossing an organisational or sector boundary meets the same conform
 
 ### Conformance Testing Against Implementation Guides
 
-An implementation is tested for conformance against its Implementation Guide before it exchanges data in production.
+> An implementation is tested for conformance against its Implementation Guide before it exchanges data in production.
 
 1. An implementation **MUST** be tested for conformance against the relevant Implementation Guide before it is used to exchange data in production.
 2. Conformance testing **SHOULD** be automated, so it can be repeated whenever the implementation changes or the Implementation Guide it conforms to is updated.

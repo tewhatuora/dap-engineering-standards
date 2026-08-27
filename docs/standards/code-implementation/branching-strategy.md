@@ -8,7 +8,7 @@
 
 ### Defined Branching Model
 
-A repository uses one explicitly defined branching model, documented and applied consistently to every kind of code it holds.
+> A repository uses one explicitly defined branching model, documented and applied consistently to every kind of code it holds.
 
 1. A repository **MUST** use a single, explicitly defined branching model.
 2. The branching model in use **MUST** be documented in the repository's `README` or a location linked from it.
@@ -20,7 +20,7 @@ A repository uses one explicitly defined branching model, documented and applied
 
 ### Approved Branching Models
 
-A repository adopts trunk-based development or Gitflow, chosen to match how often it releases.
+> A repository adopts trunk-based development or Gitflow, chosen to match how often it releases.
 
 1. A repository **MUST** adopt either trunk-based development or Gitflow as its branching model.
 2. Under either branching model, a branch **MUST NOT** be created to represent a deployment environment, such as a staging or production branch; environment-specific behaviour **MUST** be managed independently of the branching model.
@@ -35,7 +35,7 @@ A repository adopts trunk-based development or Gitflow, chosen to match how ofte
 
 ### Short-Lived Branches
 
-A branch merges within a few days, kept in sync with its integration branch to limit conflict risk.
+> A branch merges within a few days, kept in sync with its integration branch to limit conflict risk.
 
 1. A branch created for a discrete unit of work, such as a feature, fix, or routine maintenance task, **SHOULD** be merged within a few days of creation, so its changes are integrated and tested while still fresh.
 2. A branch **SHOULD** be kept in sync with the integration branch it will merge into, through frequent rebasing or merging, to limit divergence and merge conflict risk.
@@ -43,7 +43,7 @@ A branch merges within a few days, kept in sync with its integration branch to l
 
 ### Branch Naming Conventions
 
-A branch's name follows a consistent convention, so its purpose and origin are clear without further context.
+> A branch's name follows a consistent convention, so its purpose and origin are clear without further context.
 
 1. A branch name **SHOULD** follow the pattern below, using one of the recommended prefixes, and include a short, descriptive reference to the work it contains, such as a ticket or issue identifier.
 2. A branch naming convention, once adopted, **MUST** be applied consistently across a repository so a branch's purpose and origin can be determined from its name alone.
@@ -65,7 +65,7 @@ A branch's name follows a consistent convention, so its purpose and origin are c
 
 ### Protected Branches & Required Checks
 
-A protected branch only changes through a reviewed merge request that has passed its mandatory automated checks.
+> A protected branch only changes through a reviewed merge request that has passed its mandatory automated checks.
 
 1. An integration, release, or hotfix branch **MUST** be protected from direct pushes; a change **MUST** be merged only through a merge request that has received the review and approval required for the repository.
 2. A merge request **MUST NOT** be merged until its required automated checks, such as build, test, and static analysis, have passed.
@@ -82,7 +82,7 @@ A protected branch only changes through a reviewed merge request that has passed
 
 ### Merge Strategy & History Integrity
 
-A repository uses one documented merge strategy, and its commit history stays intact and traceable to every merge.
+> A repository uses one documented merge strategy, and its commit history stays intact and traceable to every merge.
 
 1. A repository **MUST** use one defined merge strategy, such as squash merging or fast-forward merging, applied consistently for merges into a protected branch.
 2. The merge strategy in use **MUST** be documented in the repository's `README` or a location linked from it.
@@ -95,7 +95,7 @@ A repository uses one documented merge strategy, and its commit history stays in
 
 ### Release & Hotfix Branches
 
-A release or hotfix branch stays scoped to the work it was created to stabilise or fix, nothing else.
+> A release or hotfix branch stays scoped to the work it was created to stabilise or fix, nothing else.
 
 1. Where a release branch is used, it **SHOULD** be created from a specific, identifiable point on the integration branch, and **SHOULD** remain open only for the stabilisation period leading up to that release.
 2. Where a hotfix branch is used to forward-fix a production issue rather than resolve it through a rollback, it **SHOULD** be created from the released state it is fixing, and its change **MUST** be merged back into every branch that requires the fix once validated.
@@ -108,7 +108,7 @@ A release or hotfix branch stays scoped to the work it was created to stabilise 
 
 ### Branch Cleanup & Staleness Review
 
-A merged branch is deleted, and a repository is reviewed periodically for stale, unmerged branches.
+> A merged branch is deleted, and a repository is reviewed periodically for stale, unmerged branches.
 
 1. A branch **MUST** be deleted once it has been merged, unless it is a protected branch.
 2. A repository **SHOULD** be reviewed periodically for stale, unmerged branches, and a branch with no active work **SHOULD** be merged, rebased, or deleted.

@@ -8,7 +8,7 @@
 
 ### Static Analysis Coverage
 
-Every language in a codebase is checked by static analysis for bugs, maintainability issues, and security weaknesses.
+> Every language in a codebase is checked by static analysis for bugs, maintainability issues, and security weaknesses.
 
 1. Each language in use within a codebase, including one used to define infrastructure, **MUST** be checked using static analysis appropriate to it.
 2. Generated code and a path not held under version control, such as a build output directory, **MUST** be excluded from static analysis scope.
@@ -23,7 +23,7 @@ Every language in a codebase is checked by static analysis for bugs, maintainabi
 
 ### Maintainability Analysis
 
-Static analysis measures a maintainability indicator continuously, so a degrading trend is visible as it happens.
+> Static analysis measures a maintainability indicator continuously, so a degrading trend is visible as it happens.
 
 1. Static analysis **MUST** be used to measure a maintainability indicator, such as complexity or duplication, for code as it is written.
 2. A degrading trend in a measured indicator **MUST** be visible to the team responsible for the code, so it can be addressed before it materially affects maintainability.
@@ -35,7 +35,7 @@ Static analysis measures a maintainability indicator continuously, so a degradin
 
 ### Ruleset Configuration
 
-A static analysis ruleset is version-controlled and shared consistently across the organisation, locally and in the pipeline.
+> A static analysis ruleset is version-controlled and shared consistently across the organisation, locally and in the pipeline.
 
 1. A ruleset **MUST** be configured and managed either within the analysis tool itself or as version-controlled configuration, whichever the tool supports, so the same ruleset can be shared consistently across the organisation.
 2. The same rule definitions and tool version **MUST** apply locally, where supported by the tool, and in the delivery pipeline.
@@ -48,7 +48,7 @@ A static analysis ruleset is version-controlled and shared consistently across t
 
 ### Severity-Based Pipeline Gate
 
-A static analysis finding's severity decides whether it blocks a change, reported in a standard, machine-readable format.
+> A static analysis finding's severity decides whether it blocks a change, reported in a standard, machine-readable format.
 
 1. Static analysis **MUST** run as part of the delivery pipeline.
 2. Each finding **MUST** be classified by severity, distinguishing one that must block progression from one that is advisory only.
@@ -65,7 +65,7 @@ A static analysis finding's severity decides whether it blocks a change, reporte
 
 ### Local Detection
 
-A static analysis finding surfaces locally as code is written, before a change is ever submitted for review.
+> A static analysis finding surfaces locally as code is written, before a change is ever submitted for review.
 
 1. Static analysis **SHOULD** be available to run locally through IDE integration, where supported by the tool, so a finding is visible before a change is submitted for review.
 2. Static analysis running through IDE integration **SHOULD** analyse a file incrementally as it is written, rather than only through a manual, whole-codebase scan, so feedback remains immediate.
@@ -76,7 +76,7 @@ A static analysis finding surfaces locally as code is written, before a change i
 
 ### Suppression & Exception Discipline
 
-A static analysis suppression identifies its finding, gives a documented reason, and stays auditable.
+> A static analysis suppression identifies its finding, gives a documented reason, and stays auditable.
 
 1. A finding **MUST NOT** be suppressed by disabling a rule broadly, unless a genuine investigation shows every occurrence it would otherwise flag is a false positive.
 2. A suppression **MUST** identify the specific finding it addresses, and **MUST** include a documented reason.
@@ -90,7 +90,7 @@ A static analysis suppression identifies its finding, gives a documented reason,
 
 ### Ruleset Governance
 
-A change to the static analysis ruleset is restricted to an authorised role and reviewed with the same rigor as code.
+> A change to the static analysis ruleset is restricted to an authorised role and reviewed with the same rigor as code.
 
 1. A change to the adopted ruleset, including adding, removing, or weakening a rule, **MUST** be restricted to an authorised role.
 2. A change made as version-controlled configuration **MUST** be reviewed with the same rigor as a code change; a change made within the analysis tool itself **MUST** remain visible in the tool's own audit trail.
@@ -104,7 +104,7 @@ A change to the static analysis ruleset is restricted to an authorised role and 
 
 ### Baselining Pre-Existing Findings
 
-A pre-existing finding can be baselined when static analysis is adopted, but stays tracked as technical debt.
+> A pre-existing finding can be baselined when static analysis is adopted, but stays tracked as technical debt.
 
 1. Adopting static analysis or a new rule on an existing codebase **MAY** treat its existing violations as a baseline, recorded either as an explicit exception list or as a fixed point in the codebase's history.
 2. A violation introduced after a baseline is established, whether as an exception list or a fixed point in the codebase's history, **MUST NOT** be treated as baselined.

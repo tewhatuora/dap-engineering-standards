@@ -8,7 +8,7 @@
 
 ### Metric Types
 
-A metric is recorded as a counter, gauge, or histogram, matching what it actually measures, and never changed once relied on.
+> A metric is recorded as a counter, gauge, or histogram, matching what it actually measures, and never changed once relied on.
 
 1. A metric **MUST** be recorded using the metric type that matches its semantics, such as a monotonically increasing count as a counter, a point-in-time value as a gauge, or a distribution of values as a histogram.
 2. A value that can both increase and decrease, such as a queue depth or the number of claims currently awaiting assessment, **MUST** be recorded as a gauge rather than a counter, since a counter cannot represent a decrease.
@@ -21,7 +21,7 @@ A metric is recorded as a counter, gauge, or histogram, matching what it actuall
 
 ### Metric Cardinality
 
-A metric's labels stay bounded and low-cardinality; a high-cardinality value belongs in a trace or log instead.
+> A metric's labels stay bounded and low-cardinality; a high-cardinality value belongs in a trace or log instead.
 
 1. A metric label or dimension **MUST NOT** carry an unbounded or high-cardinality value, such as a raw identifier or a timestamp, since this increases storage cost and degrades query performance.
 2. Where a high-cardinality value is genuinely needed for diagnosis, it **SHOULD** be captured in a trace or log rather than as a metric label.
@@ -34,7 +34,7 @@ A metric's labels stay bounded and low-cardinality; a high-cardinality value bel
 
 ### Operational & Business Dashboards
 
-A service's key operational and business indicators live on a dashboard, kept current and accessible to its own team.
+> A service's key operational and business indicators live on a dashboard, kept current and accessible to its own team.
 
 1. A service **MUST** have a dashboard presenting its key operational indicators, such as its request rate, error rate, and latency, or the equivalent indicators for an asynchronous or event-driven service.
 2. For a service that performs a business function, a dashboard **SHOULD** present one or more business-relevant indicators alongside its operational indicators, such as the time taken to reach a claim determination.
@@ -47,7 +47,7 @@ A service's key operational and business indicators live on a dashboard, kept cu
 
 ### Alerting Policy
 
-An alert reaches its responsible team automatically, with a severity proportionate to impact and a runbook to follow.
+> An alert reaches its responsible team automatically, with a severity proportionate to impact and a runbook to follow.
 
 1. An alert **MUST** be assigned to a team responsible for responding to it.
 2. An alert **MUST** automatically notify its responsible team once triggered, rather than depending on manual checking to discover it.
@@ -65,7 +65,7 @@ An alert reaches its responsible team automatically, with a severity proportiona
 
 ### Alert Fatigue Governance
 
-An alert that fires without a genuine response is tuned or retired, so alert fatigue never sets in.
+> An alert that fires without a genuine response is tuned or retired, so alert fatigue never sets in.
 
 1. An alert that fires repeatedly without a corresponding response, or that is routinely acknowledged without action, **MUST** be reviewed and either tuned to reflect a genuine condition or retired.
 2. Alert volume **SHOULD** be reviewed periodically across a service, so a recipient's ability to distinguish an actionable alert from routine noise is not eroded over time.

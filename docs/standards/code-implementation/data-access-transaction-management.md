@@ -8,7 +8,7 @@
 
 ### Data Access Layer Abstraction
 
-A service accesses its data store only through a defined data access layer, never a raw query in business logic.
+> A service accesses its data store only through a defined data access layer, never a raw query in business logic.
 
 1. A service **MUST** access its data store through a defined data access layer or set of interfaces, not by embedding a raw query directly within business logic or presentation code.
 2. A data access layer **MUST** provide a purpose-named method for each operation a service performs, such as retrieving a patient's active referrals, rather than a generic method that passes through a filter or query fragment, so the data store stays replaceable without changing the code that calls it.
@@ -21,7 +21,7 @@ A service accesses its data store only through a defined data access layer, neve
 
 ### Object-Relational Mapping Usage
 
-An ORM's loading strategy is a deliberate choice per relationship, and the query it executes stays visible for diagnosis.
+> An ORM's loading strategy is a deliberate choice per relationship, and the query it executes stays visible for diagnosis.
 
 1. Use of an ORM is **OPTIONAL**; a service **MAY** use raw queries or a lighter-weight data access technology instead, where an ORM does not provide a genuine benefit.
 2. An eager or lazy loading strategy **MUST** be an explicit, deliberate choice for each relationship an ORM defines, not left to its default for every relationship.
@@ -36,7 +36,7 @@ An ORM's loading strategy is a deliberate choice per relationship, and the query
 
 ### Parameterised Queries & Injection Prevention
 
-A query is always built through parameterisation, never by concatenating untrusted input into a query string.
+> A query is always built through parameterisation, never by concatenating untrusted input into a query string.
 
 1. A query or command sent to a data store **MUST** be constructed using a parameterised query, prepared statement, or equivalent binding mechanism provided by the data access technology in use.
 2. Untrusted input, including a value originating from a user, an external system, or another service, **MUST NOT** be concatenated or interpolated directly into a query string.
@@ -48,7 +48,7 @@ A query is always built through parameterisation, never by concatenating untrust
 
 ### Error Handling & Disclosure
 
-A data store error is logged in full for diagnosis, but never disclosed to a caller in a form that reveals the schema.
+> A data store error is logged in full for diagnosis, but never disclosed to a caller in a form that reveals the schema.
 
 1. An error returned by a data store **MUST NOT** be disclosed to a caller in a form that reveals a query's structure or the underlying schema.
 2. The full error, including its underlying cause, **MUST** still be logged for internal diagnosis, without logging a sensitive parameter value the query contained.
@@ -61,7 +61,7 @@ A data store error is logged in full for diagnosis, but never disclosed to a cal
 
 ### Connection Management & Pooling
 
-A service obtains a data store connection from a bounded pool, releases it promptly, and bounds every attempt by a timeout.
+> A service obtains a data store connection from a bounded pool, releases it promptly, and bounds every attempt by a timeout.
 
 1. A service **MUST** obtain a connection to a data store from a connection pool, rather than opening a new connection for each operation.
 2. A connection pool's size **MUST** be bounded and configured to suit the data store's actual connection capacity and the service's expected concurrency.
@@ -75,7 +75,7 @@ A service obtains a data store connection from a bounded pool, releases it promp
 
 ### Least-Privilege Data Store Credentials
 
-A service's data store credential is scoped to only the access its role requires, never an administrative credential.
+> A service's data store credential is scoped to only the access its role requires, never an administrative credential.
 
 1. A service's data store credential **MUST** be granted only the operations and objects its role requires, such as read, create, update, or delete access to specific tables, collections, or stored procedures.
 2. A credential's granted access **MUST** be reviewed when a service's role changes, and revoked where no longer required.
@@ -88,7 +88,7 @@ A service's data store credential is scoped to only the access its role requires
 
 ### Transaction Boundaries & Atomicity
 
-A transaction's boundary is explicit in code, scoped to one unit of work, and never left open waiting on an external call.
+> A transaction's boundary is explicit in code, scoped to one unit of work, and never left open waiting on an external call.
 
 1. A transaction's start and end **MUST** be explicitly defined in code, rather than left to a data access technology's default behaviour, such as auto-committing each statement as its own implicit transaction.
 2. Writes belonging to the same unit of work **MUST** be executed within a single transaction and rolled back in full where any part fails.
@@ -101,7 +101,7 @@ A transaction's boundary is explicit in code, scoped to one unit of work, and ne
 
 ### Isolation Levels & Concurrency Control
 
-A transaction's isolation level and concurrency control are a deliberate choice, so a concurrent write never causes a lost update.
+> A transaction's isolation level and concurrency control are a deliberate choice, so a concurrent write never causes a lost update.
 
 1. A transaction's isolation level **MUST** be deliberately chosen to match the consistency and concurrency needs of the operation it protects.
 2. Optimistic concurrency control, such as a version or timestamp column checked at write time, **SHOULD** be used where write conflicts are infrequent.
@@ -114,7 +114,7 @@ A transaction's isolation level and concurrency control are a deliberate choice,
 
 ### Timeouts & Retries
 
-An operation against a data store is bounded by a timeout, and only retried when its failure is transient and idempotent.
+> An operation against a data store is bounded by a timeout, and only retried when its failure is transient and idempotent.
 
 1. An operation executed against a data store **MUST** be bound by a timeout, so a service does not block indefinitely waiting for it to complete.
 2. An operation against a data store that fails with a transient error, such as a network or I/O error, **SHOULD** be retried automatically, using a bounded number of attempts with minimal delay between them.
@@ -128,7 +128,7 @@ An operation against a data store is bounded by a timeout, and only retried when
 
 ### Cross-Service Transaction Consistency
 
-A transaction never spans more than one service's data store; cross-service consistency uses an eventual-consistency pattern instead.
+> A transaction never spans more than one service's data store; cross-service consistency uses an eventual-consistency pattern instead.
 
 1. A transaction **MUST NOT** span more than one service's own data store; each service's data **MUST** be committed within its own transaction boundary.
 2. Where an operation must keep data consistent across more than one service, it **MUST** use an eventual-consistency pattern, such as a saga with compensating actions, rather than a distributed transaction or two-phase commit spanning services.
@@ -141,7 +141,7 @@ A transaction never spans more than one service's data store; cross-service cons
 
 ### Read Efficiency & Replica Awareness
 
-A read is batched, paginated, and directed to a replica or cache where its consistency needs allow it.
+> A read is batched, paginated, and directed to a replica or cache where its consistency needs allow it.
 
 1. A data access layer **SHOULD** retrieve related data using a single batched or joined query where feasible, avoiding the N+1 query problem of issuing a separate query per related record.
 2. A read that could return a large or unbounded result set **MUST** use pagination or an equivalent mechanism to limit what is retrieved at once.
@@ -155,7 +155,7 @@ A read is batched, paginated, and directed to a replica or cache where its consi
 
 ### Write Efficiency
 
-A write to the same table is batched into a single round trip where feasible, rather than issued one record at a time.
+> A write to the same table is batched into a single round trip where feasible, rather than issued one record at a time.
 
 1. A data access layer **SHOULD** batch multiple writes to the same table or collection into a single round trip where feasible, rather than issuing a separate write per record.
 2. A batch write affecting a large volume of data **SHOULD** be bounded to a reasonable chunk size, so a single write does not lock or overload the data store.
@@ -167,7 +167,7 @@ A write to the same table is batched into a single round trip where feasible, ra
 
 ### Data Access Observability
 
-A query's execution time, outcome, and connection pool usage stay observable, correlated back to the request it belongs to.
+> A query's execution time, outcome, and connection pool usage stay observable, correlated back to the request it belongs to.
 
 1. A query's execution time **MUST** be observable, so a slow query can be identified before it degrades a service's wider performance.
 2. A query's outcome, whether it succeeded, failed, or was retried, **MUST** be observable, so a failure pattern can be investigated rather than treated as routine.

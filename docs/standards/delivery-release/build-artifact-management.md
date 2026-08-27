@@ -8,7 +8,7 @@
 
 ### Automated, Traceable Builds
 
-A deployable artifact comes only from an automated pipeline, traceable back to the specific commit that produced it.
+> A deployable artifact comes only from an automated pipeline, traceable back to the specific commit that produced it.
 
 1. A deployable artifact **MUST** be produced only by an automated build pipeline; it **MUST NOT** be assembled or uploaded manually.
 2. A build **MUST** be triggered from, and remain traceable to, a specific, identifiable commit in a codebase's designated repository.
@@ -23,7 +23,7 @@ A deployable artifact comes only from an automated pipeline, traceable back to t
 
 ### Reproducible Build Inputs
 
-A build runs in a clean, pinned-toolchain environment, so the same source always produces the same artifact.
+> A build runs in a clean, pinned-toolchain environment, so the same source always produces the same artifact.
 
 1. A build **MUST NOT** depend on a manual step or on state specific to the machine or account that ran it; every step required to produce it **MUST** be captured in the automated pipeline itself.
 2. A build **MUST** run in a clean, isolated environment free of state left over from a previous build, so its result depends only on its declared inputs.
@@ -37,7 +37,7 @@ A build runs in a clean, pinned-toolchain environment, so the same source always
 
 ### Artifact Immutability & Identity
 
-A built artifact carries a unique identifier and is never modified afterwards; a change ships as a new build.
+> A built artifact carries a unique identifier and is never modified afterwards; a change ships as a new build.
 
 1. An artifact **MUST** be assigned a unique, traceable identifier at build time, linking it back to the source commit and build run that produced it.
 2. A released artifact **MUST NOT** be modified, patched, or reassembled after it is built; a required change **MUST** instead be delivered as a new build carrying a new identifier.
@@ -50,7 +50,7 @@ A built artifact carries a unique identifier and is never modified afterwards; a
 
 ### Governed Artifact Repository
 
-A built artifact lives only in an approved repository, published only by the automated pipeline, never by hand.
+> A built artifact lives only in an approved repository, published only by the automated pipeline, never by hand.
 
 1. A built artifact **MUST** be stored in an approved artifact repository; it **MUST NOT** be distributed solely as a build job's own output or attachment.
 2. Only an automated build pipeline **MAY** publish a new artifact version to the repository; an artifact **MUST NOT** be published manually.
@@ -64,7 +64,7 @@ A built artifact lives only in an approved repository, published only by the aut
 
 ### Artifact Integrity & Provenance
 
-An artifact's checksum, signature, and build provenance stay verifiable long after it is produced.
+> An artifact's checksum, signature, and build provenance stay verifiable long after it is produced.
 
 1. An artifact **MUST** be verifiable against a checksum or digest recorded at build time, so tampering or corruption after publication is detectable.
 2. Where the artifact repository or runtime supports it, an artifact **SHOULD** be cryptographically signed at build time; its signature **MUST** be preserved through storage and promotion, and verified before deployment.
@@ -77,7 +77,7 @@ An artifact's checksum, signature, and build provenance stay verifiable long aft
 
 ### Unmodified Artifact Promotion
 
-A verified artifact promotes unchanged through every later environment, never rebuilt along the way.
+> A verified artifact promotes unchanged through every later environment, never rebuilt along the way.
 
 1. An artifact that has passed verification in one environment **MUST** be promoted unchanged into every subsequent environment; it **MUST NOT** be rebuilt, recompiled, or reassembled to reach a later stage.
 2. Each promotion of an artifact into an environment **MUST** be recorded, preserving traceability from the artifact's identifier back to its source and build, and forward to the environment it was promoted into.
@@ -89,7 +89,7 @@ A verified artifact promotes unchanged through every later environment, never re
 
 ### Published Artifact Versioning
 
-A published artifact follows Semantic Versioning, so a consumer can reason about compatibility before upgrading.
+> A published artifact follows Semantic Versioning, so a consumer can reason about compatibility before upgrading.
 
 1. An artifact published for another team or service to consume, such as a shared library, package, or base image, **MUST** be versioned using a [Semantic Versioning](https://semver.org/) scheme, so a consumer can reason about compatibility before upgrading.
 2. A breaking change to a published artifact **MUST** be released as a new major version.

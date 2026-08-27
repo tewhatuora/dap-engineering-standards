@@ -8,7 +8,7 @@
 
 ### Runbook Coverage
 
-A known failure mode or high-risk procedure has a documented runbook, followed as the response rather than reinvented each time.
+> A known failure mode or high-risk procedure has a documented runbook, followed as the response rather than reinvented each time.
 
 1. A known or recurring failure mode referenced by an alert **MUST** have a corresponding runbook describing its response.
 2. A high-risk or recurring operational procedure, such as remediating a data quality issue or executing a standby failover, **MUST** be captured in a runbook rather than left to informal or undocumented knowledge.
@@ -22,7 +22,7 @@ A known failure mode or high-risk procedure has a documented runbook, followed a
 
 ### Runbook Content
 
-A runbook spells out its steps, applicability, and resolution outcome in enough detail for a person or an AI tool to execute.
+> A runbook spells out its steps, applicability, and resolution outcome in enough detail for a person or an AI tool to execute.
 
 1. A runbook **MUST** describe the steps needed to diagnose and resolve a failure mode or carry out an operational procedure, in enough detail to execute them.
 2. A runbook **MUST** state the condition under which it applies and the outcome confirming the failure mode's resolution or the operational procedure's completion.
@@ -34,7 +34,7 @@ A runbook spells out its steps, applicability, and resolution outcome in enough 
 
 ### Runbook Currency
 
-A runbook is version-controlled alongside its service, updated in the same change, and retired once it no longer applies.
+> A runbook is version-controlled alongside its service, updated in the same change, and retired once it no longer applies.
 
 1. A runbook **MUST** be version-controlled as `Markdown` within the same repository as the service it is documented for.
 2. A runbook **MUST** be updated in the same change that alters the procedure, service behaviour, or failure mode it documents.
@@ -48,7 +48,7 @@ A runbook is version-controlled alongside its service, updated in the same chang
 
 ### Runbook Discoverability
 
-An alert or dashboard links directly to its runbook, and every runbook is also published somewhere findable on its own.
+> An alert or dashboard links directly to its runbook, and every runbook is also published somewhere findable on its own.
 
 1. An alert or dashboard indicator tied to a failure mode **MUST** link directly to the runbook covering it, rather than leaving its recipient, whether a team member or an AI tool, without direct access to the runbook.
 2. A runbook **MUST** be published through one of the organisation's established documentation sites, so it can be found without requiring direct access to its source repository.
@@ -61,7 +61,7 @@ An alert or dashboard links directly to its runbook, and every runbook is also p
 
 ### Runbook Validation
 
-A runbook is tested in a representative environment, and any gap found is corrected immediately, not deferred.
+> A runbook is tested in a representative environment, and any gap found is corrected immediately, not deferred.
 
 1. A runbook **MUST** be tested in a representative non-production environment when first written and whenever the failure mode, procedure, or service it documents changes.
 2. A gap or inaccuracy found while testing a runbook **MUST** be corrected immediately, in place, rather than deferred until the runbook is next relied on.
@@ -74,7 +74,7 @@ A runbook is tested in a representative environment, and any gap found is correc
 
 ### Runbook Automation
 
-A failure response is automated where possible, and its runbook still documents how to confirm and intervene in that automation.
+> A failure response is automated where possible, and its runbook still documents how to confirm and intervene in that automation.
 
 1. A failure mode's response or an operational procedure's execution **SHOULD** be automated rather than a runbook continuing to depend on a team member or an AI tool to carry out its steps manually.
 2. Where automated, the runbook **MUST** document how to confirm the automation executed correctly and how to intervene where it does not, rather than being discarded.
