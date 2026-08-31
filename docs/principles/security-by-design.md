@@ -54,7 +54,6 @@
 
 #### References
 
-- [Secure Software Development Practices](../standards/security-identity/secure-software-development-practices.md)
 - [Static Code Analysis](../standards/code-implementation/static-code-analysis.md)
 - [Code Review](../standards/code-implementation/code-review.md)
 

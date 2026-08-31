@@ -44,7 +44,6 @@
 #### References
 
 - [Security by Design](../../principles/security-by-design.md)
-- [Secure Software Development Practices](../security-identity/secure-software-development-practices.md)
 
 ### Error Handling & Disclosure
 

@@ -129,7 +129,6 @@ nav:
     - Security & Identity:
       - standards/security-identity/index.md
       - Identity & Access Management: standards/security-identity/identity-access-management.md
-      - Secure Software Development Practices: standards/security-identity/secure-software-development-practices.md
       - Vulnerability & Dependency Management: standards/security-identity/vulnerability-dependency-management.md
       - Software Supply Chain Security: standards/security-identity/software-supply-chain-security.md
       - Secrets Management & Scanning: standards/security-identity/secrets-management-scanning.md
@@ -153,4 +152,3 @@ nav:
       - standards/documentation-collaboration/index.md
       - Engineering Documentation Standards: standards/documentation-collaboration/engineering-documentation-standards.md
       - API Documentation: standards/documentation-collaboration/api-documentation.md
-
