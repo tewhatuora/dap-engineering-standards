@@ -32,7 +32,22 @@ theme:
   logo: assets/two.svg
   favicon: assets/favicon-32x32.png
   palette:
-    primary: custom
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Use system preference
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   custom_dir: theme-overrides
 extra_css:
   - stylesheets/extra.css

@@ -9,20 +9,25 @@
 }
 
 
-:root  > * {
-  --md-primary-fg-color:        rgb(0, 85, 140);
-  --md-typeset-color:           rgb(0, 85, 140);
-  --md-text-font-family:        "Poppins",-apple-system,BlinkMacSystemFont,"Ubuntu","Roboto","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-  --md-footer-bg-color:       #041836;
+:root {
+  --md-text-font-family: "Poppins",-apple-system,BlinkMacSystemFont,"Ubuntu","Roboto","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
 }
 
-.md-header {
-  background-color: var(--md-primary-bg-color);
-  color: var(--md-primary-fg-color);
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        rgb(0, 85, 140);
+  --md-typeset-color:           rgb(0, 85, 140);
+  --md-footer-bg-color:       #041836;
+  --site-heading-color:         rgb(0, 85, 140);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        rgb(0, 85, 140);
+  --md-typeset-color:           rgb(222, 229, 237);
+  --md-footer-bg-color:         rgb(4, 24, 54);
+  --site-heading-color:         rgb(113, 203, 214);
 }
 
 .md-content, .md-typeset {
-  color: var(--md-primary-fg-color);
   font-weight: 400;
   font-size: 0.9rem;
   font-stretch: 100%;
@@ -30,7 +35,7 @@
 }
 
 .md-typeset h1, .md-typeset h2, .md-typeset h3 {
-  color: var(--md-primary-fg-color);
+  color: var(--site-heading-color);
   font-weight: 700;
   line-height: 1.25;
 
@@ -56,13 +61,8 @@
 }
 
 .md-typeset a:focus, .md-typeset a:hover {
-    color: #0c818f;
-    text-decoration-color: #2dccd3;
-}
-
-.md-nav {
-  color: rgb(96, 103, 112);
-  font-weight: 500;
+  color: var(--md-accent-fg-color);
+  text-decoration-color: var(--md-accent-fg-color);
 }
 
 [data-md-component="header-topic"] {
@@ -75,7 +75,7 @@
 }
 
 .md-sidebar--secondary .md-sidebar__scrollwrap {
-  border-left: 1px solid rgb(218, 221, 225);
+  border-left: 1px solid var(--md-default-fg-color--light);
 }
 
 .mermaid-zoomable {
@@ -112,16 +112,16 @@
 
 @media screen and (min-width: 60em) {
   .md-search .md-search__form {
-    background-color: rgb(235, 237, 240);
+    background-color: var(--md-default-bg-color);
     border-radius: .8rem;
     height: 1.8rem;
   }
 }
 
 .md-search__form label.md-search__icon {
-  color:            rgb(68, 73, 80);
+  color: var(--md-default-fg-color--light);
 }
 
 .md-search__form input::placeholder {
-  color: #bec3c9;
+  color: var(--md-default-fg-color--lighter);
 }
