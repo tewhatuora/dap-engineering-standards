@@ -45,23 +45,24 @@
 
 > A branch's name follows a consistent convention, so its purpose and origin are clear without further context.
 
-1. A branch name **SHOULD** follow the pattern below, using one of the recommended prefixes, and include a short, descriptive reference to the work it contains, such as a ticket or issue identifier.
+1. A branch name **SHOULD** follow the pattern below, using one of the recommended prefixes, and include a short, descriptive reference to the work it contains, such as a ticket or issue identifier:
+
+    ```
+    <prefix>[<identifier>-]<short-description>
+    ```
+
+    | Prefix | Definition |
+    | --- | --- |
+    | `feat/` | New functionality or feature development |
+    | `fix/` | Standard bug or defect correction |
+    | `hotfix/` | Urgent production correction requiring immediate deployment |
+    | `release/` | Tasks related to preparing and finalising a specific version release |
+    | `refactor/` | Code restructuring that neither fixes a bug nor adds a feature |
+    | `docs/` | Documentation-only changes |
+    | `chore/` | Routine maintenance, dependency updates, or CI/CD configuration |
+    | `test/` | Adding missing tests or correcting existing test suites |
+
 2. A branch naming convention, once adopted, **MUST** be applied consistently across a repository so a branch's purpose and origin can be determined from its name alone.
-
-```
-<prefix>[<identifier>-]<short-description>
-```
-
-| Prefix | Definition |
-| --- | --- |
-| `feat/` | New functionality or feature development |
-| `fix/` | Standard bug or defect correction |
-| `hotfix/` | Urgent production correction requiring immediate deployment |
-| `release/` | Tasks related to preparing and finalising a specific version release |
-| `refactor/` | Code restructuring that neither fixes a bug nor adds a feature |
-| `docs/` | Documentation-only changes |
-| `chore/` | Routine maintenance, dependency updates, or CI/CD configuration |
-| `test/` | Adding missing tests or correcting existing test suites |
 
 ### Protected Branches & Required Checks
 
