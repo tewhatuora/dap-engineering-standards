@@ -27,6 +27,15 @@
   --site-heading-color:         rgb(113, 203, 214);
 }
 
+[data-md-color-scheme="slate"] .md-header__button.md-logo img {
+  content: url("../assets/two-dark.svg");
+}
+
+.md-header {
+  background-color: var(--md-default-bg-color);
+  color: var(--site-heading-color);
+}
+
 .md-content, .md-typeset {
   font-weight: 400;
   font-size: 0.9rem;
