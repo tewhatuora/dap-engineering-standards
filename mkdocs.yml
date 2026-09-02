@@ -6,6 +6,9 @@ plugins:
   #- optimize  # Disabled due to dependency installation complexity (eg Cairo Graphics native dependencies)
   - privacy
   - search
+  - glightbox:
+      width: 90%
+      height: auto
   # - mermaid-to-svg:
   #     image_id_enabled: true
   #     image_id_prefix: mermaid-diagram
@@ -33,6 +36,8 @@ theme:
   custom_dir: theme-overrides
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - assets/javascripts/mermaid-glightbox.js
 markdown_extensions:
   # - attr_list
   - toc:
