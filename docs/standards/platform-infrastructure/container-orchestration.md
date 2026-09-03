@@ -16,7 +16,7 @@
 #### References
 
 - [Infrastructure as Code](infrastructure-as-code.md)
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ### Resource Sizing
 
@@ -27,7 +27,7 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
 - [Resource Efficiency & Optimisation](../cost-sustainability/resource-efficiency-optimisation.md)
 
 ### Elastic Scaling
@@ -42,9 +42,9 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
 
 ### Instance Health & Lifecycle
 
@@ -56,8 +56,8 @@
 
 #### References
 
-- [Containerisation Standards](containerisation-standards.md)
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Containerisation](containerisation.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
 ### Workload & Network Isolation
 
@@ -68,7 +68,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 
 ### Runtime Secrets
 
@@ -79,5 +79,5 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)

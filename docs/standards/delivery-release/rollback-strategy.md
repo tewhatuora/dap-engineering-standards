@@ -18,7 +18,7 @@
 #### References
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
-- [Observability by Default](../../principles/observability-by-default.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
 - [Feature Flagging](feature-flagging.md)
 
 ### Rollback Versus Forward-Fix
@@ -42,7 +42,7 @@
 #### References
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
 ### Data & Schema Compatibility
 
@@ -54,7 +54,7 @@
 #### References
 
 - [Database Migration Tooling](../code-implementation/database-migration-tooling.md)
-- [Progressive Delivery Strategies](progressive-delivery-strategies.md)
+- [Progressive Delivery](progressive-delivery.md)
 
 ### Rollback Scope & Coordination
 
@@ -87,4 +87,4 @@
 
 #### References
 
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)

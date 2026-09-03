@@ -18,7 +18,7 @@
 #### References
 
 - [Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ### Versioned & Repeatable Migrations
 
@@ -77,10 +77,10 @@
 
 #### References
 
-- [Automation First](../../principles/automation-first.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
 - [Continuous Delivery & Deployment](../delivery-release/continuous-delivery-deployment.md)
-- [Observability by Default](../../principles/observability-by-default.md)
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
 
 ### Rollback & Irreversible Changes
 
@@ -94,7 +94,7 @@
 
 - [Rollback Strategy](../delivery-release/rollback-strategy.md)
 - [Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
 ### Locking & Performance Impact
 
@@ -106,7 +106,7 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
 
 ### Testing Migrations Before Production
 
@@ -120,4 +120,4 @@
 
 - [Test Data Management](../quality-engineering/test-data-management.md)
 - [Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
-- [Testability by Design](../../principles/testability-by-design.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)

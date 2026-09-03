@@ -15,7 +15,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 
 ### AI Agent Production Access
@@ -28,7 +28,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 - [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)
 
@@ -41,7 +41,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 
 ### Privileged & Emergency Access
@@ -54,8 +54,8 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
-- [Privacy by Design](../../principles/privacy-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 - [Database Migration Tooling](../code-implementation/database-migration-tooling.md)
 
@@ -68,4 +68,4 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)

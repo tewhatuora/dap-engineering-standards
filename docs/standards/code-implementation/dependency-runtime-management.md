@@ -53,7 +53,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Software Supply Chain Security](../security-identity/software-supply-chain-security.md)
 
 ### Reproducible Dependency Resolution
@@ -80,7 +80,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Build & Artifact Management](../delivery-release/build-artifact-management.md)
 - [Software Supply Chain Security](../security-identity/software-supply-chain-security.md)
 - [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
@@ -99,10 +99,10 @@
 
 #### References
 
-- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
-- [Security by Design](../../principles/security-by-design.md)
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
-- [Automation First](../../principles/automation-first.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
 - [Unit Testing](../quality-engineering/unit-testing.md)
 - [Integration Testing](../quality-engineering/integration-testing.md)
 

@@ -28,9 +28,9 @@
 
 #### References
 
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 - [Version Control](version-control.md)
-- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
 
 ### Secrets Excluded from Configuration
 
@@ -41,8 +41,8 @@
 
 #### References
 
-- [Everything as Code](../../principles/everything-as-code.md)
-- [Security by Design](../../principles/security-by-design.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 
 ### Consistent Structure Across Environments
 
@@ -65,7 +65,7 @@
 
 #### References
 
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
 
 ### Change Control & Traceability
 
@@ -78,8 +78,8 @@
 #### References
 
 - [Code Review](code-review.md)
-- [Automation First](../../principles/automation-first.md)
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ### Runtime & Dynamic Configuration
 

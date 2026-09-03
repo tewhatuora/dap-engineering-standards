@@ -28,7 +28,7 @@
 
 #### References
 
-- [Testability by Design](../../principles/testability-by-design.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
 
 ### Coverage Expectations
 
@@ -42,7 +42,7 @@
 
 #### References
 
-- [Testability by Design](../../principles/testability-by-design.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
 - [Feature Flagging](../delivery-release/feature-flagging.md)
 
 ### Coverage Measurement & Reporting
@@ -68,9 +68,9 @@
 
 #### References
 
-- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
-- [Testability by Design](../../principles/testability-by-design.md)
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
+- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
 
 ### Independent, Parallel-Safe Execution
 
@@ -82,7 +82,7 @@
 
 #### References
 
-- [Testability by Design](../../principles/testability-by-design.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
 
 ### Fast, Fully Automated Execution
 
@@ -94,8 +94,8 @@
 
 #### References
 
-- [Automation First](../../principles/automation-first.md)
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
 - [Branching Strategy](../code-implementation/branching-strategy.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 
@@ -109,9 +109,9 @@
 
 #### References
 
-- [Testability by Design](../../principles/testability-by-design.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
-- [Automation First](../../principles/automation-first.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
 
 ### Test Code Quality & Maintenance
 
@@ -123,7 +123,7 @@
 
 #### References
 
-- [Coding Standards & Formatting](../code-implementation/coding-standards-formatting.md)
+- [Code Style & Formatting](../code-implementation/code-style-formatting.md)
 - [Code Review](../code-implementation/code-review.md)
 
 ### Test Data Scope & Determinism
@@ -136,5 +136,5 @@
 
 #### References
 
-- [Testability by Design](../../principles/testability-by-design.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
 - [Test Data Management](test-data-management.md)

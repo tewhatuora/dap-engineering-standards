@@ -17,7 +17,7 @@
 
 #### References
 
-- [Automation First](../../principles/automation-first.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
 - [Unit Testing](../quality-engineering/unit-testing.md)
 - [Integration Testing](../quality-engineering/integration-testing.md)
 
@@ -36,13 +36,13 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Application Security Testing](../quality-engineering/application-security-testing.md)
 - [Static Code Analysis](../code-implementation/static-code-analysis.md)
 - [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
 - [Infrastructure as Code](../platform-infrastructure/infrastructure-as-code.md)
 - [Linting & Style Enforcement](../code-implementation/linting-style-enforcement.md)
-- [Containerisation Standards](../platform-infrastructure/containerisation-standards.md)
+- [Containerisation](../platform-infrastructure/containerisation.md)
 
 ### Pipeline Defined as Code
 
@@ -56,8 +56,8 @@
 
 #### References
 
-- [Everything as Code](../../principles/everything-as-code.md)
-- [Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
+- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)
 - [Code Review](../code-implementation/code-review.md)
 
 ### Pipeline as Merge Gate
@@ -85,7 +85,7 @@
 
 #### References
 
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 - [Build & Artifact Management](build-artifact-management.md)
 
 ### Pipeline Cost Efficiency
@@ -99,8 +99,8 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
-- [Sustainability by Design](../../principles/sustainability-by-design.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Sustainability by Design](../../principles/cost-sustainability/sustainability-by-design.md)
 - [Resource Efficiency & Optimisation](../cost-sustainability/resource-efficiency-optimisation.md)
 - [Cost Monitoring & Attribution](../cost-sustainability/cost-monitoring-attribution.md)
 
@@ -116,7 +116,7 @@
 
 #### References
 
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
 - [Build & Test Feedback Loops](../developer-experience/build-test-feedback-loops.md)
 
 ### Build Status Visibility
@@ -130,7 +130,7 @@
 
 #### References
 
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
 
 ### Single Verified Build Artifact
 
@@ -159,6 +159,6 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 - [Software Supply Chain Security](../security-identity/software-supply-chain-security.md)

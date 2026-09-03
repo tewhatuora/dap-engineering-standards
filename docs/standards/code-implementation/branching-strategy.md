@@ -16,7 +16,7 @@
 
 #### References
 
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ### Approved Branching Models
 
@@ -75,10 +75,10 @@
 #### References
 
 - [Code Review](code-review.md)
-- [Automation First](../../principles/automation-first.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 - [Static Code Analysis](static-code-analysis.md)
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 
 ### Merge Strategy & History Integrity

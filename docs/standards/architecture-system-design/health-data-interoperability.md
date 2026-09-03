@@ -22,9 +22,9 @@ Developers and vendors implementing health data exchange **SHOULD** also consult
 
 #### References
 
-- [Interoperability by Design](../../principles/interoperability-by-design.md)
-- [API Design & Standards](api-design-standards.md)
-- [Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
+- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [API Design](api-design.md)
+- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)
 
 ### Clinical Terminology & Coding Systems
 
@@ -37,8 +37,8 @@ Developers and vendors implementing health data exchange **SHOULD** also consult
 
 #### References
 
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
 
 ### Interoperability Across Organisational & Sector Boundaries
 
@@ -50,7 +50,7 @@ Developers and vendors implementing health data exchange **SHOULD** also consult
 
 #### References
 
-- [Data Residency & Sovereignty](../../principles/data-residency-sovereignty.md)
+- [Data Residency & Sovereignty](../../principles/data/data-residency-sovereignty.md)
 
 ### Conformance Testing Against Implementation Guides
 
@@ -62,5 +62,5 @@ Developers and vendors implementing health data exchange **SHOULD** also consult
 
 #### References
 
-- [Interoperability by Design](../../principles/interoperability-by-design.md)
+- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
 - [Integration Testing](../quality-engineering/integration-testing.md)

@@ -17,7 +17,7 @@
 
 #### References
 
-- [Coding Standards & Formatting](coding-standards-formatting.md)
+- [Code Style & Formatting](code-style-formatting.md)
 
 ### Linter Configuration
 
@@ -29,8 +29,8 @@
 
 #### References
 
-- [Everything as Code](../../principles/everything-as-code.md)
-- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
 
 ### Severity-Based Pipeline Gate
 
@@ -43,7 +43,7 @@
 
 #### References
 
-- [Automation First](../../principles/automation-first.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
 
 ### Local Detection
 
@@ -54,7 +54,7 @@
 
 #### References
 
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
 
 ### Suppression & Exception Discipline
 
@@ -68,7 +68,7 @@
 #### References
 
 - [Code Review](code-review.md)
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ### Ruleset Governance
 
@@ -81,7 +81,7 @@
 #### References
 
 - [Code Review](code-review.md)
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ### Baselining Pre-Existing Violations
 
@@ -93,4 +93,4 @@
 
 #### References
 
-- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)

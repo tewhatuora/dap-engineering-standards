@@ -18,10 +18,10 @@
 
 #### References
 
-- [Automation First](../../principles/automation-first.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
 - [Continuous Integration](continuous-integration.md)
-- [Everything as Code](../../principles/everything-as-code.md)
-- [Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
+- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)
 - [Infrastructure as Code](../platform-infrastructure/infrastructure-as-code.md)
 - [Database Migration Tooling](../code-implementation/database-migration-tooling.md)
 
@@ -36,7 +36,7 @@
 #### References
 
 - [Application Security Testing](../quality-engineering/application-security-testing.md)
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Rollback Strategy](rollback-strategy.md)
 
 ### Deployment Readiness
@@ -85,8 +85,8 @@
 
 #### References
 
-- [Observability by Default](../../principles/observability-by-default.md)
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
 
 ### Decoupling Deployment from Release
 
@@ -99,7 +99,7 @@
 
 - [Release Strategy](release-strategy.md)
 - [Feature Flagging](feature-flagging.md)
-- [Progressive Delivery Strategies](progressive-delivery-strategies.md)
+- [Progressive Delivery](progressive-delivery.md)
 
 ### Rollback Readiness
 
@@ -114,5 +114,5 @@
 
 - [Rollback Strategy](rollback-strategy.md)
 - [Branching Strategy](../code-implementation/branching-strategy.md)
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 - [Build & Artifact Management](build-artifact-management.md)

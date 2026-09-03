@@ -20,10 +20,10 @@
 
 #### References
 
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 - [Configuration Management](../code-implementation/configuration-management.md)
-- [Platform Alignment](../../principles/platform-alignment.md)
-- [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
+- [Platform Alignment](../../principles/architecture-platform/platform-alignment.md)
+- [Vendor Lock-in & Portability](../../principles/architecture-platform/vendor-lock-in-portability.md)
 - [Branching Strategy](../code-implementation/branching-strategy.md)
 - [Code Review](../code-implementation/code-review.md)
 - [Release Strategy](release-strategy.md)
@@ -39,7 +39,7 @@
 
 #### References
 
-- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
 
 ### Flag Use Boundaries
 
@@ -54,7 +54,7 @@
 
 - [Configuration Management](../code-implementation/configuration-management.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
-- [Testability by Design](../../principles/testability-by-design.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
 - [Unit Testing](../quality-engineering/unit-testing.md)
 - [Integration Testing](../quality-engineering/integration-testing.md)
 
@@ -70,9 +70,9 @@
 #### References
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
-- [Progressive Delivery Strategies](progressive-delivery-strategies.md)
-- [Stateless First](../../principles/stateless-first.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Progressive Delivery](progressive-delivery.md)
+- [Stateless First](../../principles/architecture-platform/stateless-first.md)
 
 ### Flag Change Control
 
@@ -101,7 +101,7 @@
 
 #### References
 
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
 ### Evaluation Data Protection
 
@@ -112,8 +112,8 @@
 
 #### References
 
-- [Privacy by Design](../../principles/privacy-by-design.md)
-- [Security by Design](../../principles/security-by-design.md)
+- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 
 ### Flag State Observability
 
@@ -125,8 +125,8 @@
 
 #### References
 
-- [Observability by Default](../../principles/observability-by-default.md)
-- [Privacy by Design](../../principles/privacy-by-design.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
 
 ### Flag Retirement & Proliferation Control
 
@@ -142,7 +142,7 @@
 
 #### References
 
-- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
-- [Testability by Design](../../principles/testability-by-design.md)
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
 - [Release Strategy](release-strategy.md)
 - [Version Control](../code-implementation/version-control.md)

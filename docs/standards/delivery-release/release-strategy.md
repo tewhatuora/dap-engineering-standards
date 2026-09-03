@@ -76,7 +76,7 @@
 
 #### References
 
-- [API Design & Standards](../architecture-system-design/api-design-standards.md)
+- [API Design](../architecture-system-design/api-design.md)
 - [Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
 - [Rollback Strategy](rollback-strategy.md)
 - [Feature Flagging](feature-flagging.md)

@@ -16,7 +16,7 @@
 
 #### References
 
-- [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
+- [AI-Assisted Engineering Accountability](../../principles/engineering-practice/ai-assisted-engineering-accountability.md)
 
 ### Human Oversight
 
@@ -40,7 +40,7 @@
 
 #### References
 
-- [Coding Standards & Formatting](../code-implementation/coding-standards-formatting.md)
+- [Code Style & Formatting](../code-implementation/code-style-formatting.md)
 - [Linting & Style Enforcement](../code-implementation/linting-style-enforcement.md)
 - [Static Code Analysis](../code-implementation/static-code-analysis.md)
 - [Unit Testing](../quality-engineering/unit-testing.md)

@@ -7,11 +7,11 @@ Choose a standard below to see its full requirements.
 
 ## Directory
 
-#### Containerisation Standards
+#### Containerisation
 
 > A container image is kept minimal, current, and operated with least privilege by default.
 
-[Read more](containerisation-standards.md).
+[Read more](containerisation.md).
 
 #### Container Orchestration
 
@@ -19,17 +19,17 @@ Choose a standard below to see its full requirements.
 
 [Read more](container-orchestration.md).
 
-#### Serverless Standards
+#### Serverless
 
 > A serverless function is sized to its workload, designed with portability in mind, and traceable as part of a distributed transaction.
 
-[Read more](serverless-standards.md).
+[Read more](serverless.md).
 
-#### Managed Services Standards
+#### Managed Services
 
 > A managed service is configured and verified against the workload's own requirements, not the vendor's defaults.
 
-[Read more](managed-services-standards.md).
+[Read more](managed-services.md).
 
 #### Environment Strategy
 

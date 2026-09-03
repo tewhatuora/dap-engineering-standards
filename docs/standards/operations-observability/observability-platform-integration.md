@@ -15,8 +15,8 @@
 
 #### References
 
-- [Observability by Default](../../principles/observability-by-default.md)
-- [Platform Alignment](../../principles/platform-alignment.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Platform Alignment](../../principles/architecture-platform/platform-alignment.md)
 - [Technology Stack Register](../architecture-system-design/technology-stack-register.md)
 
 ### Telemetry Transport
@@ -29,9 +29,9 @@
 
 #### References
 
-- [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
-- [Interoperability by Design](../../principles/interoperability-by-design.md)
-- [Telemetry Instrumentation Standards](telemetry-instrumentation-standards.md)
+- [Vendor Lock-in & Portability](../../principles/architecture-platform/vendor-lock-in-portability.md)
+- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Telemetry Instrumentation](telemetry-instrumentation.md)
 
 ### Telemetry Retention
 
@@ -42,7 +42,7 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
 - [Metrics, Monitoring & Alerting](metrics-monitoring-alerting.md)
 - [Structured Logging](structured-logging.md)
 
@@ -55,4 +55,4 @@
 
 #### References
 
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)

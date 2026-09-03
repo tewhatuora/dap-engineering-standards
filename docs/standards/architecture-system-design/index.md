@@ -19,17 +19,17 @@ Choose a standard below to see its full requirements.
 
 [Read more](schema-design-evolution.md).
 
-#### API Design & Standards
+#### API Design
 
 > Design and version every API contract-first, so a breaking change never surprises an existing consumer.
 
-[Read more](api-design-standards.md).
+[Read more](api-design.md).
 
-#### Event-Driven Messaging Standards
+#### Event-Driven Messaging
 
 > Every event has a defined contract and delivery guarantee; every consumer safely tolerates duplicates.
 
-[Read more](event-driven-messaging-standards.md).
+[Read more](event-driven-messaging.md).
 
 #### Health Data Interoperability
 

@@ -35,7 +35,7 @@
 
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 - [Test Data Management](test-data-management.md)
-- [Testability by Design](../../principles/testability-by-design.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
 
 ### External Dependency Simulation
 
@@ -47,7 +47,7 @@
 
 #### References
 
-- [Testability by Design](../../principles/testability-by-design.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
 
 ### Contract Testing
 
@@ -59,9 +59,9 @@
 
 #### References
 
-- [Interoperability by Design](../../principles/interoperability-by-design.md)
-- [API Design & Standards](../architecture-system-design/api-design-standards.md)
-- [Event-Driven Messaging Standards](../architecture-system-design/event-driven-messaging-standards.md)
+- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [API Design](../architecture-system-design/api-design.md)
+- [Event-Driven Messaging](../architecture-system-design/event-driven-messaging.md)
 
 ### Automated Pipeline Execution
 
@@ -76,7 +76,7 @@
 
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 - [Branching Strategy](../code-implementation/branching-strategy.md)
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
 
 ### Failure Gating & Quarantine
 
@@ -88,9 +88,9 @@
 
 #### References
 
-- [Testability by Design](../../principles/testability-by-design.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
-- [Automation First](../../principles/automation-first.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
 
 ### Test Code Maintenance
 
@@ -102,7 +102,7 @@
 
 #### References
 
-- [Coding Standards & Formatting](../code-implementation/coding-standards-formatting.md)
+- [Code Style & Formatting](../code-implementation/code-style-formatting.md)
 - [Code Review](../code-implementation/code-review.md)
 
 ### Failure Diagnosis
@@ -114,5 +114,5 @@
 
 #### References
 
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
-- [Observability by Default](../../principles/observability-by-default.md)
+- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)

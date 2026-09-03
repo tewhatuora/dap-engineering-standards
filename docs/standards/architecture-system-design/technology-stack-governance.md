@@ -15,9 +15,9 @@
 
 #### References
 
-- [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
-- [Security by Design](../../principles/security-by-design.md)
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Vendor Lock-in & Portability](../../principles/architecture-platform/vendor-lock-in-portability.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
 
 ### Supportable & Proven Technology
 
@@ -49,8 +49,8 @@
 
 #### References
 
-- [Platform Alignment](../../principles/platform-alignment.md)
-- [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
+- [Platform Alignment](../../principles/architecture-platform/platform-alignment.md)
+- [AI-Assisted Engineering Accountability](../../principles/engineering-practice/ai-assisted-engineering-accountability.md)
 
 ### Deprecation & Migration Planning
 

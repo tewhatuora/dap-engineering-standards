@@ -36,7 +36,7 @@
 
 #### References
 
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ### Assessing Correctness, Complexity & Security
 
@@ -49,9 +49,9 @@
 
 #### References
 
-- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
-- [Coding Standards & Formatting](coding-standards-formatting.md)
-- [Security by Design](../../principles/security-by-design.md)
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
+- [Code Style & Formatting](code-style-formatting.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Static Code Analysis](static-code-analysis.md)
 - [AI Usage & Verification in Code Review](../ai-engineering/ai-usage-verification-in-code-review.md)
 
@@ -68,13 +68,13 @@
 
 #### References
 
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
-- [Observability by Default](../../principles/observability-by-default.md)
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
-- [Interoperability by Design](../../principles/interoperability-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
 - [Runbooks](../operations-observability/runbooks.md)
 - [Feature Flagging](../delivery-release/feature-flagging.md)
-- [Progressive Delivery Strategies](../delivery-release/progressive-delivery-strategies.md)
+- [Progressive Delivery](../delivery-release/progressive-delivery.md)
 
 ### Right-Sized, Reviewable Changes
 
@@ -87,7 +87,7 @@
 
 #### References
 
-- [Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
+- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)
 
 ### Resolving Review Feedback Before Merge
 
@@ -114,7 +114,7 @@
 
 #### References
 
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
 
 ### Emergency Change Review
 
@@ -126,7 +126,7 @@
 
 #### References
 
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
 ### Approval Recording & Traceability
 

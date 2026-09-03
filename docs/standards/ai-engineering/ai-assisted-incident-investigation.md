@@ -25,7 +25,7 @@
 
 #### References
 
-- [Telemetry Instrumentation Standards](../operations-observability/telemetry-instrumentation-standards.md)
+- [Telemetry Instrumentation](../operations-observability/telemetry-instrumentation.md)
 - [Distributed Tracing](../operations-observability/distributed-tracing.md)
 - [Observability Platform Integration](../operations-observability/observability-platform-integration.md)
 
@@ -38,7 +38,7 @@
 
 #### References
 
-- [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
+- [AI-Assisted Engineering Accountability](../../principles/engineering-practice/ai-assisted-engineering-accountability.md)
 
 ### Incident Traceability
 
@@ -49,4 +49,4 @@
 
 #### References
 
-- [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
+- [AI-Assisted Engineering Accountability](../../principles/engineering-practice/ai-assisted-engineering-accountability.md)

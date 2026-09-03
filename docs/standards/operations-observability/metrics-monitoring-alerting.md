@@ -17,7 +17,7 @@
 
 #### References
 
-- [Telemetry Instrumentation Standards](telemetry-instrumentation-standards.md)
+- [Telemetry Instrumentation](telemetry-instrumentation.md)
 
 ### Metric Cardinality
 
@@ -28,7 +28,7 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
 - [Distributed Tracing](distributed-tracing.md)
 - [Structured Logging](structured-logging.md)
 
@@ -43,7 +43,7 @@
 
 #### References
 
-- [Observability by Default](../../principles/observability-by-default.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
 
 ### Alerting Policy
 
@@ -58,8 +58,8 @@
 
 #### References
 
-- [Automation First](../../principles/automation-first.md)
-- [Observability by Default](../../principles/observability-by-default.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
 - [Runbooks](runbooks.md)
 - [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)
 
@@ -72,4 +72,4 @@
 
 #### References
 
-- [Observability by Default](../../principles/observability-by-default.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)

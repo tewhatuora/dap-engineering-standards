@@ -37,8 +37,8 @@ Choose a standard below to see its full requirements.
 
 [Read more](ai-assisted-incident-investigation.md).
 
-#### AI Cost Considerations & Optimisation
+#### AI Tooling Cost Management
 
 > Match context size, model choice, and session length to what the task actually needs.
 
-[Read more](ai-cost-considerations-optimisation.md).
+[Read more](ai-tooling-cost-management.md).

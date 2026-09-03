@@ -19,9 +19,9 @@
 
 #### References
 
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
-- [Data Residency & Sovereignty](../../principles/data-residency-sovereignty.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Data Residency & Sovereignty](../../principles/data/data-residency-sovereignty.md)
 
 ### Backup Scope & Coverage
 
@@ -42,10 +42,10 @@
 
 #### References
 
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
-- [Sustainability by Design](../../principles/sustainability-by-design.md)
-- [Privacy by Design](../../principles/privacy-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Sustainability by Design](../../principles/cost-sustainability/sustainability-by-design.md)
+- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
 
 ### Backup Reliability
 
@@ -56,7 +56,7 @@
 
 #### References
 
-- [Automation First](../../principles/automation-first.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
 - [Metrics, Monitoring & Alerting](metrics-monitoring-alerting.md)
 
 ### Backup Isolation & Redundancy
@@ -69,8 +69,8 @@
 
 #### References
 
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
-- [Security by Design](../../principles/security-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 
 ### Infrastructure Provisioning for Recovery
 
@@ -81,7 +81,7 @@
 
 #### References
 
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 - [Infrastructure as Code](../platform-infrastructure/infrastructure-as-code.md)
 
 ### Disaster Recovery Plan
@@ -98,7 +98,7 @@
 #### References
 
 - [Runbooks](runbooks.md)
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
 ### Disaster Recovery Validation
 
@@ -110,6 +110,6 @@
 
 #### References
 
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 - [Infrastructure as Code](../platform-infrastructure/infrastructure-as-code.md)

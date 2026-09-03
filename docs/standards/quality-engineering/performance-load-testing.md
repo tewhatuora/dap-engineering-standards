@@ -17,8 +17,8 @@
 
 #### References
 
-- [Testability by Design](../../principles/testability-by-design.md)
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
 ### Triggers & Recurrence
 
@@ -31,7 +31,7 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
 - [Feature Flagging](../delivery-release/feature-flagging.md)
 
 ### Performance & Capacity Targets
@@ -43,7 +43,7 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
 
 ### Test Environment & Data Representativeness
 
@@ -57,7 +57,7 @@
 
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 - [Test Data Management](test-data-management.md)
-- [Privacy by Design](../../principles/privacy-by-design.md)
+- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
 
 ### Execution & Dependencies
 
@@ -73,7 +73,7 @@
 
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 - [Integration Testing](integration-testing.md)
-- [Automation First](../../principles/automation-first.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
 
 ### Observability & Diagnostics
 
@@ -85,7 +85,7 @@
 
 #### References
 
-- [Observability by Default](../../principles/observability-by-default.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
 - [Metrics, Monitoring & Alerting](../operations-observability/metrics-monitoring-alerting.md)
 
 ### Result Governance
@@ -101,4 +101,4 @@
 #### References
 
 - [Runbooks](../operations-observability/runbooks.md)
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)

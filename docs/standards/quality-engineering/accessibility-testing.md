@@ -15,7 +15,7 @@
 
 #### References
 
-- [Accessibility by Design](../../principles/accessibility-by-design.md)
+- [Accessibility by Design](../../principles/quality/accessibility-by-design.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 
 ### Manual & Assistive Technology Verification
@@ -27,8 +27,8 @@
 
 #### References
 
-- [Accessibility by Design](../../principles/accessibility-by-design.md)
-- [Testability by Design](../../principles/testability-by-design.md)
+- [Accessibility by Design](../../principles/quality/accessibility-by-design.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
 
 ### Independent Verification
 
@@ -40,7 +40,7 @@
 
 #### References
 
-- [Accessibility by Design](../../principles/accessibility-by-design.md)
+- [Accessibility by Design](../../principles/quality/accessibility-by-design.md)
 
 ### Conformance Criteria & Test Mapping
 
@@ -51,7 +51,7 @@
 
 #### References
 
-- [Accessibility by Design](../../principles/accessibility-by-design.md)
+- [Accessibility by Design](../../principles/quality/accessibility-by-design.md)
 
 ### Internal Interface Scope
 
@@ -62,7 +62,7 @@
 
 #### References
 
-- [Accessibility by Design](../../principles/accessibility-by-design.md)
+- [Accessibility by Design](../../principles/quality/accessibility-by-design.md)
 
 ### Re-verification Triggers
 
@@ -73,4 +73,4 @@
 
 #### References
 
-- [Accessibility by Design](../../principles/accessibility-by-design.md)
+- [Accessibility by Design](../../principles/quality/accessibility-by-design.md)

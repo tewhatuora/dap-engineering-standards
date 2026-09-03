@@ -19,7 +19,7 @@
 
 #### References
 
-- [Privacy by Design](../../principles/privacy-by-design.md)
+- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
 
 ### Test Data Scope
 
@@ -30,8 +30,8 @@
 
 #### References
 
-- [Testability by Design](../../principles/testability-by-design.md)
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
 
 ### Test Data Lifecycle
 
@@ -45,10 +45,10 @@
 
 #### References
 
-- [Testability by Design](../../principles/testability-by-design.md)
+- [Testability by Design](../../principles/quality/testability-by-design.md)
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
-- [Privacy by Design](../../principles/privacy-by-design.md)
-- [Security by Design](../../principles/security-by-design.md)
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
-- [Automation First](../../principles/automation-first.md)
+- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
 - [Runbooks](../operations-observability/runbooks.md)

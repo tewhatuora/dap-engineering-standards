@@ -16,9 +16,9 @@
 
 #### References
 
-- [Interoperability by Design](../../principles/interoperability-by-design.md)
-- [Observability by Default](../../principles/observability-by-default.md)
-- [Security by Design](../../principles/security-by-design.md)
+- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 
 ### Span Structure
 
@@ -31,7 +31,7 @@
 
 #### References
 
-- [Telemetry Instrumentation Standards](telemetry-instrumentation-standards.md)
+- [Telemetry Instrumentation](telemetry-instrumentation.md)
 - [OpenTelemetry Tracing API Specification](https://opentelemetry.io/docs/specs/otel/trace/api/)
 
 ### Trace Sampling
@@ -44,7 +44,7 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
 - [OpenTelemetry Sampling Specification](https://opentelemetry.io/docs/specs/otel/trace/sdk/#sampling)
 
 ## Illustrative Examples

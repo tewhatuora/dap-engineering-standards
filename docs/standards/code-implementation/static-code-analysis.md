@@ -19,7 +19,7 @@
 
 - [Linting & Style Enforcement](linting-style-enforcement.md)
 - [Application Security Testing](../quality-engineering/application-security-testing.md)
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 
 ### Maintainability Analysis
 
@@ -31,7 +31,7 @@
 
 #### References
 
-- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
 
 ### Ruleset Configuration
 
@@ -43,8 +43,8 @@
 
 #### References
 
-- [Platform Alignment](../../principles/platform-alignment.md)
-- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Platform Alignment](../../principles/architecture-platform/platform-alignment.md)
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
 
 ### Severity-Based Pipeline Gate
 
@@ -58,10 +58,10 @@
 
 #### References
 
-- [Automation First](../../principles/automation-first.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 - [Code Review](code-review.md)
-- [Interoperability by Design](../../principles/interoperability-by-design.md)
+- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
 
 ### Local Detection
 
@@ -72,7 +72,7 @@
 
 #### References
 
-- [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
+- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
 
 ### Suppression & Exception Discipline
 
@@ -86,7 +86,7 @@
 #### References
 
 - [Code Review](code-review.md)
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ### Ruleset Governance
 
@@ -100,7 +100,7 @@
 #### References
 
 - [Code Review](code-review.md)
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ### Baselining Pre-Existing Findings
 
@@ -112,4 +112,4 @@
 
 #### References
 
-- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)

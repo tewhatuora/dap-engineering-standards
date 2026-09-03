@@ -16,7 +16,7 @@
 #### References
 
 - [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
-- [Containerisation Standards](../platform-infrastructure/containerisation-standards.md)
+- [Containerisation](../platform-infrastructure/containerisation.md)
 
 ### Pipeline Dependencies & Build Tooling
 
@@ -42,7 +42,7 @@
 #### References
 
 - [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
-- [Containerisation Standards](../platform-infrastructure/containerisation-standards.md)
+- [Containerisation](../platform-infrastructure/containerisation.md)
 - [Vulnerability & Dependency Management](vulnerability-dependency-management.md)
 
 ### Compromise Response
@@ -57,4 +57,4 @@
 
 - [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
 - [Vulnerability & Dependency Management](vulnerability-dependency-management.md)
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)

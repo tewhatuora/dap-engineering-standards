@@ -17,8 +17,8 @@
 
 #### References
 
-- [Everything as Code](../../principles/everything-as-code.md)
-- [Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
+- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)
 - [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
 - [Environment Strategy](environment-strategy.md)
 
@@ -46,7 +46,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)
 
 ### Change Preview & Review
@@ -60,7 +60,7 @@
 #### References
 
 - [Code Review](../code-implementation/code-review.md)
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ### Automated Application
 
@@ -72,8 +72,8 @@
 
 #### References
 
-- [Automation First](../../principles/automation-first.md)
-- [Security by Design](../../principles/security-by-design.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 
 ### Drift Detection & Reconciliation
 
@@ -84,4 +84,4 @@
 
 #### References
 
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)

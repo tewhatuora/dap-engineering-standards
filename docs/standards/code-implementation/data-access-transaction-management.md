@@ -16,7 +16,7 @@
 
 #### References
 
-- [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
+- [Vendor Lock-in & Portability](../../principles/architecture-platform/vendor-lock-in-portability.md)
 - [Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
 
 ### Object-Relational Mapping Usage
@@ -32,7 +32,7 @@
 #### References
 
 - [Database Migration Tooling](database-migration-tooling.md)
-- [Observability by Default](../../principles/observability-by-default.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
 
 ### Parameterised Queries & Injection Prevention
 
@@ -43,7 +43,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 
 ### Error Handling & Disclosure
 
@@ -54,9 +54,9 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
-- [Observability by Default](../../principles/observability-by-default.md)
-- [Privacy by Design](../../principles/privacy-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
 
 ### Connection Management & Pooling
 
@@ -70,7 +70,7 @@
 
 #### References
 
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
 ### Least-Privilege Data Store Credentials
 
@@ -82,7 +82,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 
 ### Transaction Boundaries & Atomicity
@@ -95,8 +95,8 @@
 
 #### References
 
-- [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Data Quality & Integrity by Design](../../principles/data/data-quality-integrity-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
 ### Isolation Levels & Concurrency Control
 
@@ -109,7 +109,7 @@
 
 #### References
 
-- [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
+- [Data Quality & Integrity by Design](../../principles/data/data-quality-integrity-by-design.md)
 
 ### Timeouts & Retries
 
@@ -122,8 +122,8 @@
 
 #### References
 
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
-- [Stateless First](../../principles/stateless-first.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Stateless First](../../principles/architecture-platform/stateless-first.md)
 
 ### Cross-Service Transaction Consistency
 
@@ -136,7 +136,7 @@
 #### References
 
 - [Service & Domain Design](../architecture-system-design/service-domain-design.md)
-- [Event-Driven Messaging Standards](../architecture-system-design/event-driven-messaging-standards.md)
+- [Event-Driven Messaging](../architecture-system-design/event-driven-messaging.md)
 
 ### Read Efficiency & Replica Awareness
 
@@ -150,7 +150,7 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
 
 ### Write Efficiency
 
@@ -162,7 +162,7 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
 
 ### Data Access Observability
 
@@ -175,6 +175,6 @@
 
 #### References
 
-- [Observability by Default](../../principles/observability-by-default.md)
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)

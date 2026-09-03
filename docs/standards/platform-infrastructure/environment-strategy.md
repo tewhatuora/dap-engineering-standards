@@ -22,8 +22,8 @@
 
 #### References
 
-- [Automation First](../../principles/automation-first.md)
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
 
 ### Production Isolation
 
@@ -34,7 +34,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 
 ### Ephemeral Environments
@@ -47,8 +47,8 @@
 
 #### References
 
-- [Automation First](../../principles/automation-first.md)
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
 
 ### Environment as Code
 
@@ -60,5 +60,5 @@
 #### References
 
 - [Infrastructure as Code](infrastructure-as-code.md)
-- [Everything as Code](../../principles/everything-as-code.md)
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)

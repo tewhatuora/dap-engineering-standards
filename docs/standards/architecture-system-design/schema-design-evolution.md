@@ -28,7 +28,7 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
 
 ### Schema Ownership
 
@@ -51,8 +51,8 @@
 
 #### References
 
-- [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
-- [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
+- [Vendor Lock-in & Portability](../../principles/architecture-platform/vendor-lock-in-portability.md)
+- [Data Quality & Integrity by Design](../../principles/data/data-quality-integrity-by-design.md)
 
 ### Traceability & Deletion Representation
 
@@ -63,7 +63,7 @@
 
 #### References
 
-- [Data Quality & Integrity by Design](../../principles/data-quality-integrity-by-design.md)
+- [Data Quality & Integrity by Design](../../principles/data/data-quality-integrity-by-design.md)
 
 ### Index Alignment
 
@@ -74,7 +74,7 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
 
 ### Non-Breaking Schema Changes
 
@@ -86,7 +86,7 @@
 
 #### References
 
-- [Interoperability by Design](../../principles/interoperability-by-design.md)
+- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
 
 ### Breaking Schema Changes
 
@@ -105,5 +105,5 @@
 
 #### References
 
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 - [Database Migration Tooling](../code-implementation/database-migration-tooling.md)

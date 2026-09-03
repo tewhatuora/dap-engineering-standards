@@ -16,8 +16,8 @@
 
 #### References
 
-- [Everything as Code](../../principles/everything-as-code.md)
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 - [Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)
 
 ### Atomic, Well-Described Commits
@@ -33,7 +33,7 @@
 
 #### References
 
-- [Coding Standards & Formatting](coding-standards-formatting.md)
+- [Code Style & Formatting](code-style-formatting.md)
 - [Branching Strategy](branching-strategy.md)
 - [Release Strategy](../delivery-release/release-strategy.md)
 - [Feature Flagging](../delivery-release/feature-flagging.md)
@@ -63,7 +63,7 @@
 - [Branching Strategy](branching-strategy.md)
 - [Code Review](code-review.md)
 - [Release Strategy](../delivery-release/release-strategy.md)
-- [AI-Assisted Engineering Accountability](../../principles/ai-assisted-engineering-accountability.md)
+- [AI-Assisted Engineering Accountability](../../principles/engineering-practice/ai-assisted-engineering-accountability.md)
 
 ### Repository Hygiene & Exclusions
 
@@ -83,5 +83,5 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
-- [Automation First](../../principles/automation-first.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)

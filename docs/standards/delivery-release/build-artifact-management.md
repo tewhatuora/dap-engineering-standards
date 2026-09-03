@@ -18,7 +18,7 @@
 
 - [Version Control](../code-implementation/version-control.md)
 - [Branching Strategy](../code-implementation/branching-strategy.md)
-- [Automation First](../../principles/automation-first.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
 - [Continuous Integration](continuous-integration.md)
 
 ### Reproducible Build Inputs
@@ -58,7 +58,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 - [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
 
@@ -98,4 +98,4 @@
 
 #### References
 
-- [Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
+- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)

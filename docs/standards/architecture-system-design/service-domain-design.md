@@ -15,7 +15,7 @@
 
 #### References
 
-- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
 
 ### Single Ownership of a Service's Data
 
@@ -36,7 +36,7 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
 
 ### Interaction Only Through Published Interfaces
 
@@ -47,9 +47,9 @@
 
 #### References
 
-- [Interoperability by Design](../../principles/interoperability-by-design.md)
-- [API Design & Standards](api-design-standards.md)
-- [Event-Driven Messaging Standards](event-driven-messaging-standards.md)
+- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [API Design](api-design.md)
+- [Event-Driven Messaging](event-driven-messaging.md)
 
 ### Right-Sizing Service Granularity
 
@@ -75,4 +75,4 @@
 
 #### References
 
-- [Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
+- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)

@@ -19,11 +19,11 @@ Choose a standard below to see its full requirements.
 
 [Read more](branching-strategy.md).
 
-#### Coding Standards & Formatting
+#### Code Style & Formatting
 
 > One style guide per language, applied consistently regardless of whether a person or an AI wrote the code.
 
-[Read more](coding-standards-formatting.md).
+[Read more](code-style-formatting.md).
 
 #### Linting & Style Enforcement
 

@@ -15,7 +15,7 @@
 
 #### References
 
-- [Telemetry Instrumentation Standards](telemetry-instrumentation-standards.md)
+- [Telemetry Instrumentation](telemetry-instrumentation.md)
 
 ### Baseline Log Fields
 
@@ -59,7 +59,7 @@
 
 #### References
 
-- [Privacy by Design](../../principles/privacy-by-design.md)
+- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
 
 ### Trace Identifiers
 
@@ -71,7 +71,7 @@
 
 #### References
 
-- [Observability by Default](../../principles/observability-by-default.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
 - [Distributed Tracing](distributed-tracing.md)
 
 ### Log Volume & Noise Control
@@ -85,6 +85,6 @@
 
 #### References
 
-- [Telemetry Instrumentation Standards](telemetry-instrumentation-standards.md)
-- [Observability by Default](../../principles/observability-by-default.md)
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Telemetry Instrumentation](telemetry-instrumentation.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)

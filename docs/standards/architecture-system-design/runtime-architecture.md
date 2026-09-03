@@ -22,7 +22,7 @@
 
 #### References
 
-- [Containerisation Standards](../platform-infrastructure/containerisation-standards.md)
+- [Containerisation](../platform-infrastructure/containerisation.md)
 
 ### Serverless & Managed Services
 
@@ -36,11 +36,11 @@
 
 #### References
 
-- [Managed Services Standards](../platform-infrastructure/managed-services-standards.md)
-- [Serverless Standards](../platform-infrastructure/serverless-standards.md)
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
-- [Stateless First](../../principles/stateless-first.md)
+- [Managed Services](../platform-infrastructure/managed-services.md)
+- [Serverless](../platform-infrastructure/serverless.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Stateless First](../../principles/architecture-platform/stateless-first.md)
 
 ### Runtime Options & Platform Capability
 
@@ -51,7 +51,7 @@
 
 #### References
 
-- [Platform Alignment](../../principles/platform-alignment.md)
+- [Platform Alignment](../../principles/architecture-platform/platform-alignment.md)
 
 ### Vendor Coupling
 
@@ -63,7 +63,7 @@
 
 #### References
 
-- [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
+- [Vendor Lock-in & Portability](../../principles/architecture-platform/vendor-lock-in-portability.md)
 
 ### Cloud Deployment Selection
 
@@ -78,5 +78,5 @@
 
 #### References
 
-- [Data Residency & Sovereignty](../../principles/data-residency-sovereignty.md)
+- [Data Residency & Sovereignty](../../principles/data/data-residency-sovereignty.md)
 

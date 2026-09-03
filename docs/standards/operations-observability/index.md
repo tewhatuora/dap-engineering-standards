@@ -25,11 +25,11 @@ Choose a standard below to see its full requirements.
 
 [Read more](distributed-tracing.md).
 
-#### Telemetry Instrumentation Standards
+#### Telemetry Instrumentation
 
 > Telemetry remains consistent across services, safe to introduce, and delivered alongside the change it observes.
 
-[Read more](telemetry-instrumentation-standards.md).
+[Read more](telemetry-instrumentation.md).
 
 #### Observability Platform Integration
 

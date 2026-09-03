@@ -25,11 +25,11 @@ Choose a standard below to see its full requirements.
 
 [Read more](continuous-delivery-deployment.md).
 
-#### Progressive Delivery Strategies
+#### Progressive Delivery
 
 > Limit a new change to a small share of production traffic before it reaches everyone.
 
-[Read more](progressive-delivery-strategies.md).
+[Read more](progressive-delivery.md).
 
 #### Feature Flagging
 

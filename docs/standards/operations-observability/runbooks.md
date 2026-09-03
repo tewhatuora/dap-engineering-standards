@@ -17,7 +17,7 @@
 
 #### References
 
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 - [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)
 
 ### Runbook Content
@@ -42,9 +42,9 @@
 
 #### References
 
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 - [Code Review](../code-implementation/code-review.md)
-- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
 
 ### Runbook Discoverability
 
@@ -57,7 +57,7 @@
 
 - [Metrics, Monitoring & Alerting](metrics-monitoring-alerting.md)
 - [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)
-- [Engineering Documentation Standards](../documentation-collaboration/engineering-documentation-standards.md)
+- [Engineering Documentation](../documentation-collaboration/engineering-documentation.md)
 
 ### Runbook Validation
 
@@ -69,7 +69,7 @@
 
 #### References
 
-- [Observability by Default](../../principles/observability-by-default.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
 - [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)
 
 ### Runbook Automation
@@ -81,5 +81,5 @@
 
 #### References
 
-- [Automation First](../../principles/automation-first.md)
+- [Automation First](../../principles/engineering-practice/automation-first.md)
 - [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)
