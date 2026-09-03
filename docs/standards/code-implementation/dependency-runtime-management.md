@@ -106,19 +106,6 @@
 - [Unit Testing](../quality-engineering/unit-testing.md)
 - [Integration Testing](../quality-engineering/integration-testing.md)
 
-### Pipeline & Workflow Dependencies
-
-> A pipeline's own workflow dependencies are sourced from a trusted publisher and pinned to an immutable reference.
-
-1. A pipeline's workflow dependencies **MUST** be declared, sourced only from an approved and trusted publisher or repository, and reviewed with the same discipline as any other dependency.
-2. A third-party workflow dependency **MUST** be pinned to an immutable reference, such as a full commit hash, not a mutable branch, tag, or version alias.
-3. A workflow dependency that cannot meet these requirements but is otherwise justified **MAY** instead be forked and internally governed, with review on a risk-based cadence, not updated automatically from its original source.
-
-#### References
-
-- [Continuous Integration](../delivery-release/continuous-integration.md)
-- [Software Supply Chain Security](../security-identity/software-supply-chain-security.md)
-
 ### Runtime Currency & Retirement
 
 > A service runs on a still-supported runtime version, upgraded proactively before it reaches end-of-life.
@@ -131,14 +118,3 @@
 
 - [Technology Stack Governance](../architecture-system-design/technology-stack-governance.md)
 - [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
-
-### Version Maturity & Soak Period
-
-> Production uses only a stable release, and a newly published version waits out a soak period before it is adopted.
-
-1. A dependency or runtime version used in production **MUST** be a stable, generally available release, not a pre-release build such as an alpha, beta, release candidate, or development snapshot; such a build **MAY** still be evaluated in a non-production environment.
-2. A newly published stable or generally available version **SHOULD NOT** be adopted until a soak period of at least 7 days has elapsed.
-
-#### References
-
-- [Software Supply Chain Security](../security-identity/software-supply-chain-security.md)
