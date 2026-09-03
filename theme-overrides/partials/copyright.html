@@ -1,0 +1,25 @@
+<div class="md-copyright">
+  <div class="site-footer-meta">
+    {% if page and page.meta and page.meta.last_reviewed %}
+      Last reviewed
+      <time datetime="{{ page.meta.last_reviewed }}">{{ page.meta.last_reviewed }}</time>
+      {% if page.meta.review_cycle %}
+        <span aria-hidden="true">|</span>
+        Review cycle: {{ page.meta.review_cycle }}
+      {% endif %}
+    {% else %}
+      Last reviewed: not set
+    {% endif %}
+  </div>
+  {% if config.copyright %}
+    <div class="md-copyright__highlight">
+      {{ config.copyright }}
+    </div>
+  {% endif %}
+  {% if not config.extra.generator == false %}
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  {% endif %}
+</div>

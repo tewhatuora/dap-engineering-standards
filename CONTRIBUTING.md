@@ -29,6 +29,16 @@ Merge requests **MUST** be reviewed and approved by a code owner listed in [`COD
 A new principle or standard needs both a content file and a navigation entry:
 
 - Add new principle or standard Markdown files under the matching domain folder (`docs/principles/` or `docs/standards/<category>/`), following the structure above.
+- Add page metadata at the top of each new or changed page so the published footer shows an authoritative review date:
+
+	```yaml
+	---
+	last_reviewed: YYYY-MM-DD
+	review_cycle: 12 months
+	---
+	```
+
+	`last_reviewed` **MUST** be the date the page content was reviewed and confirmed as current, not the build date. A site build regenerates every page, so build time **MUST NOT** be used as a proxy for content age.
 - Every new page **MUST** also be added to the `nav:` section of `mkdocs.yml`. Navigation is a hand-maintained list, not auto-discovered from the folder structure; place the new entry alongside related pages in reading order.
 - A new top-level standards category also needs its own `index.md` plus a new block under `nav:`.
 

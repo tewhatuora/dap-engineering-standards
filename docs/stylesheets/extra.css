@@ -119,6 +119,10 @@
   max-width: 100% !important;
 }
 
+.site-footer-meta {
+  margin-bottom: 0.2rem;
+}
+
 @media screen and (min-width: 60em) {
   .md-search .md-search__form {
     background-color: var(--md-default-bg-color);
