@@ -39,7 +39,6 @@
 - [Security by Design](../../principles/security-by-design.md)
 - [Application Security Testing](../quality-engineering/application-security-testing.md)
 - [Static Code Analysis](../code-implementation/static-code-analysis.md)
-- [Secrets Management & Scanning](../security-identity/secrets-management-scanning.md)
 - [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
 - [Infrastructure as Code](../platform-infrastructure/infrastructure-as-code.md)
 - [Linting & Style Enforcement](../code-implementation/linting-style-enforcement.md)
@@ -163,4 +162,3 @@
 - [Security by Design](../../principles/security-by-design.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 - [Software Supply Chain Security](../security-identity/software-supply-chain-security.md)
-- [Secrets Management & Scanning](../security-identity/secrets-management-scanning.md)

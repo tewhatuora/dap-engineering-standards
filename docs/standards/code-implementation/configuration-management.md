@@ -43,7 +43,6 @@
 
 - [Everything as Code](../../principles/everything-as-code.md)
 - [Security by Design](../../principles/security-by-design.md)
-- [Secrets Management & Scanning](../security-identity/secrets-management-scanning.md)
 
 ### Consistent Structure Across Environments
 

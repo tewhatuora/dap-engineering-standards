@@ -86,7 +86,3 @@
 
 1. Credentials, keys, and tokens **MUST NOT** be hardcoded or stored in source control.
 2. Credentials, keys, and tokens **MUST** be managed through a dedicated secrets management mechanism, with access restricted and rotation supported.
-
-#### References
-
-- [Secrets Management & Scanning](../standards/security-identity/secrets-management-scanning.md)

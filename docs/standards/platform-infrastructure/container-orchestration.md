@@ -81,4 +81,3 @@
 
 - [Security by Design](../../principles/security-by-design.md)
 - [Everything as Code](../../principles/everything-as-code.md)
-- [Secrets Management & Scanning](../security-identity/secrets-management-scanning.md)

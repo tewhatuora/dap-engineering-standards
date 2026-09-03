@@ -84,10 +84,6 @@
 1. Code that defines infrastructure, configuration, or pipelines **MUST NOT** embed secrets, credentials, or other sensitive data directly.
 2. A code-defined artifact requiring a secret **MUST** reference it from a dedicated secrets management mechanism at deployment or runtime.
 
-#### References
-
-- [Secrets Management & Scanning](../standards/security-identity/secrets-management-scanning.md)
-
 ### Documentation as Code
 
 > Engineering documentation stays version-controlled and updated in the same change that alters the behaviour it describes.

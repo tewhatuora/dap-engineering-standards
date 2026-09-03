@@ -47,7 +47,6 @@
 #### References
 
 - [Security by Design](../../principles/security-by-design.md)
-- [Secrets Management & Scanning](../security-identity/secrets-management-scanning.md)
 - [Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)
 
 ### Change Preview & Review

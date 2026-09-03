@@ -155,4 +155,3 @@
 - [Security by Design](../../principles/security-by-design.md)
 - [Everything as Code](../../principles/everything-as-code.md)
 - [Configuration Management](../code-implementation/configuration-management.md)
-- [Secrets Management & Scanning](../security-identity/secrets-management-scanning.md)

@@ -85,4 +85,3 @@
 
 - [Security by Design](../../principles/security-by-design.md)
 - [Automation First](../../principles/automation-first.md)
-- [Secrets Management & Scanning](../security-identity/secrets-management-scanning.md)

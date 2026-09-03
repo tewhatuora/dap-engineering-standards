@@ -51,7 +51,6 @@
 
 - [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
 - [Security by Design](../../principles/security-by-design.md)
-- [Secrets Management & Scanning](../security-identity/secrets-management-scanning.md)
 - [Fast Feedback by Design](../../principles/fast-feedback-by-design.md)
 
 ### Minimal Runtime Privilege

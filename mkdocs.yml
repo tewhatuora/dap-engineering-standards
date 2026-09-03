@@ -151,7 +151,6 @@ nav:
       - Identity & Access Management: standards/security-identity/identity-access-management.md
       - Vulnerability & Dependency Management: standards/security-identity/vulnerability-dependency-management.md
       - Software Supply Chain Security: standards/security-identity/software-supply-chain-security.md
-      - Secrets Management & Scanning: standards/security-identity/secrets-management-scanning.md
     - Cost & Sustainability:
       - standards/cost-sustainability/index.md
       - Cost Monitoring & Attribution: standards/cost-sustainability/cost-monitoring-attribution.md

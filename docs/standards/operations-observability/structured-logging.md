@@ -60,7 +60,6 @@
 #### References
 
 - [Privacy by Design](../../principles/privacy-by-design.md)
-- [Secrets Management & Scanning](../security-identity/secrets-management-scanning.md)
 
 ### Trace Identifiers
 
