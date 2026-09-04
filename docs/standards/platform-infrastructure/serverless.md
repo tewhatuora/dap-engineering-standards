@@ -13,7 +13,7 @@ A function's configuration is version-controlled code, kept authoritative for ev
 
 ### Implements These Principles
 
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ## Execution Boundaries
 
@@ -31,8 +31,8 @@ Set execution limits from the workload's own needs rather than the platform's de
 
 ### Implements These Principles
 
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
 
 ## Language & Runtime Selection
 
@@ -47,8 +47,8 @@ Choose the runtime for the path's latency and cost needs, and optimise it where 
 
 ### Implements These Principles
 
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
 
 ## Concurrency & Downstream Protection
 
@@ -63,8 +63,8 @@ Bound concurrency to what its most constrained downstream dependency can sustain
 
 ### Implements These Principles
 
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
-- [Reliability & Resilience](../../principles/reliability-resilience.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
 ## Retry & Failure Handling
 
@@ -80,7 +80,7 @@ Make a retry idempotent, bound its redelivery window, and capture what still fai
 
 ### Implements These Principles
 
-- [Stateless First](../../principles/stateless-first.md)
+- [Stateless First](../../principles/architecture-platform/stateless-first.md)
 
 ## Invocation Observability
 
@@ -95,8 +95,8 @@ Make every invocation traceable end-to-end, and its duration and cost attributab
 
 ### Implements These Principles
 
-- [Observability by Default](../../principles/observability-by-default.md)
-- [Cost Awareness by Design](../../principles/cost-awareness-by-design.md)
+- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
 
 ## Function Portability
 
@@ -111,7 +111,7 @@ Keep business logic separable from the platform's proprietary triggers, and pack
 
 ### Implements These Principles
 
-- [Vendor Lock-in & Portability](../../principles/vendor-lock-in-portability.md)
+- [Vendor Lock-in & Portability](../../principles/architecture-platform/vendor-lock-in-portability.md)
 
 ## Shared Dependencies & Resources
 
@@ -126,7 +126,7 @@ Share a dependency deliberately across functions, and reuse a resource across wa
 
 ### Implements These Principles
 
-- [Performance & Scalability by Design](../../principles/performance-scalability-by-design.md)
+- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
 
 ## Function Scope
 
@@ -141,8 +141,8 @@ Scope a function to one reusable capability rather than a workflow-specific copy
 
 ### Implements These Principles
 
-- [Simplicity & Maintainability](../../principles/simplicity-maintainability.md)
-- [Reuse Before Reinvention](../../principles/reuse-before-reinvention.md)
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
+- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)
 
 ## Function Versioning
 
@@ -157,7 +157,7 @@ Deploy an immutable version so production always points to known, published code
 
 ### Implements These Principles
 
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ## Least-Privilege Permissions
 
@@ -172,7 +172,7 @@ Grant only the permission a function's code needs today, and remove it once that
 
 ### Implements These Principles
 
-- [Security by Design](../../principles/security-by-design.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
 
 ## Runtime Secrets
 
@@ -187,5 +187,5 @@ Keep a secret out of a function's code and configuration, and make it rotatable 
 
 ### Implements These Principles
 
-- [Security by Design](../../principles/security-by-design.md)
-- [Everything as Code](../../principles/everything-as-code.md)
+- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)

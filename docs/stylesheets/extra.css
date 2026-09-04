@@ -143,12 +143,10 @@
   border: 0;
   border-bottom: 1px solid rgb(218, 221, 225);
   box-shadow: none;
-  margin: 0 0 1.2rem;
+  margin: 0 0 0.6rem;
   padding-bottom: 0.4rem;
-}
-
-.principle-disclosure:first-of-type {
-  margin-top: 1.4rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .md-typeset details.principle-disclosure > summary.principle-disclosure__summary {
@@ -161,8 +159,8 @@
   font-weight: 700;
   line-height: 1.35;
   list-style: none;
-  min-height: 3rem;
-  padding: 0.5rem 2rem 0.5rem 0;
+  margin: 0;
+  padding: 0.6rem 2rem 0.6rem 0;
 }
 
 .principle-disclosure__summary::-webkit-details-marker {
@@ -180,6 +178,10 @@
 
 .principle-disclosure__content {
   padding: 0 0 0.5rem;
+}
+
+.principle-disclosure__content > h3 {
+  margin-top: 0;
 }
 
 .md-typeset blockquote {

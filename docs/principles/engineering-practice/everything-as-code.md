@@ -14,7 +14,7 @@ Refusing a carve-out for prototypes, scripts, or short-lived work prevents code 
 
 ### Implemented By These Standards
 
-- [Version Control](../standards/code-implementation/version-control.md)
+- [Version Control](../../standards/code-implementation/version-control.md)
 
 ### Related Principles
 
@@ -34,7 +34,7 @@ Manual, ad hoc actions create state without a reproducible definition and bypass
 
 ### Implemented By These Standards
 
-- [Infrastructure as Code](../standards/platform-infrastructure/infrastructure-as-code.md)
+- [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 
 ### Related Principles
 
@@ -55,7 +55,7 @@ Deriving running state from code makes drift identifiable and gives reconciliati
 
 ### Implemented By These Standards
 
-- [Infrastructure as Code](../standards/platform-infrastructure/infrastructure-as-code.md)
+- [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 
 ### Related Principles
 
@@ -76,7 +76,7 @@ Applying the same review discipline gives these changes equivalent scrutiny and 
 
 ### Implemented By These Standards
 
-- [Code Review](../standards/code-implementation/code-review.md)
+- [Code Review](../../standards/code-implementation/code-review.md)
 
 ### Related Principles
 
@@ -97,7 +97,7 @@ Removing manual post-creation steps means the code definition captures the envir
 
 ### Implemented By These Standards
 
-- [Environment Strategy](../standards/platform-infrastructure/environment-strategy.md)
+- [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
 
 ### Related Principles
 
@@ -117,11 +117,11 @@ Manually maintained definitions create state that cannot be reviewed, reproduced
 
 ### Implemented By These Standards
 
-- [Configuration Management](../standards/code-implementation/configuration-management.md)
-- [Continuous Integration](../standards/delivery-release/continuous-integration.md)
-- [Continuous Delivery & Deployment](../standards/delivery-release/continuous-delivery-deployment.md)
-- [Schema Design & Evolution](../standards/architecture-system-design/schema-design-evolution.md)
-- [Database Migration Tooling](../standards/code-implementation/database-migration-tooling.md)
+- [Configuration Management](../../standards/code-implementation/configuration-management.md)
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
+- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
+- [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
 
 ### Related Principles
 
@@ -139,13 +139,9 @@ Embedding a secret in code spreads it through repository history, generated arti
 
 Runtime references allow credentials to be rotated independently of code and keep their handling within a dedicated secrets mechanism.
 
-### Implemented By These Standards
-
-- [Secrets Management & Scanning](../standards/security-identity/secrets-management-scanning.md)
-
 ### Related Principles
 
-- [Security by Design](security-by-design.md)
+- [Security by Design](../security-privacy/security-by-design.md)
 
 ## Documentation as Code
 
@@ -161,7 +157,7 @@ Updating documentation with the behaviour change prevents it from describing an 
 
 ### Implemented By These Standards
 
-- [Engineering Documentation Standards](../standards/documentation-collaboration/engineering-documentation-standards.md)
+- [Engineering Documentation Standards](../../standards/documentation-collaboration/engineering-documentation.md)
 
 ### Related Principles
 
