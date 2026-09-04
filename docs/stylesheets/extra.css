@@ -138,3 +138,58 @@
 .md-search__form input::placeholder {
   color: var(--md-default-fg-color--lighter);
 }
+
+.md-typeset .principle-disclosure {
+  border: 0;
+  border-bottom: 1px solid rgb(218, 221, 225);
+  box-shadow: none;
+  margin: 0 0 1.2rem;
+  padding-bottom: 0.4rem;
+}
+
+.principle-disclosure:first-of-type {
+  margin-top: 1.4rem;
+}
+
+.md-typeset details.principle-disclosure > summary.principle-disclosure__summary {
+  align-items: center;
+  background-color: transparent;
+  color: var(--md-primary-fg-color);
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  list-style: none;
+  min-height: 3rem;
+  padding: 0.5rem 2rem 0.5rem 0;
+}
+
+.principle-disclosure__summary::-webkit-details-marker {
+  display: none;
+}
+
+.md-typeset .principle-disclosure > .principle-disclosure__summary::before {
+  display: none;
+}
+
+.principle-disclosure__summary:focus-visible {
+  outline: 0.15rem solid #0c818f;
+  outline-offset: -0.15rem;
+}
+
+.principle-disclosure__content {
+  padding: 0 0 0.5rem;
+}
+
+.md-typeset blockquote {
+  background-color: rgba(45, 204, 211, 0.1);
+  color: var(--md-primary-fg-color);
+  font-weight: 500;
+  margin-top: 0.5rem;
+  padding: 0.125rem 1rem;
+}
+
+.principle-disclosure__content > :last-child {
+  margin-bottom: 0;
+}

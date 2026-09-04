@@ -14,7 +14,7 @@ New principles or standards, and changes to existing ones, **MUST** be proposed 
 
 Each principle and standard **MUST** follow this structure:
 
-- **Summary**: one blockquoted sentence capturing the core idea, directly under the title.
+- **Summary**: one plain-text sentence capturing the core idea, directly under the title.
 - **Principles** or **Standards**, matching the topic's type: normative requirements grouped into logical subsections.
 - **References**: relative Markdown links to related principles and standards, listed at the end of the subsection rather than cited inline.
 

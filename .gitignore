@@ -15,6 +15,7 @@ Thumbs.db
 # mkdocs and generated content
 .cache/
 public/
+site/
 
 # Python
 *.pyc
