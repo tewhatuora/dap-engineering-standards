@@ -11,6 +11,7 @@
 
 :root {
   --md-text-font-family: "Poppins",-apple-system,BlinkMacSystemFont,"Ubuntu","Roboto","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  --site-content-font-size: 0.64rem;
 }
 
 [data-md-color-scheme="default"] {
@@ -38,7 +39,7 @@
 
 .md-content, .md-typeset {
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: var(--site-content-font-size);
   font-stretch: 100%;
   line-height: 1.7;
 }
@@ -76,6 +77,14 @@
 
 [data-md-component="header-topic"] {
   font-weight: 700;
+}
+
+.md-nav, .md-nav .md-nav__link {
+  font-size: var(--site-content-font-size);
+}
+
+.md-nav__item > .md-nav__link {
+  margin-bottom: 0.15rem;
 }
 
 .md-header--shadow {
@@ -139,17 +148,18 @@
   color: var(--md-default-fg-color--lighter);
 }
 
-.md-typeset .principle-disclosure {
+.md-typeset .section-disclosure {
   border: 0;
   border-bottom: 1px solid rgb(218, 221, 225);
   box-shadow: none;
+  font-size: var(--site-content-font-size);
   margin: 0 0 0.6rem;
   padding-bottom: 0.4rem;
   padding-left: 0;
   padding-right: 0;
 }
 
-.md-typeset details.principle-disclosure > summary.principle-disclosure__summary {
+.md-typeset details.section-disclosure > summary.section-disclosure__summary {
   align-items: center;
   background-color: transparent;
   color: var(--md-primary-fg-color);
@@ -163,24 +173,31 @@
   padding: 0.6rem 2rem 0.6rem 0;
 }
 
-.principle-disclosure__summary::-webkit-details-marker {
+.md-typeset .section-disclosure__title {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+.section-disclosure__summary::-webkit-details-marker {
   display: none;
 }
 
-.md-typeset .principle-disclosure > .principle-disclosure__summary::before {
+.md-typeset .section-disclosure > .section-disclosure__summary::before {
   display: none;
 }
 
-.principle-disclosure__summary:focus-visible {
+.section-disclosure__summary:focus-visible {
   outline: 0.15rem solid #0c818f;
   outline-offset: -0.15rem;
 }
 
-.principle-disclosure__content {
+.section-disclosure__content {
   padding: 0 0 0.5rem;
 }
 
-.principle-disclosure__content > h3 {
+.section-disclosure__content > h3 {
   margin-top: 0;
 }
 
@@ -192,6 +209,6 @@
   padding: 0.125rem 1rem;
 }
 
-.principle-disclosure__content > :last-child {
+.section-disclosure__content > :last-child {
   margin-bottom: 0;
 }

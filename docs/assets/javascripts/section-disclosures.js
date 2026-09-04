@@ -1,4 +1,7 @@
-function findPrincipleHeadings(article) {
+const ARTICLE_SELECTOR = ".md-content__inner.md-typeset";
+const DISCLOSURE_SELECTOR = "details.section-disclosure";
+
+function findSectionHeadings(article) {
   const legacyContainer = article.querySelector(":scope > h2#principles");
 
   if (legacyContainer) {
@@ -47,59 +50,55 @@ function revealFragment(article) {
   if (!window.location.hash) return;
 
   const target = article.querySelector(window.location.hash);
-  const disclosure = target?.closest("details.principle-disclosure");
+  const disclosure = target?.closest(DISCLOSURE_SELECTOR);
 
   if (disclosure) disclosure.open = true;
 }
 
-function enhancePrinciplePage() {
-  const article = document.querySelector(".md-content__inner.md-typeset");
+function createSectionDisclosure(heading, nextHeading) {
+  const disclosure = document.createElement("details");
+  const summary = document.createElement("summary");
+  const content = document.createElement("div");
+  let element = heading.nextElementSibling;
 
-  if (!article || article.dataset.principleDisclosures === "true") return;
+  disclosure.className = "section-disclosure";
+  disclosure.open = true;
+  summary.className = "section-disclosure__summary";
+  heading.classList.add("section-disclosure__title");
+  content.className = "section-disclosure__content";
 
-  const headings = findPrincipleHeadings(article);
+  heading.before(disclosure);
+  disclosure.append(summary, content);
+  summary.append(heading);
+
+  while (element && element !== nextHeading && element.tagName !== "H2") {
+    const nextElement = element.nextElementSibling;
+    content.append(element);
+    element = nextElement;
+  }
+}
+
+function enhanceSectionDisclosures() {
+  const article = document.querySelector(ARTICLE_SELECTOR);
+
+  if (!article || article.dataset.sectionDisclosures === "true") return;
+
+  const headings = findSectionHeadings(article);
   if (headings.length === 0) return;
 
-  article.dataset.principleDisclosures = "true";
-
-  headings.forEach((heading, index) => {
-    const disclosure = document.createElement("details");
-    const summary = document.createElement("summary");
-    const title = document.createElement("span");
-    const content = document.createElement("div");
-    const nextHeading = headings[index + 1];
-
-    disclosure.className = "principle-disclosure";
-    disclosure.open = true;
-    summary.className = "principle-disclosure__summary";
-    title.id = heading.id;
-    title.textContent = heading.textContent;
-    content.className = "principle-disclosure__content";
-
-    summary.append(title);
-    disclosure.append(summary, content);
-    heading.before(disclosure);
-
-    let element = heading.nextElementSibling;
-    heading.remove();
-
-    while (element && element !== nextHeading && element.tagName !== "H2") {
-      const nextElement = element.nextElementSibling;
-      content.append(element);
-      element = nextElement;
-    }
-  });
+  article.dataset.sectionDisclosures = "true";
+  headings.forEach((heading, index) => createSectionDisclosure(heading, headings[index + 1]));
 
   revealFragment(article);
 }
 
 if (typeof document$ !== "undefined") {
-  document$.subscribe(enhancePrinciplePage);
+  document$.subscribe(enhanceSectionDisclosures);
 } else {
-  document.addEventListener("DOMContentLoaded", enhancePrinciplePage);
+  document.addEventListener("DOMContentLoaded", enhanceSectionDisclosures);
 }
 
 window.addEventListener("hashchange", () => {
-  const article = document.querySelector(".md-content__inner.md-typeset");
+  const article = document.querySelector(ARTICLE_SELECTOR);
   if (article) revealFragment(article);
 });

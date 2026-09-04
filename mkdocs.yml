@@ -60,18 +60,17 @@ extra_css:
   - stylesheets/extra.css
 extra_javascript:
   - assets/javascripts/mermaid-glightbox.js
-  - assets/javascripts/principle-disclosures.js
+  - assets/javascripts/section-disclosures.js
 markdown_extensions:
   # - attr_list
   - toc:
-      toc_depth: "2-3"   # include H2 and H3 only, hide H4+
+      toc_depth: "1-2"   # include H1 and H2 only, hide H3+
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
-  #- Engineering Standards and Principles: index.md
   - Home: index.md
   - Principles:
     - principles/index.md
