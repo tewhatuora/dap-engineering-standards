@@ -1,96 +1,168 @@
 # Everything as Code
 
-## Summary
+## Version-Controlled Source Code
 
-> Version-controlled code is the source of truth; manual changes to running systems are drift to fix.
+### Summary
 
-## Principles
+All application and service code lives in version control as its authoritative source, with no exception for a prototype or script.
 
-### Version-Controlled Source Code
+### Reasoning
 
-> All application and service code lives in version control as its authoritative source, with no exception for a prototype or script.
+A shared authoritative repository makes source recoverable, reviewable, and attributable throughout its life.
 
-1. All application and service source code **MUST** be stored in a version-controlled repository as its authoritative source, with no exception for prototypes, scripts, or short-lived work.
-2. An application or service **MUST NOT** be deployed to any environment unless its code is stored in a version-controlled repository.
+Refusing a carve-out for prototypes, scripts, or short-lived work prevents code from becoming deployed or depended upon without an authoritative source.
 
-#### References
+### Implemented By These Standards
 
-- [Version Control](../../standards/code-implementation/version-control.md)
+- [Version Control](../standards/code-implementation/version-control.md)
 
-### Infrastructure as Code
+### Related Principles
 
-> Infrastructure, environments, and platform resources are defined as code, never created or changed through a manual action.
+- [Code as the Single Source of Truth](#code-as-the-single-source-of-truth)
 
-1. Infrastructure, environment configuration, and platform resources **MUST** be defined as version-controlled, declarative code rather than created or modified through manual, ad hoc actions.
-2. A capability that can be defined as code **MUST NOT** be provisioned or configured manually.
+## Infrastructure as Code
 
-#### References
+### Summary
 
-- [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
+Infrastructure, environments, and platform resources are defined as code, never created or changed through a manual action.
 
-### Code as the Single Source of Truth
+### Reasoning
 
-> A system's version-controlled code is the single source of truth; its running state is derived from it, never the reverse.
+Declarative definitions make intended infrastructure state repeatable and reviewable.
 
-1. The version-controlled code defining a system or environment **MUST** be treated as the single source of truth; its running state **MUST** be derived from that code, not the reverse.
-2. A manual, out-of-band change made directly to a running system **MUST** be treated as drift to be reconciled, not a parallel source of truth.
-3. A code-defined change **MUST** be applied to a running system through automated tooling rather than manual execution.
+Manual, ad hoc actions create state without a reproducible definition and bypass the controls applied to code-defined changes.
 
-#### References
+### Implemented By These Standards
+
+- [Infrastructure as Code](../standards/platform-infrastructure/infrastructure-as-code.md)
+
+### Related Principles
+
+- [Code as the Single Source of Truth](#code-as-the-single-source-of-truth)
+- [Reproducible Environments](#reproducible-environments)
+
+## Code as the Single Source of Truth
+
+### Summary
+
+A system's version-controlled code is the single source of truth; its running state is derived from it, never the reverse.
+
+### Reasoning
+
+One authoritative source prevents disagreement between version-controlled definitions and running state about the system's intended state.
+
+Deriving running state from code makes drift identifiable and gives reconciliation a defined direction.
+
+### Implemented By These Standards
+
+- [Infrastructure as Code](../standards/platform-infrastructure/infrastructure-as-code.md)
+
+### Related Principles
 
 - [Automation First](automation-first.md)
+- [Infrastructure as Code](#infrastructure-as-code)
 
-### Same Review Discipline as Application Code
+## Same Review Discipline as Application Code
 
-> Infrastructure, configuration, pipeline, and policy code go through the same review as application code.
+### Summary
 
-1. A change to infrastructure, configuration, pipeline, or policy code **MUST** go through the same peer review and approval process required for application code.
-2. A reviewer **MUST** be able to determine a proposed change's effect from the code itself before it is applied.
+Infrastructure, configuration, pipeline, and policy code go through the same review as application code.
 
-#### References
+### Reasoning
 
-- [Code Review](../../standards/code-implementation/code-review.md)
+Infrastructure, configuration, pipeline, and policy code can change the same running systems and behaviour as application code.
 
-### Reproducible Environments
+Applying the same review discipline gives these changes equivalent scrutiny and accountability before they affect a running system.
 
-> An environment reproduces consistently from its code definition, without a manual step after creation.
+### Implemented By These Standards
 
-1. An environment **MUST** be reproducible from its code definition, enabling consistent recreation across development, test, and production instances.
-2. Recreating an environment from its code definition **SHOULD** produce a functionally equivalent result without manual post-creation steps.
+- [Code Review](../standards/code-implementation/code-review.md)
 
-#### References
+### Related Principles
 
-- [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
+- [Version-Controlled Source Code](#version-controlled-source-code)
+- [Documentation as Code](#documentation-as-code)
 
-### As Code Beyond Infrastructure
+## Reproducible Environments
 
-> The as-code approach extends to application configuration, delivery pipelines, and database schema, not only infrastructure.
+### Summary
 
-1. Everything as Code extends beyond infrastructure provisioning to application configuration, delivery pipeline definitions, and database schema changes.
-2. A configuration, pipeline, or schema definition still maintained manually **MUST** be prioritised for conversion to code.
+An environment reproduces consistently from its code definition, without a manual step after creation.
 
-#### References
+### Reasoning
 
-- [Configuration Management](../../standards/code-implementation/configuration-management.md)
-- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
-- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
-- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
-- [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
+Recreation from code reduces environment-specific variance across development, test, and production instances.
 
-### Externalised Secrets
+Removing manual post-creation steps means the code definition captures the environment's complete functional state.
 
-> A secret never lives inside code; a code-defined artifact instead references it from a dedicated secrets mechanism.
+### Implemented By These Standards
 
-1. Code that defines infrastructure, configuration, or pipelines **MUST NOT** embed secrets, credentials, or other sensitive data directly.
-2. A code-defined artifact requiring a secret **MUST** reference it from a dedicated secrets management mechanism at deployment or runtime.
+- [Environment Strategy](../standards/platform-infrastructure/environment-strategy.md)
 
-### Documentation as Code
+### Related Principles
 
-> Engineering documentation stays version-controlled and updated in the same change that alters the behaviour it describes.
+- [Infrastructure as Code](#infrastructure-as-code)
 
-1. Engineering documentation describing a system or service **SHOULD** be maintained under version control alongside the source it describes, using the same review process as code changes.
-2. Documentation **MUST** be updated as part of the same change that alters the behaviour it describes, not deferred to a later task.
+## As Code Beyond Infrastructure
 
-#### References
+### Summary
 
-- [Engineering Documentation](../../standards/documentation-collaboration/engineering-documentation.md)
+The as-code approach extends to application configuration, delivery pipelines, and database schema, not only infrastructure.
+
+### Reasoning
+
+Application configuration, delivery pipelines, and database schema change system behaviour and benefit from the same traceability and repeatability as infrastructure definitions.
+
+Manually maintained definitions create state that cannot be reviewed, reproduced, or changed through the code-defined path.
+
+### Implemented By These Standards
+
+- [Configuration Management](../standards/code-implementation/configuration-management.md)
+- [Continuous Integration](../standards/delivery-release/continuous-integration.md)
+- [Continuous Delivery & Deployment](../standards/delivery-release/continuous-delivery-deployment.md)
+- [Schema Design & Evolution](../standards/architecture-system-design/schema-design-evolution.md)
+- [Database Migration Tooling](../standards/code-implementation/database-migration-tooling.md)
+
+### Related Principles
+
+- [Infrastructure as Code](#infrastructure-as-code)
+
+## Externalised Secrets
+
+### Summary
+
+A secret never lives inside code; a code-defined artifact instead references it from a dedicated secrets mechanism.
+
+### Reasoning
+
+Embedding a secret in code spreads it through repository history, generated artifacts, and review access beyond the people and systems that require it.
+
+Runtime references allow credentials to be rotated independently of code and keep their handling within a dedicated secrets mechanism.
+
+### Implemented By These Standards
+
+- [Secrets Management & Scanning](../standards/security-identity/secrets-management-scanning.md)
+
+### Related Principles
+
+- [Security by Design](security-by-design.md)
+
+## Documentation as Code
+
+### Summary
+
+Engineering documentation stays version-controlled and updated in the same change that alters the behaviour it describes.
+
+### Reasoning
+
+Version-controlled documentation keeps its history and review traceable to the source and behaviour it describes.
+
+Updating documentation with the behaviour change prevents it from describing an earlier system state and directing later work from incorrect information.
+
+### Implemented By These Standards
+
+- [Engineering Documentation Standards](../standards/documentation-collaboration/engineering-documentation-standards.md)
+
+### Related Principles
+
+- [Same Review Discipline as Application Code](#same-review-discipline-as-application-code)

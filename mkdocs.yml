@@ -1,10 +1,17 @@
 site_name: Health New Zealand Engineering Standards
 site_url: https://dap-engineering-standards-6efaca.gitlab.io/
+exclude_docs: |
+  **/AGENTS.md
 plugins:
   - include-markdown
   - meta
   #- optimize  # Disabled due to dependency installation complexity (eg Cairo Graphics native dependencies)
-  - privacy
+  - privacy:
+      assets_exclude:
+        # Material loads Mermaid from this URL at runtime. The privacy plugin
+        # rewrites it to site_url + the original URL, which 404s, so diagrams
+        # render as raw code. Leave it alone.
+        - unpkg.com/mermaid@11/*
   - search
   - glightbox:
       width: 90%
@@ -53,6 +60,7 @@ extra_css:
   - stylesheets/extra.css
 extra_javascript:
   - assets/javascripts/mermaid-glightbox.js
+  - assets/javascripts/principle-disclosures.js
 markdown_extensions:
   # - attr_list
   - toc:
