@@ -32,7 +32,7 @@
 #### References
 
 - [Database Migration Tooling](database-migration-tooling.md)
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Observability](../../principles/reliability-operations/observability.md)
 
 ### Parameterised Queries & Injection Prevention
 
@@ -43,7 +43,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
 ### Error Handling & Disclosure
 
@@ -54,9 +54,9 @@
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
-- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
+- [Observability](../../principles/reliability-operations/observability.md)
+- [Data Privacy](../../principles/security-privacy/data-privacy.md)
 
 ### Connection Management & Pooling
 
@@ -82,7 +82,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 
 ### Transaction Boundaries & Atomicity
@@ -95,7 +95,7 @@
 
 #### References
 
-- [Data Quality & Integrity by Design](../../principles/data/data-quality-integrity-by-design.md)
+- [Data Quality & Integrity](../../principles/data/data-quality-integrity.md)
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
 ### Isolation Levels & Concurrency Control
@@ -109,7 +109,7 @@
 
 #### References
 
-- [Data Quality & Integrity by Design](../../principles/data/data-quality-integrity-by-design.md)
+- [Data Quality & Integrity](../../principles/data/data-quality-integrity.md)
 
 ### Timeouts & Retries
 
@@ -123,7 +123,7 @@
 #### References
 
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
-- [Stateless First](../../principles/architecture-platform/stateless-first.md)
+- [Stateless Architecture](../../principles/architecture-platform/stateless-architecture.md)
 
 ### Cross-Service Transaction Consistency
 
@@ -140,17 +140,18 @@
 
 ### Read Efficiency & Replica Awareness
 
-> A read is batched, paginated, and directed to a replica or cache where its consistency needs allow it.
+> A read is batched, paginated, and directed to a replica or cache where its consistency needs allow it, with cache invalidation or expiry defined.
 
 1. A data access layer **SHOULD** retrieve related data using a single batched or joined query where feasible, avoiding the N+1 query problem of issuing a separate query per related record.
 2. A read that could return a large or unbounded result set **MUST** use pagination or an equivalent mechanism to limit what is retrieved at once.
 3. A read-heavy workload **SHOULD** be directed to a read replica where one is available, reserving the primary data store's capacity for a write and for a read that requires strongly consistent data.
 4. Code that reads from a replica **MUST** tolerate its eventual consistency and **MUST NOT** assume a write is immediately visible.
 5. A frequently-read, infrequently-changing value **SHOULD** be served from a cache rather than the data store on every read, where the value tolerates a defined staleness window.
+6. A cache **MUST** have a defined invalidation or expiry approach, so it does not serve stale data indefinitely.
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
 
 ### Write Efficiency
 
@@ -162,7 +163,7 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
 
 ### Data Access Observability
 
@@ -175,6 +176,6 @@
 
 #### References
 
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Observability](../../principles/reliability-operations/observability.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)

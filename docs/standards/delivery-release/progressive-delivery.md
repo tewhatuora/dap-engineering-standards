@@ -20,7 +20,7 @@
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
 - [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
 
 ### Canary Releases
@@ -34,7 +34,7 @@
 
 #### References
 
-- [Stateless First](../../principles/architecture-platform/stateless-first.md)
+- [Stateless Architecture](../../principles/architecture-platform/stateless-architecture.md)
 
 ### Blue/Green Deployments
 
@@ -72,7 +72,7 @@
 #### References
 
 - [Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
 - [Database Migration Tooling](../code-implementation/database-migration-tooling.md)
 - [Rollback Strategy](rollback-strategy.md)
 

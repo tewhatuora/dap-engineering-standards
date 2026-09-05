@@ -63,7 +63,7 @@
 - [Branching Strategy](branching-strategy.md)
 - [Code Review](code-review.md)
 - [Release Strategy](../delivery-release/release-strategy.md)
-- [AI-Assisted Engineering Accountability](../../principles/engineering-practice/ai-assisted-engineering-accountability.md)
+- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
 
 ### Repository Hygiene & Exclusions
 
@@ -83,5 +83,5 @@
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
-- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
+- [Automation](../../principles/engineering-practice/automation.md)

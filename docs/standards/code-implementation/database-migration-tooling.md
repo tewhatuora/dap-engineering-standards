@@ -77,10 +77,10 @@
 
 #### References
 
-- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Automation](../../principles/engineering-practice/automation.md)
 - [Continuous Delivery & Deployment](../delivery-release/continuous-delivery-deployment.md)
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Observability](../../principles/reliability-operations/observability.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
 
 ### Rollback & Irreversible Changes
 
@@ -106,7 +106,7 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
 
 ### Testing Migrations Before Production
 
@@ -120,4 +120,4 @@
 
 - [Test Data Management](../quality-engineering/test-data-management.md)
 - [Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
-- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Testability](../../principles/quality/testability.md)

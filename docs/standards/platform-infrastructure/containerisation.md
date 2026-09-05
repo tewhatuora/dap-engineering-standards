@@ -17,7 +17,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Software Supply Chain Security](../security-identity/software-supply-chain-security.md)
 - [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
 
@@ -32,7 +32,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
 - [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
 - [Build & Artifact Management](../delivery-release/build-artifact-management.md)
@@ -50,8 +50,8 @@
 #### References
 
 - [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
 
 ### Minimal Runtime Privilege
 
@@ -64,7 +64,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
 ### Image Tagging & Immutability
 

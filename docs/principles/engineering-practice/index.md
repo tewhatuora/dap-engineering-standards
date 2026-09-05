@@ -1,44 +1,44 @@
 # Engineering Practice
 
 ## Overview
-How engineering work is approached affects how quickly and safely software can be understood, changed, and delivered. This section defines the principles for keeping that work simple, reusable, automated, responsive, and accountable.
+Engineering practices determine how readily systems can be understood, changed, and operated. This section values proportionate design, reuse, code-defined systems, automation, fast feedback, and accountability for engineering work.
 
 Choose a principle below to read its full reasoning.
 
-## Directory
+## Principles
 
-#### Simplicity & Maintainability
+### Simplicity & Maintainability
 
-> Add no more complexity than an actual requirement justifies, and remove what is no longer needed.
+Keep systems understandable and changeable through proportionate design, clear structure, consistent code, and active maintenance.
 
 [Read more](simplicity-maintainability.md).
 
-#### Reuse Before Reinvention
+### Reuse
 
-> Reuse before adopting, and adopt before building.
+Evaluate existing capabilities before building a custom solution, and make reusable capabilities straightforward to adopt.
 
-[Read more](reuse-before-reinvention.md).
+[Read more](reuse.md).
 
-#### Everything as Code
+### Everything as Code
 
-> Version-controlled code is the source of truth; manual changes to running systems are drift to fix.
+Keep system definitions in version control as the authoritative source for reviewable and reproducible change.
 
 [Read more](everything-as-code.md).
 
-#### Automation First
+### Automation
 
-> Automate every repeatable task, and reserve human judgement for decisions automation cannot make.
+Automate repeatable work through maintained code while preserving human judgement and review for decisions that require them.
 
-[Read more](automation-first.md).
+[Read more](automation.md).
 
-#### Fast Feedback by Design
+### Fast Feedback
 
-> Surface feedback on a change at the earliest stage capable of producing it, clearly and reliably.
+Surface clear, reliable feedback at the earliest effective stage and improve feedback loops that delay or obscure action.
 
-[Read more](fast-feedback-by-design.md).
+[Read more](fast-feedback.md).
 
-#### AI-Assisted Engineering Accountability
+### AI-Assisted Engineering
 
-> Hold AI-assisted work to the same standards as any other, with human accountability and understanding.
+The directing engineer remains accountable for AI-assisted work, which requires the same standards, understanding, and care as other engineering work.
 
-[Read more](ai-assisted-engineering-accountability.md).
+[Read more](ai-assisted-engineering.md).

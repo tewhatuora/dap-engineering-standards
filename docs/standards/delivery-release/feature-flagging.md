@@ -22,7 +22,7 @@
 
 - [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 - [Configuration Management](../code-implementation/configuration-management.md)
-- [Platform Alignment](../../principles/architecture-platform/platform-alignment.md)
+- [Shared Platform](../../principles/architecture-platform/shared-platform.md)
 - [Vendor Lock-in & Portability](../../principles/architecture-platform/vendor-lock-in-portability.md)
 - [Branching Strategy](../code-implementation/branching-strategy.md)
 - [Code Review](../code-implementation/code-review.md)
@@ -54,7 +54,7 @@
 
 - [Configuration Management](../code-implementation/configuration-management.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
-- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Testability](../../principles/quality/testability.md)
 - [Unit Testing](../quality-engineering/unit-testing.md)
 - [Integration Testing](../quality-engineering/integration-testing.md)
 
@@ -72,7 +72,7 @@
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 - [Progressive Delivery](progressive-delivery.md)
-- [Stateless First](../../principles/architecture-platform/stateless-first.md)
+- [Stateless Architecture](../../principles/architecture-platform/stateless-architecture.md)
 
 ### Flag Change Control
 
@@ -112,8 +112,8 @@
 
 #### References
 
-- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Data Privacy](../../principles/security-privacy/data-privacy.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
 ### Flag State Observability
 
@@ -125,8 +125,8 @@
 
 #### References
 
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
-- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
+- [Observability](../../principles/reliability-operations/observability.md)
+- [Data Privacy](../../principles/security-privacy/data-privacy.md)
 
 ### Flag Retirement & Proliferation Control
 
@@ -143,6 +143,6 @@
 #### References
 
 - [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
-- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Testability](../../principles/quality/testability.md)
 - [Release Strategy](release-strategy.md)
 - [Version Control](../code-implementation/version-control.md)

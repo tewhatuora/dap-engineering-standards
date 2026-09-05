@@ -1,20 +1,21 @@
 # Cost & Sustainability
 
 ## Overview
-Cost and environmental impact are design concerns, not afterthoughts. This section defines the principles for proportionate spending and efficient resource use.
+
+Cost and sustainability principles establish how engineering decisions account for financial and environmental consequences throughout a service's lifecycle. They guide choices that keep spend and resource consumption proportionate to delivered value while preserving required service outcomes.
 
 Choose a principle below to read its full reasoning.
 
-## Directory
+## Principles
 
-#### Cost Awareness by Design
+### Cost Awareness
 
-> Weigh cost alongside reliability, performance, and security, keeping spend proportionate to the value it delivers.
+Engineering decisions keep recurring spend proportionate to the value a service delivers throughout its lifecycle.
 
-[Read more](cost-awareness-by-design.md).
+[Read more](cost-awareness.md).
 
-#### Sustainability by Design
+### Sustainability
 
-> Design for efficient resource use, with environmental impact considered from the start.
+Engineering decisions minimise unnecessary resource consumption and environmental impact throughout a service's lifecycle.
 
-[Read more](sustainability-by-design.md).
+[Read more](sustainability.md).

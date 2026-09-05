@@ -1,20 +1,21 @@
 # Data
 
 ## Overview
-Data must remain trustworthy and subject to deliberate governance throughout its lifecycle. This section defines the principles for data quality, integrity, residency, and sovereignty.
+
+Data remains trustworthy when its quality, integrity, traceability, and legal jurisdiction are deliberate properties throughout its lifecycle. These principles establish how data retains those properties as it enters, changes, moves through, and is recovered by systems.
 
 Choose a principle below to read its full reasoning.
 
-## Directory
+## Principles
 
-#### Data Residency & Sovereignty
+### Data Residency & Sovereignty
 
-> Treat the legal jurisdiction over data as a deliberate choice, not an assumption from where it is hosted.
+Data jurisdiction is defined before design and enforced across storage, processing, transfer, and recovery.
 
 [Read more](data-residency-sovereignty.md).
 
-#### Data Quality & Integrity by Design
+### Data Quality & Integrity
 
-> Validate data at its point of entry, and fix quality issues at their root cause.
+Data quality and integrity are enforced, verified, monitored, and kept traceable throughout the data lifecycle.
 
-[Read more](data-quality-integrity-by-design.md).
+[Read more](data-quality-integrity.md).

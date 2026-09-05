@@ -15,7 +15,7 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
 
 ### Automatic Patching
 
@@ -27,7 +27,7 @@
 #### References
 
 - [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
 ### Availability Configuration
 
@@ -39,7 +39,7 @@
 #### References
 
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 - [Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)
 
 ### Backup Configuration & Verification
@@ -63,6 +63,6 @@
 
 #### References
 
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Observability](../../principles/reliability-operations/observability.md)
 - [Observability Platform Integration](../operations-observability/observability-platform-integration.md)
 - [Metrics, Monitoring & Alerting](../operations-observability/metrics-monitoring-alerting.md)

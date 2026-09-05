@@ -69,7 +69,7 @@
 
 #### References
 
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Observability](../../principles/reliability-operations/observability.md)
 - [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)
 
 ### Runbook Automation
@@ -81,5 +81,5 @@
 
 #### References
 
-- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Automation](../../principles/engineering-practice/automation.md)
 - [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)

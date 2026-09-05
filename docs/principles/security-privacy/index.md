@@ -1,20 +1,21 @@
 # Security & Privacy
 
 ## Overview
-Security and privacy must be built into a system from the outset. This section defines the principles for secure defaults, least privilege, data minimisation, and privacy-preserving choices.
+
+Security and privacy depend on design and engineering decisions that limit access, exposure, and risk throughout a system's lifecycle. These principles establish how systems protect their operation and the personal or health data they handle.
 
 Choose a principle below to read its full reasoning.
 
-## Directory
+## Principles
 
-#### Security by Design
+### Security Engineering
 
-> Build in least privilege and secure defaults from the outset, and verify security controls through testing.
+Security shapes design and engineering decisions throughout a system's lifecycle.
 
-[Read more](security-by-design.md).
+[Read more](security-engineering.md).
 
-#### Privacy by Design
+### Data Privacy
 
-> Collect only the personal or health data a purpose needs, defaulting to the most private option.
+Privacy is protected by limiting personal or health data exposure throughout its lifecycle.
 
-[Read more](privacy-by-design.md).
+[Read more](data-privacy.md).

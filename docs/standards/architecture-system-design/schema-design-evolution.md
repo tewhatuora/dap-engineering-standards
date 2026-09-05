@@ -28,7 +28,7 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 
 ### Schema Ownership
 
@@ -48,11 +48,12 @@
 2. A trigger **SHOULD NOT** be used; a trigger **MAY** be used only where no other mechanism can achieve the same outcome, since a trigger introduces control flow that is not visible in application code.
 3. A stored procedure **MUST** only be used where it provides a genuine benefit over application-level logic, and **MUST** be version-controlled and applied through the same migration process as other schema changes.
 4. SQL used to define or query a relational schema **SHOULD** conform to ANSI/ISO standard SQL, not a vendor-specific extension, so it remains portable across database engines; a vendor-specific extension **MAY** be used only where it provides a genuine benefit that justifies the portability it gives up.
+5. A relational schema **MUST** enforce uniqueness through a primary key or unique constraint for each entity that has exactly one representation within the schema.
 
 #### References
 
 - [Vendor Lock-in & Portability](../../principles/architecture-platform/vendor-lock-in-portability.md)
-- [Data Quality & Integrity by Design](../../principles/data/data-quality-integrity-by-design.md)
+- [Data Quality & Integrity](../../principles/data/data-quality-integrity.md)
 
 ### Traceability & Deletion Representation
 
@@ -63,7 +64,7 @@
 
 #### References
 
-- [Data Quality & Integrity by Design](../../principles/data/data-quality-integrity-by-design.md)
+- [Data Quality & Integrity](../../principles/data/data-quality-integrity.md)
 
 ### Index Alignment
 
@@ -74,7 +75,7 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
 
 ### Non-Breaking Schema Changes
 
@@ -86,7 +87,7 @@
 
 #### References
 
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
 
 ### Breaking Schema Changes
 

@@ -1,89 +1,108 @@
 # Simplicity & Maintainability
 
-## Summary
+## Minimum Sufficient Solution
 
-> Add no more complexity than an actual requirement justifies, and remove what is no longer needed.
+### Summary
 
-## Principles
+A design includes only complexity and configurability justified by a current requirement and uses the simplest solution that meets it.
 
-### Minimum Sufficient Solution
+### Reasoning
 
-> A design adds no more complexity or configurability than an actual, current requirement justifies.
+Complexity introduced for an unconfirmed need creates maintenance work without delivering current value. Basing abstractions, capabilities, and configuration on actual requirements keeps the design proportionate to the problem being solved.
 
-1. A design or implementation **MUST NOT** introduce complexity, abstraction, or configurability beyond what is justified by an actual, current requirement.
-2. A capability **MUST NOT** be built to anticipate a possible future requirement before that requirement has been confirmed.
-3. Where more than one solution meets a requirement equally well, the simplest to understand and maintain **MUST** be preferred.
+When several solutions meet a requirement equally well, the simplest one is easier to understand, verify, and change.
 
-### Readability & Consistent Conventions
+### Implemented By These Standards
 
-> Code is written to be readily understood by another engineer, with naming and formatting applied consistently.
+- [Code Review](../../standards/code-implementation/code-review.md)
 
-1. Code **MUST** be written to be readily understood by another engineer, not only to satisfy functional requirements.
-2. Naming, formatting, and structural conventions **MUST** be applied consistently within a codebase.
-3. A conflict between a more concise implementation and a more readable one **SHOULD** be resolved in favour of readability.
+## Readable, Consistent Code
 
-#### References
+### Summary
+
+Code is readily understood by another engineer, with naming, formatting, and structural conventions applied consistently.
+
+### Reasoning
+
+Code is read and changed more often than it is written. Readable code reduces the effort needed to understand behaviour and makes the effect of a change easier to assess.
+
+Consistent conventions remove incidental differences that slow comprehension. Readability takes precedence when concision would make intent less clear.
+
+### Implemented By These Standards
 
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 - [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
+- [Code Review](../../standards/code-implementation/code-review.md)
 
-### Component Modularity
+## Component Modularity
 
-> A component's responsibility and interface stay clear and stable, so a dependent is not forced to change with its internals.
+### Summary
 
-1. A component or service **MUST** have a clearly defined responsibility and boundary, such that its purpose can be determined without inspecting its internal implementation.
-2. Coupling between components **SHOULD** be minimised so a change to one does not require understanding or changing unrelated components.
-3. A component's defined interface **MUST** remain stable independently of its internal implementation, so a dependent component is not required to change when only the internal implementation changes.
+A component has a clear responsibility and a stable interface, so changes to its internals do not force changes to its dependent components.
 
-#### References
+### Reasoning
+
+Clear boundaries let an engineer understand a component's purpose without inspecting its implementation. Minimising coupling confines the knowledge and changes needed when a component evolves.
+
+A stable interface separates a component's contract from its implementation. Dependent components can continue to use that contract while the implementation changes independently.
+
+### Implemented By These Standards
 
 - [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
+- [API Design](../../standards/architecture-system-design/api-design.md)
+- [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
 
-### Complexity & Technical Debt
+## Technology Diversity
 
-> Complexity and technical debt are tracked as work proceeds, and debt that impairs maintainability receives a remediation plan.
+### Summary
 
-1. Complexity and technical debt **SHOULD** be identified and recorded as engineering work proceeds, not left untracked.
-2. Technical debt that materially impairs a service's maintainability **MUST** be remediated; it **MUST NOT** be deferred indefinitely without a plan.
-3. Refactoring **SHOULD** be treated as ongoing engineering practice.
+Each technology is justified against its maintenance burden, and the number of technologies serving substantially similar purposes is minimised.
 
-#### References
+### Reasoning
 
-- [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
-- [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
+Every technology adds work through updates, security response, operational support, and the knowledge needed to use it. Adopting one is worthwhile only when the need it meets justifies that continuing cost.
 
-### Dependency & Technology Diversity
+Using fewer technologies for substantially similar problems concentrates experience and reduces duplicated maintenance.
 
-> A new dependency is justified against the maintenance burden it introduces, and one no longer needed is removed.
+### Implemented By These Standards
 
-1. A new dependency, library, or framework **MUST** be justified by the need it meets, weighed against the ongoing maintenance burden it introduces.
-2. The number of distinct languages, frameworks, or tools used to solve substantially similar problems **SHOULD** be minimised across a team's portfolio.
-3. A dependency no longer required **MUST** be removed.
-
-#### References
-
-- [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
 - [Technology Stack Governance](../../standards/architecture-system-design/technology-stack-governance.md)
 
-### Dead Code Removal
+## Unused Code and Dependencies
 
-> Code, features, or configuration no longer needed is removed, not left carrying a comprehension cost indefinitely.
+### Summary
 
-1. Code, features, or configuration no longer required **SHOULD** be removed, since unused code still carries a comprehension and maintenance cost.
-2. Functionality retired from use **MUST** have its code removed within a reasonable period, rather than left in place indefinitely alongside its replacement.
+Code, features, configuration, and dependencies no longer required are removed within a reasonable period.
 
-#### References
+### Reasoning
 
+Unused code and dependencies remain part of the system an engineer must understand, test, secure, and distinguish from active behaviour. Leaving retired functionality beside its replacement obscures which path is authoritative and prolongs its maintenance cost.
+
+Timely removal ends costs and risks that no longer provide value and keeps the codebase aligned with the behaviour it currently provides.
+
+### Implemented By These Standards
+
+- [API Design](../../standards/architecture-system-design/api-design.md)
+- [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
+- [Configuration Management](../../standards/code-implementation/configuration-management.md)
+- [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 
-### Complexity & Maintainability Checks
+## Maintainability and Technical Debt
 
-> Code review and static analysis both watch for unnecessary complexity, catching a maintainability decline as it happens.
+### Summary
 
-1. Code review **SHOULD** evaluate whether a change introduces unnecessary complexity, in addition to its functional correctness.
-2. Static analysis **SHOULD** be used to measure indicators of maintainability, such as complexity or duplication, so degradation can be identified as it occurs.
+Unnecessary complexity and technical debt are identified as code changes, tracked while they remain, and remediated before they materially impair maintainability.
 
-#### References
+### Reasoning
+
+Complexity is cheaper to address when it is introduced than after other code depends on it. Review provides contextual judgement about whether a change is more complex than its requirement warrants, while static analysis makes measurable trends such as complexity and duplication visible as the code evolves.
+
+Unrecorded complexity becomes harder to distinguish from intentional design and can accumulate until routine changes become costly or risky. Recording debt when it is identified keeps its effect visible and allows remediation to be planned before maintainability is materially impaired.
+
+Refactoring as part of ongoing engineering work prevents remediation from depending on a separate, indefinite future effort.
+
+### Implemented By These Standards
 
 - [Code Review](../../standards/code-implementation/code-review.md)
 - [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)

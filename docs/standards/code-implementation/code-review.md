@@ -44,14 +44,17 @@
 
 1. A reviewer **MUST** confirm a change is functionally correct and meets its stated requirement before approving it.
 2. A reviewer **MUST** assess whether a change introduces unnecessary complexity or departs from adopted coding and style conventions.
-3. A security-relevant change, such as one that introduces new attack surface or handles sensitive data, **MUST** be reviewed for security weaknesses relevant to the change.
-4. Review **SHOULD** take static analysis or AI-assisted review tooling output into account rather than duplicate it; a reviewer's own scrutiny **SHOULD** then focus on what such tooling cannot reliably assess.
+3. Where multiple implementations meet a change's stated requirement equally well, the implementation simplest to understand and maintain **MUST** be selected.
+4. Where a more concise implementation would be less readable, the more readable implementation **SHOULD** be selected.
+5. Refactoring **SHOULD** be performed as part of routine engineering work where code's structure impairs its maintainability.
+6. A security-relevant change, such as one that introduces new attack surface or handles sensitive data, **MUST** be reviewed for security weaknesses relevant to the change.
+7. Review **SHOULD** take static analysis or AI-assisted review tooling output into account rather than duplicate it; a reviewer's own scrutiny **SHOULD** then focus on what such tooling cannot reliably assess.
 
 #### References
 
 - [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
 - [Code Style & Formatting](code-style-formatting.md)
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Static Code Analysis](static-code-analysis.md)
 - [AI Usage & Verification in Code Review](../ai-engineering/ai-usage-verification-in-code-review.md)
 
@@ -69,9 +72,9 @@
 #### References
 
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Observability](../../principles/reliability-operations/observability.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
 - [Runbooks](../operations-observability/runbooks.md)
 - [Feature Flagging](../delivery-release/feature-flagging.md)
 - [Progressive Delivery](../delivery-release/progressive-delivery.md)
@@ -87,7 +90,7 @@
 
 #### References
 
-- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)
+- [Reuse](../../principles/engineering-practice/reuse.md)
 
 ### Resolving Review Feedback Before Merge
 
@@ -114,7 +117,7 @@
 
 #### References
 
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
 
 ### Emergency Change Review
 

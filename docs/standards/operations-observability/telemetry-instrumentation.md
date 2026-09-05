@@ -15,8 +15,8 @@
 
 #### References
 
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
+- [Observability](../../principles/reliability-operations/observability.md)
 - [Technology Stack Register](../architecture-system-design/technology-stack-register.md)
 
 ### Common Telemetry Semantics
@@ -30,8 +30,8 @@
 
 #### References
 
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
-- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
+- [Reuse](../../principles/engineering-practice/reuse.md)
 
 ### Sensitive Telemetry Attributes
 
@@ -42,7 +42,7 @@
 
 #### References
 
-- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
+- [Data Privacy](../../principles/security-privacy/data-privacy.md)
 
 ### Breaking Telemetry Changes
 
@@ -60,7 +60,7 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
 ### Instrumentation Planning & Delivery
@@ -72,4 +72,4 @@
 
 #### References
 
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Observability](../../principles/reliability-operations/observability.md)

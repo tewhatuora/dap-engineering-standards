@@ -43,7 +43,7 @@
 
 #### References
 
-- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Automation](../../principles/engineering-practice/automation.md)
 
 ### Local Detection
 
@@ -54,7 +54,7 @@
 
 #### References
 
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
 
 ### Suppression & Exception Discipline
 

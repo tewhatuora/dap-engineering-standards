@@ -57,4 +57,4 @@
 
 - [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
 - [Vulnerability & Dependency Management](vulnerability-dependency-management.md)
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)

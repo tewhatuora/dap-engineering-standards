@@ -23,7 +23,7 @@ Developers and vendors delivering APIs for the organisation **SHOULD** also cons
 
 #### References
 
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
 
 ### Contract-First Design
 
@@ -35,7 +35,7 @@ Developers and vendors delivering APIs for the organisation **SHOULD** also cons
 
 #### References
 
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
 - [Integration Testing](../quality-engineering/integration-testing.md)
 
 ### Version Lifecycle
@@ -50,7 +50,7 @@ Developers and vendors delivering APIs for the organisation **SHOULD** also cons
 
 #### References
 
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
 
 ### Service Level Commitments
 
@@ -70,7 +70,7 @@ Developers and vendors delivering APIs for the organisation **SHOULD** also cons
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 
 ### Data Redaction & Jurisdictional Controls
@@ -96,7 +96,7 @@ Developers and vendors delivering APIs for the organisation **SHOULD** also cons
 
 #### References
 
-- [Data Quality & Integrity by Design](../../principles/data/data-quality-integrity-by-design.md)
+- [Data Quality & Integrity](../../principles/data/data-quality-integrity.md)
 
 ### Rate Limiting & Response Compression
 
@@ -122,4 +122,4 @@ Developers and vendors delivering APIs for the organisation **SHOULD** also cons
 
 #### References
 
-- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)
+- [Reuse](../../principles/engineering-practice/reuse.md)

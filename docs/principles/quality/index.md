@@ -1,20 +1,21 @@
 # Quality
 
 ## Overview
-Quality must be designed into a system, not left to final verification. This section defines the principles for making software testable and accessible from the outset.
+
+Quality depends on systems whose behaviour and characteristics can be verified throughout their lifecycle. These principles cover testability and accessibility as properties maintained through repeated verification.
 
 Choose a principle below to read its full reasoning.
 
-## Directory
+## Principles
 
-#### Testability by Design
+### Testability
 
-> Design every component to be easily verified through automated testing.
+Systems expose observable behaviour and support controlled, repeatable verification proportionate to risk.
 
-[Read more](testability-by-design.md).
+[Read more](testability.md).
 
-#### Accessibility by Design
+### Accessibility
 
-> Design for assistive technology from the earliest stage, and verify conformance through testing, not assumption.
+Accessibility requirements apply to every interface and are verified throughout its lifecycle.
 
-[Read more](accessibility-by-design.md).
+[Read more](accessibility.md).

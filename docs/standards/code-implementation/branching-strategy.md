@@ -75,10 +75,10 @@
 #### References
 
 - [Code Review](code-review.md)
-- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Automation](../../principles/engineering-practice/automation.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 - [Static Code Analysis](static-code-analysis.md)
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 
 ### Merge Strategy & History Integrity

@@ -31,8 +31,8 @@ Set execution limits from the workload's own needs rather than the platform's de
 
 ### Implements These Principles
 
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 
 ## Language & Runtime Selection
 
@@ -47,8 +47,8 @@ Choose the runtime for the path's latency and cost needs, and optimise it where 
 
 ### Implements These Principles
 
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 
 ## Concurrency & Downstream Protection
 
@@ -63,7 +63,7 @@ Bound concurrency to what its most constrained downstream dependency can sustain
 
 ### Implements These Principles
 
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
 ## Retry & Failure Handling
@@ -80,7 +80,7 @@ Make a retry idempotent, bound its redelivery window, and capture what still fai
 
 ### Implements These Principles
 
-- [Stateless First](../../principles/architecture-platform/stateless-first.md)
+- [Stateless Architecture](../../principles/architecture-platform/stateless-architecture.md)
 
 ## Invocation Observability
 
@@ -95,8 +95,8 @@ Make every invocation traceable end-to-end, and its duration and cost attributab
 
 ### Implements These Principles
 
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Observability](../../principles/reliability-operations/observability.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 
 ## Function Portability
 
@@ -126,7 +126,7 @@ Share a dependency deliberately across functions, and reuse a resource across wa
 
 ### Implements These Principles
 
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
 
 ## Function Scope
 
@@ -142,7 +142,7 @@ Scope a function to one reusable capability rather than a workflow-specific copy
 ### Implements These Principles
 
 - [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
-- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)
+- [Reuse](../../principles/engineering-practice/reuse.md)
 
 ## Function Versioning
 
@@ -172,7 +172,7 @@ Grant only the permission a function's code needs today, and remove it once that
 
 ### Implements These Principles
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
 ## Runtime Secrets
 
@@ -187,5 +187,5 @@ Keep a secret out of a function's code and configuration, and make it rotatable 
 
 ### Implements These Principles
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Everything as Code](../../principles/engineering-practice/everything-as-code.md)

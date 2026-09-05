@@ -17,7 +17,7 @@
 
 #### References
 
-- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Automation](../../principles/engineering-practice/automation.md)
 - [Unit Testing](../quality-engineering/unit-testing.md)
 - [Integration Testing](../quality-engineering/integration-testing.md)
 
@@ -36,7 +36,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Application Security Testing](../quality-engineering/application-security-testing.md)
 - [Static Code Analysis](../code-implementation/static-code-analysis.md)
 - [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
@@ -57,7 +57,7 @@
 #### References
 
 - [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
-- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)
+- [Reuse](../../principles/engineering-practice/reuse.md)
 - [Code Review](../code-implementation/code-review.md)
 
 ### Pipeline as Merge Gate
@@ -99,8 +99,8 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
-- [Sustainability by Design](../../principles/cost-sustainability/sustainability-by-design.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+- [Sustainability](../../principles/cost-sustainability/sustainability.md)
 - [Resource Efficiency & Optimisation](../cost-sustainability/resource-efficiency-optimisation.md)
 - [Cost Monitoring & Attribution](../cost-sustainability/cost-monitoring-attribution.md)
 
@@ -116,7 +116,7 @@
 
 #### References
 
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
 - [Build & Test Feedback Loops](../developer-experience/build-test-feedback-loops.md)
 
 ### Build Status Visibility
@@ -130,7 +130,7 @@
 
 #### References
 
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
 
 ### Single Verified Build Artifact
 
@@ -159,6 +159,6 @@
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 - [Software Supply Chain Security](../security-identity/software-supply-chain-security.md)

@@ -22,8 +22,8 @@
 
 #### References
 
-- [Automation First](../../principles/engineering-practice/automation-first.md)
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Automation](../../principles/engineering-practice/automation.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 
 ### Production Isolation
 
@@ -34,7 +34,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 
 ### Ephemeral Environments
@@ -47,8 +47,8 @@
 
 #### References
 
-- [Automation First](../../principles/engineering-practice/automation-first.md)
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Automation](../../principles/engineering-practice/automation.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 
 ### Environment as Code
 

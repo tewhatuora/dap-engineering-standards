@@ -42,7 +42,7 @@
 #### References
 
 - [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
 ### Consistent Structure Across Environments
 
@@ -65,7 +65,7 @@
 
 #### References
 
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
 
 ### Change Control & Traceability
 
@@ -78,7 +78,7 @@
 #### References
 
 - [Code Review](code-review.md)
-- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Automation](../../principles/engineering-practice/automation.md)
 - [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ### Runtime & Dynamic Configuration

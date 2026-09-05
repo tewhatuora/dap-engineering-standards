@@ -27,7 +27,7 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 - [Resource Efficiency & Optimisation](../cost-sustainability/resource-efficiency-optimisation.md)
 
 ### Elastic Scaling
@@ -42,9 +42,9 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 
 ### Instance Health & Lifecycle
 
@@ -68,7 +68,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
 ### Runtime Secrets
 
@@ -79,5 +79,5 @@
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Everything as Code](../../principles/engineering-practice/everything-as-code.md)

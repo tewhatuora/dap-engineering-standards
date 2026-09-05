@@ -18,7 +18,7 @@
 
 - [Static Code Analysis](../code-implementation/static-code-analysis.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
 ### Dynamic Application Security Testing (DAST)
 
@@ -33,7 +33,7 @@
 
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 - [Continuous Delivery & Deployment](../delivery-release/continuous-delivery-deployment.md)
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
 ### Fuzz Testing
 
@@ -44,7 +44,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Test Data Management](test-data-management.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 
@@ -58,7 +58,7 @@
 
 #### References
 
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
 ### Findings Lifecycle
 

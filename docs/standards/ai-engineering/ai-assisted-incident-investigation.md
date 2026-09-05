@@ -38,7 +38,7 @@
 
 #### References
 
-- [AI-Assisted Engineering Accountability](../../principles/engineering-practice/ai-assisted-engineering-accountability.md)
+- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
 
 ### Incident Traceability
 
@@ -49,4 +49,4 @@
 
 #### References
 
-- [AI-Assisted Engineering Accountability](../../principles/engineering-practice/ai-assisted-engineering-accountability.md)
+- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)

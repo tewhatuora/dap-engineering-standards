@@ -1,93 +1,77 @@
-# Data Quality & Integrity by Design
+# Data Quality & Integrity
 
-## Summary
+## Point-of-Entry Validation
 
-> Validate data at its point of entry, and fix quality issues at their root cause.
+### Summary
 
-## Principles
+Data is validated as close to its point of entry as possible, and invalid data is rejected or explicitly flagged.
 
-### Early Quality Expectations
+### Reasoning
 
-> A data item's accuracy, completeness, and consistency expectations are specified at design time, before implementation begins.
+Validation at the point of entry prevents incorrect, incomplete, or malformed data from propagating into downstream systems. Rejecting invalid data or explicitly marking it as invalid preserves the failure for consumers to handle. Silent acceptance or correction conceals the failure and can change the data's meaning without the knowledge of its producer or consumers.
 
-1. A data item's expected accuracy, completeness, consistency, and uniqueness **MUST** be specified as part of a service or feature's design.
-2. A service or feature that produces, transforms, or stores data **MUST NOT** proceed to implementation before these expectations are specified.
-
-### Point-of-Entry Validation
-
-> Data is validated as close to its point of entry as possible, and invalid data is rejected or flagged, never silently accepted.
-
-1. Data **MUST** be validated for correctness, completeness, and format as close to its point of entry or capture as possible, rather than relying on a downstream process to detect errors.
-2. Data that fails validation **MUST** be rejected or explicitly flagged as invalid; it **MUST NOT** be silently accepted, silently corrected, or passed downstream without indication of the failure.
-
-#### References
+### Implemented By These Standards
 
 - [API Design](../../standards/architecture-system-design/api-design.md)
 
-### Structural & Referential Integrity
+## Structural & Referential Integrity
 
-> Structural and referential integrity is enforced at the data layer, or by the service responsible where the store cannot.
+### Summary
 
-1. Structural constraints, including data types, required fields, and value ranges, **MUST** be enforced at the data layer where the data store natively supports it, and **MUST** otherwise be enforced by the service responsible for writing to it.
-2. Where relationships between records are not natively enforced by the data store, such as in a document, key-value, or wide-column store, the responsible service **MUST** enforce equivalent consistency so that a record cannot reference another record that does not exist or has been removed.
-3. A schema or data model change that would violate an existing structural or referential constraint **MUST** be identified and resolved before it is applied.
+Structural and referential integrity is enforced at the data layer where the data store supports it, and by the responsible service where it does not.
 
-#### References
+### Reasoning
 
-- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
+Data types, required fields, value ranges, and relationships define which stored states are valid. Enforcing these constraints in the data store applies them consistently to every write. Where the store cannot enforce a constraint, equivalent protection in the service responsible for writing the data prevents invalid values and references to records that do not exist or have been removed.
 
-### Duplicate & Conflicting Records
+Schema and data model changes can invalidate records that previously satisfied their constraints. Identifying and resolving these conflicts before applying a change prevents the change itself from introducing a structural or referential integrity failure.
 
-> A uniqueness constraint stops a duplicate persisting, and a conflicting record is resolved rather than left unreconciled.
-
-1. A uniqueness constraint **MUST** be defined and enforced for each entity that must have exactly one representation within a data store.
-2. Where the same real-world entity may be represented by more than one record, such as across integrated systems, a defined matching or conflict-resolution rule **MUST** determine which record or value is authoritative.
-3. A duplicate or conflicting record **MUST** be identified and resolved rather than left to persist indefinitely alongside the record it duplicates or contradicts.
-
-### Data Change Traceability
-
-> A change to decision-informing data stays traceable to its source, timing, and responsible actor.
-
-1. A change to data used to support an operational, financial, or clinical decision **MUST** be traceable to its source, the time it occurred, and the process or actor responsible for the change.
-2. The transformation a data item undergoes between its origin and its current state **SHOULD** be traceable, so its current value can be explained without reconstructing the transformation from informal knowledge.
-3. Traceability information **MUST** be retained for a period sufficient to support audit and incident investigation.
-
-#### References
+### Implemented By These Standards
 
 - [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
 
-### Ongoing Quality Monitoring
+## Duplicate & Conflict Resolution
 
-> Data quality is monitored continuously after initial validation, so a later degradation is detected, not assumed absent.
+### Summary
 
-1. Data quality **MUST** be monitored on an ongoing basis after initial validation, so that degradation occurring after entry, such as through a downstream process or integration fault, is detected rather than assumed absent.
-2. An automated check **SHOULD** detect a material deviation from an expected data quality characteristic, such as completeness, format consistency, or volume, rather than relying on a person to notice it.
-3. A detected data quality issue **MUST** generate an alert proportionate to its severity, so it can be investigated promptly.
+Uniqueness constraints prevent duplicate representations, and defined resolution rules reconcile records that conflict.
 
-#### References
+### Reasoning
 
-- [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
+A uniqueness constraint prevents more than one stored representation where an entity must be unique. Where integrated systems can represent the same real-world entity in several records, a defined matching or conflict-resolution rule establishes which record or value is authoritative.
 
-### Quality Issue Remediation
+Identifying and resolving duplicates and conflicts prevents contradictory records from persisting indefinitely and giving consumers different answers for the same entity.
 
-> A confirmed data quality issue is fixed at its root cause and tracked to completion, never left unactioned.
+### Implemented By These Standards
 
-1. A confirmed data quality issue **MUST** be corrected at its root cause, not only at the level of the individual record in which it was observed.
-2. Remediation of a confirmed data quality issue **MUST** be tracked to completion; it **MUST NOT** be left unactioned once confirmed.
-3. Where a data quality issue has affected downstream systems, reports, or decisions, the affected consumers **SHOULD** be identified and notified.
+- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
 
-#### References
+## Automated Rule Testing
 
-- [Runbooks](../../standards/operations-observability/runbooks.md)
+### Summary
 
-### Automated Rule Testing
+Validation, constraint, and data quality rules are verified through automated tests.
 
-> A validation or quality rule is verified through automated tests, not manual inspection alone.
+### Reasoning
 
-1. Validation, constraint, and data quality rules **MUST** be covered by automated tests, rather than verified only through manual inspection.
-2. A change to a validation or constraint rule **SHOULD** be tested against representative data, including known edge cases and previously identified data quality issues, before release.
+These rules define which data states are accepted and rejected. Automated tests make that behaviour repeatable and expose regressions when a rule changes. Testing against representative data, including boundary conditions, known edge cases, and previously identified quality issues, verifies that the rule continues to distinguish valid and invalid data across the conditions it is expected to handle.
 
-#### References
+### Implemented By These Standards
 
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Test Data Management](../../standards/quality-engineering/test-data-management.md)
+
+## Change Traceability
+
+### Summary
+
+A change to decision-informing data remains traceable to its source, timing, and responsible actor or process.
+
+### Reasoning
+
+Operational, financial, and clinical decisions depend on being able to explain the data that informed them. Recording a change's source, time, and responsible actor or process establishes who or what changed the data and when.
+
+Tracing the transformations between a data item's origin and current state explains how its value was derived without relying on informal knowledge. Retaining this information for an appropriate period preserves the evidence needed for audit and incident investigation.
+
+### Implemented By These Standards
+
+- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)

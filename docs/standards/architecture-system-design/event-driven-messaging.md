@@ -18,7 +18,7 @@
 
 #### References
 
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
 
 ### Event & Message Schema Contracts
 
@@ -44,7 +44,7 @@
 
 #### References
 
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
 - [Schema Design & Evolution](schema-design-evolution.md)
 
 ### Delivery Semantics & Ordering Guarantees
@@ -78,7 +78,7 @@
 
 #### References
 
-- [Stateless First](../../principles/architecture-platform/stateless-first.md)
+- [Stateless Architecture](../../principles/architecture-platform/stateless-architecture.md)
 
 ### Dead-Letter Handling
 
@@ -107,7 +107,7 @@
 
 #### References
 
-- [Platform Alignment](../../principles/architecture-platform/platform-alignment.md)
+- [Shared Platform](../../principles/architecture-platform/shared-platform.md)
 
 ### Access Control & Payload Confidentiality
 
@@ -121,8 +121,8 @@
 #### References
 
 - [Identity & Access Management](../security-identity/identity-access-management.md)
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
-- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
+- [Data Privacy](../../principles/security-privacy/data-privacy.md)
 - [Data Residency & Sovereignty](../../principles/data/data-residency-sovereignty.md)
 
 ### Choreography vs Orchestration for Multi-Service Workflows
@@ -141,7 +141,7 @@
 
 #### References
 
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Observability](../../principles/reliability-operations/observability.md)
 - [Distributed Tracing](../operations-observability/distributed-tracing.md)
 - [Metrics, Monitoring & Alerting](../operations-observability/metrics-monitoring-alerting.md)
 
@@ -154,5 +154,5 @@
 
 #### References
 
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
 - [Integration Testing](../quality-engineering/integration-testing.md)

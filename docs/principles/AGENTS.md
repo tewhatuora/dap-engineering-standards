@@ -32,8 +32,6 @@ file:
 ```markdown
 # <Topic Name>
 
-<One sentence describing the topic.>
-
 ## <Principle Name>
 
 ### Summary
@@ -47,14 +45,11 @@ file:
 ### Implemented By These Standards
 
 - [<Standard>](../standards/<category>/<page>.md)
-
-### Related Principles
-
-- [<Principle>](<page>.md)
 ```
 
 `Summary` and `Reasoning` are required. `Reasoning` is prose. Include implementing standards
-and related principles only where genuine relationships exist.
+only where genuine implementation relationships exist. Principle pages do not include a
+`Related Principles` section or other links to related principles.
 
 Do not introduce other headings or combine several positions into one principle.
 
@@ -105,13 +100,12 @@ pages are inputs, not templates for voice or structure.
 Treat each existing `###` grouping as a separate principle:
 
 1. Keep the page title as `#`.
-2. Move the existing page summary beneath the title as an unheaded tagline.
-3. Promote each grouping name to `##`.
-4. Give each grouping its own `### Summary`, `### Reasoning`,
-   `### Implemented By These Standards`, and `### Related Principles` sections, in that order.
-5. Classify existing references as implementing standards or related principles and present
-   them as bare links. Preserve every existing link.
-6. Search the full standards collection for additional implementing standards. Existing
+2. Promote each grouping name to `##`.
+3. Give each grouping its own `### Summary`, `### Reasoning`,
+  and `### Implemented By These Standards` sections, in that order.
+4. Assess each existing standard reference against the implementation test and retain every
+  qualifying link. Do not carry principle-to-principle references into the converted page.
+5. Search the full standards collection for additional implementing standards. Existing
   references are inputs to assess, not an exhaustive implementation list.
 
 Write in declarative present tense as settled documentation. The page must not mention the
@@ -144,25 +138,31 @@ source claims that appear incorrect. Do not silently correct them during convers
 
 ## Principles Index
 
-`docs/principles/index.md` uses this shape:
+Each category index under `docs/principles/` uses this shape:
 
 ```markdown
-# Principles
+# <Category Name>
 
 ## Overview
 
-<Why the collection exists and what it covers.>
+<Why the category exists and what it covers.>
 
-## Directory
+Choose a principle below to read its full reasoning.
 
-#### <Page Title>
+## Principles
 
-<The page tagline, copied verbatim.>
+### <Page Title>
+
+<One short sentence stating the page's core principle.>
 
 [Read more](<page>.md).
 ```
 
-Principle index entries do not carry tags.
+The root `docs/principles/index.md` uses the same structure with `# Principles`,
+`## Categories`, and a sentence directing the reader to choose a category.
+
+Write a concise tagline that states the page's unifying position. Do not summarise its sections
+or list the topics it covers. Principle index entries do not carry tags.
 
 ## Finish
 

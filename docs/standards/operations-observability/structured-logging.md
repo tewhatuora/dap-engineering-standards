@@ -59,7 +59,7 @@
 
 #### References
 
-- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
+- [Data Privacy](../../principles/security-privacy/data-privacy.md)
 
 ### Trace Identifiers
 
@@ -71,7 +71,7 @@
 
 #### References
 
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Observability](../../principles/reliability-operations/observability.md)
 - [Distributed Tracing](distributed-tracing.md)
 
 ### Log Volume & Noise Control
@@ -86,5 +86,5 @@
 #### References
 
 - [Telemetry Instrumentation](telemetry-instrumentation.md)
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Observability](../../principles/reliability-operations/observability.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)

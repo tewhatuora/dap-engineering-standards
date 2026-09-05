@@ -35,7 +35,7 @@
 
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 - [Test Data Management](test-data-management.md)
-- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Testability](../../principles/quality/testability.md)
 
 ### External Dependency Simulation
 
@@ -47,7 +47,7 @@
 
 #### References
 
-- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Testability](../../principles/quality/testability.md)
 
 ### Contract Testing
 
@@ -59,7 +59,7 @@
 
 #### References
 
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
 - [API Design](../architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../architecture-system-design/event-driven-messaging.md)
 
@@ -76,7 +76,7 @@
 
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 - [Branching Strategy](../code-implementation/branching-strategy.md)
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
 
 ### Failure Gating & Quarantine
 
@@ -88,9 +88,9 @@
 
 #### References
 
-- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Testability](../../principles/quality/testability.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
-- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Automation](../../principles/engineering-practice/automation.md)
 
 ### Test Code Maintenance
 
@@ -114,5 +114,5 @@
 
 #### References
 
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
+- [Observability](../../principles/reliability-operations/observability.md)

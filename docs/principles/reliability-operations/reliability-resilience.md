@@ -1,79 +1,127 @@
 # Reliability & Resilience
 
-## Summary
+## Designing for Failure
 
-> Design every service assuming failure, and contain its impact before it spreads.
+### Summary
 
-## Principles
+Services are designed on the assumption that components, dependencies, and infrastructure will fail, with redundancy proportionate to service criticality.
 
-### Designing for Failure
+### Reasoning
 
-> A service is designed assuming its components and dependencies will fail, with redundancy proportionate to its criticality.
+Component and dependency failures are normal operating conditions. Treating them as design inputs exposes failure modes before production and prevents a critical component from becoming a single point of failure.
 
-1. Services **MUST** be designed on the assumption that components, dependencies, and infrastructure can fail, rather than assuming continuous, uninterrupted availability.
-2. A critical component **MUST NOT** constitute a single point of failure without redundancy proportionate to the criticality of the service it supports.
-3. Failure modes **SHOULD** be identified and addressed during design.
+Redundancy matched to service criticality limits outage impact without imposing the same recovery design on every service.
 
-### Dependency Failure Containment
-
-> A dependency call is bounded by a timeout, retried within limits, and contained so its failure does not cascade.
-
-1. A call to an internal or external dependency **MUST** have a bounded timeout; indefinite waiting on a dependency **MUST NOT** be permitted.
-2. A retry of a failed dependency call **MUST** be bounded and **SHOULD** use backoff, so that retries do not amplify an existing failure.
-3. A service **SHOULD** contain the failure of a dependency, such as through circuit breaking, so it does not cascade into unrelated functionality.
-
-### Protecting Against Overload
-
-> A service protects itself from excess demand through rate limiting, shedding, and isolated resource pools between consumers.
-
-1. A service **SHOULD** protect itself against being overwhelmed by excess demand, such as through rate limiting, throttling, or load shedding, so that overload is contained rather than causing a full outage.
-2. Where demand must be shed or delayed, lower-priority or non-critical requests **SHOULD** be affected before requests supporting critical functionality.
-3. A service **SHOULD** isolate resource pools between distinct consumers or workloads, such as through bulkheading, so that excess demand from one does not exhaust capacity needed by another.
-
-#### References
-
-- [API Design](../../standards/architecture-system-design/api-design.md)
-
-### Graceful Degradation
-
-> A service degrades to reduced functionality under failure or overload, rather than failing completely.
-
-1. Where full functionality cannot be sustained during a failure or overload, a service **SHOULD** degrade to reduced functionality rather than fail completely.
-2. Non-critical functionality **SHOULD** be able to fail independently without affecting functionality that does not depend on it.
-
-### Recovery Objectives & Testing
-
-> A service has defined recovery objectives, and its recovery capability is actually tested, never assumed to meet them.
-
-1. A service **MUST** have defined recovery point objectives (RPO) and recovery time objectives (RTO) describing the maximum data loss and downtime it can sustain.
-2. Recovery capability **MUST** be tested periodically under realistic conditions; an untested recovery process **MUST NOT** be assumed to meet its recovery objectives.
-
-#### References
+### Implemented By These Standards
 
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
+- [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
+- [Managed Services](../../standards/platform-infrastructure/managed-services.md)
 
-### Deployment Risk Reduction
+## Deployment Risk Reduction
 
-> A deployment can always be rolled back or forward-fixed, with risk reduced through progressive rollout and fast disablement.
+### Summary
 
-1. A deployment **MUST** be able to be rolled back or safely forward-fixed if it introduces a failure.
-2. The risk of a change **SHOULD** be reduced through progressive rollout rather than releasing it to all users at once, proportionate to the change's risk.
-3. High-risk functionality **SHOULD** be able to be disabled quickly without requiring a full redeployment.
+Deployments have viable rollback or forward-fix paths, with risk reduced through progressive exposure and rapid disablement.
 
-#### References
+### Reasoning
 
-- [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
-- [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
+A deployment can introduce a failure despite prior validation. A prepared rollback or forward-fix path reduces recovery time and avoids designing a response under incident pressure.
+
+Progressive exposure bounds the impact of an undetected failure while evidence is gathered from production. Independently controlled functionality can be disabled without waiting for another deployment.
+
+### Implemented By These Standards
+
+- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
+- [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
+- [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
+- [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
 
-### Readiness & Incident Learning
+## Dependency Failure Containment
 
-> A known failure mode has a documented response, and every incident's corrective action is tracked to completion.
+### Summary
 
-1. A known failure mode **SHOULD** have a documented response procedure to support fast, consistent recovery during an incident.
-2. An incident that causes a service outage, material data loss, or a breach of its defined recovery objectives **MUST** be followed by a review that identifies its root cause and contributing factors.
-3. Corrective action identified by an incident review **MUST** be tracked to completion, not left as an unactioned recommendation.
+Dependency calls are bounded by timeouts and limited retries, and dependency failures are contained before they cascade.
 
-#### References
+### Reasoning
 
+An unbounded wait consumes resources after a dependency has stopped responding. Timeouts release those resources, while bounded retries with backoff allow transient failures to recover without increasing pressure on an impaired dependency.
+
+Containing a dependency failure preserves functionality that does not rely on it and prevents one failure from exhausting the capacity of connected services.
+
+### Implemented By These Standards
+
+- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
+- [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
+
+## Overload Protection
+
+### Summary
+
+Services protect their capacity from excess demand through demand controls, prioritisation, and resource isolation.
+
+### Reasoning
+
+Uncontrolled demand can exhaust shared resources and turn local saturation into a full outage. Bounding or shedding work keeps service capacity available when demand exceeds what the service can process.
+
+Prioritising critical requests and isolating consumers prevents lower-priority or disproportionate demand from displacing the functionality that must remain available.
+
+### Implemented By These Standards
+
+- [API Design](../../standards/architecture-system-design/api-design.md)
+- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
+- [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
+- [Serverless](../../standards/platform-infrastructure/serverless.md)
+
+## Graceful Degradation
+
+### Summary
+
+Services retain reduced functionality during failure or overload when full functionality cannot be sustained.
+
+### Reasoning
+
+Independent failure of non-critical functionality preserves the service outcomes that remain supportable. This limits the user impact of a partial failure and avoids turning the loss of one capability into loss of the whole service.
+
+### Implemented By These Standards
+
+- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
+- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
+
+## Recovery Objectives & Testing
+
+### Summary
+
+Services define recovery point and recovery time objectives and periodically test recovery capability under realistic conditions.
+
+### Reasoning
+
+Recovery objectives make the acceptable limits for data loss and downtime explicit. They provide measurable targets for selecting recovery strategies and assessing whether those strategies are proportionate to the service.
+
+Recovery capability depends on infrastructure, data, dependencies, and procedures working together. Periodic testing under representative conditions demonstrates whether the complete recovery path meets its objectives before a real failure requires it.
+
+### Implemented By These Standards
+
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
+- [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
+- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
+- [Managed Services](../../standards/platform-infrastructure/managed-services.md)
+
+## Incident Readiness & Learning
+
+### Summary
+
+Known failure modes have documented responses, and incidents that cause an outage, material data loss, or a recovery-objective breach produce root-cause reviews with corrective actions tracked to completion.
+
+### Reasoning
+
+A documented response reduces delay and inconsistency when a known failure occurs. It gives responders a prepared recovery path instead of requiring them to reconstruct one during an incident.
+
+Root-cause review identifies the conditions that produced an incident and the factors that allowed its impact. Tracking corrective action to completion turns that understanding into a reduced likelihood or impact of recurrence.
+
+### Implemented By These Standards
+
+- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Runbooks](../../standards/operations-observability/runbooks.md)

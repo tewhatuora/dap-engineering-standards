@@ -1,32 +1,33 @@
 # Architecture & Platform
 
 ## Overview
-Architecture and platform choices shape how a system can scale, integrate, and change over time. This section defines the principles for aligning with shared platforms while preserving interoperability, portability, and stateless operation.
+
+Architecture and platform decisions determine how readily systems can integrate, scale, and change. These principles favour shared capabilities while preserving clear interfaces, technology choice, and independence from individual service instances.
 
 Choose a principle below to read its full reasoning.
 
-## Directory
+## Principles
 
-#### Platform Alignment
+### Shared Platform
 
-> Build on the organisation's shared platform by default, and justify any deviation from it.
+Shared platforms are the default, and alternatives require deliberate evaluation and justification.
 
-[Read more](platform-alignment.md).
+[Read more](shared-platform.md).
 
-#### Vendor Lock-in & Portability
+### Vendor Lock-in & Portability
 
-> Choose vendor dependencies deliberately, and preserve the ability to change.
+Technology choices account for lock-in and preserve practical options to change providers, platforms, and dependencies.
 
 [Read more](vendor-lock-in-portability.md).
 
-#### Interoperability by Design
+### Interoperability
 
-> Expose what a service shares through a documented interface, using open standards and preserving compatibility as it evolves.
+Services exchange data and functionality through explicit, standards-based contracts that can evolve without breaking consumers.
 
-[Read more](interoperability-by-design.md).
+[Read more](interoperability.md).
 
-#### Stateless First
+### Stateless Architecture
 
-> Any instance can serve any request, with necessary state held externally.
+Services keep request handling independent of individual instances so they can scale, recover, and retry safely.
 
-[Read more](stateless-first.md).
+[Read more](stateless-architecture.md).

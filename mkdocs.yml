@@ -77,38 +77,38 @@ nav:
     - Engineering Practice:
       - principles/engineering-practice/index.md
       - Simplicity & Maintainability: principles/engineering-practice/simplicity-maintainability.md
-      - Reuse Before Reinvention: principles/engineering-practice/reuse-before-reinvention.md
+      - Reuse: principles/engineering-practice/reuse.md
       - Everything as Code: principles/engineering-practice/everything-as-code.md
-      - Automation First: principles/engineering-practice/automation-first.md
-      - Fast Feedback by Design: principles/engineering-practice/fast-feedback-by-design.md
-      - AI-Assisted Engineering Accountability: principles/engineering-practice/ai-assisted-engineering-accountability.md
+      - Automation: principles/engineering-practice/automation.md
+      - Fast Feedback: principles/engineering-practice/fast-feedback.md
+      - AI-Assisted Engineering: principles/engineering-practice/ai-assisted-engineering.md
     - Architecture & Platform:
       - principles/architecture-platform/index.md
-      - Platform Alignment: principles/architecture-platform/platform-alignment.md
+      - Shared Platform: principles/architecture-platform/shared-platform.md
       - Vendor Lock-in & Portability: principles/architecture-platform/vendor-lock-in-portability.md
-      - Interoperability by Design: principles/architecture-platform/interoperability-by-design.md
-      - Stateless First: principles/architecture-platform/stateless-first.md
+      - Interoperability: principles/architecture-platform/interoperability.md
+      - Stateless Architecture: principles/architecture-platform/stateless-architecture.md
     - Quality:
       - principles/quality/index.md
-      - Testability by Design: principles/quality/testability-by-design.md
-      - Accessibility by Design: principles/quality/accessibility-by-design.md
+      - Testability: principles/quality/testability.md
+      - Accessibility: principles/quality/accessibility.md
     - Reliability & Operations:
       - principles/reliability-operations/index.md
       - Reliability & Resilience: principles/reliability-operations/reliability-resilience.md
-      - Performance & Scalability by Design: principles/reliability-operations/performance-scalability-by-design.md
-      - Observability by Default: principles/reliability-operations/observability-by-default.md
+      - Performance & Scalability: principles/reliability-operations/performance-scalability.md
+      - Observability: principles/reliability-operations/observability.md
     - Security & Privacy:
       - principles/security-privacy/index.md
-      - Security by Design: principles/security-privacy/security-by-design.md
-      - Privacy by Design: principles/security-privacy/privacy-by-design.md
+      - Security Engineering: principles/security-privacy/security-engineering.md
+      - Data Privacy: principles/security-privacy/data-privacy.md
     - Data:
       - principles/data/index.md
       - Data Residency & Sovereignty: principles/data/data-residency-sovereignty.md
-      - Data Quality & Integrity by Design: principles/data/data-quality-integrity-by-design.md
+      - Data Quality & Integrity: principles/data/data-quality-integrity.md
     - Cost & Sustainability:
       - principles/cost-sustainability/index.md
-      - Cost Awareness by Design: principles/cost-sustainability/cost-awareness-by-design.md
-      - Sustainability by Design: principles/cost-sustainability/sustainability-by-design.md
+      - Cost Awareness: principles/cost-sustainability/cost-awareness.md
+      - Sustainability: principles/cost-sustainability/sustainability.md
   - Standards:
     - standards/index.md
     - Architecture & System Design:
@@ -174,7 +174,7 @@ nav:
       - Software Supply Chain Security: standards/security-identity/software-supply-chain-security.md
     - Cost & Sustainability:
       - standards/cost-sustainability/index.md
-      - Cost Monitoring & Attribution: standards/cost-sustainability/cost-monitoring-attribution.md
+      - Cost & Impact Attribution: standards/cost-sustainability/cost-monitoring-attribution.md
       - Resource Efficiency & Optimisation: standards/cost-sustainability/resource-efficiency-optimisation.md
     - AI Engineering:
       - standards/ai-engineering/index.md

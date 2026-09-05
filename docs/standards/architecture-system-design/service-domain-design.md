@@ -19,6 +19,18 @@
 
 ### Single Ownership of a Service's Data
 
+### Integration Needs Identified During Design
+
+> A service's integration needs are identified before its design is complete.
+
+1. A service design **MUST** identify every system or consumer that will exchange data or functionality with the service, what it will exchange, and the exchange format before the design is considered complete.
+
+#### References
+
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
+
+### Single Ownership of a Service's Data
+
 > A service's data is owned exclusively by that service; no other service reads or writes to it directly.
 
 1. A service's data **MUST** be owned exclusively by that service; another service **MUST NOT** read from or write to a data store it does not own.
@@ -29,14 +41,28 @@
 
 ### Independent Deployability & Scalability
 
-> A service deploys and scales independently of other services, without a coordinated, simultaneous release.
+> A service deploys and scales independently of other services, scales horizontally by default, adjusts capacity automatically to sustained changes in demand, and reassesses its scaling approach as its limits are approached.
 
 1. A service **MUST** be deployable and scalable independently of other services, without requiring a coordinated, simultaneous release.
 2. A service's internal implementation **MAY** change freely provided its published interface's contract is preserved, so a dependent service is not required to change in step.
+3. A service **SHOULD** be designed to scale horizontally, by adding or removing instances to meet demand, in preference to scaling a single instance vertically.
+4. Where elastic scaling is used, capacity **SHOULD** adjust automatically to a sustained change in demand rather than relying on manual intervention.
+5. Sustained performance degradation, or a component approaching a known scaling limit, **SHOULD** trigger a reassessment of the service's scaling approach.
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
+
+### Scaling Constraints
+
+> A component-level scaling constraint is identified during design and addressed or accepted as a bounded limitation.
+
+1. A component that cannot scale independently of the rest of a service, or that constitutes a single point of contention under load, **MUST** be identified during design.
+2. An identified scaling constraint **MUST** be addressed or explicitly accepted as a bounded limitation before the service depends on it in production.
+
+#### References
+
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
 
 ### Interaction Only Through Published Interfaces
 
@@ -47,7 +73,7 @@
 
 #### References
 
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
 - [API Design](api-design.md)
 - [Event-Driven Messaging](event-driven-messaging.md)
 
@@ -75,4 +101,4 @@
 
 #### References
 
-- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)
+- [Reuse](../../principles/engineering-practice/reuse.md)

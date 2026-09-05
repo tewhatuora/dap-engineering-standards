@@ -19,7 +19,7 @@
 
 - [Linting & Style Enforcement](linting-style-enforcement.md)
 - [Application Security Testing](../quality-engineering/application-security-testing.md)
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
 ### Maintainability Analysis
 
@@ -43,7 +43,7 @@
 
 #### References
 
-- [Platform Alignment](../../principles/architecture-platform/platform-alignment.md)
+- [Shared Platform](../../principles/architecture-platform/shared-platform.md)
 - [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
 
 ### Severity-Based Pipeline Gate
@@ -58,10 +58,10 @@
 
 #### References
 
-- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Automation](../../principles/engineering-practice/automation.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 - [Code Review](code-review.md)
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
 
 ### Local Detection
 
@@ -72,7 +72,7 @@
 
 #### References
 
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
 
 ### Suppression & Exception Discipline
 

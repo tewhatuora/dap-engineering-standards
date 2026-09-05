@@ -28,7 +28,7 @@
 
 #### References
 
-- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Testability](../../principles/quality/testability.md)
 
 ### Coverage Expectations
 
@@ -42,7 +42,7 @@
 
 #### References
 
-- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Testability](../../principles/quality/testability.md)
 - [Feature Flagging](../delivery-release/feature-flagging.md)
 
 ### Coverage Measurement & Reporting
@@ -69,8 +69,8 @@
 #### References
 
 - [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
-- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
+- [Testability](../../principles/quality/testability.md)
 
 ### Independent, Parallel-Safe Execution
 
@@ -82,7 +82,7 @@
 
 #### References
 
-- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Testability](../../principles/quality/testability.md)
 
 ### Fast, Fully Automated Execution
 
@@ -94,8 +94,8 @@
 
 #### References
 
-- [Automation First](../../principles/engineering-practice/automation-first.md)
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Automation](../../principles/engineering-practice/automation.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
 - [Branching Strategy](../code-implementation/branching-strategy.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 
@@ -109,9 +109,9 @@
 
 #### References
 
-- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Testability](../../principles/quality/testability.md)
 - [Continuous Integration](../delivery-release/continuous-integration.md)
-- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Automation](../../principles/engineering-practice/automation.md)
 
 ### Test Code Quality & Maintenance
 
@@ -136,5 +136,5 @@
 
 #### References
 
-- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Testability](../../principles/quality/testability.md)
 - [Test Data Management](test-data-management.md)

@@ -16,15 +16,15 @@
 
 [data-md-color-scheme="default"] {
   --md-primary-fg-color:        rgb(0, 85, 140);
-  --md-typeset-color:           rgb(0, 85, 140);
   --md-footer-bg-color:       #041836;
+  --site-content-color:         rgb(0, 85, 140);
   --site-heading-color:         rgb(0, 85, 140);
 }
 
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color:        rgb(0, 85, 140);
-  --md-typeset-color:           rgb(222, 229, 237);
   --md-footer-bg-color:         rgb(4, 24, 54);
+  --site-content-color:         rgb(222, 229, 237);
   --site-heading-color:         rgb(113, 203, 214);
 }
 
@@ -35,6 +35,11 @@
 .md-header {
   background-color: var(--md-default-bg-color);
   color: var(--site-heading-color);
+}
+
+.md-content {
+  --md-typeset-color: var(--site-content-color);
+  color: var(--site-content-color);
 }
 
 .md-content, .md-typeset {
@@ -81,6 +86,22 @@
 
 .md-nav, .md-nav .md-nav__link {
   font-size: var(--site-content-font-size);
+}
+
+.md-nav .md-nav__link {
+  color: var(--md-default-fg-color);
+}
+
+.md-nav .md-nav__link--passed {
+  color: var(--md-default-fg-color--light);
+}
+
+.md-nav .md-nav__link--active {
+  color: var(--md-typeset-a-color);
+}
+
+.md-nav .md-nav__link:focus, .md-nav .md-nav__link:hover {
+  color: var(--md-accent-fg-color);
 }
 
 .md-nav__item > .md-nav__link {
@@ -152,11 +173,17 @@
   border: 0;
   border-bottom: 1px solid rgb(218, 221, 225);
   box-shadow: none;
+  color: inherit;
   font-size: var(--site-content-font-size);
   margin: 0 0 0.6rem;
   padding-bottom: 0.4rem;
   padding-left: 0;
   padding-right: 0;
+}
+
+/* The first disclosure also prevents the H1 and H2 margins from collapsing. */
+.md-typeset > h1 + .section-disclosure {
+  margin-top: -0.96rem;
 }
 
 .md-typeset details.section-disclosure > summary.section-disclosure__summary {
@@ -165,19 +192,13 @@
   color: var(--md-primary-fg-color);
   cursor: pointer;
   display: flex;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.35;
   list-style: none;
   margin: 0;
-  padding: 0.6rem 2rem 0.6rem 0;
+  padding: 0 2rem 0 0;
 }
 
 .md-typeset .section-disclosure__title {
   color: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  margin: 0;
 }
 
 .section-disclosure__summary::-webkit-details-marker {
@@ -197,7 +218,8 @@
   padding: 0 0 0.5rem;
 }
 
-.section-disclosure__content > h3 {
+/* The disclosure wrapper prevents adjacent heading margins from collapsing. */
+.md-typeset .section-disclosure__content > h3:first-child {
   margin-top: 0;
 }
 

@@ -15,7 +15,7 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 
 ### Model Selection & Reasoning Effort
 
@@ -26,7 +26,7 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 
 ### Custom Instructions & Tooling Hygiene
 
@@ -37,7 +37,7 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 
 ### Session & Context Management
 
@@ -55,7 +55,7 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 
 ### Periodic Cost-Optimisation Review
 
@@ -66,4 +66,4 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)

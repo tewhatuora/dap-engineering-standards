@@ -15,8 +15,8 @@
 
 #### References
 
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
-- [Platform Alignment](../../principles/architecture-platform/platform-alignment.md)
+- [Observability](../../principles/reliability-operations/observability.md)
+- [Shared Platform](../../principles/architecture-platform/shared-platform.md)
 - [Technology Stack Register](../architecture-system-design/technology-stack-register.md)
 
 ### Telemetry Transport
@@ -26,11 +26,12 @@
 1. Telemetry **SHOULD** be shipped to the observability platform using an open, vendor-neutral protocol or collection mechanism, such as the [OpenTelemetry Protocol](https://opentelemetry.io/docs/specs/otlp/), rather than a proprietary alternative that would require re-instrumenting the service to switch observability platforms.
 2. A failure to ship telemetry to the observability platform **SHOULD** itself be recorded, such as through an internal metric, so a gap in telemetry is not mistaken for the absence of a problem.
 3. Telemetry held within the observability platform **SHOULD** remain exportable in a usable, non-proprietary format, so historical telemetry is not lost if that platform is replaced.
+4. The ability to export telemetry from the observability platform in a usable, non-proprietary format **SHOULD** be verified periodically.
 
 #### References
 
 - [Vendor Lock-in & Portability](../../principles/architecture-platform/vendor-lock-in-portability.md)
-- [Interoperability by Design](../../principles/architecture-platform/interoperability-by-design.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
 - [Telemetry Instrumentation](telemetry-instrumentation.md)
 
 ### Telemetry Retention
@@ -42,7 +43,7 @@
 
 #### References
 
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 - [Metrics, Monitoring & Alerting](metrics-monitoring-alerting.md)
 - [Structured Logging](structured-logging.md)
 

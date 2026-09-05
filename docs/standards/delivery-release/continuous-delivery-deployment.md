@@ -18,10 +18,10 @@
 
 #### References
 
-- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Automation](../../principles/engineering-practice/automation.md)
 - [Continuous Integration](continuous-integration.md)
 - [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
-- [Reuse Before Reinvention](../../principles/engineering-practice/reuse-before-reinvention.md)
+- [Reuse](../../principles/engineering-practice/reuse.md)
 - [Infrastructure as Code](../platform-infrastructure/infrastructure-as-code.md)
 - [Database Migration Tooling](../code-implementation/database-migration-tooling.md)
 
@@ -36,7 +36,7 @@
 #### References
 
 - [Application Security Testing](../quality-engineering/application-security-testing.md)
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Rollback Strategy](rollback-strategy.md)
 
 ### Deployment Readiness
@@ -85,8 +85,8 @@
 
 #### References
 
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Observability](../../principles/reliability-operations/observability.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
 
 ### Decoupling Deployment from Release
 

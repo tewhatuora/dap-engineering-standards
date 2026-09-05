@@ -18,7 +18,7 @@
 #### References
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Observability](../../principles/reliability-operations/observability.md)
 - [Feature Flagging](feature-flagging.md)
 
 ### Rollback Versus Forward-Fix

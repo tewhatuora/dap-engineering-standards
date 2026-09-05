@@ -1,26 +1,27 @@
 # Reliability & Operations
 
 ## Overview
-Production systems must remain understandable and effective under load and failure. This section defines the principles for resilience, performance, scalability, and observability.
+
+Reliable services remain effective and understandable as demand changes and failures occur. These principles make failure handling, performance and capacity, and operational visibility explicit design concerns that are validated before production conditions expose gaps.
 
 Choose a principle below to read its full reasoning.
 
-## Directory
+## Principles
 
-#### Reliability & Resilience
+### Reliability & Resilience
 
-> Design every service assuming failure, and contain its impact before it spreads.
+Services anticipate failure and overload, contain their impact, preserve supportable functionality, and maintain tested paths to recovery.
 
 [Read more](reliability-resilience.md).
 
-#### Performance & Scalability by Design
+### Performance & Scalability
 
-> Define a service's performance and capacity targets at design time, and validate them through testing.
+Services make performance, capacity, and scaling explicit design decisions and validate them against realistic demand as they evolve.
 
-[Read more](performance-scalability-by-design.md).
+[Read more](performance-scalability.md).
 
-#### Observability by Default
+### Observability
 
-> Instrument a service with enough logging, metrics, and tracing to explain its behaviour when needed.
+Services build in consistent, correlatable, and proportionate telemetry that explains behaviour, exposes operational impact, and supports incident response.
 
-[Read more](observability-by-default.md).
+[Read more](observability.md).

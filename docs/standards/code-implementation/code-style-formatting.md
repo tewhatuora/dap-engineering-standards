@@ -45,7 +45,7 @@
 #### References
 
 - [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
-- [AI-Assisted Engineering Accountability](../../principles/engineering-practice/ai-assisted-engineering-accountability.md)
+- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
 - [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ### Code Comments & Inline Documentation
@@ -77,9 +77,9 @@
 
 #### References
 
-- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Automation](../../principles/engineering-practice/automation.md)
 - [Linting & Style Enforcement](linting-style-enforcement.md)
-- [AI-Assisted Engineering Accountability](../../principles/engineering-practice/ai-assisted-engineering-accountability.md)
+- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
 
 ### Formatting in Code Review
 

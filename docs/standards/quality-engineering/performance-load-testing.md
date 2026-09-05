@@ -17,7 +17,7 @@
 
 #### References
 
-- [Testability by Design](../../principles/quality/testability-by-design.md)
+- [Testability](../../principles/quality/testability.md)
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
 ### Triggers & Recurrence
@@ -31,7 +31,7 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
 - [Feature Flagging](../delivery-release/feature-flagging.md)
 
 ### Performance & Capacity Targets
@@ -43,7 +43,7 @@
 
 #### References
 
-- [Performance & Scalability by Design](../../principles/reliability-operations/performance-scalability-by-design.md)
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
 
 ### Test Environment & Data Representativeness
 
@@ -57,7 +57,7 @@
 
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 - [Test Data Management](test-data-management.md)
-- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
+- [Data Privacy](../../principles/security-privacy/data-privacy.md)
 
 ### Execution & Dependencies
 
@@ -73,7 +73,7 @@
 
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 - [Integration Testing](integration-testing.md)
-- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Automation](../../principles/engineering-practice/automation.md)
 
 ### Observability & Diagnostics
 
@@ -85,7 +85,7 @@
 
 #### References
 
-- [Observability by Default](../../principles/reliability-operations/observability-by-default.md)
+- [Observability](../../principles/reliability-operations/observability.md)
 - [Metrics, Monitoring & Alerting](../operations-observability/metrics-monitoring-alerting.md)
 
 ### Result Governance
@@ -101,4 +101,4 @@
 #### References
 
 - [Runbooks](../operations-observability/runbooks.md)
-- [Fast Feedback by Design](../../principles/engineering-practice/fast-feedback-by-design.md)
+- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)

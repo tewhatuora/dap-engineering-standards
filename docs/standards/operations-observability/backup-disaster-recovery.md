@@ -20,7 +20,7 @@
 #### References
 
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
 - [Data Residency & Sovereignty](../../principles/data/data-residency-sovereignty.md)
 
 ### Backup Scope & Coverage
@@ -43,9 +43,9 @@
 #### References
 
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
-- [Cost Awareness by Design](../../principles/cost-sustainability/cost-awareness-by-design.md)
-- [Sustainability by Design](../../principles/cost-sustainability/sustainability-by-design.md)
-- [Privacy by Design](../../principles/security-privacy/privacy-by-design.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+- [Sustainability](../../principles/cost-sustainability/sustainability.md)
+- [Data Privacy](../../principles/security-privacy/data-privacy.md)
 
 ### Backup Reliability
 
@@ -56,7 +56,7 @@
 
 #### References
 
-- [Automation First](../../principles/engineering-practice/automation-first.md)
+- [Automation](../../principles/engineering-practice/automation.md)
 - [Metrics, Monitoring & Alerting](metrics-monitoring-alerting.md)
 
 ### Backup Isolation & Redundancy
@@ -70,7 +70,7 @@
 #### References
 
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
-- [Security by Design](../../principles/security-privacy/security-by-design.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
 ### Infrastructure Provisioning for Recovery
 
