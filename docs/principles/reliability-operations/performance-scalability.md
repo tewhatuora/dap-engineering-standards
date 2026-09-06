@@ -85,9 +85,7 @@ Performance and capacity targets are validated before production, as a service e
 
 A target alone does not demonstrate that a service can meet it under expected demand. Testing before production provides evidence against a representative workload while there is still an opportunity to address a shortfall without affecting users.
 
-Repeating testing as the service evolves detects regressions caused by changes to the service and its operating context.
-
-Performance and scaling assumptions depend on an expected level and pattern of demand. Growth beyond that basis, sustained degradation, or movement towards a known limit indicates when capacity or architecture needs reassessment before the limit causes a failure.
+Repeating testing as the service evolves detects regressions caused by changes to the service and its operating context. Performance and scaling assumptions depend on an expected level and pattern of demand, so growth beyond that basis, sustained degradation, or movement towards a known limit indicates when capacity or architecture needs reassessment.
 
 ### Implemented By These Standards
 

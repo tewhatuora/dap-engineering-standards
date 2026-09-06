@@ -1,6 +1,7 @@
 # Engineering Practice
 
 ## Overview
+
 Engineering practices determine how readily systems can be understood, changed, and operated. This section values proportionate design, reuse, code-defined systems, automation, fast feedback, and accountability for engineering work.
 
 Choose a principle below to read its full reasoning.
@@ -33,12 +34,12 @@ Automate repeatable work through maintained code while preserving human judgemen
 
 ### Fast Feedback
 
-Surface clear, reliable feedback at the earliest effective stage and improve feedback loops that delay or obscure action.
+Feedback is clear, reliable, and available at the earliest effective stage.
 
 [Read more](fast-feedback.md).
 
 ### AI-Assisted Engineering
 
-The directing engineer remains accountable for AI-assisted work, which requires the same standards, understanding, and care as other engineering work.
+Engineers remain accountable for AI-assisted work and apply the same standards as other engineering work.
 
 [Read more](ai-assisted-engineering.md).

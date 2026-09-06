@@ -31,9 +31,7 @@ Where multiple locations or cloud providers equally meet applicable requirements
 
 ### Reasoning
 
-The carbon intensity of the energy supplying a workload varies by location and provider. When technical, legal, data residency, and commercial requirements do not distinguish between viable options, carbon intensity provides a basis for selecting the option with lower environmental impact.
-
-Comparable reporting on energy sources and operational emissions provides evidence for this decision when functional and commercial criteria do not distinguish the options.
+The carbon intensity of the energy supplying a workload varies by location and provider. When technical, legal, data residency, and commercial requirements do not distinguish between viable options, comparable reporting on energy sources and operational emissions provides a basis for selecting the option with lower environmental impact.
 
 ### Implemented By These Standards
 
@@ -66,9 +64,7 @@ A service's energy consumption or estimated carbon footprint is measurable and a
 
 ### Reasoning
 
-Attribution connects environmental impact to the service design and operational decisions that produce it. Without that connection, a team cannot distinguish its service's impact from aggregate infrastructure consumption or assess how a change affects it.
-
-Keeping environmental measures alongside operational information allows resource and design decisions to account for their impact.
+Attribution connects environmental impact to the service design and operational decisions that produce it. Keeping environmental measures alongside operational information allows a team to distinguish its service's impact from aggregate infrastructure consumption and assess how resource and design changes affect it.
 
 ### Implemented By These Standards
 
@@ -82,9 +78,7 @@ Sustainability assumptions are revisited as usage, scale, technology, or provide
 
 ### Reasoning
 
-Resource consumption and environmental impact change as a service and its available technology evolve. An assumption that was valid during design can cease to reflect actual usage or the available options.
-
-A material, sustained increase in resource consumption or environmental impact indicates that the design no longer behaves as assumed and needs reassessment against current usage.
+Resource consumption and environmental impact change as a service and its available technology evolve, so an assumption made during design can cease to reflect actual usage or the available options. A material, sustained increase indicates that the design no longer behaves as assumed and needs reassessment against current usage.
 
 ### Implemented By These Standards
 

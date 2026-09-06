@@ -74,9 +74,7 @@ An interface remains independent of any single consumer's implementation and is 
 
 ### Reasoning
 
-Coupling an interface to one consumer's internal implementation makes that consumer's design a constraint on every later integration. A consumer-independent contract allows additional consumers to use the interface without inheriting implementation details from the first integration.
-
-Repeated bilateral integrations create separate contracts and paths for substantially the same exchange. A shared interface reduces the number of distinct point-to-point integrations requiring maintenance.
+Coupling an interface to one consumer's internal implementation makes that design a constraint on every later integration. A shared, consumer-independent contract allows additional consumers to integrate without inheriting those details and avoids maintaining separate point-to-point paths for substantially the same exchange.
 
 ### Implemented By These Standards
 
@@ -91,9 +89,7 @@ A published interface or data contract preserves compatibility for existing cons
 
 ### Reasoning
 
-Existing consumers depend on a published interface's established contract. Preserving compatibility allows providers and consumers to evolve independently; when a break is unavoidable, deliberate versioning and a communicated notice period give consumers a defined transition path.
-
-Additive changes are preferred because they extend an interface without forcing existing consumers to adopt a new version.
+Existing consumers depend on a published interface's established contract. Preserving compatibility allows providers and consumers to evolve independently, with additive changes avoiding forced version adoption and deliberate versioning and notice providing a transition path when a breaking change is unavoidable.
 
 ### Implemented By These Standards
 

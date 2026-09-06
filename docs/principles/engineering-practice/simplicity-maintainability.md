@@ -96,9 +96,7 @@ Unnecessary complexity and technical debt are identified as code changes, tracke
 
 Complexity is cheaper to address when it is introduced than after other code depends on it. Review provides contextual judgement about whether a change is more complex than its requirement warrants, while static analysis makes measurable trends such as complexity and duplication visible as the code evolves.
 
-Unrecorded complexity becomes harder to distinguish from intentional design and can accumulate until routine changes become costly or risky. Recording debt when it is identified keeps its effect visible and allows remediation to be planned before maintainability is materially impaired.
-
-Refactoring as part of ongoing engineering work prevents remediation from depending on a separate, indefinite future effort.
+Unrecorded complexity can accumulate until routine changes become costly or risky. Recording debt keeps its effect visible, while ongoing refactoring prevents remediation from depending on a separate, indefinite future effort.
 
 ### Implemented By These Standards
 

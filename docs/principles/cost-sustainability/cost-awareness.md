@@ -8,9 +8,7 @@ Design and technology choices compare viable options by total lifecycle cost and
 
 ### Reasoning
 
-Design and technology decisions establish recurring costs that can become difficult to change after implementation. Considering cost when these decisions are made allows lower-cost alternatives to be assessed before the design creates a long-term commitment.
-
-A higher recurring cost can be justified when it delivers corresponding value. Comparing that value with viable alternatives prevents cost from being accepted without the same scrutiny applied to reliability, performance, and security.
+Design and technology decisions establish recurring costs that can become difficult to change after implementation. Comparing lifecycle cost and value before commitment allows lower-cost alternatives to be assessed, establishes whether a higher recurring cost is justified, and gives cost the same scrutiny as reliability, performance, and security.
 
 Building a capability that an existing solution already provides creates development and maintenance work that may not deliver distinct value. Comparing existing and custom solutions across their full lifecycle establishes whether custom development is justified and prevents upfront price alone from determining the choice.
 
@@ -59,9 +57,7 @@ A service is designed from the outset so its cost can be measured and attributed
 
 ### Reasoning
 
-Aggregate spend does not show which service produced a cost or which team can act on it. Attribution connects spend to the design and operational decisions that control it.
-
-Designing for measurement from the outset provides the information needed to detect a change in cost and assign it to the responsible team. Without that information, the team cannot assess whether the cost remains justified by the service's usage and value.
+Aggregate spend does not show which service produced a cost or which team can act on it. Designing for measurement from the outset attributes spend to the decisions that control it, reveals changes in cost, and allows the responsible team to assess whether the cost remains justified by the service's usage and value.
 
 ### Implemented By These Standards
 

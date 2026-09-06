@@ -86,9 +86,7 @@ Automation performs repeatable mechanical checks, while decisions that require c
 
 Novel design tradeoffs and unanticipated exceptions require context and judgement that a repeatable automated process cannot supply. Automation frees engineering capacity for these decisions by taking on repetitive execution.
 
-Automated delivery pipeline gates apply rule-based checks consistently and stop known failures from progressing.
-
-Passing gates do not replace human code review and approval. Review effort remains focused on the judgement calls that automated checks cannot make.
+Automated delivery pipeline gates apply rule-based checks consistently and stop known failures from progressing. Passing gates do not replace human code review and approval, which remains focused on the judgement calls that automated checks cannot make.
 
 ### Implemented By These Standards
 

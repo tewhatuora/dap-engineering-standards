@@ -10,7 +10,7 @@ Choose a principle below to read its full reasoning.
 
 ### Shared Platform
 
-Shared platforms are the default, and alternatives require deliberate evaluation and justification.
+New services use the shared platform by default, with alternatives limited to needs the platform cannot meet.
 
 [Read more](shared-platform.md).
 
@@ -22,7 +22,7 @@ Technology choices account for lock-in and preserve practical options to change 
 
 ### Interoperability
 
-Services exchange data and functionality through explicit, standards-based contracts that can evolve without breaking consumers.
+Services integrate through explicit, reusable contracts that preserve shared meaning and evolve without breaking consumers.
 
 [Read more](interoperability.md).
 

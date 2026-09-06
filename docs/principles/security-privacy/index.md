@@ -10,7 +10,7 @@ Choose a principle below to read its full reasoning.
 
 ### Security Engineering
 
-Security shapes design and engineering decisions throughout a system's lifecycle.
+Security controls limit exposure and remain effective throughout a system's lifecycle.
 
 [Read more](security-engineering.md).
 

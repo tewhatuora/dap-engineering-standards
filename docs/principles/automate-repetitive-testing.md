@@ -6,17 +6,12 @@
 
 ## Reasoning
 
-Regression testing is the most repeated and least varied work in delivery. Done by
-hand its cost scales with the size of the system rather than the size of the change,
-so the safest release becomes the one nobody can afford to make.
+Manual regression testing scales with the size of the system rather than the size of the
+change, making releases increasingly costly. Repetitive execution also weakens attention
+and can allow missed failures to pass silently.
 
-A person re-running a manual test script also checks worse than a machine does. Attention
-degrades across repetition, and the failure mode is silent: the step is marked passed
-because it passed last time.
-
-The value a person adds is judgement — noticing that something is odd, asking what
-else this change might have touched. That value is spent, not gained, while they are
-working through prescribed steps.
+Human judgement adds most value in exploratory work that evaluates unexpected behaviour
+and wider effects rather than in prescribed repetition.
 
 ## Commitments
 

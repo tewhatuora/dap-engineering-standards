@@ -8,9 +8,7 @@ Lock-in is identified and weighed during technology selection, accepted only whe
 
 ### Reasoning
 
-Lock-in can increase the cost, time, and disruption involved in changing a technology or provider. Evaluating it before adoption makes that constraint part of the decision while alternatives remain available.
-
-Proprietary coupling is justified only when a capability's benefit outweighs the resulting loss of choice and replacement effort. Defaults and familiarity do not establish that benefit.
+Lock-in can increase the cost, time, and disruption involved in changing a technology or provider. Evaluating it before adoption establishes whether a capability's benefit outweighs the resulting loss of choice and replacement effort while alternatives remain available. Defaults and familiarity do not establish that benefit.
 
 A benefit that once justified lock-in can diminish as alternatives improve or a vendor's commercial terms and ability to provide the capability change. Reassessment identifies when the original trade-off no longer supports continued coupling.
 
@@ -27,9 +25,7 @@ The exit path for a costly-to-reverse commitment is assessed before adoption, an
 
 ### Reasoning
 
-The cost, time, and disruption of leaving a commitment can determine whether a later change remains practical. Considering the exit path before committing exposes those constraints while other options remain available.
-
-A critical dependency without a practical exit remains a constraint on future change and a deliberate risk to the system.
+The cost, time, and disruption of leaving a commitment can determine whether a later change remains practical. Considering the exit path before committing exposes those constraints while other options remain available, and identifies a critical dependency without a practical exit as a deliberate risk to future change.
 
 ### Implemented By These Standards
 
@@ -43,9 +39,7 @@ An abstraction shields a system from a vendor-specific dependency where it can d
 
 ### Reasoning
 
-Concentrating vendor-specific integration behind a defined interface or adapter limits the parts of a system requiring change when a dependency is replaced.
-
-An abstraction also carries implementation and maintenance costs. It improves portability only when those costs remain proportionate to the lock-in risk it reduces.
+Concentrating vendor-specific integration behind a defined interface or adapter limits the parts of a system requiring change when a dependency is replaced. The abstraction improves portability only when its implementation and maintenance costs remain proportionate to the lock-in risk it reduces.
 
 ### Implemented By These Standards
 
@@ -61,9 +55,7 @@ Data held by a vendor or platform remains extractable in a usable, non-proprieta
 
 ### Reasoning
 
-Replacing a vendor or platform can make retained data inaccessible when its export depends on a proprietary format or an unavailable mechanism. A usable, non-proprietary export preserves that data independently of the system that holds it.
-
-Export capabilities and formats can change. Periodic verification detects a loss of portability before an export is needed for a migration.
+Replacing a vendor or platform can make retained data inaccessible when its export depends on a proprietary format or an unavailable mechanism. A usable, non-proprietary export preserves that data independently of the system that holds it, while periodic verification detects a loss of portability before migration requires an export.
 
 ### Implemented By These Standards
 

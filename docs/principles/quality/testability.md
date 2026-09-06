@@ -22,9 +22,7 @@ A component's external dependencies, test data, and execution environment can be
 
 ### Reasoning
 
-Control over external dependencies and execution conditions makes failures attributable to the component's behaviour. Boundaries that cannot be controlled make test results depend on conditions outside the test.
-
-Controlled test data and isolation from production allow repeatable verification without exposing production data or affecting live operation. Avoiding shared mutable state also prevents one test from changing the conditions or outcome of another.
+Control over external dependencies, execution conditions, and test data makes failures attributable to the component's behaviour and verification repeatable. Isolation from production avoids exposing production data or affecting live operation, while isolation from shared mutable state prevents tests from changing one another's conditions or outcomes.
 
 ### Implemented By These Standards
 
