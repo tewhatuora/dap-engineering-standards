@@ -2,20 +2,6 @@ const ARTICLE_SELECTOR = ".md-content__inner.md-typeset";
 const DISCLOSURE_SELECTOR = "details.section-disclosure";
 
 function findSectionHeadings(article) {
-  const legacyContainer = article.querySelector(":scope > h2#principles");
-
-  if (legacyContainer) {
-    const headings = [];
-    let element = legacyContainer.nextElementSibling;
-
-    while (element && element.tagName !== "H2") {
-      if (element.tagName === "H3") headings.push(element);
-      element = element.nextElementSibling;
-    }
-
-    return headings;
-  }
-
   const headings = Array.from(article.querySelectorAll(":scope > h2")).filter((heading) => {
     let hasSummary = false;
     let hasReasoning = false;
