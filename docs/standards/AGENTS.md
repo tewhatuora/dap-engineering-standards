@@ -58,12 +58,12 @@ Each numbered item contains one obligation, is verifiable as written, and serves
 
 Scope must be readable from the grouping's Summary and the named subject of each obligation. An exclusion belongs with the obligation it limits.
 
-
 ### Exceptions
 
 Omit `Exceptions` by default. Include it only where a genuine exception exists that is not already expressed by the Summary or standards.
 
 The latitude carried by **SHOULD** is not a separate exception. A boundary or condition already stated by an obligation is also not a separate exception.
+
 ## Standard Tags
 
 Standards are cited by tag, not by position. Every numbered standard starts with a tag in this form:
@@ -153,14 +153,18 @@ Each standards category has an `index.md` using this shape:
 
 <Why the category exists and what it covers.>
 
-## Directory
+Choose a standard below to read it in full.
 
-#### <Page Title>
+## Standards
 
-<The page tagline, copied verbatim.>
+### <Page Title>
+
+<The linked page's tagline, copied verbatim.>
 
 [Read more](<page>.md).
 ```
+
+The root `docs/standards/index.md` uses the same structure with `# Standards`, `## Categories`, and a sentence directing the reader to choose a category.
 
 Standards index entries do not carry tags because each page contains several tagged standards. A new category needs its own index and a `nav:` block in `mkdocs.yml`.
 

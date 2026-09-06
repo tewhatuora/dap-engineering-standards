@@ -1,9 +1,9 @@
 # Cost & Sustainability
 
-## Summary
+## Overview
 
 _To be defined._
 
-## Directory
+## Standards
 
 _To be defined._

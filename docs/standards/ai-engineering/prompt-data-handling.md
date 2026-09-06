@@ -1,52 +1,78 @@
 # Prompt Data Handling
 
-## Summary
+Treat every prompt as a data disclosure and include only data that the tool is authorised to receive and the task requires.
 
-> Treat every prompt as a data disclosure; never include secrets, patient data, or more than a task needs.
+## Prohibited & Restricted Data
 
-## Standards
+### Summary
 
-### Prohibited & Restricted Data
+Personal information enters an AI prompt only when the tool is explicitly authorised for that data, and secrets never enter a prompt.
 
-> Patient data and secrets never go into an AI prompt unless the tool is explicitly authorised for that data.
+### Standards
 
-1. Patient data, health information, and other personal information (PII) **MUST NOT** be submitted to an AI tool unless the tool is explicitly authorised for that data classification and use case.
-2. Secrets, credentials, API keys, access tokens, and cryptographic material **MUST NOT** be submitted to an AI tool under any circumstances.
+1. `std-ai-prohibited-restricted-data-01` Patient data, health information, and other personal information (PII) **MUST NOT** be submitted to an AI tool unless the tool is explicitly authorised for that data classification and use case.
+2. `std-ai-prohibited-restricted-data-02` Secrets, credentials, API keys, access tokens, and cryptographic material **MUST NOT** be submitted to an AI tool under any circumstances.
 
-#### References
+### Implements These Principles
 
-- [Approved AI Tooling](approved-ai-tooling.md)
+- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+- [Data Privacy](../../principles/security-privacy/data-privacy.md)
 
-### Data Minimisation
+## Data Minimisation
 
-> A prompt includes only the minimum data a task needs, not a whole file, dataset, or repository.
+### Summary
 
-1. Prompts **MUST** include only the minimum data reasonably necessary for the task.
-2. Whole files, datasets, or repositories **SHOULD NOT** be submitted where a smaller, relevant excerpt is sufficient.
-3. Unrelated sensitive content in the surrounding context **MUST** be removed or redacted before submission.
+A prompt containing personal or health data includes only the minimum data required for the task.
 
-### Vendor Data Use & Retention
+### Standards
 
-> A vendor's use and retention of submitted data is governed by contract, confirmed before a tool is approved.
+1. `std-ai-data-minimisation-01` Prompts containing personal or health data **MUST** include only the minimum data reasonably necessary for the task.
+2. `std-ai-data-minimisation-02` Whole files, datasets, or repositories **SHOULD NOT** be submitted where a smaller, relevant excerpt is sufficient.
+3. `std-ai-data-minimisation-03` Unrelated sensitive content in the surrounding context **MUST** be removed or redacted before submission.
 
-1. Data submitted to an approved AI tool **MUST NOT** be used by the vendor to train shared or public models, or made available to parties outside the organisation's agreement with the vendor.
-2. Data retention, storage location, and deletion for prompt content **MUST** be governed by the organisation's contractual terms with the vendor.
-3. Contractual confirmation of data use and retention terms **MUST** be in place before a tool is approved for use.
+### Related Standards
 
-### De-identification & Synthetic Data
+- [AI Tooling Cost Management](ai-tooling-cost-management.md)
 
-> Health or personal data is de-identified or synthetic before it reaches a prompt, wherever feasible.
+### Implements These Principles
 
-1. Where health or personal data is relevant to a development task, it **MUST** be de-identified, synthetic, or masked before inclusion in a prompt, wherever feasible.
-2. Synthetic or de-identified data **MUST** be preferred over production data for AI-assisted testing, debugging, and documentation.
+- [Data Privacy](../../principles/security-privacy/data-privacy.md)
 
-#### References
+## De-identification & Synthetic Data
+
+### Summary
+
+Health or personal data is de-identified or synthetic before it reaches a prompt, wherever feasible.
+
+### Standards
+
+1. `std-ai-de-identification-synthetic-data-01` Where health or personal data is relevant to a development task, it **SHOULD** be de-identified, synthetic, or masked before inclusion in a prompt.
+2. `std-ai-de-identification-synthetic-data-02` Synthetic or de-identified data **SHOULD** be preferred over production data for AI-assisted testing, debugging, and documentation.
+
+### Related Standards
 
 - [Test Data Management](../quality-engineering/test-data-management.md)
 
-### Incident Handling
+### Implements These Principles
 
-> A suspected prompt data exposure is reported and handled as a security incident before it is remediated.
+- [Data Privacy](../../principles/security-privacy/data-privacy.md)
 
-1. A suspected or confirmed submission of prohibited data to an AI tool **MUST** be reported and handled as a security incident.
-2. Personnel **MUST NOT** remediate a suspected prompt data exposure before it has been reported as a security incident.
+## Vendor Data Use & Retention
+
+### Summary
+
+A vendor's use and retention of submitted data is governed by contractual terms.
+
+### Standards
+
+1. `std-ai-vendor-data-use-retention-01` Data submitted to an approved AI tool **MUST NOT** be used by the vendor to train shared or public models.
+2. `std-ai-vendor-data-use-retention-02` Data submitted to an approved AI tool **MUST NOT** be made available to parties outside the organisation's agreement with the vendor.
+3. `std-ai-vendor-data-use-retention-03` Data retention, storage location, and deletion for prompt content **MUST** be governed by the organisation's contractual terms with the vendor.
+
+### Related Standards
+
+- [Approved AI Tooling](approved-ai-tooling.md)
+
+### Implements These Principles
+
+- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
