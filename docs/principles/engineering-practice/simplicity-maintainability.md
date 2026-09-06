@@ -84,6 +84,7 @@ Unused code and dependencies continue to impose comprehension, testing, and secu
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 - [Configuration Management](../../standards/code-implementation/configuration-management.md)
 - [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
+- [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 
 ## Maintainability and Technical Debt

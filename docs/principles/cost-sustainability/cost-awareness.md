@@ -77,7 +77,6 @@ A cost assumption made during design can cease to reflect a service once its usa
 ### Implemented By These Standards
 
 - [AI Tooling Cost Management](../../standards/ai-engineering/ai-tooling-cost-management.md)
-- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
 - [Technology Stack Governance](../../standards/architecture-system-design/technology-stack-governance.md)
 - [Resource Efficiency & Optimisation](../../standards/cost-sustainability/resource-efficiency-optimisation.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)

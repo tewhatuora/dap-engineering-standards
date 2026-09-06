@@ -14,14 +14,17 @@ Application and service code, infrastructure, configuration, delivery pipelines,
 
 ### Implemented By These Standards
 
+- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
+- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
 - [Configuration Management](../../standards/code-implementation/configuration-management.md)
 - [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
+- [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
 - [Version Control](../../standards/code-implementation/version-control.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
-- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
 
 ## Reproducible State
 
@@ -37,6 +40,11 @@ Undocumented post-creation steps leave part of the functional state outside the 
 
 ### Implemented By These Standards
 
+- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
+- [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
+- [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
+- [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
 - [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)

@@ -73,6 +73,7 @@ Prioritising critical requests and isolating consumers prevents lower-priority o
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
+- [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 
 ## Graceful Degradation
@@ -88,7 +89,6 @@ Independent failure of non-critical functionality preserves the service outcomes
 ### Implemented By These Standards
 
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
-- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 
 ## Recovery Objectives & Testing
 
@@ -104,7 +104,6 @@ Recovery capability depends on infrastructure, data, dependencies, and procedure
 
 ### Implemented By These Standards
 
-- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 - [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)

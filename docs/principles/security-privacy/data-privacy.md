@@ -13,7 +13,6 @@ Data collected or retained for an undefined future use creates exposure without 
 ### Implemented By These Standards
 
 - [Prompt Data Handling](../../standards/ai-engineering/prompt-data-handling.md)
-- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Structured Logging](../../standards/operations-observability/structured-logging.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 

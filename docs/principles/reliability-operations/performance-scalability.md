@@ -12,8 +12,8 @@ Expected load and the approach used to meet it shape a service's architecture. A
 
 ### Implemented By These Standards
 
-- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
+- [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 
 ## Performance & Capacity Requirements
 

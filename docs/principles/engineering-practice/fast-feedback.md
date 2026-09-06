@@ -102,4 +102,5 @@ Measuring feedback loop latency makes a sustained increase visible. Treating the
 
 ### Implemented By These Standards
 
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)

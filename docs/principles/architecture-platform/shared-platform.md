@@ -12,7 +12,7 @@ Building on the shared platform from inception avoids the migration work and ope
 
 ### Implemented By These Standards
 
-- [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
+- [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 
 ## Justified Platform Alternatives
 
@@ -29,4 +29,3 @@ An alternative creates a separate technology and operating model with additional
 ### Implemented By These Standards
 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
-- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)

@@ -13,6 +13,7 @@ Verifying outcomes through the contract available to a consumer keeps tests inde
 ### Implemented By These Standards
 
 - [API Design](../../standards/architecture-system-design/api-design.md)
+- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
 
 ## Controllable Test Boundaries
 

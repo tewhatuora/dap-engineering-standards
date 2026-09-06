@@ -47,6 +47,7 @@ AI tools differ in how they protect and use organisational code and data. Suitab
 
 - [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 - [Approved AI Tooling](../../standards/ai-engineering/approved-ai-tooling.md)
+- [Prompt Data Handling](../../standards/ai-engineering/prompt-data-handling.md)
 
 ## Intellectual Property
 
@@ -75,3 +76,4 @@ Submitting confidential or proprietary material to an AI tool can expose it to p
 ### Implemented By These Standards
 
 - [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
+- [Prompt Data Handling](../../standards/ai-engineering/prompt-data-handling.md)

@@ -103,4 +103,5 @@ Automated delivery pipeline gates apply rule-based checks consistently and stop 
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
 - [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Regression Test Automation](../../standards/quality-engineering/regression-test-automation.md)
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
