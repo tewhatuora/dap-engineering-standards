@@ -18,6 +18,7 @@
 #### References
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 - [Observability](../../principles/reliability-operations/observability.md)
 - [Feature Flagging](feature-flagging.md)
 
@@ -43,6 +44,7 @@
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 
 ### Data & Schema Compatibility
 

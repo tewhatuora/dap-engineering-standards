@@ -19,7 +19,7 @@
 #### References
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
-- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 - [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
 - [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
 

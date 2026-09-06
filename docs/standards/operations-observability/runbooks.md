@@ -70,6 +70,7 @@
 #### References
 
 - [Observability](../../principles/reliability-operations/observability.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 - [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)
 
 ### Runbook Automation

@@ -14,6 +14,10 @@
 2. A workload **MUST NOT** proceed to implementation before its runtime model is selected and justified against the workload's own characteristics.
 3. A runtime model selected for one workload **MUST NOT** be assumed suitable for a different workload without independently assessing that workload's characteristics.
 
+#### References
+
+- [Shared Platform](../../principles/architecture-platform/shared-platform.md)
+
 ### Default Packaging Format
 
 > A service is packaged as a container image by default, for a consistent, portable artifact.
@@ -87,6 +91,10 @@
 3. Where private cloud deployment is required, a workload **MUST** use the organisation's approved private cloud platform.
 4. Micro cloud deployment, meaning small-scale infrastructure deployed close to a workload's point of use, **MUST** only be used where a workload has a genuine requirement for local execution.
 5. Where a private or micro cloud deployment lacks a managed service, serverless capability, or scaling behaviour a workload requires, that gap **MUST** be identified and either addressed through a deliberate hybrid architecture that offloads the requirement to the public cloud, or accepted as a bounded limitation of the deployment.
+
+#### References
+
+- [Shared Platform](../../principles/architecture-platform/shared-platform.md)
 
 ### Data Residency & Sovereignty
 

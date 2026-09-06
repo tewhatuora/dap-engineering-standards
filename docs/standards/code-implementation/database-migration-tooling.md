@@ -94,7 +94,7 @@
 
 - [Rollback Strategy](../delivery-release/rollback-strategy.md)
 - [Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)
-- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 
 ### Locking & Performance Impact
 

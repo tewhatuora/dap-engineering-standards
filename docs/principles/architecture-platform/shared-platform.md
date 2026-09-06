@@ -1,14 +1,16 @@
 # Shared Platform
 
-## Default Platform Adoption
+## Workload-Specific Runtime Selection
 
 ### Summary
 
-New services begin on the organisation's shared platform by default.
+A workload's runtime model and deployment location are explicit design decisions based on that workload's requirements.
 
 ### Reasoning
 
-Building on the shared platform from inception avoids the migration work and operational risk created by starting with independent equivalents while giving services a consistent environment and infrastructure delivery model.
+Runtime and deployment choices determine the capabilities, constraints, operational model, and provider coupling a workload inherits. Selecting them during design exposes whether those characteristics fit the workload before implementation depends on them.
+
+A choice suitable for one workload does not establish that it suits another. Assessing each workload independently prevents a shared default from replacing consideration of its actual needs.
 
 ### Implemented By These Standards
 

@@ -137,6 +137,7 @@
 
 - [Service & Domain Design](../architecture-system-design/service-domain-design.md)
 - [Event-Driven Messaging](../architecture-system-design/event-driven-messaging.md)
+- [Distributed Consistency](../../principles/architecture-platform/distributed-consistency.md)
 
 ### Read Efficiency & Replica Awareness
 

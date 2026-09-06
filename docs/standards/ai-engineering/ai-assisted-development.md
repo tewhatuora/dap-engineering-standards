@@ -52,6 +52,10 @@
 1. AI-generated code **MUST** be subject to heightened scrutiny in security-critical, safety-critical, or regulatory-critical contexts, including authentication, authorisation, cryptography, and clinical or patient-safety logic.
 2. Teams **SHOULD** restrict unsupervised use of AI-generated implementations in these contexts; where used, the output **MUST** undergo additional review by personnel with relevant domain expertise.
 
+#### References
+
+- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+
 ### Intellectual Property & Licensing Risk
 
 > Check AI-generated code for copied third-party material, and keep proprietary code out of a tool's reuse rights.

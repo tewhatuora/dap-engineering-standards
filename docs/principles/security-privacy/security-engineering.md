@@ -23,6 +23,22 @@ Access beyond a service's or identity's current function increases what an error
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 - [Identity & Access Management](../../standards/security-identity/identity-access-management.md)
 
+## Elevated Access
+
+### Summary
+
+Elevated production access is granted separately for a specific need, never held as standing access, and remains attributable to the individual using it.
+
+### Reasoning
+
+Administrative and production data access can cause greater impact than routine operational access. Separating it from standing access limits how long that capability exists and prevents routine credentials from silently carrying exceptional authority.
+
+Individual attribution preserves the evidence needed to understand and review actions taken with elevated access.
+
+### Implemented By These Standards
+
+- [Identity & Access Management](../../standards/security-identity/identity-access-management.md)
+
 ## Secure Defaults
 
 ### Summary

@@ -18,6 +18,7 @@
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
 - [Feature Flagging](feature-flagging.md)
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 
 ### Release Cadence
 
@@ -80,3 +81,4 @@
 - [Schema Design & Evolution](../architecture-system-design/schema-design-evolution.md)
 - [Rollback Strategy](rollback-strategy.md)
 - [Feature Flagging](feature-flagging.md)
+- [Domain-Aligned Services](../../principles/architecture-platform/domain-aligned-services.md)

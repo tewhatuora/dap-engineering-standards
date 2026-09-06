@@ -14,6 +14,22 @@ A design cannot account for interfaces and data exchanges that remain unidentifi
 
 - [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 
+## Communication Mode Selection
+
+### Summary
+
+An integration deliberately chooses synchronous or asynchronous communication according to its coupling, latency, and consistency needs.
+
+### Reasoning
+
+Communication mode determines whether a caller waits for an immediate result and how strongly the participants depend on one another's availability. Making the choice during design exposes those consequences before they become an accidental property of the implementation.
+
+Synchronous communication suits an interaction that requires an immediate response. Asynchronous communication reduces temporal coupling where work can proceed independently or the same information must reach several consumers.
+
+### Implemented By These Standards
+
+- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
+
 ## Interface Contracts
 
 ### Summary
@@ -30,6 +46,22 @@ An explicit interface contract allows consumers to integrate without depending o
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
 - [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
+
+## Delivery and Ordering Guarantees
+
+### Summary
+
+An asynchronous consumer depends only on delivery and ordering guarantees explicitly provided by its channel.
+
+### Reasoning
+
+Delivery and ordering behaviour affects whether a consumer can receive duplicates, miss a message, or observe messages in a different sequence. An undocumented assumption about that behaviour can produce incorrect state even while the channel operates as designed.
+
+Explicit guarantees allow consumers to implement the duplicate handling, ordering scope, and retention behaviour their channel requires without relying on stronger behaviour than it provides.
+
+### Implemented By These Standards
+
+- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 
 ## Open Standards
 

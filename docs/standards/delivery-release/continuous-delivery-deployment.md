@@ -100,6 +100,7 @@
 - [Release Strategy](release-strategy.md)
 - [Feature Flagging](feature-flagging.md)
 - [Progressive Delivery](progressive-delivery.md)
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 
 ### Rollback Readiness
 
@@ -114,5 +115,5 @@
 
 - [Rollback Strategy](rollback-strategy.md)
 - [Branching Strategy](../code-implementation/branching-strategy.md)
-- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 - [Build & Artifact Management](build-artifact-management.md)

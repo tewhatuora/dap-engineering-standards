@@ -47,6 +47,7 @@
 #### References
 
 - [Version Control](../code-implementation/version-control.md)
+- [Immutable Artifacts](../../principles/delivery-release/immutable-artifacts.md)
 
 ### Governed Artifact Repository
 
@@ -86,6 +87,7 @@
 
 - [Configuration Management](../code-implementation/configuration-management.md)
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
+- [Immutable Artifacts](../../principles/delivery-release/immutable-artifacts.md)
 
 ### Published Artifact Versioning
 

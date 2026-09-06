@@ -16,6 +16,7 @@
 #### References
 
 - [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
+- [Domain-Aligned Services](../../principles/architecture-platform/domain-aligned-services.md)
 
 ### Single Ownership of a Service's Data
 
@@ -38,6 +39,7 @@
 #### References
 
 - [Schema Design & Evolution](schema-design-evolution.md)
+- [Domain-Aligned Services](../../principles/architecture-platform/domain-aligned-services.md)
 
 ### Independent Deployability & Scalability
 
@@ -52,6 +54,7 @@
 #### References
 
 - [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
+- [Domain-Aligned Services](../../principles/architecture-platform/domain-aligned-services.md)
 
 ### Scaling Constraints
 
@@ -85,6 +88,10 @@
 2. A service spanning more than one distinct business domain **SHOULD** be evaluated for decomposition.
 3. Multiple services separately implementing parts of a single, cohesive business domain, without an independent reason for the separation, **SHOULD** be evaluated for consolidation.
 
+#### References
+
+- [Domain-Aligned Services](../../principles/architecture-platform/domain-aligned-services.md)
+
 ### Single Team Accountability for a Service
 
 > Exactly one team is accountable for a service, and reviews every change to it regardless of who contributes.
@@ -102,3 +109,4 @@
 #### References
 
 - [Reuse](../../principles/engineering-practice/reuse.md)
+- [Domain-Aligned Services](../../principles/architecture-platform/domain-aligned-services.md)

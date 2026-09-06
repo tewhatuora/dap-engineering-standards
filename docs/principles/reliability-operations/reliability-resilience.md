@@ -18,27 +18,6 @@ Redundancy matched to service criticality limits outage impact without imposing 
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)
 
-## Deployment Risk Reduction
-
-### Summary
-
-Deployments have viable rollback or forward-fix paths, with risk reduced through progressive exposure and rapid disablement.
-
-### Reasoning
-
-A deployment can introduce a failure despite prior validation. A prepared rollback or forward-fix path reduces recovery time and avoids designing a response under incident pressure.
-
-Progressive exposure bounds the impact of an undetected failure while evidence is gathered from production. Independently controlled functionality can be disabled without waiting for another deployment.
-
-### Implemented By These Standards
-
-- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
-- [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
-- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
-- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
-- [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
-- [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
-
 ## Dependency Failure Containment
 
 ### Summary
@@ -88,7 +67,24 @@ Independent failure of non-critical functionality preserves the service outcomes
 
 ### Implemented By These Standards
 
-- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
+- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
+
+## Graceful Service Termination
+
+### Summary
+
+A terminating service instance completes its in-flight work and shuts down within a bounded period.
+
+### Reasoning
+
+Termination occurs during routine deployment, scaling, and recovery as well as during failure. Stopping an instance while it is still processing work can leave requests incomplete, duplicate side effects when work is retried, or abandon resources without orderly release.
+
+A bounded shutdown period allows current work to finish without making termination wait indefinitely.
+
+### Implemented By These Standards
+
+- [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
+- [Containerisation](../../standards/platform-infrastructure/containerisation.md)
 
 ## Recovery Objectives & Testing
 
@@ -108,17 +104,31 @@ Recovery capability depends on infrastructure, data, dependencies, and procedure
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)
 
-## Incident Readiness & Learning
+## Validated Recovery Procedures
 
 ### Summary
 
-Known failure modes have defined recovery paths, and incidents that cause an outage, material data loss, or a recovery-objective breach lead to completed corrective changes addressing their causes and impact.
+Operational recovery procedures are tested in representative conditions before they are relied upon.
+
+### Reasoning
+
+A documented procedure can be incomplete or inaccurate even when its intended recovery path is sound. Testing it in representative conditions verifies that its steps, prerequisites, and resolution outcome can be followed before an incident depends on them.
+
+Correcting a discovered gap promptly keeps the documented procedure aligned with the service rather than preserving a known failure for the next exercise or incident.
+
+### Implemented By These Standards
+
+- [Runbooks](../../standards/operations-observability/runbooks.md)
+
+## Defined Failure Recovery Paths
+
+### Summary
+
+Known failure modes have defined recovery paths.
 
 ### Reasoning
 
 A defined recovery path reduces delay and inconsistency when a known failure occurs. It gives responders a prepared response instead of requiring them to reconstruct one during an incident.
-
-Understanding the conditions that produced an incident and the factors that allowed its impact identifies effective corrective changes. Completing those changes reduces the likelihood or impact of recurrence.
 
 ### Implemented By These Standards
 

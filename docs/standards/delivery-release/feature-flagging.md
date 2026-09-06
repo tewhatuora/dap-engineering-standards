@@ -70,7 +70,7 @@
 #### References
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
-- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 - [Progressive Delivery](progressive-delivery.md)
 - [Stateless Architecture](../../principles/architecture-platform/stateless-architecture.md)
 
@@ -89,6 +89,7 @@
 - [Rollback Strategy](rollback-strategy.md)
 - [Release Strategy](release-strategy.md)
 - [Identity & Access Management](../security-identity/identity-access-management.md)
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 
 ### Safe Default & Failure Behaviour
 

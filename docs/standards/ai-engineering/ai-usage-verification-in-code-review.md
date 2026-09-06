@@ -14,6 +14,10 @@
 2. Where AI assistance is not applied uniformly across a change, disclosure **MUST** be specific enough for a reviewer to identify which parts of the change were AI-assisted.
 3. Authors **MUST NOT** omit or obscure disclosure of AI involvement, and **MUST NOT** remove or bypass the template's disclosure section.
 
+#### References
+
+- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+
 ### Pre-Submission Verification
 
 > An author independently verifies AI-generated code, its tests, and its dependencies before submitting it for review.

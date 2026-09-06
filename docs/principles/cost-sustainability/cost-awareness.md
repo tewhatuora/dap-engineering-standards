@@ -36,7 +36,6 @@ Usage-based engineering tooling can incur cost with every request or operation. 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 - [Technology Stack Governance](../../standards/architecture-system-design/technology-stack-governance.md)
 - [AI Tooling Cost Management](../../standards/ai-engineering/ai-tooling-cost-management.md)
-- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
 - [Resource Efficiency & Optimisation](../../standards/cost-sustainability/resource-efficiency-optimisation.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)

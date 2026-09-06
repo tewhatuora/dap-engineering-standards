@@ -146,6 +146,7 @@
 - [Build & Artifact Management](build-artifact-management.md)
 - [Configuration Management](../code-implementation/configuration-management.md)
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
+- [Immutable Artifacts](../../principles/delivery-release/immutable-artifacts.md)
 
 ### Pipeline Execution Security
 

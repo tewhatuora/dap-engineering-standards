@@ -58,6 +58,10 @@
 5. A channel's retention period for an unconsumed message **MUST** be defined and monitored, so loss from a slow or unavailable consumer is a known, managed risk.
 6. A consumer **MUST NOT** depend on an ordering or delivery guarantee stronger than what its channel actually provides.
 
+#### References
+
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
+
 ### Reliable Event Publication
 
 > An event's publication and the state change it represents commit as one atomic unit, and a failed publish is never silent.
@@ -68,6 +72,7 @@
 #### References
 
 - [Data Access & Transaction Management](../code-implementation/data-access-transaction-management.md)
+- [Distributed Consistency](../../principles/architecture-platform/distributed-consistency.md)
 
 ### Idempotent & Duplicate-Tolerant Consumers
 
@@ -131,6 +136,10 @@
 
 1. A business process spanning multiple services **MUST** use a deliberately chosen coordination style, either decentralised choreography or a central orchestrator, not one that emerges by accident from how events are produced and consumed.
 2. Where a multi-service workflow cannot be completed as a single transaction, its compensating action for partial failure **MUST** be defined alongside the workflow itself.
+
+#### References
+
+- [Distributed Consistency](../../principles/architecture-platform/distributed-consistency.md)
 
 ### Observability & Traceability of Event Flows
 

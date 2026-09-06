@@ -82,9 +82,15 @@ nav:
       - Automation: principles/engineering-practice/automation.md
       - Fast Feedback: principles/engineering-practice/fast-feedback.md
       - AI-Assisted Engineering: principles/engineering-practice/ai-assisted-engineering.md
+    - Delivery & Release:
+      - principles/delivery-release/index.md
+      - Immutable Artifacts: principles/delivery-release/immutable-artifacts.md
+      - Safe Delivery: principles/delivery-release/safe-delivery.md
     - Architecture & Platform:
       - principles/architecture-platform/index.md
       - Shared Platform: principles/architecture-platform/shared-platform.md
+      - Domain-Aligned Services: principles/architecture-platform/domain-aligned-services.md
+      - Distributed Consistency: principles/architecture-platform/distributed-consistency.md
       - Vendor Lock-in & Portability: principles/architecture-platform/vendor-lock-in-portability.md
       - Interoperability: principles/architecture-platform/interoperability.md
       - Stateless Architecture: principles/architecture-platform/stateless-architecture.md

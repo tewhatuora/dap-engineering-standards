@@ -18,20 +18,6 @@ Correct behaviour without session affinity allows capacity to change and replace
 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 
-## Stateful Components
-
-### Summary
-
-A component whose purpose is state management retains state with durability and replication proportionate to the state's criticality.
-
-### Reasoning
-
-Stateless request handling still depends on components designed to retain state. Matching durability and replication to the state's criticality protects against loss without imposing unnecessary complexity and cost.
-
-### Implemented By These Standards
-
-- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
-
 ## Safe Retries
 
 ### Summary

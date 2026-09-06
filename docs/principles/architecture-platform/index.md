@@ -2,7 +2,7 @@
 
 ## Overview
 
-Architecture and platform decisions determine how readily systems can integrate, scale, and change. These principles favour shared capabilities while preserving clear interfaces, technology choice, and independence from individual service instances.
+Architecture and platform decisions determine how readily systems can integrate, remain consistent, scale, and change. These principles favour cohesive service boundaries and shared capabilities while preserving clear interfaces, technology choice, and independence from individual service instances.
 
 Choose a principle below to read its full reasoning.
 
@@ -13,6 +13,18 @@ Choose a principle below to read its full reasoning.
 New services use the shared platform by default, with alternatives limited to needs the platform cannot meet.
 
 [Read more](shared-platform.md).
+
+### Domain-Aligned Services
+
+Service boundaries follow cohesive business domains, with exclusive data ownership and one authoritative implementation of each core business rule.
+
+[Read more](domain-aligned-services.md).
+
+### Distributed Consistency
+
+Keep transactions within service boundaries and coordinate cross-service consistency through explicit eventual-consistency and compensation models.
+
+[Read more](distributed-consistency.md).
 
 ### Vendor Lock-in & Portability
 

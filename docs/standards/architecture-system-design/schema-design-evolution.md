@@ -39,6 +39,7 @@
 #### References
 
 - [Service & Domain Design](service-domain-design.md)
+- [Domain-Aligned Services](../../principles/architecture-platform/domain-aligned-services.md)
 
 ### Schema Logic & Portability
 
@@ -88,6 +89,7 @@
 #### References
 
 - [Interoperability](../../principles/architecture-platform/interoperability.md)
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 
 ### Breaking Schema Changes
 
@@ -95,6 +97,10 @@
 
 1. Where a schema change cannot be made additively, it **SHOULD** use an expand-and-contract approach: add the new structure alongside the old, migrate the owning service's code to use it, then retire the old structure.
 2. The old structure **SHOULD** remain in place for a defined period after the owning service's code is fully upgraded, so a rollback to previous code remains possible without data loss.
+
+#### References
+
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 
 ### Automated Migration Tooling
 

@@ -14,9 +14,15 @@ Engineering practices make change efficient, repeatable, and accountable.
 
 [Read more](engineering-practice/index.md).
 
+### Delivery & Release
+
+Delivery preserves verified artifacts and separates deploying a change from releasing it to users.
+
+[Read more](delivery-release/index.md).
+
 ### Architecture & Platform
 
-Architecture favours shared capabilities and explicit interfaces while limiting coupling to service instances and providers.
+Architecture favours cohesive services, shared capabilities, explicit interfaces, and bounded coupling across instances, services, and providers.
 
 [Read more](architecture-platform/index.md).
 
