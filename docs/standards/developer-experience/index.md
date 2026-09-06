@@ -4,9 +4,11 @@
 
 Developer experience standards define requirements for local engineering workflows and feedback loops.
 
-## Directory
+Choose a standard below to read it in full.
 
-#### Local Development Environment
+## Standards
+
+### Local Development Environment
 
 A local development environment supports the service workflow without depending on shared infrastructure.
 

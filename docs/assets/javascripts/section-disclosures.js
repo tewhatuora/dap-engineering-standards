@@ -20,9 +20,12 @@ function findSectionHeadings(article) {
 
   if (headings.length > 0) return headings;
 
+  const pageSummary = article.querySelector(":scope > h2#summary");
   const standardsContainer = article.querySelector(":scope > h2#standards");
+  if (!pageSummary || !standardsContainer) return [];
+
   const standardHeadings = [];
-  let element = standardsContainer?.nextElementSibling;
+  let element = standardsContainer.nextElementSibling;
 
   while (element && element.tagName !== "H2") {
     if (element.tagName === "H3") standardHeadings.push(element);

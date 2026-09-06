@@ -1,44 +1,45 @@
 # AI Engineering
 
 ## Overview
-AI tools can improve engineering productivity, but their use introduces new security, accountability, and governance risks. This section defines the engineering standards for responsible, accountable, and efficient use of AI throughout the software development lifecycle.
 
-Choose a standard below to see its full requirements.
+AI use throughout the software development lifecycle is subject to security, accountability, and cost-management standards.
 
-## Directory
+Choose a standard below to read it in full.
 
-#### Approved AI Tooling
+## Standards
 
-> Only approved, organisation-provisioned AI tools may be used for engineering work.
+### Approved AI Tooling
+
+Only approved, organisation-provisioned AI tools may be used for engineering work.
 
 [Read more](approved-ai-tooling.md).
 
-#### Prompt Data Handling
+### Prompt Data Handling
 
-> Treat every prompt as a data disclosure; never include secrets, patient data, or more than a task needs.
+Treat every prompt as a data disclosure and include only data that the tool is authorised to receive and the task requires.
 
 [Read more](prompt-data-handling.md).
 
-#### AI-Assisted Development
+### AI-Assisted Development
 
-> AI can write code, but the submitting developer remains fully accountable for it.
+Developers remain fully accountable for code produced with AI assistance.
 
 [Read more](ai-assisted-development.md).
 
-#### AI Usage & Verification in Code Review
+### AI Usage & Verification in Code Review
 
-> Disclose AI involvement, and give it exactly the same scrutiny as any other change.
+Disclose AI involvement and give AI-assisted changes the same scrutiny as other changes.
 
 [Read more](ai-usage-verification-in-code-review.md).
 
-#### AI-Assisted Incident Investigation
+### AI-Assisted Incident Investigation
 
-> AI-assisted incident investigation uses approved tools and standard telemetry, with human verification and traceable outcomes.
+AI-assisted incident investigation uses approved tools and standard telemetry, with human verification and traceable outcomes.
 
 [Read more](ai-assisted-incident-investigation.md).
 
-#### AI Tooling Cost Management
+### AI Tooling Cost Management
 
-> Match context size, model choice, and session length to what the task actually needs.
+Context size, model choice, and session length match the needs of the task.
 
 [Read more](ai-tooling-cost-management.md).

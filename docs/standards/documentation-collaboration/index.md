@@ -1,9 +1,9 @@
 # Documentation & Collaboration
 
-## Summary
+## Overview
 
 _To be defined._
 
-## Directory
+## Standards
 
 _To be defined._
