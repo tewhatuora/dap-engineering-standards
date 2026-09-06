@@ -10,9 +10,7 @@ Lock-in is identified and weighed during technology selection, accepted only whe
 
 Lock-in can increase the cost, time, and disruption involved in changing a technology or provider. Evaluating it before adoption makes that constraint part of the decision while alternatives remain available.
 
-Proprietary coupling reduces future choice and can increase replacement effort. Accepting that constraint is justified only when the capability provides a genuine benefit that outweighs it.
-
-Defaults and familiarity do not establish that the value of a capability justifies its lock-in.
+Proprietary coupling is justified only when a capability's benefit outweighs the resulting loss of choice and replacement effort. Defaults and familiarity do not establish that benefit.
 
 A benefit that once justified lock-in can diminish as alternatives improve or a vendor's commercial terms and ability to provide the capability change. Reassessment identifies when the original trade-off no longer supports continued coupling.
 
@@ -25,13 +23,13 @@ A benefit that once justified lock-in can diminish as alternatives improve or a 
 
 ### Summary
 
-A costly-to-reverse commitment has its exit path considered before it is made, and the absence of a practical exit is accepted as a deliberate risk.
+The exit path for a costly-to-reverse commitment is assessed before adoption, and the absence of a practical exit is treated as a deliberate risk.
 
 ### Reasoning
 
 The cost, time, and disruption of leaving a commitment can determine whether a later change remains practical. Considering the exit path before committing exposes those constraints while other options remain available.
 
-Where no practical exit exists for a critical dependency, explicit risk acceptance prevents that constraint from being overlooked.
+A critical dependency without a practical exit remains a constraint on future change and a deliberate risk to the system.
 
 ### Implemented By These Standards
 
@@ -45,7 +43,7 @@ An abstraction shields a system from a vendor-specific dependency where it can d
 
 ### Reasoning
 
-Concentrating vendor-specific integration behind a defined interface or adapter limits the parts of a system that must change when a dependency is replaced.
+Concentrating vendor-specific integration behind a defined interface or adapter limits the parts of a system requiring change when a dependency is replaced.
 
 An abstraction also carries implementation and maintenance costs. It improves portability only when those costs remain proportionate to the lock-in risk it reduces.
 

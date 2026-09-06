@@ -44,11 +44,11 @@ Secure defaults prevent an omitted configuration decision from exposing a servic
 
 ### Summary
 
-Features, ports, endpoints, accounts, packages, and tools not required for a service's function are disabled or removed.
+Capabilities and components not required for a service's function are disabled or removed.
 
 ### Reasoning
 
-Every exposed capability or unnecessary component creates another path through which a service can be compromised. Removing what the service does not need reduces the paths that must be secured, monitored, and maintained.
+Every exposed capability or unnecessary component creates another path through which a service can be compromised. Removing what the service does not need reduces its security, monitoring, and maintenance burden.
 
 ### Implemented By These Standards
 
@@ -74,11 +74,11 @@ Any security control can fail or be bypassed. Independent controls prevent one f
 
 ### Summary
 
-Secure coding and static analysis apply across the engineering lifecycle, and security-relevant changes receive the same review scrutiny as other changes from reviewers able to identify common security weaknesses.
+Secure coding, automated analysis, and informed review address security weaknesses throughout the engineering lifecycle.
 
 ### Reasoning
 
-Applying secure coding practices through design, build, test, and deployment identifies weaknesses before they become part of a released service. Static analysis detects known weakness patterns as code is written, while review by people able to identify common security weaknesses addresses concerns that automated analysis cannot determine from code alone.
+Secure coding practices reduce the likelihood that weaknesses become part of a released service. Automated analysis detects known weakness patterns, while informed review addresses security concerns that analysis cannot determine from code alone.
 
 ### Implemented By These Standards
 
@@ -95,11 +95,11 @@ Applying secure coding practices through design, build, test, and deployment ide
 
 ### Summary
 
-Security controls are verified through testing throughout the lifecycle and are not assumed to remain effective because they were implemented.
+Security controls are tested throughout the engineering lifecycle to provide continuing evidence of their effectiveness.
 
 ### Reasoning
 
-A security control can be present but ineffective because of an implementation defect, configuration error, or later change. Static, dynamic, and penetration testing provide evidence that controls work, while repeated testing detects regressions as a service evolves.
+A security control can be present but ineffective. Security testing provides evidence that controls work, while repeated testing detects regressions as a service evolves.
 
 ### Implemented By These Standards
 
@@ -116,7 +116,7 @@ Dependencies remain current and scanned for known vulnerabilities, and build and
 
 ### Reasoning
 
-Dependencies and build and deployment tooling extend a service's trust boundary to externally maintained code and systems. Routine updates and scanning reduce exposure to known vulnerabilities, while immutable references, governed sources, and risk-proportionate remediation limit the opportunity for compromised components to enter or remain in the delivery path.
+Dependencies and delivery tooling extend a service's trust boundary to externally maintained code and systems. Keeping dependencies current and scanning for known vulnerabilities reduces exposure, while protecting component sources and integrity limits the opportunity for compromised components to enter or remain in the delivery path.
 
 ### Implemented By These Standards
 
@@ -130,7 +130,7 @@ Dependencies and build and deployment tooling extend a service's trust boundary 
 
 ### Summary
 
-Credentials, keys, and tokens stay out of source control and are managed through dedicated mechanisms that restrict access and support rotation.
+Secrets stay out of source control and are managed through a dedicated system that restricts access and supports rotation.
 
 ### Reasoning
 

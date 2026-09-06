@@ -8,7 +8,7 @@ A component exposes the outcome of its behaviour through its defined interface s
 
 ### Reasoning
 
-An observable return value, resulting state, or emitted event allows a test to verify behaviour through the same contract available to a consumer. Outcomes visible only through internal inspection or manual observation couple verification to implementation details and prevent reliable automated testing.
+Verifying outcomes through the contract available to a consumer keeps tests independent of implementation details. Outcomes visible only through internal inspection or manual observation prevent reliable automated testing.
 
 ### Implemented By These Standards
 
@@ -22,7 +22,7 @@ A component's external dependencies, test data, and execution environment can be
 
 ### Reasoning
 
-Substitution isolates a component's behaviour from external systems, other components, time, and randomness. Hard-coded, global, or statically constructed dependencies prevent that control and make failures depend on conditions outside the test.
+Control over external dependencies and execution conditions makes failures attributable to the component's behaviour. Boundaries that cannot be controlled make test results depend on conditions outside the test.
 
 Controlled test data and isolation from production allow repeatable verification without exposing production data or affecting live operation. Avoiding shared mutable state also prevents one test from changing the conditions or outcome of another.
 
@@ -41,7 +41,7 @@ A test produces the same result on every execution for the same input, and an in
 
 ### Reasoning
 
-Controlling time, randomness, external calls, shared state, and execution order makes a test result attributable to the behaviour under test. An intermittent result without a corresponding code change weakens that evidence and requires remediation rather than retries, removal, or suppression.
+Controlling test inputs and execution conditions makes a result attributable to the behaviour under test. An intermittent result without a corresponding code change weakens that evidence, while working around it preserves the uncertainty.
 
 ### Implemented By These Standards
 
@@ -57,7 +57,7 @@ New or changed functionality receives automated tests proportionate to its risk,
 
 ### Reasoning
 
-Testing effort aligned with the consequences and difficulty of failure concentrates verification where it provides the most value. Functionality that can be verified only manually or after release leaves a design gap because defects cannot be detected consistently before production.
+Testing effort aligned with the consequences and difficulty of failure concentrates verification where it provides the most value. Designing functionality for automated verification allows defects to be detected consistently before production; omitting feasible automation leaves a gap in that evidence.
 
 ### Implemented By These Standards
 
@@ -71,7 +71,7 @@ Performance, security, and accessibility are designed for verification through a
 
 ### Reasoning
 
-Implementation alone does not demonstrate that a component meets its performance, security, and accessibility characteristics. Designing these characteristics for automated verification provides repeatable evidence; where automation is not feasible, a defined approach preserves a clear basis for evaluation.
+Functional correctness does not demonstrate that a component meets its performance, security, and accessibility expectations. Automated verification provides repeatable evidence for these characteristics. Where automation is not feasible, a defined approach preserves a consistent basis for evaluation.
 
 ### Implemented By These Standards
 

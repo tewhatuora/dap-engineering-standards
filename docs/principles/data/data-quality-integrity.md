@@ -8,7 +8,7 @@ Data is validated as close to its point of entry as possible, and invalid data i
 
 ### Reasoning
 
-Validation at the point of entry prevents incorrect, incomplete, or malformed data from propagating into downstream systems. Rejecting invalid data or explicitly marking it as invalid preserves the failure for consumers to handle. Silent acceptance or correction conceals the failure and can change the data's meaning without the knowledge of its producer or consumers.
+Validation at the point of entry prevents incorrect, incomplete, or malformed data from propagating into downstream systems. Explicitly flagging invalid data preserves its status for downstream handling. Silent acceptance or correction conceals the failure and can change the data's meaning without the knowledge of its producer or consumers.
 
 ### Implemented By These Standards
 
@@ -22,7 +22,7 @@ Structural and referential integrity is enforced at the data layer where the dat
 
 ### Reasoning
 
-Data types, required fields, value ranges, and relationships define which stored states are valid. Enforcing these constraints in the data store applies them consistently to every write. Where the store cannot enforce a constraint, equivalent protection in the service responsible for writing the data prevents invalid values and references to records that do not exist or have been removed.
+Schema constraints define which stored states are valid. Enforcing them in the data store applies them consistently to every write. Where the store cannot enforce a constraint, equivalent protection in the service responsible for writing the data prevents structurally invalid or inconsistent data.
 
 Schema and data model changes can invalidate records that previously satisfied their constraints. Identifying and resolving these conflicts before applying a change prevents the change itself from introducing a structural or referential integrity failure.
 
@@ -38,9 +38,7 @@ Uniqueness constraints prevent duplicate representations, and defined resolution
 
 ### Reasoning
 
-A uniqueness constraint prevents more than one stored representation where an entity must be unique. Where integrated systems can represent the same real-world entity in several records, a defined matching or conflict-resolution rule establishes which record or value is authoritative.
-
-Identifying and resolving duplicates and conflicts prevents contradictory records from persisting indefinitely and giving consumers different answers for the same entity.
+Integrated systems can represent the same real-world entity in multiple records, allowing consumers to receive contradictory values. Uniqueness constraints and defined matching or conflict-resolution rules identify the authoritative representation and prevent unresolved conflicts from persisting.
 
 ### Implemented By These Standards
 
@@ -54,7 +52,7 @@ Validation, constraint, and data quality rules are verified through automated te
 
 ### Reasoning
 
-These rules define which data states are accepted and rejected. Automated tests make that behaviour repeatable and expose regressions when a rule changes. Testing against representative data, including boundary conditions, known edge cases, and previously identified quality issues, verifies that the rule continues to distinguish valid and invalid data across the conditions it is expected to handle.
+These rules define which data states are accepted and rejected. Automated tests make their verification repeatable and expose regressions when a rule changes. Testing with representative data verifies that a rule continues to distinguish valid and invalid data across the conditions it is expected to handle.
 
 ### Implemented By These Standards
 
@@ -75,15 +73,3 @@ Tracing the transformations between a data item's origin and current state expla
 ### Implemented By These Standards
 
 - [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
-
-## Quality Monitoring
-
-### Summary
-
-Data quality is monitored continuously after initial validation so that later degradation is detected.
-
-### Reasoning
-
-Validation at entry establishes quality at one point in time, but downstream processing and integration faults can degrade data later. Ongoing automated checks detect material changes in characteristics such as completeness, format consistency, and volume without relying on a person to notice them.
-
-An alert with severity proportionate to the detected issue makes the degradation visible and gives more consequential failures the corresponding urgency.

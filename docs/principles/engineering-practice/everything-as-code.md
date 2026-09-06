@@ -8,9 +8,9 @@ Source code and the definitions that determine system state live in version cont
 
 ### Reasoning
 
-A shared authoritative record makes intended state recoverable, reviewable, and attributable throughout its life. It prevents version-controlled definitions and running systems from presenting competing accounts of how a system is intended to behave.
+A shared authoritative record makes intended state recoverable, reviewable, and attributable. Without it, version-controlled definitions and operational practices can define conflicting system behaviour.
 
-This applies to application and service code, including prototypes and scripts, and to infrastructure, configuration, delivery pipelines, and database schemas. Excluding short-lived work allows it to become deployed or depended upon without an authoritative source.
+Application and service code, infrastructure, configuration, delivery pipelines, and database schemas all determine system state. Prototypes and scripts can also become deployed or depended upon, so treating them as short-lived work does not remove the need for an authoritative source.
 
 ### Implemented By These Standards
 
@@ -27,13 +27,13 @@ This applies to application and service code, including prototypes and scripts, 
 
 ### Summary
 
-Systems and environments reproduce consistently from their code-defined state without undocumented manual steps.
+Systems and environments can be recreated consistently from their code-defined state without undocumented manual steps.
 
 ### Reasoning
 
-Recreation from code reduces environment-specific variance across development, test, and production. It also makes recovery independent of knowledge or state held only by an individual.
+Recreating systems from code reduces environment-specific variance across development, test, and production. It also makes recovery independent of knowledge or state held only by an individual.
 
-Removing undocumented post-creation steps means the code definition captures the complete functional state needed to recreate the system or environment.
+Undocumented post-creation steps leave part of the functional state outside the code definition and prevent consistent recreation.
 
 ### Implemented By These Standards
 
@@ -45,13 +45,13 @@ Removing undocumented post-creation steps means the code definition captures the
 
 ### Summary
 
-Changes to code-defined state pass through its reviewed and automated change path, and direct changes to running state are reconciled back into code.
+Code-defined state changes through its reviewed and automated change path, with direct changes to running state subsequently incorporated into code.
 
 ### Reasoning
 
-Applying a change through the code-defined path preserves its review, traceability, and repeatability. Manual or ad hoc actions create state outside those controls and allow running state to diverge from its authoritative definition.
+Applying a change through the code-defined path preserves its review history, traceability, and repeatability. Manual or ad hoc actions create state outside those controls and allow running state to diverge from its authoritative definition.
 
-An exceptional direct change can be necessary to restore service. Incorporating it into code preserves the authority of the definition and gives later reconciliation a defined direction.
+Direct intervention can be necessary to restore service. Recording the resulting change in code keeps the definition authoritative and prevents the divergence from persisting.
 
 ### Implemented By These Standards
 
@@ -66,13 +66,13 @@ An exceptional direct change can be necessary to restore service. Incorporating 
 
 ### Summary
 
-Secrets remain in a dedicated secrets mechanism, and code-defined artifacts reference them without containing their values.
+Secrets remain in a dedicated secrets management system, and code-defined artifacts reference them without containing their values.
 
 ### Reasoning
 
-Embedding a secret in code spreads it through repository history, generated artifacts, and review access beyond the people and systems that require it.
+Embedding a secret in code exposes it through repository history, generated artifacts, and code review to people and systems that do not require it.
 
-Runtime references allow credentials to be rotated independently of code and keep their handling within a dedicated secrets mechanism.
+Referencing secrets at runtime allows credentials to be rotated independently of code and keeps their handling within the secrets management system.
 
 ### Implemented By These Standards
 
@@ -88,7 +88,7 @@ Engineering documentation stays version-controlled and updated in the same chang
 
 ### Reasoning
 
-Version-controlled documentation keeps its history and review traceable to the source and behaviour it describes.
+Version control makes documentation changes reviewable and preserves their history alongside the source changes they describe.
 
 Updating documentation with the behaviour change prevents it from describing an earlier system state and directing later work from incorrect information.
 

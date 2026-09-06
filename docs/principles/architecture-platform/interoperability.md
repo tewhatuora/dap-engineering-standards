@@ -39,9 +39,9 @@ Open, widely adopted standards are preferred wherever they meet a service's need
 
 ### Reasoning
 
-Open, widely adopted protocols, data formats, and interface patterns give systems a shared basis for integration. Proprietary or organisation-specific alternatives introduce conventions that each consumer must understand separately.
+Open, widely adopted protocols, data formats, and interface patterns give systems a shared basis for integration. Proprietary or organisation-specific alternatives require each consumer to understand and support separate conventions.
 
-A custom or proprietary option remains appropriate where no suitable open standard exists or where an available standard cannot meet a genuine, documented requirement.
+A custom or proprietary option remains appropriate where no suitable open standard exists or where an available standard cannot meet a genuine requirement.
 
 ### Implemented By These Standards
 
@@ -76,7 +76,7 @@ An interface remains independent of any single consumer's implementation and is 
 
 Coupling an interface to one consumer's internal implementation makes that consumer's design a constraint on every later integration. A consumer-independent contract allows additional consumers to use the interface without inheriting implementation details from the first integration.
 
-Repeated bilateral integrations create separate contracts and paths for substantially the same exchange. Reusing a common interface or event stream reduces the number of distinct point-to-point integrations that must be maintained.
+Repeated bilateral integrations create separate contracts and paths for substantially the same exchange. A shared interface reduces the number of distinct point-to-point integrations requiring maintenance.
 
 ### Implemented By These Standards
 

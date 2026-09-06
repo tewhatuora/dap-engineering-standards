@@ -18,7 +18,7 @@ Designing instrumentation alongside the behaviour it observes makes that behavio
 
 ### Summary
 
-Instrumentation follows the organisation's established approach consistently across services.
+Instrumentation uses consistent conventions and telemetry semantics across services.
 
 ### Reasoning
 
@@ -54,11 +54,11 @@ Coverage of dependencies and integration points distinguishes a failure within t
 
 ### Summary
 
-Telemetry remains correlatable across service boundaries through a shared identifier propagated to every downstream call.
+Telemetry remains correlatable across service boundaries so a transaction can be traced end to end.
 
 ### Reasoning
 
-A shared identifier preserves the context of a transaction as it crosses synchronous and asynchronous boundaries. Propagating that identifier allows telemetry from each participating service to be joined into an end-to-end account of the transaction.
+Preserving transaction context across synchronous and asynchronous boundaries allows telemetry from each participating service to be joined into an end-to-end account of the transaction.
 
 ### Implemented By These Standards
 
@@ -71,13 +71,13 @@ A shared identifier preserves the context of a transaction as it crosses synchro
 
 ### Summary
 
-Telemetry captures personal, health, or other sensitive data only where observability requires it, with unavoidable sensitive data masked, redacted, or tokenised.
+Telemetry captures sensitive data only where observability requires it and protects any sensitive data that cannot be excluded.
 
 ### Reasoning
 
 Telemetry is retained and accessed for operational analysis, which creates exposure when it contains sensitive data. Limiting collection to necessary data reduces that exposure while preserving the information required for diagnosis.
 
-Irreversible masking, redaction, or tokenisation prevents an unavoidable sensitive value from being recovered from the recorded telemetry.
+Protecting unavoidable sensitive data reduces the possibility that telemetry reveals it beyond its intended operational use.
 
 ### Implemented By These Standards
 
@@ -114,7 +114,7 @@ Observability detects operational issues as early as possible, and telemetry use
 
 Automated detection exposes a developing failure before reports from affected users become the primary signal. Earlier detection gives responders more time to limit impact.
 
-Testing alerts and validating dashboards in advance establishes that incident telemetry will be available and accurate under operational pressure.
+Testing alerts and validating dashboards in advance provides evidence that incident telemetry is available and accurate under operational pressure.
 
 ### Implemented By These Standards
 

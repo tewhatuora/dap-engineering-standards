@@ -10,7 +10,7 @@ The directing engineer remains fully accountable for AI-assisted work, which mee
 
 An AI tool does not assume responsibility for the correctness, quality, security, or compliance of its output. The engineer directing its use remains responsible for evaluating and maintaining every resulting engineering artifact.
 
-The method used to produce engineering work does not change the outcomes expected of it. AI assistance provides no basis for reducing compliance with an applicable principle or standard.
+The method used to produce engineering work does not change the outcomes expected of it. AI assistance does not change which principles and standards apply.
 
 ### Implemented By These Standards
 
@@ -37,11 +37,11 @@ Without understanding an output's behaviour and implementation, the responsible 
 
 ### Summary
 
-Engineering work uses only AI tools approved for the work and information entrusted to them.
+Engineering work uses AI tools whose terms and controls are suitable for the work and information entrusted to them.
 
 ### Reasoning
 
-AI tools differ in how they protect and use organisational code and data. A tool is suitable only when its terms and controls are acceptable for the work and information involved; capability, convenience, or cost alone does not establish suitability.
+AI tools differ in how they protect and use organisational code and data. Suitability depends on whether a tool's terms and controls are acceptable for the work and information involved. Capability, convenience, and cost do not establish suitability on their own.
 
 ### Implemented By These Standards
 
@@ -52,7 +52,7 @@ AI tools differ in how they protect and use organisational code and data. A tool
 
 ### Summary
 
-AI-assisted output is adopted only when reproduced third-party material can be used lawfully.
+AI-assisted output is adopted only when any third-party material it contains can be used lawfully.
 
 ### Reasoning
 
@@ -70,7 +70,7 @@ Confidential material is submitted to an AI tool only when its handling terms pr
 
 ### Reasoning
 
-Submitting confidential or proprietary material to an AI tool can give its provider rights over that content. Restricting submissions according to provider reuse and retention terms preserves the material's confidentiality.
+Submitting confidential or proprietary material to an AI tool can expose it to provider retention, reuse, or access. Restricting submissions to tools whose handling terms preserve confidentiality keeps the material within its intended controls.
 
 ### Implemented By These Standards
 

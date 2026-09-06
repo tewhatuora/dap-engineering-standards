@@ -10,7 +10,7 @@ Existing solutions are evaluated before development begins, with internal reuse 
 
 Assuming that no suitable solution exists can duplicate capability and commit development effort before the available options are understood. Discovery at design time establishes whether an existing solution meets the requirement while the approach can still change without rework.
 
-This order prevents a custom build from being chosen before suitable existing options have been exhausted. Familiarity and convenience do not establish that an existing option fails to meet the requirement.
+Internal reuse avoids creating another implementation and support burden. When no internal solution meets the requirement, external adoption can avoid the continuing cost of custom development. Familiarity and convenience do not establish that an existing option is unsuitable.
 
 ### Implemented By These Standards
 

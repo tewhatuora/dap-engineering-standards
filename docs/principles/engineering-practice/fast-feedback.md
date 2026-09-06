@@ -4,13 +4,13 @@
 
 ### Summary
 
-An issue surfaces at the earliest stage capable of reliably detecting it, with local development providing a fast loop independent of shared environments.
+Checks run at the earliest stage that can detect an issue reliably, and local development provides a fast feedback loop independent of shared environments.
 
 ### Reasoning
 
-Deferring a capable check to a later stage increases the cost and time needed to correct an issue. Running the check locally or during review exposes the issue before it reaches a shared test environment or production, while the requirement for reliable detection avoids feedback that cannot be trusted.
+Deferring a capable check to a later stage increases the cost and time needed to correct an issue. Running the check locally or during review exposes the issue before it reaches a shared test environment or production. Reliability remains necessary because feedback that cannot be trusted does not support timely correction.
 
-Local execution removes coordination with shared or remote environments from the development loop. Fast local builds, linting, and tests allow an engineer to correct an issue while its context is current.
+Local execution removes dependencies on shared or remote environments from the development loop and allows an engineer to correct an issue while its context is current.
 
 ### Implemented By These Standards
 

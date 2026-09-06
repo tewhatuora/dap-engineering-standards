@@ -4,13 +4,13 @@
 
 ### Summary
 
-Compute and storage capacity matches actual demand, with serverless, elastic, and managed models preferred where they avoid idle capacity or improve infrastructure utilisation.
+Compute and storage capacity matches actual demand, with deployment models selected to minimise idle capacity and improve infrastructure utilisation.
 
 ### Reasoning
 
 Over-provisioned and idle capacity consumes energy without delivering value. Sizing resources from observed or tested demand, adjusting capacity as demand changes, and removing resources when they are no longer needed reduce that waste.
 
-Serverless, elastic, and managed models can avoid dedicated idle capacity or use shared infrastructure more efficiently than individually operated equivalents. Their resource characteristics determine whether they provide that benefit for a particular workload.
+Deployment models that share capacity or adjust it with demand can use infrastructure more efficiently than dedicated equivalents. Their resource characteristics determine whether they provide that benefit for a particular workload.
 
 ### Implemented By These Standards
 
@@ -33,7 +33,7 @@ Where multiple locations or cloud providers equally meet applicable requirements
 
 The carbon intensity of the energy supplying a workload varies by location and provider. When technical, legal, data residency, and commercial requirements do not distinguish between viable options, carbon intensity provides a basis for selecting the option with lower environmental impact.
 
-Published environmental commitments and reporting expose differences in providers' stated direction and reported performance that are not represented by functional and commercial criteria.
+Comparable reporting on energy sources and operational emissions provides evidence for this decision when functional and commercial criteria do not distinguish the options.
 
 ### Implemented By These Standards
 
@@ -68,7 +68,7 @@ A service's energy consumption or estimated carbon footprint is measurable and a
 
 Attribution connects environmental impact to the service design and operational decisions that produce it. Without that connection, a team cannot distinguish its service's impact from aggregate infrastructure consumption or assess how a change affects it.
 
-Integrating environmental measures into existing monitoring and reporting keeps them available with the operational information used to manage the service.
+Keeping environmental measures alongside operational information allows resource and design decisions to account for their impact.
 
 ### Implemented By These Standards
 
@@ -84,7 +84,7 @@ Sustainability assumptions are revisited as usage, scale, technology, or provide
 
 Resource consumption and environmental impact change as a service and its available technology evolve. An assumption that was valid during design can cease to reflect actual usage or the available options.
 
-A material, sustained increase in resource consumption or environmental impact indicates that the design no longer behaves as assumed and requires reassessment against current usage.
+A material, sustained increase in resource consumption or environmental impact indicates that the design no longer behaves as assumed and needs reassessment against current usage.
 
 ### Implemented By These Standards
 

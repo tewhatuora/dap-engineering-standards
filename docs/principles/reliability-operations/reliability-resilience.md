@@ -66,7 +66,7 @@ Services protect their capacity from excess demand through demand controls, prio
 
 Uncontrolled demand can exhaust shared resources and turn local saturation into a full outage. Bounding or shedding work keeps service capacity available when demand exceeds what the service can process.
 
-Prioritising critical requests and isolating consumers prevents lower-priority or disproportionate demand from displacing the functionality that must remain available.
+Prioritising critical requests and isolating consumers prevents lower-priority or disproportionate demand from displacing critical functionality.
 
 ### Implemented By These Standards
 
@@ -113,13 +113,13 @@ Recovery capability depends on infrastructure, data, dependencies, and procedure
 
 ### Summary
 
-Known failure modes have documented responses, and incidents that cause an outage, material data loss, or a recovery-objective breach produce root-cause reviews with corrective actions tracked to completion.
+Known failure modes have defined recovery paths, and incidents that cause an outage, material data loss, or a recovery-objective breach lead to completed corrective changes addressing their causes and impact.
 
 ### Reasoning
 
-A documented response reduces delay and inconsistency when a known failure occurs. It gives responders a prepared recovery path instead of requiring them to reconstruct one during an incident.
+A defined recovery path reduces delay and inconsistency when a known failure occurs. It gives responders a prepared response instead of requiring them to reconstruct one during an incident.
 
-Root-cause review identifies the conditions that produced an incident and the factors that allowed its impact. Tracking corrective action to completion turns that understanding into a reduced likelihood or impact of recurrence.
+Understanding the conditions that produced an incident and the factors that allowed its impact identifies effective corrective changes. Completing those changes reduces the likelihood or impact of recurrence.
 
 ### Implemented By These Standards
 

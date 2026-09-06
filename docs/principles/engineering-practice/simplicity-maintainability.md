@@ -24,7 +24,7 @@ Code is readily understood by another engineer, with naming, formatting, and str
 
 ### Reasoning
 
-Code is read and changed more often than it is written. Readable code reduces the effort needed to understand behaviour and makes the effect of a change easier to assess.
+Readable code reduces the effort needed to understand behaviour and makes the effect of a change easier to assess.
 
 Consistent conventions remove incidental differences that slow comprehension. Readability takes precedence when concision would make intent less clear.
 
@@ -76,9 +76,7 @@ Code, features, configuration, and dependencies no longer required are removed w
 
 ### Reasoning
 
-Unused code and dependencies remain part of the system an engineer must understand, test, secure, and distinguish from active behaviour. Leaving retired functionality beside its replacement obscures which path is authoritative and prolongs its maintenance cost.
-
-Timely removal ends costs and risks that no longer provide value and keeps the codebase aligned with the behaviour it currently provides.
+Unused code and dependencies continue to impose comprehension, testing, and security costs. Leaving retired functionality beside its replacement obscures which path is authoritative and prolongs risks that no longer provide value.
 
 ### Implemented By These Standards
 

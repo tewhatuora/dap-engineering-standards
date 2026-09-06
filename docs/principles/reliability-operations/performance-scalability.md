@@ -62,11 +62,11 @@ A component that cannot scale independently, or that becomes a point of contenti
 
 ### Summary
 
-Data access uses caching, pagination, and indexing to avoid unnecessary latency and load as demand grows, with a defined invalidation or expiry approach for every cache.
+Data access avoids unnecessary work as demand grows, and every cache has a defined invalidation or expiry approach.
 
 ### Reasoning
 
-Data access patterns that perform unnecessary work consume increasing time and capacity as demand and data volume grow. Pagination and appropriate indexing bound the work required for each request, while caching avoids repeated access.
+Data access patterns that perform unnecessary work consume increasing time and capacity as demand and data volume grow. Bounding the work performed for each request and avoiding repeated access limits that growth.
 
 A cache without an invalidation or expiry approach can continue serving data after it is no longer valid. A defined approach bounds how long stale data can persist.
 
@@ -85,11 +85,9 @@ Performance and capacity targets are validated before production, as a service e
 
 A target alone does not demonstrate that a service can meet it under expected demand. Testing before production provides evidence against a representative workload while there is still an opportunity to address a shortfall without affecting users.
 
-Repeating testing as the service evolves detects regressions caused by changes to its implementation, dependencies, data, or demand.
+Repeating testing as the service evolves detects regressions caused by changes to the service and its operating context.
 
-Performance and scaling assumptions are based on an expected level and pattern of demand. Growth beyond that basis can invalidate them even when the approach was suitable when selected.
-
-Sustained performance degradation or movement towards a known limit provides evidence that the existing approach may no longer support demand. Reassessment at that point allows capacity or architecture to change before the limit causes a failure.
+Performance and scaling assumptions depend on an expected level and pattern of demand. Growth beyond that basis, sustained degradation, or movement towards a known limit indicates when capacity or architecture needs reassessment before the limit causes a failure.
 
 ### Implemented By These Standards
 

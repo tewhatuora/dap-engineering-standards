@@ -4,11 +4,11 @@
 
 ### Summary
 
-Repeatable delivery pipeline work is automated by default, and a manual step that could be automated is treated as a gap to close.
+Repeatable delivery pipeline work is automated by default, and feasible manual steps represent incomplete automation.
 
 ### Reasoning
 
-Build and test execution, release and deployment, and infrastructure provisioning are repeatable delivery activities. Automating them where technically feasible makes automation the default for new and recurring pipeline work instead of allowing a manual process to become accepted practice.
+Manual execution of repeatable delivery work consumes engineering time and permits avoidable variation. Automation provides repeatable execution and prevents recurring manual steps from becoming accepted practice.
 
 ### Implemented By These Standards
 
@@ -36,7 +36,7 @@ Automation applies to repeatable engineering and operational work beyond deliver
 
 ### Reasoning
 
-Scheduled reporting, batch data processing, alerting workflows, and other recurring work benefit from consistent execution in the same way as delivery activity. The tooling used to automate each task is proportionate to its complexity, ranging from a scheduled job or script to a larger automated process.
+Repeatable work outside delivery pipelines has the same consistency and efficiency concerns as delivery activity. Matching the automation approach to the task's complexity avoids introducing unnecessary operational burden.
 
 ### Implemented By These Standards
 
@@ -56,13 +56,13 @@ Scheduled reporting, batch data processing, alerting workflows, and other recurr
 
 ### Summary
 
-Automation logic is version-controlled and kept current like any other engineering artifact.
+Automation logic is version-controlled and maintained as an engineering artifact.
 
 ### Reasoning
 
-Scripts, pipelines, and tooling configuration require the same traceability and maintenance as other code. Version control makes their definitions reviewable, while ongoing maintenance prevents them from drifting from the processes they enforce.
+Version control makes automation definitions reviewable and traceable. Ongoing maintenance prevents automation from drifting from the processes it enforces.
 
-Test coverage or validation proportionate to the risk of an automated task provides evidence that the automation remains current and behaves as intended.
+Risk-proportionate testing and validation provide evidence that automation remains current and behaves as intended.
 
 ### Implemented By These Standards
 
@@ -86,9 +86,9 @@ Automation performs repeatable mechanical checks, while decisions that require c
 
 Novel design tradeoffs and unanticipated exceptions require context and judgement that a repeatable automated process cannot supply. Automation frees engineering capacity for these decisions by taking on repetitive execution.
 
-Linting, test execution, static analysis, and other rule-based checks produce consistent results when they run as automated delivery pipeline gates. A failed gate blocks progression until the failure is resolved.
+Automated delivery pipeline gates apply rule-based checks consistently and stop known failures from progressing.
 
-Passing gates do not replace human code review and approval, including for AI-generated or AI-assisted code. Review effort remains focused on the judgement calls that automated checks cannot make.
+Passing gates do not replace human code review and approval. Review effort remains focused on the judgement calls that automated checks cannot make.
 
 ### Implemented By These Standards
 

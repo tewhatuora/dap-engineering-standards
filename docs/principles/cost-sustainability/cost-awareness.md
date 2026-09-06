@@ -8,13 +8,11 @@ Design and technology choices compare viable options by total lifecycle cost and
 
 ### Reasoning
 
-Technology, data storage, and scaling decisions establish recurring costs that can become difficult to change after implementation. Considering cost when these decisions are made allows lower-cost alternatives to be assessed before the design creates a long-term commitment.
+Design and technology decisions establish recurring costs that can become difficult to change after implementation. Considering cost when these decisions are made allows lower-cost alternatives to be assessed before the design creates a long-term commitment.
 
 A higher recurring cost can be justified when it delivers corresponding value. Comparing that value with viable alternatives prevents cost from being accepted without the same scrutiny applied to reliability, performance, and security.
 
-Building a capability that an existing solution already provides creates development and maintenance work that may not deliver distinct value. Evaluating available solutions first establishes whether custom development is necessary before that effort is committed.
-
-Upfront price alone does not represent the cost of a technology choice. Licensing, operation, maintenance, replacement, and vendor coupling determine whether adopting an existing solution costs less over its lifetime than building and operating an equivalent.
+Building a capability that an existing solution already provides creates development and maintenance work that may not deliver distinct value. Comparing existing and custom solutions across their full lifecycle establishes whether custom development is justified and prevents upfront price alone from determining the choice.
 
 ### Implemented By These Standards
 
@@ -29,9 +27,7 @@ Service spend and resource use remain proportionate to its demand, risk, and val
 
 ### Reasoning
 
-The capacity, resilience, and redundancy a service requires depend on its criticality and recovery objectives. Provisioning beyond those needs creates recurring cost without a corresponding reduction in risk.
-
-Reducing cost can also remove capacity or protection that a service depends on. Assessing cost against risk and value keeps savings from weakening the service beyond what its requirements allow.
+The capacity, resilience, and redundancy a service requires depend on its criticality and recovery objectives. Provisioning beyond those needs creates recurring cost without a corresponding reduction in risk, while reducing them further can remove capacity or protection that the service depends on. Assessing cost against risk and value keeps both spend and protection proportionate.
 
 Idle, over-provisioned, or unnecessarily retained resources incur cost without delivering corresponding value. Sizing resources to actual demand and removing them when their purpose ends keeps compute and storage consumption aligned with the workload.
 
@@ -80,9 +76,7 @@ Cost decisions are reassessed against actual usage, spend, and vendor pricing as
 
 ### Reasoning
 
-A cost assumption made during design can cease to reflect a service once its usage, scale, or access patterns change. Comparing actual operation with that assumption identifies resources and technology choices whose cost no longer matches their value.
-
-A sustained increase in spend or a material pricing change alters the basis of the original decision.
+A cost assumption made during design can cease to reflect a service once its usage, scale, access patterns, or vendor pricing change. Comparing actual operation and spend with that assumption identifies resources and technology choices whose cost no longer matches their value.
 
 ### Implemented By These Standards
 
