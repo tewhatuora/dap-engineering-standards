@@ -1,68 +1,90 @@
 # Managed Services
 
-## Summary
+A managed service is configured and verified against the workload's own requirements.
 
-> A managed service is configured and verified against the workload's own requirements, not the vendor's defaults.
+## Service Quotas
 
-## Standards
+### Summary
 
-### Service Quotas & Limits
+A managed service's relevant quotas are identified before production use and monitored so capacity or demand can be adjusted before a quota is reached.
 
-> Identify a managed service's quota against expected demand, and request an increase before usage reaches it.
+### Standards
 
-1. A managed service's quota relevant to a workload's expected demand **MUST** be identified before the workload depends on that service in production.
-2. A managed service's quota usage **MUST** be monitored on an ongoing basis, and an increase requested before expected demand reaches the quota, so a breach does not cause an incident.
+1. `std-plat-service-quotas-01` A managed service's quota relevant to a workload's expected demand **MUST** be identified before the workload depends on that service in production.
+2. `std-plat-service-quotas-02` A managed service's quota usage **MUST** be monitored against expected demand so capacity or workload can be adjusted before the quota is reached.
 
-#### References
+### Implements These Principles
 
 - [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
 
-### Automatic Patching
+## Availability
 
-> Leave automatic patching enabled, and set its maintenance window to a low-impact time, not the vendor's default.
+### Summary
 
-1. Automatic patching **SHOULD** remain enabled for a managed service instance, rather than disabled to avoid a potentially disruptive change.
-2. A managed service instance's maintenance window **SHOULD** be set to a period of low impact to end users, rather than left at the vendor's default.
+A managed service uses redundancy across failure domains according to the workload's defined RTO.
 
-#### References
+### Standards
 
-- [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
-- [Security Engineering](../../principles/security-privacy/security-engineering.md)
+1. `std-plat-availability-01` Where a workload's defined RTO cannot tolerate the loss of a single failure domain, a managed service it depends on **MUST** have its redundancy across failure domains enabled.
+2. `std-plat-availability-02` A workload whose defined RTO can tolerate the loss of a single failure domain **SHOULD** use a managed service's lower-redundancy configuration.
 
-### Availability Configuration
-
-> Enable redundancy across failure domains only where the workload's own RTO actually needs it.
-
-1. Where a workload's defined RTO cannot tolerate the loss of a single failure domain, a managed service it depends on **MUST** have its redundancy across failure domains enabled.
-2. A workload whose defined RTO can tolerate the loss of a single failure domain **SHOULD** use a managed service's lower-redundancy configuration, rather than a higher-redundancy option its RTO does not require.
-
-#### References
+### Implements These Principles
 
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 - [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+
+## Backup & Recovery
+
+### Summary
+
+A managed service's built-in backup meets the workload's RPO and RTO, and its restoration is verified during disaster recovery testing.
+
+### Standards
+
+1. `std-plat-backup-recovery-01` Where a managed service's built-in backup is relied on instead of a separate one, its frequency and retention **MUST** meet the workload's defined RPO and RTO.
+2. `std-plat-backup-recovery-02` Restoration from a managed service's built-in backup **MUST** be verified as part of disaster recovery testing.
+
+### Related Standards
+
 - [Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)
 
-### Backup Configuration & Verification
+### Implements These Principles
 
-> Set a managed service's built-in backup to the workload's own RPO and RTO, and prove it restores through DR testing.
-
-1. Where a managed service's built-in backup is relied on instead of a separate one, its frequency and retention **MUST** meet the workload's defined RPO and RTO, rather than the vendor's default.
-2. A backup produced by a managed service's built-in mechanism **MUST** be restored as part of the organisation's disaster recovery testing, rather than assumed restorable simply because the vendor manages it.
-
-#### References
-
-- [Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
-### Telemetry & Alerting Integration
+## Automatic Patching
 
-> Route the telemetry and alerts required to operate a managed service into the organisation's centralised platform.
+### Summary
 
-1. Telemetry required to operate a managed service, including applicable logs and metrics, **MUST** be integrated into the organisation's centralised observability platform.
-2. A managed service's own native alerting **SHOULD** be configured to notify through the organisation's centralised alerting mechanism, rather than operate as a separate channel.
+Automatic patching is normally enabled, with the maintenance window set to a period of low impact to users.
 
-#### References
+### Standards
 
-- [Observability](../../principles/reliability-operations/observability.md)
+1. `std-plat-automatic-patching-01` Automatic patching **SHOULD** remain enabled for a managed service instance.
+2. `std-plat-automatic-patching-02` A managed service instance's maintenance window **SHOULD** be set to a period of low impact to end users.
+
+### Implements These Principles
+
+- [Automation](../../principles/engineering-practice/automation.md)
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
+
+## Observability Integration
+
+### Summary
+
+Telemetry and alerts required to operate a managed service are integrated with the organisation's centralised observability and alerting platforms.
+
+### Standards
+
+1. `std-plat-observability-integration-01` Telemetry required to operate a managed service, including applicable logs and metrics, **MUST** be integrated into the organisation's centralised observability platform.
+2. `std-plat-observability-integration-02` A managed service's own native alerting **SHOULD** be configured to notify through the organisation's centralised alerting mechanism.
+
+### Related Standards
+
 - [Observability Platform Integration](../operations-observability/observability-platform-integration.md)
 - [Metrics, Monitoring & Alerting](../operations-observability/metrics-monitoring-alerting.md)
+
+### Implements These Principles
+
+- [Observability](../../principles/reliability-operations/observability.md)
+- [Automation](../../principles/engineering-practice/automation.md)

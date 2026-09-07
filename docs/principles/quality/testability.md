@@ -28,8 +28,8 @@ Control over external dependencies, execution conditions, and test data makes fa
 ### Implemented By These Standards
 
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
-- [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 - [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
+- [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 

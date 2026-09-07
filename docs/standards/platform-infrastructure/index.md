@@ -2,7 +2,7 @@
 
 ## Overview
 
-The infrastructure a workload runs on is chosen and managed according to what that workload actually needs. This section defines the engineering standards for provisioning and operating that infrastructure accordingly.
+Platform and infrastructure standards require each workload's infrastructure to be provisioned and operated according to that workload's requirements.
 
 Choose a standard below to read it in full.
 
@@ -22,13 +22,13 @@ A containerised workload is right-sized, scales according to demand, and remains
 
 ### Serverless
 
-A serverless function is sized to its workload, designed with portability in mind, and traceable as part of a distributed transaction.
+A serverless function is sized to its workload and designed for portability, trace-context propagation, and cost attribution.
 
 [Read more](serverless.md).
 
 ### Managed Services
 
-A managed service is configured and verified against the workload's own requirements, not the vendor's defaults.
+A managed service is configured and verified against the workload's own requirements.
 
 [Read more](managed-services.md).
 
@@ -40,6 +40,6 @@ Every environment has a purpose, with its operational cost justified.
 
 ### Infrastructure as Code
 
-Infrastructure is defined as versioned code, and changed only through an automated, reviewed pipeline.
+Infrastructure is defined as versioned code, with planned changes applied through an automated, reviewed pipeline.
 
 [Read more](infrastructure-as-code.md).

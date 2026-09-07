@@ -20,6 +20,8 @@ Access beyond a service's or identity's current function increases what an error
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Containerisation](../../standards/platform-infrastructure/containerisation.md)
+- [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
+- [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 - [Identity & Access Management](../../standards/security-identity/identity-access-management.md)
@@ -140,6 +142,7 @@ Dependencies and delivery tooling extend a service's trust boundary to externall
 - [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Containerisation](../../standards/platform-infrastructure/containerisation.md)
+- [Managed Services](../../standards/platform-infrastructure/managed-services.md)
 - [Software Supply Chain Security](../../standards/security-identity/software-supply-chain-security.md)
 - [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
 

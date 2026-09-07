@@ -16,6 +16,8 @@ Producing a new artifact for every change preserves the earlier artifact and kee
 
 - [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [Containerisation](../../standards/platform-infrastructure/containerisation.md)
+- [Serverless](../../standards/platform-infrastructure/serverless.md)
 
 ## Unmodified Artifact Promotion
 
