@@ -17,7 +17,6 @@
 
 - [Observability](../../principles/reliability-operations/observability.md)
 - [Shared Platform](../../principles/architecture-platform/shared-platform.md)
-- [Technology Stack Register](../architecture-system-design/technology-stack-register.md)
 
 ### Telemetry Transport
 

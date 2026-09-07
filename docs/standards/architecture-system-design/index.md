@@ -2,7 +2,7 @@
 
 ## Overview
 
-System design and technology choices have a lasting impact on how a system can be operated, modified, and integrated with other systems. This section defines the engineering standards for making those decisions deliberately and consistently.
+Architecture standards govern how systems are structured, integrated, operated, modified, and supported by approved technology.
 
 Choose a standard below to read it in full.
 
@@ -16,13 +16,13 @@ A service is scoped to one business domain, so it can be built, deployed, and ev
 
 ### Schema Design & Evolution
 
-A schema is owned by exactly one service, and evolved through version-controlled, backward-compatible changes.
+A schema is owned by exactly one service and evolves through version-controlled, backward-compatible changes.
 
 [Read more](schema-design-evolution.md).
 
 ### API Design
 
-Design and version every API contract-first, so a breaking change never surprises an existing consumer.
+Every API follows a contract-first design and versioning approach so breaking changes do not affect existing consumers unexpectedly.
 
 [Read more](api-design.md).
 
@@ -34,24 +34,18 @@ Every event has a defined contract and delivery guarantee; every consumer safely
 
 ### Health Data Interoperability
 
-Exchange health data using recognised interoperability standards and shared clinical terminology, not proprietary formats.
+Health data is exchanged using recognised interoperability standards and shared clinical terminology.
 
 [Read more](health-data-interoperability.md).
 
 ### Runtime Architecture
 
-Choose a workload's packaging, runtime model, and deployment location deliberately, based on its requirements.
+A workload's packaging, runtime model, and deployment location are selected according to its requirements.
 
 [Read more](runtime-architecture.md).
 
 ### Technology Stack Governance
 
-Every technology is classified as approved, trial, or deprecated, with new technologies subject to governance before adoption.
+Every technology is classified as approved, trial, or deprecated, and a new technology is approved before adoption.
 
 [Read more](technology-stack-governance.md).
-
-### Technology Stack Register
-
-Every technology's approved, trial, or deprecated status is tracked in one authoritative, up-to-date register.
-
-[Read more](technology-stack-register.md).
