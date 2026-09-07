@@ -2,7 +2,7 @@
 
 ## Overview
 
-Finding defects early makes them cheaper to address before they reach production. This section defines the engineering standards for verifying that changes are correct, performant, secure, and accessible.
+Quality engineering standards require changes to be verified for correctness, performance, security, and accessibility.
 
 Choose a standard below to read it in full.
 
@@ -10,36 +10,42 @@ Choose a standard below to read it in full.
 
 ### Unit Testing
 
-Verify one unit of code in isolation, with external dependencies replaced by controlled test doubles.
+Unit testing verifies one unit of code in isolation with external dependencies replaced by controlled test doubles.
 
 [Read more](unit-testing.md).
 
 ### Integration Testing
 
-Verify that components work correctly together in a fresh, isolated, and repeatable environment.
+Integration testing verifies that components work correctly together in a fresh, isolated, and repeatable environment.
 
 [Read more](integration-testing.md).
 
 ### Test Data Management
 
-Populate non-production environments with synthetic, de-identified, or purpose-built data, never unmodified production data.
+Non-production environments use synthetic, de-identified, or purpose-built data and exclude unmodified production data.
 
 [Read more](test-data-management.md).
 
 ### Performance & Load Testing
 
-Validate a service against its defined performance and capacity targets under realistic, representative demand.
+Performance and load testing validates a service against defined performance and capacity targets under representative demand.
 
 [Read more](performance-load-testing.md).
 
 ### Application Security Testing
 
-Catch each class of vulnerability using the technique best suited to detect it, and verify every finding's fix.
+Application security testing uses techniques suited to each vulnerability class and verifies each finding's remediation.
 
 [Read more](application-security-testing.md).
 
 ### Accessibility Testing
 
-Verify accessibility with automated scanning and real assistive technology, across every interface including internal ones.
+Accessibility is verified through automated scanning and testing with real assistive technology across public and internal interfaces.
 
 [Read more](accessibility-testing.md).
+
+### Regression Test Automation
+
+A test that confirms known behaviour on a system in active development is automated before it is run a second time, or the decision not to automate it is recorded and reviewable.
+
+[Read more](regression-test-automation.md).

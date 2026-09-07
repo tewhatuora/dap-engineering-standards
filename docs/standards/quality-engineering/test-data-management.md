@@ -1,54 +1,67 @@
 # Test Data Management
 
-## Summary
+Non-production environments use synthetic, de-identified, or purpose-built data and exclude unmodified production data.
 
-> Populate non-production environments with synthetic, de-identified, or purpose-built data, never unmodified production data.
+## Data Sources
 
-## Standards
+### Summary
 
-### Test Data Sourcing
+Non-production environments prefer synthetic or fixture data; any production-derived extract prevents reconstruction and re-identification, preserves relationships required for testing, and has time-bounded, traceable use.
 
-> A non-production environment is populated with synthetic or fixture data first, and a production extract only where authorised and logged.
+### Standards
 
-1. Synthetic or fixture data **SHOULD** be preferred over a de-identified or masked production extract, which **SHOULD** be reserved for a need synthetic data cannot satisfy, such as performance testing's realistic volume or reproducing a specific production issue.
-2. A non-production environment **MUST** be populated only from synthetic data, a de-identified or masked production extract, or a purpose-built fixture dataset.
-3. Unmodified production data **MUST NOT** be copied, replicated, or restored into a non-production environment.
-4. A de-identification or masking technique applied to a production-derived extract **MUST** be irreversible, preserve referential relationships, and be verified resistant to re-identification before use.
-5. Use of a de-identified or masked production extract **MUST** be authorised in advance and recorded with an expiry.
-6. Each production-derived extract populating a non-production environment **MUST** be logged, recording its source, destination, and the authorisation it was approved under.
+1. `std-qe-data-sources-01` Synthetic or fixture data **SHOULD** be preferred over a de-identified or masked production extract, which **SHOULD** be reserved for a need synthetic data cannot satisfy, such as performance testing's realistic volume or reproducing a specific production issue.
+2. `std-qe-data-sources-02` A non-production environment **MUST** be populated only from synthetic data, a de-identified or masked production extract, or a purpose-built fixture dataset.
+3. `std-qe-data-sources-03` Unmodified production data **MUST NOT** be copied, replicated, or restored into a non-production environment.
+4. `std-qe-data-sources-04` A production-derived extract **MUST NOT** permit its original values to be reconstructed from the transformed data or any retained mapping or key.
+5. `std-qe-data-sources-05` A production-derived extract **MUST** preserve the referential relationships required by the testing activity.
+6. `std-qe-data-sources-06` A production-derived extract **MUST NOT** permit an individual to be re-identified using information reasonably available in its intended environment.
+7. `std-qe-data-sources-07` Use of a production-derived extract **MUST** have a defined expiry before it begins.
+8. `std-qe-data-sources-08` Each production-derived extract populating a non-production environment **MUST** be traceable to its source, destination, and expiry.
 
-#### References
+### Implements These Principles
 
 - [Data Privacy](../../principles/security-privacy/data-privacy.md)
+- [Testability](../../principles/quality/testability.md)
 
-### Test Data Scope
+## Dataset Scope
 
-> A test dataset is scoped and representative of what its own test actually needs, not a full-scale copy of production.
+### Summary
 
-1. A test dataset **MUST** be representative of the conditions relevant to the test it supports, such as realistic volume, distribution, or boundary values.
-2. A test dataset **SHOULD** be limited to the volume and scope a test genuinely requires, not a full-scale replica of production.
+A test dataset is representative of the conditions under test and limited to the required volume and scope.
 
-#### References
+### Standards
+
+1. `std-qe-dataset-scope-01` A test dataset **MUST** be representative of the conditions relevant to the test it supports, such as realistic volume, distribution, or boundary values.
+2. `std-qe-dataset-scope-02` A test dataset **SHOULD** be limited to the volume and scope a test genuinely requires.
+
+### Implements These Principles
 
 - [Testability](../../principles/quality/testability.md)
-- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+- [Data Privacy](../../principles/security-privacy/data-privacy.md)
 
-### Test Data Lifecycle
+## Dataset Lifecycle
 
-> A test dataset provisions and deletes through an automated process, without an individual needing direct production access.
+### Summary
 
-1. Provisioning and deletion of a test dataset **MUST** each be available to a team on demand through an automated process that is documented well enough for the team to operate and maintain it.
-2. An individual team member **MUST NOT** need personal access to a production environment to run this process; the access required **MUST** be held by the process itself, scoped to least privilege.
-3. Retrieval of data from a production source by this process **MUST NOT** degrade the production environment's performance.
-4. Masking or de-identification of a production-derived extract **MUST** be performed automatically as part of this process, rather than as a separate manual step.
-5. A test dataset derived from production **MUST** be deleted once the testing activity it supports concludes.
+Test datasets are provisioned on demand, masked or de-identified, and deleted after testing through a documented, automated least-privilege process that does not require personal production access or degrade production performance.
 
-#### References
+### Standards
 
-- [Testability](../../principles/quality/testability.md)
+1. `std-qe-dataset-lifecycle-01` Provisioning and deletion of a test dataset **MUST** each be available to a team on demand through an automated process that is documented well enough for the team to operate and maintain it.
+2. `std-qe-dataset-lifecycle-02` An individual team member **MUST NOT** need personal access to a production environment to run this process.
+3. `std-qe-dataset-lifecycle-03` The access required **MUST** be held by the process itself, scoped to least privilege.
+4. `std-qe-dataset-lifecycle-04` Retrieval of data from a production source by this process **MUST NOT** cause the production environment to breach its performance or capacity targets.
+5. `std-qe-dataset-lifecycle-05` Masking or de-identification of a production-derived extract **MUST** be performed automatically as part of this process.
+6. `std-qe-dataset-lifecycle-06` A test dataset derived from production **MUST** be deleted once the testing activity it supports concludes.
+
+### Related Standards
+
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
+
+### Implements These Principles
+
+- [Testability](../../principles/quality/testability.md)
 - [Data Privacy](../../principles/security-privacy/data-privacy.md)
 - [Security Engineering](../../principles/security-privacy/security-engineering.md)
-- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 - [Automation](../../principles/engineering-practice/automation.md)
-- [Runbooks](../operations-observability/runbooks.md)

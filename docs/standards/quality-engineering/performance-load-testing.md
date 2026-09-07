@@ -1,104 +1,152 @@
 # Performance & Load Testing
 
-## Summary
+Performance and load testing validates a service against defined performance and capacity targets under representative demand.
 
-> Validate a service against its defined performance and capacity targets under realistic, representative demand.
+## Performance Targets
 
-## Standards
+### Summary
 
-### Performance Test Types
+A performance test validates a service against its own defined targets, using a workload that reflects realistic demand.
 
-> A service's demand pattern decides whether it needs load, stress, soak, or spike testing.
+### Standards
 
-1. Load testing **MUST** be performed for a service with a defined performance or capacity target, verifying its behaviour at expected peak demand.
-2. Stress testing **SHOULD** be considered for a service whose failure under extreme demand would cause material disruption, to identify its point and mode of failure beyond expected peak demand.
-3. Soak testing **SHOULD** be considered for a service expected to run continuously or for an extended period, to verify its behaviour under sustained demand and surface a resource leak or gradual degradation.
-4. Spike testing **SHOULD** be considered for a service exposed to unpredictable or event-driven demand, to verify its behaviour under a sudden, short-lived surge in demand.
+1. `std-qe-performance-targets-01` A performance test **MUST** validate a service against its throughput, concurrency, response time, and error rate targets, defined and maintained independently of the test itself.
+2. `std-qe-performance-targets-02` A performance test's workload, including its mix of request types and ramp-up pattern, **MUST** reflect realistic or projected production demand.
 
-#### References
-
-- [Testability](../../principles/quality/testability.md)
-- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
-
-### Triggers & Recurrence
-
-> Performance testing runs before a first release, before a big demand event, and again at a regular interval after that.
-
-1. Performance testing **MUST** be performed before a service, or a capability with a defined performance or capacity target, is first released to production.
-2. Where a capability with a defined performance or capacity target is controlled by a feature flag, performance testing **MUST** be performed before that flag's activation for production traffic.
-3. Performance testing **SHOULD** be performed before an event anticipated to generate demand materially above a service's normal operating level.
-4. Beyond these triggers, performance testing **SHOULD** also be repeated at a regular interval as a service continues to evolve after its initial release.
-
-#### References
+### Implements These Principles
 
 - [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
+- [Testability](../../principles/quality/testability.md)
+
+## Test Types
+
+### Summary
+
+The performance test types selected for a service match its demand pattern and the impact of failure.
+
+### Standards
+
+1. `std-qe-test-types-01` Load testing **MUST** be performed for a service with a defined performance or capacity target, verifying its behaviour at expected peak demand.
+2. `std-qe-test-types-02` Stress testing **SHOULD** be considered for a service whose failure under extreme demand would cause material disruption, to identify its point and mode of failure beyond expected peak demand.
+3. `std-qe-test-types-03` Soak testing **SHOULD** be considered for a service expected to run continuously or for an extended period, to verify its behaviour under sustained demand and surface a resource leak or gradual degradation.
+4. `std-qe-test-types-04` Spike testing **SHOULD** be considered for a service exposed to unpredictable or event-driven demand, to verify its behaviour under a sudden, short-lived surge in demand.
+
+### Implements These Principles
+
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
+- [Testability](../../principles/quality/testability.md)
+
+## Test Timing
+
+### Summary
+
+Performance testing runs before an initial release or production feature activation, before anticipated high demand, and at regular intervals thereafter.
+
+### Standards
+
+1. `std-qe-test-timing-01` Performance testing **MUST** be performed before a service, or a capability with a defined performance or capacity target, is first released to production.
+2. `std-qe-test-timing-02` Where a capability with a defined performance or capacity target is controlled by a feature flag, performance testing **MUST** be performed before that flag's activation for production traffic.
+3. `std-qe-test-timing-03` Performance testing **SHOULD** be performed before an event anticipated to generate demand materially above a service's normal operating level.
+4. `std-qe-test-timing-04` Beyond these triggers, performance testing **SHOULD** also be repeated at a regular interval as a service continues to evolve after its initial release.
+
+### Related Standards
+
 - [Feature Flagging](../delivery-release/feature-flagging.md)
 
-### Performance & Capacity Targets
-
-> A performance test validates a service against its own defined targets, using a workload that reflects realistic demand.
-
-1. A performance test **MUST** validate a service against its throughput, concurrency, response time, and error rate targets, defined and maintained independently of the test itself.
-2. A performance test's workload, including its mix of request types and ramp-up pattern, **MUST** reflect realistic or projected production demand.
-
-#### References
+### Implements These Principles
 
 - [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
+- [Testability](../../principles/quality/testability.md)
 
-### Test Environment & Data Representativeness
+## Environment & Data
 
-> A performance test's environment and data volume stay representative of production, so its result can be trusted.
+### Summary
 
-1. The environment used for performance testing **MUST** be representative of production in topology, configuration, and scale.
-2. The volume of data used for performance testing **MUST** be representative of production, since data volume materially affects query and processing performance.
-3. Data derived from production and used to construct a representative test dataset **MUST** be de-identified or masked.
+A performance test uses production-representative topology, configuration, scale, and data volume, with production-derived data de-identified or masked.
 
-#### References
+### Standards
+
+1. `std-qe-environment-data-01` The environment used for performance testing **MUST** be representative of production in topology, configuration, and scale.
+2. `std-qe-environment-data-02` The volume of data used for performance testing **MUST** be representative of production, since data volume materially affects query and processing performance.
+3. `std-qe-environment-data-03` Data derived from production and used to construct a representative test dataset **MUST** be de-identified or masked.
+
+### Related Standards
 
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 - [Test Data Management](test-data-management.md)
+
+### Implements These Principles
+
+- [Testability](../../principles/quality/testability.md)
 - [Data Privacy](../../principles/security-privacy/data-privacy.md)
 
-### Execution & Dependencies
+## Test Execution & Dependencies
 
-> A performance test runs in its own ephemeral environment, never against production or a mocked external dependency.
+### Summary
 
-1. A performance test **MUST NOT** be executed against production.
-2. A performance test **MUST** run in an ephemeral environment created for that test and torn down afterward, not a shared environment requiring coordination with another team.
-3. An external dependency **MUST NOT** be mocked in a performance test, since a mock would misrepresent its real latency and behaviour.
-4. A performance test that calls an external dependency **MUST NOT** target that provider's production endpoint; a non-production endpoint able to sustain the test's target load **MUST** be coordinated with the provider.
-5. A performance test **MUST** be initiated through automated tooling, such as a scheduled job or pipeline trigger, not from a local developer machine.
+A performance test is initiated through automated tooling in a dedicated ephemeral non-production environment and uses a coordinated non-production endpoint for each external dependency.
 
-#### References
+### Standards
+
+1. `std-qe-test-execution-dependencies-01` A performance test **MUST NOT** be executed against production.
+2. `std-qe-test-execution-dependencies-02` A performance test **MUST** run in an ephemeral environment created for that test and torn down afterward.
+3. `std-qe-test-execution-dependencies-03` An external dependency **MUST NOT** be mocked in a performance test, since a mock would misrepresent its real latency and behaviour.
+4. `std-qe-test-execution-dependencies-04` A performance test that calls an external dependency **MUST NOT** target that provider's production endpoint.
+5. `std-qe-test-execution-dependencies-05` A non-production endpoint able to sustain the test's target load **MUST** be coordinated with the provider.
+6. `std-qe-test-execution-dependencies-06` A performance test **MUST** be initiated through automated tooling operated independently of a local developer machine, such as a scheduled job or pipeline trigger.
+
+### Related Standards
 
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 - [Integration Testing](integration-testing.md)
+
+### Implements These Principles
+
+- [Testability](../../principles/quality/testability.md)
 - [Automation](../../principles/engineering-practice/automation.md)
 
-### Observability & Diagnostics
+## Test Observability
 
-> A performance test captures resource, latency, and error telemetry throughout, retained against its own test run.
+### Summary
 
-1. A performance test **MUST** capture resource utilisation, response time distribution, throughput, and error rate throughout its execution.
-2. Captured telemetry **MUST** be sufficient to localise the component or dependency responsible for a bottleneck or failure.
-3. Captured telemetry **MUST** be retained against its test run.
+A performance test captures and retains run-specific resource, latency, throughput, and error telemetry sufficient to diagnose a bottleneck or failure.
 
-#### References
+### Standards
 
-- [Observability](../../principles/reliability-operations/observability.md)
+1. `std-qe-test-observability-01` A performance test **MUST** capture resource utilisation, response time distribution, throughput, and error rate throughout its execution.
+2. `std-qe-test-observability-02` Captured telemetry **MUST** be sufficient to localise the component or dependency responsible for a bottleneck or failure.
+3. `std-qe-test-observability-03` Captured telemetry **MUST** be retained against its test run.
+
+### Related Standards
+
 - [Metrics, Monitoring & Alerting](../operations-observability/metrics-monitoring-alerting.md)
 
-### Result Governance
+### Implements These Principles
 
-> A result that misses its threshold is a blocking defect, investigated at the root cause, never dismissed or silently re-run.
+- [Observability](../../principles/reliability-operations/observability.md)
+- [Testability](../../principles/quality/testability.md)
 
-1. A result that fails to meet its defined threshold **MUST** be treated as a blocking defect.
-2. A failing result's root cause **MUST** be investigated; a failing result **MUST NOT** be dismissed or re-run without that investigation.
-3. A material regression against a previous test run's result **SHOULD** be investigated, even where the result still meets its defined threshold.
-4. Each test run's outcome **MUST** be recorded alongside its telemetry, so the run remains reviewable without re-analysis.
-5. The procedure for running a performance test and interpreting its result **MUST** be captured in a runbook.
+## Test Results
 
-#### References
+### Summary
+
+A threshold failure is a blocking defect that undergoes root cause investigation; material regressions are investigated, every run retains a reviewable outcome and telemetry, and the test has a runbook.
+
+### Standards
+
+1. `std-qe-test-results-01` A result that fails to meet its defined threshold **MUST** be treated as a blocking defect.
+2. `std-qe-test-results-02` A failing result's root cause **MUST** be investigated.
+3. `std-qe-test-results-03` A failing result **MUST NOT** be dismissed or re-run without that investigation.
+4. `std-qe-test-results-04` A material regression against a previous test run's result **SHOULD** be investigated, even where the result still meets its defined threshold.
+5. `std-qe-test-results-05` Each test run's outcome **MUST** be recorded alongside its telemetry, so the run remains reviewable without re-analysis.
+6. `std-qe-test-results-06` The procedure for running a performance test and interpreting its result **MUST** be captured in a runbook.
+
+### Related Standards
 
 - [Runbooks](../operations-observability/runbooks.md)
+
+### Implements These Principles
+
+- [Performance & Scalability](../../principles/reliability-operations/performance-scalability.md)
+- [Testability](../../principles/quality/testability.md)
 - [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
