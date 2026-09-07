@@ -146,7 +146,7 @@ Flag evaluation uses only required data, keeps sensitive targeting information f
 ### Standards
 
 1. `std-del-evaluation-data-01` Data sent to the flag management platform to evaluate a flag, such as a user or cohort identifier, **MUST** be limited to what evaluation requires.
-2. `std-del-evaluation-data-02` Data sent to the flag management platform to evaluate a flag, such as a user or cohort identifier, **MUST NOT** include personal or sensitive data beyond that need.
+2. `std-del-evaluation-data-02` Data sent to the flag management platform to evaluate a flag, such as a user or cohort identifier, **MUST NOT** include personal or sensitive data beyond what evaluation requires.
 3. `std-del-evaluation-data-03` A sensitive targeting rule or evaluation attribute **MUST NOT** be exposed to an untrusted client, such as a browser or mobile application.
 4. `std-del-evaluation-data-04` A client-facing surface **SHOULD** receive only the evaluated outcome where server-side evaluation is practical.
 
@@ -166,7 +166,7 @@ Flag states affecting a service are captured for incident correlation, and progr
 1. `std-del-flag-observability-01` The set of flags and their states affecting a service at a given point in time **MUST** be captured, so an incident or anomaly can be correlated with the flag configuration in effect when it occurred.
 2. `std-del-flag-observability-02` Telemetry distinguishing behaviour by flag state **MUST** be captured for a flag used in a progressive or cohort-based rollout, so its impact on each cohort can be evaluated independently.
 3. `std-del-flag-observability-03` Telemetry distinguishing behaviour by cohort **MUST** be limited to what evaluating impact requires.
-4. `std-del-flag-observability-04` Telemetry distinguishing behaviour by cohort **MUST NOT** expose personal or sensitive data beyond that need.
+4. `std-del-flag-observability-04` Telemetry distinguishing behaviour by cohort **MUST NOT** expose personal or sensitive data beyond what evaluating impact requires.
 
 ### Implements These Principles
 

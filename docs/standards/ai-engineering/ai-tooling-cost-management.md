@@ -88,7 +88,7 @@ Teams periodically re-measure cost-optimisation practices in their own context.
 
 ### Standards
 
-1. `std-ai-cost-optimisation-review-01` Teams **SHOULD** periodically measure the effect of this standard's practices on their AI tool usage and cost.
+1. `std-ai-cost-optimisation-review-01` Teams **SHOULD** periodically measure the effect of AI cost-optimisation practices on their AI tool usage and cost.
 2. `std-ai-cost-optimisation-review-02` Teams **SHOULD** evaluate each cost-optimisation practice in their own context because its effectiveness may vary by model, workload, and codebase.
 
 ### Implements These Principles

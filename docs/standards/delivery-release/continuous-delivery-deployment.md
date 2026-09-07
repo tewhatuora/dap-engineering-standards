@@ -15,7 +15,7 @@ Every environment deploys verified artifacts through version-controlled automate
 3. `std-del-deployment-pipeline-03` A deployment pipeline **MUST** consume only an artifact that has already passed the build, test, static analysis, and security scanning validation required for it.
 4. `std-del-deployment-pipeline-04` Deployment-specific verification **MAY** run within the deployment pipeline.
 5. `std-del-deployment-pipeline-05` The same version-controlled deployment logic **MUST** be used across every environment.
-6. `std-del-deployment-pipeline-06` An environment-specific deployment variation **MUST** be explicit in that version-controlled deployment logic.
+6. `std-del-deployment-pipeline-06` An environment-specific deployment variation **MUST** be explicit in the pipeline's version-controlled deployment logic.
 7. `std-del-deployment-pipeline-07` A deployment pipeline's own configuration **MUST** be version-controlled and maintained with the same discipline as the source code it deploys.
 8. `std-del-deployment-pipeline-08` A deployment pipeline **SHOULD** be built from a standard, shared template or pattern where one is available.
 
@@ -62,7 +62,7 @@ A change progresses through a defined, consistent sequence of environments on it
 ### Standards
 
 1. `std-del-environment-progression-01` A defined, ordered sequence of environments **MUST** govern how a change progresses from initial validation to production.
-2. `std-del-environment-progression-02` A change **MUST** progress through each applicable environment in that sequence via the deployment pipeline.
+2. `std-del-environment-progression-02` A change **MUST** progress through each applicable environment in its defined sequence via the deployment pipeline.
 3. `std-del-environment-progression-03` A change **MAY** skip an environment where the defined progression criteria permit it.
 4. `std-del-environment-progression-04` The criteria a change must satisfy to progress from one environment to the next **MUST** be defined and consistent, so a progression decision does not depend on an individual's discretion.
 
@@ -86,7 +86,6 @@ A production deployment has a tested rollback path or an expedited forward-fix p
 2. `std-del-rollback-readiness-02` A rollback path **MUST** be established and tested against the production characteristics relevant to the change before production deployment.
 3. `std-del-rollback-readiness-03` A forward-fix path **MUST** be supported by an expedited process capable of developing and deploying a fix rapidly once an issue is found after deployment.
 4. `std-del-rollback-readiness-04` A rollback **MUST** be executable by redeploying a previously verified artifact.
-5. `std-del-rollback-readiness-05` A rollback **MUST NOT** depend on producing a new build from source.
 
 ### Related Standards
 

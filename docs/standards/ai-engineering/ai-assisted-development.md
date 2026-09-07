@@ -12,8 +12,7 @@ The submitting developer remains fully accountable for AI-assisted code.
 
 1. `std-ai-developer-accountability-01` The developer who submits or merges code **MUST** remain fully accountable for its correctness, security, quality, and compliance, regardless of AI assistance used in its creation.
 2. `std-ai-developer-accountability-02` AI tools **MUST NOT** be recorded or represented as the author of record.
-3. `std-ai-developer-accountability-03` The submitting human developer **MUST** retain authorship and accountability for the code.
-4. `std-ai-developer-accountability-04` AI assistance **MUST NOT** justify reduced diligence, testing, or review effort.
+3. `std-ai-developer-accountability-03` AI assistance **MUST NOT** justify reduced diligence, testing, or review effort.
 
 ### Implements These Principles
 
@@ -71,8 +70,8 @@ AI-generated code receives extra scrutiny in security-critical, safety-critical,
 ### Standards
 
 1. `std-ai-high-risk-use-01` AI-generated code **MUST** be subject to heightened scrutiny in security-critical, safety-critical, or regulatory-critical contexts, including authentication, authorisation, cryptography, and clinical or patient-safety logic.
-2. `std-ai-high-risk-use-02` Teams **SHOULD** restrict unsupervised use of AI-generated implementations in these contexts.
-3. `std-ai-high-risk-use-03` Where used, the output **MUST** undergo additional review by personnel with relevant domain expertise.
+2. `std-ai-high-risk-use-02` Teams **SHOULD** restrict unsupervised use of AI-generated implementations in security-critical, safety-critical, or regulatory-critical contexts.
+3. `std-ai-high-risk-use-03` AI-generated code used in a security-critical, safety-critical, or regulatory-critical context **MUST** undergo additional review by personnel with relevant domain expertise.
 
 ### Implements These Principles
 

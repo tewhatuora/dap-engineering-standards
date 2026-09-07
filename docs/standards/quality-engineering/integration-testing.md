@@ -157,7 +157,6 @@ Integration test code meets the same coding and review standard as production co
 1. `std-qe-integration-test-maintenance-01` Integration test code **MUST** be held to the same coding, formatting, and review standards as the production code it verifies.
 2. `std-qe-integration-test-maintenance-02` Integration test code **MUST** receive substantive review with the same rigor as the production code it accompanies.
 3. `std-qe-integration-test-maintenance-03` An integration test that no longer verifies current behaviour **MUST** be updated or removed.
-4. `std-qe-integration-test-maintenance-04` An integration test that no longer verifies current behaviour **MUST NOT** be left in a suite disabled or commented out.
 
 ### Related Standards
 

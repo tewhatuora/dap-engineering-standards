@@ -35,10 +35,9 @@ A canary release defines its traffic stages, promotion criteria, observation per
 ### Standards
 
 1. `std-del-canary-releases-01` A canary release's traffic percentage at each stage, and the criteria for progressing to the next stage, **MUST** be defined before the rollout begins.
-2. `std-del-canary-releases-02` A canary release's traffic percentage and progression criteria **MUST NOT** be decided ad hoc as the rollout proceeds.
-3. `std-del-canary-releases-03` A canary release's initial stage **MUST** use a defined traffic percentage that bounds the impact of an undetected regression.
-4. `std-del-canary-releases-04` A canary release **MUST** remain at each stage for a defined minimum duration or request volume before progressing further, so there is a genuine opportunity to detect a regression at that stage.
-5. `std-del-canary-releases-05` A canary release needing to consistently serve the same version to a user **SHOULD** use a stateless mechanism, such as a deterministic hash of a user identifier.
+2. `std-del-canary-releases-02` A canary release's initial stage **MUST** use a defined traffic percentage that bounds the impact of an undetected regression.
+3. `std-del-canary-releases-03` A canary release **MUST** remain at each stage for a defined minimum duration or request volume before progressing further, so there is a genuine opportunity to detect a regression at that stage.
+4. `std-del-canary-releases-04` A canary release needing to consistently serve the same version to a user **SHOULD** use a stateless mechanism, such as a deterministic hash of a user identifier.
 
 ### Implements These Principles
 
@@ -75,9 +74,8 @@ A rolling deployment's batch size is defined upfront, and each batch must pass a
 ### Standards
 
 1. `std-del-rolling-deployments-01` A rolling deployment's batch size, whether a fixed count or a percentage of the stack's instances, **MUST** be defined before the rollout begins.
-2. `std-del-rolling-deployments-02` A rolling deployment's batch size **MUST NOT** be decided ad hoc as the rollout proceeds.
-3. `std-del-rolling-deployments-03` Each batch of newly updated instances **MUST** pass a health check before the next batch begins, so an unhealthy update is detected before it spreads further across the stack.
-4. `std-del-rolling-deployments-04` A rolling deployment **MUST** keep a defined minimum percentage of the stack's instances healthy and serving production traffic throughout the rollout.
+2. `std-del-rolling-deployments-02` Each batch of newly updated instances **MUST** pass a health check before the next batch begins, so an unhealthy update is detected before it spreads further across the stack.
+3. `std-del-rolling-deployments-03` A rolling deployment **MUST** keep a defined minimum percentage of the stack's instances healthy and serving production traffic throughout the rollout.
 
 ### Implements These Principles
 
@@ -95,7 +93,7 @@ A schema or data change stays compatible with the old version for as long as bot
 
 1. `std-del-cross-version-data-compatibility-01` A schema or data change **MUST** remain compatible with the service's old version for the full duration both old and new versions may run concurrently, regardless of which progressive delivery technique is used.
 2. `std-del-cross-version-data-compatibility-02` A schema or data change **MAY** remain applied after a progressive delivery technique's rollout is aborted, provided it remains compatible with the service's old version.
-3. `std-del-cross-version-data-compatibility-03` The structure retained to maintain compatibility **MUST NOT** be removed until the progressive delivery technique's rollout has fully completed and its defined grace period has passed; its removal requires its own subsequent deployment.
+3. `std-del-cross-version-data-compatibility-03` A schema or data structure retained for cross-version compatibility **MUST NOT** be removed until the progressive delivery technique's rollout has fully completed and its defined grace period has passed; its removal requires its own subsequent deployment.
 
 ### Related Standards
 

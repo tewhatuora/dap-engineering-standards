@@ -56,7 +56,7 @@ A service that introduces attack surface, handles sensitive functionality, or pr
 
 1. `std-qe-penetration-testing-01` Penetration testing **MUST** be performed by a party independent of the team that designed or built the service under test, whether an internal specialist function or an accredited external provider.
 2. `std-qe-penetration-testing-02` A service that introduces attack surface, handles sensitive functionality, or processes sensitive data **MUST** undergo penetration testing before its initial release to production.
-3. `std-qe-penetration-testing-03` Penetration testing **MUST** be repeated whenever a material change to a service's architecture or attack surface occurs after that release.
+3. `std-qe-penetration-testing-03` Penetration testing **MUST** be repeated whenever a material change to a service's architecture or attack surface occurs after the service's initial release to production.
 
 ### Implements These Principles
 

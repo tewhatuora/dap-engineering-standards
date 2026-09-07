@@ -26,8 +26,7 @@ A workload uses only runtime models supported by platform capabilities that the 
 
 ### Standards
 
-1. `std-arch-platform-capability-01` The runtime models evaluated for a workload **MUST** be limited to those the organisation operates or has approved for operational use.
-2. `std-arch-platform-capability-02` A runtime model requiring a new, unapproved platform capability **MUST NOT** be adopted until that capability is approved for operational use.
+1. `std-arch-platform-capability-01` A runtime model requiring a new, unapproved platform capability **MUST NOT** be adopted until that capability is approved for operational use.
 
 ### Implements These Principles
 
@@ -42,7 +41,7 @@ State required to fulfil a request remains available independently of any servic
 ### Standards
 
 1. `std-arch-request-state-01` State required to fulfil a request **MUST** remain available independently of any service instance.
-2. `std-arch-request-state-02` Instance memory and local disk **MUST NOT** be the sole store for that state.
+2. `std-arch-request-state-02` Instance memory and local disk **MUST NOT** be the sole store for state required to fulfil a request.
 
 ### Implements These Principles
 

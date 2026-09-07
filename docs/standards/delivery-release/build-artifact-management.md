@@ -60,11 +60,10 @@ A built artifact has an immutable reference and a unique, traceable identifier; 
 
 1. `std-del-artifact-identity-immutability-01` An artifact **MUST** be assigned a unique, traceable identifier at build time, linking it back to the source commit and build run that produced it.
 2. `std-del-artifact-identity-immutability-02` A released artifact **MUST NOT** be modified, patched, or reassembled after it is built.
-3. `std-del-artifact-identity-immutability-03` A required change **MUST** instead be delivered as a new build carrying a new identifier.
+3. `std-del-artifact-identity-immutability-03` A required change to a released artifact **MUST** be delivered as a new build carrying a new identifier.
 4. `std-del-artifact-identity-immutability-04` A released artifact **MUST NOT** be referenced by a floating or mutable label capable of later resolving to different content.
-5. `std-del-artifact-identity-immutability-05` A consumer **MUST** be able to rely on a given reference always resolving to the same artifact.
-6. `std-del-artifact-identity-immutability-06` An artifact built for testing or validation ahead of release, such as a snapshot or release candidate build, **MUST** be identifiable as such.
-7. `std-del-artifact-identity-immutability-07` An artifact built for testing or validation ahead of release, such as a snapshot or release candidate build, **MUST NOT** be consumed as a released artifact.
+5. `std-del-artifact-identity-immutability-05` An artifact built for testing or validation ahead of release, such as a snapshot or release candidate build, **MUST** be identifiable as such.
+6. `std-del-artifact-identity-immutability-06` An artifact built for testing or validation ahead of release, such as a snapshot or release candidate build, **MUST NOT** be consumed as a released artifact.
 
 ### Related Standards
 
@@ -85,9 +84,8 @@ A built artifact is published to an approved repository only by the automated pi
 1. `std-del-artifact-repository-01` A built artifact **MUST** be stored in an approved artifact repository.
 2. `std-del-artifact-repository-02` A built artifact **MUST NOT** be distributed solely as a build job's own output or attachment.
 3. `std-del-artifact-repository-03` A new artifact version **MUST** be published to the repository only by an automated build pipeline.
-4. `std-del-artifact-repository-04` An artifact **MUST NOT** be published manually.
-5. `std-del-artifact-repository-05` Write access to the repository **MUST** be restricted to the automated pipeline's own identity.
-6. `std-del-artifact-repository-06` Read access **SHOULD** be scoped to the teams and services that need it.
+4. `std-del-artifact-repository-04` Write access to the repository **MUST** be restricted to the automated pipeline's own identity.
+5. `std-del-artifact-repository-05` Read access **SHOULD** be scoped to the teams and services that need it.
 
 ### Related Standards
 
@@ -129,8 +127,7 @@ A verified artifact is promoted unchanged through every subsequent environment, 
 ### Standards
 
 1. `std-del-artifact-promotion-01` An artifact that has passed verification in one environment **MUST** be promoted unchanged into every subsequent environment.
-2. `std-del-artifact-promotion-02` An artifact that has passed verification in one environment **MUST NOT** be rebuilt, recompiled, or reassembled to reach a later stage.
-3. `std-del-artifact-promotion-03` Each promotion of an artifact into an environment **MUST** be recorded, preserving traceability from the artifact's identifier back to its source and build, and forward to the environment it was promoted into.
+2. `std-del-artifact-promotion-02` Each promotion of an artifact into an environment **MUST** be recorded, preserving traceability from the artifact's identifier back to its source and build, and forward to the environment it was promoted into.
 
 ### Related Standards
 

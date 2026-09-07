@@ -47,7 +47,7 @@ Performance testing runs before an initial release or production feature activat
 1. `std-qe-test-timing-01` Performance testing **MUST** be performed before a service, or a capability with a defined performance or capacity target, is first released to production.
 2. `std-qe-test-timing-02` Where a capability with a defined performance or capacity target is controlled by a feature flag, performance testing **MUST** be performed before that flag's activation for production traffic.
 3. `std-qe-test-timing-03` Performance testing **SHOULD** be performed before an event anticipated to generate demand materially above a service's normal operating level.
-4. `std-qe-test-timing-04` Beyond these triggers, performance testing **SHOULD** also be repeated at a regular interval as a service continues to evolve after its initial release.
+4. `std-qe-test-timing-04` Performance testing **SHOULD** be repeated at a regular interval as a service continues to evolve after its initial release.
 
 ### Related Standards
 
@@ -136,7 +136,7 @@ A threshold failure is a blocking defect that undergoes root cause investigation
 
 1. `std-qe-test-results-01` A result that fails to meet its defined threshold **MUST** be treated as a blocking defect.
 2. `std-qe-test-results-02` A failing result's root cause **MUST** be investigated.
-3. `std-qe-test-results-03` A failing result **MUST NOT** be dismissed or re-run without that investigation.
+3. `std-qe-test-results-03` A failing result **MUST NOT** be dismissed or re-run before its root cause is investigated.
 4. `std-qe-test-results-04` A material regression against a previous test run's result **SHOULD** be investigated, even where the result still meets its defined threshold.
 5. `std-qe-test-results-05` Each test run's outcome **MUST** be recorded alongside its telemetry, so the run remains reviewable without re-analysis.
 6. `std-qe-test-results-06` The procedure for running a performance test and interpreting its result **MUST** be captured in a runbook.

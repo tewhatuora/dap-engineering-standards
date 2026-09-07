@@ -37,7 +37,7 @@ A proven, actively maintained technology is preferred, and working knowledge of 
 
 1. `std-arch-supportability-01` A technology **SHOULD** be mature and proven unless a newer alternative provides clear value that justifies its additional risk.
 2. `std-arch-supportability-02` A technology **SHOULD** show evidence of active maintenance and support from its publisher, such as regular updates or responsive issue handling.
-3. `std-arch-supportability-03` Publisher size or reputation alone **SHOULD NOT** substitute for this evidence.
+3. `std-arch-supportability-03` Publisher size or reputation alone **SHOULD NOT** substitute for evidence of active maintenance and support.
 4. `std-arch-supportability-04` Working knowledge of a technology **SHOULD** extend beyond a single team member, so its use and support do not depend on one individual's availability.
 
 ### Implements These Principles

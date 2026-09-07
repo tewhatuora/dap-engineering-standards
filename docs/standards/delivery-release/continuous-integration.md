@@ -141,10 +141,9 @@ A pipeline runs its fastest, highest-signal checks first, stops dependent work a
 2. `std-del-check-ordering-performance-02` A pipeline **MUST** halt at the stage that fails.
 3. `std-del-check-ordering-performance-03` A pipeline **MUST NOT** continue executing a later stage whose outcome depends on the failed stage having passed.
 4. `std-del-check-ordering-performance-04` A pipeline stage that is consistently slow or unreliable **SHOULD** be identified and remediated.
-5. `std-del-check-ordering-performance-05` A pipeline stage that is consistently slow or unreliable **SHOULD NOT** be accepted indefinitely as a fixed cost of integration.
-6. `std-del-check-ordering-performance-06` A test that fails intermittently without a change in the code it exercises **MUST** be fixed or quarantined and tracked for remediation.
-7. `std-del-check-ordering-performance-07` A test that fails intermittently without a change in the code it exercises **MUST NOT** be handled solely by retrying it until it passes.
-8. `std-del-check-ordering-performance-08` Independent pipeline stages **SHOULD** execute in parallel, where the tooling and available execution capacity support it.
+5. `std-del-check-ordering-performance-05` A test that fails intermittently without a change in the code it exercises **MUST** be fixed or quarantined and tracked for remediation.
+6. `std-del-check-ordering-performance-06` A test that fails intermittently without a change in the code it exercises **MUST NOT** be handled solely by retrying it until it passes.
+7. `std-del-check-ordering-performance-07` Independent pipeline stages **SHOULD** execute in parallel, where the tooling and available execution capacity support it.
 
 ### Implements These Principles
 
@@ -199,7 +198,7 @@ A successful pipeline produces a uniquely identified artifact set for each deplo
 ### Standards
 
 1. `std-del-build-artifact-01` A pipeline run that passes its required validation **MUST** produce a uniquely identified artifact set for each deployable component it builds.
-2. `std-del-build-artifact-02` Each artifact in the set **MUST** be uniquely identified and stored so it can be retrieved unchanged for every later environment to which it is promoted.
+2. `std-del-build-artifact-02` Each artifact produced for a deployable component **MUST** be uniquely identified and stored so it can be retrieved unchanged for every later environment to which it is promoted.
 3. `std-del-build-artifact-03` A build artifact **MUST NOT** be rebuilt from source for a later environment.
 4. `std-del-build-artifact-04` Each artifact validated earlier in the pipeline **MUST** be the one promoted and deployed.
 5. `std-del-build-artifact-05` Where a later environment requires environment-specific configuration, that configuration **MUST** be applied externally to the build artifact, without altering its verified contents.

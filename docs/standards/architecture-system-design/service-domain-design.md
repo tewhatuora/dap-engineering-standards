@@ -56,9 +56,8 @@ A service interacts with another service only through its well-defined, publishe
 
 ### Standards
 
-1. `std-arch-published-interfaces-01` A service **MUST** communicate with another service only through a well-defined, published interface.
-2. `std-arch-published-interfaces-02` Direct access to another service's internal code or underlying infrastructure **MUST NOT** be used as an integration mechanism.
-3. `std-arch-published-interfaces-03` A service's published interface **MUST** be the only path another service or consumer relies on, regardless of the underlying communication mechanism used.
+1. `std-arch-published-interfaces-01` Direct access to another service's internal code or underlying infrastructure **MUST NOT** be used as an integration mechanism.
+2. `std-arch-published-interfaces-02` A service's published interface **MUST** be the only path another service or consumer relies on, regardless of the underlying communication mechanism used.
 
 ### Related Standards
 

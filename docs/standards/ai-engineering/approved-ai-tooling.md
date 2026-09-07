@@ -48,8 +48,7 @@ Unapproved or shadow AI tools are prohibited for organisational work and cannot 
 ### Standards
 
 1. `std-ai-unapproved-tools-01` Personnel **MUST NOT** use AI tools not on the Approved Tooling Register for any activity involving organisational code, data, or systems.
-2. `std-ai-unapproved-tools-02` Personnel **MUST NOT** use unapproved ("shadow AI") tools, including consumer-grade or free public AI services, for organisational engineering work.
-3. `std-ai-unapproved-tools-03` Use of an unapproved tool **MUST NOT** be justified retroactively.
+2. `std-ai-unapproved-tools-02` Use of an unapproved tool **MUST NOT** be justified retroactively.
 
 ### Implements These Principles
 

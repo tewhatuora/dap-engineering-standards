@@ -11,7 +11,7 @@ A release is its own deliberate, recorded decision, made independently of the de
 ### Standards
 
 1. `std-del-release-deployment-01` A release **MUST** be treated as the deliberate decision to make a deployed change available to its intended users.
-2. `std-del-release-deployment-02` A deployment **MUST NOT** itself be treated as that decision.
+2. `std-del-release-deployment-02` A deployment **MUST NOT** make a deployed change available to its intended users unless a release decision authorises that availability.
 3. `std-del-release-deployment-03` The decision to release a deployed change **MUST** be made independently of the decision to deploy it, whether or not the two occur at the same time.
 4. `std-del-release-deployment-04` A release **MUST** be recorded as an explicit act in its own right, separate from the record of any deployment.
 
@@ -60,7 +60,7 @@ A material release has audience-appropriate notes published through an authorita
 4. `std-del-release-communication-04` A changelog entry **SHOULD** be categorised by type of change, such as added, changed, fixed, or security, following a convention such as [Keep a Changelog](https://keepachangelog.com/).
 5. `std-del-release-communication-05` Where release notes are generated from commit metadata, a user-facing change **MUST** use the adopted user-facing commit classification.
 6. `std-del-release-communication-06` Where a change is hidden behind a feature flag, its release notes **MUST** be published when the capability is released to its intended users.
-7. `std-del-release-communication-07` Release notes **MAY** also be published elsewhere.
+7. `std-del-release-communication-07` Release notes **MAY** also be published through additional channels.
 8. `std-del-release-communication-08` Where a repository changelog is authoritative, release notes published elsewhere **MUST** remain consistent with it.
 
 ### Related Standards
@@ -108,7 +108,7 @@ A release is attributable to an authorised, accountable role, with applicable pr
 ### Standards
 
 1. `std-del-release-approval-01` The decision to release a deployed change to its intended users **MUST** be attributable to an authorised, accountable role.
-2. `std-del-release-approval-02` An emergency release made to address an active incident **MAY** be authorised without the standard approval.
+2. `std-del-release-approval-02` An emergency release made to address an active incident **MAY** bypass the usual release approval process.
 3. `std-del-release-approval-03` An emergency release made to address an active incident **SHOULD** receive post-implementation review after the incident is resolved.
 4. `std-del-release-approval-04` Every applicable prerequisite, such as an available rollback path or prepared release notes, **MUST** be satisfied before release.
 5. `std-del-release-approval-05` A release's approval, including who granted it and when, **MUST** be retained as a record, so the release can be audited after the fact.

@@ -46,10 +46,9 @@ A dependency is sourced only through a governed internal proxy, with its integri
 
 ### Standards
 
-1. `std-code-dependency-sources-01` A dependency **MUST NOT** be resolved directly against the public internet.
-2. `std-code-dependency-sources-02` A dependency **MUST** be sourced only through a governed internal proxy service.
-3. `std-code-dependency-sources-03` A governed internal proxy **MUST** be configured to allow, restrict, cache, or block a specific registry or package according to organisational policy.
-4. `std-code-dependency-sources-04` A dependency's integrity **MUST** be verifiable before it is installed, whether via a checksum or signature recorded in a lockfile, or automatically verified against the source repository's checksum.
+1. `std-code-dependency-sources-01` A dependency **MUST** be sourced only through a governed internal proxy service.
+2. `std-code-dependency-sources-02` A governed internal proxy **MUST** be configured to allow, restrict, cache, or block a specific registry or package according to organisational policy.
+3. `std-code-dependency-sources-03` A dependency's integrity **MUST** be verifiable before it is installed, whether via a checksum or signature recorded in a lockfile, or automatically verified against the source repository's checksum.
 
 ### Related Standards
 
@@ -126,9 +125,8 @@ Every release generates a machine-readable SBOM of its actual resolved dependenc
 1. `std-code-software-bill-of-materials-sbom-01` An SBOM reflecting a service's actual resolved dependency versions, including transitive dependencies, **MUST** be generated for every release artifact built.
 2. `std-code-software-bill-of-materials-sbom-02` An SBOM **MUST** be generated from the resolved dependency set so it reflects what the built artifact actually contains.
 3. `std-code-software-bill-of-materials-sbom-03` An SBOM **MUST** be produced in a standard, machine-readable format, such as [SPDX](https://spdx.dev/) or [CycloneDX](https://cyclonedx.org/).
-4. `std-code-software-bill-of-materials-sbom-04` An unstructured or bespoke format **MUST NOT** be used.
-5. `std-code-software-bill-of-materials-sbom-05` A generated SBOM **MUST** be retained or published in a location accessible for later inspection, for at least as long as the release artifact it describes remains supported.
-6. `std-code-software-bill-of-materials-sbom-06` An SBOM **MUST** be available to support rapid identification of an affected service when a new vulnerability in a dependency is disclosed.
+4. `std-code-software-bill-of-materials-sbom-04` A generated SBOM **MUST** be retained or published in a location accessible for later inspection, for at least as long as the release artifact it describes remains supported.
+5. `std-code-software-bill-of-materials-sbom-05` An SBOM **MUST** be available to support rapid identification of an affected service when a new vulnerability in a dependency is disclosed.
 
 ### Related Standards
 
@@ -151,12 +149,12 @@ Dependencies are updated in small, tested increments on a routine cadence, reass
 
 1. `std-code-dependency-maintenance-01` Available dependency updates **SHOULD** be reviewed on a routine cadence, with automated tooling used to detect and raise them where available.
 2. `std-code-dependency-maintenance-02` A dependency that no longer shows evidence of active maintenance after adoption **SHOULD** be reassessed against the same criteria applied when it was first selected.
-3. `std-code-dependency-maintenance-03` A dependency that fails this reassessment **SHOULD** be replaced.
+3. `std-code-dependency-maintenance-03` A dependency that no longer meets the criteria applied when it was selected **SHOULD** be replaced.
 4. `std-code-dependency-maintenance-04` A routine dependency update **MUST** be tested and merged through the same change process as any other code change.
 5. `std-code-dependency-maintenance-05` A team **SHOULD** maintain a unit and integration test suite strong enough to give confidence that a dependency update has not introduced a defect.
 6. `std-code-dependency-maintenance-06` A dependency no longer referenced by a codebase **SHOULD** be removed from its dependency manifest and lockfile in the same change that removes its last use.
 7. `std-code-dependency-maintenance-07` A dependency with a known vulnerability **MUST** be remediated within its own risk-proportionate timeframe.
-8. `std-code-dependency-maintenance-08` A dependency with a known vulnerability **MUST NOT** be deferred to this routine update cadence.
+8. `std-code-dependency-maintenance-08` A dependency with a known vulnerability **MUST NOT** be deferred to the routine dependency-update cadence.
 9. `std-code-dependency-maintenance-09` A dependency update **SHOULD** be applied in small, frequent increments; deferring it into an infrequent, large-scale upgrade compounds risk and effort.
 
 ### Related Standards

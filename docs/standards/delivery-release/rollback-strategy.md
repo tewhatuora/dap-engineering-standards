@@ -54,7 +54,7 @@ A rollback defaults to the most recently verified version, and completes within 
 ### Standards
 
 1. `std-del-rollback-target-timing-01` A rollback's target version **SHOULD** default to the version most recently verified through the service's own deployment history.
-2. `std-del-rollback-target-timing-02` Selection of an older version **SHOULD** be recorded with the rollback.
+2. `std-del-rollback-target-timing-02` Selection of a rollback target older than the most recently verified version **SHOULD** be recorded with the rollback.
 3. `std-del-rollback-target-timing-03` A rollback **MUST** be capable of being fully executed within the service's defined recovery time objective.
 
 ### Related Standards
@@ -73,9 +73,8 @@ A rollback proceeds only when its target version is compatible with the current 
 
 ### Standards
 
-1. `std-del-rollback-data-compatibility-01` A version being rolled back to **MUST** remain compatible with the current state of any data or schema that a subsequent version has already changed.
-2. `std-del-rollback-data-compatibility-02` A rollback **MUST NOT** proceed where doing so would run an incompatible version against the current data or schema state.
-3. `std-del-rollback-data-compatibility-03` A forward-fix **MUST** be used instead until compatibility is restored.
+1. `std-del-rollback-data-compatibility-01` A rollback **MUST NOT** proceed where doing so would run an incompatible version against the current data or schema state.
+2. `std-del-rollback-data-compatibility-02` A forward-fix **MUST** be used until compatibility is restored where rollback would run an incompatible version against the current data or schema state.
 
 ### Related Standards
 

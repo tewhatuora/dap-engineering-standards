@@ -55,9 +55,8 @@ A database's applied-migration history records applied migrations, verifies thei
 1. `std-code-migration-history-01` A migration tool **MUST** record, within the target database or an equivalent authoritative store, which migration has been applied to that specific instance.
 2. `std-code-migration-history-02` Where a migration tool records checksums, it **MUST** verify an already-applied versioned migration's checksum before applying a later migration.
 3. `std-code-migration-history-03` A checksum mismatch **MUST** halt migration execution.
-4. `std-code-migration-history-04` A database instance's applied-migration history **MUST NOT** be edited manually.
-5. `std-code-migration-history-05` A database instance's applied-migration history **MUST** be modified only by the migration tool.
-6. `std-code-migration-history-06` A migration tool **MUST NOT** re-apply a versioned migration already recorded in that history.
+4. `std-code-migration-history-04` A database instance's applied-migration history **MUST** be modified only by the migration tool.
+5. `std-code-migration-history-05` A migration tool **MUST NOT** re-apply a versioned migration already recorded in the database instance's applied-migration history.
 
 ### Implements These Principles
 
@@ -173,7 +172,7 @@ A migration runs automatically and traceably within the deployment pipeline, and
 3. `std-code-pipeline-execution-03` A deployment pipeline **MUST NOT** deploy a service's application code to an environment before that environment's required migration has completed successfully.
 4. `std-code-pipeline-execution-04` A migration's execution, including which migration ran, when, and its outcome, **MUST** be logged in a way that is traceable back to the deployment that triggered it.
 5. `std-code-pipeline-execution-05` A failed migration **MUST** halt its deployment pipeline.
-6. `std-code-pipeline-execution-06` Deployment **MUST NOT** proceed until the cause of that failure is resolved.
+6. `std-code-pipeline-execution-06` A deployment halted by a failed migration **MUST NOT** proceed until the cause of the migration failure is resolved.
 
 ### Related Standards
 

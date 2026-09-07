@@ -49,10 +49,10 @@ Test datasets are provisioned on demand, masked or de-identified, and deleted af
 ### Standards
 
 1. `std-qe-dataset-lifecycle-01` Provisioning and deletion of a test dataset **MUST** each be available to a team on demand through an automated process that is documented well enough for the team to operate and maintain it.
-2. `std-qe-dataset-lifecycle-02` An individual team member **MUST NOT** need personal access to a production environment to run this process.
-3. `std-qe-dataset-lifecycle-03` The access required **MUST** be held by the process itself, scoped to least privilege.
-4. `std-qe-dataset-lifecycle-04` Retrieval of data from a production source by this process **MUST NOT** cause the production environment to breach its performance or capacity targets.
-5. `std-qe-dataset-lifecycle-05` Masking or de-identification of a production-derived extract **MUST** be performed automatically as part of this process.
+2. `std-qe-dataset-lifecycle-02` An individual team member **MUST NOT** need personal access to a production environment to provision or delete a test dataset.
+3. `std-qe-dataset-lifecycle-03` Access used to provision or delete a test dataset **MUST** be held by the automated process and scoped to least privilege.
+4. `std-qe-dataset-lifecycle-04` Retrieving production data to provision a test dataset **MUST NOT** cause the production environment to breach its performance or capacity targets.
+5. `std-qe-dataset-lifecycle-05` Masking or de-identification of a production-derived extract **MUST** be performed automatically when the test dataset is provisioned.
 6. `std-qe-dataset-lifecycle-06` A test dataset derived from production **MUST** be deleted once the testing activity it supports concludes.
 
 ### Related Standards

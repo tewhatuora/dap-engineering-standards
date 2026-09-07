@@ -53,7 +53,7 @@ A higher-risk change receives broader scrutiny and a reviewer with expertise mat
 1. `std-code-risk-based-review-01` A change **MUST** be classified as higher-risk if it is security-relevant, makes a breaking schema change, spans multiple services or components, or is hard to roll back.
 2. `std-code-risk-based-review-02` Review scrutiny for a higher-risk change **MUST** be broader than for a routine change, covering its impact and reversibility.
 3. `std-code-risk-based-review-03` A higher-risk change **MUST** be reviewed by someone with expertise matching the risk factor involved.
-4. `std-code-risk-based-review-04` A repository **MAY** apply a stricter review requirement than this baseline, documented in its `README` or a location linked from it.
+4. `std-code-risk-based-review-04` A repository **MAY** document and apply review requirements stricter than the organisation's minimum review requirements.
 
 ### Implements These Principles
 
@@ -88,7 +88,7 @@ A reviewer checks a change's correctness, simplicity, maintainability, and secur
 5. `std-code-code-quality-security-05` Refactoring **SHOULD** be performed as part of routine engineering work where code's structure impairs its maintainability.
 6. `std-code-code-quality-security-06` A security-relevant change, such as one that introduces new attack surface or handles sensitive data, **MUST** be reviewed for security weaknesses relevant to the change.
 7. `std-code-code-quality-security-07` Review **SHOULD** incorporate relevant output from static analysis or AI-assisted review tooling.
-8. `std-code-code-quality-security-08` A reviewer's own scrutiny **SHOULD** then focus on what such tooling cannot reliably assess.
+8. `std-code-code-quality-security-08` A reviewer's own scrutiny **SHOULD** focus on aspects that static analysis and AI-assisted review tooling cannot reliably assess.
 
 ### Related Standards
 
@@ -139,7 +139,7 @@ Blocking feedback is resolved before merge, deferred advisory feedback is tracke
 2. `std-code-review-feedback-02` Advisory feedback deferred until after merge **SHOULD** be recorded in a tracking system so it is not lost.
 3. `std-code-review-feedback-03` A change **MUST NOT** be merged while unresolved blocking feedback remains outstanding.
 4. `std-code-review-feedback-04` A change materially revised after approval, such as a behaviour-changing commit or conflict resolution, **MUST** be re-reviewed.
-5. `std-code-review-feedback-05` The change's prior approval **SHOULD** be marked stale.
+5. `std-code-review-feedback-05` A change's prior approval **SHOULD** be marked stale after the change is materially revised.
 
 ### Implements These Principles
 
@@ -169,7 +169,7 @@ A review request is actioned within an agreed timeframe, or reassigned to a revi
 ### Standards
 
 1. `std-code-review-turnaround-01` A review request **SHOULD** be actioned within an agreed, reasonable timeframe appropriate to the repository or team.
-2. `std-code-review-turnaround-02` A reviewer unable to review a request within that timeframe **SHOULD** reassign or flag it so another reviewer can act on it.
+2. `std-code-review-turnaround-02` A reviewer unable to review a request within its agreed timeframe **SHOULD** reassign or flag it so another reviewer can act on it.
 
 ### Implements These Principles
 

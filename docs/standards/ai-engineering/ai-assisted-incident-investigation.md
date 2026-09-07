@@ -29,8 +29,8 @@ An AI tool draws on standard telemetry and avoids a separate service export.
 ### Standards
 
 1. `std-ai-standardised-telemetry-01` An AI tool **MUST** draw on telemetry produced to the organisation's established instrumentation and semantic standards.
-2. `std-ai-standardised-telemetry-02` A service **SHOULD NOT** maintain a separate or altered telemetry export to suit that tool.
-3. `std-ai-standardised-telemetry-03` Such a tool **SHOULD** be integrated through the organisation's established observability platform so it can draw on telemetry from every service a transaction touches.
+2. `std-ai-standardised-telemetry-02` A service **SHOULD NOT** maintain a separate or altered telemetry export to suit an AI tool used for incident investigation.
+3. `std-ai-standardised-telemetry-03` An AI tool used for incident investigation **SHOULD** be integrated through the organisation's established observability platform so it can draw on telemetry from every service a transaction touches.
 
 ### Related Standards
 
@@ -53,7 +53,7 @@ A responder verifies an AI tool's diagnosis, and remediation actions receive hum
 
 1. `std-ai-incident-human-oversight-01` An AI tool's diagnosis of an incident's likely cause **MUST** be independently verified by a responder before being relied on to guide a high-impact or irreversible remediation action.
 2. `std-ai-incident-human-oversight-02` An AI agent **MUST NOT** autonomously execute a high-impact or irreversible remediation or configuration change in response to an incident.
-3. `std-ai-incident-human-oversight-03` A person **SHOULD** carry out or approve other remediation or configuration changes before they take effect.
+3. `std-ai-incident-human-oversight-03` A person **SHOULD** carry out or approve a remediation or configuration change that is not high-impact or irreversible before it takes effect.
 
 ### Implements These Principles
 

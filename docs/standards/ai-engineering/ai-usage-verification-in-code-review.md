@@ -11,11 +11,10 @@ An author independently verifies the correctness, security, tests, and dependenc
 ### Standards
 
 1. `std-ai-pre-submission-verification-01` Authors **MUST** independently verify the correctness and intended behaviour of AI-generated or AI-modified code before submitting it for review.
-2. `std-ai-pre-submission-verification-02` AI output **MUST NOT** be submitted unexamined.
-3. `std-ai-pre-submission-verification-03` Authors **SHOULD** confirm that applicable automated tests, linting, and static analysis pass before submission.
-4. `std-ai-pre-submission-verification-04` Authors **SHOULD** confirm that test coverage adequately reflects the change before submission.
-5. `std-ai-pre-submission-verification-05` Authors **MUST** check AI-generated code for hallucinated or non-existent dependencies, packages, and APIs before submission.
-6. `std-ai-pre-submission-verification-06` Authors **MUST** screen AI-generated code for security weaknesses.
+2. `std-ai-pre-submission-verification-02` Authors **SHOULD** confirm that applicable automated tests, linting, and static analysis pass before submission.
+3. `std-ai-pre-submission-verification-03` Authors **SHOULD** confirm that test coverage adequately reflects the change before submission.
+4. `std-ai-pre-submission-verification-04` Authors **MUST** check AI-generated code for hallucinated or non-existent dependencies, packages, and APIs before submission.
+5. `std-ai-pre-submission-verification-05` Authors **MUST** screen AI-generated code for security weaknesses.
 
 ### Related Standards
 
@@ -39,8 +38,6 @@ Material AI involvement in a submission is disclosed clearly enough for a review
 
 1. `std-ai-ai-disclosure-01` Authors **MUST** disclose when a submission contains material AI-generated or AI-modified content by completing the AI disclosure section of the standard pull or merge request template.
 2. `std-ai-ai-disclosure-02` Where AI assistance is not applied uniformly across a change, disclosure **MUST** be specific enough for a reviewer to identify which parts of the change were AI-assisted.
-3. `std-ai-ai-disclosure-03` Authors **MUST NOT** omit or obscure disclosure of AI involvement.
-4. `std-ai-ai-disclosure-04` Authors **MUST NOT** remove or bypass the template's disclosure section.
 
 ### Implements These Principles
 
