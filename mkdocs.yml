@@ -79,6 +79,7 @@ nav:
       - Simplicity & Maintainability: principles/engineering-practice/simplicity-maintainability.md
       - Reuse: principles/engineering-practice/reuse.md
       - Everything as Code: principles/engineering-practice/everything-as-code.md
+      - Version Control: principles/engineering-practice/version-control.md
       - Automation: principles/engineering-practice/automation.md
       - Fast Feedback: principles/engineering-practice/fast-feedback.md
       - AI-Assisted Engineering: principles/engineering-practice/ai-assisted-engineering.md

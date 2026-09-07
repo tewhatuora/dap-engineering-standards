@@ -2,7 +2,7 @@
 
 ## Overview
 
-How software is implemented affects how easily it can be understood, reviewed, maintained, and changed. This section defines the engineering standards for consistent, maintainable, traceable, and secure implementation.
+Code implementation standards require software to be consistent, maintainable, traceable, and secure.
 
 Choose a standard below to read it in full.
 
@@ -10,7 +10,7 @@ Choose a standard below to read it in full.
 
 ### Version Control
 
-Keep every codebase in one authoritative, traceable repository, and keep secrets out of its history.
+Every codebase is held in one authoritative, traceable repository that excludes secrets from its history.
 
 [Read more](version-control.md).
 
@@ -28,7 +28,7 @@ One style guide per language, applied consistently regardless of whether a perso
 
 ### Linting & Style Enforcement
 
-Apply automated linting consistently, with blocking violations resolved through the normal engineering process.
+Automated linting is applied consistently, with blocking violations resolved through the normal engineering process.
 
 [Read more](linting-style-enforcement.md).
 
@@ -46,24 +46,24 @@ Every change is reviewed and approved by someone other than its author, with scr
 
 ### Configuration Management
 
-Externalise a setting that varies by environment, and never let a secret live in configuration.
+Settings that vary by environment are externalised, and secrets are excluded from configuration.
 
 [Read more](configuration-management.md).
 
 ### Dependency & Runtime Management
 
-Select every dependency and runtime deliberately, source it only through governed channels, and keep it current.
+Every dependency and runtime is deliberately selected, sourced through governed channels, and kept current.
 
 [Read more](dependency-runtime-management.md).
 
 ### Data Access & Transaction Management
 
-Centralise data access behind a defined layer, with safe queries and explicit, bounded transactions.
+Data access uses a defined layer, safe queries, and explicit, bounded transactions.
 
 [Read more](data-access-transaction-management.md).
 
 ### Database Migration Tooling
 
-Define every schema or data change as version-controlled migration code, applied consistently through dedicated tooling.
+Every planned schema or data change is defined as version-controlled migration code and applied consistently through dedicated tooling.
 
 [Read more](database-migration-tooling.md).

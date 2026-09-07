@@ -1,87 +1,132 @@
 # Version Control
 
-## Summary
+Every codebase is held in one authoritative, traceable repository that excludes secrets from its history.
 
-> Keep every codebase in one authoritative, traceable repository, and keep secrets out of its history.
+## Authoritative Repository
 
-## Standards
+### Summary
 
-### Mandatory, Authoritative Repository
+A codebase has exactly one authoritative, backed-up Git repository, and adopted changes are merged into it.
 
-> A codebase lives in exactly one authoritative, backed-up Git repository; no fork or local copy is ever a source of truth.
+### Standards
 
-1. A codebase's source code, infrastructure definitions, and pipeline definitions **MUST** be held in one designated, Git-based repository, which serves as the definitive record for that codebase's current and historical state.
-2. A fork, mirror, or local copy of a repository **MUST** never be treated as an alternative source of truth; a change intended for adoption **MUST** be merged back into the designated repository.
-3. The designated repository **MUST** be recoverable from a backup or equivalent mechanism independent of any single contributor's local clone, so accidental deletion or corruption does not result in permanent loss of the codebase's history.
+1. `std-code-authoritative-repository-01` A codebase's source code, infrastructure definitions, and pipeline definitions **MUST** be held in one designated, Git-based repository, which serves as the definitive record for that codebase's current and historical state.
+2. `std-code-authoritative-repository-02` A fork, mirror, or local copy of a repository **MUST NOT** be treated as an alternative source of truth.
+3. `std-code-authoritative-repository-03` A change intended for adoption **MUST** be merged back into the designated repository.
+4. `std-code-authoritative-repository-04` The designated repository **MUST** be recoverable from a backup or equivalent mechanism independent of any single contributor's local clone, so accidental deletion or corruption does not result in permanent loss of the codebase's history.
 
-#### References
+### Related Standards
+
+- [Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)
+
+### Implements These Principles
 
 - [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
-- [Backup & Disaster Recovery](../operations-observability/backup-disaster-recovery.md)
 
-### Atomic, Well-Described Commits
+## Repository Hygiene
 
-> A commit represents one coherent change, described clearly enough to stand alone as part of the repository's history.
+### Summary
 
-1. A commit **SHOULD** represent one coherent, logical change; an unrelated change **MUST NOT** be combined into the same commit.
-2. A commit message **MUST** describe the change's purpose and effect clearly enough to be understood without consulting its author directly.
-3. A commit message **SHOULD** follow a structured, consistent convention, such as [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), so a repository's history can be processed automatically, for example to generate a `CHANGELOG.md`.
-4. An adopted commit message convention **MUST** distinguish a user-facing change from an internal one, such as Conventional Commits' `feat`/`fix` versus `chore`/`docs`/`refactor` types, to drive automated changelog generation.
-5. A commit message that is generic or non-descriptive, such as one stating only that work is in progress or that a fix was made without describing it, **MUST NOT** be used.
-6. A correction to content already merged into a protected branch **MUST** be made through a new, subsequent commit; the historical record of the original change **MUST NOT** be altered or deleted to make the correction.
+Generated, editor-specific, and large binary content stays out of a repository's tracked history.
 
-#### References
+### Standards
+
+1. `std-code-repository-hygiene-01` A file that is generated or built from a repository's own tracked source, such as a compiled artifact or an installed dependency directory, or that is specific to an individual's editor, operating system, or workstation, **SHOULD** be excluded from version control through an ignore mechanism.
+2. `std-code-repository-hygiene-02` A binary asset not reproducible from source and large enough to degrade a repository's performance, such as a media file or dataset, **SHOULD** be stored through a mechanism designed for that content.
+
+### Implements These Principles
+
+- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
+
+## Sensitive Data
+
+### Summary
+
+A secret is excluded from repository content and metadata; any merged secret is immediately rotated and purged from history.
+
+### Standards
+
+1. `std-code-sensitive-data-01` A secret, credential, private key, or other sensitive value **MUST NOT** be committed to a repository.
+2. `std-code-sensitive-data-02` A sensitive value **MUST NOT** be introduced because removing it from a later commit does not remove it from the repository's history.
+3. `std-code-sensitive-data-03` A sensitive value **MUST NOT** be placed in repository metadata, such as a commit message, branch name, tag, or change description.
+4. `std-code-sensitive-data-04` A merge request **MUST** be scanned automatically for a sensitive value before it can be merged, so sensitive data is never accidentally merged into a protected branch.
+5. `std-code-sensitive-data-05` A merged sensitive value **MUST** be rotated immediately and purged from the repository's history.
+
+### Implements These Principles
+
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
+
+## Commit Quality
+
+### Summary
+
+A commit represents one coherent change, describes its purpose and effect through the adopted message convention, distinguishes user-facing changes, and is corrected through a subsequent commit without altering protected history.
+
+### Standards
+
+1. `std-code-commit-quality-01` A commit **SHOULD** represent one coherent, logical change.
+2. `std-code-commit-quality-02` An unrelated change **SHOULD NOT** be combined into the same commit.
+3. `std-code-commit-quality-03` A commit message **MUST** describe the change's purpose and effect clearly enough to be understood without consulting its author directly.
+4. `std-code-commit-quality-04` A commit message **SHOULD** follow a structured, consistent convention, such as [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), so a repository's history can be processed automatically, for example to generate a `CHANGELOG.md`.
+5. `std-code-commit-quality-05` An adopted commit message convention **SHOULD** distinguish a user-facing change from an internal one where the distinction drives automated changelog generation.
+6. `std-code-commit-quality-06` A commit message that is generic or non-descriptive, such as one stating only that work is in progress or that a fix was made without describing it, **MUST NOT** be used.
+7. `std-code-commit-quality-07` A correction to content already merged into a protected branch **MUST** be made through a new, subsequent commit.
+8. `std-code-commit-quality-08` The historical record of the original change **MUST NOT** be altered or deleted to make the correction.
+
+### Related Standards
 
 - [Code Style & Formatting](code-style-formatting.md)
 - [Branching Strategy](branching-strategy.md)
 - [Release Strategy](../delivery-release/release-strategy.md)
-- [Feature Flagging](../delivery-release/feature-flagging.md)
 
-### Commit Authorship Integrity
+### Implements These Principles
 
-> Every commit is attributable to the individual or automated process that actually authored it, never a shared account.
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
-1. A commit **MUST** be attributable to the individual engineer or the specific automated process, such as Dependabot, that authored it; a shared, generic, or anonymous account **MUST NOT** be used to author a commit.
-2. Where a repository supports commit verification, such as a signature tied to its author's identity, it **SHOULD** be enabled for a protected branch.
-3. An automated process that commits changes, such as a routine dependency or content update, **MUST** be identifiable as distinct from a human author.
+## Commit Authorship
 
-#### References
+### Summary
+
+Every commit is attributable to the individual or identifiable automated process that authored it, with verification enabled where supported.
+
+### Standards
+
+1. `std-code-commit-authorship-01` A commit **MUST** be attributable to the individual engineer or the specific automated process, such as Dependabot, that authored it.
+2. `std-code-commit-authorship-02` A shared, generic, or anonymous account **MUST NOT** be used to author a commit.
+3. `std-code-commit-authorship-03` A protected branch **SHOULD** enable commit verification where the repository supports signatures tied to an author's identity.
+4. `std-code-commit-authorship-04` An automated process that commits changes, such as a routine dependency or content update, **MUST** be identifiable as distinct from a human author.
+
+### Related Standards
 
 - [Identity & Access Management](../security-identity/identity-access-management.md)
 
-### Change Traceability
+### Implements These Principles
 
-> A change stays traceable from the branch that introduced it through to the tag that marks its release.
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
-1. A change **MUST** remain traceable from the branch that introduced it, through the merge request that proposed it and the commit that integrated it into a protected branch, to the tag that marks its release where one applies.
-2. A tag marking a released or published state **MUST** be immutable once created; it **MUST NOT** be moved, deleted, or reused to reference different content.
-3. Where an AI tool materially contributed to a change, the record of that change **MUST** retain enough context to identify the human accountable for it.
+## Change Traceability
 
-#### References
+### Summary
+
+A change remains traceable from its branch through its merge request and commit to an immutable release tag, with an accountable human identified for material AI contributions.
+
+### Standards
+
+1. `std-code-change-traceability-01` A change **MUST** remain traceable from the branch that introduced it, through the merge request that proposed it and the commit that integrated it into a protected branch, to the tag that marks its release where one applies.
+2. `std-code-change-traceability-02` A tag marking a released or published state **MUST** be immutable once created.
+3. `std-code-change-traceability-03` A tag marking a released or published state **MUST NOT** be moved, deleted, or reused to reference different content.
+4. `std-code-change-traceability-04` Where an AI tool materially contributed to a change, the record of that change **MUST** retain enough context to identify the human accountable for it.
+
+### Related Standards
 
 - [Branching Strategy](branching-strategy.md)
 - [Code Review](code-review.md)
 - [Release Strategy](../delivery-release/release-strategy.md)
+
+### Implements These Principles
+
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 - [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
 
-### Repository Hygiene & Exclusions
-
-> Generated, editor-specific, and large binary content stays out of a repository's tracked history.
-
-1. A file that is generated or built from a repository's own tracked source, such as a compiled artifact or an installed dependency directory, or that is specific to an individual's editor, operating system, or workstation, **MUST** be excluded from version control through an ignore mechanism rather than committed.
-2. A binary asset not reproducible from source and large enough to degrade a repository's performance, such as a media file or dataset, **SHOULD** be stored through a mechanism designed for that content, not committed directly to a repository.
-
-### No Sensitive Data
-
-> A secret never enters a repository, not even its metadata, and is rotated immediately if one ever is merged.
-
-1. A secret, credential, private key, or other sensitive value **MUST NOT** be committed to a repository; removing it from a later commit does not remove it from the repository's history, so it **MUST** never be introduced in the first place.
-2. This prohibition extends beyond file content to a repository's metadata, such as a commit message, branch name, tag, or change description; a sensitive value **MUST NOT** be placed in any of these either.
-3. A merge request **MUST** be scanned automatically for a sensitive value before it can be merged, so sensitive data is never accidentally merged into a protected branch.
-4. Where a sensitive value is found to have been merged, it **MUST** be rotated immediately and purged from the repository's history, not merely removed from its current state.
-
-#### References
-
-- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Automation](../../principles/engineering-practice/automation.md)

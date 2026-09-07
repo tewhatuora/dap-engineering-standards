@@ -15,6 +15,7 @@ Progressive exposure bounds the impact of an undetected failure while evidence i
 ### Implemented By These Standards
 
 - [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
+- [Configuration Management](../../standards/code-implementation/configuration-management.md)
 - [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
 - [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
