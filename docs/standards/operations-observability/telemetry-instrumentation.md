@@ -17,7 +17,6 @@
 
 - [Interoperability](../../principles/architecture-platform/interoperability.md)
 - [Observability](../../principles/reliability-operations/observability.md)
-- [Technology Stack Register](../architecture-system-design/technology-stack-register.md)
 
 ### Common Telemetry Semantics
 

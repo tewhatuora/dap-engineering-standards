@@ -126,7 +126,6 @@ nav:
       - Health Data Interoperability: standards/architecture-system-design/health-data-interoperability.md
       - Runtime Architecture: standards/architecture-system-design/runtime-architecture.md
       - Technology Stack Governance: standards/architecture-system-design/technology-stack-governance.md
-      - Technology Stack Register: standards/architecture-system-design/technology-stack-register.md
     - Code Implementation:
       - standards/code-implementation/index.md
       - Version Control: standards/code-implementation/version-control.md
