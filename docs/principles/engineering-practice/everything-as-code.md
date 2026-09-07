@@ -49,6 +49,23 @@ Undocumented post-creation steps leave part of the functional state outside the 
 - [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
 - [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 
+## Deterministic Generation
+
+### Summary
+
+A generated artifact is reproducible from its authoritative source and generation process without manual modification.
+
+### Reasoning
+
+Manual changes to generated output create state that its source and generation process cannot reproduce and that is lost when the output is generated again. Keeping changes in the source or generation process preserves the authoritative definition.
+
+Stable output from unchanged inputs makes substantive changes distinguishable from incidental differences and allows independently generated results to be compared.
+
+### Implemented By These Standards
+
+- [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
+- [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
+
 ## Code-Defined Change Path
 
 ### Summary

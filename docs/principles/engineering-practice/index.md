@@ -26,6 +26,12 @@ Keep system definitions in version control as the authoritative source for revie
 
 [Read more](everything-as-code.md).
 
+### Version Control
+
+Keep repository branches bounded, traceable, and independent of deployment environments.
+
+[Read more](version-control.md).
+
 ### Automation
 
 Automate repeatable work through maintained code while preserving human judgement and review for decisions that require them.
