@@ -16,6 +16,7 @@ When several solutions meet a requirement equally well, the simplest one is easi
 
 - [Code Review](../../standards/code-implementation/code-review.md)
 - [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
+- [Containerisation](../../standards/platform-infrastructure/containerisation.md)
 
 ## Readable, Consistent Code
 
@@ -52,6 +53,7 @@ A stable interface separates a component's contract from its implementation. Dep
 - [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
+- [Serverless](../../standards/platform-infrastructure/serverless.md)
 
 ## Technology Diversity
 

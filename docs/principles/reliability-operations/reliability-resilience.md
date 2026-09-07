@@ -17,6 +17,7 @@ Redundancy matched to service criticality limits outage impact without imposing 
 - [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
+- [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)
 
 ## Dependency Failure Containment
