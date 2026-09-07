@@ -1,5 +1,7 @@
 # Serverless
 
+A serverless function is sized to its workload, designed with portability in mind, and traceable as part of a distributed transaction.
+
 ## Declarative Function Configuration
 
 ### Summary
@@ -23,9 +25,9 @@ Set execution limits from the workload's own needs rather than the platform's de
 
 ### Standards
 
-1. `std-plat-execution-boundaries-01` A function's timeout **MUST** be set to the shortest duration its own workload can reliably complete within, so a hung or unexpectedly long invocation does not run up unnecessary cost.
+1. `std-plat-execution-boundaries-01` A function **MUST** have a bounded timeout based on its tested execution duration and failure behavior.
 2. `std-plat-execution-boundaries-02` Where a function is invoked synchronously through a gateway or load balancer with its own timeout, the function's timeout **MUST** remain shorter than the caller's timeout, so the caller does not time out before the function completes.
-3. `std-plat-execution-boundaries-03` Where a platform allows a function's memory allocation to be configured, it **MUST** be set from the function's own observed or tested resource usage, rather than a platform default.
+3. `std-plat-execution-boundaries-03` Where a platform allows a function's memory allocation to be configured, it **SHOULD** be set from the function's own observed or tested resource usage.
 4. `std-plat-execution-boundaries-04` Where a function is invoked on a latency-sensitive path, its cold-start latency **MUST** be measured against that path's own latency requirement.
 5. `std-plat-execution-boundaries-05` Where a language or build optimisation does not meet a function's cold-start latency requirement, the platform's pre-warming mechanism **MAY** be used instead, kept to the minimum instances the path needs, since it reintroduces standing cost.
 
@@ -42,8 +44,8 @@ Choose the runtime for the path's latency and cost needs, and optimise it where 
 
 ### Standards
 
-1. `std-plat-runtime-selection-01` For a function on a latency-sensitive or cost-sensitive invocation path, a language with lower cold-start overhead, such as Python, TypeScript, or Go, **SHOULD** be preferred over a managed-runtime language, such as Java or C#.
-2. `std-plat-runtime-selection-02` Where a managed-runtime language is used on such a path, an available build-time or runtime optimisation, such as ahead-of-time or native compilation, **MUST** bring its cold-start overhead within the path's requirement.
+1. `std-plat-runtime-selection-01` A function's runtime **SHOULD** be selected using measured startup latency, execution performance, cost, and workload compatibility.
+2. `std-plat-runtime-selection-02` Where a function's runtime does not meet its startup latency requirement, an available build-time or runtime optimisation **SHOULD** be used to bring it within that requirement.
 
 ### Implements These Principles
 
@@ -58,8 +60,8 @@ Bound concurrency to what its most constrained downstream dependency can sustain
 
 ### Standards
 
-1. `std-plat-concurrency-protection-01` A function's concurrent execution **MUST** be bounded to a limit its most constrained downstream dependency, such as a fixed-size connection pool or a managed database proxy, can sustain.
-2. `std-plat-concurrency-protection-02` Where multiple functions share the same downstream dependency, their concurrency limits **MUST** be set together, so they cannot collectively exceed that dependency's capacity.
+1. `std-plat-concurrency-protection-01` Where unconstrained execution could exceed a downstream dependency's capacity, a function's concurrency **MUST** be bounded to a limit that dependency can sustain.
+2. `std-plat-concurrency-protection-02` Where concurrency limits protect a dependency shared by multiple functions, those limits **MUST** account for their combined demand.
 
 ### Implements These Principles
 
@@ -74,9 +76,9 @@ Make a retry idempotent, bound its redelivery window, and capture what still fai
 
 ### Standards
 
-1. `std-plat-retry-failure-01` A function **MUST** be idempotent or otherwise safeguarded so an automatically retried invocation does not produce an inconsistent or duplicate outcome.
+1. `std-plat-retry-failure-01` A function subject to automatic retries **MUST** be idempotent or otherwise prevent a retried invocation from producing an inconsistent or duplicate outcome.
 2. `std-plat-retry-failure-02` Where a function's trigger has its own redelivery window, such as a queue or stream, the function's timeout **MUST** remain shorter than that window, so a message is not redelivered before a prior attempt finishes.
-3. `std-plat-retry-failure-03` An invocation that exhausts its retries without succeeding **MUST** be captured, such as through a dedicated failure destination, so it can be investigated and reprocessed once the underlying cause is resolved.
+3. `std-plat-retry-failure-03` Where the platform manages retries, an invocation that exhausts them without succeeding **MUST** be captured for investigation and recovery.
 
 ### Implements These Principles
 
@@ -90,7 +92,7 @@ Make every invocation traceable end-to-end, and its duration and cost attributab
 
 ### Standards
 
-1. `std-plat-invocation-observability-01` A function invocation **MUST** be traceable through a single correlation identifier as part of the distributed transaction it belongs to, including across an asynchronous or event-driven boundary.
+1. `std-plat-invocation-observability-01` A function invocation **MUST** be traceable through propagated trace context as part of the distributed transaction it belongs to, including across an asynchronous or event-driven boundary.
 2. `std-plat-invocation-observability-02` The duration and cost contribution of an invocation **MUST** be visible, so a change in cost can be attributed to the function or invocation path that caused it.
 
 ### Implements These Principles
@@ -152,7 +154,7 @@ Deploy an immutable version so production always points to known, published code
 
 ### Standards
 
-1. `std-plat-function-versioning-01` A function's production trigger **MUST** reference a specific, immutable published version, rather than a mutable pointer, such as `latest`, that automatically tracks the newest deployed code.
+1. `std-plat-function-versioning-01` A function's production configuration **MUST** identify the immutable published version it runs, including where a stable alias controls traffic to that version.
 2. `std-plat-function-versioning-02` Each deployment **MUST** publish a new, immutable version rather than overwriting the code behind an already-published version number.
 
 ### Implements These Principles
@@ -183,7 +185,7 @@ Keep a secret out of a function's code and configuration, and make it rotatable 
 ### Standards
 
 1. `std-plat-runtime-secrets-01` A secret a function depends on at runtime **MUST** be referenced through the platform's own secrets management mechanism, rather than stored as its actual value in the function's deployment package or declarative configuration.
-2. `std-plat-runtime-secrets-02` A secret **MUST** be able to be rotated without requiring the function's deployment package to be rebuilt or its configuration to be redeployed.
+2. `std-plat-runtime-secrets-02` A secret **MUST** be referenced independently of the function's deployment package so rotation does not require the package to be rebuilt.
 
 ### Implements These Principles
 

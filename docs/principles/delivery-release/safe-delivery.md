@@ -1,5 +1,38 @@
 # Safe Delivery
 
+## Continuous Delivery Flow
+
+### Summary
+
+Verified changes remain deployable and move to deployment and release in small increments as soon as applicable delivery constraints permit.
+
+### Reasoning
+
+Small, frequent changes limit the scope and impact of each deployment and make its outcome easier to assess. Holding verified changes without a delivery constraint increases batch size and delays feedback from their use.
+
+Delivery, business, regulatory, or operational constraints can require deployment or release to wait. Treating these as explicit constraints preserves continuous flow as the default while allowing justified timing decisions.
+
+### Implemented By These Standards
+
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
+- [Release Strategy](../../standards/delivery-release/release-strategy.md)
+
+## Controlled Environment Progression
+
+### Summary
+
+A change reaches production through a defined sequence of environments with consistent progression criteria.
+
+### Reasoning
+
+A defined progression path makes the validation expected before production explicit. Consistent criteria prevent equivalent changes from advancing under different conditions because of individual discretion.
+
+Allowing an environment to be skipped only under defined criteria keeps the path proportionate without making progression ad hoc.
+
+### Implemented By These Standards
+
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
+
 ## Deployment Risk Reduction
 
 ### Summary

@@ -15,6 +15,7 @@ Internal reuse avoids creating another implementation and support burden. When n
 ### Implemented By These Standards
 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 
 ## Reusable Interfaces

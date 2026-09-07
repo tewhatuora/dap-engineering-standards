@@ -11,7 +11,7 @@
 > Define infrastructure once as a versioned, parameterised module, and pin every consumer to a specific version.
 
 1. Infrastructure **SHOULD** be defined using a reusable, parameterised module, rather than a definition duplicated and separately maintained for each environment or service that needs it.
-2. A module **MUST** be sourced from a single, version-controlled location shared across the environments and services that use it.
+2. A module **MUST** have one authoritative, version-controlled source shared across the environments and services that use it.
 3. A shared module **MUST** be versioned, and a consumer of it **MUST** pin to a specific version rather than an unpinned or floating reference.
 4. A module's environment-specific values, such as instance configuration, **MUST** be supplied as parameters, rather than hardcoded in a way that assumes production shares a non-production environment's conditions.
 
@@ -24,11 +24,11 @@
 
 ### Infrastructure Ownership & Placement
 
-> Infrastructure lives in the service's own repository unless it is shared, and a shared repository always has a declared owner.
+> Infrastructure has an accountable owner and is kept with its service or in a shared repository according to its scope.
 
 1. Infrastructure tightly coupled to a single service **SHOULD** be held in that service's own repository, rather than a shared infrastructure repository.
-2. Infrastructure shared across more than one service, or owned by a platform or operations team, **MUST** be held in a shared infrastructure repository.
-3. A shared infrastructure repository **MUST** declare its owning team, such as through a `CODEOWNERS` file.
+2. Infrastructure shared across more than one service, or owned by a platform or operations team, **SHOULD** be held in a shared infrastructure repository.
+3. Shared infrastructure **MUST** have one accountable owning team.
 4. A shared infrastructure repository **SHOULD** document, in its `README`, how a consuming service uses the infrastructure it defines.
 
 #### References
@@ -37,12 +37,12 @@
 
 ### State Management
 
-> Infrastructure state lives in a shared, locked, access-controlled location, backed up like any other critical data.
+> Infrastructure state lives in a shared, access-controlled location, is protected from concurrent modification, and remains recoverable.
 
 1. Infrastructure state **MUST** be stored in a shared, access-controlled location separate from the code repository, rather than held on an individual's own workstation.
-2. Infrastructure state **MUST** be locked against a concurrent change while a change is being applied, so two changes cannot conflict with each other or corrupt it.
+2. Concurrent changes to infrastructure state **MUST** be prevented through state locking or an equivalent control.
 3. A sensitive value captured in infrastructure state, such as a generated credential or certificate, **MUST** be protected to the same standard as a secret stored anywhere else.
-4. Infrastructure state **MUST** be backed up on a recurring, automated basis, so its accidental deletion or corruption does not by itself prevent infrastructure from being managed going forward.
+4. Infrastructure state **MUST** be recoverable after accidental deletion or corruption.
 
 #### References
 
@@ -64,9 +64,9 @@
 
 ### Automated Application
 
-> Apply an infrastructure change only through an automated pipeline, using its own credential, never an individual's.
+> Apply a planned infrastructure change through an automated pipeline using its own credential, and reconcile any emergency intervention into code.
 
-1. An infrastructure change **MUST** be applied through an automated pipeline, rather than manually through a console or from an individual's own workstation.
+1. A planned infrastructure change **MUST** be applied through an automated pipeline.
 2. The pipeline applying an infrastructure change **MUST** use its own credential, such as a service account, distinct from any individual's personal credential.
 3. The same automated pipeline **SHOULD** be used to apply an infrastructure change across every environment it is promoted through, rather than a separate, divergent pipeline per environment.
 

@@ -16,7 +16,7 @@ A container image is kept minimal, current, and operated with least privilege by
 
 ### Container Orchestration
 
-A containerised workload is right-sized, scales automatically with demand, and remains isolated from other workloads.
+A containerised workload is right-sized, scales according to demand, and remains isolated from other workloads.
 
 [Read more](container-orchestration.md).
 

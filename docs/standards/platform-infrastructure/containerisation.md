@@ -8,12 +8,12 @@
 
 ### Minimal Image Footprint
 
-> A container image includes only what its runtime actually needs, with build-time content kept out through a multi-stage build.
+> A container image includes only what its runtime needs, with build-time content excluded from the production image.
 
 1. A base image **MUST** be sourced only through a governed internal proxy service, and limited to the packages and tools the service's runtime requires.
 2. A production image **MUST NOT** include build-time tooling or source artifacts beyond what the service requires to run.
 3. A production image **SHOULD** exclude a package manager unnecessary at runtime.
-4. A multi-stage build **MUST** be used to keep build-time content out of the image that is deployed.
+4. A multi-stage build **SHOULD** be used where it keeps build-time content out of the image that is deployed.
 
 #### References
 
@@ -23,11 +23,11 @@
 
 ### Base Image Currency
 
-> A base image is pinned to an immutable version, rebuilt on a routine cadence, and rebuilt promptly after a critical disclosure.
+> A base image is pinned to an immutable version, kept current, and rebuilt promptly after a critical disclosure that affects it.
 
 1. A base image **MUST** be referenced by a fixed, immutable version or digest, not a floating or partial tag capable of later resolving to different content.
-2. A base image **MUST** be rebuilt automatically on a routine cadence, so it remains current with upstream security patches even where the service's own code has not changed.
-3. A base image **MUST** be rebuilt promptly following a critical vulnerability disclosure, and **MUST NOT** be deferred to a routine cadence.
+2. A production image **SHOULD** be rebuilt on a routine cadence so it receives upstream base-image security patches even where the service's own code has not changed.
+3. A production image **MUST** be rebuilt promptly following disclosure of a critical vulnerability affecting its base image and **MUST NOT** wait for the routine cadence.
 4. A base image or runtime approaching its upstream end-of-life **MUST** be migrated to a supported version before that date.
 
 #### References
@@ -42,9 +42,9 @@
 > A container image's build stays free of unpinned packages, stray files, and a credential supplied any way other than a build-time secret.
 
 1. A package installed into a container image **MUST** be pinned to a specific version, where the package manager supports it.
-2. The package manager's own cache or index data **MUST** be removed in the same build layer that installs the package.
-3. A container image's build context **MUST** exclude a file not required to build the image, such as a local credential, environment file, or version control metadata.
-4. A credential needed only during the build, such as a private package registry token, **MUST** be supplied through a build-time secret mechanism, not a build argument, environment variable, or copied file.
+2. A package manager's cache or index data **MUST NOT** remain in the production image.
+3. A container image's build context **MUST** exclude a secret or sensitive file not required to build the image, such as a local credential or environment file.
+4. A credential needed only during the build, such as a private package registry token, **MUST** be supplied through a build-time secret mechanism that does not persist it in the image or build metadata.
 5. A container image's layers **SHOULD** be ordered from least to most frequently changing, such as an installed package before the service's own application code, so an unchanged layer is not invalidated or retransferred on a rebuild.
 
 #### References
@@ -58,7 +58,7 @@
 > A container runs as a non-root user, unprivileged, with only the capabilities its function requires, on a read-only filesystem.
 
 1. A container **MUST** run as a non-root user by default.
-2. A container **MUST NOT** run in privileged mode.
+2. A container **SHOULD NOT** run in privileged mode.
 3. A container **MUST** be granted only the kernel capabilities its function requires, rather than the runtime's full default set.
 4. A container's root filesystem **MUST** be mounted read-only by default; any path that requires write access **MUST** be explicitly declared and narrowly scoped.
 
@@ -79,10 +79,10 @@
 
 ### Container Runtime Contract
 
-> A container reports its own health through a defined check, and shuts down gracefully within a bounded period.
+> A long-running container reports its health where the runtime needs that signal and shuts down safely within a bounded period.
 
-1. A container **MUST** expose a defined mechanism, such as a health check endpoint, that reports whether its process is functioning correctly.
-2. A container's process **MUST** handle a termination signal and complete a graceful shutdown within a bounded period, rather than being forcibly stopped while work is still in progress.
+1. A long-running container whose process state does not establish its health **SHOULD** expose a defined health check mechanism.
+2. A long-running container's process **MUST** handle a termination signal and complete or safely stop its work within a bounded period.
 
 #### References
 

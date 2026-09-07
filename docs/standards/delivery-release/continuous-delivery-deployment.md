@@ -1,119 +1,180 @@
 # Continuous Delivery & Deployment
 
-## Summary
+Planned deployments are automated, repeatable, verified, and recoverable.
 
-> Make deployment routine, automated, and low-risk, not a rare, high-stakes event.
+## Deployment Pipeline
 
-## Standards
+### Summary
 
-### Automated, Repeatable Deployment Pipeline
+Every environment deploys verified artifacts through version-controlled automated deployment logic, built from a shared pattern where available.
 
-> Every environment deploys through the same automated pipeline, never a manual or divergent process.
+### Standards
 
-1. A deployment to an environment beyond local development, including a change to that environment's infrastructure or database schema, **MUST** be performed only through an automated pipeline; it **MUST NOT** be performed as a manual or ad hoc action.
-2. A deployment pipeline **MUST** consume only an artifact that has already passed the build, test, static analysis, and security scanning validation required for it; the deployment pipeline itself **MUST NOT** be relied upon to perform that validation.
-3. The same deployment pipeline **MUST** be used to deploy a change into every environment; an environment **MUST NOT** be reachable through a separate or divergent deployment process.
-4. A deployment pipeline's own configuration **MUST** be version-controlled and maintained with the same discipline as the source code it deploys.
-5. A deployment pipeline **SHOULD** be built from a standard, shared template or pattern where one is available.
+1. `std-del-deployment-pipeline-01` A planned deployment to an environment beyond local development, including a change to that environment's infrastructure or database schema, **MUST** be performed through an automated pipeline.
+2. `std-del-deployment-pipeline-02` A direct change made to restore service **MUST** be reconciled through the automated pipeline before the next planned deployment.
+3. `std-del-deployment-pipeline-03` A deployment pipeline **MUST** consume only an artifact that has already passed the build, test, static analysis, and security scanning validation required for it.
+4. `std-del-deployment-pipeline-04` Deployment-specific verification **MAY** run within the deployment pipeline.
+5. `std-del-deployment-pipeline-05` The same version-controlled deployment logic **MUST** be used across every environment.
+6. `std-del-deployment-pipeline-06` An environment-specific deployment variation **MUST** be explicit in that version-controlled deployment logic.
+7. `std-del-deployment-pipeline-07` A deployment pipeline's own configuration **MUST** be version-controlled and maintained with the same discipline as the source code it deploys.
+8. `std-del-deployment-pipeline-08` A deployment pipeline **SHOULD** be built from a standard, shared template or pattern where one is available.
 
-#### References
+### Related Standards
 
-- [Automation](../../principles/engineering-practice/automation.md)
 - [Continuous Integration](continuous-integration.md)
-- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
-- [Reuse](../../principles/engineering-practice/reuse.md)
 - [Infrastructure as Code](../platform-infrastructure/infrastructure-as-code.md)
 - [Database Migration Tooling](../code-implementation/database-migration-tooling.md)
 
-### Runtime Security Testing & Response
+### Implements These Principles
 
-> A network-reachable service is tested for security after deployment, and a confirmed critical finding is acted on immediately.
+- [Automation](../../principles/engineering-practice/automation.md)
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
-1. A pipeline deploying a service that exposes a network-reachable interface, such as an API endpoint, **MUST** include both dynamic application security testing (DAST) and fuzz testing against that service's running production instance after deployment.
-2. Where a finding is raised by runtime security testing, it **MUST** be triaged and confirmed before it is treated as genuine, so response effort is not misdirected by a false positive.
-3. Where a confirmed finding is critical or high-severity, the affected capability **MUST** be disabled or the affected deployment rolled back immediately, rather than left exposed until a code fix is developed and deployed through the normal pipeline.
+## Deployment Readiness
 
-#### References
+### Summary
 
-- [Application Security Testing](../quality-engineering/application-security-testing.md)
-- [Security Engineering](../../principles/security-privacy/security-engineering.md)
-- [Rollback Strategy](rollback-strategy.md)
+A verified change stays ready to deploy at any time, moving through the pipeline in small, frequent increments.
 
-### Deployment Readiness
+### Standards
 
-> A verified change stays ready to deploy at any time, moving through the pipeline in small, frequent increments.
+1. `std-del-deployment-readiness-01` A change that has passed the verification required for its target environment **MUST** remain ready for deployment at any time.
+2. `std-del-deployment-readiness-02` A change that has passed the verification required for its target environment **SHOULD NOT** be withheld solely to accumulate into a larger release.
+3. `std-del-deployment-readiness-03` Deployment **SHOULD** proceed in small, frequent increments, so the risk and impact of any single deployment stays limited.
+4. `std-del-deployment-readiness-04` Deployment to a non-production environment **SHOULD** be triggered automatically once a change passes its required checks, without a separate manual initiation step.
 
-1. A change that has passed the verification required for its target environment **MUST** remain ready for deployment at any time; it **MUST NOT** be withheld to accumulate into a larger, scheduled release, except where the repository's branching model requires a defined stabilisation period before release.
-2. Deployment **SHOULD** proceed in small, frequent increments, so the risk and impact of any single deployment stays limited.
-3. Deployment to a non-production environment **SHOULD** be triggered automatically once a change passes its required checks, without a separate manual initiation step.
-
-#### References
+### Related Standards
 
 - [Release Strategy](release-strategy.md)
 - [Branching Strategy](../code-implementation/branching-strategy.md)
 
-### Environment Progression
+### Implements These Principles
 
-> A change progresses through a defined, consistent sequence of environments on its way to production.
+- [Automation](../../principles/engineering-practice/automation.md)
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 
-1. A defined, ordered sequence of environments **MUST** govern how a change progresses from initial validation to production.
-2. A change **MUST** progress through each environment in that sequence via the deployment pipeline; an environment **MUST NOT** be skipped except through a defined, approved exception process, such as an emergency fix.
-3. The criteria a change must satisfy to progress from one environment to the next **MUST** be defined and consistent, so a progression decision does not depend on an individual's discretion.
+## Environment Progression
 
-#### References
+### Summary
+
+A change progresses through a defined, consistent sequence of environments on its way to production.
+
+### Standards
+
+1. `std-del-environment-progression-01` A defined, ordered sequence of environments **MUST** govern how a change progresses from initial validation to production.
+2. `std-del-environment-progression-02` A change **MUST** progress through each applicable environment in that sequence via the deployment pipeline.
+3. `std-del-environment-progression-03` A change **MAY** skip an environment where the defined progression criteria permit it.
+4. `std-del-environment-progression-04` The criteria a change must satisfy to progress from one environment to the next **MUST** be defined and consistent, so a progression decision does not depend on an individual's discretion.
+
+### Related Standards
 
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 
-### Production Deployment Approval
+### Implements These Principles
 
-> A production deployment is authorised through formal change control, separately from the decision to release it.
-
-1. A deployment to a production environment **MUST** be approved through the organisation's formal change control process before it proceeds.
-2. This approval is distinct from the product owner's decision to release the change to its intended users, whether or not the two occur at the same time.
-
-#### References
-
-- [Release Strategy](release-strategy.md)
-
-### Deployment Verification
-
-> A deployment counts as successful only once it passes automated health checks that exercise real functionality.
-
-1. A deployment **MUST** be verified against automated health checks before it is considered complete.
-2. Where a deployment's health checks fail, the pipeline **MUST** halt further progression of that deployment and raise an alert to the team responsible for it.
-3. A health check used to verify a deployment **MUST** exercise real functionality of the deployed change; confirming only that a process has started **MUST NOT** be treated as sufficient verification.
-
-#### References
-
-- [Observability](../../principles/reliability-operations/observability.md)
-- [Fast Feedback](../../principles/engineering-practice/fast-feedback.md)
-
-### Decoupling Deployment from Release
-
-> A deployment to production stays separate from releasing it to users, controlled through a flag until release is decided.
-
-1. Deploying a change to a production environment **MUST** be treated as distinct from releasing that change to its users; a deployed change **MAY** remain inactive or hidden from users until release is decided separately.
-2. Where a change must remain inactive or hidden from users after deployment, it **MUST** be controlled through a feature flag or progressive delivery technique, not by delaying the deployment itself.
-
-#### References
-
-- [Release Strategy](release-strategy.md)
-- [Feature Flagging](feature-flagging.md)
-- [Progressive Delivery](progressive-delivery.md)
 - [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 
-### Rollback Readiness
+## Rollback Readiness
 
-> A deployment has a tested rollback or forward-fix path before it reaches production, ready before it is ever needed.
+### Summary
 
-1. A deployment **MUST NOT** proceed to a production environment unless a viable rollback or forward-fix path exists for the change being deployed.
-2. A rollback path **MUST** be established and tested in a non-production environment representative of production, before deploying to a production environment.
-3. A forward-fix path **MUST** be supported by an expedited process capable of developing and deploying a fix rapidly once an issue is found after deployment.
-4. A rollback **MUST** be executable by redeploying a previously verified artifact; it **MUST NOT** depend on producing a new build from source.
+A production deployment has a tested rollback path or an expedited forward-fix path, and rollback redeploys a previously verified artifact without producing a new build.
 
-#### References
+### Standards
+
+1. `std-del-rollback-readiness-01` A deployment **MUST NOT** proceed to a production environment unless a viable rollback or forward-fix path exists for the change being deployed.
+2. `std-del-rollback-readiness-02` A rollback path **MUST** be established and tested against the production characteristics relevant to the change before production deployment.
+3. `std-del-rollback-readiness-03` A forward-fix path **MUST** be supported by an expedited process capable of developing and deploying a fix rapidly once an issue is found after deployment.
+4. `std-del-rollback-readiness-04` A rollback **MUST** be executable by redeploying a previously verified artifact.
+5. `std-del-rollback-readiness-05` A rollback **MUST NOT** depend on producing a new build from source.
+
+### Related Standards
 
 - [Rollback Strategy](rollback-strategy.md)
 - [Branching Strategy](../code-implementation/branching-strategy.md)
-- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 - [Build & Artifact Management](build-artifact-management.md)
+
+### Implements These Principles
+
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+
+## Production Approval
+
+### Summary
+
+A production deployment is attributable to an authorised actor or process, separately from the decision to release it.
+
+### Standards
+
+1. `std-del-production-approval-01` A deployment to a production environment **MUST** be attributable to an authorised actor or automated process.
+2. `std-del-production-approval-02` Production deployment authorisation **MUST** remain distinct from release authorisation, whether or not the two occur at the same time.
+
+### Related Standards
+
+- [Release Strategy](release-strategy.md)
+
+### Implements These Principles
+
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
+
+## Deployment Verification
+
+### Summary
+
+A deployment counts as successful only once it passes automated health checks that exercise real functionality.
+
+### Standards
+
+1. `std-del-deployment-verification-01` A deployment **MUST** be verified against automated health checks before it is considered complete.
+2. `std-del-deployment-verification-02` Where a deployment's health checks fail, the pipeline **MUST** halt further progression of that deployment and raise an alert to the team responsible for it.
+3. `std-del-deployment-verification-03` A health check used to verify a deployment **MUST** exercise real functionality of the deployed change.
+4. `std-del-deployment-verification-04` Confirming only that a process has started **MUST NOT** be treated as sufficient verification.
+
+### Implements These Principles
+
+- [Observability](../../principles/reliability-operations/observability.md)
+
+## Runtime Security Testing
+
+### Summary
+
+A network-reachable service undergoes risk-appropriate, non-disruptive security testing after deployment; findings are triaged, and confirmed critical findings trigger immediate containment.
+
+### Standards
+
+1. `std-del-runtime-security-testing-01` A pipeline deploying a service that exposes a network-reachable interface **SHOULD** include non-disruptive dynamic application security testing against a suitable running environment after deployment.
+2. `std-del-runtime-security-testing-02` A finding raised by runtime security testing **MUST** be triaged and confirmed before it is treated as genuine, so response effort is not misdirected by a false positive.
+3. `std-del-runtime-security-testing-03` A confirmed critical finding **MUST** trigger immediate containment through disablement, rollback, or an equivalent control.
+
+### Related Standards
+
+- [Application Security Testing](../quality-engineering/application-security-testing.md)
+- [Rollback Strategy](rollback-strategy.md)
+
+### Implements These Principles
+
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
+- [Observability](../../principles/reliability-operations/observability.md)
+
+## Deployment & Release
+
+### Summary
+
+A production deployment and its release to users remain separate decisions, with inactive or hidden changes controlled through feature flags or progressive delivery.
+
+### Standards
+
+1. `std-del-deployment-release-01` Deploying a change to a production environment **MUST** be treated as distinct from releasing that change to its users.
+2. `std-del-deployment-release-02` A deployed change **MAY** remain inactive or hidden from users until release is decided separately.
+3. `std-del-deployment-release-03` A change that must remain inactive or hidden from users after deployment **MUST** be controlled through a feature flag or progressive delivery technique.
+
+### Related Standards
+
+- [Feature Flagging](feature-flagging.md)
+- [Progressive Delivery](progressive-delivery.md)
+- [Release Strategy](release-strategy.md)
+
+### Implements These Principles
+
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)

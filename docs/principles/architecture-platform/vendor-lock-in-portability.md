@@ -45,6 +45,7 @@ Concentrating vendor-specific integration behind a defined interface or adapter 
 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
+- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 
 ## Data Portability

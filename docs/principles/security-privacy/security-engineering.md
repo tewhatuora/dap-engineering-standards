@@ -17,6 +17,7 @@ Access beyond a service's or identity's current function increases what an error
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
 - [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Containerisation](../../standards/platform-infrastructure/containerisation.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)

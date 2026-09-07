@@ -14,6 +14,7 @@ Redundancy matched to service criticality limits outage impact without imposing 
 
 ### Implemented By These Standards
 
+- [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)
@@ -32,6 +33,7 @@ Containing a dependency failure preserves functionality that does not rely on it
 
 ### Implemented By These Standards
 
+- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
 
@@ -118,6 +120,7 @@ Correcting a discovered gap promptly keeps the documented procedure aligned with
 
 ### Implemented By These Standards
 
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 - [Runbooks](../../standards/operations-observability/runbooks.md)
 
 ## Defined Failure Recovery Paths
@@ -132,5 +135,6 @@ A defined recovery path reduces delay and inconsistency when a known failure occ
 
 ### Implemented By These Standards
 
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Runbooks](../../standards/operations-observability/runbooks.md)

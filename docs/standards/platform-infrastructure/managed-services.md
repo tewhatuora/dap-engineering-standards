@@ -56,9 +56,9 @@
 
 ### Telemetry & Alerting Integration
 
-> Route a managed service's telemetry and alerts into the organisation's centralised platform.
+> Route the telemetry and alerts required to operate a managed service into the organisation's centralised platform.
 
-1. A managed service's telemetry, including its logs and metrics, **MUST** be integrated into the organisation's centralised observability platform, rather than left visible only in the vendor's own console.
+1. Telemetry required to operate a managed service, including applicable logs and metrics, **MUST** be integrated into the organisation's centralised observability platform.
 2. A managed service's own native alerting **SHOULD** be configured to notify through the organisation's centralised alerting mechanism, rather than operate as a separate channel.
 
 #### References

@@ -12,13 +12,13 @@
 
 1. Environment tiers **SHOULD** include a tier for early development work, such as `dev`.
 2. Environment tiers **SHOULD** include one or more tiers for functional and integration testing, such as `tst`, `int`, `sit`, or `qa`.
-3. Environment tiers **MUST** include a production-like tier for final validation before deployment to production, such as `uat`.
+3. Environment tiers **SHOULD** include a production-like tier for final validation before deployment to production, such as `uat`.
 4. Environment tiers **MUST** include a tier for running production workloads, such as `prod`.
 5. Environment tiers **SHOULD** include a production-like tier for reproducing or verifying a fix against a production issue without affecting production itself, such as `prod-support`.
-6. An environment in a production-like tier, such as `uat` or `prod-support`, **MUST** be representative of production in topology, configuration, and scale.
+6. An environment used for production-like validation **MUST** represent the production characteristics relevant to that validation, such as topology, configuration, or scale.
 7. A team **SHOULD NOT** maintain more environment tiers than are genuinely necessary, so cost is not incurred for a tier it does not need.
 8. A non-production environment in a tier not required continuously, such as `dev`, **SHOULD** incur reduced or no cost outside business hours, such as by being scaled down or torn down and provisioned again on demand.
-9. An environment instance no longer in active use **MUST** be decommissioned, rather than kept running indefinitely.
+9. An environment instance no longer needed **SHOULD** be decommissioned.
 
 #### References
 
@@ -30,7 +30,7 @@
 > Production access is separately authorised, and experimentation stays confined to a non-production environment.
 
 1. Access granted to a non-production environment **MUST NOT** extend to production by default; access to production **MUST** be separately authorised and independently controlled.
-2. Production **MUST NOT** be used for experimentation, ad hoc testing, or informal validation; that activity **MUST** be confined to a non-production environment.
+2. Production **SHOULD NOT** be used for experimentation or ad hoc testing that can be performed safely in a non-production environment.
 
 #### References
 

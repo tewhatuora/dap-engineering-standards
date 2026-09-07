@@ -15,6 +15,7 @@ When several solutions meet a requirement equally well, the simplest one is easi
 ### Implemented By These Standards
 
 - [Code Review](../../standards/code-implementation/code-review.md)
+- [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
 
 ## Readable, Consistent Code
 

@@ -17,6 +17,7 @@ Correct behaviour without session affinity allows capacity to change and replace
 ### Implemented By These Standards
 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
+- [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
 
 ## Safe Retries
 
