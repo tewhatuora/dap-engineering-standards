@@ -2,7 +2,7 @@
 
 ## Summary
 
-> A containerised workload is right-sized, scales automatically with demand, and remains isolated from other workloads.
+> A containerised workload is right-sized, scales according to demand, and remains isolated from other workloads.
 
 ## Standards
 
@@ -23,7 +23,7 @@
 > A workload declares CPU and memory from its own observed usage, revisited as that usage actually changes.
 
 1. A containerised workload **MUST** declare the CPU and memory it requires, based on its own observed or tested usage rather than an arbitrary or default value.
-2. A workload's declared CPU and memory **MUST** be revisited as its actual usage changes, so it does not remain over- or under-provisioned relative to real demand.
+2. A workload's declared CPU and memory **SHOULD** be revisited as its actual usage changes, so it does not remain over- or under-provisioned relative to real demand.
 
 #### References
 
@@ -32,11 +32,11 @@
 
 ### Elastic Scaling
 
-> A workload's instance count adjusts automatically to demand, within a defined, redundant minimum and maximum.
+> A workload uses automatic scaling where its demand varies, within a defined, redundant minimum and maximum.
 
-1. A containerised workload's instance count **MUST** adjust automatically to a defined demand metric, such as CPU utilisation, memory utilisation, or request rate, rather than manual intervention.
-2. A workload's minimum and maximum instance count **MUST** be defined, so automatic scaling stays within a bounded, predictable range.
-3. A workload's minimum instance count **MUST** provide redundancy proportionate to its criticality, so a single instance failure does not remove all its capacity.
+1. A containerised workload with materially variable demand **SHOULD** adjust its instance count automatically using a defined demand metric, such as CPU utilisation, memory utilisation, or request rate.
+2. Where automatic scaling is used, a workload's minimum and maximum instance count **MUST** be defined so scaling stays within a bounded, predictable range.
+3. A continuously available workload's minimum instance count **MUST** provide redundancy proportionate to its criticality, so a single instance failure does not remove all its capacity.
 4. A workload's instances **SHOULD** be spread across failure domains, so a single domain failure does not remove all its capacity.
 5. A non-production or otherwise non-continuous workload's minimum instance count **SHOULD** be zero when it is not in use, so it does not consume resources while idle.
 
@@ -48,11 +48,11 @@
 
 ### Instance Health & Lifecycle
 
-> An instance is restarted only after repeated health check failures, and stopped only once its in-flight work completes.
+> An instance uses health and readiness behavior appropriate to its workload and receives time to complete or safely stop in-flight work.
 
-1. An instance **MUST** be restarted or replaced only after it fails its health check a defined number of consecutive times, so a single transient failure does not trigger unnecessary churn.
-2. A workload's readiness check **MUST** be distinct from its health check, so the platform can withhold traffic from an instance that is alive but not yet able to serve it.
-3. An instance's grace period before being stopped **MUST** be long enough for its longest-running in-flight operation to complete.
+1. Where a health check controls restart or replacement, its failure threshold **SHOULD** prevent a single transient failure from restarting the instance.
+2. A workload that can be running without being able to serve traffic **MUST** expose readiness independently of liveness.
+3. An instance's termination grace period **MUST** allow in-flight work to complete or stop safely within a defined bound.
 
 #### References
 
@@ -61,7 +61,7 @@
 
 ### Workload & Network Isolation
 
-> A workload is isolated from another by default, and network traffic between them is denied unless explicitly allowed.
+> A workload is isolated from another by default, with network traffic denied by default where the platform supports that control.
 
 1. A workload **MUST** be logically isolated from a workload belonging to a different team or service by default, such as through a dedicated cluster or namespace.
 2. Network traffic between two workloads **SHOULD** be denied by default and permitted only where an explicit, defined rule allows it.
@@ -74,8 +74,8 @@
 
 > A workload's secret is injected by the platform at runtime, never stored as plain text, and rotatable without a redeploy.
 
-1. A secret a containerised workload depends on at runtime **MUST** be injected by the platform's own secrets management mechanism, such as an environment variable; its value **MUST** never appear as plain text in the container image or its declarative configuration.
-2. A secret **MUST** be able to be rotated without requiring the workload's image to be rebuilt or its configuration to be redeployed.
+1. A secret a containerised workload depends on at runtime **MUST** be injected by the platform's own secrets management mechanism; its value **MUST NOT** appear as plain text in the container image or its declarative configuration.
+2. A secret **MUST** be referenced independently of the workload's image so rotation does not require the image to be rebuilt.
 
 #### References
 

@@ -1,92 +1,141 @@
 # Rollback Strategy
 
-## Summary
+Recovery from a failed deployment follows a fast, rehearsed process.
 
-> Recovery from a failed deployment is fast and rehearsed, not improvised under pressure.
+## Triggers
 
-## Standards
+### Summary
 
-### Rollback Triggers
+A rollback is triggered by predefined criteria or responder judgement after automated or manual evidence identifies a deployment failure.
 
-> A rollback is triggered by the responsible team's own reviewed decision, not an automated signal acting alone.
+### Standards
 
-1. An automated signal **SHOULD** be raised where a breached production error-rate or latency threshold, or a critical or high-severity finding from runtime security testing, is attributable to a recent deployment.
-2. A rollback **SHOULD** be triggered only after that signal has been reviewed and judged to warrant a rollback rather than a forward-fix.
-3. A rollback **SHOULD NOT** be triggered where the failing capability can instead be disabled through an existing feature flag's kill switch.
-4. A rollback **MAY** also be triggered based on a deployment's outcome identified through a means other than an automated signal, such as manual testing.
+1. `std-del-triggers-01` An automated signal **SHOULD** be raised where a production threshold breach or critical security finding within a defined monitoring window is attributable to a deployment.
+2. `std-del-triggers-02` A rollback **SHOULD** be triggered when a signal satisfies predefined rollback criteria or a responder determines that rollback is warranted.
+3. `std-del-triggers-03` A rollback **SHOULD NOT** be triggered where the failing capability can instead be disabled through an existing feature flag's kill switch.
+4. `std-del-triggers-04` A rollback **MAY** also be triggered based on a deployment's outcome identified through a means other than an automated signal, such as manual testing.
 
-#### References
+### Related Standards
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
-- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
-- [Observability](../../principles/reliability-operations/observability.md)
 - [Feature Flagging](feature-flagging.md)
 
-### Rollback Versus Forward-Fix
+### Implements These Principles
 
-> A rollback is the default choice over a forward-fix, unless reverting itself would cause a material loss of function or data.
+- [Observability](../../principles/reliability-operations/observability.md)
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 
-1. A rollback **SHOULD** be chosen over a forward-fix by default, since reverting to a previously verified version is faster and carries lower risk than developing and verifying a new fix under time pressure.
-2. A forward-fix **SHOULD** be chosen over a rollback only where reverting would itself cause a material loss of function or data, or where the failure is unrelated to the most recent deployment.
+## Rollback or Forward Fix
 
-#### References
+### Summary
 
-- [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
+A rollback is the default response; a forward-fix is used where reverting would cause material loss of function or data or where the failure is unrelated to the latest deployment.
 
-### Target Version & Recovery Objective
+### Standards
 
-> A rollback defaults to the most recently verified version, and completes within the service's recovery time objective.
+1. `std-del-rollback-or-forward-fix-01` A rollback **SHOULD** be chosen over a forward-fix by default, since reverting to a previously verified version is faster and carries lower risk than developing and verifying a new fix under time pressure.
+2. `std-del-rollback-or-forward-fix-02` A forward-fix **SHOULD** be chosen over a rollback only where reverting would itself cause a material loss of function or data, or where the failure is unrelated to the most recent deployment.
 
-1. A rollback's target version **MUST** default to the version most recently verified through the service's own deployment history; using an older version **MUST** be a deliberate choice.
-2. A rollback **MUST** be capable of being fully executed within the service's defined recovery time objective.
-
-#### References
+### Related Standards
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
+
+### Implements These Principles
+
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 - [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 
-### Data & Schema Compatibility
+## Rollback Target & Timing
 
-> A rollback never runs an incompatible version against the current data or schema state; a forward-fix is used instead.
+### Summary
 
-1. A version being rolled back to **MUST** remain compatible with the current state of any data or schema that a subsequent version has already changed.
-2. A rollback **MUST NOT** proceed where doing so would run an incompatible version against the current data or schema state; a forward-fix **MUST** be used instead until compatibility is restored.
+A rollback defaults to the most recently verified version, and completes within the service's recovery time objective.
 
-#### References
+### Standards
+
+1. `std-del-rollback-target-timing-01` A rollback's target version **SHOULD** default to the version most recently verified through the service's own deployment history.
+2. `std-del-rollback-target-timing-02` Selection of an older version **SHOULD** be recorded with the rollback.
+3. `std-del-rollback-target-timing-03` A rollback **MUST** be capable of being fully executed within the service's defined recovery time objective.
+
+### Related Standards
+
+- [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
+
+### Implements These Principles
+
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+
+## Rollback Data Compatibility
+
+### Summary
+
+A rollback proceeds only when its target version is compatible with the current data and schema state; otherwise, a forward-fix restores compatibility.
+
+### Standards
+
+1. `std-del-rollback-data-compatibility-01` A version being rolled back to **MUST** remain compatible with the current state of any data or schema that a subsequent version has already changed.
+2. `std-del-rollback-data-compatibility-02` A rollback **MUST NOT** proceed where doing so would run an incompatible version against the current data or schema state.
+3. `std-del-rollback-data-compatibility-03` A forward-fix **MUST** be used instead until compatibility is restored.
+
+### Related Standards
 
 - [Database Migration Tooling](../code-implementation/database-migration-tooling.md)
 - [Progressive Delivery](progressive-delivery.md)
 
-### Rollback Scope & Coordination
+### Implements These Principles
 
-> A rollback reverts every genuinely dependent service, in a pre-defined sequence, and nothing beyond that.
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 
-1. A coordinated rollback **MUST** revert every service with a genuine dependency on the failing change, not only the one where the failure was first observed.
-2. A service without such a dependency **MUST NOT** be included in the rollback.
-3. Dependent services **MUST** revert in a pre-defined sequence, so a service is never left calling a dependency that is running an incompatible version.
+## Rollback Scope
 
-#### References
+### Summary
+
+A coordinated rollback restores a compatible state across affected services, excludes unrelated services, and follows a defined sequence where order affects compatibility.
+
+### Standards
+
+1. `std-del-rollback-scope-01` A coordinated rollback **MUST** restore a compatible state across every service affected by the failing change.
+2. `std-del-rollback-scope-02` A service unaffected by the failing change **MUST NOT** be included in the rollback.
+3. `std-del-rollback-scope-03` Where rollback order affects compatibility, dependent services **MUST** revert in a defined sequence.
+
+### Related Standards
 
 - [Release Strategy](release-strategy.md)
 
-### Post-Rollback Verification
+### Implements These Principles
 
-> A rollback is verified against the same automated health checks as any deployment before it counts as successful.
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
 
-1. A rollback **MUST** be verified against the same automated health checks required of any deployment, supplemented by manual testing where warranted, before it is deemed successful.
+## Verification
 
-#### References
+### Summary
+
+A rollback is verified against the same automated health checks as any deployment before it counts as successful.
+
+### Standards
+
+1. `std-del-verification-01` A rollback **MUST** be verified against the same automated health checks required of any deployment, supplemented by manual testing where warranted, before it is deemed successful.
+
+### Related Standards
 
 - [Continuous Delivery & Deployment](continuous-delivery-deployment.md)
 
-### Post-Rollback Review
+### Implements These Principles
 
-> A rollback triggered by a failure is always classified as an incident, and its recovery time measured against the objective.
+- [Safe Delivery](../../principles/delivery-release/safe-delivery.md)
 
-1. A rollback triggered by a production failure **MUST** be classified as an incident for the purposes of root cause review, regardless of how quickly it was resolved.
-2. The time taken to complete a rollback **SHOULD** be measured against the service's defined recovery time objective, so a gap between actual and required recovery speed is identified and addressed.
+## Review
 
-#### References
+### Summary
+
+A rollback triggered by a production failure is reviewed according to its impact, and its recovery time is measured against the objective.
+
+### Standards
+
+1. `std-del-review-01` A rollback triggered by a production failure **SHOULD** receive incident review where its impact meets the service's incident criteria.
+2. `std-del-review-02` The time taken to complete a rollback **SHOULD** be measured against the service's defined recovery time objective, so a gap between actual and required recovery speed is identified and addressed.
+
+### Implements These Principles
 
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)

@@ -128,6 +128,9 @@ Existing consumers depend on a published interface's established contract. Prese
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
+- [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
+- [Release Strategy](../../standards/delivery-release/release-strategy.md)
+- [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
 
 ## Contract & Integration Testing
 

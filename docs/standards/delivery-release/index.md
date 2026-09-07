@@ -2,7 +2,7 @@
 
 ## Overview
 
-Software changes move from build to release through verified, automated, and reversible delivery practices. This section defines the engineering standards for traceable builds, progressive delivery, deliberate release, and rapid recovery when things go wrong.
+Delivery and release standards require software changes to move from build to release through verified, automated, and reversible practices.
 
 Choose a standard below to read it in full.
 
@@ -10,42 +10,42 @@ Choose a standard below to read it in full.
 
 ### Continuous Integration
 
-Build, test, and scan every change before it merges, catching security and quality issues early.
+A change affecting deployable software is built, tested, and scanned before merge so security and quality issues are identified early.
 
 [Read more](continuous-integration.md).
 
 ### Build & Artifact Management
 
-Build once, and run that same artifact everywhere.
+Each deployable artifact is built once and used unchanged in every environment to which it is promoted.
 
 [Read more](build-artifact-management.md).
 
 ### Continuous Delivery & Deployment
 
-Make deployment routine, automated, and low-risk, not a rare, high-stakes event.
+Planned deployments are automated, repeatable, verified, and recoverable.
 
 [Read more](continuous-delivery-deployment.md).
 
 ### Progressive Delivery
 
-Limit a new change to a small share of production traffic before it reaches everyone.
+A production deployment proceeds in stages that verify the new version before full rollout.
 
 [Read more](progressive-delivery.md).
 
 ### Feature Flagging
 
-Decouple deploying code from releasing it.
+Feature flags decouple deploying code from releasing it.
 
 [Read more](feature-flagging.md).
 
 ### Release Strategy
 
-A release is a deliberate decision, not a side effect of a pipeline finishing.
+A release is a deliberate decision distinct from pipeline completion.
 
 [Read more](release-strategy.md).
 
 ### Rollback Strategy
 
-Recovery from a failed deployment is fast and rehearsed, not improvised under pressure.
+Recovery from a failed deployment follows a fast, rehearsed process.
 
 [Read more](rollback-strategy.md).
