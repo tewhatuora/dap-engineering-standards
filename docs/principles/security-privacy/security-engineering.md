@@ -127,6 +127,22 @@ A security control can be present but ineffective. Security testing provides evi
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
 
+## Time-Bound Security Exceptions
+
+### Summary
+
+A temporary exception to a security requirement is explicit, justified, protected by compensating controls, and returns to active remediation when it expires.
+
+### Reasoning
+
+An unresolved security weakness can remain when immediate remediation is not feasible, but an informal or indefinite exception removes the pressure to address it and obscures the accepted exposure. Recording the affected assets, justification, and compensating controls makes that exposure deliberate and reviewable.
+
+An expiration bounds how long the exception can defer remediation. Returning the weakness to active remediation when that period ends prevents temporary acceptance from becoming a standing exclusion.
+
+### Implemented By These Standards
+
+- [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
+
 ## Supply Chain Security
 
 ### Summary
