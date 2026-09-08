@@ -1,60 +1,90 @@
 # Software Supply Chain Security
 
-## Summary
+The software supply chain protects internal namespaces, verifies build dependencies, and prevents compromised components from further use.
 
-> Protect the supply chain by isolating internal namespaces, pinning build dependencies immutably, and quarantining compromised packages.
+## Namespace Isolation
 
-## Standards
+### Summary
 
-### Namespace Isolation & Dependency Confusion
+Internal packages and container images use organisation-owned namespaces that cannot resolve from untrusted public sources.
 
-> Internal packages and container images are published under organisation-owned namespaces and resolved exclusively from governed proxies.
+### Standards
 
-1. An internal package, library, or container image **SHOULD** be published and consumed under an organisation-owned namespace, scope, or registry repository.
-2. Package manager and container registry configurations **MUST** resolve internal artifacts exclusively from the governed internal proxy service, preventing fallback to public registries for internal namespaces.
+1. `std-sec-namespace-isolation-01` An internal package, library, or container image **SHOULD** be published and consumed under an organisation-owned namespace, scope, or registry repository.
+2. `std-sec-namespace-isolation-02` Package manager and container registry configurations **MUST** prevent an internal artifact name from resolving to an artifact from an untrusted public source.
 
-#### References
+### Related Standards
 
 - [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
 - [Containerisation](../platform-infrastructure/containerisation.md)
 
-### Pipeline Dependencies & Build Tooling
+### Implements These Principles
 
-> Pipeline extensions and build tools are sourced through governed proxies, pinned to immutable references, and maintained responsibly if forked.
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
-1. Third-party pipeline extensions, utilities, and build tooling **MUST** be sourced through the governed internal proxy service or an internally maintained fork.
-2. Third-party pipeline extensions, utilities, and build tooling **MUST** be pinned to an immutable reference, such as a full commit SHA or cryptographic checksum, and **MUST NOT** rely on a mutable version tag or branch reference.
-3. A third-party component or pipeline extension **MAY** be forked where upstream cannot meet security or immutable pinning requirements; forked repositories **MUST NOT** automatically synchronize from upstream.
-4. A forked component or pipeline extension **MUST** have an assigned owning team responsible for evaluating upstream changes, applying security patches, and merging updates through standard code review.
+## Build Tooling
 
-#### References
+### Summary
+
+Pipeline extensions and build tools come from approved sources, have verified integrity, and use immutable references; changes to maintained forks are reviewed before use.
+
+### Standards
+
+1. `std-sec-build-tooling-01` Third-party pipeline extensions, utilities, and build tooling **MUST** be obtained from an approved source and have their integrity verified before execution.
+2. `std-sec-build-tooling-02` Third-party pipeline extensions, utilities, and build tooling **MUST** be pinned to an immutable reference, such as a full commit SHA or cryptographic checksum.
+3. `std-sec-build-tooling-03` Third-party pipeline extensions, utilities, and build tooling **MUST NOT** rely on a mutable version tag or branch reference.
+4. `std-sec-build-tooling-04` A third-party component or pipeline extension **MAY** be forked where upstream cannot meet security or immutable pinning requirements.
+5. `std-sec-build-tooling-05` A change from upstream **MUST NOT** enter a maintained fork automatically without review.
+6. `std-sec-build-tooling-06` An upstream change to a forked component or pipeline extension **MUST** be evaluated for security impact and pass code review before it is merged.
+
+### Related Standards
 
 - [Continuous Integration](../delivery-release/continuous-integration.md)
 - [Build & Artifact Management](../delivery-release/build-artifact-management.md)
 
-### Release Maturity & Soak Period
+### Implements These Principles
 
-> Production uses stable, generally available dependencies, and newly published releases observe a minimum soak period before adoption.
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
-1. A dependency or runtime version used in production **MUST** be a stable, generally available release, not a pre-release build such as an alpha, beta, release candidate, or development snapshot; such a build **MAY** still be evaluated in a non-production environment.
-2. A newly published stable or generally available version **SHOULD NOT** be adopted in production until a soak period of at least 7 days has elapsed, except where it remediates a vulnerability whose risk-proportionate timeframe requires faster action.
+## Release Maturity
 
-#### References
+### Summary
+
+Production ordinarily uses supported stable dependencies; pre-release evaluation remains in non-production, and new versions undergo a defined risk-based soak period unless vulnerability remediation requires faster adoption.
+
+### Standards
+
+1. `std-sec-release-maturity-01` A dependency or runtime version used in production **SHOULD** be a supported stable release.
+2. `std-sec-release-maturity-02` A pre-release build **MAY** be evaluated in a non-production environment.
+3. `std-sec-release-maturity-03` A newly published version **SHOULD** complete a defined soak period proportionate to its risk before production adoption, except where vulnerability remediation requires faster action.
+
+### Related Standards
 
 - [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
 - [Containerisation](../platform-infrastructure/containerisation.md)
 - [Vulnerability & Dependency Management](vulnerability-dependency-management.md)
 
-### Compromise Response
+### Implements These Principles
 
-> Confirmed upstream compromises are immediately quarantined in the internal proxy and remediated out-of-band across affected services and pipelines.
+- [Security Engineering](../../principles/security-privacy/security-engineering.md)
 
-1. A third-party component confirmed compromised at its source **MUST** be blocked and quarantined in the governed internal proxy service.
-2. Where a dependency is confirmed compromised, affected services and built artifacts **MUST** be identified using their software bill of materials (SBOM) and remediated out-of-band ahead of standard vulnerability timelines.
-3. Where a pipeline extension or build tool is confirmed compromised, affected pipelines and repositories **MUST** be identified via code search or central template inventories and updated out-of-band ahead of standard maintenance cycles.
+## Compromise Response
 
-#### References
+### Summary
 
-- [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
+Confirmed upstream compromises are blocked from further use, traced to affected services and pipelines, and remediated outside routine maintenance timelines.
+
+### Standards
+
+1. `std-sec-compromise-response-01` A third-party component confirmed compromised at its source **MUST** be prevented from further acquisition or use.
+2. `std-sec-compromise-response-02` Where a dependency is confirmed compromised, affected services and built artifacts **MUST** be identified through a current component inventory and remediated outside standard vulnerability timelines.
+3. `std-sec-compromise-response-03` Where a pipeline extension or build tool is confirmed compromised, affected pipelines and repositories **MUST** be identified and updated outside standard maintenance cycles.
+
+### Related Standards
+
 - [Vulnerability & Dependency Management](vulnerability-dependency-management.md)
+- [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md)
+
+### Implements These Principles
+
 - [Security Engineering](../../principles/security-privacy/security-engineering.md)
