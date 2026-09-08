@@ -228,7 +228,7 @@ A pipeline controls cost by caching dependencies, measuring stage cost, allocati
 ### Related Standards
 
 - [Resource Efficiency & Optimisation](../cost-sustainability/resource-efficiency-optimisation.md)
-- [Cost Monitoring & Attribution](../cost-sustainability/cost-monitoring-attribution.md)
+- [Cost & Impact Visibility](../cost-sustainability/cost-impact-visibility.md)
 
 ### Implements These Principles
 

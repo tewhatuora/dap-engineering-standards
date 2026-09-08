@@ -186,7 +186,7 @@ nav:
       - Software Supply Chain Security: standards/security-identity/software-supply-chain-security.md
     - Cost & Sustainability:
       - standards/cost-sustainability/index.md
-      - Cost & Impact Attribution: standards/cost-sustainability/cost-monitoring-attribution.md
+      - Cost & Impact Visibility: standards/cost-sustainability/cost-impact-visibility.md
       - Resource Efficiency & Optimisation: standards/cost-sustainability/resource-efficiency-optimisation.md
     - AI Engineering:
       - standards/ai-engineering/index.md

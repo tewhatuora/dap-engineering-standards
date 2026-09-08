@@ -61,8 +61,22 @@ Aggregate spend does not show which service produced a cost or which team can ac
 
 ### Implemented By These Standards
 
-- [Cost Monitoring & Attribution](../../standards/cost-sustainability/cost-monitoring-attribution.md)
+- [Cost & Impact Visibility](../../standards/cost-sustainability/cost-impact-visibility.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
+
+## Cost Change Detection
+
+### Summary
+
+A material or unexpected change in a service's spend is brought to its responsible team's attention early enough to limit further unintended cost.
+
+### Reasoning
+
+Service cost can change rapidly through demand, configuration, architecture, or provider pricing changes. Detecting a material or unexpected change when it emerges allows the responsible team to identify its cause and assess whether the resulting spend remains proportionate to the service's usage and value.
+
+### Implemented By These Standards
+
+- [Cost & Impact Visibility](../../standards/cost-sustainability/cost-impact-visibility.md)
 
 ## Cost Reassessment
 
