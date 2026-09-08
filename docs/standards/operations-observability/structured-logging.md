@@ -1,7 +1,5 @@
 # Structured Logging
 
-A service's log output is structured, traceable, and free of sensitive data or unnecessary detail.
-
 ## Log Format
 
 ### Summary

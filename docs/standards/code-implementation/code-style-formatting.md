@@ -1,7 +1,5 @@
 # Code Style & Formatting
 
-One style guide per language, applied consistently regardless of whether a person or an AI wrote the code.
-
 ## Style Guide
 
 ### Summary

@@ -1,7 +1,5 @@
 # Cost & Impact Visibility
 
-Each service's recurring cost is visible and attributable, its responsible team is alerted to unexpected spend, and its environmental impact is measured.
-
 ## Cost Attribution
 
 ### Summary

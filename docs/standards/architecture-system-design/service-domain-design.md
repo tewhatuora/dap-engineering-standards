@@ -1,7 +1,5 @@
 # Service & Domain Design
 
-A service is scoped to one business domain, so it can be built, deployed, and evolved independently.
-
 ## Domain Boundaries
 
 ### Summary

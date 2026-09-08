@@ -1,7 +1,5 @@
 # Serverless
 
-A serverless function is sized to its workload and designed for portability, trace-context propagation, and cost attribution.
-
 ## Function Scope
 
 ### Summary

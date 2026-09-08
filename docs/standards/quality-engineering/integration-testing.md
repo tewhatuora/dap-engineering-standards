@@ -1,7 +1,5 @@
 # Integration Testing
 
-Integration testing verifies that components work correctly together in a fresh, isolated, and repeatable environment.
-
 ## Integration Test Scope
 
 ### Summary

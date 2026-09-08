@@ -1,7 +1,5 @@
 # Schema Design & Evolution
 
-A schema is owned by exactly one service and evolves through version-controlled, backward-compatible changes.
-
 ## Schema Ownership
 
 ### Summary

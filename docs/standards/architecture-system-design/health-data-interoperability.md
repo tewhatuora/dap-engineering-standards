@@ -1,8 +1,6 @@
 # Health Data Interoperability
 
-Health data is exchanged using recognised interoperability standards and shared clinical terminology.
-
-> Developers and vendors implementing health data exchange should also consult the [Health New Zealand | Te Whatu Ora API Standards](https://apistandards.digital.health.nz) for detailed, protocol-specific design and implementation guidance alongside the requirements set out here.
+> Developers and vendors implementing health data exchange should also consult the [Health New Zealand API Standards](https://apistandards.digital.health.nz) for protocol-specific design and implementation guidance.
 
 ## FHIR & Implementation Guides
 
@@ -12,8 +10,8 @@ Health data exchange uses FHIR, builds on documented existing Implementation Gui
 
 ### Standards
 
-1. `std-arch-fhir-implementation-guides-01` Health data exchange **SHOULD** use [HL7](https://www.hl7.org/)'s [Fast Healthcare Interoperability Resources (FHIR)](https://www.hl7.org/fhir/) standard where an appropriate FHIR resource exists.
-2. `std-arch-fhir-implementation-guides-02` An existing [HL7 Version 2 (V2)](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185) messaging integration **MAY** continue to operate; FHIR **SHOULD** be used for new development.
+1. `std-arch-fhir-implementation-guides-01` Health data exchange **SHOULD** use HL7's [Fast Healthcare Interoperability Resources (FHIR)](https://www.hl7.org/fhir/) standard where an appropriate FHIR resource exists.
+2. `std-arch-fhir-implementation-guides-02` An existing [HL7 Version 2](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185) messaging integration **MAY** continue to operate; FHIR **SHOULD** be used for new development.
 3. `std-arch-fhir-implementation-guides-03` A new Implementation Guide **SHOULD** extend or build on an existing published Implementation Guide while preserving the work it already covers.
 4. `std-arch-fhir-implementation-guides-04` A new Implementation Guide **MUST** include documentation sufficient for a prospective consumer to understand its purpose, scope, and the resource types and operations it supports, without needing to seek guidance from the team that published it.
 5. `std-arch-fhir-implementation-guides-05` A published FHIR API version **MUST** remain supported for at least three years from the introduction of a replacement version, with at least one year's notice before it is withdrawn from support.

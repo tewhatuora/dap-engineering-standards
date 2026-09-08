@@ -1,7 +1,5 @@
 # AI Tooling Cost Management
 
-Context size, model choice, and session length match the needs of the task.
-
 ## Context Scoping
 
 ### Summary

@@ -1,7 +1,5 @@
 # Feature Flagging
 
-Feature flags decouple deploying code from releasing it.
-
 ## Flag Purpose & Scope
 
 ### Summary

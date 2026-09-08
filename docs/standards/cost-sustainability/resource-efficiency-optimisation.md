@@ -1,7 +1,5 @@
 # Resource Efficiency & Optimisation
 
-Compute and storage resources, telemetry, and stored data are managed to meet service requirements without unnecessary cost or resource consumption.
-
 ## Resource Sizing
 
 ### Summary

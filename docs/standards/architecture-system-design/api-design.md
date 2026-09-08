@@ -1,8 +1,6 @@
 # API Design
 
-Every API follows a contract-first design and versioning approach so breaking changes do not affect existing consumers unexpectedly.
-
-> Developers and vendors delivering APIs for the organisation should also consult the [Health New Zealand | Te Whatu Ora API Standards](https://apistandards.digital.health.nz) for detailed, protocol-specific design and implementation guidance alongside the requirements set out here.
+> Developers and vendors delivering APIs for the organisation should also consult the [Health New Zealand API Standards](https://apistandards.digital.health.nz) for protocol-specific design and implementation guidance.
 
 ## Design Conventions
 

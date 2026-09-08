@@ -1,7 +1,5 @@
 # Identity & Access Management
 
-Production access follows least privilege, with privileged and emergency access separately controlled and audited.
-
 ## Individual Access
 
 ### Summary

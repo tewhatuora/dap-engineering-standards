@@ -1,7 +1,5 @@
 # Accessibility Testing
 
-Accessibility is verified through automated scanning and testing with real assistive technology across public and internal interfaces.
-
 ## Interface Scope
 
 ### Summary

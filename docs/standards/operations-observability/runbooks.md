@@ -1,7 +1,5 @@
 # Runbooks
 
-A runbook documents and validates the steps to resolve known failures and perform high-risk procedures.
-
 ## Runbook Coverage
 
 ### Summary

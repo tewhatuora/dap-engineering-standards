@@ -1,7 +1,5 @@
 # Telemetry Instrumentation
 
-Telemetry remains consistent across services, safe to introduce, and delivered alongside the change it observes.
-
 ## Planning & Delivery
 
 ### Summary

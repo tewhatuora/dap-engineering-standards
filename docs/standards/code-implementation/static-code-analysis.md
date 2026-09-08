@@ -1,7 +1,5 @@
 # Static Code Analysis
 
-Static analysis continuously checks code for defects, security weaknesses, and maintainability issues, beyond style and formatting.
-
 ## Analysis Coverage
 
 ### Summary

@@ -1,7 +1,5 @@
 # Continuous Integration
 
-A change affecting deployable software is built, tested, and scanned before merge so security and quality issues are identified early.
-
 ## Pipeline as Code
 
 ### Summary

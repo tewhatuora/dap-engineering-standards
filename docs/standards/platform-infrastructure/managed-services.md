@@ -1,7 +1,5 @@
 # Managed Services
 
-A managed service is configured and verified against the workload's own requirements.
-
 ## Service Quotas
 
 ### Summary

@@ -1,7 +1,5 @@
 # Performance & Load Testing
 
-Performance and load testing validates a service against defined performance and capacity targets under representative demand.
-
 ## Performance Targets
 
 ### Summary

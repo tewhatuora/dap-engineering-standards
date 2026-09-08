@@ -1,7 +1,5 @@
 # Rollback Strategy
 
-Recovery from a failed deployment follows a fast, rehearsed process.
-
 ## Triggers
 
 ### Summary

@@ -1,7 +1,5 @@
 # Build & Artifact Management
 
-Each deployable artifact is built once and used unchanged in every environment to which it is promoted.
-
 ## Automated Builds
 
 ### Summary

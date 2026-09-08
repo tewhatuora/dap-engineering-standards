@@ -1,7 +1,5 @@
 # Version Control
 
-Every codebase is held in one authoritative, traceable repository that excludes secrets from its history.
-
 ## Authoritative Repository
 
 ### Summary

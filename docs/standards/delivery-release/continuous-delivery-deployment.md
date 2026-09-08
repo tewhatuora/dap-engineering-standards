@@ -1,7 +1,5 @@
 # Continuous Delivery & Deployment
 
-Planned deployments are automated, repeatable, verified, and recoverable.
-
 ## Deployment Pipeline
 
 ### Summary

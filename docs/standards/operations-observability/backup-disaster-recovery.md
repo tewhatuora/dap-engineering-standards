@@ -1,7 +1,5 @@
 # Backup & Disaster Recovery
 
-Recovery is designed and validated against defined objectives.
-
 ## Recovery Strategy
 
 ### Summary
