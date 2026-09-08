@@ -97,6 +97,12 @@ nav:
       - Stateless Architecture: principles/architecture-platform/stateless-architecture.md
     - Quality:
       - principles/quality/index.md
+      - Test Automation: principles/quality/test-automation.md
+      - Outcome Driven Assurance: principles/quality/outcome-driven-assurance.md
+      - Risk-Based Quality: principles/quality/risk-based-quality.md
+      - Evidence & Reporting: principles/quality/evidence-reporting.md
+      - Quality by Design: principles/quality/quality-by-design.md
+      - Quality Intelligence & Improvement: principles/quality/quality-intelligence-improvement.md
       - Testability: principles/quality/testability.md
       - Accessibility: principles/quality/accessibility.md
     - Reliability & Operations:

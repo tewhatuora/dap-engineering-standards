@@ -28,7 +28,7 @@ Architecture favours cohesive services, shared capabilities, explicit interfaces
 
 ### Quality
 
-Software is designed so its behaviour and accessibility remain verifiable throughout its lifecycle.
+Quality is designed into products and services, demonstrated through evidence, and improved through risk and data.
 
 [Read more](quality/index.md).
 
