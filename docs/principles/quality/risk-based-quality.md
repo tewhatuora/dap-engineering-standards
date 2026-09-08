@@ -35,7 +35,6 @@ Lower priority does not mean no testing is needed. It means the amount and timin
 ### Implemented By These Standards
 
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Regression Test Automation](../../standards/quality-engineering/regression-test-automation.md)
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
 - [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
@@ -95,7 +94,6 @@ QA makes the remaining risk and its supporting evidence clear. A person accounta
 
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
-- [Regression Test Automation](../../standards/quality-engineering/regression-test-automation.md)
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
 - [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
 - [Release Strategy](../../standards/delivery-release/release-strategy.md)

@@ -14,7 +14,6 @@ Using test outcomes, operational experience, incidents, and trend analysis to re
 
 ### Implemented By These Standards
 
-- [Regression Test Automation](../../standards/quality-engineering/regression-test-automation.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 - [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
@@ -35,7 +34,6 @@ QA explains an improvement opportunity using evidence and its effect on quality,
 
 ### Implemented By These Standards
 
-- [Regression Test Automation](../../standards/quality-engineering/regression-test-automation.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
 

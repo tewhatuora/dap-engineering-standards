@@ -48,7 +48,6 @@ Repeatable work outside delivery pipelines has the same consistency and efficien
 - [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)
 - [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
-- [Regression Test Automation](../../standards/quality-engineering/regression-test-automation.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 - [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
 
@@ -103,5 +102,4 @@ Automated delivery pipeline gates apply rule-based checks consistently and stop 
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
 - [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
-- [Regression Test Automation](../../standards/quality-engineering/regression-test-automation.md)
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)

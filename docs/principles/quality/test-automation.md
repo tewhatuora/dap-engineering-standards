@@ -16,7 +16,6 @@ A passing automated suite only provides evidence for the behaviours and conditio
 
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
-- [Regression Test Automation](../../standards/quality-engineering/regression-test-automation.md)
 
 ## Automation Is Considered Early
 
@@ -32,7 +31,6 @@ Early consideration allows QA and the wider team to shape testable outcomes and 
 
 ### Implemented By These Standards
 
-- [Regression Test Automation](../../standards/quality-engineering/regression-test-automation.md)
 
 ## Risk and Value-Driven Automation
 
@@ -49,7 +47,6 @@ Choosing automation by test count or coverage alone can leave important risks un
 ### Implemented By These Standards
 
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Regression Test Automation](../../standards/quality-engineering/regression-test-automation.md)
 
 ## Appropriate Test Level
 

@@ -33,7 +33,6 @@ A complete report makes both confidence and uncertainty visible. This allows the
 ### Implemented By These Standards
 
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Regression Test Automation](../../standards/quality-engineering/regression-test-automation.md)
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
 - [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
 

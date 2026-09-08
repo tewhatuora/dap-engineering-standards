@@ -12,13 +12,12 @@ reviewed: 2026-09-02
 
 ## Supports
 
-- [Regression Test Automation](../../standards/quality-engineering/regression-test-automation.md) — `std-qe-regression-01`, `std-qe-regression-02`
-- [Automate Repetitive Testing](../../principles/automate-repetitive-testing.md)
+- [Test Automation](../../principles/quality/test-automation.md)
 
 ## Context
 
-`std-qe-regression-01` bites at the moment someone is about to re-run a test that already
-passed. This assessment decides which way it goes.
+Use this assessment when deciding whether a test is a worthwhile automation candidate or
+should remain manual.
 
 Assess one candidate at a time: a test, workflow, API, data rule, integration, or
 scenario. An application or a project is not a candidate.
@@ -59,8 +58,8 @@ rest of the assessment says.
 | --- | --- | --- |
 | Strong candidate | Clear purpose and evidence value, repeatable and stable, proportionate ongoing benefit. | Continue to the readiness checklist and plan the work. |
 | Candidate with dependencies | Valuable, but suitability depends on resolving an uncertainty, a constraint, or a design decision. | Record the dependencies and their owners, then reassess or proceed with the conditions stated. |
-| Better kept manual | Better served by exploration, judgement, usability assessment, or infrequent execution. | Keep it in the wider testing approach and record the exemption under `std-qe-regression-02`. |
-| Not recommended | Low expected value, a result that would not be reliable or actionable, or effort disproportionate to the benefit. | Record the exemption under `std-qe-regression-02` and do not progress unless the context materially changes. |
+| Better kept manual | Better served by exploration, judgement, usability assessment, or infrequent execution. | Keep it in the wider testing approach and record why it remains manual. |
+| Not recommended | Low expected value, a result that would not be reliable or actionable, or effort disproportionate to the benefit. | Record the reasons and do not progress unless the context materially changes. |
 
 A positive outcome means the candidate is worth automating, not that the work is ready to
 start.
@@ -77,9 +76,9 @@ start.
 | Owner | Payments team lead |
 | Review trigger | The provider publishes forced-decline sandbox cards. |
 
-Where the outcome is *Better kept manual* or *Not recommended*, this record is what
-`std-qe-regression-02` asks for: the risk covered, why automating it was judged not worth the
-cost, and the condition that reopens the judgement.
+Where the outcome is *Better kept manual* or *Not recommended*, record the risk covered,
+why automating it was judged not worth the cost, and the condition that reopens the
+judgement.
 
 ## Pitfalls
 
