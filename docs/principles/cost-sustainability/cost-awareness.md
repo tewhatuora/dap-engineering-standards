@@ -42,6 +42,7 @@ Usage-based engineering tooling can incur cost with every request or operation. 
 - [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
 - [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
 - [Structured Logging](../../standards/operations-observability/structured-logging.md)
+- [Distributed Tracing](../../standards/operations-observability/distributed-tracing.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)

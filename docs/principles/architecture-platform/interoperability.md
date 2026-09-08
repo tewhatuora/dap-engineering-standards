@@ -79,6 +79,7 @@ A custom or proprietary option remains appropriate where no suitable open standa
 
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
+- [Distributed Tracing](../../standards/operations-observability/distributed-tracing.md)
 - [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
 - [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
 

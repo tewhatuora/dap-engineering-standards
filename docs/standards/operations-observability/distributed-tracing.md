@@ -1,57 +1,84 @@
 # Distributed Tracing
 
-## Summary
+Trace context propagates end-to-end through accurately structured spans and deliberate sampling.
 
-> Propagate trace context end-to-end, structure spans accurately, and sample deliberately.
+## Trace Context
 
-## Standards
+### Summary
 
-### Trace Context Propagation
+Valid trace context propagates across downstream boundaries in a standard, interoperable format and is validated at external trust boundaries.
 
-> A trace identifier propagates across every boundary a transaction crosses, using a standard, interoperable format.
+### Standards
 
-1. A service **MUST** propagate a transaction's trace identifier, whether carried by the transaction or newly generated, to every downstream call, including one across an asynchronous boundary such as a message queue or event stream.
-2. Trace context **SHOULD** be propagated using a standard, interoperable format, such as [W3C Trace Context](https://www.w3.org/TR/trace-context/), rather than a bespoke or service-specific header scheme.
-3. A service receiving a request from outside its trust boundary, such as a public-facing API, **SHOULD** generate a new trace identifier at that boundary rather than unconditionally propagate one supplied by the caller.
+1. `std-ops-trace-context-01` A service **MUST** propagate valid trace context to instrumented downstream calls, including across asynchronous boundaries where the transport supports context propagation.
+2. `std-ops-trace-context-02` Trace context **SHOULD** be propagated using a standard, interoperable format, such as [W3C Trace Context](https://www.w3.org/TR/trace-context/).
+3. `std-ops-trace-context-03` A service receiving trace context from outside its trust boundary **MUST** validate it before propagation.
 
-#### References
-
-- [Interoperability](../../principles/architecture-platform/interoperability.md)
-- [Observability](../../principles/reliability-operations/observability.md)
-- [Security Engineering](../../principles/security-privacy/security-engineering.md)
-
-### Span Structure
-
-> A span's structure mirrors the transaction's real call graph, with a consistent name and any failure clearly recorded.
-
-1. A span's start and end boundaries, and its parent-child relationship to other spans, **MUST** reflect the actual call graph of the transaction.
-2. When a call or message crosses between two instrumented services, each side of that crossing **MUST** be recorded as its own span: the client and server for a call, or the producer and consumer for a message. A single span **MUST NOT** represent both sides, so a trace distinguishes an outgoing call from its incoming handling.
-3. A span's name **MUST** be consistent and low-cardinality; a variable value, such as a raw identifier, **MUST** be recorded as a span attribute rather than embedded in the span name.
-4. A span representing a failed operation **MUST** record that failure, including sufficient detail to identify the cause, so a trace clearly shows where within a transaction it failed.
-
-#### References
+### Related Standards
 
 - [Telemetry Instrumentation](telemetry-instrumentation.md)
+- [Structured Logging](structured-logging.md)
+
+### Implements These Principles
+
+- [Observability](../../principles/reliability-operations/observability.md)
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
+
+## Span Structure
+
+### Summary
+
+A trace uses separate, accurately related spans for each side of a service boundary, with low-cardinality names, variable attributes, and failures recorded clearly.
+
+### Standards
+
+1. `std-ops-span-structure-01` A span's start and end boundaries, and its parent-child relationship to other spans, **MUST** reflect the actual call graph of the transaction.
+2. `std-ops-span-structure-02` When a call or message crosses between two instrumented services, each instrumented side **SHOULD** record the operation with the appropriate client, server, producer, or consumer span kind.
+3. `std-ops-span-structure-03` A single span **SHOULD NOT** represent both sides of a remote boundary.
+4. `std-ops-span-structure-04` A span's name **MUST** be consistent and low-cardinality.
+5. `std-ops-span-structure-05` A variable value, such as a raw identifier, **MUST** be recorded as a span attribute and excluded from the span name.
+6. `std-ops-span-structure-06` A span representing a failed operation **MUST** record the failure according to the applicable semantic convention.
+
+### References
+
 - [OpenTelemetry Tracing API Specification](https://opentelemetry.io/docs/specs/otel/trace/api/)
 
-### Trace Sampling
+### Related Standards
 
-> A trace's sampling decision is made deliberately once, and every service it passes through honours that same decision.
+- [Telemetry Instrumentation](telemetry-instrumentation.md)
 
-1. A service **MUST** decide deliberately how much of its traffic to keep as traces, weighing transaction volume against how valuable that data is, rather than keeping or dropping traces without a clear, defined basis.
-2. Once a decision is made to keep or drop a trace, every service that transaction passes through **MUST** follow that same decision, rather than each service deciding independently for itself.
-3. A service's sampling strategy **SHOULD** retain a trace that contains an error or is unusually slow, even when the normal sampling decision would otherwise have dropped it.
+### Implements These Principles
 
-#### References
+- [Observability](../../principles/reliability-operations/observability.md)
 
-- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+## Sampling
+
+### Summary
+
+A trace's sampling decision is deliberate and consistent across services, with errors and unusually slow traces retained where possible.
+
+### Standards
+
+1. `std-ops-sampling-01` A service **MUST** define how much of its traffic to keep as traces by weighing transaction volume against the value of that data.
+2. `std-ops-sampling-02` A service **SHOULD** use parent-based or consistent sampling so downstream decisions remain coherent with propagated sampling state.
+3. `std-ops-sampling-03` A service's sampling strategy **SHOULD** retain a trace that contains an error or is unusually slow, even when the normal sampling decision would otherwise have dropped it.
+
+### References
+
 - [OpenTelemetry Sampling Specification](https://opentelemetry.io/docs/specs/otel/trace/sdk/#sampling)
 
-## Illustrative Examples
+### Related Standards
+
+- [Observability Platform Integration](observability-platform-integration.md)
+
+### Implements These Principles
+
+- [Observability](../../principles/reliability-operations/observability.md)
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+
+## Examples
 
 ### Failed Cross-Service Request
-
-This example traces a distributed request across services that ultimately fails due to a downstream database query timeout. It demonstrates trace context propagation, span structure, and sampling in practice.
 
 ```mermaid
 sequenceDiagram
@@ -77,19 +104,7 @@ sequenceDiagram
     A-->>Client: 500 Internal Server Error
 ```
 
-This end-to-end transaction generates four individual OpenTelemetry spans. The Patient Service to Clinical Data Service crossing, the only hop between two instrumented services, is modelled with a matching `CLIENT` and `SERVER` span pair; the client and database boundaries remain single-sided, since neither the client nor the database is itself an instrumented participant in the trace.
-
-Because the database query timed out, the failure bubbles up the call stack, marking every span in the distributed trace with an `ERROR` status.
-
-The health identifier itself (`ZZZ0016`) is tokenised at the collection layer, in line with each service's sensitive telemetry attribute obligations, so it appears only as `pt_93810` in the spans below.
-
-**Sampling Decision**
-
-The `traceparent` suffix `-01` marks this trace as kept. Even if the head-based sampler had not already selected it, the query timeout and resulting `ERROR` status independently guarantee its retention, so every downstream service still forwards `-01` and the full trace reaches the APM backend.
-
 #### 1. Patient Service: Inbound HTTP Server Span
-
-This is the root span of the distributed trace. It features no `parent_id` because Patient Service sits at the system's public trust boundary and discards the externally supplied trace context rather than propagate it, generating a fresh trace instead.
 
 ```json
 {
@@ -124,8 +139,6 @@ This is the root span of the distributed trace. It features no `parent_id` becau
 
 #### 2. Patient Service: Outbound HTTP Client Span
 
-This span models the outbound boundary crossing from the caller's perspective. It measures the lifecycle of the network request sent to the Clinical Data Service, capturing any transit latencies. Its `span_id` matches the parent block injected into the outbound W3C header.
-
 ```json
 {
   "name": "GET /Observation",
@@ -156,8 +169,6 @@ This span models the outbound boundary crossing from the caller's perspective. I
 ```
 
 #### 3. Clinical Data Service: Inbound HTTP Server Span
-
-This server span tracks the execution from the receiver's perspective. It initialises when the Clinical Data Service extracts the incoming W3C `traceparent` header, pointing back to the caller's client span via `parent_id`.
 
 ```json
 {
@@ -191,8 +202,6 @@ This server span tracks the execution from the receiver's perspective. It initia
 ```
 
 #### 4. Clinical Data Service to Database: Outbound DB Client Span
-
-This client span tracks the database query driver session, and is where the transaction's failure actually originates. Its `ERROR` status and exception event record the query timeout in enough detail to identify the cause, which the two upstream spans then propagate without needing to repeat. The query text itself is fully parameterised, so no patient identifier appears in this span's telemetry.
 
 ```json
 {

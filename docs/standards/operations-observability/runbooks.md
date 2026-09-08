@@ -1,86 +1,111 @@
 # Runbooks
 
-## Summary
+A runbook documents and validates the steps to resolve known failures and perform high-risk procedures.
 
-> A runbook documents and validates the steps to resolve known failures and perform high-risk procedures.
+## Runbook Coverage
 
-## Standards
+### Summary
 
-### Runbook Coverage
+A paging alert, known recurring failure mode, and high-risk procedure has a documented runbook used to guide the response.
 
-> A known failure mode or high-risk procedure has a documented runbook, followed as the response rather than reinvented each time.
+### Standards
 
-1. A known or recurring failure mode referenced by an alert **MUST** have a corresponding runbook describing its response.
-2. A high-risk or recurring operational procedure, such as remediating a data quality issue or executing a standby failover, **MUST** be captured in a runbook rather than left to informal or undocumented knowledge.
-3. A failure mode newly identified through an incident review **MUST** receive a runbook where it is reasonably likely to recur.
-4. Where a documented runbook exists for a failure mode or operational procedure, it **MUST** be followed as the response, rather than a team member or an AI tool diagnosing and resolving the condition independently each time.
+1. `std-ops-runbook-coverage-01` A paging alert **MUST** have a corresponding runbook describing its response.
+2. `std-ops-runbook-coverage-02` A high-risk or recurring operational procedure, such as remediating a data quality issue or executing a standby failover, **MUST** be captured in a runbook.
+3. `std-ops-runbook-coverage-03` A failure mode newly identified through an incident review **SHOULD** receive a runbook where it is reasonably likely to recur.
+4. `std-ops-runbook-coverage-04` A responder **SHOULD** use an applicable runbook to guide the response and depart from it where incident conditions require different action.
 
-#### References
-
-- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
-- [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)
-
-### Runbook Content
-
-> A runbook spells out its steps, applicability, and resolution outcome in enough detail for a person or an AI tool to execute.
-
-1. A runbook **MUST** describe the steps needed to diagnose and resolve a failure mode or carry out an operational procedure, in enough detail to execute them.
-2. A runbook **MUST** state the condition under which it applies and the outcome confirming the failure mode's resolution or the operational procedure's completion.
-3. A runbook **SHOULD** identify the escalation path to follow where its documented steps do not resolve the failure mode or complete the operational procedure.
-
-#### References
-
-- [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)
-
-### Runbook Currency
-
-> A runbook is version-controlled alongside its service, updated in the same change, and retired once it no longer applies.
-
-1. A runbook **MUST** be version-controlled as `Markdown` within the same repository as the service it is documented for.
-2. A runbook **MUST** be updated in the same change that alters the procedure, service behaviour, or failure mode it documents.
-3. A runbook **MUST** be retired once the failure mode or procedure it covers no longer applies, rather than left discoverable alongside current ones.
-
-#### References
-
-- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
-- [Code Review](../code-implementation/code-review.md)
-- [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
-
-### Runbook Discoverability
-
-> An alert or dashboard links directly to its runbook, and every runbook is also published somewhere findable on its own.
-
-1. An alert or dashboard indicator tied to a failure mode **MUST** link directly to the runbook covering it, rather than leaving its recipient, whether a team member or an AI tool, without direct access to the runbook.
-2. A runbook **MUST** be published through one of the organisation's established documentation sites, so it can be found without requiring direct access to its source repository.
-
-#### References
+### Related Standards
 
 - [Metrics, Monitoring & Alerting](metrics-monitoring-alerting.md)
-- [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)
-- [Engineering Documentation](../documentation-collaboration/engineering-documentation.md)
+- [Backup & Disaster Recovery](backup-disaster-recovery.md)
 
-### Runbook Validation
+### Implements These Principles
 
-> A runbook is tested in a representative environment, and any gap found is corrected immediately, not deferred.
-
-1. A runbook **MUST** be tested in a representative non-production environment when first written and whenever the failure mode, procedure, or service it documents changes.
-2. A gap or inaccuracy found while testing a runbook **MUST** be corrected immediately, in place, rather than deferred until the runbook is next relied on.
-3. A gap or inaccuracy found while a team member or an AI tool relies on a runbook during a real incident **MUST** be tracked as a corrective action from that incident's review, rather than corrected while the incident is still being resolved.
-
-#### References
-
-- [Observability](../../principles/reliability-operations/observability.md)
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
-- [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)
 
-### Runbook Automation
+## Runbook Content
 
-> A failure response is automated where possible, and its runbook still documents how to confirm and intervene in that automation.
+### Summary
 
-1. A failure mode's response or an operational procedure's execution **SHOULD** be automated rather than a runbook continuing to depend on a team member or an AI tool to carry out its steps manually.
-2. Where automated, the runbook **MUST** document how to confirm the automation executed correctly and how to intervene where it does not, rather than being discarded.
+A runbook describes its steps, applicability, resolution outcome, and escalation path in enough detail for a person or an AI tool to execute.
 
-#### References
+### Standards
+
+1. `std-ops-runbook-content-01` A runbook **MUST** describe the steps needed to diagnose and resolve a failure mode or carry out an operational procedure, in enough detail to execute them.
+2. `std-ops-runbook-content-02` A runbook **MUST** state the condition under which it applies and the outcome confirming the failure mode's resolution or the operational procedure's completion.
+3. `std-ops-runbook-content-03` A runbook **SHOULD** identify the escalation path to follow where its documented steps do not resolve the failure mode or complete the operational procedure.
+
+### Implements These Principles
+
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+
+## Runbook Maintenance
+
+### Summary
+
+A runbook is version-controlled, updated with relevant service changes, and removed from active use once it no longer applies.
+
+### Standards
+
+1. `std-ops-runbook-maintenance-01` A runbook **MUST** be version-controlled in a discoverable location.
+2. `std-ops-runbook-maintenance-02` A runbook **SHOULD** be updated in the same change that materially alters the procedure, service behaviour, or failure mode it documents.
+3. `std-ops-runbook-maintenance-03` A runbook **MUST** be removed from active operational documentation once it no longer applies.
+
+### Related Standards
+
+- [Code Review](../code-implementation/code-review.md)
+
+### Implements These Principles
+
+- [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
+
+## Runbook Access
+
+### Summary
+
+An alert or dashboard links directly to its runbook, which remains accessible to responders without source-repository access.
+
+### Standards
+
+1. `std-ops-runbook-access-01` A paging alert or dashboard indicator tied to a known failure mode **SHOULD** link directly to the runbook covering it.
+2. `std-ops-runbook-access-02` A runbook **MUST** be accessible to responders without requiring direct access to its source repository.
+
+### Related Standards
+
+- [Metrics, Monitoring & Alerting](metrics-monitoring-alerting.md)
+
+### Implements These Principles
+
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+
+## Runbook Automation
+
+### Summary
+
+A failure response is automated where possible, and its runbook still documents how to confirm and intervene in that automation.
+
+### Standards
+
+1. `std-ops-runbook-automation-01` A failure mode's response or an operational procedure's execution **SHOULD** be automated where possible.
+2. `std-ops-runbook-automation-02` A runbook for an automated failure response or operational procedure **MUST** document how to confirm the automation executed correctly and how to intervene where it does not.
+
+### Implements These Principles
 
 - [Automation](../../principles/engineering-practice/automation.md)
-- [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md)
+
+## Runbook Validation
+
+### Summary
+
+A runbook is validated before responders rely on it; gaps found during testing are corrected promptly, and gaps found during an incident are tracked afterward.
+
+### Standards
+
+1. `std-ops-runbook-validation-01` A runbook **MUST** be validated before operational use through testing or review appropriate to the procedure's risk, and **SHOULD** be revalidated after a material change.
+2. `std-ops-runbook-validation-02` A gap or inaccuracy found while testing a runbook **SHOULD** be corrected promptly.
+3. `std-ops-runbook-validation-03` A gap or inaccuracy found while a team member or an AI tool relies on a runbook during a real incident **MUST** be tracked for correction after the incident.
+
+### Implements These Principles
+
+- [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)

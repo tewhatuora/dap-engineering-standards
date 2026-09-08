@@ -2,7 +2,7 @@
 
 ## Overview
 
-Operating services reliably in production requires visibility into their behaviour and the ability to respond when things go wrong. This section defines the engineering standards for observability, operational response, and recovery.
+Operations and observability standards require production services to expose their behaviour and support operational response and recovery.
 
 Choose a standard below to read it in full.
 
@@ -16,13 +16,13 @@ A service's log output is structured, traceable, and free of sensitive data or u
 
 ### Metrics, Monitoring & Alerting
 
-Keep a service's metrics accurate, visible, and bounded, with alerts that remain automated and actionable.
+A service's metrics remain accurate, visible, and bounded, with automated and actionable alerts.
 
 [Read more](metrics-monitoring-alerting.md).
 
 ### Distributed Tracing
 
-Propagate trace context end-to-end, structure spans accurately, and sample deliberately.
+Trace context propagates end-to-end through accurately structured spans and deliberate sampling.
 
 [Read more](distributed-tracing.md).
 
@@ -34,13 +34,13 @@ Telemetry remains consistent across services, safe to introduce, and delivered a
 
 ### Observability Platform Integration
 
-Centralise telemetry, preserve portability, and engineer for resilient observability.
+Telemetry is centralised, portable, and available for resilient operations.
 
 [Read more](observability-platform-integration.md).
 
 ### Backup & Disaster Recovery
 
-Design and validate recovery against defined objectives.
+Recovery is designed and validated against defined objectives.
 
 [Read more](backup-disaster-recovery.md).
 
