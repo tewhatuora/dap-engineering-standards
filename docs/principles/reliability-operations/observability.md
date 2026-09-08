@@ -14,6 +14,22 @@ Designing instrumentation alongside the behaviour it observes makes that behavio
 
 - [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
 
+## Central Operational Telemetry
+
+### Summary
+
+Telemetry required to operate services is available through one established observability platform.
+
+### Reasoning
+
+Distributing operational telemetry across separate service-specific systems makes incident diagnosis depend on knowing where each service stores its signals. A shared platform gives responders one place to query and correlate the telemetry required to understand behaviour across service boundaries.
+
+Keeping operational telemetry in an established platform also applies common access, retention, and operational controls instead of requiring each team to operate a separate telemetry path.
+
+### Implemented By These Standards
+
+- [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
+
 ## Consistent Instrumentation
 
 ### Summary

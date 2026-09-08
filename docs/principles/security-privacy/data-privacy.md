@@ -15,6 +15,7 @@ Data collected or retained for an undefined future use creates exposure without 
 - [Prompt Data Handling](../../standards/ai-engineering/prompt-data-handling.md)
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Structured Logging](../../standards/operations-observability/structured-logging.md)
+- [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 
 ## Privacy-Protective Defaults

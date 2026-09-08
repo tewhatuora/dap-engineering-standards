@@ -1,58 +1,82 @@
 # Observability Platform Integration
 
-## Summary
+Telemetry is centralised, portable, and available for resilient operations.
 
-> Centralise telemetry, preserve portability, and engineer for resilient observability.
+## Telemetry Ingestion
 
-## Standards
+### Summary
 
-### Centralised Telemetry Ingestion
+Telemetry required to operate a service is shipped to the organisation's established observability platform.
 
-> A service's logs, metrics, and traces ship to the organisation's one established observability platform, not a separate alternative.
+### Standards
 
-1. Telemetry emitted by a service, across its logs, metrics, and traces, **MUST** be shipped to the organisation's centralised observability platform rather than retained only on the instance or host that produced it.
-2. A new service **MUST** integrate with the established observability platform rather than operating a separate, team-specific alternative.
+1. `std-ops-telemetry-ingestion-01` Telemetry required to operate a service **MUST** be shipped to the organisation's centralised observability platform.
 
-#### References
+### Related Standards
 
-- [Observability](../../principles/reliability-operations/observability.md)
-- [Shared Platform](../../principles/architecture-platform/shared-platform.md)
-
-### Telemetry Transport
-
-> Telemetry moves to the observability platform through an open protocol, and stays exportable if that platform ever changes.
-
-1. Telemetry **SHOULD** be shipped to the observability platform using an open, vendor-neutral protocol or collection mechanism, such as the [OpenTelemetry Protocol](https://opentelemetry.io/docs/specs/otlp/), rather than a proprietary alternative that would require re-instrumenting the service to switch observability platforms.
-2. A failure to ship telemetry to the observability platform **SHOULD** itself be recorded, such as through an internal metric, so a gap in telemetry is not mistaken for the absence of a problem.
-3. Telemetry held within the observability platform **SHOULD** remain exportable in a usable, non-proprietary format, so historical telemetry is not lost if that platform is replaced.
-4. The ability to export telemetry from the observability platform in a usable, non-proprietary format **SHOULD** be verified periodically.
-
-#### References
-
-- [Vendor Lock-in & Portability](../../principles/architecture-platform/vendor-lock-in-portability.md)
-- [Interoperability](../../principles/architecture-platform/interoperability.md)
 - [Telemetry Instrumentation](telemetry-instrumentation.md)
 
-### Telemetry Retention
+### Implements These Principles
 
-> Each category of telemetry has a defined retention period, weighed against its value, storage cost, and any compliance need.
+- [Observability](../../principles/reliability-operations/observability.md)
 
-1. A retention period **MUST** be defined for each category of telemetry, proportionate to its operational and investigative value, the cost of its continued storage, and any applicable compliance requirement.
-2. Business-relevant telemetry **SHOULD** be retained for a longer period than diagnostic telemetry, so historic trends remain available for reporting purposes.
+## Telemetry Transport
 
-#### References
+### Summary
 
-- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
-- [Metrics, Monitoring & Alerting](metrics-monitoring-alerting.md)
-- [Structured Logging](structured-logging.md)
+Telemetry uses an open transport, records delivery failures, and remains exportable through a periodically verified non-proprietary format.
 
-### Observability Platform Availability
+### Standards
 
-> The observability platform stays available even when the services it monitors are down, buffering telemetry through any brief outage.
+1. `std-ops-telemetry-transport-01` Telemetry **SHOULD** be shipped to the observability platform using an open, vendor-neutral protocol or collection mechanism, such as the [OpenTelemetry Protocol](https://opentelemetry.io/docs/specs/otlp/).
+2. `std-ops-telemetry-transport-02` A failure to ship telemetry to the observability platform **SHOULD** itself be recorded, such as through an internal metric, so a gap in telemetry is not mistaken for the absence of a problem.
+3. `std-ops-telemetry-transport-03` Telemetry held within the observability platform **SHOULD** remain exportable in a usable, non-proprietary format, so historical telemetry is not lost if that platform is replaced.
+4. `std-ops-telemetry-transport-04` The ability to export telemetry from the observability platform in a usable, non-proprietary format **SHOULD** be verified periodically.
 
-1. The observability platform **MUST** be operated with availability independent of the services it monitors, so it remains usable to diagnose an incident affecting those services.
-2. A brief unavailability of the observability platform **SHOULD NOT** result in permanent loss of metrics or traces; a service or an intermediate collector **SHOULD** buffer them locally until the platform becomes reachable again.
+### Related Standards
 
-#### References
+- [Telemetry Instrumentation](telemetry-instrumentation.md)
+
+### Implements These Principles
+
+- [Interoperability](../../principles/architecture-platform/interoperability.md)
+- [Vendor Lock-in & Portability](../../principles/architecture-platform/vendor-lock-in-portability.md)
+- [Observability](../../principles/reliability-operations/observability.md)
+
+## Platform Availability
+
+### Summary
+
+The observability platform operates independently of monitored services, with operational telemetry buffered through brief platform outages where practical.
+
+### Standards
+
+1. `std-ops-platform-availability-01` The observability platform **MUST** be operated with availability independent of the services it monitors, so it remains usable to diagnose an incident affecting those services.
+2. `std-ops-platform-availability-02` A brief unavailability of the observability platform **SHOULD NOT** cause permanent loss of telemetry required for incident response.
+3. `std-ops-platform-availability-03` A service or intermediate collector **SHOULD** buffer telemetry required for incident response within defined resource bounds until the observability platform becomes reachable again.
+
+### Implements These Principles
 
 - [Reliability & Resilience](../../principles/reliability-operations/reliability-resilience.md)
+
+## Telemetry Retention
+
+### Summary
+
+Each category of telemetry has a defined retention period, weighed against its value, storage cost, and any compliance need.
+
+### Standards
+
+1. `std-ops-telemetry-retention-01` A retention period **MUST** be defined for each category of telemetry, proportionate to its operational and investigative value, the cost of its continued storage, and any applicable compliance requirement.
+2. `std-ops-telemetry-retention-02` Business-relevant telemetry **SHOULD** be retained for a longer period than diagnostic telemetry, so historic trends remain available for reporting purposes.
+
+### Related Standards
+
+- [Structured Logging](structured-logging.md)
+- [Metrics, Monitoring & Alerting](metrics-monitoring-alerting.md)
+- [Distributed Tracing](distributed-tracing.md)
+
+### Implements These Principles
+
+- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+- [Sustainability](../../principles/cost-sustainability/sustainability.md)

@@ -16,6 +16,7 @@ Redundancy matched to service criticality limits outage impact without imposing 
 
 - [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
+- [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)
@@ -37,6 +38,7 @@ Containing a dependency failure preserves functionality that does not rely on it
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
+- [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
 
 ## Overload Protection
 
@@ -138,4 +140,18 @@ A defined recovery path reduces delay and inconsistency when a known failure occ
 
 - [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
+- [Runbooks](../../standards/operations-observability/runbooks.md)
+
+## Accessible Recovery Procedures
+
+### Summary
+
+Operational recovery procedures are discoverable at the point of response and accessible to the responders who need them.
+
+### Reasoning
+
+A recovery procedure provides no timely path to action when responders cannot find or access it during an incident. Linking a known failure signal to its procedure reduces search time, while access independent of the source repository avoids making repository permissions a prerequisite for response.
+
+### Implemented By These Standards
+
 - [Runbooks](../../standards/operations-observability/runbooks.md)
