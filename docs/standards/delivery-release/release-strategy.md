@@ -1,7 +1,5 @@
 # Release Strategy
 
-A release is a deliberate decision distinct from pipeline completion.
-
 ## Release & Deployment
 
 ### Summary

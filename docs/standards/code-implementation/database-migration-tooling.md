@@ -1,7 +1,5 @@
 # Database Migration Tooling
 
-Every planned schema or data change is defined as version-controlled migration code and applied consistently through dedicated tooling.
-
 ## Migration Tooling
 
 ### Summary

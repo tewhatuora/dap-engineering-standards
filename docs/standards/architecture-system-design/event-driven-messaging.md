@@ -1,7 +1,5 @@
 # Event-Driven Messaging
 
-Every event has a defined contract and delivery guarantee; every consumer safely tolerates duplicates.
-
 ## Communication Style
 
 ### Summary

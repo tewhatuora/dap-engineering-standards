@@ -1,7 +1,5 @@
 # Unit Testing
 
-Unit testing verifies one unit of code in isolation with external dependencies replaced by controlled test doubles.
-
 ## Unit Test Scope
 
 ### Summary

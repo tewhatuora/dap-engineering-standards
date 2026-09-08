@@ -1,7 +1,5 @@
 # Runtime Architecture
 
-A workload's packaging, runtime model, and deployment location are selected according to its requirements.
-
 ## Runtime Selection
 
 ### Summary

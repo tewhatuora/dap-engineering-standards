@@ -1,7 +1,5 @@
 # Metrics, Monitoring & Alerting
 
-A service's metrics remain accurate, visible, and bounded, with automated and actionable alerts.
-
 ## Metric Types
 
 ### Summary

@@ -1,7 +1,5 @@
 # Approved AI Tooling
 
-Only approved, organisation-provisioned AI tools may be used for engineering work.
-
 ## Approved Tools
 
 ### Summary

@@ -1,7 +1,5 @@
 # Observability Platform Integration
 
-Telemetry is centralised, portable, and available for resilient operations.
-
 ## Telemetry Ingestion
 
 ### Summary

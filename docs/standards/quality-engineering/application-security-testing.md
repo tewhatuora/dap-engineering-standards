@@ -1,7 +1,5 @@
 # Application Security Testing
 
-Application security testing uses techniques suited to each vulnerability class and verifies each finding's remediation.
-
 ## Static Testing (SAST)
 
 ### Summary

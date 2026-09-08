@@ -1,7 +1,5 @@
 # AI Usage & Verification in Code Review
 
-Disclose AI involvement and give AI-assisted changes the same scrutiny as other changes.
-
 ## Pre-Submission Verification
 
 ### Summary

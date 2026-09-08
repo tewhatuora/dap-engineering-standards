@@ -1,7 +1,5 @@
 # Technology Stack Governance
 
-Every technology is classified as approved, trial, or deprecated, and a new technology is approved before adoption.
-
 ## Technology Selection
 
 ### Summary

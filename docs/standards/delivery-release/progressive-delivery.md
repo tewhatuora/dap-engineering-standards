@@ -1,7 +1,5 @@
 # Progressive Delivery
 
-A production deployment proceeds in stages that verify the new version before full rollout.
-
 ## Technique Selection
 
 ### Summary

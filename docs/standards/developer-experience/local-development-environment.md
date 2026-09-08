@@ -1,7 +1,5 @@
 # Local Development Environment
 
-A local development environment supports the service workflow without depending on shared infrastructure.
-
 ## Local Build and Execution
 
 ### Summary

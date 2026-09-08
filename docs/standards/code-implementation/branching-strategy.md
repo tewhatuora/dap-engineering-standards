@@ -1,7 +1,5 @@
 # Branching Strategy
 
-Every repository follows one defined branching model, with short-lived branches merged through reviewed and verified changes.
-
 ## Branching Model
 
 ### Summary

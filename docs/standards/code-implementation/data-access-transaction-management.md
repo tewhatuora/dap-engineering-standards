@@ -1,7 +1,5 @@
 # Data Access & Transaction Management
 
-Data access uses a defined layer, safe queries, and explicit, bounded transactions.
-
 ## Data Access Layer
 
 ### Summary

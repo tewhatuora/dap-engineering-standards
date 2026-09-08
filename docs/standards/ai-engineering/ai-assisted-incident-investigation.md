@@ -1,7 +1,5 @@
 # AI-Assisted Incident Investigation
 
-AI-assisted incident investigation uses approved tools and standard telemetry, with human verification and traceable outcomes.
-
 ## Approved Tooling
 
 ### Summary

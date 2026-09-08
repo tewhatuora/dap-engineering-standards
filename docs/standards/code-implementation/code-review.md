@@ -1,7 +1,5 @@
 # Code Review
 
-Every change is reviewed and approved by someone other than its author, with scrutiny proportionate to its risk.
-
 ## Reviewable Changes
 
 ### Summary

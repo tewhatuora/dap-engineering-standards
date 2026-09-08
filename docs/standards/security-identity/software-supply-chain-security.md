@@ -1,7 +1,5 @@
 # Software Supply Chain Security
 
-The software supply chain protects internal namespaces, verifies build dependencies, and prevents compromised components from further use.
-
 ## Namespace Isolation
 
 ### Summary

@@ -23,8 +23,6 @@ A standards file sits under `docs/standards/<category>/`. A file is a topic and 
 ```markdown
 # <Topic Name>
 
-<One sentence describing the topic.>
-
 ## <Standard Grouping Name>
 
 ### Summary
@@ -50,7 +48,7 @@ A standards file sits under `docs/standards/<category>/`. A file is a topic and 
 - [<Principle>](../../principles/<page>.md)
 ```
 
-Do not add a page-level tag or introduce `Scope`, `Verification`, or other undefined sections. Use `####` beneath `### Standards` only when the numbered list needs subdivisions. Include `Related Standards` only where another standard has a genuine relationship to the grouping.
+Do not add a page-level summary, tagline, or tag. Do not introduce `Scope`, `Verification`, or other undefined sections. Use `####` beneath `### Standards` only when the numbered list needs subdivisions. Include `Related Standards` only where another standard has a genuine relationship to the grouping.
 
 ## Creating Standards
 
@@ -98,7 +96,7 @@ Preserve the source's terminology and level of certainty. Add only what the new 
 Treat each existing `###` grouping as a separate grouping:
 
 1. Keep the page title as `#`.
-2. Move the existing page summary beneath the title as an unheaded tagline.
+2. Remove any page summary or tagline beneath the title.
 3. Promote each grouping name to `##`.
 4. Give each grouping its own `### Summary`, `### Standards`, and `### Implements These Principles` sections, in that order.
 5. Include `### Exceptions` only for a genuine exception and `### Related Standards` only for a genuine standard relationship. Place either section before `### Implements These Principles`, in that order when both are present.
@@ -159,19 +157,20 @@ Choose a standard below to read it in full.
 
 ### <Page Title>
 
-<The linked page's tagline, copied verbatim.>
+<One sentence describing the page's standards.>
 
 [Read more](<page>.md).
 ```
 
 The root `docs/standards/index.md` uses the same structure with `# Standards`, `## Categories`, and a sentence directing the reader to choose a category.
 
-Standards index entries do not carry tags because each page contains several tagged standards. A new category needs its own index and a `nav:` block in `mkdocs.yml`.
+Write each index description independently because standards pages do not contain taglines. Standards index entries do not carry tags because each page contains several tagged standards. A new category needs its own index and a `nav:` block in `mkdocs.yml`.
 
 ## Finish
 
 Before completing the work:
 
+- Confirm that no page summary or tagline follows the page title.
 - Confirm that every source grouping and numbered item remains.
 - Confirm that sections follow the target order and every relative link resolves.
 - Confirm that tags are correctly formatted and unique across the repository.

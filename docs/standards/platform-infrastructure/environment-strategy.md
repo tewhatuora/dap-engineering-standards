@@ -1,7 +1,5 @@
 # Environment Strategy
 
-Every environment has a purpose, with its operational cost justified.
-
 ## Environment Tiers
 
 ### Summary

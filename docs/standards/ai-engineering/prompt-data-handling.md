@@ -1,7 +1,5 @@
 # Prompt Data Handling
 
-Treat every prompt as a data disclosure and include only data that the tool is authorised to receive and the task requires.
-
 ## Prohibited & Restricted Data
 
 ### Summary

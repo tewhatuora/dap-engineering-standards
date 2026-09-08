@@ -1,7 +1,5 @@
 # Containerisation
 
-A container image is kept minimal, current, and operated with least privilege by default.
-
 ## Minimal Images
 
 ### Summary

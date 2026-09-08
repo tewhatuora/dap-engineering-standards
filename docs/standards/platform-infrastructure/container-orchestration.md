@@ -1,7 +1,5 @@
 # Container Orchestration
 
-A containerised workload is right-sized, scales according to demand, and remains isolated from other workloads.
-
 ## Orchestration Configuration
 
 ### Summary

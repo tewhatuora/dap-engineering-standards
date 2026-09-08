@@ -1,7 +1,5 @@
 # Infrastructure as Code
 
-Infrastructure is defined as versioned code, with planned changes applied through an automated, reviewed pipeline.
-
 ## Ownership & Repositories
 
 ### Summary

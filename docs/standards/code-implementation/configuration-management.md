@@ -1,7 +1,5 @@
 # Configuration Management
 
-Settings that vary by environment are externalised, and secrets are excluded from configuration.
-
 ## Externalised Configuration
 
 ### Summary

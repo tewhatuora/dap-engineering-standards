@@ -1,7 +1,5 @@
 # Linting & Style Enforcement
 
-Automated linting is applied consistently, with blocking violations resolved through the normal engineering process.
-
 ## Linting Coverage
 
 ### Summary

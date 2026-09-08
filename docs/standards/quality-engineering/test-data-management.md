@@ -1,7 +1,5 @@
 # Test Data Management
 
-Non-production environments use synthetic, de-identified, or purpose-built data and exclude unmodified production data.
-
 ## Data Sources
 
 ### Summary

@@ -1,7 +1,5 @@
 # Distributed Tracing
 
-Trace context propagates end-to-end through accurately structured spans and deliberate sampling.
-
 ## Trace Context
 
 ### Summary

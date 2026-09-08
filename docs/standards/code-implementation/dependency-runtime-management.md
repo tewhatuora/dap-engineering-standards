@@ -1,7 +1,5 @@
 # Dependency & Runtime Management
 
-Every dependency and runtime is deliberately selected, sourced through governed channels, and kept current.
-
 ## Dependency Selection
 
 ### Summary

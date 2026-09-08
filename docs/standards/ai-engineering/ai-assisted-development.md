@@ -1,7 +1,5 @@
 # AI-Assisted Development
 
-Developers remain fully accountable for code produced with AI assistance.
-
 ## Developer Accountability
 
 ### Summary
