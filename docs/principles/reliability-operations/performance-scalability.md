@@ -27,6 +27,7 @@ Explicit requirements make expected performance and capacity measurable. Basing 
 
 ### Implemented By These Standards
 
+- [Resource Efficiency & Optimisation](../../standards/cost-sustainability/resource-efficiency-optimisation.md)
 - [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)

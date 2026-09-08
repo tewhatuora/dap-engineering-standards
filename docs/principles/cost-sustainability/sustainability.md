@@ -56,19 +56,19 @@ Storage performance beyond an access pattern's needs also consumes unnecessary r
 - [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 
-## Impact Measurement & Attribution
+## Impact Measurement
 
 ### Summary
 
-A service's energy consumption or estimated carbon footprint is measurable and attributable to its responsible team.
+A service's energy consumption or estimated carbon footprint is measured and recorded over time.
 
 ### Reasoning
 
-Attribution connects environmental impact to the service design and operational decisions that produce it. Keeping environmental measures alongside operational information allows a team to distinguish its service's impact from aggregate infrastructure consumption and assess how resource and design changes affect it.
+Service-level environmental measurements connect impact to the design and operational decisions that produce it. Recording those measurements over time allows changes in resource use and environmental impact to be identified as the service evolves.
 
 ### Implemented By These Standards
 
-- [Cost & Environmental Impact Monitoring & Attribution](../../standards/cost-sustainability/cost-monitoring-attribution.md)
+- [Cost & Impact Visibility](../../standards/cost-sustainability/cost-impact-visibility.md)
 
 ## Sustainability Reassessment
 

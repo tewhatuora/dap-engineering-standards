@@ -41,6 +41,7 @@ Repeatable work outside delivery pipelines has the same consistency and efficien
 ### Implemented By These Standards
 
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
+- [Cost & Impact Visibility](../../standards/cost-sustainability/cost-impact-visibility.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
 - [Runbooks](../../standards/operations-observability/runbooks.md)
