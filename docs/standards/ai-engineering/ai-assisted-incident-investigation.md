@@ -8,7 +8,7 @@ last_edited: 2026-09-09
 
 ### Summary
 
-An AI tool used for incident investigation is approved through the same register as any other AI tool.
+An AI tool used for incident investigation is approved before use and recorded in the organisation's Approved Tooling Register.
 
 ### Standards
 
@@ -20,13 +20,13 @@ An AI tool used for incident investigation is approved through the same register
 
 ### Implements These Principles
 
-- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+- [Suitable AI Tools](../../principles/engineering-practice/ai-assisted-engineering.md#suitable-ai-tools)
 
 ## Standardised Telemetry
 
 ### Summary
 
-An AI tool draws on standard telemetry and avoids a separate service export.
+An AI tool draws on standard telemetry through the established observability platform across the services involved in a transaction, without requiring a separate service export.
 
 ### Standards
 
@@ -42,36 +42,40 @@ An AI tool draws on standard telemetry and avoids a separate service export.
 
 ### Implements These Principles
 
-- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
-- [Observability](../../principles/reliability-operations/observability.md)
+- [Central Operational Telemetry](../../principles/reliability-operations/observability.md#central-operational-telemetry)
+- [Consistent Instrumentation](../../principles/reliability-operations/observability.md#consistent-instrumentation)
 
 ## Incident Human Oversight
 
 ### Summary
 
-A responder verifies an AI tool's diagnosis, and remediation actions receive human oversight proportionate to their impact.
+A responder verifies an AI tool's diagnosis before high-impact remediation, and every remediation or configuration change proposed by an AI tool is carried out by a person or executed by an AI agent only after a person's approval.
 
 ### Standards
 
-1. `std-ai-incident-human-oversight-01` An AI tool's diagnosis of an incident's likely cause **MUST** be independently verified by a responder before being relied on to guide a high-impact or irreversible remediation action.
-2. `std-ai-incident-human-oversight-02` An AI agent **MUST NOT** autonomously execute a high-impact or irreversible remediation or configuration change in response to an incident.
-3. `std-ai-incident-human-oversight-03` A person **SHOULD** carry out or approve a remediation or configuration change that is not high-impact or irreversible before it takes effect.
+1. `std-ai-incident-human-oversight-01` An AI tool's diagnosis of an incident's likely cause **MUST** be independently verified by a responder before being relied on to guide a high-impact remediation action.
+2. `std-ai-incident-human-oversight-02` An AI agent **MUST NOT** execute a remediation or configuration change in response to an incident without prior approval from a person.
+3. `std-ai-incident-human-oversight-03` A person **MUST** carry out or approve a remediation or configuration change proposed by an AI tool before it takes effect.
+
+### Related Standards
+
+- [Identity & Access Management](../security-identity/identity-access-management.md)
 
 ### Implements These Principles
 
-- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+- [Risk-Proportionate Scrutiny](../../principles/engineering-practice/ai-assisted-engineering.md#risk-proportionate-scrutiny)
 
 ## Incident Traceability
 
 ### Summary
 
-An AI tool's contribution to an incident is recorded, and a pattern of inaccurate output is reviewed.
+An AI tool's contribution to an incident's diagnosis or resolution is recorded, and a pattern of inaccurate output is reviewed.
 
 ### Standards
 
 1. `std-ai-incident-traceability-01` Where an AI tool materially contributed to an incident's diagnosis or resolution, that contribution **MUST** be recorded alongside the incident's other response detail.
-2. `std-ai-incident-traceability-02` A pattern of inaccurate or misleading output from an AI tool **SHOULD** be reviewed and addressed, such as by adjusting its scope or inputs.
+2. `std-ai-incident-traceability-02` A pattern of inaccurate or misleading output from an AI tool **SHOULD** be reviewed and addressed.
 
 ### Implements These Principles
 
-- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+- [AI Contribution Traceability](../../principles/engineering-practice/ai-assisted-engineering.md#ai-contribution-traceability)

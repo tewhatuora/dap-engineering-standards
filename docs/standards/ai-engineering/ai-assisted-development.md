@@ -8,7 +8,7 @@ last_edited: 2026-09-09
 
 ### Summary
 
-The submitting developer remains fully accountable for AI-assisted code.
+The submitting developer remains fully accountable for AI-assisted code, AI tools are not authors of record, and AI assistance does not reduce diligence, testing, or review.
 
 ### Standards
 
@@ -18,13 +18,13 @@ The submitting developer remains fully accountable for AI-assisted code.
 
 ### Implements These Principles
 
-- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+- [Accountability and Equal Standards](../../principles/engineering-practice/ai-assisted-engineering.md#accountability-and-equal-standards)
 
 ## Human Oversight
 
 ### Summary
 
-A developer reviews and understands AI-generated output before it is committed, merged, or deployed.
+Developers understand and can maintain AI-generated output before it is submitted, committed, merged, or deployed, and AI tools do not perform those actions without human review.
 
 ### Standards
 
@@ -38,7 +38,8 @@ A developer reviews and understands AI-generated output before it is committed, 
 
 ### Implements These Principles
 
-- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+- [Understanding Before Adoption](../../principles/engineering-practice/ai-assisted-engineering.md#understanding-before-adoption)
+- [Automation and Human Judgement](../../principles/engineering-practice/automation.md#automation-and-human-judgement)
 
 ## Quality, Testing & Security
 
@@ -54,14 +55,18 @@ AI-assisted code meets the same quality, testing, and security gates as any othe
 
 ### Related Standards
 
+- [AI Usage & Verification in Code Review](ai-usage-verification-in-code-review.md)
 - [Code Style & Formatting](../code-implementation/code-style-formatting.md)
 - [Linting & Style Enforcement](../code-implementation/linting-style-enforcement.md)
 - [Static Code Analysis](../code-implementation/static-code-analysis.md)
 - [Unit Testing](../quality-engineering/unit-testing.md)
+- [Application Security Testing](../quality-engineering/application-security-testing.md)
 
 ### Implements These Principles
 
-- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+- [Accountability and Equal Standards](../../principles/engineering-practice/ai-assisted-engineering.md#accountability-and-equal-standards)
+- [Automation and Human Judgement](../../principles/engineering-practice/automation.md#automation-and-human-judgement)
+- [Secure Development](../../principles/security-privacy/security-engineering.md#secure-development)
 
 ## High-Risk Use
 
@@ -72,28 +77,29 @@ AI-generated code receives extra scrutiny in security-critical, safety-critical,
 ### Standards
 
 1. `std-ai-high-risk-use-01` AI-generated code **MUST** be subject to heightened scrutiny in security-critical, safety-critical, or regulatory-critical contexts, including authentication, authorisation, cryptography, and clinical or patient-safety logic.
-2. `std-ai-high-risk-use-02` Teams **SHOULD** restrict unsupervised use of AI-generated implementations in security-critical, safety-critical, or regulatory-critical contexts.
-3. `std-ai-high-risk-use-03` AI-generated code used in a security-critical, safety-critical, or regulatory-critical context **MUST** undergo additional review by personnel with relevant domain expertise.
+2. `std-ai-high-risk-use-02` AI-generated code used in a security-critical, safety-critical, or regulatory-critical context **MUST** undergo additional review by personnel with relevant domain expertise.
+
+### Related Standards
+
+- [Code Review](../code-implementation/code-review.md)
 
 ### Implements These Principles
 
-- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+- [Risk-Proportionate Scrutiny](../../principles/engineering-practice/ai-assisted-engineering.md#risk-proportionate-scrutiny)
+- [Secure Development](../../principles/security-privacy/security-engineering.md#secure-development)
 
 ## Intellectual Property & Licensing
 
 ### Summary
 
-Developers check AI-generated code for copied third-party material and do not grant AI tool providers rights to reuse or retain proprietary source code.
+Developers check AI-generated code for copied third-party material and withhold confidential or proprietary source code from AI tools whose terms permit its reuse or retention.
 
 ### Standards
 
-1. `std-ai-intellectual-property-licensing-01` Developers **MUST** review AI-generated code for indicators of copied third-party material, such as retained licence headers or attribution comments, before inclusion.
-2. `std-ai-intellectual-property-licensing-02` Confidential or proprietary source code **MUST NOT** be submitted to an AI tool in a manner that grants the tool provider rights to reuse or retain it.
-
-### Related Standards
-
-- [Prompt Data Handling](prompt-data-handling.md)
+1. `std-ai-intellectual-property-licensing-01` Developers **SHOULD** review AI-generated code for indicators of copied third-party material, such as retained licence headers or attribution comments, before inclusion.
+2. `std-ai-intellectual-property-licensing-02` Confidential or proprietary source code **MUST NOT** be submitted to an AI tool whose terms permit the provider to reuse or retain that code.
 
 ### Implements These Principles
 
-- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+- [Intellectual Property](../../principles/engineering-practice/ai-assisted-engineering.md#intellectual-property)
+- [Confidentiality](../../principles/engineering-practice/ai-assisted-engineering.md#confidentiality)

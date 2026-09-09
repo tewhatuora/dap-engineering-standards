@@ -8,18 +8,19 @@ last_edited: 2026-09-09
 
 ### Summary
 
-AI tool use is limited to tools listed on the Approved Tooling Register and their permitted use cases.
+AI tool use is limited to listed tools and their recorded data authorisations.
 
 ### Standards
 
-1. `std-ai-approved-tools-01` Personnel **MUST NOT** use AI tools outside the Approved Tooling Register ("shadow AI") or use approved tools beyond their permitted use cases.
+1. `std-ai-approved-tools-01` Personnel **MUST NOT** use AI tools outside the Approved Tooling Register.
+2. `std-ai-approved-tools-02` Personnel **MUST NOT** submit personally identifiable information (PII) to an AI tool unless the register marks it as allowed.
 
-    | Tool | Capability Category | Permitted Use Case |
-    |---|---|---|
-    | HealthX Coding Harness | Development & Evaluation Harness | AI-Assisted Development |
-    | GitHub Copilot | AI-Assisted Development Tool | AI-Assisted Development |
-    | AWS Kiro | Spec-Driven Development Agent | AI-Assisted Development |
-    | Datadog Bits AI SRE | Observability & Incident Agent | AI-Assisted Incident Investigation |
+    | Tool | Capability Category | PII Submission Authorised |
+    |---|---|:---:|
+    | GitHub Copilot | AI-Assisted Development Tool | ❌ |
+    | GitHub Copilot Code Review | Code Review Agent | ❌ |
+    | AWS Kiro | Spec-Driven Development Agent | ❌ |
+    | Datadog Bits AI SRE | Observability & Incident Agent | ❌ |
 
 ### Related Standards
 
@@ -27,13 +28,14 @@ AI tool use is limited to tools listed on the Approved Tooling Register and thei
 
 ### Implements These Principles
 
-- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+- [Suitable AI Tools](../../principles/engineering-practice/ai-assisted-engineering.md#suitable-ai-tools)
+- [Privacy-Protective Defaults](../../principles/security-privacy/data-privacy.md#privacy-protective-defaults)
 
 ## Licensing & Provisioning
 
 ### Summary
 
-AI tooling access uses an individually attributable, organisation-provisioned licence tied to the user's identity.
+AI tooling access uses an individually attributable, organisation-provisioned licence tied to an organisational identity.
 
 ### Standards
 
@@ -42,4 +44,4 @@ AI tooling access uses an individually attributable, organisation-provisioned li
 
 ### Implements These Principles
 
-- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+- [Organisation-Controlled Access](../../principles/engineering-practice/ai-assisted-engineering.md#organisation-controlled-access)

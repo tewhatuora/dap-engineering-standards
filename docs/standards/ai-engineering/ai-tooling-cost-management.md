@@ -15,15 +15,19 @@ An AI tool request is limited to the minimum context required for the task.
 1. `std-ai-context-scoping-01` AI tool requests **SHOULD** contain only context relevant and reasonably necessary to complete the task.
 2. `std-ai-context-scoping-02` Broad, whole-repository context **SHOULD** be reserved for cases where narrower, targeted context has already failed.
 
+### Related Standards
+
+- [Prompt Data Handling](prompt-data-handling.md)
+
 ### Implements These Principles
 
-- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+- [Proportionate Cost Decisions](../../principles/cost-sustainability/cost-awareness.md#proportionate-cost-decisions)
 
 ## Session Management
 
 ### Summary
 
-A new AI tool session is used for each unrelated task, and long-running sessions are reset or summarised before their context grows unbounded.
+A new AI tool session is used when switching to an unrelated task if the existing history is no longer relevant, and long-running sessions are reset or summarised before their context grows unbounded.
 
 ### Standards
 
@@ -32,7 +36,7 @@ A new AI tool session is used for each unrelated task, and long-running sessions
 
 ### Implements These Principles
 
-- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+- [Proportionate Cost Decisions](../../principles/cost-sustainability/cost-awareness.md#proportionate-cost-decisions)
 
 ## Model Selection & Reasoning
 
@@ -43,17 +47,17 @@ Model choice and reasoning effort are proportionate to the task's complexity.
 ### Standards
 
 1. `std-ai-model-selection-reasoning-01` AI tools **SHOULD** use automatic or cost-aware model selection by default.
-2. `std-ai-model-selection-reasoning-02` Maximum reasoning effort or extended-thinking modes **SHOULD** be reserved for genuinely complex or ambiguous tasks.
+2. `std-ai-model-selection-reasoning-02` Maximum reasoning effort or extended-thinking modes **SHOULD** be reserved for complex or ambiguous tasks.
 
 ### Implements These Principles
 
-- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+- [Proportionate Cost Decisions](../../principles/cost-sustainability/cost-awareness.md#proportionate-cost-decisions)
 
 ## Custom Instructions & Tooling
 
 ### Summary
 
-Custom instructions contain only reusable context, and tools not required by the project remain disabled.
+Custom instructions contain only reusable context and remain stable between requests, and tools not required by the project remain disabled.
 
 ### Standards
 
@@ -63,30 +67,30 @@ Custom instructions contain only reusable context, and tools not required by the
 
 ### Implements These Principles
 
-- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+- [Proportionate Cost Decisions](../../principles/cost-sustainability/cost-awareness.md#proportionate-cost-decisions)
 
 ## Cost Monitoring & Pricing
 
 ### Summary
 
-AI tooling cost and usage are monitored and attributed, and responsible personnel reassess practices after material vendor pricing changes.
+AI tooling cost or usage is monitored and attributed, and responsible personnel reassess practices after material vendor pricing changes.
 
 ### Standards
 
 1. `std-ai-cost-monitoring-pricing-01` Cost or usage attributable to AI tooling **SHOULD** be monitored.
 2. `std-ai-cost-monitoring-pricing-02` Cost or usage attributable to AI tooling **SHOULD** be attributed.
-3. `std-ai-cost-monitoring-pricing-03` AI tooling cost estimates **SHOULD** use current vendor billing and pricing models.
-4. `std-ai-cost-monitoring-pricing-04` Personnel responsible for AI tooling adoption **MUST** reassess usage practices after a material change to a vendor's billing or pricing model.
+4. `std-ai-cost-monitoring-pricing-03` Personnel responsible for AI tooling adoption **MUST** reassess usage practices after a material change to a vendor's billing or pricing model.
 
 ### Implements These Principles
 
-- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+- [Cost Visibility & Attribution](../../principles/cost-sustainability/cost-awareness.md#cost-visibility-attribution)
+- [Cost Reassessment](../../principles/cost-sustainability/cost-awareness.md#cost-reassessment)
 
 ## Cost Optimisation Review
 
 ### Summary
 
-Teams periodically re-measure cost-optimisation practices in their own context.
+Teams periodically measure and evaluate cost-optimisation practices in their own context.
 
 ### Standards
 
@@ -95,4 +99,4 @@ Teams periodically re-measure cost-optimisation practices in their own context.
 
 ### Implements These Principles
 
-- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+- [Cost Reassessment](../../principles/cost-sustainability/cost-awareness.md#cost-reassessment)

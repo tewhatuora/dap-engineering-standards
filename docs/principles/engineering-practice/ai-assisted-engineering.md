@@ -86,6 +86,20 @@ AI tools differ in how they protect and use organisational code and data. Suitab
 - [Approved AI Tooling](../../standards/ai-engineering/approved-ai-tooling.md)
 - [Prompt Data Handling](../../standards/ai-engineering/prompt-data-handling.md)
 
+## Organisation-Controlled Access
+
+### Summary
+
+Access to AI tools used for engineering work is controlled by the organisation and attributable to an individual organisational identity.
+
+### Reasoning
+
+Organisation-controlled access keeps AI tool use within managed identities and preserves attribution for actions performed through those tools. Personal or independently obtained access bypasses those controls and weakens accountability for engineering activity.
+
+### Implemented By These Standards
+
+- [Approved AI Tooling](../../standards/ai-engineering/approved-ai-tooling.md)
+
 ## Intellectual Property
 
 ### Summary
