@@ -14,6 +14,7 @@ A passing automated suite only provides evidence for the behaviours and conditio
 
 ### Implemented By These Standards
 
+- [Test Automation](../../standards/quality-engineering/test-automation.md#investment-in-automation)
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
 
@@ -31,6 +32,7 @@ Early consideration allows QA and the wider team to shape testable outcomes and 
 
 ### Implemented By These Standards
 
+- [Test Automation](../../standards/quality-engineering/test-automation.md#automation-is-considered-early)
 
 ## Risk and Value-Driven Automation
 
@@ -46,6 +48,7 @@ Choosing automation by test count or coverage alone can leave important risks un
 
 ### Implemented By These Standards
 
+- [Test Automation](../../standards/quality-engineering/test-automation.md#risk-and-value-driven-automation)
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Appropriate Test Level
@@ -62,6 +65,7 @@ Using broader tests for behaviour that can be checked at a lower level slows fee
 
 ### Implemented By These Standards
 
+- [Test Automation](../../standards/quality-engineering/test-automation.md#appropriate-test-level)
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
 
@@ -79,6 +83,7 @@ Poorly designed or outdated tests can reject valid changes, miss defects, or pro
 
 ### Implemented By These Standards
 
+- [Test Automation](../../standards/quality-engineering/test-automation.md#test-assets-are-maintained-as-code)
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
@@ -98,6 +103,7 @@ Generic test components used across products need a shared repository with clear
 
 ### Implemented By These Standards
 
+- [Test Automation](../../standards/quality-engineering/test-automation.md#accessible-automation-source)
 - [Version Control](../../standards/code-implementation/version-control.md)
 
 ## Reuse Before Duplication
@@ -114,20 +120,23 @@ Reuse remains tied to a genuine shared need. Forcing product-specific tests into
 
 ### Implemented By These Standards
 
+- [Test Automation](../../standards/quality-engineering/test-automation.md#reuse-before-duplication)
+
 ## Shared Automation Ownership
 
 ### Summary
 
-Keeping the knowledge needed to run and maintain automated tests documented and available allows the team to understand and run the suite when its original maintainer is unavailable or is no longer on a project.
+The knowledge and access needed to run and maintain automated tests remain available to the team responsible for their ongoing ownership after the team that created them is no longer involved.
 
 ### Reasoning
 
-Automation becomes a delivery risk when only one person knows how to run or fix it. Their absence can delay testing, leave failures unresolved, and cause the suite to be bypassed.
+Automation becomes a delivery risk when the team that creates it works in isolation and retains the knowledge or access needed to operate it. When that team is no longer involved, testing can be delayed, failures can remain unresolved, and the suite can be bypassed or abandoned.
 
-The repository includes the code, configuration, instructions, and test-data setup needed for the team to run tests locally and through the delivery pipeline. Shared knowledge allows the team to diagnose failures and maintain the suite as the product changes.
+Sharing the code, configuration, operating instructions, access requirements, and test-data setup with the team responsible for ongoing ownership allows that team to run tests locally and through the delivery pipeline, diagnose failures, and maintain the suite as the product changes.
 
 ### Implemented By These Standards
 
+- [Test Automation](../../standards/quality-engineering/test-automation.md#shared-automation-ownership)
 - [Version Control](../../standards/code-implementation/version-control.md)
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
@@ -146,6 +155,7 @@ Repeatedly bypassing failures makes teams less likely to trust and act on test r
 
 ### Implemented By These Standards
 
+- [Test Automation](../../standards/quality-engineering/test-automation.md#authoritative-test-results)
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
@@ -164,5 +174,6 @@ Human testers can follow new information, explore uncertain risks, and assess ou
 
 ### Implemented By These Standards
 
+- [Test Automation](../../standards/quality-engineering/test-automation.md#automation-complements-human-testing)
 - [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)

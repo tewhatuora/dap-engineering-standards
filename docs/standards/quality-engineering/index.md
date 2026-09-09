@@ -8,6 +8,12 @@ Choose a standard below to read it in full.
 
 ## Standards
 
+### Test Automation
+
+Test automation applies risk, value, testability, and maintenance considerations to produce reliable and appropriately scoped evidence.
+
+[Read more](test-automation.md).
+
 ### Unit Testing
 
 Unit testing verifies one unit of code in isolation with external dependencies replaced by controlled test doubles.
@@ -43,9 +49,3 @@ Application security testing uses techniques suited to each vulnerability class 
 Accessibility is verified through automated scanning and testing with real assistive technology across public and internal interfaces.
 
 [Read more](accessibility-testing.md).
-
-### Regression Test Automation
-
-A test that confirms known behaviour on a system in active development is automated before it is run a second time, or the decision not to automate it is recorded and reviewable.
-
-[Read more](regression-test-automation.md).

@@ -5,7 +5,7 @@
 
 These engineering principles and standards guide how software and services are delivered for Health New Zealand, keeping expectations consistent across projects while allowing implementation details to evolve.
 
-Technology-specific implementation instructions are maintained separately within the organisation's engineering knowledge base.
+Teams maintain their own guidance outside this repository. That guidance provides practical ways to implement the standards documented here while allowing implementation details to suit each team's context and evolve independently.
 
 
 ## Documentation Hierarchy
@@ -14,21 +14,21 @@ Technology-specific implementation instructions are maintained separately within
 flowchart LR
     P["<b>Principle</b><br/>What we value, and why<br/><code>docs/principles/</code>"]
     S["<b>Standard</b><br/>What must be true<br/><code>docs/standards/</code>"]
-    G["<b>Guidance</b><br/>One good way to get there<br/><code>docs/guidance/</code>"]
+    G["<b>Teams' Guidance</b><br/>Good ways to implement standards<br/>Maintained outside this repository"]
     P -->|"Implemented By These Standards"| S
-    S -->|"Supports"| G
+    S -->|"Implemented through"| G
     S -.->|"Implements These Principles"| P
 ```
 
 - A **principle** holds a value statement and its reasoning.
 - A **standard** makes one aspect of a principle verifiable.
-- **Guidance** provides practical ways to implement standards. It links to the standard and principle it serves under `Supports`.
+- **Teams' guidance** provides good ways to implement these standards in a team's own context. Teams maintain this guidance outside this repository.
 
 Both directions are required: every principle names at least one standard under `Implemented By These Standards`, and every standard grouping cites at least one principle under `Implements These Principles`.
 
 ### Tags
 
-Every numbered standard and guidance page carries a tag: a short, stable identifier used to cite it without depending on its title, its position on a page, or the path to its file. A `std-` prefix marks a standard's tag and a `gdn-` prefix marks guidance; principles are not tagged and are cited by a link to their page instead.
+Every numbered standard carries a tag: a short, stable identifier used to cite it without depending on its title, its position on a page, or the path to its file. A `std-` prefix marks a standard's tag; principles are not tagged and are cited by a link to their page instead.
 
 ## Target Audience
 
