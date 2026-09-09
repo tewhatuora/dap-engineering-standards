@@ -4,7 +4,7 @@ Use these instructions when creating or converting a page under `docs/standards/
 
 ## Purpose
 
-A standard turns one aspect of a principle into an unambiguous, verifiable obligation. Standards state what must be true. Guidance provides practical ways to meet them. Use `Implements These Principles` to name principles the grouping genuinely implements.
+A standard turns one aspect of a principle into an unambiguous, verifiable obligation. Standards state what must be true. Teams maintain their own guidance outside this repository to provide practical ways to meet them. Use `Implements These Principles` to name principles the grouping genuinely implements.
 
 ## Audience And Voice
 
@@ -70,7 +70,7 @@ Standards are cited by tag, not by position. Every numbered standard starts with
 std-<category>-<grouping>-<nn>
 ```
 
-The `std-` prefix distinguishes a standard from guidance tagged with `gdn-`. The category abbreviates the containing folder. The grouping names the individual grouping rather than the page. Numbering starts at `01` for each grouping. The stem without its number, `std-<category>-<grouping>`, cites the grouping as a whole.
+The `std-` prefix identifies a standard. The category abbreviates the containing folder. The grouping names the individual grouping rather than the page. Numbering starts at `01` for each grouping. The stem without its number, `std-<category>-<grouping>`, cites the grouping as a whole.
 
 - Write tags in lowercase `code`, separated by hyphens, with no spaces or underscores.
 - Check the repository for a collision before issuing a tag.
@@ -133,8 +133,8 @@ Links to other standards have no destination in the target format. Preserve them
 
 Preserve the following source content during conversion and report where it belongs:
 
-- Commands, snippets, screenshots, configuration, and worked procedures belong in guidance.
-- Reference data belongs in guidance; its governing obligation remains a standard.
+- Commands, snippets, screenshots, configuration, and worked procedures belong in teams' guidance outside this repository.
+- Reference data belongs in teams' guidance outside this repository; its governing obligation remains a standard.
 - Restated principle text should be replaced by a principle link through separate content work.
 - Duplicated obligations require a deliberate decision about which page is authoritative.
 
