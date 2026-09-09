@@ -4,15 +4,18 @@
 
 ### Summary
 
-Only a tool listed on the Approved Tooling Register is available for engineering use.
+AI tool use is limited to tools listed on the Approved Tooling Register and their permitted use cases.
 
 ### Standards
 
-| Tool | Type | Licence Tier | Reason for Use |
-|---|---|---|---|
-| GitHub Copilot | Assistant | Enterprise | AI-Assisted Development |
-| AWS Kiro | Assistant | Pro | AI-Assisted Development |
-| Datadog Bits AI SRE | Agent | Usage-based (credits) | AI-Assisted Incident Investigation |
+1. `std-ai-approved-tools-01` Personnel **MUST NOT** use AI tools outside the Approved Tooling Register ("shadow AI") or use approved tools beyond their permitted use cases.
+
+    | Tool | Capability Category | Permitted Use Case |
+    |---|---|---|
+    | HealthX Coding Harness | Development & Evaluation Harness | AI-Assisted Development |
+    | GitHub Copilot | AI-Assisted Development Tool | AI-Assisted Development |
+    | AWS Kiro | Spec-Driven Development Agent | AI-Assisted Development |
+    | Datadog Bits AI SRE | Observability & Incident Agent | AI-Assisted Incident Investigation |
 
 ### Related Standards
 
@@ -26,27 +29,12 @@ Only a tool listed on the Approved Tooling Register is available for engineering
 
 ### Summary
 
-AI tooling access uses an individually attributable, organisation-provisioned licence tied to the user's organisational identity.
+AI tooling access uses an individually attributable, organisation-provisioned licence tied to the user's identity.
 
 ### Standards
 
 1. `std-ai-licensing-provisioning-01` AI tools **MUST** be used only under licences provisioned and administered by Health New Zealand and tied to the individual's organisational identity.
-2. `std-ai-licensing-provisioning-02` Personal, free-tier, trial, or other independently obtained accounts **MUST NOT** be used to access AI tooling for organisational work, even where the tool is on the Approved Tooling Register.
-
-### Implements These Principles
-
-- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
-
-## Unapproved Tools
-
-### Summary
-
-Unapproved or shadow AI tools are prohibited for organisational work and cannot be justified retroactively.
-
-### Standards
-
-1. `std-ai-unapproved-tools-01` Personnel **MUST NOT** use AI tools not on the Approved Tooling Register for any activity involving organisational code, data, or systems.
-2. `std-ai-unapproved-tools-02` Use of an unapproved tool **MUST NOT** be justified retroactively.
+2. `std-ai-licensing-provisioning-02` Personal, free-tier, trial, or other independently obtained accounts **MUST NOT** be used with AI tools, even where the tool is on the Approved Tooling Register.
 
 ### Implements These Principles
 
