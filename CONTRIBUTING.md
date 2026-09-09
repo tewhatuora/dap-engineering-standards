@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping maintain Health New Zealand's engineering principles and standards.
+Thank you for contributing to Health New Zealand’s engineering principles and standards.
 
 ## Scope
 
@@ -22,7 +22,7 @@ Normative requirements **MUST** use the language defined in the `README`'s [Docu
 
 ## Review
 
-Merge requests **MUST** be reviewed and approved by a code owner listed in [`CODEOWNERS`](CODEOWNERS) before merging.
+As part of the review process, merge requests will be reviewed and approved by a code owner listed in [`CODEOWNERS`](CODEOWNERS).
 
 ## Adding or Changing a Page
 
