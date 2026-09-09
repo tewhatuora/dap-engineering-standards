@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # AI-Assisted Incident Investigation
@@ -16,7 +16,7 @@ An AI tool used for incident investigation is approved before use and recorded i
 
 ### Related Standards
 
-- [Approved AI Tooling](approved-ai-tooling.md)
+- [Approved AI Tooling](approved-ai-tooling.md#approved-tools)
 
 ### Implements These Principles
 
@@ -36,9 +36,9 @@ An AI tool draws on standard telemetry through the established observability pla
 
 ### Related Standards
 
-- [Telemetry Instrumentation](../operations-observability/telemetry-instrumentation.md)
-- [Distributed Tracing](../operations-observability/distributed-tracing.md)
-- [Observability Platform Integration](../operations-observability/observability-platform-integration.md)
+- [Telemetry Instrumentation](../operations-observability/telemetry-instrumentation.md#instrumentation-standards)
+- [Distributed Tracing](../operations-observability/distributed-tracing.md#trace-context)
+- [Observability Platform Integration](../operations-observability/observability-platform-integration.md#telemetry-ingestion)
 
 ### Implements These Principles
 
@@ -49,17 +49,16 @@ An AI tool draws on standard telemetry through the established observability pla
 
 ### Summary
 
-A responder verifies an AI tool's diagnosis before high-impact remediation, and every remediation or configuration change proposed by an AI tool is carried out by a person or executed by an AI agent only after a person's approval.
+Incident remediation informed or performed by AI remains under responder control.
 
 ### Standards
 
 1. `std-ai-incident-human-oversight-01` An AI tool's diagnosis of an incident's likely cause **MUST** be independently verified by a responder before being relied on to guide a high-impact remediation action.
-2. `std-ai-incident-human-oversight-02` An AI agent **MUST NOT** execute a remediation or configuration change in response to an incident without prior approval from a person.
-3. `std-ai-incident-human-oversight-03` A person **MUST** carry out or approve a remediation or configuration change proposed by an AI tool before it takes effect.
+2. `std-ai-incident-human-oversight-02` A responder **MUST** carry out or approve a remediation or configuration change proposed by an AI tool before it takes effect.
 
 ### Related Standards
 
-- [Identity & Access Management](../security-identity/identity-access-management.md)
+- [Identity & Access Management](../security-identity/identity-access-management.md#ai-agent-access)
 
 ### Implements These Principles
 
@@ -69,7 +68,7 @@ A responder verifies an AI tool's diagnosis before high-impact remediation, and 
 
 ### Summary
 
-An AI tool's contribution to an incident's diagnosis or resolution is recorded, and a pattern of inaccurate output is reviewed.
+An AI tool's contribution and reliability in incident response remain reviewable.
 
 ### Standards
 

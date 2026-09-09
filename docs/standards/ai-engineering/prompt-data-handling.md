@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # Prompt Data Handling
@@ -8,16 +8,18 @@ last_edited: 2026-09-09
 
 ### Summary
 
-Personally identifiable information (PII) is submitted to an AI tool only when the Approved Tooling Register marks it as allowed for that tool, and secrets are never submitted to an AI tool.
+AI tools receive only data permitted by their authorisation and the organisation's data-handling restrictions.
 
 ### Standards
 
 1. `std-ai-prohibited-restricted-data-01` PII **MUST NOT** be submitted to an AI tool unless the Approved Tooling Register marks it as allowed for that tool.
-2. `std-ai-prohibited-restricted-data-02` Secrets, credentials, API keys, access tokens, and cryptographic material **MUST NOT** be submitted to an AI tool under any circumstances.
+2. `std-ai-prohibited-restricted-data-02` An NHI identifier that identifies a real person **MUST NOT** be submitted to an AI tool.
+3. `std-ai-prohibited-restricted-data-03` Secrets, credentials, API keys, access tokens, and cryptographic material **MUST NOT** be submitted to an AI tool under any circumstances.
+4. `std-ai-prohibited-restricted-data-04` A production export, database dump, or log containing PII **MUST NOT** be submitted to an AI tool.
 
 ### Related Standards
 
-- [Approved AI Tooling](approved-ai-tooling.md)
+- [Approved AI Tooling](approved-ai-tooling.md#approved-tools)
 
 ### Implements These Principles
 
@@ -29,17 +31,13 @@ Personally identifiable information (PII) is submitted to an AI tool only when t
 
 ### Summary
 
-Personally identifiable information (PII) submitted to an AI tool is limited to the minimum reasonably necessary for the task.
+PII used in authorised AI-assisted work is limited to the minimum reasonably necessary for the task.
 
 ### Standards
 
 1. `std-ai-data-minimisation-01` Prompts containing PII **SHOULD** include only the minimum data reasonably necessary for the task.
 2. `std-ai-data-minimisation-02` Files, datasets, or repository content containing PII **SHOULD NOT** be submitted where a smaller, relevant excerpt is sufficient.
 3. `std-ai-data-minimisation-03` Unrelated PII in the surrounding context **MUST** be removed or redacted before submission.
-
-### Related Standards
-
-- [AI Tooling Cost Management](ai-tooling-cost-management.md)
 
 ### Implements These Principles
 
@@ -49,7 +47,7 @@ Personally identifiable information (PII) submitted to an AI tool is limited to 
 
 ### Summary
 
-Authorised use of personally identifiable information (PII) in prompts favours de-identified, masked, or synthetic data.
+PII used in authorised AI-assisted work is kept in the least identifiable form that meets the task's needs.
 
 ### Standards
 
@@ -58,7 +56,7 @@ Authorised use of personally identifiable information (PII) in prompts favours d
 
 ### Related Standards
 
-- [Test Data Management](../quality-engineering/test-data-management.md)
+- [Test Data Management](../quality-engineering/test-data-management.md#data-sources)
 
 ### Implements These Principles
 

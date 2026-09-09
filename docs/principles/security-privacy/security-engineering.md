@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # Security Engineering
@@ -16,6 +16,7 @@ Access beyond a service's or identity's current function increases what an error
 
 ### Implemented By These Standards
 
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)

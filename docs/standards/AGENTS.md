@@ -4,7 +4,7 @@ Use these instructions when creating or converting a page under `docs/standards/
 
 ## Purpose
 
-A standard turns one aspect of a principle into an unambiguous, verifiable obligation. Standards state what must be true. Teams maintain their own guidance outside this repository to provide practical ways to meet them. Use `Implements These Principles` to name principles the grouping genuinely implements.
+A standard turns one aspect of a principle into an unambiguous, verifiable obligation. Standards state what must be true. Teams maintain their own guidance outside this repository to provide practical ways to meet them. Use `Implements These Principles` to name principles the grouping genuinely implements and link to each principle's heading anchor. Use `Related Standards` to name standard groupings that have a genuine relationship and link to each grouping's heading anchor.
 
 ## Page Metadata
 
@@ -53,14 +53,14 @@ A standards file sits under `docs/standards/<category>/`. A file is a topic and 
 
 ### Related Standards
 
-- [<Standard>](../<category>/<page>.md)
+- [<Standard Page>](../<category>/<page>.md#<grouping-anchor>)
 
 ### Implements These Principles
 
 - [<Principle>](../../principles/<page>.md)
 ```
 
-Do not add a page-level summary, tagline, or tag. Do not introduce `Scope`, `Verification`, or other undefined sections. Use `####` beneath `### Standards` only when the numbered list needs subdivisions. Include `Related Standards` only where another standard has a genuine relationship to the grouping.
+Do not add a page-level summary, tagline, or tag. Do not introduce `Scope`, `Verification`, or other undefined sections. Use `####` beneath `### Standards` only when the numbered list needs subdivisions. Include `Related Standards` only where another standard grouping has a genuine relationship, always link directly to that grouping's heading anchor, and use the standard page title as the link text.
 
 ## Creating Standards
 

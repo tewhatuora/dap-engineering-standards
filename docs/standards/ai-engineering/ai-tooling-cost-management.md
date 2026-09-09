@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # AI Tooling Cost Management
@@ -15,10 +15,6 @@ An AI tool request is limited to the minimum context required for the task.
 1. `std-ai-context-scoping-01` AI tool requests **SHOULD** contain only context relevant and reasonably necessary to complete the task.
 2. `std-ai-context-scoping-02` Broad, whole-repository context **SHOULD** be reserved for cases where narrower, targeted context has already failed.
 
-### Related Standards
-
-- [Prompt Data Handling](prompt-data-handling.md)
-
 ### Implements These Principles
 
 - [Proportionate Cost Decisions](../../principles/cost-sustainability/cost-awareness.md#proportionate-cost-decisions)
@@ -27,7 +23,7 @@ An AI tool request is limited to the minimum context required for the task.
 
 ### Summary
 
-A new AI tool session is used when switching to an unrelated task if the existing history is no longer relevant, and long-running sessions are reset or summarised before their context grows unbounded.
+An AI tool session maintains bounded context relevant to its current task.
 
 ### Standards
 
@@ -57,7 +53,7 @@ Model choice and reasoning effort are proportionate to the task's complexity.
 
 ### Summary
 
-Custom instructions contain only reusable context and remain stable between requests, and tools not required by the project remain disabled.
+AI tooling configuration reduces repeated processing of custom instructions and tool definitions.
 
 ### Standards
 
@@ -73,13 +69,13 @@ Custom instructions contain only reusable context and remain stable between requ
 
 ### Summary
 
-AI tooling cost or usage is monitored and attributed, and responsible personnel reassess practices after material vendor pricing changes.
+AI tooling cost remains visible, attributable, and subject to reassessment when pricing changes materially.
 
 ### Standards
 
 1. `std-ai-cost-monitoring-pricing-01` Cost or usage attributable to AI tooling **SHOULD** be monitored.
 2. `std-ai-cost-monitoring-pricing-02` Cost or usage attributable to AI tooling **SHOULD** be attributed.
-4. `std-ai-cost-monitoring-pricing-03` Personnel responsible for AI tooling adoption **MUST** reassess usage practices after a material change to a vendor's billing or pricing model.
+4. `std-ai-cost-monitoring-pricing-03` The team responsible for AI tooling adoption **MUST** reassess usage practices after a material change to a vendor's billing or pricing model.
 
 ### Implements These Principles
 

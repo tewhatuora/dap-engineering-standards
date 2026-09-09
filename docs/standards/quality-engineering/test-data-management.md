@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # Test Data Management
@@ -25,6 +25,21 @@ Non-production environments prefer synthetic or fixture data; any production-der
 
 - [Data Privacy](../../principles/security-privacy/data-privacy.md)
 - [Testability](../../principles/quality/testability.md)
+
+## National Health Index Test Data
+
+### Summary
+
+Test data uses only synthetic National Health Index (NHI) identifiers or values reserved for testing.
+
+### Standards
+
+1. `std-qe-nhi-test-data-01` An NHI identifier in test data **MUST** be synthetic or drawn from a range reserved for testing by the NHI standard.
+2. `std-qe-nhi-test-data-02` An NHI identifier in test data **MUST NOT** identify a real person.
+
+### Implements These Principles
+
+- [Synthetic & De-Identified Data](../../principles/security-privacy/data-privacy.md#synthetic-de-identified-data)
 
 ## Dataset Scope
 

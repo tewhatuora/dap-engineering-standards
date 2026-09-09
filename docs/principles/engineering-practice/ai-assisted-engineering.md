@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # AI-Assisted Engineering
@@ -38,6 +38,34 @@ Additional review by people who understand the affected domain provides context 
 
 - [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
 
+## Bounded Agent Impact
+
+### Summary
+
+An AI agent's access and effects remain bounded to the task delegated to it.
+
+### Reasoning
+
+An AI agent can take multiple actions across the systems and information available to it. Limiting that access to the delegated task reduces the effect of an incorrect action, while promptly stopping the agent and containing an unintended change prevents further impact.
+
+### Implemented By These Standards
+
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
+
+## Human Clinical Judgement
+
+### Summary
+
+AI informs clinical work without replacing the judgement and accountability of people qualified to make clinical decisions or review clinical advice.
+
+### Reasoning
+
+Clinical decisions and advice can directly affect patient safety. AI output can be incomplete or incorrect while appearing authoritative, so qualified human assessment remains necessary before the output determines a clinical decision or is presented as clinical advice.
+
+### Implemented By These Standards
+
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
+
 ## Understanding Before Adoption
 
 ### Summary
@@ -57,11 +85,11 @@ Without understanding an output's behaviour and implementation, the responsible 
 
 ### Summary
 
-A material AI contribution remains disclosed with enough context to identify its role in a code change or incident response.
+A material AI contribution remains disclosed with enough context to identify its role in an engineering change, design decision, or incident response.
 
 ### Reasoning
 
-Accountability depends on knowing where AI assistance materially influenced an engineering outcome. Disclosure gives reviewers the context needed to assess an assisted change and preserves an accurate record of how incident conclusions and actions were reached.
+Accountability depends on knowing where AI assistance materially influenced an engineering outcome. Disclosure gives reviewers the context needed to assess an assisted change or design decision and preserves an accurate record of how incident conclusions and actions were reached.
 
 Identifying the affected work is more useful than recording AI use without its scope. It allows later investigation to distinguish an AI contribution from the human decisions that accepted or acted on it.
 

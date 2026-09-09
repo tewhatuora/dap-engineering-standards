@@ -1,12 +1,12 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # AI Engineering
 
 ## Overview
 
-AI use throughout the software development lifecycle is subject to security, accountability, and cost-management standards.
+AI-assisted engineering retains the organisational controls and engineer accountability required of all engineering work.
 
 Choose a standard below to read it in full.
 
@@ -14,36 +14,36 @@ Choose a standard below to read it in full.
 
 ### Approved AI Tooling
 
-Only approved, organisation-provisioned AI tools may be used for engineering work.
+AI tooling used for engineering work remains approved, organisation-controlled, and attributable to the person using it.
 
 [Read more](approved-ai-tooling.md).
 
 ### Prompt Data Handling
 
-Treat every prompt as a data disclosure and include only data that the tool is authorised to receive and the task requires.
+Information submitted to an AI tool remains within its authorised disclosure boundary and is limited to the task's needs.
 
 [Read more](prompt-data-handling.md).
 
 ### AI-Assisted Development
 
-Developers remain fully accountable for code produced with AI assistance.
+AI-assisted development remains under developer control and is subject to the same engineering, safety, security, and legal constraints as other work.
 
 [Read more](ai-assisted-development.md).
 
 ### AI Usage & Verification in Code Review
 
-Disclose AI involvement and give AI-assisted changes the same scrutiny as other changes.
+AI-assisted changes remain transparent, independently verified, and subject to accountable reviewer judgement.
 
 [Read more](ai-usage-verification-in-code-review.md).
 
 ### AI-Assisted Incident Investigation
 
-AI-assisted incident investigation uses approved tools and standard telemetry, with human verification and traceable outcomes.
+AI-assisted incident investigation remains grounded in established telemetry and accountable responder decisions.
 
 [Read more](ai-assisted-incident-investigation.md).
 
 ### AI Tooling Cost Management
 
-Context size, model choice, and session length match the needs of the task.
+AI tooling consumption remains proportionate to the task and visible to those responsible for its cost.
 
 [Read more](ai-tooling-cost-management.md).

@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # Data Privacy
@@ -34,6 +34,7 @@ Privacy-protective defaults prevent personal or health data from being exposed b
 
 ### Implemented By These Standards
 
+- [Prompt Data Handling](../../standards/ai-engineering/prompt-data-handling.md)
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 
