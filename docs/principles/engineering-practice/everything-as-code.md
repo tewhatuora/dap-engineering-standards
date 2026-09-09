@@ -1,3 +1,7 @@
+---
+last_edited: 2026-09-09
+---
+
 # Everything as Code
 
 ## Authoritative Version-Controlled Definitions

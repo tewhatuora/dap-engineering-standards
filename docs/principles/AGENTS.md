@@ -8,6 +8,18 @@ A principle states what is valued and why. It gives standards something to imple
 
 Principles are cited by links and do not carry tags. Use `Implemented By These Standards` to name standards that genuinely implement the principle.
 
+## Page Metadata
+
+Add this metadata at the top of every new or changed page:
+
+```yaml
+---
+last_edited: YYYY-MM-DD
+---
+```
+
+Update `last_edited` whenever a non-trivial edit changes the page content. Do not add review-cycle metadata.
+
 ## Audience And Voice
 
 Write for readers who already understand the engineering domain. Use direct, informative language and established domain terminology. Explain a term only when this repository gives it a meaning a knowledgeable reader would not infer.

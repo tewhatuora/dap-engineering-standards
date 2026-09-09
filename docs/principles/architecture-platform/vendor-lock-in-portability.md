@@ -1,3 +1,7 @@
+---
+last_edited: 2026-09-09
+---
+
 # Vendor Lock-in & Portability
 
 ## Lock-in Assessment and Justification

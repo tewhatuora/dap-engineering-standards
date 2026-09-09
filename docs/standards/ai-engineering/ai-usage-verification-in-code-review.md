@@ -1,3 +1,7 @@
+---
+last_edited: 2026-09-09
+---
+
 # AI Usage & Verification in Code Review
 
 ## Pre-Submission Verification

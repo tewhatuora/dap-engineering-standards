@@ -1,14 +1,10 @@
 <div class="md-copyright">
   <div class="site-footer-meta">
-    {% if page and page.meta and page.meta.last_reviewed %}
-      Last reviewed
-      <time datetime="{{ page.meta.last_reviewed }}">{{ page.meta.last_reviewed }}</time>
-      {% if page.meta.review_cycle %}
-        <span aria-hidden="true">|</span>
-        Review cycle: {{ page.meta.review_cycle }}
-      {% endif %}
+    {% if page and page.meta and page.meta.last_edited %}
+      Last edited
+      <time datetime="{{ page.meta.last_edited }}">{{ page.meta.last_edited }}</time>
     {% else %}
-      Last reviewed: not set
+      Last edited: not set
     {% endif %}
   </div>
   {% if config.copyright %}

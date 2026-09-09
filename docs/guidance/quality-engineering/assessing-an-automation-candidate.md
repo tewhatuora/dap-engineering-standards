@@ -1,5 +1,5 @@
 ---
-reviewed: 2026-09-02
+last_edited: 2026-09-09
 ---
 
 # Assessing an Automation Candidate

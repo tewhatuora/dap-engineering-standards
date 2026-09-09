@@ -24,7 +24,7 @@ A guidance file sits under `docs/guidance/<category>/` and uses this shape:
 
 ```markdown
 ---
-reviewed: YYYY-MM-DD
+last_edited: YYYY-MM-DD
 ---
 
 # <Guidance Title>
@@ -67,7 +67,7 @@ reviewed: YYYY-MM-DD
 
 Name Approach subsections for the task or decision they help the reader complete. Include `Alternatives & Trade-offs`, `Pitfalls`, and `Related` only when they add useful information. Where several approaches are legitimate, present the alternatives and when each is suitable.
 
-The `reviewed` date records when the guidance was last checked against current practice. Delete or mark guidance superseded when it no longer reflects current practice.
+The `last_edited` date records when the guidance was last materially changed. Update it for every non-trivial edit. Delete or mark guidance superseded when it no longer reflects current practice.
 
 ## Guidance Tags
 

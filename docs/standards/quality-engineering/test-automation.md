@@ -1,6 +1,5 @@
 ---
-last_reviewed: 2026-09-09
-review_cycle: 12 months
+last_edited: 2026-09-09
 ---
 
 # Test Automation

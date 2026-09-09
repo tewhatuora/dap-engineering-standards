@@ -6,6 +6,18 @@ Use these instructions when creating or converting a page under `docs/standards/
 
 A standard turns one aspect of a principle into an unambiguous, verifiable obligation. Standards state what must be true. Teams maintain their own guidance outside this repository to provide practical ways to meet them. Use `Implements These Principles` to name principles the grouping genuinely implements.
 
+## Page Metadata
+
+Add this metadata at the top of every new or changed page:
+
+```yaml
+---
+last_edited: YYYY-MM-DD
+---
+```
+
+Update `last_edited` whenever a non-trivial edit changes the page content. Do not add review-cycle metadata.
+
 ## Audience And Voice
 
 Write for readers who already understand the engineering domain. Use direct, informative language and established domain terminology. Explain a term only when this repository gives it a meaning a knowledgeable reader would not infer.
