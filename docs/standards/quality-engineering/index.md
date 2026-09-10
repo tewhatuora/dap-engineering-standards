@@ -18,6 +18,12 @@ Test automation applies risk, value, testability, and maintenance considerations
 
 [Read more](test-automation.md).
 
+### Outcome Driven Assurance
+
+Outcome driven assurance connects quality questions, acceptance criteria, tests, evidence, and findings to the decisions they support.
+
+[Read more](outcome-driven-assurance.md).
+
 ### Unit Testing
 
 Unit testing verifies one unit of code in isolation with external dependencies replaced by controlled test doubles.

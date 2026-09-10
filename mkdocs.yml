@@ -148,6 +148,7 @@ nav:
     - Quality Engineering:
       - standards/quality-engineering/index.md
       - Test Automation: standards/quality-engineering/test-automation.md
+      - Outcome Driven Assurance: standards/quality-engineering/outcome-driven-assurance.md
       - Unit Testing: standards/quality-engineering/unit-testing.md
       - Integration Testing: standards/quality-engineering/integration-testing.md
       - Test Data Management: standards/quality-engineering/test-data-management.md
