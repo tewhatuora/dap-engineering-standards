@@ -4,7 +4,7 @@ last_edited: 2026-09-10
 
 # Interoperability
 
-## Integration Needs
+## Integration Requirements
 
 ### Summary
 

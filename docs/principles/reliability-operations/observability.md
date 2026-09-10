@@ -52,7 +52,7 @@ When every service describes similar behaviour differently, dashboards, alerts, 
 
 - [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
 
-## Signal Coverage
+## Diagnostic Signal Coverage
 
 ### Summary
 

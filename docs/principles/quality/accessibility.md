@@ -20,7 +20,7 @@ Internal and administrative interfaces also support the delivery and operation o
 
 - [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
 
-## Lifecycle Verification
+## Accessibility Lifecycle Verification
 
 ### Summary
 

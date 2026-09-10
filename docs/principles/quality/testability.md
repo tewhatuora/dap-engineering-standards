@@ -59,7 +59,7 @@ An intermittent result breaks that link because the same code can appear both va
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
 
-## Proportionate Test Coverage
+## Risk-Proportionate Testing
 
 ### Summary
 

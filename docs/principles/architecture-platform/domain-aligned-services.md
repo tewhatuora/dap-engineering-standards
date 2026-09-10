@@ -20,7 +20,7 @@ A boundary that separates decisions which change together creates unnecessary de
 
 - [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 
-## Independent Service Change
+## Independent Service Delivery
 
 ### Summary
 

@@ -23,7 +23,7 @@ Building a capability that an existing solution already provides creates develop
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 - [Technology Stack Governance](../../standards/architecture-system-design/technology-stack-governance.md)
 
-## Proportionate Cost Decisions
+## Proportionate Service Spend
 
 ### Summary
 
