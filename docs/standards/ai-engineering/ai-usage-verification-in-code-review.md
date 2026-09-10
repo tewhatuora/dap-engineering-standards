@@ -92,7 +92,7 @@ A reviewer may use an approved AI tool to assist review while retaining independ
 
 ### Implements These Principles
 
-- [Suitable AI Tools](../../principles/engineering-practice/ai-assisted-engineering.md#suitable-ai-tools)
+- [AI Tool Terms and Controls](../../principles/engineering-practice/ai-assisted-engineering.md#ai-tool-terms-and-controls)
 - [Automation and Human Judgement](../../principles/engineering-practice/automation.md#automation-and-human-judgement)
 
 ## Approval Accountability
