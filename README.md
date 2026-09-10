@@ -31,6 +31,12 @@ Use a numbered standard's `std-` tag when citing it. The tag remains stable if t
 
 If you contribute to or make decisions about software and services delivered for Health New Zealand, these principles and standards apply to your work. This includes Health New Zealand staff and teams, vendors, partners, contractors, and other third parties.
 
+## Adoption Expectations
+
+For existing projects and services, these principles and standards provide an improvement roadmap rather than a compliance threshold that must be met immediately. Teams should assess their current alignment, prioritise gaps based on risk and value, and make progress toward meeting the standards.
+
+Teams delivering new projects and services are expected to adopt these principles and standards from the outset, using them to guide how their projects and services are designed, built, and operated.
+
 ## Accountability
 
 Every project or service needs a team that remains accountable for meeting these principles and standards throughout its lifecycle. The accountable team should maintain compliance throughout the life of the project or service.
