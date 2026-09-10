@@ -1,22 +1,22 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
 # Stateless Architecture
 
-## Instance-Independent Request Handling
+## Request Handling by Any Instance
 
 ### Summary
 
-Any instance can handle any request without depending on state left by a prior request, a routing affinity, or coordination with another instance.
+Any instance can handle any request without relying on state left by an earlier request, routing affinity, or coordination with another instance.
 
 ### Reasoning
 
-Depending on state held in an instance's memory or local disk couples correct request handling to that instance's lifetime and to routing decisions. Instance-independent request handling allows traffic to move between instances without preserving the history of which instance served an earlier request.
+State held only in an instance's memory or local disk makes correct request handling depend on that instance remaining available and receiving later related requests. When the instance stops or traffic moves elsewhere, the next instance does not have the state needed to continue the interaction.
 
-Instance memory and local disk are unavailable to other instances and can disappear when an instance stops. An external state store keeps required state available independently of the instance serving a request and provides durability and consistency suited to that state.
+Keeping required state in an external store makes it available independently of the instance serving a request and provides durability and consistency suited to that state. Traffic can then move between instances, and replacement instances can begin serving requests without recovering another instance's local history.
 
-Correct behaviour without session affinity allows capacity to change and replacement instances to serve requests without first recovering or synchronising another instance's state. Affinity can remain a performance optimisation, but it does not substitute for externalising required state.
+Correctness that does not depend on session affinity also allows capacity to change without coordinating instance-local state. Affinity may still improve performance, but it cannot replace externalising state that the service requires for correct behaviour.
 
 ### Implemented By These Standards
 
@@ -27,11 +27,13 @@ Correct behaviour without session affinity allows capacity to change and replace
 
 ### Summary
 
-A request handler is idempotent where feasible or otherwise prevents a retry from duplicating its side effects.
+A request handler prevents retries from duplicating its effects through idempotency or an equivalent safeguard.
 
 ### Reasoning
 
-A retry can repeat side effects when the outcome of an earlier attempt is uncertain. Idempotency or an equivalent duplicate safeguard allows the operation to be attempted again without applying its effects more than once.
+A caller may retry when it does not receive a response, even though the earlier attempt completed successfully. Without a safeguard, the repeated request can apply the same change more than once and leave the system in an unintended state.
+
+Idempotency makes repeated attempts produce the same outcome as one successful attempt. Where the operation cannot be idempotent, an equivalent duplicate safeguard preserves safe retry behaviour without repeating its effects.
 
 ### Implemented By These Standards
 

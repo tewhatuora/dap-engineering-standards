@@ -39,7 +39,7 @@ Test data uses only synthetic National Health Index (NHI) identifiers or values 
 
 ### Implements These Principles
 
-- [Synthetic & De-Identified Data](../../principles/security-privacy/data-privacy.md#synthetic-de-identified-data)
+- [Synthetic and De-Identified Data](../../principles/security-privacy/data-privacy.md#synthetic-and-de-identified-data)
 
 ## Dataset Scope
 

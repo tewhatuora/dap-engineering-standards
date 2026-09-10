@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Security Engineering
@@ -8,11 +8,13 @@ last_edited: 2026-09-10
 
 ### Summary
 
-A service or identity receives only the access its defined function needs, access is denied by default, and grants are revoked when no longer required.
+Services and identities receive only the access needed for their defined function, with access denied by default and removed when no longer required.
 
 ### Reasoning
 
-Access beyond a service's or identity's current function increases what an error, misuse, or compromise can affect. Denying access by default prevents implicit grants, while narrowly scoped access and timely revocation limit the available paths to systems and data.
+Every permission increases the systems, actions, and data available to a service or identity. Access beyond the current function allows a mistake, misuse, or compromise to affect resources that the legitimate work does not require.
+
+Denying access by default prevents permissions from being granted through omission. Narrow grants limit the immediate impact of a failure, while removing them when the need ends prevents old access from remaining available unnoticed.
 
 ### Implemented By These Standards
 
@@ -22,7 +24,6 @@ Access beyond a service's or identity's current function increases what an error
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
 - [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
-- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Containerisation](../../standards/platform-infrastructure/containerisation.md)
 - [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
@@ -35,13 +36,13 @@ Access beyond a service's or identity's current function increases what an error
 
 ### Summary
 
-Elevated production access is granted separately for a specific need, never held as standing access, and remains attributable to the individual using it.
+Elevated production access is granted separately for a specific need, is never held permanently, and remains attributable to the person using it.
 
 ### Reasoning
 
-Administrative and production data access can cause greater impact than routine operational access. Separating it from standing access limits how long that capability exists and prevents routine credentials from silently carrying exceptional authority.
+Administrative actions and access to production data can have greater impact than routine operational work. If routine credentials also carry that authority, their misuse or compromise can change critical systems and expose sensitive data without any additional barrier.
 
-Individual attribution preserves the evidence needed to understand and review actions taken with elevated access.
+Granting elevated access separately limits how long that capability exists and makes its use visible. Individual attribution preserves the evidence needed to understand who performed an action and investigate its effect.
 
 ### Implemented By These Standards
 
@@ -51,11 +52,13 @@ Individual attribution preserves the evidence needed to understand and review ac
 
 ### Summary
 
-The most secure configuration is the default, and reducing that protection requires an explicit decision.
+The most secure configuration applies by default, and reducing that protection requires an explicit decision.
 
 ### Reasoning
 
-Secure defaults prevent an omitted configuration decision from exposing a service or its data. Requiring deliberate action to reduce a security default makes that change explicit rather than an effect of omission.
+Configuration often remains in its initial state, so an insecure default can expose a service or its data without anyone deciding that the risk is acceptable. A secure starting point protects the system when a setting is overlooked or left unchanged.
+
+Requiring an explicit change makes any reduction in protection visible. The person making it must decide that the less secure configuration is needed rather than receiving it through omission.
 
 ### Implemented By These Standards
 
@@ -68,11 +71,13 @@ Secure defaults prevent an omitted configuration decision from exposing a servic
 
 ### Summary
 
-Capabilities and components not required for a service's function are disabled or removed.
+Capabilities and components that a service does not need are disabled or removed.
 
 ### Reasoning
 
-Every exposed capability or unnecessary component creates another path through which a service can be compromised. Removing what the service does not need reduces its security, monitoring, and maintenance burden.
+Every exposed capability or installed component adds code, configuration, and access that can contain a weakness or be misused. Retaining functionality that the service does not need creates this exposure without supporting a current requirement.
+
+Removing unused capabilities reduces the behaviour that must be secured, monitored, updated, and understood during an incident. It also limits the options available to someone attempting to compromise the service.
 
 ### Implemented By These Standards
 
@@ -83,11 +88,13 @@ Every exposed capability or unnecessary component creates another path through w
 
 ### Summary
 
-Independent, layered security controls limit how far a single control failure or compromise can spread.
+Independent layers of security controls limit how far one control failure or compromise can spread.
 
 ### Reasoning
 
-Any security control can fail or be bypassed. Independent controls prevent one failure from exposing the whole service, while segmentation and isolation constrain the systems and data that a compromise can reach.
+Any security control can fail, be misconfigured, or be bypassed. When protection depends on one control, that failure can expose every system and item of data behind it.
+
+Independent controls require a compromise to overcome more than one form of protection. Segmentation and isolation also restrict what can be reached, limiting the impact even when an earlier control has failed.
 
 ### Implemented By These Standards
 
@@ -98,11 +105,13 @@ Any security control can fail or be bypassed. Independent controls prevent one f
 
 ### Summary
 
-Secure coding, automated analysis, and informed review address security weaknesses throughout the engineering lifecycle.
+Secure coding, automated analysis, and informed review address security weaknesses throughout development and delivery.
 
 ### Reasoning
 
-Secure coding practices reduce the likelihood that weaknesses become part of a released service. Automated analysis detects known weakness patterns, while informed review addresses security concerns that analysis cannot determine from code alone.
+Security weaknesses become more costly to correct after other code depends on them or they reach production. Secure coding practices reduce the chance that these weaknesses are introduced, while early detection allows them to be corrected with less rework and user impact.
+
+Automated analysis can find known patterns consistently across each change. Informed review adds the design and system context needed to identify risks that a tool cannot determine from code alone.
 
 ### Implemented By These Standards
 
@@ -119,11 +128,13 @@ Secure coding practices reduce the likelihood that weaknesses become part of a r
 
 ### Summary
 
-Security controls are tested throughout the engineering lifecycle to provide continuing evidence of their effectiveness.
+Security controls are tested throughout development and operation to provide continuing evidence that they work.
 
 ### Reasoning
 
-A security control can be present but ineffective. Security testing provides evidence that controls work, while repeated testing detects regressions as a service evolves.
+A security control can be present without preventing the behaviour it was designed to stop. Testing shows whether the control works under the conditions it is expected to handle rather than treating its configuration as proof of effectiveness.
+
+Services and threats change over time, so evidence from an earlier test does not remain sufficient indefinitely. Repeated testing detects regressions and weaknesses introduced as the service, its dependencies, and its operating environment evolve.
 
 ### Implemented By These Standards
 
@@ -132,17 +143,17 @@ A security control can be present but ineffective. Security testing provides evi
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
 
-## Time-Bound Security Exceptions
+## Temporary Security Exceptions
 
 ### Summary
 
-A temporary exception to a security requirement is explicit, justified, protected by compensating controls, and returns to active remediation when it expires.
+A temporary security exception is explicit, justified, protected by compensating controls, and returned to active remediation when it expires.
 
 ### Reasoning
 
-An unresolved security weakness can remain when immediate remediation is not feasible, but an informal or indefinite exception removes the pressure to address it and obscures the accepted exposure. Recording the affected assets, justification, and compensating controls makes that exposure deliberate and reviewable.
+Immediate remediation is not always feasible, but the unresolved weakness continues to expose the affected systems and data. An informal exception obscures that exposure, while an indefinite one allows temporary acceptance to become a permanent gap in protection.
 
-An expiration bounds how long the exception can defer remediation. Returning the weakness to active remediation when that period ends prevents temporary acceptance from becoming a standing exclusion.
+Recording the scope, justification, and compensating controls makes the accepted risk clear and shows how it is limited in the meantime. An expiry bounds how long remediation can be deferred and returns the weakness to active work when that period ends.
 
 ### Implemented By These Standards
 
@@ -152,11 +163,13 @@ An expiration bounds how long the exception can defer remediation. Returning the
 
 ### Summary
 
-Dependencies remain current and scanned for known vulnerabilities, and build and deployment tooling and third-party components are protected against tampering.
+Dependencies are kept current and scanned for known vulnerabilities, while delivery tooling and third-party components are protected against tampering.
 
 ### Reasoning
 
-Dependencies and delivery tooling extend a service's trust boundary to externally maintained code and systems. Keeping dependencies current and scanning for known vulnerabilities reduces exposure, while protecting component sources and integrity limits the opportunity for compromised components to enter or remain in the delivery path.
+Dependencies and delivery tooling allow externally maintained code and systems to influence a service and the artifacts it runs. A known vulnerability or compromised component can therefore enter through the supply chain even when the service's own code is secure.
+
+Keeping dependencies current and scanning them makes known weaknesses visible and supports timely correction. Protecting component sources, build tooling, and artifact integrity reduces the opportunity for tampered code to enter or remain in the delivery path.
 
 ### Implemented By These Standards
 
@@ -171,11 +184,13 @@ Dependencies and delivery tooling extend a service's trust boundary to externall
 
 ### Summary
 
-Secrets stay out of source control and are managed through a dedicated system that restricts access and supports rotation.
+Secrets remain outside source control and are managed in a dedicated system that restricts access and supports rotation.
 
 ### Reasoning
 
-A secret committed to source control persists in repository history and is distributed to every copy of that history. Dedicated secrets management limits access to the identities that require it and supports rotation without embedding the value in code, configuration, or deployment artifacts.
+A secret committed to source control remains in repository history even after it is removed from the latest version. Every clone, backup, artifact, or log containing that history can preserve the value and expose it to people and systems that do not need it.
+
+A dedicated secrets system limits access to the identities that require the value and records secret handling separately from source code. It also supports rotation without changing or rebuilding the code, configuration, and deployment artifacts that refer to the secret.
 
 ### Implemented By These Standards
 

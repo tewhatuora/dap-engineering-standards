@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Data Privacy
@@ -8,11 +8,13 @@ last_edited: 2026-09-10
 
 ### Summary
 
-A service collects, processes, and retains only the personal or health data its defined purpose needs.
+Only personal or health data needed for a defined purpose is collected, processed, or retained.
 
 ### Reasoning
 
-Data collected or retained for an undefined future use creates exposure without serving a current purpose. Limiting personal or health data to a defined need reduces the amount available for accidental disclosure, misuse, or unnecessary retention.
+Collecting or retaining data beyond a defined purpose increases the amount available for accidental disclosure or misuse without providing current value. Each additional dataset or copy also extends the work needed to control access, apply deletion, and understand the impact of an incident.
+
+Limiting data at the point of collection prevents unnecessary exposure from spreading through later processing and storage. It also makes the remaining data easier to locate, protect, and remove when its purpose ends.
 
 ### Implemented By These Standards
 
@@ -22,15 +24,17 @@ Data collected or retained for an undefined future use creates exposure without 
 - [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 
-## Privacy-Protective Defaults
+## Privacy by Default
 
 ### Summary
 
-The most privacy-protective option is the default, and reducing that protection requires explicit, deliberate action.
+The most privacy-protective settings apply by default, and reducing that protection requires an explicit choice.
 
 ### Reasoning
 
-Privacy-protective defaults prevent personal or health data from being exposed because a setting was overlooked or left unchanged. Requiring deliberate action to reduce protection makes the change a conscious decision rather than an effect of omission.
+Settings often remain unchanged throughout use, so their initial state determines how personal or health data is handled in many cases. A less protective starting point can therefore expose data because no one changed a setting, rather than because someone decided that the exposure was justified.
+
+A protective starting point makes any reduction in privacy a visible decision that requires consideration of whether wider collection, use, or access justifies the resulting risk.
 
 ### Implemented By These Standards
 
@@ -38,15 +42,17 @@ Privacy-protective defaults prevent personal or health data from being exposed b
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 
-## Least-Privilege Access
+## Least Privilege Access
 
 ### Summary
 
-Access to personal or health data is restricted to a defined, legitimate need, granted at its narrowest scope, and revoked when that need ends.
+Access to personal or health data is limited to what a legitimate need requires and removed when that need ends.
 
 ### Reasoning
 
-Broad access increases the number of individuals, roles, and services able to expose or alter personal or health data. Scoping access to the operations and data a legitimate purpose requires, then revoking it when that purpose ends, limits both the opportunity and effect of misuse or compromise.
+Every permission creates another way for personal or health data to be viewed, changed, copied, or disclosed. Broad permissions increase the amount of data and the range of actions available when a person makes a mistake or an account or service is compromised.
+
+Permissions that remain after their legitimate purpose ends preserve access without supporting current work. Restricting access to the required data and actions, then removing it when the need ends, limits both the opportunity and impact of misuse.
 
 ### Implemented By These Standards
 
@@ -56,15 +62,17 @@ Broad access increases the number of individuals, roles, and services able to ex
 - [Identity & Access Management](../../standards/security-identity/identity-access-management.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 
-## Synthetic & De-Identified Data
+## Synthetic and De-Identified Data
 
 ### Summary
 
-Synthetic or de-identified data is preferred over production personal or health data for testing, development, analytics, and AI-assisted engineering.
+Synthetic or de-identified data is preferred when work does not require identifiable personal or health data.
 
 ### Reasoning
 
-Synthetic or de-identified data supports engineering activity without exposing production personal or health data where a suitable substitute is feasible. This reduces disclosure while retaining the characteristics needed for the activity.
+Many engineering and analysis tasks depend on the structure, distribution, or behaviour of data without needing to identify the people represented. A suitable synthetic or de-identified dataset can preserve the characteristics needed for the work while reducing the harm that disclosure could cause.
+
+Using a substitute also reduces the number of systems, tools, and people that handle identifiable data. This confines the more sensitive form of the data to activities whose purpose genuinely depends on identity.
 
 ### Implemented By These Standards
 
@@ -72,15 +80,17 @@ Synthetic or de-identified data supports engineering activity without exposing p
 - [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 
-## Data Retention & Deletion
+## Data Retention and Deletion
 
 ### Summary
 
-Personal or health data is retained only as long as its purpose requires, with deletion automated and extended to backup and archival copies.
+Personal or health data is retained only as long as needed and then deleted automatically from primary storage, backups, and archives.
 
 ### Reasoning
 
-Retaining personal or health data beyond its purpose extends its exposure without providing corresponding value. Defined retention periods and automated enforcement prevent indefinite accumulation, while extending deletion to backup and archival copies avoids leaving residual data after primary copies are removed.
+Retaining personal or health data beyond its purpose extends the period in which it can be disclosed or misused without providing corresponding value. A defined retention period limits that exposure, while automated deletion prevents disposal from depending on someone remembering to perform a manual task.
+
+Deleting data from primary storage is incomplete when recoverable copies remain in backups or archives. Applying deletion across every retained copy prevents data from remaining available after the system appears to have removed it.
 
 ### Implemented By These Standards
 

@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
 # Automation
@@ -8,11 +8,13 @@ last_edited: 2026-09-09
 
 ### Summary
 
-Repeatable delivery pipeline work is automated by default, and feasible manual steps represent incomplete automation.
+Repeatable delivery pipeline work is automated by default, and feasible manual steps are treated as incomplete automation.
 
 ### Reasoning
 
-Manual execution of repeatable delivery work consumes engineering time and permits avoidable variation. Automation provides repeatable execution and prevents recurring manual steps from becoming accepted practice.
+Manual pipeline steps depend on someone performing the correct action at the correct time, which introduces avoidable delay and variation between releases. A missed or inconsistent step can affect the result without leaving a clear explanation of why one pipeline run differed from another.
+
+Automation applies the same steps on every run and records their results in a consistent form. This gives engineers faster feedback, makes failures easier to compare and investigate, and reserves their time for changes that require judgement.
 
 ### Implemented By These Standards
 
@@ -36,11 +38,13 @@ Manual execution of repeatable delivery work consumes engineering time and permi
 
 ### Summary
 
-Automation applies to repeatable engineering and operational work beyond delivery pipelines.
+Automation applies across delivery pipelines and other repeatable engineering and operational work.
 
 ### Reasoning
 
-Repeatable work outside delivery pipelines has the same consistency and efficiency concerns as delivery activity. Matching the automation approach to the task's complexity avoids introducing unnecessary operational burden.
+Repeated manual engineering and operational work consumes time and produces results that can vary with the person performing it. Automation makes execution consistent, shortens routine response times, and reduces reliance on knowledge held by a small number of people.
+
+Automation also introduces software, dependencies, and failure modes that require maintenance. Matching the approach to the task's frequency, complexity, and impact prevents a simple manual cost from being replaced by a greater operational burden.
 
 ### Implemented By These Standards
 
@@ -60,13 +64,13 @@ Repeatable work outside delivery pipelines has the same consistency and efficien
 
 ### Summary
 
-Automation logic is version-controlled and maintained as an engineering artifact.
+Automation logic is kept in version control and maintained like other engineering code.
 
 ### Reasoning
 
-Version control makes automation definitions reviewable and traceable. Ongoing maintenance prevents automation from drifting from the processes it enforces.
+A change to automation can affect every later run, so an undocumented or unreviewed change can repeat the same defect across many executions. Version control preserves what changed and why, allowing engineers to review the change and trace a later failure to its source.
 
-Risk-proportionate testing and validation provide evidence that automation remains current and behaves as intended.
+Automation can also become outdated as the systems and tasks around it change. Ongoing maintenance, testing, and validation show whether it still behaves as intended, with stronger evidence needed where one repeated defect could have greater impact.
 
 ### Implemented By These Standards
 
@@ -84,13 +88,13 @@ Risk-proportionate testing and validation provide evidence that automation remai
 
 ### Summary
 
-Automation performs repeatable mechanical checks, while decisions that require context or novel tradeoffs remain subject to human judgement and review.
+Automation handles repeatable mechanical checks, while human judgement and review cover decisions that depend on context or novel tradeoffs.
 
 ### Reasoning
 
-Novel design tradeoffs and unanticipated exceptions require context and judgement that a repeatable automated process cannot supply. Automation frees engineering capacity for these decisions by taking on repetitive execution.
+Pipeline gates apply known rules consistently and stop recognised failures from progressing. Passing a gate shows that a change satisfied those rules, but it does not establish that the change has the right intent, handles an unanticipated exception, or fits the wider system.
 
-Automated delivery pipeline gates apply rule-based checks consistently and stop known failures from progressing. Passing gates do not replace human code review and approval, which remains focused on the judgement calls that automated checks cannot make.
+Code review and approval bring product, design, and system context to decisions that cannot be fully expressed as repeatable checks. Keeping that judgement with people allows automation to support engineering decisions without being treated as a substitute for them.
 
 ### Implemented By These Standards
 

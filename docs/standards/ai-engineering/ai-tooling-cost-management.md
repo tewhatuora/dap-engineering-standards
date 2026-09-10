@@ -17,7 +17,7 @@ An AI tool request is limited to the minimum context required for the task.
 
 ### Implements These Principles
 
-- [Proportionate Cost Decisions](../../principles/cost-sustainability/cost-awareness.md#proportionate-cost-decisions)
+- [Spend Aligned with Demand and Value](../../principles/cost-sustainability/cost-awareness.md#spend-aligned-with-demand-and-value)
 
 ## Session Management
 
@@ -32,7 +32,7 @@ An AI tool session maintains bounded context relevant to its current task.
 
 ### Implements These Principles
 
-- [Proportionate Cost Decisions](../../principles/cost-sustainability/cost-awareness.md#proportionate-cost-decisions)
+- [Spend Aligned with Demand and Value](../../principles/cost-sustainability/cost-awareness.md#spend-aligned-with-demand-and-value)
 
 ## Model Selection & Reasoning
 
@@ -47,7 +47,7 @@ Model choice and reasoning effort are proportionate to the task's complexity.
 
 ### Implements These Principles
 
-- [Proportionate Cost Decisions](../../principles/cost-sustainability/cost-awareness.md#proportionate-cost-decisions)
+- [Spend Aligned with Demand and Value](../../principles/cost-sustainability/cost-awareness.md#spend-aligned-with-demand-and-value)
 
 ## Custom Instructions & Tooling
 
@@ -63,7 +63,7 @@ AI tooling configuration reduces repeated processing of custom instructions and 
 
 ### Implements These Principles
 
-- [Proportionate Cost Decisions](../../principles/cost-sustainability/cost-awareness.md#proportionate-cost-decisions)
+- [Spend Aligned with Demand and Value](../../principles/cost-sustainability/cost-awareness.md#spend-aligned-with-demand-and-value)
 
 ## Cost Monitoring & Pricing
 
@@ -79,7 +79,7 @@ AI tooling cost remains visible, attributable, and subject to reassessment when 
 
 ### Implements These Principles
 
-- [Cost Visibility & Attribution](../../principles/cost-sustainability/cost-awareness.md#cost-visibility-attribution)
+- [Cost Visibility and Attribution](../../principles/cost-sustainability/cost-awareness.md#cost-visibility-and-attribution)
 - [Cost Reassessment](../../principles/cost-sustainability/cost-awareness.md#cost-reassessment)
 
 ## Cost Optimisation Review

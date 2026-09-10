@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
 # Reuse
@@ -8,29 +8,39 @@ last_edited: 2026-09-09
 
 ### Summary
 
-Existing solutions are evaluated before development begins, with internal reuse preferred over external adoption and custom development used only when neither meets the requirement.
+Existing solutions are evaluated before development begins; internal reuse is preferred, followed by external adoption, with custom development used only when neither meets the requirement.
 
 ### Reasoning
 
-Assuming that no suitable solution exists can duplicate capability and commit development effort before the available options are understood. Discovery at design time establishes whether an existing solution meets the requirement while the approach can still change without rework.
+Starting development before checking existing options can duplicate capability and commit effort before the available choices are understood. Evaluating those choices during design leaves time to change the approach before a new implementation gains users and dependencies that make replacement difficult.
 
-Internal reuse avoids creating another implementation and support burden. When no internal solution meets the requirement, external adoption can avoid the continuing cost of custom development. Familiarity and convenience do not establish that an existing option is unsuitable.
+Internal reuse avoids creating another implementation and support burden. When no internal solution meets the requirement, external adoption can avoid the continuing cost of custom development; familiarity or convenience alone does not make an existing option unsuitable.
 
 ### Implemented By These Standards
 
+- [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
+- [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
+- [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
+- [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
+- [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 
 ## Reusable Interfaces
 
 ### Summary
 
-A component, service, or library likely to be reused exposes a stable, documented, and versioned interface so another team can adopt it without depending on its internals.
+Reusable components, services, and libraries provide stable, documented, and versioned interfaces that other teams can use without knowing their internals.
 
 ### Reasoning
 
-A documented interface separates a reusable capability from its internal implementation. Stability and versioning allow providers and consumers to change independently.
+A documented interface tells consumers what behaviour they can rely on without requiring them to understand the implementation. This prevents internal design choices from becoming accidental dependencies and gives different consumers the same basis for adopting the capability.
+
+Stability and versioning allow providers to improve the implementation without unexpectedly breaking consumers and provide a clear path when the contract must change. Without that contract, changes require coordination across teams that should be able to work independently.
 
 ### Implemented By These Standards
 
@@ -41,3 +51,4 @@ A documented interface separates a reusable capability from its internal impleme
 - [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
 - [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)

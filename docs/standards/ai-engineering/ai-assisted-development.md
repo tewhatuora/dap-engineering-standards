@@ -122,7 +122,7 @@ AI-generated code affecting a high-risk function receives domain-expert review b
 
 ### Implements These Principles
 
-- [Risk-Proportionate Scrutiny](../../principles/engineering-practice/ai-assisted-engineering.md#risk-proportionate-scrutiny)
+- [Scrutiny Based on Impact](../../principles/engineering-practice/ai-assisted-engineering.md#scrutiny-based-on-impact)
 - [Secure Development](../../principles/security-privacy/security-engineering.md#secure-development)
 
 ## Clinical Decisions & Advice
@@ -139,7 +139,7 @@ Authorised and qualified people retain responsibility for clinical decisions and
 ### Implements These Principles
 
 - [Human Clinical Judgement](../../principles/engineering-practice/ai-assisted-engineering.md#human-clinical-judgement)
-- [Risk-Proportionate Scrutiny](../../principles/engineering-practice/ai-assisted-engineering.md#risk-proportionate-scrutiny)
+- [Scrutiny Based on Impact](../../principles/engineering-practice/ai-assisted-engineering.md#scrutiny-based-on-impact)
 - [Automation and Human Judgement](../../principles/engineering-practice/automation.md#automation-and-human-judgement)
 
 ## Intellectual Property & Licensing

@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # AI-Assisted Engineering
@@ -8,13 +8,13 @@ last_edited: 2026-09-10
 
 ### Summary
 
-The directing engineer remains fully accountable for AI-assisted work, which meets the same principles and standards as work authored entirely by a human.
+The engineer directing AI-assisted work remains fully accountable for it, and the same engineering standards apply as for work written without AI.
 
 ### Reasoning
 
-An AI tool does not assume responsibility for the correctness, quality, security, or compliance of its output. The engineer directing its use remains responsible for evaluating and maintaining every resulting engineering artifact.
+Once AI output is adopted, its defects, security risks, and maintenance needs become part of the system. The directing engineer has the context and authority to decide whether the work is fit for use, so accountability remains with that engineer rather than with the tool that produced the output.
 
-The method used to produce engineering work does not change the outcomes expected of it. AI assistance does not change which principles and standards apply.
+People who use or depend on the system experience the same behaviour regardless of how its code or design was produced. AI involvement therefore does not reduce the quality, safety, or maintainability expected of the finished work.
 
 ### Implemented By These Standards
 
@@ -22,17 +22,17 @@ The method used to produce engineering work does not change the outcomes expecte
 - [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 
-## Risk-Proportionate Scrutiny
+## Scrutiny Based on Impact
 
 ### Summary
 
-Scrutiny of AI-assisted work increases with its security, safety, or regulatory impact and includes relevant domain expertise for high-risk work.
+Scrutiny of AI-assisted work increases with its potential security, safety, or regulatory impact, and domain experts review work whose risks require their expertise.
 
 ### Reasoning
 
-The consequence of an incorrect output differs by context. A defect in authentication, clinical logic, or another high-impact capability can cause harm beyond the code path in which it appears.
+AI output can appear convincing while containing errors that depend on the security, safety, or regulatory context of the work. As the impact of an incorrect assumption increases, general review provides less confidence that the resulting risk has been understood.
 
-Additional review by people who understand the affected domain provides context that general code review cannot supply and keeps the depth of verification proportionate to the potential impact.
+Reviewers with relevant domain expertise can test the output against knowledge and consequences that are not visible from the code alone. Their scrutiny is most important where an undetected error could cause serious harm or breach a regulated requirement.
 
 ### Implemented By These Standards
 
@@ -42,11 +42,13 @@ Additional review by people who understand the affected domain provides context 
 
 ### Summary
 
-An AI agent's access and effects remain bounded to the task delegated to it.
+An AI agent has only the access and authority needed for its assigned task.
 
 ### Reasoning
 
-An AI agent can take multiple actions across the systems and information available to it. Limiting that access to the delegated task reduces the effect of an incorrect action, while promptly stopping the agent and containing an unintended change prevents further impact.
+AI agents can take a sequence of actions without review between each step, using any systems and information available to them. If an agent misinterprets its task, wider access allows the initial error and later actions to affect resources that the task did not require.
+
+Limiting access and change authority confines the effect of an incorrect action and makes recovery more manageable. It also prevents unrelated or sensitive information from becoming part of the agent's working context without a legitimate need.
 
 ### Implemented By These Standards
 
@@ -56,11 +58,13 @@ An AI agent can take multiple actions across the systems and information availab
 
 ### Summary
 
-AI informs clinical work without replacing the judgement and accountability of people qualified to make clinical decisions or review clinical advice.
+Qualified people retain judgement and accountability for clinical decisions and advice informed by AI.
 
 ### Reasoning
 
-Clinical decisions and advice can directly affect patient safety. AI output can be incomplete or incorrect while appearing authoritative, so qualified human assessment remains necessary before the output determines a clinical decision or is presented as clinical advice.
+Clinical decisions and advice can directly affect patient safety, yet AI output may omit or misinterpret evidence and patient context needed for a sound judgement. A confident presentation can make incomplete or incorrect reasoning appear authoritative and harder to recognise before it influences care.
+
+People qualified to make the clinical decision can weigh the output against the full clinical context, challenge its assumptions, and recognise when it falls outside its useful limits. They remain responsible because they can judge those factors and their consequences for the patient.
 
 ### Implemented By These Standards
 
@@ -70,11 +74,13 @@ Clinical decisions and advice can directly affect patient safety. AI output can 
 
 ### Summary
 
-AI-assisted output is adopted only once the responsible engineer understands it well enough to explain, justify, and maintain it.
+Engineers adopt AI-assisted output only when they can explain, justify, and maintain it.
 
 ### Reasoning
 
-Without understanding an output's behaviour and implementation, the responsible engineer cannot explain its decisions or maintain the result. Faster production does not replace that understanding.
+AI output can contain assumptions and design choices that are not apparent from the generated code or explanation. If the responsible engineer cannot identify and justify those choices, they cannot reliably assess the behaviour, understand the effect of later changes, or diagnose a failure.
+
+An explanation that other engineers can follow also makes the work reviewable and maintainable beyond its initial adoption. Without that shared understanding, future changes depend on rediscovering decisions that should already be clear from the implementation and its context.
 
 ### Implemented By These Standards
 
@@ -85,28 +91,30 @@ Without understanding an output's behaviour and implementation, the responsible 
 
 ### Summary
 
-A material AI contribution remains disclosed with enough context to identify its role in an engineering change, design decision, or incident response.
+AI contributions that influence an engineering change, design decision, or incident response are disclosed with context showing that influence.
 
 ### Reasoning
 
-Accountability depends on knowing where AI assistance materially influenced an engineering outcome. Disclosure gives reviewers the context needed to assess an assisted change or design decision and preserves an accurate record of how incident conclusions and actions were reached.
+AI assistance can shape assumptions, evidence, and decisions even when its direct output is edited before use. Without a record of that influence, reviewers cannot tell which parts of an engineering outcome require closer verification or how people assessed the AI contribution.
 
-Identifying the affected work is more useful than recording AI use without its scope. It allows later investigation to distinguish an AI contribution from the human decisions that accepted or acted on it.
+The same context supports later investigation when an assumption is challenged or an incident is reviewed. It allows investigators to distinguish the AI contribution from the human decisions that accepted, changed, or acted on it and to reconstruct how the outcome was reached.
 
 ### Implemented By These Standards
 
 - [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
 - [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 
-## Suitable AI Tools
+## AI Tool Terms and Controls
 
 ### Summary
 
-Engineering work uses AI tools whose terms and controls are suitable for the work and information entrusted to them.
+Engineering work uses AI tools with terms and controls that suit the work and the sensitivity of the information they receive.
 
 ### Reasoning
 
-AI tools differ in how they protect and use organisational code and data. Suitability depends on whether a tool's terms and controls are acceptable for the work and information involved. Capability, convenience, and cost do not establish suitability on their own.
+AI tools differ in how they retain, reuse, expose, and protect submitted code and data. Terms that are acceptable for public or low-sensitivity information may permit handling that is unsuitable for confidential, personal, health, or proprietary material.
+
+Available controls also determine who can use the tool, what information it can receive, and how that information is protected during use. Suitability therefore depends on both the work being performed and the sensitivity of the information entrusted to the tool.
 
 ### Implemented By These Standards
 
@@ -114,15 +122,15 @@ AI tools differ in how they protect and use organisational code and data. Suitab
 - [Approved AI Tooling](../../standards/ai-engineering/approved-ai-tooling.md)
 - [Prompt Data Handling](../../standards/ai-engineering/prompt-data-handling.md)
 
-## Organisation-Controlled Access
+## Organisation Managed Access
 
 ### Summary
 
-Access to AI tools used for engineering work is controlled by the organisation and attributable to an individual organisational identity.
+Access to AI tools used for engineering work is managed by the organisation and linked to each user's organisational identity.
 
 ### Reasoning
 
-Organisation-controlled access keeps AI tool use within managed identities and preserves attribution for actions performed through those tools. Personal or independently obtained access bypasses those controls and weakens accountability for engineering activity.
+Personal or independently obtained access can bypass managed identity controls and leave engineering activity disconnected from the person responsible. Without reliable attribution, an investigation cannot establish who submitted information, accepted output, or performed changes through the tool.
 
 ### Implemented By These Standards
 
@@ -136,7 +144,9 @@ AI-assisted output is adopted only when any third-party material it contains can
 
 ### Reasoning
 
-AI-generated output can contain third-party material without carrying the right to use it. Reviewing output before adoption prevents that material from entering an engineering artifact without permission.
+AI output can contain or closely reproduce third-party material without identifying its source or the terms under which it may be used. Adopting that material can infringe intellectual property rights or breach licence and attribution conditions that are not apparent from the output itself.
+
+The absence of visible attribution does not establish that the output is free of third-party rights. Engineers need enough information about any included material to determine that its use is lawful before it becomes part of the system.
 
 ### Implemented By These Standards
 
@@ -146,11 +156,13 @@ AI-generated output can contain third-party material without carrying the right 
 
 ### Summary
 
-Confidential material is submitted to an AI tool only when its handling terms preserve that confidentiality.
+Confidential material is shared with an AI tool only when the tool's handling terms preserve its confidentiality.
 
 ### Reasoning
 
-Submitting confidential or proprietary material to an AI tool can expose it to provider retention, reuse, or access. Restricting submissions to tools whose handling terms preserve confidentiality keeps the material within its intended controls.
+Submitting confidential material places it under the provider's storage, access, and reuse terms. If those terms permit retention or secondary use, the submission can expose the material beyond its authorised context even when the generated output does not contain it.
+
+Removing the material from a later prompt cannot restore confidentiality because retention, access, or reuse may already have occurred.
 
 ### Implemented By These Standards
 

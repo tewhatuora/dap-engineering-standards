@@ -1,20 +1,20 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
-# Simplicity & Maintainability
+# Simplicity and Maintainability
 
 ## Minimum Sufficient Solution
 
 ### Summary
 
-A design includes only complexity and configurability justified by a current requirement and uses the simplest solution that meets it.
+A design uses the simplest solution that meets current requirements and adds complexity or configurability only when justified.
 
 ### Reasoning
 
-Complexity introduced for an unconfirmed need creates maintenance work without delivering current value. Basing abstractions, capabilities, and configuration on actual requirements keeps the design proportionate to the problem being solved.
+Complexity introduced for an unconfirmed future need creates code, configuration, and behaviour that must be understood, tested, and maintained without providing current value. Basing the design on actual requirements limits that continuing cost to the problem being solved.
 
-When several solutions meet a requirement equally well, the simplest one is easier to understand, verify, and change.
+When several solutions meet the requirement equally well, the simplest one reduces the number of assumptions and interactions an engineer must understand. This makes its behaviour easier to verify and gives later changes fewer unnecessary constraints.
 
 ### Implemented By These Standards
 
@@ -26,13 +26,13 @@ When several solutions meet a requirement equally well, the simplest one is easi
 
 ### Summary
 
-Code is readily understood by another engineer, with naming, formatting, and structural conventions applied consistently.
+Code is easy for another engineer to understand and follows consistent naming, formatting, and structural conventions.
 
 ### Reasoning
 
-Readable code reduces the effort needed to understand behaviour and makes the effect of a change easier to assess.
+Readable code allows an engineer to understand behaviour and assess a change without first reconstructing the original author's intent. This reduces the effort needed for review and maintenance and lowers the chance that a misunderstanding introduces a defect.
 
-Consistent conventions remove incidental differences that slow comprehension. Readability takes precedence when concision would make intent less clear.
+Consistent naming, formatting, and structure remove incidental differences that distract from the code's purpose. Concision is valuable only while the intent remains clear; shorter code that hides behaviour increases the work required of every later reader.
 
 ### Implemented By These Standards
 
@@ -44,13 +44,13 @@ Consistent conventions remove incidental differences that slow comprehension. Re
 
 ### Summary
 
-A component has a clear responsibility and a stable interface, so changes to its internals do not force changes to its dependent components.
+A component has a clear responsibility and stable interface, allowing its internals to change without forcing changes in dependent components.
 
 ### Reasoning
 
-Clear boundaries let an engineer understand a component's purpose without inspecting its implementation. Minimising coupling confines the knowledge and changes needed when a component evolves.
+Clear boundaries allow an engineer to understand a component's responsibility without reading its full implementation. They also confine the knowledge needed for a change, reducing the amount of unrelated code that must be understood and tested when the component evolves.
 
-A stable interface separates a component's contract from its implementation. Dependent components can continue to use that contract while the implementation changes independently.
+A stable interface separates the behaviour used by dependent components from the implementation that provides it. The implementation can then change independently, provided it continues to meet the contract on which those components rely.
 
 ### Implemented By These Standards
 
@@ -63,13 +63,13 @@ A stable interface separates a component's contract from its implementation. Dep
 
 ### Summary
 
-Each technology is justified against its maintenance burden, and the number of technologies serving substantially similar purposes is minimised.
+Each technology is justified by the value it provides, and the number of technologies serving similar purposes is kept low.
 
 ### Reasoning
 
-Every technology adds work through updates, security response, operational support, and the knowledge needed to use it. Adopting one is worthwhile only when the need it meets justifies that continuing cost.
+Every technology adds continuing work through updates, security response, operational support, and the knowledge required to use it safely. The capability it provides must justify those costs throughout its use, rather than only making the initial implementation convenient.
 
-Using fewer technologies for substantially similar problems concentrates experience and reduces duplicated maintenance.
+Using fewer technologies for substantially similar problems concentrates practical experience and avoids duplicating maintenance and support. It also allows engineers to solve recurring problems with familiar approaches instead of relearning equivalent tools.
 
 ### Implemented By These Standards
 
@@ -79,11 +79,13 @@ Using fewer technologies for substantially similar problems concentrates experie
 
 ### Summary
 
-Code, features, configuration, and dependencies no longer required are removed within a reasonable period.
+Code, features, configuration, and dependencies are removed after their final use and any required transition ends.
 
 ### Reasoning
 
-Unused code and dependencies continue to impose comprehension, testing, and security costs. Leaving retired functionality beside its replacement obscures which path is authoritative and prolongs risks that no longer provide value.
+Unused code, features, configuration, and dependencies still impose comprehension, testing, maintenance, and security costs. Leaving retired functionality beside its replacement also obscures which path is authoritative and increases the chance that later work changes or relies on the wrong one.
+
+Delaying removal preserves those costs and risks after the functionality has stopped providing value. Removing it after its final use and transition keeps the active system easier to understand and limits support to behaviour that remains intentional.
 
 ### Implemented By These Standards
 
@@ -98,13 +100,13 @@ Unused code and dependencies continue to impose comprehension, testing, and secu
 
 ### Summary
 
-Unnecessary complexity and technical debt are identified as code changes, tracked while they remain, and remediated before they materially impair maintainability.
+Unnecessary complexity and technical debt are identified during code changes, tracked while they remain, and addressed before they make maintenance difficult.
 
 ### Reasoning
 
-Complexity is cheaper to address when it is introduced than after other code depends on it. Review provides contextual judgement about whether a change is more complex than its requirement warrants, while static analysis makes measurable trends such as complexity and duplication visible as the code evolves.
+Complexity is easier to address when it is introduced than after other code begins to depend on it. Review provides context for judging whether a change is more complex than its requirement warrants, while static analysis makes trends such as growing complexity and duplication visible.
 
-Unrecorded complexity can accumulate until routine changes become costly or risky. Recording debt keeps its effect visible, while ongoing refactoring prevents remediation from depending on a separate, indefinite future effort.
+Unrecorded debt can accumulate until routine changes become costly or risky, particularly as more code depends on a difficult design. Tracking the debt keeps its effect visible, while regular refactoring prevents remediation from depending on a separate future effort that may never receive priority.
 
 ### Implemented By These Standards
 

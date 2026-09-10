@@ -28,8 +28,8 @@ AI tool use is limited to listed tools and their recorded data authorisations.
 
 ### Implements These Principles
 
-- [Suitable AI Tools](../../principles/engineering-practice/ai-assisted-engineering.md#suitable-ai-tools)
-- [Privacy-Protective Defaults](../../principles/security-privacy/data-privacy.md#privacy-protective-defaults)
+- [AI Tool Terms and Controls](../../principles/engineering-practice/ai-assisted-engineering.md#ai-tool-terms-and-controls)
+- [Privacy by Default](../../principles/security-privacy/data-privacy.md#privacy-by-default)
 
 ## Licensing & Provisioning
 
@@ -44,4 +44,4 @@ AI tooling access uses an individually attributable, organisation-provisioned li
 
 ### Implements These Principles
 
-- [Organisation-Controlled Access](../../principles/engineering-practice/ai-assisted-engineering.md#organisation-controlled-access)
+- [Organisation Managed Access](../../principles/engineering-practice/ai-assisted-engineering.md#organisation-managed-access)

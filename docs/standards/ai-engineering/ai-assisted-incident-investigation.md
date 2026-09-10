@@ -20,7 +20,7 @@ An AI tool used for incident investigation is approved before use and recorded i
 
 ### Implements These Principles
 
-- [Suitable AI Tools](../../principles/engineering-practice/ai-assisted-engineering.md#suitable-ai-tools)
+- [AI Tool Terms and Controls](../../principles/engineering-practice/ai-assisted-engineering.md#ai-tool-terms-and-controls)
 
 ## Standardised Telemetry
 
@@ -62,7 +62,7 @@ Incident remediation informed or performed by AI remains under responder control
 
 ### Implements These Principles
 
-- [Risk-Proportionate Scrutiny](../../principles/engineering-practice/ai-assisted-engineering.md#risk-proportionate-scrutiny)
+- [Scrutiny Based on Impact](../../principles/engineering-practice/ai-assisted-engineering.md#scrutiny-based-on-impact)
 
 ## Incident Traceability
 

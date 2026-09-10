@@ -1,36 +1,37 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
 # Shared Platform
 
-## Workload-Specific Runtime Selection
+## Runtime Selection by Workload
 
 ### Summary
 
-A workload's runtime model and deployment location are explicit design decisions based on that workload's requirements.
+A workload's runtime model and deployment location are explicit design decisions based on its requirements.
 
 ### Reasoning
 
-Runtime and deployment choices determine the capabilities, constraints, operational model, and provider coupling a workload inherits. Selecting them during design exposes whether those characteristics fit the workload before implementation depends on them.
+Runtime and deployment choices determine the capabilities, constraints, operating model, and provider dependencies a workload inherits. Once implementation relies on those characteristics, moving the workload can require changes to its design, delivery, and support arrangements.
 
-A choice suitable for one workload does not establish that it suits another. Assessing each workload independently prevents a shared default from replacing consideration of its actual needs.
+Making the choice during design shows whether the runtime and location support the workload's functional and operational needs before those dependencies become established. A choice that suits one workload does not establish that it suits another, so a shared default cannot replace consideration of each workload's requirements.
 
 ### Implemented By These Standards
 
+- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 
 ## Justified Platform Alternatives
 
 ### Summary
 
-An alternative to the shared platform is adopted only when the platform cannot meet a genuine requirement, and it remains in use only while that need persists.
+An alternative to the shared platform is adopted only when the platform cannot meet a specific workload requirement and remains in use only while that limitation persists.
 
 ### Reasoning
 
-A limited evaluation tests an alternative against the unmet requirement before it becomes a production dependency. Incorporating a broadly useful capability into the shared platform avoids a team-specific parallel capability.
+An alternative introduces a separate technology and operating model that must be secured, supported, and maintained alongside the shared platform. A limited evaluation tests whether it meets the unmet requirement before the organisation commits to those continuing costs and dependencies.
 
-An alternative creates a separate technology and operating model with additional support costs and risks. Reassessment determines whether those costs and risks remain justified as platform capabilities and requirements change, while removing an alternative without a continuing need prevents a temporary exception from becoming a permanent parallel capability.
+Where the missing capability would benefit other workloads, adding it to the shared platform avoids creating a team-specific parallel solution. Reassessment as requirements and platform capabilities change prevents an alternative from remaining after its benefit no longer justifies the additional cost and risk.
 
 ### Implemented By These Standards
 

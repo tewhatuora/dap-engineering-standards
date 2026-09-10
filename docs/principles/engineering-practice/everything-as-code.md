@@ -1,20 +1,20 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
 # Everything as Code
 
-## Authoritative Version-Controlled Definitions
+## Authoritative Definitions in Version Control
 
 ### Summary
 
-Source code and the definitions that determine system state live in version control as the authoritative record.
+Source code and every definition that controls system state are kept in version control as the authoritative record.
 
 ### Reasoning
 
-A shared authoritative record makes intended state recoverable, reviewable, and attributable. Without it, version-controlled definitions and operational practices can define conflicting system behaviour.
+A shared authoritative record gives teams one place to find the intended state, review changes, and establish who changed what. When undocumented operational work also defines state, the version-controlled definitions and the running system can disagree without that difference being visible.
 
-Application and service code, infrastructure, configuration, delivery pipelines, and database schemas all determine system state. Prototypes and scripts can also become deployed or depended upon, so treating them as short-lived work does not remove the need for an authoritative source.
+Infrastructure, configuration, delivery pipelines, and database schemas control system behaviour just as application code does. Prototypes and scripts can also become deployed or depended upon, so recording all these definitions allows the intended state to be reviewed and recovered when a system must be rebuilt.
 
 ### Implemented By These Standards
 
@@ -34,13 +34,13 @@ Application and service code, infrastructure, configuration, delivery pipelines,
 
 ### Summary
 
-Systems and environments can be recreated consistently from their code-defined state without undocumented manual steps.
+Systems and environments can be recreated consistently from code without undocumented manual steps.
 
 ### Reasoning
 
-Recreating systems from code reduces environment-specific variance across development, test, and production. It also makes recovery independent of knowledge or state held only by an individual.
+Recreating systems from code gives development, test, and production a consistent starting point and makes recovery independent of knowledge held by one person. Engineers can compare the definitions when environments differ instead of first reconstructing which manual actions may have been performed.
 
-Undocumented post-creation steps leave part of the functional state outside the code definition and prevent consistent recreation.
+An undocumented step still changes the functional state even though the code does not record it. The next recreation can therefore produce a different system, leaving behaviour dependent on manual knowledge that cannot be reviewed or applied consistently.
 
 ### Implemented By These Standards
 
@@ -57,33 +57,34 @@ Undocumented post-creation steps leave part of the functional state outside the 
 
 ### Summary
 
-A generated artifact is reproducible from its authoritative source and generation process without manual modification.
+A generated artifact can be reproduced from its authoritative source and generation process without manual edits.
 
 ### Reasoning
 
-Manual changes to generated output create state that its source and generation process cannot reproduce and that is lost when the output is generated again. Keeping changes in the source or generation process preserves the authoritative definition.
+Manual edits to generated output create a state that neither the source nor the generation process can reproduce. Those edits disappear when the artifact is generated again, while making the change in the source preserves it as part of the authoritative definition.
 
-Stable output from unchanged inputs makes substantive changes distinguishable from incidental differences and allows independently generated results to be compared.
+Stable output from unchanged inputs also makes meaningful changes easier to distinguish from incidental differences. Engineers can compare artifacts generated in different places and determine whether both came from the same source and process.
 
 ### Implemented By These Standards
 
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 - [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
 
-## Code-Defined Change Path
+## Code as the Change Path
 
 ### Summary
 
-Code-defined state changes through its reviewed and automated change path, with direct changes to running state subsequently incorporated into code.
+Code-defined state changes through its reviewed and automated path, and any direct change to a running system is then recorded in code.
 
 ### Reasoning
 
-Applying a change through the code-defined path preserves its review history, traceability, and repeatability. Manual or ad hoc actions create state outside those controls and allow running state to diverge from its authoritative definition.
+Applying a change through the code-defined path records what changed, who reviewed it, and how the same state can be produced again. A direct change to a running system bypasses that record and allows the system to diverge from its authoritative definition.
 
-Direct intervention can be necessary to restore service. Recording the resulting change in code keeps the definition authoritative and prevents the divergence from persisting.
+Direct intervention may still be necessary to restore service quickly. Recording the resulting state in code preserves the correction, makes it available for later review, and prevents a subsequent automated change from unintentionally reversing it.
 
 ### Implemented By These Standards
 
+- [Branching Strategy](../../standards/code-implementation/branching-strategy.md)
 - [Configuration Management](../../standards/code-implementation/configuration-management.md)
 - [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
@@ -95,13 +96,13 @@ Direct intervention can be necessary to restore service. Recording the resulting
 
 ### Summary
 
-Secrets remain in a dedicated secrets management system, and code-defined artifacts reference them without containing their values.
+Secrets are stored in a dedicated secrets management system, and code refers to them without containing their values.
 
 ### Reasoning
 
-Embedding a secret in code exposes it through repository history, generated artifacts, and code review to people and systems that do not require it.
+Putting a secret in code exposes its value through repository history, generated artifacts, and code review to people and systems that may not need it. Removing the value from the latest version does not remove it from existing history or copies.
 
-Referencing secrets at runtime allows credentials to be rotated independently of code and keeps their handling within the secrets management system.
+Referencing a secret at runtime keeps storage and access within the secrets management system. It also allows credentials to be rotated or revoked without changing, reviewing, and rebuilding every code-defined artifact that uses them.
 
 ### Implemented By These Standards
 
@@ -113,13 +114,13 @@ Referencing secrets at runtime allows credentials to be rotated independently of
 
 ### Summary
 
-Engineering documentation stays version-controlled and updated in the same change that alters the behaviour it describes.
+Engineering documentation is version-controlled and updated in the same change as the behaviour it describes.
 
 ### Reasoning
 
-Version control makes documentation changes reviewable and preserves their history alongside the source changes they describe.
+Keeping documentation in version control preserves its history alongside the source changes it describes. Updating both in the same change allows reviewers to check that the explanation matches the implementation before the new behaviour is adopted.
 
-Updating documentation with the behaviour change prevents it from describing an earlier system state and directing later work from incorrect information.
+When documentation is deferred, it can continue to describe an earlier system state and direct later work from incorrect information. Treating the documentation update as part of the behaviour change prevents that temporary mismatch from becoming established.
 
 ### Implemented By These Standards
 

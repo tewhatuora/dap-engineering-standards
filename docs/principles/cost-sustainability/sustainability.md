@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
 # Sustainability
@@ -8,13 +8,13 @@ last_edited: 2026-09-09
 
 ### Summary
 
-Compute and storage capacity matches actual demand, with deployment models selected to minimise idle capacity and improve infrastructure utilisation.
+Compute and storage capacity match actual demand, with deployment models chosen to minimise idle capacity and improve infrastructure use.
 
 ### Reasoning
 
-Over-provisioned and idle capacity consumes energy without delivering value. Sizing resources from observed or tested demand, adjusting capacity as demand changes, and removing resources when they are no longer needed reduce that waste.
+Over-provisioned and idle capacity consume energy while providing no corresponding service value. Sizing resources from observed or tested demand limits this waste, while adjusting or removing capacity as demand changes prevents an earlier requirement from becoming permanent consumption.
 
-Deployment models that share capacity or adjust it with demand can use infrastructure more efficiently than dedicated equivalents. Their resource characteristics determine whether they provide that benefit for a particular workload.
+Deployment models that share capacity or adjust it with demand can use infrastructure more efficiently than dedicated equivalents. The benefit depends on the workload's usage pattern and resource needs, so the model must be assessed against the capacity it actually uses rather than its category alone.
 
 ### Implemented By These Standards
 
@@ -27,31 +27,33 @@ Deployment models that share capacity or adjust it with demand can use infrastru
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 
-## Carbon-Aware Deployment
+## Lower Carbon Deployment
 
 ### Summary
 
-Where multiple locations or cloud providers equally meet applicable requirements, the option with the lower-carbon energy source is preferred.
+When multiple locations or providers meet the applicable requirements equally, the option using the lower-carbon energy source is preferred.
 
 ### Reasoning
 
-The carbon intensity of the energy supplying a workload varies by location and provider. When technical, legal, data residency, and commercial requirements do not distinguish between viable options, comparable reporting on energy sources and operational emissions provides a basis for selecting the option with lower environmental impact.
+The carbon intensity of the energy that runs a workload varies by location and provider, so equivalent deployments can have different environmental effects. This difference provides a basis for selection only after the options meet the workload's technical, legal, data residency, and commercial requirements.
+
+Comparable information about energy sources and operational emissions allows the remaining choices to be assessed on the same basis. Preferring the lower-carbon option then reduces environmental impact without weakening requirements that the workload must meet.
 
 ### Implemented By These Standards
 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 
-## Proportionate Data Storage
+## Data Storage Aligned with Purpose
 
 ### Summary
 
-Data storage remains proportionate to its continuing purpose and access pattern through bounded retention, necessary copies, and appropriate storage tiers.
+Data storage is limited to the retention period, copies, and performance its purpose and access pattern require.
 
 ### Reasoning
 
-Data retained beyond its purpose continues to consume storage and the resources needed to protect and operate it. Defined deletion or archival points bound that consumption, while avoiding redundant copies limits storage to data that provides distinct value.
+Data retained beyond its purpose continues to consume storage and the resources needed to secure, back up, and operate it. Defined deletion or archival points bound that consumption, while limiting copies prevents the same data from creating repeated cost and environmental impact without distinct value.
 
-Storage performance beyond an access pattern's needs also consumes unnecessary resources. Moving infrequently accessed data to an appropriate lower-energy tier aligns its resource use with its continuing purpose.
+Storage designed for frequent or rapid access can consume more resources than infrequently used data requires. Moving data to a tier whose performance matches its access pattern preserves its continuing purpose while avoiding resource use that provides no benefit.
 
 ### Implemented By These Standards
 
@@ -60,15 +62,17 @@ Storage performance beyond an access pattern's needs also consumes unnecessary r
 - [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 
-## Impact Measurement
+## Environmental Impact Measurement
 
 ### Summary
 
-A service's energy consumption or estimated carbon footprint is measured and recorded over time.
+A service's energy use or estimated carbon footprint is measured and recorded over time.
 
 ### Reasoning
 
-Service-level environmental measurements connect impact to the design and operational decisions that produce it. Recording those measurements over time allows changes in resource use and environmental impact to be identified as the service evolves.
+Aggregate environmental reporting does not show which service or engineering decision produced a change in impact. Service-level measurement connects energy use or estimated emissions to the architecture, capacity, and operating choices that teams can influence.
+
+Recording the measurements over time makes sustained changes visible as the service evolves. Teams can then determine whether growth reflects useful demand or whether the service is using more resources without a corresponding increase in value.
 
 ### Implemented By These Standards
 
@@ -78,11 +82,13 @@ Service-level environmental measurements connect impact to the design and operat
 
 ### Summary
 
-Sustainability assumptions are revisited as usage, scale, technology, or provider offerings change.
+Sustainability assumptions are reassessed as usage, scale, technology, or provider offerings change.
 
 ### Reasoning
 
-Resource consumption and environmental impact change as a service and its available technology evolve, so an assumption made during design can cease to reflect actual usage or the available options. A material, sustained increase indicates that the design no longer behaves as assumed and needs reassessment against current usage.
+Resource consumption and environmental impact change as a service grows and as technology and provider options evolve. An assumption made during design can therefore stop reflecting actual usage or overlook a more efficient option that was not previously available.
+
+A sustained increase that is not explained by increased useful demand shows that the service no longer behaves as originally expected. Reassessing the design against current usage and available options prevents the earlier assumption from justifying unnecessary consumption indefinitely.
 
 ### Implemented By These Standards
 

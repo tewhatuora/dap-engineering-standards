@@ -1,33 +1,37 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
-# Performance & Scalability
+# Performance and Scalability
 
-## Performance & Scaling Decisions
+## Performance and Scaling Decisions
 
 ### Summary
 
-Service performance and scaling under load are explicit architectural decisions made during design.
+Service performance and scaling under load are explicit architecture decisions made during design.
 
 ### Reasoning
 
-Expected load and the approach used to meet it shape a service's architecture. Addressing them during design exposes whether the selected runtime and architecture can support the required behaviour before implementation commits the service to choices that are costly to change.
+Expected load affects how a service stores data, manages work, uses resources, and interacts with dependencies. These choices shape the architecture and can become costly to change after implementation and dependent systems are established.
+
+Considering performance and scaling during design shows whether the selected runtime and architecture can support the required behaviour. It also makes known limits visible while the design can still change without major rework.
 
 ### Implemented By These Standards
 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 - [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 
-## Performance & Capacity Requirements
+## Performance and Capacity Requirements
 
 ### Summary
 
-Load, throughput, concurrency, latency, and error rate are explicit requirements based on realistic current or projected demand.
+Load, throughput, concurrency, latency, and error rate are measurable requirements based on realistic current or projected demand.
 
 ### Reasoning
 
-Explicit requirements make expected performance and capacity measurable. Basing them on realistic demand provides a credible basis for design decisions and testing, while reducing the risk of capacity that is insufficient for expected use or disproportionate to it.
+Measurable requirements define the demand a service is expected to handle and the behaviour it must maintain under that demand. They give architecture and implementation decisions a clear target and provide a basis for determining whether testing has demonstrated acceptable performance.
+
+Requirements based on realistic demand reduce the risk of building too little capacity for expected use or paying for capacity that provides no corresponding value. They also make the assumptions behind a capacity decision visible when demand later changes.
 
 ### Implemented By These Standards
 
@@ -36,15 +40,17 @@ Explicit requirements make expected performance and capacity measurable. Basing 
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 
-## Horizontal & Elastic Scaling
+## Horizontal and Elastic Scaling
 
 ### Summary
 
-Services scale horizontally by default, with capacity adjusting automatically to sustained changes in demand.
+Services scale horizontally by default, and their capacity adjusts automatically to sustained changes in demand.
 
 ### Reasoning
 
-Adding and removing instances allows capacity to change without depending on the limits of a single instance. Automatic adjustment responds to sustained changes in demand without waiting for manual intervention, provided the selected runtime model supports the required scaling behaviour.
+Adding and removing service instances allows capacity to change without depending on how far one instance can be enlarged. It also distributes work across replaceable instances instead of making the service depend on the capacity and availability of a single runtime.
+
+Automatic adjustment responds to sustained changes in demand without waiting for someone to change capacity manually. The runtime model must support that behaviour so instances can be added or removed without breaking state, coordination, or request handling.
 
 ### Implemented By These Standards
 
@@ -55,11 +61,13 @@ Adding and removing instances allows capacity to change without depending on the
 
 ### Summary
 
-Components that cannot scale independently are identified during design and addressed or accepted as bounded limitations.
+Components that cannot scale independently are identified during design and either addressed or accepted as bounded limitations.
 
 ### Reasoning
 
-A component that cannot scale independently, or that becomes a point of contention under load, limits the capacity of the wider service. Identifying the constraint during design allows it to be removed, accommodated, or accepted with a known bound before demand exposes it through a production failure.
+A component that cannot scale independently can limit the capacity of the wider service even when every other component has capacity available. Shared resources and points of contention can create the same limit by forcing increasing demand through one constrained part of the system.
+
+Identifying the constraint during design allows it to be removed, accommodated, or accepted with a known bound. This prevents expected growth from first revealing the limit through degraded performance or a production failure.
 
 ### Implemented By These Standards
 
@@ -69,13 +77,13 @@ A component that cannot scale independently, or that becomes a point of contenti
 
 ### Summary
 
-Data access avoids unnecessary work as demand grows, and every cache has a defined invalidation or expiry approach.
+Data access avoids unnecessary work as demand grows, and every cache has a defined approach to invalidation or expiry.
 
 ### Reasoning
 
-Data access patterns that perform unnecessary work consume increasing time and capacity as demand and data volume grow. Bounding the work performed for each request and avoiding repeated access limits that growth.
+Data access that scans, transfers, or processes more data than a request needs consumes increasing time and capacity as demand and data volume grow. Bounding the work performed for each request and avoiding repeated access prevents that unnecessary cost from growing with the service.
 
-A cache without an invalidation or expiry approach can continue serving data after it is no longer valid. A defined approach bounds how long stale data can persist.
+A cache reduces repeated work by storing a result beyond the request that produced it, but that result can become outdated when the source changes. A defined invalidation or expiry approach determines when the cached value stops being trusted and limits how long stale data can be served.
 
 ### Implemented By These Standards
 
@@ -86,13 +94,15 @@ A cache without an invalidation or expiry approach can continue serving data aft
 
 ### Summary
 
-Performance and capacity targets are validated before production, as a service evolves, and when demand or sustained degradation challenges its design assumptions.
+Performance and capacity targets are validated before production, as the service evolves, and when demand or sustained degradation challenges its design assumptions.
 
 ### Reasoning
 
-A target alone does not demonstrate that a service can meet it under expected demand. Testing before production provides evidence against a representative workload while there is still an opportunity to address a shortfall without affecting users.
+A target does not show that a service can meet it under expected demand. Testing before production provides evidence against a representative workload while a shortfall can still be addressed without affecting users.
 
-Repeating testing as the service evolves detects regressions caused by changes to the service and its operating context. Performance and scaling assumptions depend on an expected level and pattern of demand, so growth beyond that basis, sustained degradation, or movement towards a known limit indicates when capacity or architecture needs reassessment.
+Changes to code, data, dependencies, and infrastructure can alter performance even when the target remains unchanged. Repeating validation as the service evolves detects these regressions and shows whether previous capacity evidence still applies.
+
+Scaling decisions also depend on an expected level and pattern of demand. Growth beyond that basis, sustained degradation, or movement towards a known limit shows when the assumptions behind the current capacity or architecture need to be reassessed.
 
 ### Implemented By These Standards
 

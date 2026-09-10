@@ -1,20 +1,20 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
 # Engineering Practice
 
 ## Overview
 
-Engineering practices determine how readily systems can be understood, changed, and operated. This section values proportionate design, reuse, code-defined systems, automation, fast feedback, and accountability for engineering work.
+Engineering practices determine how readily systems can be understood, changed, and operated. These principles keep engineering work repeatable and traceable while preserving human accountability.
 
 Choose a principle below to read its full reasoning.
 
 ## Principles
 
-### Simplicity & Maintainability
+### Simplicity and Maintainability
 
-Keep systems understandable and changeable through proportionate design, clear structure, consistent code, and active maintenance.
+Systems remain understandable and changeable by limiting unnecessary complexity and actively maintaining their design and code.
 
 [Read more](simplicity-maintainability.md).
 

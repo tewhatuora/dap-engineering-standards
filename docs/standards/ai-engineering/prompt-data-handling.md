@@ -23,9 +23,9 @@ AI tools receive only data permitted by their authorisation and the organisation
 
 ### Implements These Principles
 
-- [Suitable AI Tools](../../principles/engineering-practice/ai-assisted-engineering.md#suitable-ai-tools)
+- [AI Tool Terms and Controls](../../principles/engineering-practice/ai-assisted-engineering.md#ai-tool-terms-and-controls)
 - [Confidentiality](../../principles/engineering-practice/ai-assisted-engineering.md#confidentiality)
-- [Privacy-Protective Defaults](../../principles/security-privacy/data-privacy.md#privacy-protective-defaults)
+- [Privacy by Default](../../principles/security-privacy/data-privacy.md#privacy-by-default)
 
 ## Data Minimisation
 
@@ -60,4 +60,4 @@ PII used in authorised AI-assisted work is kept in the least identifiable form t
 
 ### Implements These Principles
 
-- [Synthetic & De-Identified Data](../../principles/security-privacy/data-privacy.md#synthetic-de-identified-data)
+- [Synthetic and De-Identified Data](../../principles/security-privacy/data-privacy.md#synthetic-and-de-identified-data)

@@ -1,8 +1,8 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
-# Delivery & Release
+# Delivery and Release
 
 ## Overview
 
@@ -20,6 +20,6 @@ Built artifacts retain a stable identity and move unchanged through delivery env
 
 ### Safe Delivery
 
-Deployments limit change exposure and remain separate from the decision to release functionality to users.
+Deployments reduce exposure to change while release remains a separate decision.
 
 [Read more](safe-delivery.md).

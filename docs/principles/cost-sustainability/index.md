@@ -1,12 +1,12 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
-# Cost & Sustainability
+# Cost and Sustainability
 
 ## Overview
 
-Cost and sustainability principles establish how engineering decisions account for financial and environmental consequences throughout a service's lifecycle. They guide choices that keep spend and resource consumption proportionate to delivered value while preserving required service outcomes.
+Cost and sustainability principles make financial and environmental impact part of service design and operation. They align spending and resource use with actual demand and required service outcomes.
 
 Choose a principle below to read its full reasoning.
 
@@ -14,7 +14,7 @@ Choose a principle below to read its full reasoning.
 
 ### Cost Awareness
 
-Engineering decisions keep recurring spend proportionate to the value a service delivers throughout its lifecycle.
+Lifecycle spend remains visible and aligned with service demand and value as usage and pricing change.
 
 [Read more](cost-awareness.md).
 
