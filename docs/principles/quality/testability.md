@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Testability
@@ -59,15 +59,15 @@ An intermittent result breaks that link because the same code can appear both va
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
 
-## Risk-Proportionate Testing
+## Test Depth by Risk and Complexity
 
 ### Summary
 
-New or changed functionality receives automated testing proportionate to its risk, criticality, and complexity.
+The depth and coverage of automated testing increase with the likelihood and impact of failure and the complexity of the functionality.
 
 ### Reasoning
 
-The value of testing depends on both the likelihood of a defect and the consequence and difficulty of detecting it later. Aligning effort with risk, criticality, and complexity concentrates stronger evidence where a failure would be harder to find or cause greater harm.
+The value of testing depends on both the likelihood of a defect and the consequence and difficulty of detecting it later. Increasing test depth and coverage with those factors concentrates stronger evidence where a failure would be harder to find or cause greater harm.
 
 Designing functionality for automated verification allows the same behaviour to be checked consistently as the code changes. Where useful automation is feasible but omitted, later changes can remove expected behaviour without producing timely evidence of the regression.
 
@@ -85,7 +85,7 @@ Performance, security, and accessibility are designed for automated verification
 
 Functional correctness does not show that a component meets its performance, security, or accessibility expectations. These characteristics can fail while the functional outcome remains correct, so they require evidence based on their own requirements.
 
-Automated testing provides repeatable evidence and makes regressions visible as the component changes. Where automation cannot provide suitable evidence, a defined testing approach keeps the evaluation deliberate and repeatable instead of leaving it to informal judgement.
+Automated testing provides repeatable evidence and makes regressions visible as the component changes. Where automation cannot verify the required characteristic, a defined testing approach keeps the evaluation deliberate and repeatable instead of leaving it to informal judgement.
 
 ### Implemented By These Standards
 

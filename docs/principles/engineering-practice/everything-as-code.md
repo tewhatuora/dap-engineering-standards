@@ -1,10 +1,10 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Everything as Code
 
-## Authoritative Version-Controlled Definitions
+## Authoritative Definitions in Version Control
 
 ### Summary
 
@@ -70,7 +70,7 @@ Stable output from unchanged inputs also makes meaningful changes easier to dist
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 - [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
 
-## Code-Defined Change Path
+## Code as the Change Path
 
 ### Summary
 

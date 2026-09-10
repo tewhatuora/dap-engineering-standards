@@ -1,14 +1,14 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
-# Vendor Lock-in & Portability
+# Vendor Lock-in and Portability
 
 ## Lock-in Assessment and Justification
 
 ### Summary
 
-Lock-in is assessed during technology selection, accepted only when a genuine benefit justifies it, and reassessed when that basis changes.
+Lock-in is assessed during technology selection, accepted only when its capability justifies the resulting loss of choice and replacement effort, and reassessed when that basis changes.
 
 ### Reasoning
 
@@ -41,13 +41,13 @@ Assessing the exit path before adoption exposes these constraints while other op
 
 ### Summary
 
-An abstraction shields a system from a vendor-specific dependency when it can do so without adding disproportionate cost or complexity.
+An abstraction shields a system from a vendor-specific dependency when the reduction in vendor-specific change, migration effort, and replacement risk justifies its implementation and maintenance cost.
 
 ### Reasoning
 
 Vendor-specific behaviour spread throughout a system increases the number of components that must change when the dependency is replaced. Concentrating that integration behind a defined interface limits the replacement work and prevents the vendor's model from becoming part of unrelated application logic.
 
-The abstraction itself adds code, maintenance, and constraints, and it may not conceal every meaningful difference between providers. It improves portability only when those costs remain proportionate to the lock-in risk it reduces.
+The abstraction itself adds code, maintenance, and constraints, and it may not conceal every meaningful difference between providers. It improves portability only when the vendor-specific change, migration effort, and replacement risk it reduces justify those costs.
 
 ### Implemented By These Standards
 
@@ -60,7 +60,7 @@ The abstraction itself adds code, maintenance, and constraints, and it may not c
 
 ### Summary
 
-Data held by a vendor or platform remains extractable in a usable, non-proprietary format, with that ability verified periodically.
+Data held by a vendor or platform remains extractable in a usable, non-proprietary format, with exports tested at defined intervals and after changes to the export format or mechanism.
 
 ### Reasoning
 

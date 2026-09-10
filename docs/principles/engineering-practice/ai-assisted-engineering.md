@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # AI-Assisted Engineering
@@ -22,11 +22,11 @@ People who use or depend on the system experience the same behaviour regardless 
 - [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 
-## Risk-Proportionate Scrutiny
+## Scrutiny Based on Impact
 
 ### Summary
 
-AI-assisted work receives scrutiny proportionate to its security, safety, or regulatory impact, with relevant domain experts reviewing high-risk work.
+Scrutiny of AI-assisted work increases with its potential security, safety, or regulatory impact, and domain experts review work whose risks require their expertise.
 
 ### Reasoning
 
@@ -64,7 +64,7 @@ Qualified people retain judgement and accountability for clinical decisions and 
 
 Clinical decisions and advice can directly affect patient safety, yet AI output may omit or misinterpret evidence and patient context needed for a sound judgement. A confident presentation can make incomplete or incorrect reasoning appear authoritative and harder to recognise before it influences care.
 
-Appropriately qualified people can weigh the output against the full clinical context, challenge its assumptions, and recognise when it falls outside its useful limits. They remain responsible for the decision because they are able to judge those factors and their consequences for the patient.
+People qualified to make the clinical decision can weigh the output against the full clinical context, challenge its assumptions, and recognise when it falls outside its useful limits. They remain responsible because they can judge those factors and their consequences for the patient.
 
 ### Implemented By These Standards
 
@@ -91,7 +91,7 @@ An explanation that other engineers can follow also makes the work reviewable an
 
 ### Summary
 
-Material AI contributions are disclosed with enough context to show how they affected an engineering change, design decision, or incident response.
+AI contributions that influence an engineering change, design decision, or incident response are disclosed with context showing that influence.
 
 ### Reasoning
 
@@ -104,7 +104,7 @@ The same context supports later investigation when an assumption is challenged o
 - [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
 - [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 
-## Suitable AI Tools
+## AI Tool Terms and Controls
 
 ### Summary
 
@@ -122,7 +122,7 @@ Available controls also determine who can use the tool, what information it can 
 - [Approved AI Tooling](../../standards/ai-engineering/approved-ai-tooling.md)
 - [Prompt Data Handling](../../standards/ai-engineering/prompt-data-handling.md)
 
-## Organisation-Controlled Access
+## Organisation Managed Access
 
 ### Summary
 

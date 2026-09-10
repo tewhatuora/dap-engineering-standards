@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Safe Delivery
@@ -31,7 +31,7 @@ A change reaches production through a defined sequence of environments and consi
 
 A defined progression path makes clear which environments and validation a change must pass before production. Each stage adds evidence about the change under known conditions and establishes what must be true before it can advance.
 
-Consistent criteria prevent equivalent changes from advancing under different conditions because of individual discretion. Allowing a stage to be skipped only under defined criteria keeps the path proportionate while preserving a deliberate basis for the exception.
+Consistent criteria prevent equivalent changes from advancing under different conditions because of individual discretion. Allowing a stage to be skipped only when defined criteria show that it adds no required validation keeps the path efficient without making progression ad hoc.
 
 ### Implemented By These Standards
 
@@ -41,7 +41,7 @@ Consistent criteria prevent equivalent changes from advancing under different co
 
 ### Summary
 
-Deployments have viable rollback or forward-fix paths, while progressive exposure and rapid disablement reduce risk.
+Deployments have prepared rollback or forward-fix paths, while progressive exposure and rapid disablement reduce risk.
 
 ### Reasoning
 

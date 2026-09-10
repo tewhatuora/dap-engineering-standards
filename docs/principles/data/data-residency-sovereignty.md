@@ -1,10 +1,10 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
-# Data Residency & Sovereignty
+# Data Residency and Sovereignty
 
-## Jurisdiction-Informed Selection
+## Selection by Jurisdiction Requirements
 
 ### Summary
 
@@ -29,7 +29,7 @@ A general compliance certification also does not establish where a specific serv
 
 ### Summary
 
-Infrastructure and configuration keep stored and processed data within permitted jurisdictions, with the actual locations verified periodically.
+Infrastructure and configuration keep stored and processed data within permitted jurisdictions, with the actual locations verified at defined intervals and after changes that can affect storage or processing location.
 
 ### Reasoning
 
@@ -59,7 +59,7 @@ Identifying each flow and constraining it to an approved path makes the destinat
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
 
-## Backup & Recovery Jurisdictions
+## Backup and Recovery Jurisdictions
 
 ### Summary
 

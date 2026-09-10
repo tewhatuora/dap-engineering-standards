@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Accessibility
@@ -24,13 +24,13 @@ Internal and administrative interfaces also support the delivery and operation o
 
 ### Summary
 
-Accessibility conformance is verified throughout an interface's lifecycle through proportionate automated and manual testing and re-verified when the interface or applicable criteria change.
+Accessibility conformance is verified throughout an interface's lifecycle using automated checks and manual testing selected for the applicable criteria and interactions, then re-verified when the interface or criteria change.
 
 ### Reasoning
 
 Implementation alone does not demonstrate that an interface meets its accessibility requirements. Automated checks can identify defects that are expressed in code, while manual testing assesses interactions and outcomes that require human judgement or use of assistive technology.
 
-Using both forms of testing provides broader evidence than either can provide alone, with effort proportionate to the interface and the risk of exclusion. Repeating the checks as the interface evolves detects barriers introduced by changes to functionality, content, or design.
+Using both forms of testing provides broader evidence than either can provide alone. The coverage reflects the applicable criteria, the range and complexity of interactions, and the consequences of barriers. Repeating the checks as the interface evolves detects barriers introduced by changes to functionality, content, or design.
 
 Conformance evidence applies only to the interface and criteria that were tested. Re-verification after either changes establishes whether the current interface still meets the requirements instead of relying on evidence for an earlier version.
 

@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Observability
@@ -57,7 +57,7 @@ When every service describes similar behaviour differently, dashboards, alerts, 
 
 ### Summary
 
-A service emits enough structured logs, metrics, and traces to explain its behaviour and dependencies without inspecting its running state directly.
+A service emits structured logs, metrics, and traces that explain its behaviour and dependencies without requiring direct inspection of its running state.
 
 ### Reasoning
 
@@ -75,7 +75,7 @@ Together these signals allow engineers to diagnose behaviour without relying on 
 - [Structured Logging](../../standards/operations-observability/structured-logging.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 
-## Cross-Service Correlation
+## Correlation Across Services
 
 ### Summary
 

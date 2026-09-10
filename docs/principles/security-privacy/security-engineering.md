@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Security Engineering
@@ -143,7 +143,7 @@ Services and threats change over time, so evidence from an earlier test does not
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
 
-## Time-Bound Security Exceptions
+## Temporary Security Exceptions
 
 ### Summary
 

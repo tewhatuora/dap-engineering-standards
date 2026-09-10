@@ -1,10 +1,10 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
-# Performance & Scalability
+# Performance and Scalability
 
-## Performance & Scaling Decisions
+## Performance and Scaling Decisions
 
 ### Summary
 
@@ -21,7 +21,7 @@ Considering performance and scaling during design shows whether the selected run
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 - [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 
-## Performance & Capacity Requirements
+## Performance and Capacity Requirements
 
 ### Summary
 
@@ -40,7 +40,7 @@ Requirements based on realistic demand reduce the risk of building too little ca
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 
-## Horizontal & Elastic Scaling
+## Horizontal and Elastic Scaling
 
 ### Summary
 

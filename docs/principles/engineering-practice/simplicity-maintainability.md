@@ -1,8 +1,8 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
-# Simplicity & Maintainability
+# Simplicity and Maintainability
 
 ## Minimum Sufficient Solution
 
@@ -12,7 +12,7 @@ A design uses the simplest solution that meets current requirements and adds com
 
 ### Reasoning
 
-Complexity introduced for an unconfirmed future need creates code, configuration, and behaviour that must be understood, tested, and maintained without providing current value. Basing the design on actual requirements keeps that continuing cost proportionate to the problem being solved.
+Complexity introduced for an unconfirmed future need creates code, configuration, and behaviour that must be understood, tested, and maintained without providing current value. Basing the design on actual requirements limits that continuing cost to the problem being solved.
 
 When several solutions meet the requirement equally well, the simplest one reduces the number of assumptions and interactions an engineer must understand. This makes its behaviour easier to verify and gives later changes fewer unnecessary constraints.
 
@@ -79,13 +79,13 @@ Using fewer technologies for substantially similar problems concentrates practic
 
 ### Summary
 
-Code, features, configuration, and dependencies are removed within a reasonable period once they are no longer needed.
+Code, features, configuration, and dependencies are removed after their final use and any required transition ends.
 
 ### Reasoning
 
 Unused code, features, configuration, and dependencies still impose comprehension, testing, maintenance, and security costs. Leaving retired functionality beside its replacement also obscures which path is authoritative and increases the chance that later work changes or relies on the wrong one.
 
-Delaying removal preserves those costs and risks after the functionality has stopped providing value. Removing it within a reasonable period keeps the active system easier to understand and limits support to behaviour that remains intentional.
+Delaying removal preserves those costs and risks after the functionality has stopped providing value. Removing it after its final use and transition keeps the active system easier to understand and limits support to behaviour that remains intentional.
 
 ### Implemented By These Standards
 

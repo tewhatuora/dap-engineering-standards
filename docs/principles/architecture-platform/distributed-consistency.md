@@ -1,10 +1,10 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Distributed Consistency
 
-## Service-Local Transactions
+## Transactions Within a Service
 
 ### Summary
 
@@ -20,7 +20,7 @@ Keeping the transaction within one service allows participating services to fail
 
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
 
-## Eventual Cross-Service Consistency
+## Eventual Consistency Across Services
 
 ### Summary
 

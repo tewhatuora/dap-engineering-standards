@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Interoperability
@@ -14,7 +14,7 @@ A service's integration needs are identified while its design can still respond 
 
 A design cannot account for interfaces and data exchanges that have not been identified. Discovering them after implementation can expose assumptions about ownership, data, latency, or availability that the chosen architecture cannot support without rework.
 
-Establishing which systems and consumers exchange data or functionality, what they exchange, and the required format makes those constraints part of the design. The service can then define suitable boundaries and contracts before consumers depend on its implementation.
+Establishing which systems and consumers exchange data or functionality, what they exchange, and the required format makes those constraints part of the design. The service can then define boundaries and contracts that account for ownership, data, latency, and availability before consumers depend on its implementation.
 
 ### Implemented By These Standards
 
@@ -81,7 +81,7 @@ Open, widely adopted standards are preferred wherever they meet a service's need
 
 Open, widely adopted protocols, data formats, and interface patterns give providers and consumers a shared basis for integration. Existing knowledge and compatible implementations reduce the amount of custom interpretation and support needed for each new connection.
 
-Proprietary or organisation-specific alternatives require consumers to learn and maintain separate conventions and can restrict future integration choices. They remain appropriate when no open standard meets a genuine requirement, because interoperability does not justify adopting a contract that cannot support the needed behaviour.
+Proprietary or organisation-specific alternatives require consumers to learn and maintain separate conventions and can restrict future integration choices. They remain justified when no open standard supports required behaviour, because interoperability does not justify adopting a contract that cannot meet the service's needs.
 
 ### Implemented By These Standards
 
@@ -109,7 +109,7 @@ Agreed formats and meanings give the receiver enough information to interpret da
 - [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
 - [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
 
-## Reusable Consumer-Independent Interfaces
+## Reusable Interfaces for Multiple Consumers
 
 ### Summary
 
@@ -147,7 +147,7 @@ Preserving compatibility allows providers and consumers to evolve independently,
 - [Release Strategy](../../standards/delivery-release/release-strategy.md)
 - [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
 
-## Contract & Integration Testing
+## Contract and Integration Testing
 
 ### Summary
 

@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Domain-Aligned Services
@@ -37,7 +37,7 @@ Independent change allows each service to evolve, validate, release, and recover
 - [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 - [Release Strategy](../../standards/delivery-release/release-strategy.md)
 
-## Service-Owned Data
+## Service Data Ownership
 
 ### Summary
 
@@ -54,7 +54,7 @@ Exclusive ownership keeps validation, consistency, and schema evolution with the
 - [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 - [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
 
-## Proportionate Service Granularity
+## Service Granularity by Domain Cohesion
 
 ### Summary
 

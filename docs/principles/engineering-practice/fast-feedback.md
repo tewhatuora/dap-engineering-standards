@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Fast Feedback
@@ -83,7 +83,7 @@ A stage that remains slow or unreliable delays integration even when the rest of
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
 
-## Limited-Exposure Rollouts
+## Rollouts with Limited Exposure
 
 ### Summary
 

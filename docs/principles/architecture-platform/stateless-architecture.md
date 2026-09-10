@@ -1,10 +1,10 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Stateless Architecture
 
-## Instance-Independent Request Handling
+## Request Handling by Any Instance
 
 ### Summary
 
@@ -27,7 +27,7 @@ Correctness that does not depend on session affinity also allows capacity to cha
 
 ### Summary
 
-A request handler is idempotent where feasible or otherwise prevents retries from duplicating its effects.
+A request handler prevents retries from duplicating its effects through idempotency or an equivalent safeguard.
 
 ### Reasoning
 

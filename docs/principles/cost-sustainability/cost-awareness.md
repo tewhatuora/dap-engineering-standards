@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Cost Awareness
@@ -23,17 +23,17 @@ Building a capability that an existing solution already provides creates develop
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 - [Technology Stack Governance](../../standards/architecture-system-design/technology-stack-governance.md)
 
-## Proportionate Service Spend
+## Spend Aligned with Demand and Value
 
 ### Summary
 
-A service's spend and resource use remain proportionate to its demand, risk, and value without creating unacceptable reliability, performance, or security risk.
+A service's spend and resource use reflect its demand and value while preserving the capacity and controls needed for reliability, performance, and security.
 
 ### Reasoning
 
 The capacity, resilience, and redundancy a service requires depend on its demand, criticality, and recovery objectives. Provisioning beyond those needs creates recurring cost without a corresponding reduction in risk, while cutting further can remove capacity or protection on which the service depends.
 
-Assessing spend against service value and risk prevents cost reduction from being treated as an objective in isolation. It keeps necessary protection in place while making excess capacity, idle resources, and retained storage visible as costs that no longer deliver value.
+Assessing spend against service demand, value, and required service outcomes prevents cost reduction from being treated as an objective in isolation. It keeps necessary protection in place while making excess capacity, idle resources, and retained storage visible as costs that no longer deliver value.
 
 Usage-based engineering tools add another form of variable spend because each request or operation can carry a cost. Matching the selected capability and its use to the task preserves higher-cost options where their additional value is needed without applying that cost to every activity.
 
@@ -55,7 +55,7 @@ Usage-based engineering tools add another form of variable spend because each re
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 
-## Cost Visibility & Attribution
+## Cost Visibility and Attribution
 
 ### Summary
 
@@ -76,11 +76,11 @@ Designing for measurement and attribution connects spend to the engineering deci
 
 ### Summary
 
-The responsible team is alerted to a material or unexpected change in service spend early enough to limit further unintended cost.
+The responsible team is alerted when service spend no longer matches expected usage and pricing or changes without an understood cause.
 
 ### Reasoning
 
-Service cost can change quickly when demand, configuration, architecture, or provider pricing changes. If the increase remains hidden until routine reporting or billing, unintended spend can continue long after the decision or fault that caused it.
+Service cost can change quickly when demand, configuration, architecture, or provider pricing changes. If a departure from expected usage and pricing remains hidden until routine reporting or billing, unintended spend can continue long after the decision or fault that caused it.
 
 Early detection gives the responsible team time to identify the cause and determine whether the new cost reflects useful demand or an issue requiring action. It also allows the team to limit further spend while preserving capacity and protection that the service still needs.
 
@@ -96,7 +96,7 @@ Cost decisions are reassessed as actual usage, spend, and vendor pricing change.
 
 ### Reasoning
 
-A cost assumption made during design can stop reflecting the service as usage, scale, access patterns, or vendor pricing change. A choice that was proportionate at adoption may therefore become unnecessarily expensive or no longer provide the expected value.
+A cost assumption made during design can stop reflecting the service as usage, scale, access patterns, or vendor pricing change. A choice that matched the original usage and value assumptions may therefore become unnecessarily expensive or stop providing the expected value.
 
 Comparing actual operation and spend with the original basis for the decision makes that change visible. It identifies resources and technology choices that should be resized, replaced, or otherwise reconsidered before their cost becomes accepted as fixed.
 

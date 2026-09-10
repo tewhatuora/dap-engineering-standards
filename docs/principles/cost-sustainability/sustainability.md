@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Sustainability
@@ -27,7 +27,7 @@ Deployment models that share capacity or adjust it with demand can use infrastru
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 
-## Carbon-Aware Deployment
+## Lower Carbon Deployment
 
 ### Summary
 
@@ -35,7 +35,7 @@ When multiple locations or providers meet the applicable requirements equally, t
 
 ### Reasoning
 
-The carbon intensity of the energy that runs a workload varies by location and provider, so equivalent deployments can have different environmental effects. This difference provides a useful basis for selection only after technical, legal, data residency, and commercial requirements have established that the options are otherwise suitable.
+The carbon intensity of the energy that runs a workload varies by location and provider, so equivalent deployments can have different environmental effects. This difference provides a basis for selection only after the options meet the workload's technical, legal, data residency, and commercial requirements.
 
 Comparable information about energy sources and operational emissions allows the remaining choices to be assessed on the same basis. Preferring the lower-carbon option then reduces environmental impact without weakening requirements that the workload must meet.
 
@@ -43,17 +43,17 @@ Comparable information about energy sources and operational emissions allows the
 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 
-## Proportionate Data Storage
+## Data Storage Aligned with Purpose
 
 ### Summary
 
-Data storage remains proportionate to its purpose and access pattern through bounded retention, necessary copies, and appropriate storage tiers.
+Data storage is limited to the retention period, copies, and performance its purpose and access pattern require.
 
 ### Reasoning
 
 Data retained beyond its purpose continues to consume storage and the resources needed to secure, back up, and operate it. Defined deletion or archival points bound that consumption, while limiting copies prevents the same data from creating repeated cost and environmental impact without distinct value.
 
-Storage designed for frequent or rapid access can consume more resources than infrequently used data requires. Moving data to a tier suited to its access pattern preserves its continuing purpose while avoiding the resource use of performance that provides no benefit.
+Storage designed for frequent or rapid access can consume more resources than infrequently used data requires. Moving data to a tier whose performance matches its access pattern preserves its continuing purpose while avoiding resource use that provides no benefit.
 
 ### Implemented By These Standards
 
@@ -88,7 +88,7 @@ Sustainability assumptions are reassessed as usage, scale, technology, or provid
 
 Resource consumption and environmental impact change as a service grows and as technology and provider options evolve. An assumption made during design can therefore stop reflecting actual usage or overlook a more efficient option that was not previously available.
 
-A material, sustained increase shows that the service no longer behaves as originally expected. Reassessing the design against current usage and available options prevents the earlier assumption from justifying unnecessary consumption indefinitely.
+A sustained increase that is not explained by increased useful demand shows that the service no longer behaves as originally expected. Reassessing the design against current usage and available options prevents the earlier assumption from justifying unnecessary consumption indefinitely.
 
 ### Implemented By These Standards
 

@@ -1,10 +1,10 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Shared Platform
 
-## Workload-Specific Runtime Selection
+## Runtime Selection by Workload
 
 ### Summary
 
@@ -25,7 +25,7 @@ Making the choice during design shows whether the runtime and location support t
 
 ### Summary
 
-An alternative to the shared platform is adopted only for a genuine unmet requirement and remains in use only while that need persists.
+An alternative to the shared platform is adopted only when the platform cannot meet a specific workload requirement and remains in use only while that limitation persists.
 
 ### Reasoning
 

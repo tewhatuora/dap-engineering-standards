@@ -1,10 +1,10 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
-# Data Quality & Integrity
+# Data Quality and Integrity
 
-## Point-of-Entry Validation
+## Validation at Data Entry
 
 ### Summary
 
@@ -20,7 +20,7 @@ When invalid data cannot be rejected, an explicit flag preserves its status for 
 
 - [API Design](../../standards/architecture-system-design/api-design.md)
 
-## Structural & Referential Integrity
+## Structural and Referential Integrity
 
 ### Summary
 
@@ -38,7 +38,7 @@ Schema and data model changes can also make existing records invalid even when t
 
 - [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
 
-## Duplicate & Conflict Resolution
+## Duplicate and Conflict Resolution
 
 ### Summary
 
@@ -82,7 +82,7 @@ Operational, financial, and clinical decisions depend on being able to explain t
 
 The current value alone does not explain how earlier inputs and transformations produced it. Traceability across those changes allows an engineer or reviewer to reconstruct that history without relying on informal knowledge held by the people involved.
 
-Retaining this information for an appropriate period preserves the evidence needed to investigate an incident, challenge a result, or explain a decision after the original change occurred.
+This history preserves the evidence needed to investigate an incident, challenge a result, or explain a decision after the original change occurred.
 
 ### Implemented By These Standards
 

@@ -1,20 +1,20 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
-# Reliability & Resilience
+# Reliability and Resilience
 
 ## Designing for Failure
 
 ### Summary
 
-Services are designed for component, dependency, and infrastructure failure, with redundancy proportionate to service criticality.
+Services are designed for component, dependency, and infrastructure failure, with redundancy based on outage impact and recovery objectives.
 
 ### Reasoning
 
 Components, dependencies, and infrastructure can fail during normal operation even when the service itself has not changed. Treating these failures as design inputs makes their effect visible before production and allows the service to continue or recover without relying on every part remaining available.
 
-Redundancy removes dependence on a single critical component, but it also adds cost and operational complexity. Matching it to service criticality limits outage impact without imposing the same recovery design on services with different consequences of failure.
+Redundancy removes dependence on a component whose failure would prevent required service outcomes, but it also adds cost and operational complexity. Selecting it from outage impact and recovery objectives avoids imposing the same recovery design on services with different consequences of failure.
 
 ### Implemented By These Standards
 
@@ -97,15 +97,15 @@ Allowing work already in progress to finish reduces these inconsistent outcomes 
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Containerisation](../../standards/platform-infrastructure/containerisation.md)
 
-## Recovery Objectives & Testing
+## Recovery Objectives and Testing
 
 ### Summary
 
-Services define recovery point and recovery time objectives and regularly test recovery under realistic conditions.
+Services define recovery point and recovery time objectives and test recovery at defined intervals, after changes to the recovery path, and under conditions representative of the recovery strategy.
 
 ### Reasoning
 
-Recovery objectives make the acceptable limits for data loss and downtime explicit. These limits provide measurable targets for selecting backup, restoration, and continuity approaches that are proportionate to the service and the impact of its loss.
+Recovery objectives make the acceptable limits for data loss and downtime explicit. These limits provide measurable targets for selecting backup, restoration, and continuity approaches that meet the objectives without adding recovery capability they do not require.
 
 Recovery depends on infrastructure, data, dependencies, and procedures working together, so the presence of each part does not demonstrate that the complete path will succeed. Testing under realistic conditions shows whether the service can meet its objectives before a real failure requires recovery.
 

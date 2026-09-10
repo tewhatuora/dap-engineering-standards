@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # Data Privacy
@@ -24,7 +24,7 @@ Limiting data at the point of collection prevents unnecessary exposure from spre
 - [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 
-## Privacy-Protective Defaults
+## Privacy by Default
 
 ### Summary
 
@@ -42,7 +42,7 @@ A protective starting point makes any reduction in privacy a visible decision th
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 
-## Least-Privilege Access
+## Least Privilege Access
 
 ### Summary
 
@@ -62,7 +62,7 @@ Permissions that remain after their legitimate purpose ends preserve access with
 - [Identity & Access Management](../../standards/security-identity/identity-access-management.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 
-## Synthetic & De-Identified Data
+## Synthetic and De-Identified Data
 
 ### Summary
 
@@ -80,7 +80,7 @@ Using a substitute also reduces the number of systems, tools, and people that ha
 - [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 
-## Data Retention & Deletion
+## Data Retention and Deletion
 
 ### Summary
 
