@@ -35,6 +35,7 @@ A shared platform provides one place to query and correlate the evidence needed 
 ### Implemented By These Standards
 
 - [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
+- [Managed Services](../../standards/platform-infrastructure/managed-services.md)
 
 ## Consistent Instrumentation
 
@@ -69,7 +70,6 @@ Together these signals allow engineers to diagnose behaviour without relying on 
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
-- [Managed Services](../../standards/platform-infrastructure/managed-services.md)
 - [Distributed Tracing](../../standards/operations-observability/distributed-tracing.md)
 - [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
 - [Structured Logging](../../standards/operations-observability/structured-logging.md)

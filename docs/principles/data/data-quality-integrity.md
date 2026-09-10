@@ -30,7 +30,7 @@ Structural and referential integrity are enforced by the data store where suppor
 
 Schema constraints define which data structures and relationships are valid. Enforcing them in the data store applies the same rules to every write, regardless of which application path produced it, and prevents invalid state from becoming established.
 
-Where the store cannot enforce a constraint, the service responsible for writing the data must provide equivalent protection. Keeping that responsibility with the owner prevents each caller from applying a different interpretation of valid state.
+Where the store cannot enforce a constraint, equivalent protection in the service responsible for writing the data prevents each caller from applying a different interpretation of valid state.
 
 Schema and data model changes can also make existing records invalid even when they satisfied the earlier rules. Finding and resolving those conflicts before the change prevents the migration itself from introducing a structural or referential integrity failure.
 

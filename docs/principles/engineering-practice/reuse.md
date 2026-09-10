@@ -18,9 +18,17 @@ Internal reuse avoids creating another implementation and support burden. When n
 
 ### Implemented By These Standards
 
+- [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
+- [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
+- [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
+- [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
+- [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 
 ## Reusable Interfaces
 
@@ -43,3 +51,4 @@ Stability and versioning allow providers to improve the implementation without u
 - [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
 - [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)

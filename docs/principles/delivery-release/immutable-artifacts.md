@@ -18,6 +18,7 @@ An immutable identity guarantees that a reference continues to identify the cont
 
 ### Implemented By These Standards
 
+- [Configuration Management](../../standards/code-implementation/configuration-management.md)
 - [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Containerisation](../../standards/platform-infrastructure/containerisation.md)

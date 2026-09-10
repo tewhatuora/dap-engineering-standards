@@ -84,6 +84,7 @@ Direct intervention may still be necessary to restore service quickly. Recording
 
 ### Implemented By These Standards
 
+- [Branching Strategy](../../standards/code-implementation/branching-strategy.md)
 - [Configuration Management](../../standards/code-implementation/configuration-management.md)
 - [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
 - [Code Review](../../standards/code-implementation/code-review.md)

@@ -34,7 +34,7 @@ The most privacy-protective settings apply by default, and reducing that protect
 
 Settings often remain unchanged throughout use, so their initial state determines how personal or health data is handled in many cases. A less protective starting point can therefore expose data because no one changed a setting, rather than because someone decided that the exposure was justified.
 
-A protective starting point makes any reduction in privacy a visible decision. The person making the change must consider whether wider collection, use, or access is needed and accept the resulting risk.
+A protective starting point makes any reduction in privacy a visible decision that requires consideration of whether wider collection, use, or access justifies the resulting risk.
 
 ### Implemented By These Standards
 

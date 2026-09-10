@@ -24,7 +24,6 @@ Denying access by default prevents permissions from being granted through omissi
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
 - [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
-- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Containerisation](../../standards/platform-infrastructure/containerisation.md)
 - [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)

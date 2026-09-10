@@ -18,6 +18,7 @@ Making the choice during design shows whether the runtime and location support t
 
 ### Implemented By These Standards
 
+- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 
 ## Justified Platform Alternatives

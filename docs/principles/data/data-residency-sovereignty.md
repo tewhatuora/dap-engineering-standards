@@ -57,6 +57,7 @@ Identifying each flow and constraining it to an approved path makes the destinat
 
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
+- [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
 
 ## Backup & Recovery Jurisdictions
 

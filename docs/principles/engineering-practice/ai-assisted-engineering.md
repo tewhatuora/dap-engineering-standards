@@ -162,7 +162,7 @@ Confidential material is shared with an AI tool only when the tool's handling te
 
 Submitting confidential material places it under the provider's storage, access, and reuse terms. If those terms permit retention or secondary use, the submission can expose the material beyond its authorised context even when the generated output does not contain it.
 
-Confidentiality cannot be restored by removing the material from a later prompt because retention, access, or reuse may already have occurred. The handling terms must therefore preserve confidentiality at the point the material is submitted.
+Removing the material from a later prompt cannot restore confidentiality because retention, access, or reuse may already have occurred.
 
 ### Implemented By These Standards
 

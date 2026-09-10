@@ -68,17 +68,17 @@ Not all work has the same importance, and one consumer can otherwise use capacit
 
 ### Summary
 
-Services retain reduced functionality during failure or overload when they cannot sustain full functionality.
+During failure or overload, services preserve the functionality they can continue to support safely.
 
 ### Reasoning
 
 A failure or overload may affect one capability without making every service outcome unavailable. Separating non-critical functionality allows the service to preserve the outcomes it can still support rather than turning a partial failure into a complete outage.
 
-Reduced functionality gives users a predictable result while the affected capability recovers and limits the number of workflows disrupted by the failure. The degraded behaviour must remain within what the service can support safely under the impaired condition.
+Reduced functionality gives users a predictable result while the affected capability recovers and limits the number of workflows disrupted by the failure. This benefit depends on the degraded behaviour remaining within what the service can support safely under the impaired condition.
 
 ### Implemented By These Standards
 
-- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
+- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 
 ## Graceful Service Termination
 
