@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # Reliability & Resilience
@@ -8,13 +8,13 @@ last_edited: 2026-09-09
 
 ### Summary
 
-Services are designed on the assumption that components, dependencies, and infrastructure will fail, with redundancy proportionate to service criticality.
+Services are designed for component, dependency, and infrastructure failure, with redundancy proportionate to service criticality.
 
 ### Reasoning
 
-Component and dependency failures are normal operating conditions. Treating them as design inputs exposes failure modes before production and prevents a critical component from becoming a single point of failure.
+Components, dependencies, and infrastructure can fail during normal operation even when the service itself has not changed. Treating these failures as design inputs makes their effect visible before production and allows the service to continue or recover without relying on every part remaining available.
 
-Redundancy matched to service criticality limits outage impact without imposing the same recovery design on every service.
+Redundancy removes dependence on a single critical component, but it also adds cost and operational complexity. Matching it to service criticality limits outage impact without imposing the same recovery design on services with different consequences of failure.
 
 ### Implemented By These Standards
 
@@ -29,13 +29,13 @@ Redundancy matched to service criticality limits outage impact without imposing 
 
 ### Summary
 
-Dependency calls are bounded by timeouts and limited retries, and dependency failures are contained before they cascade.
+Dependency calls use timeouts and limited retries, and dependency failures are contained before they affect the wider service.
 
 ### Reasoning
 
-An unbounded wait consumes resources after a dependency has stopped responding. Timeouts release those resources, while bounded retries with backoff allow transient failures to recover without increasing pressure on an impaired dependency.
+An unbounded wait continues consuming service resources after a dependency has stopped responding, reducing the capacity available for other work. A timeout releases those resources, while limited retries with backoff allow a transient failure to recover without continuously adding pressure to an impaired dependency.
 
-Containing a dependency failure preserves functionality that does not rely on it and prevents one failure from exhausting the capacity of connected services.
+Without containment, waiting work and repeated calls can exhaust the capacity of connected services and spread the failure beyond the original dependency. Isolating the affected interaction preserves functionality that does not rely on it and gives the dependency time to recover.
 
 ### Implemented By These Standards
 
@@ -48,13 +48,13 @@ Containing a dependency failure preserves functionality that does not rely on it
 
 ### Summary
 
-Services protect their capacity from excess demand through demand controls, prioritisation, and resource isolation.
+Services protect their capacity from excess demand using demand controls, prioritisation, and resource isolation.
 
 ### Reasoning
 
-Uncontrolled demand can exhaust shared resources and turn local saturation into a full outage. Bounding or shedding work keeps service capacity available when demand exceeds what the service can process.
+When demand exceeds the work a service can process, queued requests and resource use can continue growing until the service can no longer respond. Bounding or shedding work preserves enough capacity for the service to remain available instead of allowing overload to become a full outage.
 
-Prioritising critical requests and isolating consumers prevents lower-priority or disproportionate demand from displacing critical functionality.
+Not all work has the same importance, and one consumer can otherwise use capacity needed by others. Prioritisation and resource isolation preserve critical functionality and prevent lower-priority or disproportionate demand from consuming the whole service.
 
 ### Implemented By These Standards
 
@@ -68,11 +68,13 @@ Prioritising critical requests and isolating consumers prevents lower-priority o
 
 ### Summary
 
-Services retain reduced functionality during failure or overload when full functionality cannot be sustained.
+Services retain reduced functionality during failure or overload when they cannot sustain full functionality.
 
 ### Reasoning
 
-Independent failure of non-critical functionality preserves the service outcomes that remain supportable. This limits the user impact of a partial failure and avoids turning the loss of one capability into loss of the whole service.
+A failure or overload may affect one capability without making every service outcome unavailable. Separating non-critical functionality allows the service to preserve the outcomes it can still support rather than turning a partial failure into a complete outage.
+
+Reduced functionality gives users a predictable result while the affected capability recovers and limits the number of workflows disrupted by the failure. The degraded behaviour must remain within what the service can support safely under the impaired condition.
 
 ### Implemented By These Standards
 
@@ -82,13 +84,13 @@ Independent failure of non-critical functionality preserves the service outcomes
 
 ### Summary
 
-A terminating service instance completes its in-flight work and shuts down within a bounded period.
+A terminating service instance completes work already in progress and shuts down within a bounded period.
 
 ### Reasoning
 
-Termination occurs during routine deployment, scaling, and recovery as well as during failure. Stopping an instance while it is still processing work can leave requests incomplete, duplicate side effects when work is retried, or abandon resources without orderly release.
+Service instances terminate during routine deployment, scaling, and recovery as well as during failure. Stopping an instance while it is processing work can leave requests incomplete, repeat side effects when the work is retried, or abandon resources without an orderly release.
 
-A bounded shutdown period allows current work to finish without making termination wait indefinitely.
+Allowing work already in progress to finish reduces these inconsistent outcomes and lets the service stop accepting new work cleanly. A bounded shutdown period provides that opportunity without allowing one stalled task to prevent termination indefinitely.
 
 ### Implemented By These Standards
 
@@ -99,13 +101,13 @@ A bounded shutdown period allows current work to finish without making terminati
 
 ### Summary
 
-Services define recovery point and recovery time objectives and periodically test recovery capability under realistic conditions.
+Services define recovery point and recovery time objectives and regularly test recovery under realistic conditions.
 
 ### Reasoning
 
-Recovery objectives make the acceptable limits for data loss and downtime explicit. They provide measurable targets for selecting recovery strategies and assessing whether those strategies are proportionate to the service.
+Recovery objectives make the acceptable limits for data loss and downtime explicit. These limits provide measurable targets for selecting backup, restoration, and continuity approaches that are proportionate to the service and the impact of its loss.
 
-Recovery capability depends on infrastructure, data, dependencies, and procedures working together. Periodic testing under representative conditions demonstrates whether the complete recovery path meets its objectives before a real failure requires it.
+Recovery depends on infrastructure, data, dependencies, and procedures working together, so the presence of each part does not demonstrate that the complete path will succeed. Testing under realistic conditions shows whether the service can meet its objectives before a real failure requires recovery.
 
 ### Implemented By These Standards
 
@@ -117,13 +119,13 @@ Recovery capability depends on infrastructure, data, dependencies, and procedure
 
 ### Summary
 
-Operational recovery procedures are tested in representative conditions before they are relied upon.
+Operational recovery procedures are tested under representative conditions before responders rely on them.
 
 ### Reasoning
 
-A documented procedure can be incomplete or inaccurate even when its intended recovery path is sound. Testing it in representative conditions verifies that its steps, prerequisites, and resolution outcome can be followed before an incident depends on them.
+A documented procedure can contain missing steps, incorrect assumptions, or prerequisites that are unavailable during an incident even when the intended recovery approach is sound. Testing under representative conditions shows whether responders can follow the procedure and reach the expected outcome with the systems and access available to them.
 
-Correcting a discovered gap promptly keeps the documented procedure aligned with the service rather than preserving a known failure for the next exercise or incident.
+Services and their dependencies change, so a procedure that worked previously can become inaccurate. Correcting gaps found during testing keeps the procedure aligned with the service and prevents a known problem from remaining until the next exercise or incident.
 
 ### Implemented By These Standards
 
@@ -138,7 +140,9 @@ Known failure modes have defined recovery paths.
 
 ### Reasoning
 
-A defined recovery path reduces delay and inconsistency when a known failure occurs. It gives responders a prepared response instead of requiring them to reconstruct one during an incident.
+A known failure without a prepared recovery path requires responders to determine the response while the service is already impaired. This delays recovery and allows different responders to take inconsistent actions under the same condition.
+
+A defined path records the expected response, the state it should restore, and the conditions that show whether recovery succeeded. Responders can act from an established basis while still applying judgement when the incident differs from the known failure.
 
 ### Implemented By These Standards
 
@@ -150,11 +154,13 @@ A defined recovery path reduces delay and inconsistency when a known failure occ
 
 ### Summary
 
-Operational recovery procedures are discoverable at the point of response and accessible to the responders who need them.
+Operational recovery procedures are easy to find during an incident and accessible to the responders who need them.
 
 ### Reasoning
 
-A recovery procedure provides no timely path to action when responders cannot find or access it during an incident. Linking a known failure signal to its procedure reduces search time, while access independent of the source repository avoids making repository permissions a prerequisite for response.
+A recovery procedure cannot support a timely response when responders do not know it exists or cannot access it during an incident. Time spent searching for instructions or resolving permissions delays action while the service remains impaired.
+
+Connecting a known failure signal to its procedure gives responders a direct path from detection to recovery. Access that does not depend on the source repository also prevents repository permissions or availability from becoming a prerequisite for operational response.
 
 ### Implemented By These Standards
 

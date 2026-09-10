@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # Immutable Artifacts
@@ -8,13 +8,13 @@ last_edited: 2026-09-09
 
 ### Summary
 
-A built artifact has a unique, immutable identity, and a change to it produces a new artifact.
+Every built artifact has a unique, immutable identity, and any change produces a new artifact.
 
 ### Reasoning
 
-Changing an artifact after it has been built breaks the relationship between its identifier, source, verification result, and deployed content. An immutable identity allows a consumer to determine exactly which build it is using and to rely on that reference continuing to identify the same content.
+Changing an artifact after it has been built breaks the relationship between its identity, source, verification results, and deployed content. The same reference can then describe different content depending on when or where it is used, making failures and deployments difficult to reproduce.
 
-Producing a new artifact for every change preserves the earlier artifact and keeps each version traceable to the build that created it.
+An immutable identity guarantees that a reference continues to identify the content that was originally built and verified. Producing a new artifact for every change preserves the earlier version and keeps both versions traceable to the builds that created them.
 
 ### Implemented By These Standards
 
@@ -27,11 +27,13 @@ Producing a new artifact for every change preserves the earlier artifact and kee
 
 ### Summary
 
-An artifact verified in one environment is promoted unchanged through every later environment.
+An artifact verified in one environment is promoted unchanged through all later environments.
 
 ### Reasoning
 
-Rebuilding or modifying an artifact between environments means production receives content that did not pass the earlier verification. Promoting the same artifact preserves the evidence gathered about it and makes differences between environments attributable to configuration or runtime conditions rather than an untracked rebuild.
+Rebuilding or modifying an artifact between environments creates new content that did not pass the earlier verification, even when it was produced from the same source. Production can then receive a difference that the preceding environments never exercised.
+
+Promoting the same artifact preserves the evidence gathered about its behaviour and contents. It also makes differences between environments attributable to configuration or runtime conditions rather than to an untracked change in the artifact itself.
 
 ### Implemented By These Standards
 

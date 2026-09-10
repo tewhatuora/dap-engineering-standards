@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # Version Control
@@ -8,13 +8,13 @@ last_edited: 2026-09-09
 
 ### Summary
 
-A repository's branches represent bounded changes from identifiable code states, expose their purpose, and remain independent of deployment environments.
+Branches have a clear purpose and known starting point, contain a bounded change, and do not represent deployment environments.
 
 ### Reasoning
 
-A branch whose purpose and origin are clear keeps its changes traceable throughout review, release, and urgent correction. Limiting a branch to a bounded purpose prevents unrelated changes from obscuring what it represents and where its changes must propagate.
+A clear purpose and known starting point make a branch easier to review and trace through release or an urgent correction. Limiting it to one bounded change prevents unrelated work from obscuring what the branch represents and which changes must be merged, reverted, or applied elsewhere.
 
-Using branches to represent deployment environments couples code integration to environment state and allows branches to diverge. Keeping environment behaviour independent of the branching model preserves one coherent history of code changes across environments.
+Using branches to represent deployment environments ties code integration to the current state of each environment and allows their histories to diverge. Keeping deployment state separate preserves one coherent code history, so the same reviewed change can move between environments without being recreated through branch-specific merges.
 
 ### Implemented By These Standards
 

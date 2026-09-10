@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # Domain-Aligned Services
@@ -8,13 +8,13 @@ last_edited: 2026-09-09
 
 ### Summary
 
-A service is scoped to one cohesive business domain or subdomain whose responsibility is clear from its boundary.
+A service is scoped to one cohesive business domain or subdomain, with its responsibility clear from its boundary.
 
 ### Reasoning
 
-A boundary based on business responsibility keeps related behaviour and data together. A boundary based on a technical layer or organisational structure separates decisions that change together and obscures what the service is responsible for.
+A boundary based on business responsibility keeps related behaviour, rules, and data within the same service. Changes to a domain concept can then be made where that concept is owned without coordinating across services divided by technical layer or organisational structure.
 
-A clear domain boundary allows a service to evolve without requiring knowledge of its internal implementation to understand its purpose.
+A boundary that separates decisions which change together creates unnecessary dependencies and obscures what each service is responsible for. A clear domain boundary makes the service's purpose understandable without knowledge of its implementation and allows that implementation to evolve within a stable area of responsibility.
 
 ### Implemented By These Standards
 
@@ -28,9 +28,9 @@ A service is deployable and releasable independently of other services by defaul
 
 ### Reasoning
 
-Requiring coordinated deployment or release couples a service's change cadence and recovery options to other services. Independent change allows each service to evolve, validate, release, and recover according to its own needs while preserving its published contracts.
+Requiring several services to be deployed or released together couples their change cadence and makes each release depend on all participants being ready. It also limits recovery because restoring one service may require coordinated changes to others.
 
-Where coordination cannot be avoided, treating it as an explicit exception makes the dependency and its fallback visible rather than allowing simultaneous change to become routine.
+Independent change allows each service to evolve, validate, release, and recover according to its own needs while preserving its published contracts. Where coordination cannot be avoided, treating it as an explicit exception makes the dependency and recovery approach visible instead of allowing simultaneous change to become routine.
 
 ### Implemented By These Standards
 
@@ -41,13 +41,13 @@ Where coordination cannot be avoided, treating it as an explicit exception makes
 
 ### Summary
 
-Each service exclusively owns its data, which other services access only through its published interfaces.
+Each service exclusively owns its data, and other services access that data only through published interfaces.
 
 ### Reasoning
 
-Direct access to another service's data bypasses its rules and couples consumers to its storage model. Exclusive ownership keeps validation, consistency, and schema evolution within the service responsible for that data.
+Direct access to another service's data bypasses the rules that the owning service applies and couples consumers to its storage model. A consumer can then depend on internal structures or make changes that leave the data inconsistent with the owner's business rules.
 
-Published interfaces allow the owning service to change its implementation while preserving the contract on which consumers depend.
+Exclusive ownership keeps validation, consistency, and schema evolution with the service responsible for the data. Published interfaces give consumers a supported contract while allowing the owner to change its internal implementation without coordinating those changes with every consumer.
 
 ### Implemented By These Standards
 
@@ -58,13 +58,13 @@ Published interfaces allow the owning service to change its implementation while
 
 ### Summary
 
-Service granularity follows domain cohesion and is reconsidered when one service spans separate domains or several services fragment one domain without a distinct need.
+Service granularity follows domain cohesion and is reconsidered when one service spans separate domains or several services divide one domain without a distinct need.
 
 ### Reasoning
 
-A service divided more finely than its domain creates coordination and operational overhead without establishing an independent responsibility. A service spanning unrelated domains couples changes and scaling decisions that do not need to move together.
+A domain divided across too many services requires coordination for changes that belong to one business responsibility. This adds interface, deployment, and operational overhead without creating boundaries that can evolve independently.
 
-Reassessing boundaries when either condition appears keeps service granularity proportionate to the domain rather than to an arbitrary preferred size.
+A service that spans unrelated domains creates the opposite problem by coupling changes and scaling decisions that do not need to move together. Reconsidering both conditions keeps granularity aligned with domain responsibilities instead of an arbitrary preferred service size.
 
 ### Implemented By These Standards
 
@@ -74,13 +74,13 @@ Reassessing boundaries when either condition appears keeps service granularity p
 
 ### Summary
 
-A core business rule has one authoritative implementation that other services reuse through its owning service or a shared component.
+A core business rule has one authoritative implementation that other services use through its owning service or a shared component.
 
 ### Reasoning
 
-Independent implementations of the same business rule can produce different outcomes as the rule changes. A single authoritative implementation keeps the rule consistent and establishes where a change to its behaviour belongs.
+Separate implementations of the same business rule can interpret it differently and drift further apart as the rule changes. The same input can then produce different outcomes depending on which service applies the rule.
 
-Reuse through a published interface or shared component allows multiple services to apply the rule without maintaining separate versions of it.
+One authoritative implementation keeps the rule consistent and establishes where changes to its behaviour belong. Access through an owning service or shared component allows other services to apply the rule without maintaining separate versions of its logic.
 
 ### Implemented By These Standards
 

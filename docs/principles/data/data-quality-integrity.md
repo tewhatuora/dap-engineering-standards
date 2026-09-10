@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # Data Quality & Integrity
@@ -8,11 +8,13 @@ last_edited: 2026-09-09
 
 ### Summary
 
-Data is validated as close to its point of entry as possible, and invalid data is rejected or explicitly flagged.
+Data is validated as close as possible to where it enters a system, with invalid data rejected or explicitly flagged.
 
 ### Reasoning
 
-Validation at the point of entry prevents incorrect, incomplete, or malformed data from propagating into downstream systems. Explicitly flagging invalid data preserves its status for downstream handling. Silent acceptance or correction conceals the failure and can change the data's meaning without the knowledge of its producer or consumers.
+Invalid data becomes harder to identify and correct after it has been stored, transformed, or passed to other systems. Validation near the point of entry stops incorrect, incomplete, or malformed data before downstream processes begin to treat it as reliable.
+
+When invalid data cannot be rejected, an explicit flag preserves its status for later handling and prevents consumers from mistaking it for a valid value. Silent acceptance or correction conceals the original problem and can change the data's meaning without the knowledge of its producer or consumers.
 
 ### Implemented By These Standards
 
@@ -22,13 +24,15 @@ Validation at the point of entry prevents incorrect, incomplete, or malformed da
 
 ### Summary
 
-Structural and referential integrity is enforced at the data layer where the data store supports it, and by the responsible service where it does not.
+Structural and referential integrity are enforced by the data store where supported and by the responsible service where they are not.
 
 ### Reasoning
 
-Schema constraints define which stored states are valid. Enforcing them in the data store applies them consistently to every write. Where the store cannot enforce a constraint, equivalent protection in the service responsible for writing the data prevents structurally invalid or inconsistent data.
+Schema constraints define which data structures and relationships are valid. Enforcing them in the data store applies the same rules to every write, regardless of which application path produced it, and prevents invalid state from becoming established.
 
-Schema and data model changes can invalidate records that previously satisfied their constraints. Identifying and resolving these conflicts before applying a change prevents the change itself from introducing a structural or referential integrity failure.
+Where the store cannot enforce a constraint, the service responsible for writing the data must provide equivalent protection. Keeping that responsibility with the owner prevents each caller from applying a different interpretation of valid state.
+
+Schema and data model changes can also make existing records invalid even when they satisfied the earlier rules. Finding and resolving those conflicts before the change prevents the migration itself from introducing a structural or referential integrity failure.
 
 ### Implemented By These Standards
 
@@ -38,11 +42,13 @@ Schema and data model changes can invalidate records that previously satisfied t
 
 ### Summary
 
-Uniqueness constraints prevent duplicate representations, and defined resolution rules reconcile records that conflict.
+Uniqueness constraints prevent duplicate representations, while defined resolution rules reconcile conflicting records.
 
 ### Reasoning
 
-Integrated systems can represent the same real-world entity in multiple records, allowing consumers to receive contradictory values. Uniqueness constraints and defined matching or conflict-resolution rules identify the authoritative representation and prevent unresolved conflicts from persisting.
+Integrated systems can create several records for the same real-world entity or update equivalent records independently. Consumers can then receive contradictory values without knowing which record should be treated as authoritative.
+
+Uniqueness constraints prevent duplicates where identity can be enforced directly. Where records still conflict, defined matching and resolution rules provide a consistent way to select or produce the authoritative representation instead of leaving the outcome to each consumer.
 
 ### Implemented By These Standards
 
@@ -52,11 +58,13 @@ Integrated systems can represent the same real-world entity in multiple records,
 
 ### Summary
 
-Validation, constraint, and data quality rules are verified through automated tests.
+Automated tests verify validation, constraint, and data quality rules.
 
 ### Reasoning
 
-These rules define which data states are accepted and rejected. Automated tests make their verification repeatable and expose regressions when a rule changes. Testing with representative data verifies that a rule continues to distinguish valid and invalid data across the conditions it is expected to handle.
+Validation, constraint, and quality rules determine which data enters the system and which states are allowed to remain. An incorrect change to a rule can reject valid data, admit invalid data, or alter how existing records are interpreted.
+
+Automated tests make verification repeatable and expose regressions whenever the rule or related code changes. Representative test data shows whether the rule continues to distinguish valid and invalid states across the conditions it is expected to handle.
 
 ### Implemented By These Standards
 
@@ -66,13 +74,15 @@ These rules define which data states are accepted and rejected. Automated tests 
 
 ### Summary
 
-A change to decision-informing data remains traceable to its source, timing, and responsible actor or process.
+A change to data used for decisions remains traceable to its source, time, and responsible actor or process.
 
 ### Reasoning
 
-Operational, financial, and clinical decisions depend on being able to explain the data that informed them. Recording a change's source, time, and responsible actor or process establishes who or what changed the data and when.
+Operational, financial, and clinical decisions depend on being able to explain the data that informed them. Recording the source, time, and responsible actor or process establishes where a value came from and who or what changed it.
 
-Tracing the transformations between a data item's origin and current state explains how its value was derived without relying on informal knowledge. Retaining this information for an appropriate period preserves the evidence needed for audit and incident investigation.
+The current value alone does not explain how earlier inputs and transformations produced it. Traceability across those changes allows an engineer or reviewer to reconstruct that history without relying on informal knowledge held by the people involved.
+
+Retaining this information for an appropriate period preserves the evidence needed to investigate an incident, challenge a result, or explain a decision after the original change occurred.
 
 ### Implemented By These Standards
 

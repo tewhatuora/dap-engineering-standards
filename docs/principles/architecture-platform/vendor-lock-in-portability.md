@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # Vendor Lock-in & Portability
@@ -8,13 +8,13 @@ last_edited: 2026-09-09
 
 ### Summary
 
-Lock-in is identified and weighed during technology selection, accepted only where a genuine benefit justifies it, and reassessed when the basis for that decision changes.
+Lock-in is assessed during technology selection, accepted only when a genuine benefit justifies it, and reassessed when that basis changes.
 
 ### Reasoning
 
-Lock-in can increase the cost, time, and disruption involved in changing a technology or provider. Evaluating it before adoption establishes whether a capability's benefit outweighs the resulting loss of choice and replacement effort while alternatives remain available. Defaults and familiarity do not establish that benefit.
+Lock-in can increase the cost, time, and disruption involved in replacing a technology or provider. Assessing it before adoption makes that loss of choice visible while alternatives remain available and allows the expected benefit to be weighed against the future replacement effort.
 
-A benefit that once justified lock-in can diminish as alternatives improve or a vendor's commercial terms and ability to provide the capability change. Reassessment identifies when the original trade-off no longer supports continued coupling.
+Defaults and familiarity do not by themselves establish a benefit worth that cost. Reassessment is also necessary because alternatives, commercial terms, and the provider's ability to deliver the capability can change, leaving the original trade-off no longer justified.
 
 ### Implemented By These Standards
 
@@ -25,11 +25,13 @@ A benefit that once justified lock-in can diminish as alternatives improve or a 
 
 ### Summary
 
-The exit path for a costly-to-reverse commitment is assessed before adoption, and the absence of a practical exit is treated as a deliberate risk.
+The exit path for a costly-to-reverse commitment is assessed before adoption, and any lack of a practical exit is treated as a deliberate risk.
 
 ### Reasoning
 
-The cost, time, and disruption of leaving a commitment can determine whether a later change remains practical. Considering the exit path before committing exposes those constraints while other options remain available, and identifies a critical dependency without a practical exit as a deliberate risk to future change.
+The cost, time, and disruption of leaving a commitment can determine whether a later change remains practical, regardless of the technical alternatives available at that time. Once the commitment is established, data migration, replacement work, and service disruption can make an otherwise desirable exit unaffordable.
+
+Assessing the exit path before adoption exposes these constraints while other options remain available. If no practical exit exists, recording that condition as a deliberate risk makes the resulting limit on future change part of the decision.
 
 ### Implemented By These Standards
 
@@ -39,11 +41,13 @@ The cost, time, and disruption of leaving a commitment can determine whether a l
 
 ### Summary
 
-An abstraction shields a system from a vendor-specific dependency where it can do so without adding disproportionate cost or complexity.
+An abstraction shields a system from a vendor-specific dependency when it can do so without adding disproportionate cost or complexity.
 
 ### Reasoning
 
-Concentrating vendor-specific integration behind a defined interface or adapter limits the parts of a system requiring change when a dependency is replaced. The abstraction improves portability only when its implementation and maintenance costs remain proportionate to the lock-in risk it reduces.
+Vendor-specific behaviour spread throughout a system increases the number of components that must change when the dependency is replaced. Concentrating that integration behind a defined interface limits the replacement work and prevents the vendor's model from becoming part of unrelated application logic.
+
+The abstraction itself adds code, maintenance, and constraints, and it may not conceal every meaningful difference between providers. It improves portability only when those costs remain proportionate to the lock-in risk it reduces.
 
 ### Implemented By These Standards
 
@@ -56,11 +60,13 @@ Concentrating vendor-specific integration behind a defined interface or adapter 
 
 ### Summary
 
-Data held by a vendor or platform remains extractable in a usable, non-proprietary format, and that ability is verified periodically.
+Data held by a vendor or platform remains extractable in a usable, non-proprietary format, with that ability verified periodically.
 
 ### Reasoning
 
-Replacing a vendor or platform can make retained data inaccessible when its export depends on a proprietary format or an unavailable mechanism. A usable, non-proprietary export preserves that data independently of the system that holds it, while periodic verification detects a loss of portability before migration requires an export.
+Replacing a vendor or platform is not practical when retained data cannot be extracted or interpreted outside the system that holds it. A proprietary format or unavailable export mechanism can preserve access during normal use while preventing the data from moving when the service needs to leave.
+
+A usable, non-proprietary export keeps the data independent of the current platform. Periodic verification shows that the export remains complete and usable, detecting a loss of portability before a migration depends on it.
 
 ### Implemented By These Standards
 

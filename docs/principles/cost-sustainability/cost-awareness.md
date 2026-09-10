@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # Cost Awareness
@@ -8,13 +8,15 @@ last_edited: 2026-09-09
 
 ### Summary
 
-Design and technology choices compare viable options by total lifecycle cost and delivered value before creating a long-term commitment.
+Design and technology choices compare viable options by lifecycle cost and delivered value before creating a long-term commitment.
 
 ### Reasoning
 
-Design and technology decisions establish recurring costs that can become difficult to change after implementation. Comparing lifecycle cost and value before commitment allows lower-cost alternatives to be assessed, establishes whether a higher recurring cost is justified, and gives cost the same scrutiny as reliability, performance, and security.
+Design and technology decisions establish development, operation, support, and replacement costs that can become difficult to change after implementation. Comparing these costs before commitment shows whether a higher-cost option provides enough value to justify its continuing impact.
 
-Building a capability that an existing solution already provides creates development and maintenance work that may not deliver distinct value. Comparing existing and custom solutions across their full lifecycle establishes whether custom development is justified and prevents upfront price alone from determining the choice.
+An option with a lower initial price may cost more to operate or replace, while a higher initial cost may reduce work elsewhere. Considering the full lifecycle gives cost the same attention as reliability, performance, and security instead of allowing the purchase or build cost alone to determine the choice.
+
+Building a capability that an existing solution already provides creates development and maintenance work without necessarily delivering distinct value. Comparing existing and custom solutions on the same basis establishes whether custom development is justified.
 
 ### Implemented By These Standards
 
@@ -25,15 +27,15 @@ Building a capability that an existing solution already provides creates develop
 
 ### Summary
 
-Service spend and resource use remain proportionate to its demand, risk, and value without creating disproportionate risk to reliability, performance, or security.
+A service's spend and resource use remain proportionate to its demand, risk, and value without creating unacceptable reliability, performance, or security risk.
 
 ### Reasoning
 
-The capacity, resilience, and redundancy a service requires depend on its criticality and recovery objectives. Provisioning beyond those needs creates recurring cost without a corresponding reduction in risk, while reducing them further can remove capacity or protection that the service depends on. Assessing cost against risk and value keeps both spend and protection proportionate.
+The capacity, resilience, and redundancy a service requires depend on its demand, criticality, and recovery objectives. Provisioning beyond those needs creates recurring cost without a corresponding reduction in risk, while cutting further can remove capacity or protection on which the service depends.
 
-Idle, over-provisioned, or unnecessarily retained resources incur cost without delivering corresponding value. Sizing resources to actual demand and removing them when their purpose ends keeps compute and storage consumption aligned with the workload.
+Assessing spend against service value and risk prevents cost reduction from being treated as an objective in isolation. It keeps necessary protection in place while making excess capacity, idle resources, and retained storage visible as costs that no longer deliver value.
 
-Usage-based engineering tooling can incur cost with every request or operation. Scoping its use and selecting capabilities according to the task keeps that spend proportionate while preserving higher-cost options where their additional capability has value.
+Usage-based engineering tools add another form of variable spend because each request or operation can carry a cost. Matching the selected capability and its use to the task preserves higher-cost options where their additional value is needed without applying that cost to every activity.
 
 ### Implemented By These Standards
 
@@ -57,11 +59,13 @@ Usage-based engineering tooling can incur cost with every request or operation. 
 
 ### Summary
 
-A service is designed from the outset so its cost can be measured and attributed to its responsible team.
+A service is designed so its cost can be measured and attributed to the team responsible for it.
 
 ### Reasoning
 
-Aggregate spend does not show which service produced a cost or which team can act on it. Designing for measurement from the outset attributes spend to the decisions that control it, reveals changes in cost, and allows the responsible team to assess whether the cost remains justified by the service's usage and value.
+Aggregate spend does not show which service produced a cost, which change affected it, or who can act on it. Without that detail, teams cannot distinguish expected growth from waste or relate spending to the service behaviour that caused it.
+
+Designing for measurement and attribution connects spend to the engineering decisions that control it. The responsible team can then identify changes in cost and assess whether the service's usage and value continue to justify them.
 
 ### Implemented By These Standards
 
@@ -72,11 +76,13 @@ Aggregate spend does not show which service produced a cost or which team can ac
 
 ### Summary
 
-A material or unexpected change in a service's spend is brought to its responsible team's attention early enough to limit further unintended cost.
+The responsible team is alerted to a material or unexpected change in service spend early enough to limit further unintended cost.
 
 ### Reasoning
 
-Service cost can change rapidly through demand, configuration, architecture, or provider pricing changes. Detecting a material or unexpected change when it emerges allows the responsible team to identify its cause and assess whether the resulting spend remains proportionate to the service's usage and value.
+Service cost can change quickly when demand, configuration, architecture, or provider pricing changes. If the increase remains hidden until routine reporting or billing, unintended spend can continue long after the decision or fault that caused it.
+
+Early detection gives the responsible team time to identify the cause and determine whether the new cost reflects useful demand or an issue requiring action. It also allows the team to limit further spend while preserving capacity and protection that the service still needs.
 
 ### Implemented By These Standards
 
@@ -86,11 +92,13 @@ Service cost can change rapidly through demand, configuration, architecture, or 
 
 ### Summary
 
-Cost decisions are reassessed against actual usage, spend, and vendor pricing as these change.
+Cost decisions are reassessed as actual usage, spend, and vendor pricing change.
 
 ### Reasoning
 
-A cost assumption made during design can cease to reflect a service once its usage, scale, access patterns, or vendor pricing change. Comparing actual operation and spend with that assumption identifies resources and technology choices whose cost no longer matches their value.
+A cost assumption made during design can stop reflecting the service as usage, scale, access patterns, or vendor pricing change. A choice that was proportionate at adoption may therefore become unnecessarily expensive or no longer provide the expected value.
+
+Comparing actual operation and spend with the original basis for the decision makes that change visible. It identifies resources and technology choices that should be resized, replaced, or otherwise reconsidered before their cost becomes accepted as fixed.
 
 ### Implemented By These Standards
 

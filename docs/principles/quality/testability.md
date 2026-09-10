@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-10
 ---
 
 # Testability
@@ -8,11 +8,13 @@ last_edited: 2026-09-09
 
 ### Summary
 
-A component exposes the outcome of its behaviour through its defined interface so a test can verify it without inspecting the implementation.
+A component exposes the outcome of its behaviour through its defined interface so tests can verify it without inspecting the implementation.
 
 ### Reasoning
 
-Verifying outcomes through the contract available to a consumer keeps tests independent of implementation details. Outcomes visible only through internal inspection or manual observation prevent reliable automated testing.
+Tests that use the same contract as a consumer verify behaviour that remains meaningful when the implementation changes. They establish what the component does without depending on the internal steps used to produce the outcome.
+
+When an outcome is visible only through internal inspection or manual observation, automated tests must either depend on implementation details or leave the behaviour unverified. Those tests become fragile during refactoring and provide weaker evidence about what a consumer actually experiences.
 
 ### Implemented By These Standards
 
@@ -23,11 +25,13 @@ Verifying outcomes through the contract available to a consumer keeps tests inde
 
 ### Summary
 
-A component's external dependencies, test data, and execution environment can be substituted or controlled for isolated, repeatable verification.
+A component's external dependencies, test data, and execution environment can be controlled or substituted for isolated, repeatable verification.
 
 ### Reasoning
 
-Control over external dependencies, execution conditions, and test data makes failures attributable to the component's behaviour and verification repeatable. Isolation from production avoids exposing production data or affecting live operation, while isolation from shared mutable state prevents tests from changing one another's conditions or outcomes.
+Control over dependencies, test data, and execution conditions gives each test a known starting state. When a test fails, engineers can attribute the result to the behaviour under test instead of first determining whether an external system or earlier test changed its conditions.
+
+Isolation from production prevents verification from exposing production data or affecting live operation. Isolation from shared mutable state also prevents tests from influencing one another, allowing the same verification to produce comparable evidence across repeated runs.
 
 ### Implemented By These Standards
 
@@ -41,11 +45,13 @@ Control over external dependencies, execution conditions, and test data makes fa
 
 ### Summary
 
-A test produces the same result on every execution for the same input, and an intermittent result is treated as a defect.
+A test produces the same result for the same input and conditions, and an intermittent result is treated as a defect.
 
 ### Reasoning
 
-Controlling test inputs and execution conditions makes a result attributable to the behaviour under test. An intermittent result without a corresponding code change weakens that evidence, while working around it preserves the uncertainty.
+A repeatable result links success or failure to the behaviour under test rather than to an uncontrolled change in the test conditions. This allows a new failure to provide evidence that the code or a known dependency has changed.
+
+An intermittent result breaks that link because the same code can appear both valid and invalid. Re-running, ignoring, or otherwise working around the failure preserves the uncertainty and reduces confidence in every result from the test.
 
 ### Implemented By These Standards
 
@@ -57,11 +63,13 @@ Controlling test inputs and execution conditions makes a result attributable to 
 
 ### Summary
 
-New or changed functionality receives automated tests proportionate to its risk, criticality, and complexity.
+New or changed functionality receives automated testing proportionate to its risk, criticality, and complexity.
 
 ### Reasoning
 
-Testing effort aligned with the consequences and difficulty of failure concentrates verification where it provides the most value. Designing functionality for automated verification allows defects to be detected consistently before production; omitting feasible automation leaves a gap in that evidence.
+The value of testing depends on both the likelihood of a defect and the consequence and difficulty of detecting it later. Aligning effort with risk, criticality, and complexity concentrates stronger evidence where a failure would be harder to find or cause greater harm.
+
+Designing functionality for automated verification allows the same behaviour to be checked consistently as the code changes. Where useful automation is feasible but omitted, later changes can remove expected behaviour without producing timely evidence of the regression.
 
 ### Implemented By These Standards
 
@@ -71,11 +79,13 @@ Testing effort aligned with the consequences and difficulty of failure concentra
 
 ### Summary
 
-Performance, security, and accessibility are designed for verification through automated testing, with an explicit verification approach where automation is not feasible.
+Performance, security, and accessibility are designed for automated verification, with an explicit testing approach where automation is not feasible.
 
 ### Reasoning
 
-Functional correctness does not demonstrate that a component meets its performance, security, and accessibility expectations. Automated verification provides repeatable evidence for these characteristics. Where automation is not feasible, a defined approach preserves a consistent basis for evaluation.
+Functional correctness does not show that a component meets its performance, security, or accessibility expectations. These characteristics can fail while the functional outcome remains correct, so they require evidence based on their own requirements.
+
+Automated testing provides repeatable evidence and makes regressions visible as the component changes. Where automation cannot provide suitable evidence, a defined testing approach keeps the evaluation deliberate and repeatable instead of leaving it to informal judgement.
 
 ### Implemented By These Standards
 
