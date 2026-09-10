@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
 # Principles
@@ -18,31 +18,31 @@ Engineering practices make change efficient, repeatable, and accountable.
 
 [Read more](engineering-practice/index.md).
 
-### Delivery & Release
+### Delivery and Release
 
-Delivery preserves verified artifacts and separates deploying a change from releasing it to users.
+Delivery preserves verified artifacts and limits change exposure while keeping deployment separate from release.
 
 [Read more](delivery-release/index.md).
 
-### Architecture & Platform
+### Architecture and Platform
 
-Architecture favours cohesive services, shared capabilities, explicit interfaces, and bounded coupling across instances, services, and providers.
+Architecture and platform decisions keep boundaries, dependencies, and technology commitments explicit so systems can integrate and change independently.
 
 [Read more](architecture-platform/index.md).
 
 ### Quality
 
-Quality is designed into products and services, demonstrated through evidence, and improved through risk and data.
+Quality is designed into products and services throughout their lifecycle and demonstrated through evidence.
 
 [Read more](quality/index.md).
 
-### Reliability & Operations
+### Reliability and Operations
 
-Services anticipate change and failure while remaining diagnosable, scalable, and recoverable.
+Services remain effective and understandable as demand changes and failures occur.
 
 [Read more](reliability-operations/index.md).
 
-### Security & Privacy
+### Security and Privacy
 
 Systems protect their operation and data by limiting access and exposure throughout their lifecycle.
 
@@ -54,8 +54,8 @@ Data remains trustworthy and subject to its jurisdiction requirements throughout
 
 [Read more](data/index.md).
 
-### Cost & Sustainability
+### Cost and Sustainability
 
-A system's economic and environmental impacts remain proportionate to the value it delivers.
+Engineering decisions account for financial and environmental impact throughout service design and operation.
 
 [Read more](cost-sustainability/index.md).

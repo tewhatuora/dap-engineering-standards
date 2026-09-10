@@ -1,31 +1,31 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
-# Reliability & Operations
+# Reliability and Operations
 
 ## Overview
 
-Reliable services remain effective and understandable as demand changes and failures occur. These principles make failure handling, performance and capacity, and operational visibility explicit design concerns that are validated before production conditions expose gaps.
+Reliable services remain effective and understandable as demand changes and failures occur. These principles make service behaviour under load and failure explicit and verifiable before production conditions expose gaps.
 
 Choose a principle below to read its full reasoning.
 
 ## Principles
 
-### Reliability & Resilience
+### Reliability and Resilience
 
-Services anticipate failure and overload, contain their impact, preserve supportable functionality, and maintain tested paths to recovery.
+Services contain failure and overload while preserving supportable functionality and tested recovery paths.
 
 [Read more](reliability-resilience.md).
 
-### Performance & Scalability
+### Performance and Scalability
 
-Services make performance, capacity, and scaling explicit design decisions and validate them against realistic demand as they evolve.
+Services make performance and scaling explicit design decisions validated against realistic demand.
 
 [Read more](performance-scalability.md).
 
 ### Observability
 
-Services build in consistent, correlatable, and proportionate telemetry that explains behaviour, exposes operational impact, and supports incident response.
+Services produce consistent, correlatable telemetry that explains behaviour and supports operational decisions and incident response.
 
 [Read more](observability.md).

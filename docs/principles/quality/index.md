@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
 # Quality
@@ -50,12 +50,12 @@ Quality evidence reveals patterns and drives continuous improvement in products 
 
 ### Testability
 
-Systems expose observable behaviour and support controlled, repeatable verification proportionate to risk.
+Systems expose observable behaviour and support controlled, repeatable verification as they change.
 
 [Read more](testability.md).
 
 ### Accessibility
 
-Accessibility requirements apply to every interface and are verified throughout its lifecycle.
+Every interface is subject to accessibility requirements and verification throughout its lifecycle.
 
 [Read more](accessibility.md).

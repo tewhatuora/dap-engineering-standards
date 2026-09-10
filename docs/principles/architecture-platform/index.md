@@ -1,12 +1,12 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
-# Architecture & Platform
+# Architecture and Platform
 
 ## Overview
 
-Architecture and platform decisions determine how readily systems can integrate, remain consistent, scale, and change. These principles favour cohesive service boundaries and shared capabilities while preserving clear interfaces, technology choice, and independence from individual service instances.
+Architecture and platform decisions establish the boundaries, dependencies, and technology commitments that determine whether systems can integrate and change independently. These principles align those decisions with domain and workload needs while preserving future choice.
 
 Choose a principle below to read its full reasoning.
 
@@ -14,25 +14,25 @@ Choose a principle below to read its full reasoning.
 
 ### Shared Platform
 
-New services use the shared platform by default, with alternatives limited to needs the platform cannot meet.
+Runtime and deployment choices reflect each workload's requirements, with alternatives used only where shared platform capabilities cannot meet them.
 
 [Read more](shared-platform.md).
 
 ### Domain-Aligned Services
 
-Service boundaries follow cohesive business domains, with exclusive data ownership and one authoritative implementation of each core business rule.
+Service boundaries follow cohesive business domains so services can own their decisions and change independently.
 
 [Read more](domain-aligned-services.md).
 
 ### Distributed Consistency
 
-Keep transactions within service boundaries and coordinate cross-service consistency through explicit eventual-consistency and compensation models.
+Cross-service workflows preserve service-local transactions through explicit consistency and recovery models.
 
 [Read more](distributed-consistency.md).
 
-### Vendor Lock-in & Portability
+### Vendor Lock-in and Portability
 
-Technology choices account for lock-in and preserve practical options to change providers, platforms, and dependencies.
+Technology choices make vendor coupling explicit and preserve the ability to extract data and replace dependencies.
 
 [Read more](vendor-lock-in-portability.md).
 

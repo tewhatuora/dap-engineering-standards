@@ -1,8 +1,8 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
-# Security & Privacy
+# Security and Privacy
 
 ## Overview
 

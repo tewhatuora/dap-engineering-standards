@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-11
 ---
 
 # Data
@@ -12,14 +12,14 @@ Choose a principle below to read its full reasoning.
 
 ## Principles
 
-### Data Residency & Sovereignty
+### Data Residency and Sovereignty
 
-Data jurisdiction is defined before design and enforced across storage, processing, transfer, and recovery.
+Data remains subject to its jurisdiction requirements throughout its lifecycle.
 
 [Read more](data-residency-sovereignty.md).
 
-### Data Quality & Integrity
+### Data Quality and Integrity
 
-Data quality and integrity are enforced, verified, monitored, and kept traceable throughout the data lifecycle.
+Data remains valid, consistent, and traceable throughout its lifecycle.
 
 [Read more](data-quality-integrity.md).
