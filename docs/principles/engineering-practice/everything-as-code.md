@@ -8,13 +8,13 @@ last_edited: 2026-09-11
 
 ### Summary
 
-Source code and every definition that controls system state are kept in version control as the authoritative record.
+Source code and all definitions that control system state are kept in version control as the authoritative record.
 
 ### Reasoning
 
-A shared authoritative record gives teams one place to find the intended state, review changes, and establish who changed what. When undocumented operational work also defines state, the version-controlled definitions and the running system can disagree without that difference being visible.
+Version control provides one place to find the intended state and review its change history. Changes made outside that record can leave the running system in a different state without showing what changed.
 
-Infrastructure, configuration, delivery pipelines, and database schemas control system behaviour just as application code does. Prototypes and scripts can also become deployed or depended upon, so recording all these definitions allows the intended state to be reviewed and recovered when a system must be rebuilt.
+Infrastructure, configuration, delivery pipelines, database schemas, and automation scripts control system behaviour just as application code does. Prototypes may also be deployed or become dependencies. Recording all these definitions allows teams to review the intended state and recover it when rebuilding a system.
 
 ### Implemented By These Standards
 
@@ -34,13 +34,13 @@ Infrastructure, configuration, delivery pipelines, and database schemas control 
 
 ### Summary
 
-Systems and environments can be recreated consistently from code without undocumented manual steps.
+Systems and environments can be recreated consistently from code without manual steps.
 
 ### Reasoning
 
-Recreating systems from code gives development, test, and production a consistent starting point and makes recovery independent of knowledge held by one person. Engineers can compare the definitions when environments differ instead of first reconstructing which manual actions may have been performed.
+Recreating systems from code gives development, test, and production environments a consistent starting point. It also prevents recovery from depending on knowledge held by one person. When environments differ, engineers can compare their definitions instead of reconstructing manual actions.
 
-An undocumented step still changes the functional state even though the code does not record it. The next recreation can therefore produce a different system, leaving behaviour dependent on manual knowledge that cannot be reviewed or applied consistently.
+Changes made through manual steps are not captured in code. Each step must be repeated correctly whenever the system is recreated and may be missed or applied inconsistently.
 
 ### Implemented By These Standards
 
@@ -61,9 +61,9 @@ A generated artifact can be reproduced from its authoritative source and generat
 
 ### Reasoning
 
-Manual edits to generated output create a state that neither the source nor the generation process can reproduce. Those edits disappear when the artifact is generated again, while making the change in the source preserves it as part of the authoritative definition.
+Changes made directly to a generated artifact are lost when it is regenerated. Making the change in the authoritative source ensures it appears in future artifacts.
 
-Stable output from unchanged inputs also makes meaningful changes easier to distinguish from incidental differences. Engineers can compare artifacts generated in different places and determine whether both came from the same source and process.
+Producing the same output from unchanged inputs makes unexpected differences between builds visible. A difference then indicates that the source, declared inputs, or generation process changed.
 
 ### Implemented By These Standards
 
@@ -74,13 +74,13 @@ Stable output from unchanged inputs also makes meaningful changes easier to dist
 
 ### Summary
 
-Code-defined state changes through its reviewed and automated path, and any direct change to a running system is then recorded in code.
+Changes to system state follow a reviewed, automated process defined in code, and any direct changes to a running system are reflected in that code.
 
 ### Reasoning
 
-Applying a change through the code-defined path records what changed, who reviewed it, and how the same state can be produced again. A direct change to a running system bypasses that record and allows the system to diverge from its authoritative definition.
+Changing state through code creates a reviewable record and allows the state to be recreated. Changing a running system directly creates a difference that the code does not record.
 
-Direct intervention may still be necessary to restore service quickly. Recording the resulting state in code preserves the correction, makes it available for later review, and prevents a subsequent automated change from unintentionally reversing it.
+Direct changes may be necessary to restore service. Recording them in code keeps the authoritative definition accurate and prevents later automation from reversing them.
 
 ### Implemented By These Standards
 
@@ -100,9 +100,9 @@ Secrets are stored in a dedicated secrets management system, and code refers to 
 
 ### Reasoning
 
-Putting a secret in code exposes its value through repository history, generated artifacts, and code review to people and systems that may not need it. Removing the value from the latest version does not remove it from existing history or copies.
+Putting a secret in code can expose it to people and systems through repository history, generated artifacts, and code review. Removing the value from the latest version does not remove it from existing history or copies.
 
-Referencing a secret at runtime keeps storage and access within the secrets management system. It also allows credentials to be rotated or revoked without changing, reviewing, and rebuilding every code-defined artifact that uses them.
+Referencing a secret at runtime keeps its storage and access within the secrets management system. Credentials can then be rotated or revoked without changing and rebuilding every code-defined artifact that uses them.
 
 ### Implemented By These Standards
 
@@ -120,7 +120,7 @@ Engineering documentation is version-controlled and updated in the same change a
 
 Keeping documentation in version control preserves its history alongside the source changes it describes. Updating both in the same change allows reviewers to check that the explanation matches the implementation before the new behaviour is adopted.
 
-When documentation is deferred, it can continue to describe an earlier system state and direct later work from incorrect information. Treating the documentation update as part of the behaviour change prevents that temporary mismatch from becoming established.
+Delaying a documentation update leaves engineers working from an outdated description of the system. They may then make changes or respond to incidents based on behaviour that no longer exists.
 
 ### Implemented By These Standards
 

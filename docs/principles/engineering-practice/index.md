@@ -26,7 +26,7 @@ Evaluate existing capabilities before building a custom solution, and make reusa
 
 ### Everything as Code
 
-Keep system definitions in version control as the authoritative source for reviewable and reproducible change.
+System definitions are kept in version control as the authoritative source for reviewing changes and recreating the intended state.
 
 [Read more](everything-as-code.md).
 
@@ -50,6 +50,6 @@ Feedback is clear, reliable, and available at the earliest effective stage.
 
 ### AI-Assisted Engineering
 
-Engineers remain accountable for AI-assisted work and apply the same standards as other engineering work.
+AI-assisted work meets the same engineering standards as other work, with scrutiny and controls reflecting its impact and risks.
 
 [Read more](ai-assisted-engineering.md).

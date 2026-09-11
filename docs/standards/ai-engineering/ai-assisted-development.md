@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # AI-Assisted Development
@@ -39,7 +39,35 @@ AI-generated output remains subject to developer understanding and human review 
 ### Implements These Principles
 
 - [Understanding Before Adoption](../../principles/engineering-practice/ai-assisted-engineering.md#understanding-before-adoption)
-- [Automation and Human Judgement](../../principles/engineering-practice/automation.md#automation-and-human-judgement)
+- [Automation Supports Human Judgement](../../principles/engineering-practice/automation.md#automation-supports-human-judgement)
+
+## Quality, Testing & Security
+
+### Summary
+
+AI-assisted code meets the same quality, testing, and security gates as any other change.
+
+### Standards
+
+1. `std-ai-quality-testing-security-01` Code produced with AI assistance **MUST** meet the same coding, linting, static analysis, and test coverage requirements as code without AI assistance.
+2. `std-ai-quality-testing-security-02` AI-assisted contributions **MUST NOT** bypass, weaken, or be exempted from quality gates, security scanning, or approval workflows required for the repository and change.
+3. `std-ai-quality-testing-security-03` AI tools **MAY** be used to help generate automated tests; generated tests **MUST** be reviewed for correctness and coverage adequacy.
+4. `std-ai-quality-testing-security-04` A test or quality check required for a change **MUST NOT** be removed, disabled, or weakened to obtain a passing result for an AI-assisted change.
+
+### Related Standards
+
+- [AI Usage & Verification in Code Review](ai-usage-verification-in-code-review.md#pre-submission-verification)
+- [Code Style & Formatting](../code-implementation/code-style-formatting.md#codebase-coverage)
+- [Linting & Style Enforcement](../code-implementation/linting-style-enforcement.md#linting-pipeline-gate)
+- [Static Code Analysis](../code-implementation/static-code-analysis.md#analysis-pipeline-gate)
+- [Unit Testing](../quality-engineering/unit-testing.md#test-coverage)
+- [Application Security Testing](../quality-engineering/application-security-testing.md#static-testing-sast)
+
+### Implements These Principles
+
+- [Accountability and Equal Standards](../../principles/engineering-practice/ai-assisted-engineering.md#accountability-and-equal-standards)
+- [Automation Supports Human Judgement](../../principles/engineering-practice/automation.md#automation-supports-human-judgement)
+- [Secure Development](../../principles/security-privacy/security-engineering.md#secure-development)
 
 ## AI Agent Access
 
@@ -77,34 +105,6 @@ An AI agent is stopped when it acts outside its delegated task, and any unintend
 
 - [Bounded Agent Impact](../../principles/engineering-practice/ai-assisted-engineering.md#bounded-agent-impact)
 
-## Quality, Testing & Security
-
-### Summary
-
-AI-assisted code meets the same quality, testing, and security gates as any other change.
-
-### Standards
-
-1. `std-ai-quality-testing-security-01` Code produced with AI assistance **MUST** meet the same coding, linting, static analysis, and test coverage requirements as code without AI assistance.
-2. `std-ai-quality-testing-security-02` AI-assisted contributions **MUST NOT** bypass, weaken, or be exempted from quality gates, security scanning, or approval workflows required for the repository and change.
-3. `std-ai-quality-testing-security-03` AI tools **MAY** be used to help generate automated tests; generated tests **MUST** be reviewed for correctness and coverage adequacy.
-4. `std-ai-quality-testing-security-04` A test or quality check required for a change **MUST NOT** be removed, disabled, or weakened to obtain a passing result for an AI-assisted change.
-
-### Related Standards
-
-- [AI Usage & Verification in Code Review](ai-usage-verification-in-code-review.md#pre-submission-verification)
-- [Code Style & Formatting](../code-implementation/code-style-formatting.md#codebase-coverage)
-- [Linting & Style Enforcement](../code-implementation/linting-style-enforcement.md#linting-pipeline-gate)
-- [Static Code Analysis](../code-implementation/static-code-analysis.md#analysis-pipeline-gate)
-- [Unit Testing](../quality-engineering/unit-testing.md#test-coverage)
-- [Application Security Testing](../quality-engineering/application-security-testing.md#static-testing-sast)
-
-### Implements These Principles
-
-- [Accountability and Equal Standards](../../principles/engineering-practice/ai-assisted-engineering.md#accountability-and-equal-standards)
-- [Automation and Human Judgement](../../principles/engineering-practice/automation.md#automation-and-human-judgement)
-- [Secure Development](../../principles/security-privacy/security-engineering.md#secure-development)
-
 ## High-Risk Use
 
 ### Summary
@@ -140,7 +140,7 @@ Authorised and qualified people retain responsibility for clinical decisions and
 
 - [Human Clinical Judgement](../../principles/engineering-practice/ai-assisted-engineering.md#human-clinical-judgement)
 - [Scrutiny Based on Impact](../../principles/engineering-practice/ai-assisted-engineering.md#scrutiny-based-on-impact)
-- [Automation and Human Judgement](../../principles/engineering-practice/automation.md#automation-and-human-judgement)
+- [Automation Supports Human Judgement](../../principles/engineering-practice/automation.md#automation-supports-human-judgement)
 
 ## Intellectual Property & Licensing
 

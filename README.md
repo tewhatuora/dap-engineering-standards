@@ -37,10 +37,6 @@ For existing projects and services, these principles and standards provide an im
 
 Teams delivering new projects and services are expected to adopt these principles and standards from the outset, using them to guide how their projects and services are designed, built, and operated.
 
-## Accountability
-
-Every project or service needs a team that remains accountable for meeting these principles and standards throughout its lifecycle. The accountable team should maintain compliance throughout the life of the project or service.
-
 ## Documentation Terminology
 
 In order to enhance the precision and consistency of these engineering principles and standards, we have adopted the terminology defined in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119.txt). This document provides a set of well-defined terms that convey specific meanings when used in requirements and recommendations.

@@ -8,13 +8,13 @@ last_edited: 2026-09-11
 
 ### Summary
 
-Checks run as early as they can reliably detect an issue, and local development gives engineers fast feedback without relying on shared environments.
+Checks run at the earliest stage where they can reliably detect an issue, and local development provides fast feedback without relying on shared environments.
 
 ### Reasoning
 
-Deferring a capable check to a later stage increases the time and rework needed to correct an issue. Running it while the change is still familiar allows the engineer to act before the issue reaches other people, shared environments, or later pipeline stages.
+Running a check later than necessary increases the time and rework needed to correct an issue. Early feedback reaches the engineer while the change is still familiar and before the change reaches shared environments or later pipeline stages.
 
-The earliest possible check is useful only when its result can be trusted. Local execution provides a short feedback loop without waiting for shared or remote environments, while reliable results allow correction to begin without first confirming whether the signal is genuine.
+Local checks do not depend on the availability or current state of a shared environment. Engineers can repeat them as they work instead of waiting for access or another deployment.
 
 ### Implemented By These Standards
 
@@ -32,13 +32,11 @@ The earliest possible check is useful only when its result can be trusted. Local
 
 ### Summary
 
-A failure signal identifies what failed and which change caused it clearly enough for an engineer to act without further investigation.
+A failure signal clearly identifies what failed and which change caused it, giving an engineer enough information to act.
 
 ### Reasoning
 
-Feedback shortens the correction cycle when an engineer can identify what failed, why it failed, and which change produced the result. A vague signal moves effort from correcting the issue to investigating what happened and where the relevant evidence can be found.
-
-Feedback that engineers frequently ignore or bypass indicates that its speed, clarity, or reliability prevents it from supporting action. Removing the check hides that weakness without resolving the underlying need for useful feedback.
+Clear feedback directs engineers to the cause of a failure. Without that information, time is spent finding evidence and determining what happened.
 
 ### Implemented By These Standards
 
@@ -56,9 +54,9 @@ Feedback that gives inconsistent results is fixed or removed rather than repeate
 
 ### Reasoning
 
-Different results for the same input make a genuine failure difficult to distinguish from noise. Re-running or working around the check may allow one change to proceed, but it leaves the same uncertainty for every later result.
+When the same input produces different results, engineers cannot tell whether a failure is genuine. Rerunning or bypassing the check may unblock one change but leaves every later result uncertain.
 
-Once engineers expect failures without a cause, they are more likely to ignore a genuine problem or spend time confirming every signal independently. Fixing the mechanism restores useful feedback, while removing it avoids presenting noise as evidence.
+Frequent false or unexplained failures erode trust in the check. Engineers may then overlook genuine failures or spend time verifying every result independently.
 
 ### Implemented By These Standards
 
@@ -70,13 +68,30 @@ Once engineers expect failures without a cause, they are more likely to ignore a
 
 ### Summary
 
-A delivery pipeline runs its fastest, highest-signal checks first and improves stages that are slow or unreliable.
+Engineering teams run fast, high-signal pipeline checks first and improve stages that are slow or unreliable.
 
 ### Reasoning
 
-Running fast, high-signal checks first can stop a failing change before slower or dependent work begins. This returns the most actionable result sooner and avoids spending pipeline time on work that cannot succeed after the earlier failure.
+Running fast, high-signal checks first finds failures before slower or dependent stages begin. Engineers receive an actionable result sooner, and the pipeline avoids work that cannot succeed.
 
-A stage that remains slow or unreliable delays integration even when the rest of the pipeline is efficient. Improving that stage prevents its cost and uncertainty from becoming the normal feedback time for every change.
+A slow stage can determine how long the entire pipeline takes, increasing feedback time and execution cost for every change. An unreliable stage creates uncertainty and may require reruns before engineers can trust the result.
+
+### Implemented By These Standards
+
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+
+## Pipeline Feedback Measurement
+
+### Summary
+
+Delivery pipeline and test execution times are measured so sustained slowdowns can be found and investigated.
+
+### Reasoning
+
+Gradual increases in pipeline or test duration are easy to miss in individual runs. Measuring them over time reveals sustained slowdowns before longer waits become accepted as normal.
+
+Stage-level measurements show where a delay was introduced. Teams can address the source instead of treating the entire pipeline as slow.
 
 ### Implemented By These Standards
 
@@ -87,32 +102,13 @@ A stage that remains slow or unreliable delays integration even when the rest of
 
 ### Summary
 
-A production change is observed during a limited rollout so unintended effects can be found before full release.
+A production change is observed during a limited rollout so unexpected behaviour can be found before full release.
 
 ### Reasoning
 
-A limited rollout restricts the number of people and systems affected by a defect that earlier checks did not detect. Observing real behaviour during that period provides evidence about the change while there is still an opportunity to stop wider exposure.
-
-The rollout offers that protection only when its signals are timely and clear enough to guide the release decision. Delayed or ambiguous feedback can allow an unintended effect to continue into the full release before it is understood.
+A limited rollout reduces the number of users and systems affected if a change behaves unexpectedly. Observing its behaviour shows whether the rollout should continue before it reaches more users and systems.
 
 ### Implemented By These Standards
 
 - [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
-
-## Feedback Loop Measurement
-
-### Summary
-
-Important feedback loop times are measured so slowdowns can be found and investigated.
-
-### Reasoning
-
-Small increases in feedback time are easy to overlook during individual changes, but measurement makes a sustained regression visible. Investigating the trend prevents slower feedback from becoming accepted as an unavoidable result of a growing codebase or team.
-
-Measuring each important part of the loop also shows where the delay was introduced. Teams can then address the source of the regression instead of treating the whole development workflow as uniformly slow.
-
-### Implemented By These Standards
-
-- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
-- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
