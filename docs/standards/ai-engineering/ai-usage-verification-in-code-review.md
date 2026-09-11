@@ -93,7 +93,7 @@ A reviewer may use an approved AI tool to assist review while retaining independ
 ### Implements These Principles
 
 - [AI Tool Terms and Controls](../../principles/engineering-practice/ai-assisted-engineering.md#ai-tool-terms-and-controls)
-- [Automation and Human Judgement](../../principles/engineering-practice/automation.md#automation-and-human-judgement)
+- [Automation Supports Human Judgement](../../principles/engineering-practice/automation.md#automation-supports-human-judgement)
 
 ## Approval Accountability
 
@@ -114,4 +114,4 @@ A reviewer approves each change and remains accountable for the decision.
 ### Implements These Principles
 
 - [Accountability and Equal Standards](../../principles/engineering-practice/ai-assisted-engineering.md#accountability-and-equal-standards)
-- [Automation and Human Judgement](../../principles/engineering-practice/automation.md#automation-and-human-judgement)
+- [Automation Supports Human Judgement](../../principles/engineering-practice/automation.md#automation-supports-human-judgement)

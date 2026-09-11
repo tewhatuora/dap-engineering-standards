@@ -4,17 +4,43 @@ last_edited: 2026-09-11
 
 # Automation
 
+## Engineering and Operations Automation
+
+### Summary
+
+Automation applies across delivery pipelines and other repeatable engineering and operational work.
+
+### Reasoning
+
+Repeated manual engineering and operational work consumes time and can produce different results depending on who performs it. Automation makes the outcome consistent, shortens routine response times, and reduces reliance on knowledge held by a few people.
+
+Automation requires development and maintenance of its own. Whether it is worthwhile depends on the effort it saves and the risk it removes.
+
+### Implemented By These Standards
+
+- [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
+- [Cost & Impact Visibility](../../standards/cost-sustainability/cost-impact-visibility.md)
+- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
+- [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
+- [Runbooks](../../standards/operations-observability/runbooks.md)
+- [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
+- [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
+- [Managed Services](../../standards/platform-infrastructure/managed-services.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Test Data Management](../../standards/quality-engineering/test-data-management.md)
+- [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
+
 ## Pipeline Automation
 
 ### Summary
 
-Repeatable delivery pipeline work is automated by default, and feasible manual steps are treated as incomplete automation.
+Repeatable delivery pipeline work is automated by default, and a manual step that can be automated is considered incomplete automation.
 
 ### Reasoning
 
-Manual pipeline steps depend on someone performing the correct action at the correct time, which introduces avoidable delay and variation between releases. A missed or inconsistent step can affect the result without leaving a clear explanation of why one pipeline run differed from another.
+Manual pipeline steps depend on someone acting correctly at the right time. This can delay delivery and introduce variation between releases. A missed or inconsistent step can change the result without leaving a clear record of what happened.
 
-Automation applies the same steps on every run and records their results in a consistent form. This gives engineers faster feedback, makes failures easier to compare and investigate, and reserves their time for changes that require judgement.
+Automation runs the same steps each time and records the results consistently. Engineers receive faster feedback, can compare failures more easily, and spend less time on routine work.
 
 ### Implemented By These Standards
 
@@ -34,43 +60,17 @@ Automation applies the same steps on every run and records their results in a co
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 - [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
 
-## Engineering and Operations Automation
-
-### Summary
-
-Automation applies across delivery pipelines and other repeatable engineering and operational work.
-
-### Reasoning
-
-Repeated manual engineering and operational work consumes time and produces results that can vary with the person performing it. Automation makes execution consistent, shortens routine response times, and reduces reliance on knowledge held by a small number of people.
-
-Automation also introduces software, dependencies, and failure modes that require maintenance. Matching the approach to the task's frequency, complexity, and impact prevents a simple manual cost from being replaced by a greater operational burden.
-
-### Implemented By These Standards
-
-- [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
-- [Cost & Impact Visibility](../../standards/cost-sustainability/cost-impact-visibility.md)
-- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
-- [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
-- [Runbooks](../../standards/operations-observability/runbooks.md)
-- [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
-- [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
-- [Managed Services](../../standards/platform-infrastructure/managed-services.md)
-- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
-- [Test Data Management](../../standards/quality-engineering/test-data-management.md)
-- [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
-
 ## Automation as Code
 
 ### Summary
 
-Automation logic is kept in version control and maintained like other engineering code.
+Automation logic is kept in version control and maintained like any other engineering code.
 
 ### Reasoning
 
-A change to automation can affect every later run, so an undocumented or unreviewed change can repeat the same defect across many executions. Version control preserves what changed and why, allowing engineers to review the change and trace a later failure to its source.
+Automation repeats its logic on every run, including any defects it contains. Version control makes changes reviewable and helps engineers trace a failure to the change that introduced it.
 
-Automation can also become outdated as the systems and tasks around it change. Ongoing maintenance, testing, and validation show whether it still behaves as intended, with stronger evidence needed where one repeated defect could have greater impact.
+Automation can become outdated as the systems and tasks it supports change. Regular maintenance and testing keep its behaviour aligned with those changes.
 
 ### Implemented By These Standards
 
@@ -84,17 +84,17 @@ Automation can also become outdated as the systems and tasks around it change. O
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 
-## Automation and Human Judgement
+## Automation Supports Human Judgement
 
 ### Summary
 
-Automation handles repeatable mechanical checks, while human judgement and review cover decisions that depend on context or novel tradeoffs.
+Automation checks predefined conditions consistently, while people decide whether a change is appropriate when the decision depends on context or trade-offs.
 
 ### Reasoning
 
-Pipeline gates apply known rules consistently and stop recognised failures from progressing. Passing a gate shows that a change satisfied those rules, but it does not establish that the change has the right intent, handles an unanticipated exception, or fits the wider system.
+Automated checks are limited to the rules and inputs they are given. A passing result shows that those rules were satisfied, but not that the change is right for its users or the system.
 
-Code review and approval bring product, design, and system context to decisions that cannot be fully expressed as repeatable checks. Keeping that judgement with people allows automation to support engineering decisions without being treated as a substitute for them.
+Human review considers the intended outcome and wider consequences. It can challenge assumptions and weigh trade-offs that automated checks cannot resolve.
 
 ### Implemented By These Standards
 
