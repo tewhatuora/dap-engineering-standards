@@ -24,6 +24,12 @@ Outcome driven assurance connects quality questions, acceptance criteria, tests,
 
 [Read more](outcome-driven-assurance.md).
 
+### Evidence & Reporting
+
+Quality evidence is retained in shared locations where responsible teams and decision-makers can access it while it remains relevant.
+
+[Read more](evidence-reporting.md).
+
 ### Unit Testing
 
 Unit testing verifies one unit of code in isolation with external dependencies replaced by controlled test doubles.
