@@ -99,7 +99,7 @@ When adding or changing a principle or standard:
 	---
 	```
 
-	`last_reviewed` **MUST** be the date the page content was reviewed and confirmed as current, not the build date. A site build regenerates every page, so build time **MUST NOT** be used as a proxy for content age.
+	`last_edited` **MUST** be the date the page content was last materially changed, not the build date. A site build regenerates every page, so build time **MUST NOT** be used as a proxy for content age. A non-trivial edit **MUST** update this value.
 - Every new page **MUST** also be added to the `nav:` section of `mkdocs.yml`. Navigation is a hand-maintained list, not auto-discovered from the folder structure; place the new entry alongside related pages in reading order.
 - A new top-level standards category also needs its own `index.md` plus a new block under `nav:`.
 
