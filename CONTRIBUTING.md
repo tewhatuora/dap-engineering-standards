@@ -91,12 +91,11 @@ Merge requests **MUST** be reviewed and approved by a code owner listed in [`COD
 When adding or changing a principle or standard:
 
 - Create or update the Markdown file in the relevant category under `docs/principles/` or `docs/standards/`.
-- Add this metadata at the top of the page:
+- Add page metadata at the top of each new or changed page so the published footer shows the last edited date:
 
 	```yaml
 	---
-	last_reviewed: YYYY-MM-DD
-	review_cycle: 12 months
+	last_edited: YYYY-MM-DD
 	---
 	```
 
