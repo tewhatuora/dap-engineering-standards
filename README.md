@@ -5,43 +5,41 @@
 
 These engineering principles and standards guide how software and services are delivered for Health New Zealand, keeping expectations consistent across projects while allowing implementation details to evolve.
 
-Teams maintain their own guidance outside this repository. That guidance provides practical ways to implement the standards documented here while allowing implementation details to suit each team's context and evolve independently.
-
-
 ## Documentation Hierarchy
 
 ```mermaid
 flowchart LR
-    P["<b>Principle</b><br/>What we value, and why<br/><code>docs/principles/</code>"]
-    S["<b>Standard</b><br/>What must be true<br/><code>docs/standards/</code>"]
-    G["<b>Teams' Guidance</b><br/>Good ways to implement standards<br/>Maintained outside this repository"]
+    P["<b>Principle</b><br/>Values that guide our efforts"]
+    S["<b>Standard</b><br/>Specific, verifiable expectations<br/>that apply a principle"]
+    G["<b>Guidance</b><br/>Documented process to help a team<br/>meet the standards"]
     P -->|"Implemented By These Standards"| S
     S -->|"Implemented through"| G
     S -.->|"Implements These Principles"| P
 ```
 
-- A **principle** holds a value statement and its reasoning.
-- A **standard** makes one aspect of a principle verifiable.
-- **Teams' guidance** provides good ways to implement these standards in a team's own context. Teams maintain this guidance outside this repository.
+- **Principles** express the values that guide our engineering efforts and explain why those values matter.
+- **Standards** apply principles through specific, verifiable expectations.
+- **Guidance** documents a process that helps a team meet the standards in its context. Teams maintain their guidance outside this repository.
 
-Both directions are required: every principle names at least one standard under `Implemented By These Standards`, and every standard grouping cites at least one principle under `Implements These Principles`.
+Principle pages link to their relevant standards under `Implemented By These Standards`. Standard groups link back to the principles they support under `Implements These Principles`.
 
 ### Tags
 
-Every numbered standard carries a tag: a short, stable identifier used to cite it without depending on its title, its position on a page, or the path to its file. A `std-` prefix marks a standard's tag; principles are not tagged and are cited by a link to their page instead.
+Use a numbered standard's `std-` tag when citing it. The tag remains stable if the standard's title, position, or page changes. Cite a principle by linking to its page.
 
 ## Target Audience
 
-These principles and standards apply to everyone involved in the delivery of software and services for Health New Zealand, including vendors, partners, contractors, third parties, and internal staff.
+If you contribute to or make decisions about software and services delivered for Health New Zealand, these principles and standards apply to your work. This includes Health New Zealand staff and teams, vendors, partners, contractors, and other third parties.
 
-Part A is written for anyone making engineering decisions, including architects, technical leads, and delivery teams weighing a choice no specific standard covers. Part B is written for the engineers designing, building, and operating a specific solution.
+## Adoption Expectations
+
+For existing projects and services, these principles and standards provide an improvement roadmap rather than a compliance threshold that must be met immediately. Teams should assess their current alignment, prioritise gaps based on risk and value, and make progress toward meeting the standards.
+
+Teams delivering new projects and services are expected to adopt these principles and standards from the outset, using them to guide how their projects and services are designed, built, and operated.
 
 ## Accountability
 
-Compliance ownership is a standing team responsibility, not a one-time individual task.
-
-- An accountable team **MUST** be assigned for each project or service to own compliance with these principles and standards; accountability **MUST NOT** be attributed to an individual.
-- Compliance **MUST** be maintained for the life of a project or service, not only when it was first established.
+Every project or service needs a team that remains accountable for meeting these principles and standards throughout its lifecycle. The accountable team should maintain compliance throughout the life of the project or service.
 
 ## Documentation Terminology
 
@@ -53,3 +51,13 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the required review process, local validation and build commands, and generated-site preview guidance.
+
+### AGENTS Files
+
+The `AGENTS.md` files provide scoped authoring instructions for AI agents working with this documentation. They keep changes consistent with the purpose, structure, voice, and linking rules for each documentation type. They are contributor instructions and are excluded from the published site.
+
+- [`docs/principles/AGENTS.md`](docs/principles/AGENTS.md) defines how principles are created and maintained.
+- [`docs/standards/AGENTS.md`](docs/standards/AGENTS.md) defines how standards are created and maintained.
+- [`docs/guidance/AGENTS.md`](docs/guidance/AGENTS.md) defines the format and boundaries for guidance.
+
+Before changing documentation with an AI agent, direct it to the `AGENTS.md` file for the relevant documentation type.
