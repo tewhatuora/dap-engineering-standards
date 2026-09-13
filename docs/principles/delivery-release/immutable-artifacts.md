@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-09-14
 ---
 
 # Immutable Artifacts
@@ -12,7 +12,7 @@ Every built artifact has a unique, immutable identity, and any change produces a
 
 ### Reasoning
 
-Changing an artifact after it has been built breaks the relationship between its identity, source, verification results, and deployed content. The same reference can then describe different content depending on when or where it is used, making failures and deployments difficult to reproduce.
+Changing an artifact after it has been built breaks the relationship between its identity, source, verification and security results, and what is deployed. The reference no longer identifies a consistent artifact over time or across environments, making deployments difficult to reproduce and failures difficult to investigate.
 
 An immutable identity guarantees that a reference continues to identify the content that was originally built and verified. Producing a new artifact for every change preserves the earlier version and keeps both versions traceable to the builds that created them.
 
@@ -32,9 +32,7 @@ An artifact verified in one environment is promoted unchanged through all later 
 
 ### Reasoning
 
-Rebuilding or modifying an artifact between environments creates new content that did not pass the earlier verification, even when it was produced from the same source. Production can then receive a difference that the preceding environments never exercised.
-
-Promoting the same artifact preserves the evidence gathered about its behaviour and contents. It also makes differences between environments attributable to configuration or runtime conditions rather than to an untracked change in the artifact itself.
+Promoting an artifact unchanged preserves its provenance and keeps verification and security results tied to exactly what is deployed. It also makes differences between environments attributable to configuration or runtime conditions rather than to an untracked change in the artifact itself.
 
 ### Implemented By These Standards
 

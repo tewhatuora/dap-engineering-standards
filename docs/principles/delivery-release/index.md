@@ -1,12 +1,12 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-09-14
 ---
 
 # Delivery and Release
 
 ## Overview
 
-Delivery and release practices preserve the identity of verified artifacts, limit the exposure of change, and keep release decisions independent from deployment.
+Delivery and release practices preserve artifact identity as changes move through a defined path to production and keep release separate from deployment.
 
 Choose a principle below to read its full reasoning.
 
@@ -14,12 +14,12 @@ Choose a principle below to read its full reasoning.
 
 ### Immutable Artifacts
 
-Built artifacts retain a stable identity and move unchanged through delivery environments.
+Built artifacts retain an immutable identity and are promoted unchanged through delivery environments.
 
 [Read more](immutable-artifacts.md).
 
 ### Safe Delivery
 
-Deployments reduce exposure to change while release remains a separate decision.
+Small, verified changes progress to production through consistent validation, with recovery prepared and release managed separately from deployment.
 
 [Read more](safe-delivery.md).

@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-09-14
 ---
 
 # Safe Delivery
@@ -8,13 +8,13 @@ last_edited: 2026-09-11
 
 ### Summary
 
-Verified changes remain deployable and move towards deployment and release in small increments as soon as delivery constraints permit.
+Verified changes remain deployable and advance towards deployment and release in small increments whenever delivery constraints permit.
 
 ### Reasoning
 
-Small, frequent changes limit how much behaviour changes in one deployment and make its outcome easier to assess. When a problem occurs, fewer combined changes need to be examined, and the affected change can be corrected without separating it from a larger batch.
+Small, frequent changes limit the scope of each deployment and make changes in system behaviour easier to detect and attribute. When a problem occurs, fewer changes need to be investigated, reducing the effort needed to identify and correct the cause.
 
-Holding verified changes without a delivery constraint increases batch size and delays feedback from their use. Delivery, business, regulatory, or operational needs can still require a change to wait, but making those constraints explicit preserves continuous flow as the default rather than allowing delay to become routine.
+Where rollback is appropriate, deploying changes independently allows the failing change to be reversed without also reverting unrelated changes from the same deployment.
 
 ### Implemented By These Standards
 
@@ -25,13 +25,13 @@ Holding verified changes without a delivery constraint increases batch size and 
 
 ### Summary
 
-A change reaches production through a defined sequence of environments and consistent progression criteria.
+A change reaches production through a defined sequence of environments and advances between them according to consistent progression criteria.
 
 ### Reasoning
 
-A defined progression path makes clear which environments and validation a change must pass before production. Each stage adds evidence about the change under known conditions and establishes what must be true before it can advance.
+A defined progression path identifies the environments a change must pass through and the validation it must satisfy before reaching production. Each stage evaluates the change under known conditions and establishes whether it is ready to advance.
 
-Consistent criteria prevent equivalent changes from advancing under different conditions because of individual discretion. Allowing a stage to be skipped only when defined criteria show that it adds no required validation keeps the path efficient without making progression ad hoc.
+Applying progression criteria consistently makes the path to production repeatable and prevents required validation from being bypassed through ad hoc decisions.
 
 ### Implemented By These Standards
 
@@ -41,13 +41,13 @@ Consistent criteria prevent equivalent changes from advancing under different co
 
 ### Summary
 
-Deployments have prepared rollback or forward-fix paths, while progressive exposure and rapid disablement reduce risk.
+Prepared rollback or forward-fix paths, progressive exposure, and rapid disablement reduce deployment risk.
 
 ### Reasoning
 
-A deployment can introduce a failure even after passing every earlier check because production behaviour includes conditions that pre-production validation may not expose. A prepared rollback or forward-fix path reduces recovery time and avoids designing the response while the service is already impaired.
+A prepared rollback or forward-fix path reduces the duration and impact of a failed deployment by allowing recovery to begin immediately.
 
-Progressive exposure limits the number of users and systems affected while evidence is gathered from production. Where functionality can be controlled independently, rapid disablement provides another way to stop the impact without waiting for a new deployment.
+Progressive exposure limits the number of users and systems affected while the change's production behaviour is assessed. Where functionality can be controlled independently, rapid disablement can limit impact without a new deployment.
 
 ### Implemented By These Standards
 
@@ -63,13 +63,13 @@ Progressive exposure limits the number of users and systems affected while evide
 
 ### Summary
 
-Making a deployed change available to users is a deliberate decision separate from deployment.
+Making a deployed change available to users is a deliberate release decision separate from deployment.
 
 ### Reasoning
 
-Deployment places a change in an environment, while release determines when its intended users can access it. Treating these as separate decisions allows the deployed behaviour to be verified before exposure and prevents pipeline completion from automatically becoming a user-facing release.
+Deployment places a change in an environment, while release makes it available to its intended users. Separating these concerns allows the deployed behaviour to be verified before exposure and prevents completion of a deployment from automatically exposing the change to users.
 
-The separation also allows exposure to be controlled without rebuilding or redeploying the change. Recording release independently preserves when user access changed, even when deployment and release happen at the same time.
+Separating release from deployment allows a deployed change to be made available to or withdrawn from users without rebuilding or redeploying it.
 
 ### Implemented By These Standards
 
