@@ -1,8 +1,10 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-11
 ---
 
 # AI Tooling Cost Management
+
+> Developers using AI tools should also consult the [Token Optimization Best Practises - Visual Guide](https://ashy-dune-0b4215a0f.7.azurestaticapps.net/index.html#) for practical guidance on reducing token usage and its associated cost.
 
 ## Context Scoping
 
