@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-14
 ---
 
 # Approved AI Tooling
@@ -13,9 +13,9 @@ AI tool use is limited to listed tools and their recorded data authorisations.
 ### Standards
 
 1. `std-ai-approved-tools-01` A person **MUST NOT** use an AI tool outside the Approved Tooling Register.
-2. `std-ai-approved-tools-02` A person **MUST NOT** submit PII to an AI tool unless the register marks it as allowed.
+2. `std-ai-approved-tools-02` A person **MUST NOT** submit personal or health information to an AI tool unless the register marks it as allowed.
 
-    | Tool | Capability Category | PII Submission Authorised |
+    | Tool | Capability Category | PII or PHI Submission Authorised |
     |---|---|:---:|
     | GitHub Copilot | AI-Assisted Development Tool | ❌ |
     | GitHub Copilot Code Review | Code Review Agent | ❌ |
