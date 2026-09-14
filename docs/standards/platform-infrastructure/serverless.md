@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-14
 ---
 
 # Serverless
@@ -12,8 +12,8 @@ A function provides one reusable capability, and an existing function with equiv
 
 ### Standards
 
-1. `std-plat-function-scope-01` A function **SHOULD** be scoped to a single capability expressed generically enough to be orchestrated into more than one workflow.
-2. `std-plat-function-scope-02` Before a new function is created, an existing function with equivalent scope **SHOULD** be identified and reused.
+1. A function **SHOULD** be scoped to a single capability expressed generically enough to be orchestrated into more than one workflow. `std-plat-function-scope-01`
+2. Before a new function is created, an existing function with equivalent scope **SHOULD** be identified and reused. `std-plat-function-scope-02`
 
 ### Implements These Principles
 
@@ -28,8 +28,8 @@ A function separates business logic from proprietary trigger formats and uses po
 
 ### Standards
 
-1. `std-plat-portability-01` A function's business logic **SHOULD** be kept separable from the platform's proprietary trigger and event format, such as via an adapter, so it can be ported to a different runtime model without a rewrite.
-2. `std-plat-portability-02` A function **SHOULD** be packaged as a container image for portability.
+1. A function's business logic **SHOULD** be kept separable from the platform's proprietary trigger and event format, such as via an adapter, so it can be ported to a different runtime model without a rewrite. `std-plat-portability-01`
+2. A function **SHOULD** be packaged as a container image for portability. `std-plat-portability-02`
 
 ### Implements These Principles
 
@@ -43,8 +43,8 @@ A function's runtime is selected according to measured latency, performance, cos
 
 ### Standards
 
-1. `std-plat-runtime-selection-01` A function's runtime **SHOULD** be selected using measured startup latency, execution performance, cost, and workload compatibility.
-2. `std-plat-runtime-selection-02` Where a function's runtime does not meet its startup latency requirement, an available build-time or runtime optimisation **SHOULD** be used to bring it within that requirement.
+1. A function's runtime **SHOULD** be selected using measured startup latency, execution performance, cost, and workload compatibility. `std-plat-runtime-selection-01`
+2. Where a function's runtime does not meet its startup latency requirement, an available build-time or runtime optimisation **SHOULD** be used to bring it within that requirement. `std-plat-runtime-selection-02`
 
 ### Implements These Principles
 
@@ -59,8 +59,8 @@ Shared dependencies and reusable resources are structured to avoid duplication a
 
 ### Standards
 
-1. `std-plat-shared-dependencies-resources-01` A dependency shared across multiple functions **SHOULD** be packaged and versioned separately from each function's own deployment package, such as through a shared layer or library.
-2. `std-plat-shared-dependencies-resources-02` A function **SHOULD** initialise a reusable resource, such as a database connection or SDK client, outside its handler so it can be reused across warm invocations.
+1. A dependency shared across multiple functions **SHOULD** be packaged and versioned separately from each function's own deployment package, such as through a shared layer or library. `std-plat-shared-dependencies-resources-01`
+2. A function **SHOULD** initialise a reusable resource, such as a database connection or SDK client, outside its handler so it can be reused across warm invocations. `std-plat-shared-dependencies-resources-02`
 
 ### Implements These Principles
 
@@ -74,8 +74,8 @@ A function's configuration is authoritative, version-controlled code, and direct
 
 ### Standards
 
-1. `std-plat-function-configuration-01` A function's configuration, including its trigger, timeout, memory allocation, and concurrency limit, **MUST** be held as version-controlled, declarative code.
-2. `std-plat-function-configuration-02` A change made directly to a deployed function's configuration, such as one made to resolve an incident, **MUST** be incorporated into its version-controlled configuration before that function's next deployment.
+1. A function's configuration, including its trigger, timeout, memory allocation, and concurrency limit, **MUST** be held as version-controlled, declarative code. `std-plat-function-configuration-01`
+2. A change made directly to a deployed function's configuration, such as one made to resolve an incident, **MUST** be incorporated into its version-controlled configuration before that function's next deployment. `std-plat-function-configuration-02`
 
 ### Implements These Principles
 
@@ -89,8 +89,8 @@ Where the platform supports immutable published versions, each deployment publis
 
 ### Standards
 
-1. `std-plat-versioning-01` Where the platform supports immutable published versions, a function's production configuration **MUST** identify the version it runs, including where a stable alias controls traffic to that version.
-2. `std-plat-versioning-02` Where the platform supports immutable published versions, each deployment **MUST** publish a new version.
+1. Where the platform supports immutable published versions, a function's production configuration **MUST** identify the version it runs, including where a stable alias controls traffic to that version. `std-plat-versioning-01`
+2. Where the platform supports immutable published versions, each deployment **MUST** publish a new version. `std-plat-versioning-02`
 
 ### Implements These Principles
 
@@ -104,11 +104,11 @@ A function has workload-based timeout and memory limits, measures cold-start lat
 
 ### Standards
 
-1. `std-plat-execution-boundaries-01` A function **MUST** have a bounded timeout based on its tested execution duration and failure behaviour.
-2. `std-plat-execution-boundaries-02` Where a function is invoked synchronously through a gateway or load balancer with its own timeout, the function's timeout **MUST** remain shorter than the caller's timeout, so the caller does not time out before the function completes.
-3. `std-plat-execution-boundaries-03` A configurable function memory allocation **SHOULD** be set from the function's own observed or tested resource usage.
-4. `std-plat-execution-boundaries-04` Where a function is invoked on a latency-sensitive path, its cold-start latency **MUST** be measured against that path's own latency requirement.
-5. `std-plat-execution-boundaries-05` Where runtime or build optimisation does not meet a function's cold-start latency requirement, the platform's pre-warming mechanism **MAY** be used, kept to the minimum instances the path needs.
+1. A function **MUST** have a bounded timeout based on its tested execution duration and failure behaviour. `std-plat-execution-boundaries-01`
+2. Where a function is invoked synchronously through a gateway or load balancer with its own timeout, the function's timeout **MUST** remain shorter than the caller's timeout, so the caller does not time out before the function completes. `std-plat-execution-boundaries-02`
+3. A configurable function memory allocation **SHOULD** be set from the function's own observed or tested resource usage. `std-plat-execution-boundaries-03`
+4. Where a function is invoked on a latency-sensitive path, its cold-start latency **MUST** be measured against that path's own latency requirement. `std-plat-execution-boundaries-04`
+5. Where runtime or build optimisation does not meet a function's cold-start latency requirement, the platform's pre-warming mechanism **MAY** be used, kept to the minimum instances the path needs. `std-plat-execution-boundaries-05`
 
 ### Implements These Principles
 
@@ -124,8 +124,8 @@ A function's concurrency is bounded by the combined capacity available from its 
 
 ### Standards
 
-1. `std-plat-concurrency-limits-01` Where unconstrained execution could exceed a downstream dependency's capacity, a function's concurrency **MUST** be bounded to a limit that dependency can sustain.
-2. `std-plat-concurrency-limits-02` Where concurrency limits protect a dependency shared by multiple functions, those limits **MUST** account for their combined demand.
+1. Where unconstrained execution could exceed a downstream dependency's capacity, a function's concurrency **MUST** be bounded to a limit that dependency can sustain. `std-plat-concurrency-limits-01`
+2. Where concurrency limits protect a dependency shared by multiple functions, those limits **MUST** account for their combined demand. `std-plat-concurrency-limits-02`
 
 ### Implements These Principles
 
@@ -140,9 +140,9 @@ A retried invocation is idempotent, completes within its trigger's redelivery wi
 
 ### Standards
 
-1. `std-plat-failure-handling-01` A function subject to automatic retries **MUST** be idempotent or otherwise prevent a retried invocation from producing an inconsistent or duplicate outcome.
-2. `std-plat-failure-handling-02` Where a function's trigger has its own redelivery window, such as a queue or stream, the function's timeout **MUST** remain shorter than that window, so a message is not redelivered before a prior attempt finishes.
-3. `std-plat-failure-handling-03` Where the platform manages retries, an invocation that exhausts them without succeeding **MUST** be captured for investigation and recovery.
+1. A function subject to automatic retries **MUST** be idempotent or otherwise prevent a retried invocation from producing an inconsistent or duplicate outcome. `std-plat-failure-handling-01`
+2. Where a function's trigger has its own redelivery window, such as a queue or stream, the function's timeout **MUST** remain shorter than that window, so a message is not redelivered before a prior attempt finishes. `std-plat-failure-handling-02`
+3. Where the platform manages retries, an invocation that exhausts them without succeeding **MUST** be captured for investigation and recovery. `std-plat-failure-handling-03`
 
 ### Implements These Principles
 
@@ -156,8 +156,8 @@ A function receives only the permissions its code requires, and obsolete permiss
 
 ### Standards
 
-1. `std-plat-permissions-01` A function **MUST** be granted only the permissions its own code requires.
-2. `std-plat-permissions-02` A permission no longer required by a function's code **MUST** be removed.
+1. A function **MUST** be granted only the permissions its own code requires. `std-plat-permissions-01`
+2. A permission no longer required by a function's code **MUST** be removed. `std-plat-permissions-02`
 
 ### Implements These Principles
 
@@ -171,8 +171,8 @@ A function references runtime secrets through an approved secrets management mec
 
 ### Standards
 
-1. `std-plat-runtime-secrets-01` A secret a function depends on at runtime **MUST** be stored in and referenced through an approved secrets management mechanism.
-2. `std-plat-runtime-secrets-02` A secret **MUST** be referenced independently of the function's deployment package so rotation does not require the package to be rebuilt.
+1. A secret a function depends on at runtime **MUST** be stored in and referenced through an approved secrets management mechanism. `std-plat-runtime-secrets-01`
+2. A secret **MUST** be referenced independently of the function's deployment package so rotation does not require the package to be rebuilt. `std-plat-runtime-secrets-02`
 
 ### Implements These Principles
 
@@ -187,8 +187,8 @@ Invocation flows propagate trace context where available, with duration and cost
 
 ### Standards
 
-1. `std-plat-observability-01` Function instrumentation **SHOULD** create or propagate trace context across synchronous, asynchronous, and event-driven boundaries.
-2. `std-plat-observability-02` The duration and cost contribution of an invocation **MUST** be visible, so a change in cost can be attributed to the function or invocation path that caused it.
+1. Function instrumentation **SHOULD** create or propagate trace context across synchronous, asynchronous, and event-driven boundaries. `std-plat-observability-01`
+2. The duration and cost contribution of an invocation **MUST** be visible, so a change in cost can be attributed to the function or invocation path that caused it. `std-plat-observability-02`
 
 ### Implements These Principles
 

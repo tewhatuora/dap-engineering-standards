@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-14
 ---
 
 # AI Usage & Verification in Code Review
@@ -12,12 +12,12 @@ An author independently establishes that an AI-assisted change meets its stated 
 
 ### Standards
 
-1. `std-ai-pre-submission-verification-01` Authors **MUST** independently verify the correctness and intended behaviour of AI-generated or AI-modified code before submitting it for review.
-2. `std-ai-pre-submission-verification-02` Authors **SHOULD** confirm that the automated tests, linting, and static analysis required for the change pass before submission.
-3. `std-ai-pre-submission-verification-03` Authors **SHOULD** confirm that test coverage adequately reflects the change before submission.
-4. `std-ai-pre-submission-verification-04` Authors **MUST** verify that dependencies, packages, and APIs introduced or referenced by AI-generated code exist and are appropriate for the intended use before submission.
-5. `std-ai-pre-submission-verification-05` Authors **MUST** screen AI-generated code for security weaknesses.
-6. `std-ai-pre-submission-verification-06` Authors **MUST** verify that every modification produced by an AI agent is required for the stated change before submission.
+1. Authors **MUST** independently verify the correctness and intended behaviour of AI-generated or AI-modified code before submitting it for review. `std-ai-pre-submission-verification-01`
+2. Authors **SHOULD** confirm that the automated tests, linting, and static analysis required for the change pass before submission. `std-ai-pre-submission-verification-02`
+3. Authors **SHOULD** confirm that test coverage adequately reflects the change before submission. `std-ai-pre-submission-verification-03`
+4. Authors **MUST** verify that dependencies, packages, and APIs introduced or referenced by AI-generated code exist and are appropriate for the intended use before submission. `std-ai-pre-submission-verification-04`
+5. Authors **MUST** screen AI-generated code for security weaknesses. `std-ai-pre-submission-verification-05`
+6. Authors **MUST** verify that every modification produced by an AI agent is required for the stated change before submission. `std-ai-pre-submission-verification-06`
 
 ### Related Standards
 
@@ -40,9 +40,9 @@ Material AI involvement in a submission remains identifiable to its reviewer.
 
 ### Standards
 
-1. `std-ai-ai-disclosure-01` Authors **MUST** disclose material AI involvement through the standard pull or merge request template.
-2. `std-ai-ai-disclosure-02` The disclosure **MUST** identify the parts of the change that contain AI-generated or AI-modified content.
-3. `std-ai-ai-disclosure-03` The disclosure **MUST** identify each design decision materially influenced by AI assistance.
+1. Authors **MUST** disclose material AI involvement through the standard pull or merge request template. `std-ai-ai-disclosure-01`
+2. The disclosure **MUST** identify the parts of the change that contain AI-generated or AI-modified content. `std-ai-ai-disclosure-02`
+3. The disclosure **MUST** identify each design decision materially influenced by AI assistance. `std-ai-ai-disclosure-03`
 
 ### Related Standards
 
@@ -60,9 +60,9 @@ A reviewer gives an AI-disclosed submission at least the same scrutiny as human-
 
 ### Standards
 
-1. `std-ai-reviewer-scrutiny-01` Reviewers **MUST** apply scrutiny to AI-disclosed submissions at least equivalent to that applied to human-authored code.
-2. `std-ai-reviewer-scrutiny-02` Reviewers **MUST NOT** approve a submission solely because the author disclosed AI involvement or the AI-generated code appears plausible.
-3. `std-ai-reviewer-scrutiny-03` Reviewers **SHOULD** pay particular attention to defects characteristic of generative AI output, including hallucinated APIs, subtle logic errors, insecure default patterns, and unnecessary complexity.
+1. Reviewers **MUST** apply scrutiny to AI-disclosed submissions at least equivalent to that applied to human-authored code. `std-ai-reviewer-scrutiny-01`
+2. Reviewers **MUST NOT** approve a submission solely because the author disclosed AI involvement or the AI-generated code appears plausible. `std-ai-reviewer-scrutiny-02`
+3. Reviewers **SHOULD** pay particular attention to defects characteristic of generative AI output, including hallucinated APIs, subtle logic errors, insecure default patterns, and unnecessary complexity. `std-ai-reviewer-scrutiny-03`
 
 ### Related Standards
 
@@ -81,9 +81,9 @@ A reviewer may use an approved AI tool to assist review while retaining independ
 
 ### Standards
 
-1. `std-ai-ai-assisted-review-01` Reviewers **MAY** use AI tools to assist review activity, such as summarising changes, surfacing potential defects, or checking adherence to coding standards.
-2. `std-ai-ai-assisted-review-02` AI tools used by reviewers **MUST** be limited to approved tooling.
-3. `std-ai-ai-assisted-review-03` Reviewers **MUST NOT** rely on AI-generated review output as a substitute for the reviewer's own understanding of the change.
+1. Reviewers **MAY** use AI tools to assist review activity, such as summarising changes, surfacing potential defects, or checking adherence to coding standards. `std-ai-ai-assisted-review-01`
+2. AI tools used by reviewers **MUST** be limited to approved tooling. `std-ai-ai-assisted-review-02`
+3. Reviewers **MUST NOT** rely on AI-generated review output as a substitute for the reviewer's own understanding of the change. `std-ai-ai-assisted-review-03`
 
 ### Related Standards
 
@@ -103,9 +103,9 @@ A reviewer approves each change and remains accountable for the decision.
 
 ### Standards
 
-1. `std-ai-approval-accountability-01` Where an AI tool is recorded as a review participant, its review **MUST NOT** count toward a requirement for reviewer approval.
-2. `std-ai-approval-accountability-02` At least one reviewer **MUST** review and approve the change, regardless of any AI assistance used by the author or reviewer.
-3. `std-ai-approval-accountability-03` Accountability for the approval decision **MUST** remain with the reviewers of record.
+1. Where an AI tool is recorded as a review participant, its review **MUST NOT** count toward a requirement for reviewer approval. `std-ai-approval-accountability-01`
+2. At least one reviewer **MUST** review and approve the change, regardless of any AI assistance used by the author or reviewer. `std-ai-approval-accountability-02`
+3. Accountability for the approval decision **MUST** remain with the reviewers of record. `std-ai-approval-accountability-03`
 
 ### Related Standards
 

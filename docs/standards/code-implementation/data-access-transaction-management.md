@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-14
 ---
 
 # Data Access & Transaction Management
@@ -12,9 +12,9 @@ A service accesses its data store through purpose-named operations in a defined 
 
 ### Standards
 
-1. `std-code-data-access-layer-01` A service **SHOULD** access its data store through a defined data access layer or set of interfaces.
-2. `std-code-data-access-layer-02` A data access layer **SHOULD** provide a purpose-named method for each operation a service performs, such as retrieving a patient's active referrals, so the data store stays replaceable without changing the code that calls it.
-3. `std-code-data-access-layer-03` A query or statement used in more than one place across a codebase **SHOULD** be defined once within the data access layer and reused.
+1. A service **SHOULD** access its data store through a defined data access layer or set of interfaces. `std-code-data-access-layer-01`
+2. A data access layer **SHOULD** provide a purpose-named method for each operation a service performs, such as retrieving a patient's active referrals, so the data store stays replaceable without changing the code that calls it. `std-code-data-access-layer-02`
+3. A query or statement used in more than one place across a codebase **SHOULD** be defined once within the data access layer and reused. `std-code-data-access-layer-03`
 
 ### Implements These Principles
 
@@ -29,13 +29,13 @@ An ORM is optional; when used, its loading strategy is explicit, lazy relationsh
 
 ### Standards
 
-1. `std-code-object-relational-mapping-01` A service **MAY** use an ORM.
-2. `std-code-object-relational-mapping-02` A service **MAY** use raw queries or a lighter-weight data access technology instead, where an ORM does not provide a genuine benefit.
-3. `std-code-object-relational-mapping-03` An eager or lazy loading strategy **MUST** be an explicit, deliberate choice for each relationship an ORM defines.
-4. `std-code-object-relational-mapping-04` A lazy-loaded relationship or collection **MUST NOT** be accessed once the transaction or connection that would resolve it has ended.
-5. `std-code-object-relational-mapping-05` The actual query an ORM executes against a data store **MUST** be visible for diagnosis.
-6. `std-code-object-relational-mapping-06` An ORM's automatic schema synchronisation or migration generation feature **SHOULD NOT** be used to modify a data store.
-7. `std-code-object-relational-mapping-07` Schema changes **SHOULD** still be applied through the service's migration tooling.
+1. A service **MAY** use an ORM. `std-code-object-relational-mapping-01`
+2. A service **MAY** use raw queries or a lighter-weight data access technology instead, where an ORM does not provide a genuine benefit. `std-code-object-relational-mapping-02`
+3. An eager or lazy loading strategy **MUST** be an explicit, deliberate choice for each relationship an ORM defines. `std-code-object-relational-mapping-03`
+4. A lazy-loaded relationship or collection **MUST NOT** be accessed once the transaction or connection that would resolve it has ended. `std-code-object-relational-mapping-04`
+5. The actual query an ORM executes against a data store **MUST** be visible for diagnosis. `std-code-object-relational-mapping-05`
+6. An ORM's automatic schema synchronisation or migration generation feature **SHOULD NOT** be used to modify a data store. `std-code-object-relational-mapping-06`
+7. Schema changes **SHOULD** still be applied through the service's migration tooling. `std-code-object-relational-mapping-07`
 
 ### Related Standards
 
@@ -53,8 +53,8 @@ A query is constructed through parameterisation or an equivalent binding mechani
 
 ### Standards
 
-1. `std-code-parameterised-queries-01` A query or command sent to a data store **MUST** be constructed using a parameterised query, prepared statement, or equivalent binding mechanism provided by the data access technology in use.
-2. `std-code-parameterised-queries-02` Untrusted input, including a value originating from a user, an external system, or another service, **MUST NOT** be concatenated or interpolated directly into a query string.
+1. A query or command sent to a data store **MUST** be constructed using a parameterised query, prepared statement, or equivalent binding mechanism provided by the data access technology in use. `std-code-parameterised-queries-01`
+2. Untrusted input, including a value originating from a user, an external system, or another service, **MUST NOT** be concatenated or interpolated directly into a query string. `std-code-parameterised-queries-02`
 
 ### Implements These Principles
 
@@ -68,8 +68,8 @@ A data store error is logged in full for internal diagnosis without revealing qu
 
 ### Standards
 
-1. `std-code-error-handling-01` An error returned by a data store **MUST NOT** be disclosed to a caller in a form that reveals a query's structure or the underlying schema.
-2. `std-code-error-handling-02` Diagnostic detail about a data store error, including its underlying cause where available, **MUST** be logged without logging a sensitive parameter value the query contained.
+1. An error returned by a data store **MUST NOT** be disclosed to a caller in a form that reveals a query's structure or the underlying schema. `std-code-error-handling-01`
+2. Diagnostic detail about a data store error, including its underlying cause where available, **MUST** be logged without logging a sensitive parameter value the query contained. `std-code-error-handling-02`
 
 ### Implements These Principles
 
@@ -84,11 +84,11 @@ A service using reusable data store connections obtains validated connections fr
 
 ### Standards
 
-1. `std-code-connection-pooling-01` A service using reusable data store connections **SHOULD** obtain them from a connection pool.
-2. `std-code-connection-pooling-02` A connection pool's size **MUST** be bounded and configured to suit the data store's actual connection capacity and the service's expected concurrency.
-3. `std-code-connection-pooling-03` A connection **MUST** be released back to its pool once an operation completes, including where the operation fails or raises an error.
-4. `std-code-connection-pooling-04` A connection attempt **MUST** be bound by a timeout, so a service does not block indefinitely trying to obtain a connection to an unresponsive data store.
-5. `std-code-connection-pooling-05` A connection pool **MUST** validate a connection before reuse, or retire it after a maximum idle time, so a stale or broken connection is not handed to a service undetected.
+1. A service using reusable data store connections **SHOULD** obtain them from a connection pool. `std-code-connection-pooling-01`
+2. A connection pool's size **MUST** be bounded and configured to suit the data store's actual connection capacity and the service's expected concurrency. `std-code-connection-pooling-02`
+3. A connection **MUST** be released back to its pool once an operation completes, including where the operation fails or raises an error. `std-code-connection-pooling-03`
+4. A connection attempt **MUST** be bound by a timeout, so a service does not block indefinitely trying to obtain a connection to an unresponsive data store. `std-code-connection-pooling-04`
+5. A connection pool **MUST** validate a connection before reuse, or retire it after a maximum idle time, so a stale or broken connection is not handed to a service undetected. `std-code-connection-pooling-05`
 
 ### Implements These Principles
 
@@ -103,9 +103,9 @@ A service uses a non-administrative data store credential that grants only the a
 
 ### Standards
 
-1. `std-code-data-store-credentials-01` A service's data store credential **MUST** be granted only the operations and objects its role requires, such as read, create, update, or delete access to specific tables, collections, or stored procedures.
-2. `std-code-data-store-credentials-02` A credential's granted access **MUST** be reviewed when a service's role changes, and revoked where no longer required.
-3. `std-code-data-store-credentials-03` A service **MUST NOT** use a data store's administrative or superuser credential for routine application access.
+1. A service's data store credential **MUST** be granted only the operations and objects its role requires, such as read, create, update, or delete access to specific tables, collections, or stored procedures. `std-code-data-store-credentials-01`
+2. A credential's granted access **MUST** be reviewed when a service's role changes, and revoked where no longer required. `std-code-data-store-credentials-02`
+3. A service **MUST NOT** use a data store's administrative or superuser credential for routine application access. `std-code-data-store-credentials-03`
 
 ### Related Standards
 
@@ -123,10 +123,10 @@ A transaction's boundary is explicit in code, scoped to one atomic unit of work,
 
 ### Standards
 
-1. `std-code-transaction-boundaries-01` A transaction's start and end **MUST** be identifiable from the service's implementation.
-2. `std-code-transaction-boundaries-02` Writes belonging to the same unit of work **MUST** be executed within a single transaction and rolled back in full where any part fails.
-3. `std-code-transaction-boundaries-03` A transaction **MUST** span only the operations needed to complete its unit of work.
-4. `std-code-transaction-boundaries-04` A transaction **SHOULD NOT** remain open while waiting on an external operation, such as a call to another service or system.
+1. A transaction's start and end **MUST** be identifiable from the service's implementation. `std-code-transaction-boundaries-01`
+2. Writes belonging to the same unit of work **MUST** be executed within a single transaction and rolled back in full where any part fails. `std-code-transaction-boundaries-02`
+3. A transaction **MUST** span only the operations needed to complete its unit of work. `std-code-transaction-boundaries-03`
+4. A transaction **SHOULD NOT** remain open while waiting on an external operation, such as a call to another service or system. `std-code-transaction-boundaries-04`
 
 ### Implements These Principles
 
@@ -140,11 +140,11 @@ A transaction's isolation level and concurrency control are deliberately selecte
 
 ### Standards
 
-1. `std-code-concurrency-control-01` A transaction's isolation level **SHOULD** match the consistency and concurrency needs of the operation it protects.
-2. `std-code-concurrency-control-02` Optimistic concurrency control, such as a version or timestamp column checked at write time, **SHOULD** be used where write conflicts are infrequent.
-3. `std-code-concurrency-control-03` Pessimistic locking **SHOULD** be used where write conflicts are frequent.
-4. `std-code-concurrency-control-04` A write that fails due to a conflicting concurrent update **MUST** be surfaced to the caller or retried.
-5. `std-code-concurrency-control-05` A write that fails due to a conflicting concurrent update **MUST NOT** result in a lost update.
+1. A transaction's isolation level **SHOULD** match the consistency and concurrency needs of the operation it protects. `std-code-concurrency-control-01`
+2. Optimistic concurrency control, such as a version or timestamp column checked at write time, **SHOULD** be used where write conflicts are infrequent. `std-code-concurrency-control-02`
+3. Pessimistic locking **SHOULD** be used where write conflicts are frequent. `std-code-concurrency-control-03`
+4. A write that fails due to a conflicting concurrent update **MUST** be surfaced to the caller or retried. `std-code-concurrency-control-04`
+5. A write that fails due to a conflicting concurrent update **MUST NOT** result in a lost update. `std-code-concurrency-control-05`
 
 ### Implements These Principles
 
@@ -158,10 +158,10 @@ An operation against a data store is bounded by a timeout, and only retried when
 
 ### Standards
 
-1. `std-code-timeouts-retries-01` An operation executed against a data store **MUST** be bound by a timeout, so a service does not block indefinitely waiting for it to complete.
-2. `std-code-timeouts-retries-02` An operation against a data store that fails with a transient error, such as a network or I/O error, **SHOULD** be retried automatically, using a bounded number of attempts with minimal delay between them.
-3. `std-code-timeouts-retries-03` An operation **MUST NOT** be retried where its failure is not transient, such as a constraint violation or an authorisation failure, since retrying would not change the outcome.
-4. `std-code-timeouts-retries-04` A retried operation **MUST** be safe to execute more than once, through idempotency or an equivalent safeguard.
+1. An operation executed against a data store **MUST** be bound by a timeout, so a service does not block indefinitely waiting for it to complete. `std-code-timeouts-retries-01`
+2. An operation against a data store that fails with a transient error, such as a network or I/O error, **SHOULD** be retried automatically, using a bounded number of attempts with minimal delay between them. `std-code-timeouts-retries-02`
+3. An operation **MUST NOT** be retried where its failure is not transient, such as a constraint violation or an authorisation failure, since retrying would not change the outcome. `std-code-timeouts-retries-03`
+4. A retried operation **MUST** be safe to execute more than once, through idempotency or an equivalent safeguard. `std-code-timeouts-retries-04`
 
 ### Implements These Principles
 
@@ -175,10 +175,10 @@ Each service commits data within its own transaction boundary, and cross-service
 
 ### Standards
 
-1. `std-code-cross-service-consistency-01` A transaction **MUST NOT** span more than one service's own data store.
-2. `std-code-cross-service-consistency-02` Each service's data **MUST** be committed within its own transaction boundary.
-3. `std-code-cross-service-consistency-03` An operation requiring consistency across more than one service **MUST** use an eventual-consistency pattern, such as a saga with compensating actions.
-4. `std-code-cross-service-consistency-04` A state change and the event or message announcing it **MUST** be committed together as a single atomic unit, such as through a transactional outbox, so the two cannot diverge.
+1. A transaction **MUST NOT** span more than one service's own data store. `std-code-cross-service-consistency-01`
+2. Each service's data **MUST** be committed within its own transaction boundary. `std-code-cross-service-consistency-02`
+3. An operation requiring consistency across more than one service **MUST** use an eventual-consistency pattern, such as a saga with compensating actions. `std-code-cross-service-consistency-03`
+4. A state change and the event or message announcing it **MUST** be committed together as a single atomic unit, such as through a transactional outbox, so the two cannot diverge. `std-code-cross-service-consistency-04`
 
 ### Related Standards
 
@@ -196,13 +196,13 @@ A read is batched, paginated, and directed to a replica or cache where its consi
 
 ### Standards
 
-1. `std-code-read-efficiency-01` A data access layer **SHOULD** retrieve related data using a single batched or joined query where feasible, avoiding the N+1 query problem of issuing a separate query per related record.
-2. `std-code-read-efficiency-02` A read that could return a large or unbounded result set **MUST** use pagination or an equivalent mechanism to limit what is retrieved at once.
-3. `std-code-read-efficiency-03` A read-heavy workload **SHOULD** be directed to a read replica where one is available, reserving the primary data store's capacity for a write and for a read that requires strongly consistent data.
-4. `std-code-read-efficiency-04` Code that reads from a replica **MUST** tolerate its eventual consistency.
-5. `std-code-read-efficiency-05` Code that reads from a replica **MUST NOT** assume a write is immediately visible.
-6. `std-code-read-efficiency-06` A frequently-read, infrequently-changing value **SHOULD** be served from a cache where the value tolerates a defined staleness window.
-7. `std-code-read-efficiency-07` A cache **MUST** have a defined invalidation or expiry approach, so it does not serve stale data indefinitely.
+1. A data access layer **SHOULD** retrieve related data using a single batched or joined query where feasible, avoiding the N+1 query problem of issuing a separate query per related record. `std-code-read-efficiency-01`
+2. A read that could return a large or unbounded result set **MUST** use pagination or an equivalent mechanism to limit what is retrieved at once. `std-code-read-efficiency-02`
+3. A read-heavy workload **SHOULD** be directed to a read replica where one is available, reserving the primary data store's capacity for a write and for a read that requires strongly consistent data. `std-code-read-efficiency-03`
+4. Code that reads from a replica **MUST** tolerate its eventual consistency. `std-code-read-efficiency-04`
+5. Code that reads from a replica **MUST NOT** assume a write is immediately visible. `std-code-read-efficiency-05`
+6. A frequently-read, infrequently-changing value **SHOULD** be served from a cache where the value tolerates a defined staleness window. `std-code-read-efficiency-06`
+7. A cache **MUST** have a defined invalidation or expiry approach, so it does not serve stale data indefinitely. `std-code-read-efficiency-07`
 
 ### Implements These Principles
 
@@ -217,9 +217,9 @@ Writes to the same table are batched into bounded round trips where feasible, an
 
 ### Standards
 
-1. `std-code-write-efficiency-01` A data access layer **SHOULD** batch multiple writes to the same table or collection into a single round trip where feasible.
-2. `std-code-write-efficiency-02` A batch write affecting a large volume of data **SHOULD** be bounded to a reasonable chunk size, so a single write does not lock or overload the data store.
-3. `std-code-write-efficiency-03` A write **SHOULD** be skipped where the value being written has not changed and no audit trail, version counter, or triggered side effect depends on the write.
+1. A data access layer **SHOULD** batch multiple writes to the same table or collection into a single round trip where feasible. `std-code-write-efficiency-01`
+2. A batch write affecting a large volume of data **SHOULD** be bounded to a reasonable chunk size, so a single write does not lock or overload the data store. `std-code-write-efficiency-02`
+3. A write **SHOULD** be skipped where the value being written has not changed and no audit trail, version counter, or triggered side effect depends on the write. `std-code-write-efficiency-03`
 
 ### Implements These Principles
 
@@ -233,10 +233,10 @@ A query's execution time, outcome, and connection pool usage stay observable, co
 
 ### Standards
 
-1. `std-code-observability-01` A query's execution time **MUST** be observable, so a slow query can be identified before it degrades a service's wider performance.
-2. `std-code-observability-02` A query's outcome, whether it succeeded, failed, or was retried, **MUST** be observable so a failure pattern can be investigated.
-3. `std-code-observability-03` A connection pool's utilisation, including its active, idle, and waiting connections, **MUST** be observable, so exhaustion or saturation is detected before it causes request failures.
-4. `std-code-observability-04` A query **MUST** be correlatable with the broader request or transaction it is part of, so a wider performance problem can be traced back to the specific data store interaction responsible for it.
+1. A query's execution time **MUST** be observable, so a slow query can be identified before it degrades a service's wider performance. `std-code-observability-01`
+2. A query's outcome, whether it succeeded, failed, or was retried, **MUST** be observable so a failure pattern can be investigated. `std-code-observability-02`
+3. A connection pool's utilisation, including its active, idle, and waiting connections, **MUST** be observable, so exhaustion or saturation is detected before it causes request failures. `std-code-observability-03`
+4. A query **MUST** be correlatable with the broader request or transaction it is part of, so a wider performance problem can be traced back to the specific data store interaction responsible for it. `std-code-observability-04`
 
 ### Related Standards
 

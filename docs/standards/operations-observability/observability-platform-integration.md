@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-14
 ---
 
 # Observability Platform Integration
@@ -12,7 +12,7 @@ Telemetry required to operate a service is shipped to the organisation's establi
 
 ### Standards
 
-1. `std-ops-telemetry-ingestion-01` Telemetry required to operate a service **MUST** be shipped to the organisation's centralised observability platform.
+1. Telemetry required to operate a service **MUST** be shipped to the organisation's centralised observability platform. `std-ops-telemetry-ingestion-01`
 
 ### Related Standards
 
@@ -30,10 +30,10 @@ Telemetry uses an open transport, records delivery failures, and remains exporta
 
 ### Standards
 
-1. `std-ops-telemetry-transport-01` Telemetry **SHOULD** be shipped to the observability platform using an open, vendor-neutral protocol or collection mechanism, such as the [OpenTelemetry Protocol](https://opentelemetry.io/docs/specs/otlp/).
-2. `std-ops-telemetry-transport-02` A failure to ship telemetry to the observability platform **SHOULD** itself be recorded, such as through an internal metric, so a gap in telemetry is not mistaken for the absence of a problem.
-3. `std-ops-telemetry-transport-03` Telemetry held within the observability platform **SHOULD** remain exportable in a usable, non-proprietary format, so historical telemetry is not lost if that platform is replaced.
-4. `std-ops-telemetry-transport-04` The ability to export telemetry from the observability platform in a usable, non-proprietary format **SHOULD** be verified periodically.
+1. Telemetry **SHOULD** be shipped to the observability platform using an open, vendor-neutral protocol or collection mechanism, such as the [OpenTelemetry Protocol](https://opentelemetry.io/docs/specs/otlp/). `std-ops-telemetry-transport-01`
+2. A failure to ship telemetry to the observability platform **SHOULD** itself be recorded, such as through an internal metric, so a gap in telemetry is not mistaken for the absence of a problem. `std-ops-telemetry-transport-02`
+3. Telemetry held within the observability platform **SHOULD** remain exportable in a usable, non-proprietary format, so historical telemetry is not lost if that platform is replaced. `std-ops-telemetry-transport-03`
+4. The ability to export telemetry from the observability platform in a usable, non-proprietary format **SHOULD** be verified periodically. `std-ops-telemetry-transport-04`
 
 ### Related Standards
 
@@ -53,9 +53,9 @@ The observability platform operates independently of monitored services, with op
 
 ### Standards
 
-1. `std-ops-platform-availability-01` The observability platform **MUST** be operated with availability independent of the services it monitors, so it remains usable to diagnose an incident affecting those services.
-2. `std-ops-platform-availability-02` A brief unavailability of the observability platform **SHOULD NOT** cause permanent loss of telemetry required for incident response.
-3. `std-ops-platform-availability-03` A service or intermediate collector **SHOULD** buffer telemetry required for incident response within defined resource bounds until the observability platform becomes reachable again.
+1. The observability platform **MUST** be operated with availability independent of the services it monitors, so it remains usable to diagnose an incident affecting those services. `std-ops-platform-availability-01`
+2. A brief unavailability of the observability platform **SHOULD NOT** cause permanent loss of telemetry required for incident response. `std-ops-platform-availability-02`
+3. A service or intermediate collector **SHOULD** buffer telemetry required for incident response within defined resource bounds until the observability platform becomes reachable again. `std-ops-platform-availability-03`
 
 ### Implements These Principles
 
@@ -69,8 +69,8 @@ Each category of telemetry has a defined retention period, weighed against its v
 
 ### Standards
 
-1. `std-ops-telemetry-retention-01` A retention period **MUST** be defined for each category of telemetry, proportionate to its operational and investigative value, the cost of its continued storage, and any applicable compliance requirement.
-2. `std-ops-telemetry-retention-02` Business-relevant telemetry **SHOULD** be retained for a longer period than diagnostic telemetry, so historic trends remain available for reporting purposes.
+1. A retention period **MUST** be defined for each category of telemetry, proportionate to its operational and investigative value, the cost of its continued storage, and any applicable compliance requirement. `std-ops-telemetry-retention-01`
+2. Business-relevant telemetry **SHOULD** be retained for a longer period than diagnostic telemetry, so historic trends remain available for reporting purposes. `std-ops-telemetry-retention-02`
 
 ### Related Standards
 

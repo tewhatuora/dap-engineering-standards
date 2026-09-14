@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-14
 ---
 
 # Event-Driven Messaging
@@ -12,11 +12,11 @@ Synchronous or event-driven communication is selected according to an interactio
 
 ### Standards
 
-1. `std-arch-communication-style-01` Whether a service communicates synchronously or through an asynchronous event or message **MUST** be an explicit design decision based on the coupling, latency, and consistency needs of the interaction.
-2. `std-arch-communication-style-02` Asynchronous, event-driven communication **SHOULD** be preferred over repeated point-to-point calls where a producer does not require an immediate response, or where the same event needs to reach more than one consumer.
-3. `std-arch-communication-style-03` Where more than one consumer needs the same event, each **MUST** receive an independent copy through a fan-out mechanism, such as a separate topic subscription.
-4. `std-arch-communication-style-04` A synchronous call **SHOULD** be preferred where a caller genuinely requires an immediate response before it can proceed.
-5. `std-arch-communication-style-05` A synchronous call **MUST** still apply the resilience patterns required of any dependency call, such as a bounded timeout and bounded, backoff-based retry.
+1. Whether a service communicates synchronously or through an asynchronous event or message **MUST** be an explicit design decision based on the coupling, latency, and consistency needs of the interaction. `std-arch-communication-style-01`
+2. Asynchronous, event-driven communication **SHOULD** be preferred over repeated point-to-point calls where a producer does not require an immediate response, or where the same event needs to reach more than one consumer. `std-arch-communication-style-02`
+3. Where more than one consumer needs the same event, each **MUST** receive an independent copy through a fan-out mechanism, such as a separate topic subscription. `std-arch-communication-style-03`
+4. A synchronous call **SHOULD** be preferred where a caller genuinely requires an immediate response before it can proceed. `std-arch-communication-style-04`
+5. A synchronous call **MUST** still apply the resilience patterns required of any dependency call, such as a bounded timeout and bounded, backoff-based retry. `std-arch-communication-style-05`
 
 ### Implements These Principles
 
@@ -31,8 +31,8 @@ A multi-service workflow uses a deliberately chosen coordination style with fail
 
 ### Standards
 
-1. `std-arch-workflow-coordination-01` A business process spanning multiple services **MUST** deliberately use either decentralised choreography or a central orchestrator as its coordination style.
-2. `std-arch-workflow-coordination-02` Where a multi-service workflow cannot be completed as a single transaction, its compensating action for partial failure **MUST** be defined alongside the workflow itself.
+1. A business process spanning multiple services **MUST** deliberately use either decentralised choreography or a central orchestrator as its coordination style. `std-arch-workflow-coordination-01`
+2. Where a multi-service workflow cannot be completed as a single transaction, its compensating action for partial failure **MUST** be defined alongside the workflow itself. `std-arch-workflow-coordination-02`
 
 ### Implements These Principles
 
@@ -46,8 +46,8 @@ A service uses the organisation's approved shared messaging platform and obtains
 
 ### Standards
 
-1. `std-arch-messaging-platform-01` A service **MUST** use the organisation's approved shared message broker or event-streaming platform.
-2. `std-arch-messaging-platform-02` A messaging capability not met by the shared platform **MUST** be approved before it is adopted.
+1. A service **MUST** use the organisation's approved shared message broker or event-streaming platform. `std-arch-messaging-platform-01`
+2. A messaging capability not met by the shared platform **MUST** be approved before it is adopted. `std-arch-messaging-platform-02`
 
 ### Implements These Principles
 
@@ -61,14 +61,14 @@ Every event or message schema is documented, producer-owned, version-controlled,
 
 ### Standards
 
-1. `std-arch-schema-contracts-01` Every event or message type **MUST** be defined by a documented, machine-readable schema, such as the [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest) or [JSON Schema](https://json-schema.org/specification), before it is published.
-2. `std-arch-schema-contracts-02` An event's envelope metadata, such as its type, source, and timestamp, **SHOULD** use a consistent, standard format, such as the [CloudEvents Specification](https://cloudevents.io/), so a consumer can process events from any producer uniformly.
-3. `std-arch-schema-contracts-03` A schema **SHOULD** be owned by the producer that publishes it.
-4. `std-arch-schema-contracts-04` A consumer **MUST NOT** define or alter a schema it does not own.
-5. `std-arch-schema-contracts-05` A consumer **MUST** interpret an event or message using only its documented schema.
-6. `std-arch-schema-contracts-06` A schema **MUST** be defined and version-controlled as code.
-7. `std-arch-schema-contracts-07` A schema **MUST** be kept current with the producer's actual published structure so a consumer does not need to seek guidance from the producer.
-8. `std-arch-schema-contracts-08` A payload too large for a channel's message size limit **SHOULD** be passed by reference to externally stored content.
+1. Every event or message type **MUST** be defined by a documented, machine-readable schema, such as the [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest) or [JSON Schema](https://json-schema.org/specification), before it is published. `std-arch-schema-contracts-01`
+2. An event's envelope metadata, such as its type, source, and timestamp, **SHOULD** use a consistent, standard format, such as the [CloudEvents Specification](https://cloudevents.io/), so a consumer can process events from any producer uniformly. `std-arch-schema-contracts-02`
+3. A schema **SHOULD** be owned by the producer that publishes it. `std-arch-schema-contracts-03`
+4. A consumer **MUST NOT** define or alter a schema it does not own. `std-arch-schema-contracts-04`
+5. A consumer **MUST** interpret an event or message using only its documented schema. `std-arch-schema-contracts-05`
+6. A schema **MUST** be defined and version-controlled as code. `std-arch-schema-contracts-06`
+7. A schema **MUST** be kept current with the producer's actual published structure so a consumer does not need to seek guidance from the producer. `std-arch-schema-contracts-07`
+8. A payload too large for a channel's message size limit **SHOULD** be passed by reference to externally stored content. `std-arch-schema-contracts-08`
 
 ### Implements These Principles
 
@@ -83,9 +83,9 @@ A published schema evolves additively, and a breaking change ships as a new sche
 
 ### Standards
 
-1. `std-arch-schema-evolution-01` A published event or message schema **MUST NOT** be changed in a way that breaks compatibility for its existing consumers.
-2. `std-arch-schema-evolution-02` A breaking change **MUST** instead be introduced as a new schema version.
-3. `std-arch-schema-evolution-03` An additive, non-breaking change, such as a new optional field, **SHOULD** be preferred over introducing a new schema version.
+1. A published event or message schema **MUST NOT** be changed in a way that breaks compatibility for its existing consumers. `std-arch-schema-evolution-01`
+2. A breaking change **MUST** instead be introduced as a new schema version. `std-arch-schema-evolution-02`
+3. An additive, non-breaking change, such as a new optional field, **SHOULD** be preferred over introducing a new schema version. `std-arch-schema-evolution-03`
 
 ### Related Standards
 
@@ -103,8 +103,8 @@ An event schema is verified through contract or integration testing before a cha
 
 ### Standards
 
-1. `std-arch-contract-testing-01` An event or message schema **MUST** be verified through contract or integration testing.
-2. `std-arch-contract-testing-02` A change to a published schema **SHOULD** be verified against a consumer-driven contract test before release, or tested against actual consumers where a shared integration environment makes that practical.
+1. An event or message schema **MUST** be verified through contract or integration testing. `std-arch-contract-testing-01`
+2. A change to a published schema **SHOULD** be verified against a consumer-driven contract test before release, or tested against actual consumers where a shared integration environment makes that practical. `std-arch-contract-testing-02`
 
 ### Related Standards
 
@@ -122,12 +122,12 @@ A channel's delivery, ordering, and retention guarantees are documented and moni
 
 ### Standards
 
-1. `std-arch-delivery-ordering-01` A channel's delivery guarantee, such as at-least-once, at-most-once, or exactly-once delivery, **MUST** be explicitly defined and documented.
-2. `std-arch-delivery-ordering-02` Whether a channel guarantees ordering, and at what scope, such as globally or only within a partition or key, **MUST** be explicitly defined and documented.
-3. `std-arch-delivery-ordering-03` A FIFO or strictly-ordered channel **SHOULD** be used only where a consumer genuinely requires ordering, since it typically incurs additional overhead and lower throughput than an unordered channel.
-4. `std-arch-delivery-ordering-04` On a strictly-ordered channel, dead-lettering a failed message to unblock its sequence **MUST NOT** occur without first checking whether a later message depends on its outcome, since a missing precondition can silently corrupt state.
-5. `std-arch-delivery-ordering-05` A channel's retention period for an unconsumed message **MUST** be defined and monitored, so loss from a slow or unavailable consumer is a known, managed risk.
-6. `std-arch-delivery-ordering-06` A consumer **MUST NOT** depend on an ordering or delivery guarantee stronger than what its channel actually provides.
+1. A channel's delivery guarantee, such as at-least-once, at-most-once, or exactly-once delivery, **MUST** be explicitly defined and documented. `std-arch-delivery-ordering-01`
+2. Whether a channel guarantees ordering, and at what scope, such as globally or only within a partition or key, **MUST** be explicitly defined and documented. `std-arch-delivery-ordering-02`
+3. A FIFO or strictly-ordered channel **SHOULD** be used only where a consumer genuinely requires ordering, since it typically incurs additional overhead and lower throughput than an unordered channel. `std-arch-delivery-ordering-03`
+4. On a strictly-ordered channel, dead-lettering a failed message to unblock its sequence **MUST NOT** occur without first checking whether a later message depends on its outcome, since a missing precondition can silently corrupt state. `std-arch-delivery-ordering-04`
+5. A channel's retention period for an unconsumed message **MUST** be defined and monitored, so loss from a slow or unavailable consumer is a known, managed risk. `std-arch-delivery-ordering-05`
+6. A consumer **MUST NOT** depend on an ordering or delivery guarantee stronger than what its channel actually provides. `std-arch-delivery-ordering-06`
 
 ### Implements These Principles
 
@@ -141,8 +141,8 @@ An event's publication and the state change it represents commit atomically, and
 
 ### Standards
 
-1. `std-arch-reliable-event-publication-01` Publishing an event and committing the state change it represents **MUST** happen as a single atomic unit, such as through a transactional outbox, so neither can occur without the other.
-2. `std-arch-reliable-event-publication-02` A failure to publish an event **MUST** be logged and monitored, so it can be detected and remediated.
+1. Publishing an event and committing the state change it represents **MUST** happen as a single atomic unit, such as through a transactional outbox, so neither can occur without the other. `std-arch-reliable-event-publication-01`
+2. A failure to publish an event **MUST** be logged and monitored, so it can be detected and remediated. `std-arch-reliable-event-publication-02`
 
 ### Related Standards
 
@@ -160,8 +160,8 @@ A consumer processes a duplicate or redelivered message without producing an inc
 
 ### Standards
 
-1. `std-arch-idempotent-consumers-01` A consumer **MUST** process a duplicate or redelivered message safely, without producing inconsistent or duplicate side effects, since most channels provide at-least-once delivery.
-2. `std-arch-idempotent-consumers-02` Where a consumer's processing cannot be made idempotent, it **MUST** apply another safeguard, such as a processed-message record, to prevent a redelivered message being applied more than once.
+1. A consumer **MUST** process a duplicate or redelivered message safely, without producing inconsistent or duplicate side effects, since most channels provide at-least-once delivery. `std-arch-idempotent-consumers-01`
+2. Where a consumer's processing cannot be made idempotent, it **MUST** apply another safeguard, such as a processed-message record, to prevent a redelivered message being applied more than once. `std-arch-idempotent-consumers-02`
 
 ### Implements These Principles
 
@@ -175,8 +175,8 @@ A message that repeatedly fails processing is dead-lettered after bounded attemp
 
 ### Standards
 
-1. `std-arch-dead-letter-handling-01` A message that repeatedly fails processing **MUST** be moved to a dead-letter mechanism after a bounded number of attempts.
-2. `std-arch-dead-letter-handling-02` A message held in a dead-letter mechanism **MUST** be monitored and have a defined remediation path, such as redriving it once the underlying cause is resolved.
+1. A message that repeatedly fails processing **MUST** be moved to a dead-letter mechanism after a bounded number of attempts. `std-arch-dead-letter-handling-01`
+2. A message held in a dead-letter mechanism **MUST** be monitored and have a defined remediation path, such as redriving it once the underlying cause is resolved. `std-arch-dead-letter-handling-02`
 
 ### Implements These Principles
 
@@ -190,8 +190,8 @@ A consumer handles overload through backpressure or scaling and isolates high-vo
 
 ### Standards
 
-1. `std-arch-consumer-overload-01` A consumer **SHOULD** be able to signal backpressure or scale to match demand, so growth in queue depth or consumer lag does not cause unbounded delay or resource exhaustion.
-2. `std-arch-consumer-overload-02` A high-volume or poison message source **SHOULD** be isolated from other consumers sharing the same channel, so it cannot exhaust capacity they need.
+1. A consumer **SHOULD** be able to signal backpressure or scale to match demand, so growth in queue depth or consumer lag does not cause unbounded delay or resource exhaustion. `std-arch-consumer-overload-01`
+2. A high-volume or poison message source **SHOULD** be isolated from other consumers sharing the same channel, so it cannot exhaust capacity they need. `std-arch-consumer-overload-02`
 
 ### Implements These Principles
 
@@ -205,14 +205,14 @@ Channel access is authenticated and limited by default, and confidential payload
 
 ### Standards
 
-1. `std-arch-access-payload-security-01` Access to publish or subscribe to a channel **MUST** be authenticated and authorised by default.
-2. `std-arch-access-payload-security-02` A channel **MAY** be deliberately designed for unauthenticated access where public consumption is the intended use case.
-3. `std-arch-access-payload-security-03` Unauthenticated access where public consumption is the intended use case **MUST** be an explicit design decision.
-4. `std-arch-access-payload-security-04` Access granted to a producer or consumer **MUST** be limited to the specific channels it requires.
-5. `std-arch-access-payload-security-05` A payload containing confidential or sensitive data **MUST** be encrypted in transit and at rest.
-6. `std-arch-access-payload-security-06` A field not needed by any subscribed consumer **SHOULD** be omitted from the payload.
-7. `std-arch-access-payload-security-07` A channel exposing data subject to a residency or sovereignty requirement **MUST** be able to restrict subscription by jurisdiction.
-8. `std-arch-access-payload-security-08` Data subject to a residency or sovereignty requirement **MUST NOT** be delivered outside an approved jurisdiction unless that cross-border flow is itself identified and approved.
+1. Access to publish or subscribe to a channel **MUST** be authenticated and authorised by default. `std-arch-access-payload-security-01`
+2. A channel **MAY** be deliberately designed for unauthenticated access where public consumption is the intended use case. `std-arch-access-payload-security-02`
+3. Unauthenticated access where public consumption is the intended use case **MUST** be an explicit design decision. `std-arch-access-payload-security-03`
+4. Access granted to a producer or consumer **MUST** be limited to the specific channels it requires. `std-arch-access-payload-security-04`
+5. A payload containing confidential or sensitive data **MUST** be encrypted in transit and at rest. `std-arch-access-payload-security-05`
+6. A field not needed by any subscribed consumer **SHOULD** be omitted from the payload. `std-arch-access-payload-security-06`
+7. A channel exposing data subject to a residency or sovereignty requirement **MUST** be able to restrict subscription by jurisdiction. `std-arch-access-payload-security-07`
+8. Data subject to a residency or sovereignty requirement **MUST NOT** be delivered outside an approved jurisdiction unless that cross-border flow is itself identified and approved. `std-arch-access-payload-security-08`
 
 ### Related Standards
 
@@ -232,9 +232,9 @@ Event flows carry trace context end-to-end, and channel health is observable.
 
 ### Standards
 
-1. `std-arch-event-observability-01` A producer **SHOULD** attach trace context to each event or message.
-2. `std-arch-event-observability-02` A consumer that produces another event or message in response **MUST** propagate the received trace context.
-3. `std-arch-event-observability-03` A channel's applicable throughput, queue depth, consumer lag, and error rate **MUST** be observable, so degraded processing can be detected before it causes a material backlog or data loss.
+1. A producer **SHOULD** attach trace context to each event or message. `std-arch-event-observability-01`
+2. A consumer that produces another event or message in response **MUST** propagate the received trace context. `std-arch-event-observability-02`
+3. A channel's applicable throughput, queue depth, consumer lag, and error rate **MUST** be observable, so degraded processing can be detected before it causes a material backlog or data loss. `std-arch-event-observability-03`
 
 ### Related Standards
 

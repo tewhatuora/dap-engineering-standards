@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-10
+last_edited: 2026-09-14
 ---
 
 # AI-Assisted Incident Investigation
@@ -12,7 +12,7 @@ An AI tool used for incident investigation is approved before use and recorded i
 
 ### Standards
 
-1. `std-ai-approved-tooling-01` An AI tool used to analyse a service's telemetry or otherwise assist in incident investigation **MUST** be listed on the organisation's Approved Tooling Register before use.
+1. An AI tool used to analyse a service's telemetry or otherwise assist in incident investigation **MUST** be listed on the organisation's Approved Tooling Register before use. `std-ai-approved-tooling-01`
 
 ### Related Standards
 
@@ -30,9 +30,9 @@ An AI tool draws on standard telemetry through the established observability pla
 
 ### Standards
 
-1. `std-ai-standardised-telemetry-01` An AI tool **MUST** draw on telemetry produced to the organisation's established instrumentation and semantic standards.
-2. `std-ai-standardised-telemetry-02` A service **SHOULD NOT** maintain a separate or altered telemetry export to suit an AI tool used for incident investigation.
-3. `std-ai-standardised-telemetry-03` An AI tool used for incident investigation **SHOULD** be integrated through the organisation's established observability platform so it can draw on telemetry from every service a transaction touches.
+1. An AI tool **MUST** draw on telemetry produced to the organisation's established instrumentation and semantic standards. `std-ai-standardised-telemetry-01`
+2. A service **SHOULD NOT** maintain a separate or altered telemetry export to suit an AI tool used for incident investigation. `std-ai-standardised-telemetry-02`
+3. An AI tool used for incident investigation **SHOULD** be integrated through the organisation's established observability platform so it can draw on telemetry from every service a transaction touches. `std-ai-standardised-telemetry-03`
 
 ### Related Standards
 
@@ -53,8 +53,8 @@ Incident remediation informed or performed by AI remains under responder control
 
 ### Standards
 
-1. `std-ai-incident-human-oversight-01` An AI tool's diagnosis of an incident's likely cause **MUST** be independently verified by a responder before being relied on to guide a high-impact remediation action.
-2. `std-ai-incident-human-oversight-02` A responder **MUST** carry out or approve a remediation or configuration change proposed by an AI tool before it takes effect.
+1. An AI tool's diagnosis of an incident's likely cause **MUST** be independently verified by a responder before being relied on to guide a high-impact remediation action. `std-ai-incident-human-oversight-01`
+2. A responder **MUST** carry out or approve a remediation or configuration change proposed by an AI tool before it takes effect. `std-ai-incident-human-oversight-02`
 
 ### Related Standards
 
@@ -72,8 +72,8 @@ An AI tool's contribution and reliability in incident response remain reviewable
 
 ### Standards
 
-1. `std-ai-incident-traceability-01` Where an AI tool materially contributed to an incident's diagnosis or resolution, that contribution **MUST** be recorded alongside the incident's other response detail.
-2. `std-ai-incident-traceability-02` A pattern of inaccurate or misleading output from an AI tool **SHOULD** be reviewed and addressed.
+1. Where an AI tool materially contributed to an incident's diagnosis or resolution, that contribution **MUST** be recorded alongside the incident's other response detail. `std-ai-incident-traceability-01`
+2. A pattern of inaccurate or misleading output from an AI tool **SHOULD** be reviewed and addressed. `std-ai-incident-traceability-02`
 
 ### Implements These Principles
 

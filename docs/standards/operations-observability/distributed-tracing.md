@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-14
 ---
 
 # Distributed Tracing
@@ -12,9 +12,9 @@ Valid trace context propagates across downstream boundaries in a standard, inter
 
 ### Standards
 
-1. `std-ops-trace-context-01` A service **MUST** propagate valid trace context to instrumented downstream calls, including across asynchronous boundaries where the transport supports context propagation.
-2. `std-ops-trace-context-02` Trace context **SHOULD** be propagated using a standard, interoperable format, such as [W3C Trace Context](https://www.w3.org/TR/trace-context/).
-3. `std-ops-trace-context-03` A service receiving trace context from outside its trust boundary **MUST** validate it before propagation.
+1. A service **MUST** propagate valid trace context to instrumented downstream calls, including across asynchronous boundaries where the transport supports context propagation. `std-ops-trace-context-01`
+2. Trace context **SHOULD** be propagated using a standard, interoperable format, such as [W3C Trace Context](https://www.w3.org/TR/trace-context/). `std-ops-trace-context-02`
+3. A service receiving trace context from outside its trust boundary **MUST** validate it before propagation. `std-ops-trace-context-03`
 
 ### Related Standards
 
@@ -34,12 +34,12 @@ A trace uses separate, accurately related spans for each side of a service bound
 
 ### Standards
 
-1. `std-ops-span-structure-01` A span's start and end boundaries, and its parent-child relationship to other spans, **MUST** reflect the actual call graph of the transaction.
-2. `std-ops-span-structure-02` When a call or message crosses between two instrumented services, each instrumented side **SHOULD** record the operation with the appropriate client, server, producer, or consumer span kind.
-3. `std-ops-span-structure-03` A single span **SHOULD NOT** represent both sides of a remote boundary.
-4. `std-ops-span-structure-04` A span's name **MUST** be consistent and low-cardinality.
-5. `std-ops-span-structure-05` A variable value, such as a raw identifier, **MUST** be recorded as a span attribute and excluded from the span name.
-6. `std-ops-span-structure-06` A span representing a failed operation **MUST** record the failure according to the applicable semantic convention.
+1. A span's start and end boundaries, and its parent-child relationship to other spans, **MUST** reflect the actual call graph of the transaction. `std-ops-span-structure-01`
+2. When a call or message crosses between two instrumented services, each instrumented side **SHOULD** record the operation with the appropriate client, server, producer, or consumer span kind. `std-ops-span-structure-02`
+3. A single span **SHOULD NOT** represent both sides of a remote boundary. `std-ops-span-structure-03`
+4. A span's name **MUST** be consistent and low-cardinality. `std-ops-span-structure-04`
+5. A variable value, such as a raw identifier, **MUST** be recorded as a span attribute and excluded from the span name. `std-ops-span-structure-05`
+6. A span representing a failed operation **MUST** record the failure according to the applicable semantic convention. `std-ops-span-structure-06`
 
 ### References
 
@@ -61,9 +61,9 @@ A trace's sampling decision is deliberate and consistent across services, with e
 
 ### Standards
 
-1. `std-ops-sampling-01` A service **MUST** define how much of its traffic to keep as traces by weighing transaction volume against the value of that data.
-2. `std-ops-sampling-02` A service **SHOULD** use parent-based or consistent sampling so downstream decisions remain coherent with propagated sampling state.
-3. `std-ops-sampling-03` A service's sampling strategy **SHOULD** retain a trace that contains an error or is unusually slow, even when the normal sampling decision would otherwise have dropped it.
+1. A service **MUST** define how much of its traffic to keep as traces by weighing transaction volume against the value of that data. `std-ops-sampling-01`
+2. A service **SHOULD** use parent-based or consistent sampling so downstream decisions remain coherent with propagated sampling state. `std-ops-sampling-02`
+3. A service's sampling strategy **SHOULD** retain a trace that contains an error or is unusually slow, even when the normal sampling decision would otherwise have dropped it. `std-ops-sampling-03`
 
 ### References
 

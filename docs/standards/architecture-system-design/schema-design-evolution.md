@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-14
 ---
 
 # Schema Design & Evolution
@@ -12,8 +12,8 @@ A schema is owned by exactly one service; no other service accesses or modifies 
 
 ### Standards
 
-1. `std-arch-schema-ownership-01` A schema **MUST** be owned by exactly one service.
-2. `std-arch-schema-ownership-02` Another service **MUST NOT** directly access or modify a data store it does not own.
+1. A schema **MUST** be owned by exactly one service. `std-arch-schema-ownership-01`
+2. Another service **MUST NOT** directly access or modify a data store it does not own. `std-arch-schema-ownership-02`
 
 ### Related Standards
 
@@ -31,10 +31,10 @@ A schema's data model and key strategy fit the workload's actual access patterns
 
 ### Standards
 
-1. `std-arch-data-models-keys-01` A schema's data model, whether relational, document, key-value, wide-column, or another structure, **MUST** be selected based on a workload's actual access patterns, consistency requirements, and query needs.
-2. `std-arch-data-models-keys-02` A relational schema **SHOULD** be normalised to at least Third Normal Form (3NF) to eliminate redundant and inconsistent data, with denormalisation applied only where a specific, demonstrated performance need justifies it.
-3. `std-arch-data-models-keys-03` A schema's primary key strategy **MUST** suit the workload's write concurrency and indexing needs; an auto-incrementing key can become a write hotspot under high concurrency, while a randomly-generated key can reduce index locality.
-4. `std-arch-data-models-keys-04` Changing an existing schema's data model paradigm **SHOULD** be justified by a genuine shift in access pattern, consistency requirement, or query need.
+1. A schema's data model, whether relational, document, key-value, wide-column, or another structure, **MUST** be selected based on a workload's actual access patterns, consistency requirements, and query needs. `std-arch-data-models-keys-01`
+2. A relational schema **SHOULD** be normalised to at least Third Normal Form (3NF) to eliminate redundant and inconsistent data, with denormalisation applied only where a specific, demonstrated performance need justifies it. `std-arch-data-models-keys-02`
+3. A schema's primary key strategy **MUST** suit the workload's write concurrency and indexing needs; an auto-incrementing key can become a write hotspot under high concurrency, while a randomly-generated key can reduce index locality. `std-arch-data-models-keys-03`
+4. Changing an existing schema's data model paradigm **SHOULD** be justified by a genuine shift in access pattern, consistency requirement, or query need. `std-arch-data-models-keys-04`
 
 ### Implements These Principles
 
@@ -49,13 +49,13 @@ A column's data type, encoding, and nullability accurately represent its value a
 
 ### Standards
 
-1. `std-arch-data-types-01` A column or field **MUST** use the data type that most accurately fits the value it stores and its expected range, avoiding wasteful storage consumption at scale.
-2. `std-arch-data-types-02` A timestamp representing an instant **MUST** be normalised to UTC and stored using a timestamp type that preserves the instant.
-3. `std-arch-data-types-03` A column **SHOULD** only be nullable where the absence of a value is a genuinely valid state.
-4. `std-arch-data-types-04` A sentinel value, such as a placeholder number or empty string, **MUST NOT** be used in place of NULL.
-5. `std-arch-data-types-05` Text data **MUST** be stored using an encoding that supports the full character range a service's data requires, such as UTF-8, so text is not corrupted or misrepresented.
-6. `std-arch-data-types-06` A text column's collation **SHOULD** be chosen to match the comparison and sorting behaviour a workload requires, such as case sensitivity or locale-specific ordering.
-7. `std-arch-data-types-07` A JSON column type **SHOULD** be reserved for a genuinely variable or sparse attribute, such as user-defined metadata, since a fixed-shape attribute is more efficiently queried and indexed as a structured column.
+1. A column or field **MUST** use the data type that most accurately fits the value it stores and its expected range, avoiding wasteful storage consumption at scale. `std-arch-data-types-01`
+2. A timestamp representing an instant **MUST** be normalised to UTC and stored using a timestamp type that preserves the instant. `std-arch-data-types-02`
+3. A column **SHOULD** only be nullable where the absence of a value is a genuinely valid state. `std-arch-data-types-03`
+4. A sentinel value, such as a placeholder number or empty string, **MUST NOT** be used in place of NULL. `std-arch-data-types-04`
+5. Text data **MUST** be stored using an encoding that supports the full character range a service's data requires, such as UTF-8, so text is not corrupted or misrepresented. `std-arch-data-types-05`
+6. A text column's collation **SHOULD** be chosen to match the comparison and sorting behaviour a workload requires, such as case sensitivity or locale-specific ordering. `std-arch-data-types-06`
+7. A JSON column type **SHOULD** be reserved for a genuinely variable or sparse attribute, such as user-defined metadata, since a fixed-shape attribute is more efficiently queried and indexed as a structured column. `std-arch-data-types-07`
 
 ### Implements These Principles
 
@@ -70,14 +70,14 @@ A relational schema enforces integrity through constraints, limits triggers and 
 
 ### Standards
 
-1. `std-arch-schema-logic-portability-01` In a relational database, referential integrity **MUST** be enforced using primary key, foreign key, and other applicable constraints.
-2. `std-arch-schema-logic-portability-02` A trigger **SHOULD NOT** be used.
-3. `std-arch-schema-logic-portability-03` A trigger **MAY** be used only where no other mechanism can achieve the same outcome, since a trigger introduces control flow that is not visible in application code.
-4. `std-arch-schema-logic-portability-04` A stored procedure **SHOULD** be used only where it provides a genuine benefit over application-level logic.
-5. `std-arch-schema-logic-portability-05` A stored procedure **MUST** be version-controlled and applied through the same migration process as other schema changes.
-6. `std-arch-schema-logic-portability-06` SQL used to define or query a relational schema **SHOULD** conform to ANSI/ISO standard SQL so it remains portable across database engines.
-7. `std-arch-schema-logic-portability-07` A vendor-specific extension **MAY** be used only where it provides a genuine benefit that justifies the portability it gives up.
-8. `std-arch-schema-logic-portability-08` A relational schema **MUST** enforce uniqueness through a primary key or unique constraint for each entity that has exactly one representation within the schema.
+1. In a relational database, referential integrity **MUST** be enforced using primary key, foreign key, and other applicable constraints. `std-arch-schema-logic-portability-01`
+2. A trigger **SHOULD NOT** be used. `std-arch-schema-logic-portability-02`
+3. A trigger **MAY** be used only where no other mechanism can achieve the same outcome, since a trigger introduces control flow that is not visible in application code. `std-arch-schema-logic-portability-03`
+4. A stored procedure **SHOULD** be used only where it provides a genuine benefit over application-level logic. `std-arch-schema-logic-portability-04`
+5. A stored procedure **MUST** be version-controlled and applied through the same migration process as other schema changes. `std-arch-schema-logic-portability-05`
+6. SQL used to define or query a relational schema **SHOULD** conform to ANSI/ISO standard SQL so it remains portable across database engines. `std-arch-schema-logic-portability-06`
+7. A vendor-specific extension **MAY** be used only where it provides a genuine benefit that justifies the portability it gives up. `std-arch-schema-logic-portability-07`
+8. A relational schema **MUST** enforce uniqueness through a primary key or unique constraint for each entity that has exactly one representation within the schema. `std-arch-schema-logic-portability-08`
 
 ### Implements These Principles
 
@@ -92,8 +92,8 @@ Decision-informing data carries an audit trail, and a table's deletion approach 
 
 ### Standards
 
-1. `std-arch-audit-deletion-01` A table or collection whose data informs an operational, financial, or clinical decision **MUST** retain an audit trail that identifies when its data was created or modified and the actor or process responsible for the change.
-2. `std-arch-audit-deletion-02` A table or collection's deletion representation, whether a soft delete using a flag or timestamp column or a hard delete that removes the row, **MUST** be a deliberate, documented choice.
+1. A table or collection whose data informs an operational, financial, or clinical decision **MUST** retain an audit trail that identifies when its data was created or modified and the actor or process responsible for the change. `std-arch-audit-deletion-01`
+2. A table or collection's deletion representation, whether a soft delete using a flag or timestamp column or a hard delete that removes the row, **MUST** be a deliberate, documented choice. `std-arch-audit-deletion-02`
 
 ### Implements These Principles
 
@@ -107,8 +107,8 @@ An index matches the schema's actual query patterns, and is reassessed when thos
 
 ### Standards
 
-1. `std-arch-indexes-01` An index **SHOULD** be designed to support a schema's actual query patterns.
-2. `std-arch-indexes-02` An index **SHOULD** be reassessed when the query patterns it supports change materially, since an unused or mismatched index still carries a write and storage cost.
+1. An index **SHOULD** be designed to support a schema's actual query patterns. `std-arch-indexes-01`
+2. An index **SHOULD** be reassessed when the query patterns it supports change materially, since an unused or mismatched index still carries a write and storage cost. `std-arch-indexes-02`
 
 ### Implements These Principles
 
@@ -122,9 +122,9 @@ A schema change stays additive and compatible with instances still running the p
 
 ### Standards
 
-1. `std-arch-compatible-changes-01` An additive schema change, such as adding a new optional column or field, **SHOULD** be preferred over a change that alters or removes an existing structure.
-2. `std-arch-compatible-changes-02` A schema change **MUST** remain compatible with instances of the owning service still running previous code during a rolling deployment, so old and new instances can operate correctly until the deployment completes.
-3. `std-arch-compatible-changes-03` A schema change **MUST NOT** be applied where it would violate an existing structural or referential integrity constraint until that constraint has been resolved or updated, since not every data store enforces this automatically.
+1. An additive schema change, such as adding a new optional column or field, **SHOULD** be preferred over a change that alters or removes an existing structure. `std-arch-compatible-changes-01`
+2. A schema change **MUST** remain compatible with instances of the owning service still running previous code during a rolling deployment, so old and new instances can operate correctly until the deployment completes. `std-arch-compatible-changes-02`
+3. A schema change **MUST NOT** be applied where it would violate an existing structural or referential integrity constraint until that constraint has been resolved or updated, since not every data store enforces this automatically. `std-arch-compatible-changes-03`
 
 ### Implements These Principles
 
@@ -139,8 +139,8 @@ A non-additive schema change rolls out through expand-and-contract, keeping the 
 
 ### Standards
 
-1. `std-arch-breaking-changes-01` Where a schema change cannot be made additively, it **SHOULD** use an expand-and-contract approach: add the new structure alongside the old, migrate the owning service's code to use it, then retire the old structure.
-2. `std-arch-breaking-changes-02` The old structure **SHOULD** remain in place for a defined period after the owning service's code is fully upgraded, so a rollback to previous code remains possible without data loss.
+1. Where a schema change cannot be made additively, it **SHOULD** use an expand-and-contract approach: add the new structure alongside the old, migrate the owning service's code to use it, then retire the old structure. `std-arch-breaking-changes-01`
+2. The old structure **SHOULD** remain in place for a defined period after the owning service's code is fully upgraded, so a rollback to previous code remains possible without data loss. `std-arch-breaking-changes-02`
 
 ### Implements These Principles
 
@@ -154,9 +154,9 @@ A schema change is version-controlled migration code, applied consistently acros
 
 ### Standards
 
-1. `std-arch-automated-migrations-01` A schema change **MUST** be defined as version-controlled, reviewable migration code before it is applied to a live data store.
-2. `std-arch-automated-migrations-02` A migration **MUST** be applied consistently across environments using the same automated process, so an environment's schema cannot silently diverge from what its migration history describes.
-3. `std-arch-automated-migrations-03` A migration **MUST** be tested before it is applied to production data.
+1. A schema change **MUST** be defined as version-controlled, reviewable migration code before it is applied to a live data store. `std-arch-automated-migrations-01`
+2. A migration **MUST** be applied consistently across environments using the same automated process, so an environment's schema cannot silently diverge from what its migration history describes. `std-arch-automated-migrations-02`
+3. A migration **MUST** be tested before it is applied to production data. `std-arch-automated-migrations-03`
 
 ### Related Standards
 
