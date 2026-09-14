@@ -45,7 +45,7 @@ A standards file sits under `docs/standards/<category>/`. A file is a topic and 
 
 #### <Optional subheading where the list needs dividing>
 
-1. `std-<category>-<grouping>-01` <One verifiable obligation using an RFC 2119 keyword.>
+1. <One verifiable obligation using an RFC 2119 keyword.> `std-<category>-<grouping>-01`
 
 ### Exceptions
 
@@ -76,7 +76,7 @@ The latitude carried by **SHOULD** is not a separate exception. A boundary or co
 
 ## Standard Tags
 
-Standards are cited by tag, not by position. Every numbered standard starts with a tag in this form:
+Standards are cited by tag, not by position. Every numbered standard ends with a tag in this form:
 
 ```text
 std-<category>-<grouping>-<nn>

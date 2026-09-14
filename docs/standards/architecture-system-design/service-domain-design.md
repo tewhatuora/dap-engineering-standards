@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-14
 ---
 
 # Service & Domain Design
@@ -12,8 +12,8 @@ A service's boundary is scoped to a single business domain, identifiable without
 
 ### Standards
 
-1. `std-arch-domain-boundaries-01` A service **MUST** be scoped around a single, cohesive business domain or subdomain.
-2. `std-arch-domain-boundaries-02` A service's responsibility **MUST** be identifiable from its domain boundary alone, without inspecting its internal implementation.
+1. A service **MUST** be scoped around a single, cohesive business domain or subdomain. `std-arch-domain-boundaries-01`
+2. A service's responsibility **MUST** be identifiable from its domain boundary alone, without inspecting its internal implementation. `std-arch-domain-boundaries-02`
 
 ### Implements These Principles
 
@@ -28,9 +28,9 @@ A service's granularity follows domain cohesion and is reassessed for decomposit
 
 ### Standards
 
-1. `std-arch-service-granularity-01` Service granularity **SHOULD** reflect domain cohesion at a level justified by the domain.
-2. `std-arch-service-granularity-02` A service spanning more than one distinct business domain **SHOULD** be evaluated for decomposition.
-3. `std-arch-service-granularity-03` Multiple services separately implementing parts of a single, cohesive business domain, without an independent reason for the separation, **SHOULD** be evaluated for consolidation.
+1. Service granularity **SHOULD** reflect domain cohesion at a level justified by the domain. `std-arch-service-granularity-01`
+2. A service spanning more than one distinct business domain **SHOULD** be evaluated for decomposition. `std-arch-service-granularity-02`
+3. Multiple services separately implementing parts of a single, cohesive business domain, without an independent reason for the separation, **SHOULD** be evaluated for consolidation. `std-arch-service-granularity-03`
 
 ### Implements These Principles
 
@@ -44,7 +44,7 @@ A service's integration needs are identified before its design is complete.
 
 ### Standards
 
-1. `std-arch-integration-requirements-01` A service design **MUST** identify every system or consumer that will exchange data or functionality with the service, what it will exchange, and the exchange format before the design is considered complete.
+1. A service design **MUST** identify every system or consumer that will exchange data or functionality with the service, what it will exchange, and the exchange format before the design is considered complete. `std-arch-integration-requirements-01`
 
 ### Implements These Principles
 
@@ -58,8 +58,8 @@ A service interacts with another service only through its well-defined, publishe
 
 ### Standards
 
-1. `std-arch-published-interfaces-01` Direct access to another service's internal code or underlying infrastructure **MUST NOT** be used as an integration mechanism.
-2. `std-arch-published-interfaces-02` A service's published interface **MUST** be the only path another service or consumer relies on, regardless of the underlying communication mechanism used.
+1. Direct access to another service's internal code or underlying infrastructure **MUST NOT** be used as an integration mechanism. `std-arch-published-interfaces-01`
+2. A service's published interface **MUST** be the only path another service or consumer relies on, regardless of the underlying communication mechanism used. `std-arch-published-interfaces-02`
 
 ### Related Standards
 
@@ -78,8 +78,8 @@ A service exclusively owns its data and exposes it to other services only throug
 
 ### Standards
 
-1. `std-arch-service-data-ownership-01` A service's data **MUST** be owned exclusively by that service.
-2. `std-arch-service-data-ownership-02` Another service **MUST NOT** read from or write to a data store it does not own.
+1. A service's data **MUST** be owned exclusively by that service. `std-arch-service-data-ownership-01`
+2. Another service **MUST NOT** read from or write to a data store it does not own. `std-arch-service-data-ownership-02`
 
 ### Related Standards
 
@@ -97,11 +97,11 @@ A service deploys and scales independently, preserves its published contract as 
 
 ### Standards
 
-1. `std-arch-independent-deployment-scaling-01` A service **SHOULD** be deployable and scalable independently of other services, without requiring a coordinated, simultaneous release.
-2. `std-arch-independent-deployment-scaling-02` A service's internal implementation **MAY** change freely provided its published interface's contract is preserved, so a dependent service is not required to change in step.
-3. `std-arch-independent-deployment-scaling-03` A service **SHOULD** be designed to scale horizontally by adding or removing instances to meet demand.
-4. `std-arch-independent-deployment-scaling-04` Where elastic scaling is used, capacity **SHOULD** adjust automatically to a sustained change in demand.
-5. `std-arch-independent-deployment-scaling-05` Sustained performance degradation, or a component approaching a known scaling limit, **SHOULD** trigger a reassessment of the service's scaling approach.
+1. A service **SHOULD** be deployable and scalable independently of other services, without requiring a coordinated, simultaneous release. `std-arch-independent-deployment-scaling-01`
+2. A service's internal implementation **MAY** change freely provided its published interface's contract is preserved, so a dependent service is not required to change in step. `std-arch-independent-deployment-scaling-02`
+3. A service **SHOULD** be designed to scale horizontally by adding or removing instances to meet demand. `std-arch-independent-deployment-scaling-03`
+4. Where elastic scaling is used, capacity **SHOULD** adjust automatically to a sustained change in demand. `std-arch-independent-deployment-scaling-04`
+5. Sustained performance degradation, or a component approaching a known scaling limit, **SHOULD** trigger a reassessment of the service's scaling approach. `std-arch-independent-deployment-scaling-05`
 
 ### Implements These Principles
 
@@ -116,8 +116,8 @@ A component-level scaling constraint is identified during design and addressed o
 
 ### Standards
 
-1. `std-arch-scaling-constraints-01` A component that cannot scale independently of the rest of a service, or that constitutes a single point of contention under load, **MUST** be identified during design.
-2. `std-arch-scaling-constraints-02` An identified scaling constraint **MUST** be addressed or explicitly accepted as a bounded limitation before the service depends on it in production.
+1. A component that cannot scale independently of the rest of a service, or that constitutes a single point of contention under load, **MUST** be identified during design. `std-arch-scaling-constraints-01`
+2. An identified scaling constraint **MUST** be addressed or explicitly accepted as a bounded limitation before the service depends on it in production. `std-arch-scaling-constraints-02`
 
 ### Implements These Principles
 
@@ -131,8 +131,8 @@ Exactly one team is accountable for a service, and reviews every change to it re
 
 ### Standards
 
-1. `std-arch-service-accountability-01` A service **MUST** have exactly one team or group accountable for it, declared as the code owner in a `CODEOWNERS` file for its repository, regardless of how many teams contribute changes to it.
-2. `std-arch-service-accountability-02` A contribution from a team other than a service's accountable team **MUST** still be reviewed and approved by the accountable team before being merged.
+1. A service **MUST** have exactly one team or group accountable for it, declared as the code owner in a `CODEOWNERS` file for its repository, regardless of how many teams contribute changes to it. `std-arch-service-accountability-01`
+2. A contribution from a team other than a service's accountable team **MUST** still be reviewed and approved by the accountable team before being merged. `std-arch-service-accountability-02`
 
 ### Implements These Principles
 
@@ -146,9 +146,9 @@ A core business rule has one authoritative implementation that is reused across 
 
 ### Standards
 
-1. `std-arch-shared-domain-logic-01` A core business rule or domain concept **MUST** have a single authoritative implementation.
-2. `std-arch-shared-domain-logic-02` A core business rule or domain concept **MUST NOT** be independently reimplemented across multiple services.
-3. `std-arch-shared-domain-logic-03` Where more than one service requires the same domain logic, it **SHOULD** be obtained from its owning service's interface or a shared, reusable component.
+1. A core business rule or domain concept **MUST** have a single authoritative implementation. `std-arch-shared-domain-logic-01`
+2. A core business rule or domain concept **MUST NOT** be independently reimplemented across multiple services. `std-arch-shared-domain-logic-02`
+3. Where more than one service requires the same domain logic, it **SHOULD** be obtained from its owning service's interface or a shared, reusable component. `std-arch-shared-domain-logic-03`
 
 ### Implements These Principles
 

@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-09-14
 ---
 
 # AI Tooling Cost Management
@@ -14,8 +14,8 @@ An AI tool request is limited to the minimum context required for the task.
 
 ### Standards
 
-1. `std-ai-context-scoping-01` AI tool requests **SHOULD** contain only context relevant and reasonably necessary to complete the task.
-2. `std-ai-context-scoping-02` Broad, whole-repository context **SHOULD** be reserved for cases where narrower, targeted context has already failed.
+1. AI tool requests **SHOULD** contain only context relevant and reasonably necessary to complete the task. `std-ai-context-scoping-01`
+2. Broad, whole-repository context **SHOULD** be reserved for cases where narrower, targeted context has already failed. `std-ai-context-scoping-02`
 
 ### Implements These Principles
 
@@ -29,8 +29,8 @@ An AI tool session maintains bounded context relevant to its current task.
 
 ### Standards
 
-1. `std-ai-session-management-01` A new AI tool session **SHOULD** be started when switching to an unrelated task if the existing session history is no longer relevant.
-2. `std-ai-session-management-02` Developers **SHOULD** periodically reset or summarise long-running sessions to prevent unbounded context accumulation.
+1. A new AI tool session **SHOULD** be started when switching to an unrelated task if the existing session history is no longer relevant. `std-ai-session-management-01`
+2. Developers **SHOULD** periodically reset or summarise long-running sessions to prevent unbounded context accumulation. `std-ai-session-management-02`
 
 ### Implements These Principles
 
@@ -44,8 +44,8 @@ Model choice and reasoning effort are proportionate to the task's complexity.
 
 ### Standards
 
-1. `std-ai-model-selection-reasoning-01` AI tools **SHOULD** use automatic or cost-aware model selection by default.
-2. `std-ai-model-selection-reasoning-02` Maximum reasoning effort or extended-thinking modes **SHOULD** be reserved for complex or ambiguous tasks.
+1. AI tools **SHOULD** use automatic or cost-aware model selection by default. `std-ai-model-selection-reasoning-01`
+2. Maximum reasoning effort or extended-thinking modes **SHOULD** be reserved for complex or ambiguous tasks. `std-ai-model-selection-reasoning-02`
 
 ### Implements These Principles
 
@@ -59,9 +59,9 @@ AI tooling configuration reduces repeated processing of custom instructions and 
 
 ### Standards
 
-1. `std-ai-custom-instructions-tooling-01` Organisation-wide and project-level custom instructions **SHOULD** contain only context that applies across the requests that receive them.
-2. `std-ai-custom-instructions-tooling-02` Organisation-wide and project-level custom instructions **SHOULD** remain stable between requests to benefit from provider-side caching and avoid repeated cost.
-3. `std-ai-custom-instructions-tooling-03` Tools, extensions, or integrations not required for the current project **SHOULD** be disabled because their definitions may be included in every request regardless of use.
+1. Organisation-wide and project-level custom instructions **SHOULD** contain only context that applies across the requests that receive them. `std-ai-custom-instructions-tooling-01`
+2. Organisation-wide and project-level custom instructions **SHOULD** remain stable between requests to benefit from provider-side caching and avoid repeated cost. `std-ai-custom-instructions-tooling-02`
+3. Tools, extensions, or integrations not required for the current project **SHOULD** be disabled because their definitions may be included in every request regardless of use. `std-ai-custom-instructions-tooling-03`
 
 ### Implements These Principles
 
@@ -75,9 +75,9 @@ AI tooling cost remains visible, attributable, and subject to reassessment when 
 
 ### Standards
 
-1. `std-ai-cost-monitoring-pricing-01` Cost or usage attributable to AI tooling **SHOULD** be monitored.
-2. `std-ai-cost-monitoring-pricing-02` Cost or usage attributable to AI tooling **SHOULD** be attributed.
-4. `std-ai-cost-monitoring-pricing-03` The team responsible for AI tooling adoption **MUST** reassess usage practices after a material change to a vendor's billing or pricing model.
+1. Cost or usage attributable to AI tooling **SHOULD** be monitored. `std-ai-cost-monitoring-pricing-01`
+2. Cost or usage attributable to AI tooling **SHOULD** be attributed. `std-ai-cost-monitoring-pricing-02`
+4. The team responsible for AI tooling adoption **MUST** reassess usage practices after a material change to a vendor's billing or pricing model. `std-ai-cost-monitoring-pricing-03`
 
 ### Implements These Principles
 
@@ -92,8 +92,8 @@ Teams periodically measure and evaluate cost-optimisation practices in their own
 
 ### Standards
 
-1. `std-ai-cost-optimisation-review-01` Teams **SHOULD** periodically measure the effect of AI cost-optimisation practices on their AI tool usage and cost.
-2. `std-ai-cost-optimisation-review-02` Teams **SHOULD** evaluate each cost-optimisation practice in their own context because its effectiveness may vary by model, workload, and codebase.
+1. Teams **SHOULD** periodically measure the effect of AI cost-optimisation practices on their AI tool usage and cost. `std-ai-cost-optimisation-review-01`
+2. Teams **SHOULD** evaluate each cost-optimisation practice in their own context because its effectiveness may vary by model, workload, and codebase. `std-ai-cost-optimisation-review-02`
 
 ### Implements These Principles
 

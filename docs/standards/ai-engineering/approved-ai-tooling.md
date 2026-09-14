@@ -12,8 +12,8 @@ AI tool use is limited to listed tools and their recorded data authorisations.
 
 ### Standards
 
-1. `std-ai-approved-tools-01` A person **MUST NOT** use an AI tool outside the Approved Tooling Register.
-2. `std-ai-approved-tools-02` A person **MUST NOT** submit personal or health information to an AI tool unless the register marks it as allowed.
+1. A person **MUST NOT** use an AI tool outside the Approved Tooling Register. `std-ai-approved-tools-01`
+2. A person **MUST NOT** submit personal or health information to an AI tool unless the register marks it as allowed. `std-ai-approved-tools-02`
 
     | Tool | Capability Category | PII or PHI Submission Authorised |
     |---|---|:---:|
@@ -39,8 +39,8 @@ AI tooling access uses an individually attributable, organisation-provisioned li
 
 ### Standards
 
-1. `std-ai-licensing-provisioning-01` AI tools **MUST** be used only under licences provisioned and administered by Health New Zealand and tied to the user's organisational identity.
-2. `std-ai-licensing-provisioning-02` Personal, free-tier, trial, or other independently obtained accounts **MUST NOT** be used with AI tools, even where the tool is on the Approved Tooling Register.
+1. AI tools **MUST** be used only under licences provisioned and administered by Health New Zealand and tied to the user's organisational identity. `std-ai-licensing-provisioning-01`
+2. Personal, free-tier, trial, or other independently obtained accounts **MUST NOT** be used with AI tools, even where the tool is on the Approved Tooling Register. `std-ai-licensing-provisioning-02`
 
 ### Implements These Principles
 

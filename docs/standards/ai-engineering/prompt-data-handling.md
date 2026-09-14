@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-09-14
 ---
 
 # Prompt Data Handling
@@ -12,10 +12,10 @@ AI tools receive only data permitted by their authorisation and the organisation
 
 ### Standards
 
-1. `std-ai-prohibited-restricted-data-01` Personal or health information **MUST NOT** be submitted to an AI tool unless the Approved Tooling Register marks it as allowed for that tool.
-2. `std-ai-prohibited-restricted-data-02` An NHI identifier that identifies a real person **MUST NOT** be submitted to an AI tool.
-3. `std-ai-prohibited-restricted-data-03` Secrets, credentials, API keys, access tokens, and cryptographic material **MUST NOT** be submitted to an AI tool under any circumstances.
-4. `std-ai-prohibited-restricted-data-04` A production export, database dump, or log containing personal or health information **MUST NOT** be submitted to an AI tool.
+1. Personal or health information **MUST NOT** be submitted to an AI tool unless the Approved Tooling Register marks it as allowed for that tool. `std-ai-prohibited-restricted-data-01`
+2. An NHI identifier that identifies a real person **MUST NOT** be submitted to an AI tool. `std-ai-prohibited-restricted-data-02`
+3. Secrets, credentials, API keys, access tokens, and cryptographic material **MUST NOT** be submitted to an AI tool under any circumstances. `std-ai-prohibited-restricted-data-03`
+4. A production export, database dump, or log containing personal or health information **MUST NOT** be submitted to an AI tool. `std-ai-prohibited-restricted-data-04`
 
 ### Related Standards
 
@@ -35,9 +35,9 @@ Personal or health information used in authorised AI-assisted work is limited to
 
 ### Standards
 
-1. `std-ai-data-minimisation-01` Prompts containing personal or health information **SHOULD** include only the minimum data reasonably necessary for the task.
-2. `std-ai-data-minimisation-02` Files, datasets, or repository content containing personal or health information **SHOULD NOT** be submitted where a smaller, relevant excerpt is sufficient.
-3. `std-ai-data-minimisation-03` Unrelated personal or health information in the surrounding context **MUST** be removed or redacted before submission.
+1. Prompts containing personal or health information **SHOULD** include only the minimum data reasonably necessary for the task. `std-ai-data-minimisation-01`
+2. Files, datasets, or repository content containing personal or health information **SHOULD NOT** be submitted where a smaller, relevant excerpt is sufficient. `std-ai-data-minimisation-02`
+3. Unrelated personal or health information in the surrounding context **MUST** be removed or redacted before submission. `std-ai-data-minimisation-03`
 
 ### Implements These Principles
 
@@ -51,8 +51,8 @@ Personal or health information used in authorised AI-assisted work is kept in th
 
 ### Standards
 
-1. `std-ai-de-identification-synthetic-data-01` For authorised use involving personal or health information, prompt content **SHOULD** be de-identified, masked, or replaced with synthetic data unless the use case requires personal or health information.
-2. `std-ai-de-identification-synthetic-data-02` Synthetic or de-identified data **SHOULD** be used instead of production personal or health information for AI-assisted testing, debugging, and documentation.
+1. For authorised use involving personal or health information, prompt content **SHOULD** be de-identified, masked, or replaced with synthetic data unless the use case requires personal or health information. `std-ai-de-identification-synthetic-data-01`
+2. Synthetic or de-identified data **SHOULD** be used instead of production personal or health information for AI-assisted testing, debugging, and documentation. `std-ai-de-identification-synthetic-data-02`
 
 ### Related Standards
 

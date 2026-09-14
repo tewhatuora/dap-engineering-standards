@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-14
 ---
 
 # Code Style & Formatting
@@ -12,9 +12,9 @@ A codebase adopts one defined, discoverable style guide per language, preferring
 
 ### Standards
 
-1. `std-code-style-guide-01` A codebase **MUST** adopt a single, defined style guide for each programming language in use.
-2. `std-code-style-guide-02` A widely recognised, published style guide, such as `PEP 8` for Python or the `Google Style Guides` for Java, **SHOULD** be preferred over a bespoke or self-written one for a language it already covers.
-3. `std-code-style-guide-03` The adopted style guide **MUST** be documented and discoverable, such as through a repository's `README` or a location linked from it.
+1. A codebase **MUST** adopt a single, defined style guide for each programming language in use. `std-code-style-guide-01`
+2. A widely recognised, published style guide, such as `PEP 8` for Python or the `Google Style Guides` for Java, **SHOULD** be preferred over a bespoke or self-written one for a language it already covers. `std-code-style-guide-02`
+3. The adopted style guide **MUST** be documented and discoverable, such as through a repository's `README` or a location linked from it. `std-code-style-guide-03`
 
 ### Implements These Principles
 
@@ -28,9 +28,9 @@ Formatting and layout follow the adopted style guide consistently, applied deter
 
 ### Standards
 
-1. `std-code-formatting-layout-01` A formatting or layout concern defined by the adopted style guide, such as indentation, line length, or whitespace, **MUST** be applied consistently throughout a codebase.
-2. `std-code-formatting-layout-02` Where an individual author's formatting or layout preference conflicts with the adopted style guide, the style guide **MUST** take precedence.
-3. `std-code-formatting-layout-03` Formatting applied by an automated tool **MUST** be deterministic.
+1. A formatting or layout concern defined by the adopted style guide, such as indentation, line length, or whitespace, **MUST** be applied consistently throughout a codebase. `std-code-formatting-layout-01`
+2. Where an individual author's formatting or layout preference conflicts with the adopted style guide, the style guide **MUST** take precedence. `std-code-formatting-layout-02`
+3. Formatting applied by an automated tool **MUST** be deterministic. `std-code-formatting-layout-03`
 
 ### Implements These Principles
 
@@ -44,10 +44,10 @@ Formatting behaviour is defined in simple, stable, version-controlled codebase c
 
 ### Standards
 
-1. `std-code-formatting-configuration-01` Formatting behaviour **MUST** be defined in versioned configuration held within a codebase, such as an `.editorconfig` file.
-2. `std-code-formatting-configuration-02` A codebase **SHOULD** define formatting configuration for each in-scope file type it holds.
-3. `std-code-formatting-configuration-03` Formatting configuration **SHOULD** be simple and stable.
-4. `std-code-formatting-configuration-04` Formatting configuration **SHOULD NOT** carry customisation beyond what an actual, current engineering need justifies.
+1. Formatting behaviour **MUST** be defined in versioned configuration held within a codebase, such as an `.editorconfig` file. `std-code-formatting-configuration-01`
+2. A codebase **SHOULD** define formatting configuration for each in-scope file type it holds. `std-code-formatting-configuration-02`
+3. Formatting configuration **SHOULD** be simple and stable. `std-code-formatting-configuration-03`
+4. Formatting configuration **SHOULD NOT** carry customisation beyond what an actual, current engineering need justifies. `std-code-formatting-configuration-04`
 
 ### Implements These Principles
 
@@ -62,8 +62,8 @@ The adopted style guide applies uniformly, whether code was written by an engine
 
 ### Standards
 
-1. `std-code-codebase-coverage-01` The adopted style guide **MUST** apply uniformly across a codebase, regardless of whether a given part of it was authored by an engineer or produced with AI assistance.
-2. `std-code-codebase-coverage-02` Coding standards **MUST** be applied to every kind of code a repository holds, including application code, infrastructure code, and pipeline definitions.
+1. The adopted style guide **MUST** apply uniformly across a codebase, regardless of whether a given part of it was authored by an engineer or produced with AI assistance. `std-code-codebase-coverage-01`
+2. Coding standards **MUST** be applied to every kind of code a repository holds, including application code, infrastructure code, and pipeline definitions. `std-code-codebase-coverage-02`
 
 ### Implements These Principles
 
@@ -79,10 +79,10 @@ A comment explains why code exists or behaves as it does, obsolete code is delet
 
 ### Standards
 
-1. `std-code-comments-documentation-01` A comment **SHOULD** explain why a piece of code exists or behaves as it does.
-2. `std-code-comments-documentation-02` Commented-out code **MUST NOT** be left in a codebase.
-3. `std-code-comments-documentation-03` Code no longer required **MUST** be deleted.
-4. `std-code-comments-documentation-04` A publicly exposed interface **SHOULD** be documented using the appropriate convention for its type, such as a language's doc-comment convention or an API specification.
+1. A comment **SHOULD** explain why a piece of code exists or behaves as it does. `std-code-comments-documentation-01`
+2. Commented-out code **MUST NOT** be left in a codebase. `std-code-comments-documentation-02`
+3. Code no longer required **MUST** be deleted. `std-code-comments-documentation-03`
+4. A publicly exposed interface **SHOULD** be documented using the appropriate convention for its type, such as a language's doc-comment convention or an API specification. `std-code-comments-documentation-04`
 
 ### Related Standards
 
@@ -100,9 +100,9 @@ A generated file's formatting is controlled by its generation process and remain
 
 ### Standards
 
-1. `std-code-generated-files-01` A generated file **SHOULD NOT** be manually reformatted.
-2. `std-code-generated-files-02` Where a generated file must conform to the adopted style guide, its generation process **SHOULD** be adjusted instead.
-3. `std-code-generated-files-03` Where a generated file is committed to a codebase, regenerating it without an underlying change **SHOULD NOT** produce an unnecessary formatting difference.
+1. A generated file **SHOULD NOT** be manually reformatted. `std-code-generated-files-01`
+2. Where a generated file must conform to the adopted style guide, its generation process **SHOULD** be adjusted instead. `std-code-generated-files-02`
+3. Where a generated file is committed to a codebase, regenerating it without an underlying change **SHOULD NOT** produce an unnecessary formatting difference. `std-code-generated-files-03`
 
 ### Implements These Principles
 
@@ -116,8 +116,8 @@ Coding standards are applied through automated tooling as work proceeds, includi
 
 ### Standards
 
-1. `std-code-automated-enforcement-01` Coding standards **SHOULD** be applied through automated tooling, such as an IDE-integrated tool or a pre-commit hook.
-2. `std-code-automated-enforcement-02` Formatting applied or modified by an AI tool **MUST** conform to the adopted style guide through the same automated mechanism used for other content.
+1. Coding standards **SHOULD** be applied through automated tooling, such as an IDE-integrated tool or a pre-commit hook. `std-code-automated-enforcement-01`
+2. Formatting applied or modified by an AI tool **MUST** conform to the adopted style guide through the same automated mechanism used for other content. `std-code-automated-enforcement-02`
 
 ### Related Standards
 
@@ -136,8 +136,8 @@ Automated tooling identifies formatting concerns, and recurring concerns trigger
 
 ### Standards
 
-1. `std-code-code-review-01` A reviewer **SHOULD NOT** be expected to identify or comment on a formatting concern that automated tooling could address instead.
-2. `std-code-code-review-02` A formatting concern that recurs across multiple reviews **SHOULD** be treated as a signal that automation needs improvement.
+1. A reviewer **SHOULD NOT** be expected to identify or comment on a formatting concern that automated tooling could address instead. `std-code-code-review-01`
+2. A formatting concern that recurs across multiple reviews **SHOULD** be treated as a signal that automation needs improvement. `std-code-code-review-02`
 
 ### Related Standards
 
@@ -155,8 +155,8 @@ A formatting-only change stays separate from a functional one, so each remains d
 
 ### Standards
 
-1. `std-code-formatting-only-changes-01` A formatting-only change **SHOULD** be kept separate from a functional change, so the two remain distinguishable in the change history.
-2. `std-code-formatting-only-changes-02` A broad or codebase-wide reformatting change **SHOULD NOT** be combined with a refactor, feature change, or dependency upgrade in the same change.
+1. A formatting-only change **SHOULD** be kept separate from a functional change, so the two remain distinguishable in the change history. `std-code-formatting-only-changes-01`
+2. A broad or codebase-wide reformatting change **SHOULD NOT** be combined with a refactor, feature change, or dependency upgrade in the same change. `std-code-formatting-only-changes-02`
 
 ### Related Standards
 

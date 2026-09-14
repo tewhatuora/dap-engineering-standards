@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-14
 ---
 
 # Linting & Style Enforcement
@@ -12,10 +12,10 @@ Every language with suitable maintained tooling is checked by a documented and d
 
 ### Standards
 
-1. `std-code-linting-coverage-01` Each language in use within a codebase, including one used to define infrastructure or a pipeline, **MUST** be checked by an appropriate automated linter where a maintained one is available.
-2. `std-code-linting-coverage-02` Generated code **SHOULD** be excluded from linting scope.
-3. `std-code-linting-coverage-03` An established, actively maintained linter **SHOULD** be preferred over a custom-built or unmaintained one for a language it already covers.
-4. `std-code-linting-coverage-04` The linters in use for a codebase **MUST** be documented and discoverable, such as through a repository's `README` or a location linked from it.
+1. Each language in use within a codebase, including one used to define infrastructure or a pipeline, **MUST** be checked by an appropriate automated linter where a maintained one is available. `std-code-linting-coverage-01`
+2. Generated code **SHOULD** be excluded from linting scope. `std-code-linting-coverage-02`
+3. An established, actively maintained linter **SHOULD** be preferred over a custom-built or unmaintained one for a language it already covers. `std-code-linting-coverage-03`
+4. The linters in use for a codebase **MUST** be documented and discoverable, such as through a repository's `README` or a location linked from it. `std-code-linting-coverage-04`
 
 ### Related Standards
 
@@ -34,9 +34,9 @@ A linter's ruleset is version-controlled configuration, applied identically wher
 
 ### Standards
 
-1. `std-code-linter-configuration-01` A linter's ruleset **MUST** be defined as version-controlled configuration, whether declared directly within the codebase it governs or extended from a version-controlled shared baseline.
-2. `std-code-linter-configuration-02` The same effective ruleset **MUST** be applied wherever linting runs, whether locally, at pre-commit, or in the delivery pipeline.
-3. `std-code-linter-configuration-03` A linter's default ruleset **SHOULD** be adopted wherever it meets a codebase's needs; a customisation **SHOULD** be added only where an actual need justifies it.
+1. A linter's ruleset **MUST** be defined as version-controlled configuration, whether declared directly within the codebase it governs or extended from a version-controlled shared baseline. `std-code-linter-configuration-01`
+2. The same effective ruleset **MUST** be applied wherever linting runs, whether locally, at pre-commit, or in the delivery pipeline. `std-code-linter-configuration-02`
+3. A linter's default ruleset **SHOULD** be adopted wherever it meets a codebase's needs; a customisation **SHOULD** be added only where an actual need justifies it. `std-code-linter-configuration-03`
 
 ### Implements These Principles
 
@@ -51,8 +51,8 @@ A lint violation is available locally through an IDE or pre-commit hook before a
 
 ### Standards
 
-1. `std-code-local-lint-detection-01` Linting **SHOULD** be available to run locally, through IDE integration, or as a pre-commit hook, so a violation is visible before a change is submitted for review.
-2. `std-code-local-lint-detection-02` A local lint run **SHOULD** check only the files affected by a change where practical to keep local feedback fast.
+1. Linting **SHOULD** be available to run locally, through IDE integration, or as a pre-commit hook, so a violation is visible before a change is submitted for review. `std-code-local-lint-detection-01`
+2. A local lint run **SHOULD** check only the files affected by a change where practical to keep local feedback fast. `std-code-local-lint-detection-02`
 
 ### Implements These Principles
 
@@ -66,9 +66,9 @@ A pre-existing violation may be baselined when a linter is adopted and remains t
 
 ### Standards
 
-1. `std-code-existing-violation-baseline-01` Adopting a linter or a new rule on an existing codebase **MAY** treat its existing violations as a baseline, recorded either as an explicit exception list or as a fixed point in the codebase's history.
-2. `std-code-existing-violation-baseline-02` A violation introduced after a baseline is established, whether as an exception list or a fixed point in the codebase's history, **MUST NOT** be treated as baselined.
-3. `std-code-existing-violation-baseline-03` A baselined violation **SHOULD** be tracked and remediated as technical debt.
+1. Adopting a linter or a new rule on an existing codebase **MAY** treat its existing violations as a baseline, recorded either as an explicit exception list or as a fixed point in the codebase's history. `std-code-existing-violation-baseline-01`
+2. A violation introduced after a baseline is established, whether as an exception list or a fixed point in the codebase's history, **MUST NOT** be treated as baselined. `std-code-existing-violation-baseline-02`
+3. A baselined violation **SHOULD** be tracked and remediated as technical debt. `std-code-existing-violation-baseline-03`
 
 ### Implements These Principles
 
@@ -82,10 +82,10 @@ A lint check runs in the delivery pipeline, where classified severity determines
 
 ### Standards
 
-1. `std-code-linting-pipeline-gate-01` A lint check **MUST** run as part of the delivery pipeline.
-2. `std-code-linting-pipeline-gate-02` Each lint rule **MUST** be classified by severity, where supported by the linter, distinguishing a violation that must block progression from one that is advisory only.
-3. `std-code-linting-pipeline-gate-03` A lint rule not classified by severity **MUST** be treated as advisory only.
-4. `std-code-linting-pipeline-gate-04` A change **MUST NOT** merge or deploy while a non-baselined violation at blocking severity remains outstanding.
+1. A lint check **MUST** run as part of the delivery pipeline. `std-code-linting-pipeline-gate-01`
+2. Each lint rule **MUST** be classified by severity, where supported by the linter, distinguishing a violation that must block progression from one that is advisory only. `std-code-linting-pipeline-gate-02`
+3. A lint rule not classified by severity **MUST** be treated as advisory only. `std-code-linting-pipeline-gate-03`
+4. A change **MUST NOT** merge or deploy while a non-baselined violation at blocking severity remains outstanding. `std-code-linting-pipeline-gate-04`
 
 ### Implements These Principles
 
@@ -99,11 +99,11 @@ A lint suppression is scoped to one line and rule, documents its reason, receive
 
 ### Standards
 
-1. `std-code-lint-suppressions-exceptions-01` A lint violation **MUST NOT** be suppressed by disabling a rule broadly, such as file-wide or project-wide, to silence a single occurrence.
-2. `std-code-lint-suppressions-exceptions-02` A suppression **MUST** be scoped to the narrowest location and rule supported by the linter.
-3. `std-code-lint-suppressions-exceptions-03` A suppression **MUST** include a documented reason.
-4. `std-code-lint-suppressions-exceptions-04` A suppression **MUST** receive the same review scrutiny as the change it appears in.
-5. `std-code-lint-suppressions-exceptions-05` A suppression or exception list held in a dedicated file **MUST** be version-controlled within the codebase it applies to.
+1. A lint violation **MUST NOT** be suppressed by disabling a rule broadly, such as file-wide or project-wide, to silence a single occurrence. `std-code-lint-suppressions-exceptions-01`
+2. A suppression **MUST** be scoped to the narrowest location and rule supported by the linter. `std-code-lint-suppressions-exceptions-02`
+3. A suppression **MUST** include a documented reason. `std-code-lint-suppressions-exceptions-03`
+4. A suppression **MUST** receive the same review scrutiny as the change it appears in. `std-code-lint-suppressions-exceptions-04`
+5. A suppression or exception list held in a dedicated file **MUST** be version-controlled within the codebase it applies to. `std-code-lint-suppressions-exceptions-05`
 
 ### Related Standards
 
@@ -121,9 +121,9 @@ A linting ruleset change receives the same review as a code change, and the rule
 
 ### Standards
 
-1. `std-code-lint-ruleset-governance-01` A change to the adopted ruleset, including adding, removing, or weakening a rule, **MUST** go through the same review process required for a code change.
-2. `std-code-lint-ruleset-governance-02` A ruleset **MUST NOT** be weakened unilaterally to let a specific failing change pass.
-3. `std-code-lint-ruleset-governance-03` The ruleset **SHOULD** be reviewed periodically, so it stays current with the codebase's adopted conventions and evolving engineering practice.
+1. A change to the adopted ruleset, including adding, removing, or weakening a rule, **MUST** go through the same review process required for a code change. `std-code-lint-ruleset-governance-01`
+2. A ruleset **MUST NOT** be weakened unilaterally to let a specific failing change pass. `std-code-lint-ruleset-governance-02`
+3. The ruleset **SHOULD** be reviewed periodically, so it stays current with the codebase's adopted conventions and evolving engineering practice. `std-code-lint-ruleset-governance-03`
 
 ### Related Standards
 

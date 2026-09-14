@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-14
 ---
 
 # Dependency & Runtime Management
@@ -12,9 +12,9 @@ A dependency is chosen for a verifiable publisher, active maintenance, and adopt
 
 ### Standards
 
-1. `std-code-dependency-selection-01` A dependency **SHOULD** be sourced from a publisher with an established, verifiable identity, such as a recognised open-source project, foundation, or organisation; an anonymous or unverifiable publisher carries materially higher risk.
-2. `std-code-dependency-selection-02` A dependency **SHOULD** show evidence of active maintenance, such as a recent release or responsive issue handling, before it is adopted; one showing no such evidence over a sustained period **SHOULD** be treated as stale.
-3. `std-code-dependency-selection-03` A dependency's adoption by the wider community, such as its download volume or use by other well-established projects, **SHOULD** be weighed before it is adopted; a dependency with minimal external adoption carries materially higher risk if it is abandoned or later found to be compromised.
+1. A dependency **SHOULD** be sourced from a publisher with an established, verifiable identity, such as a recognised open-source project, foundation, or organisation; an anonymous or unverifiable publisher carries materially higher risk. `std-code-dependency-selection-01`
+2. A dependency **SHOULD** show evidence of active maintenance, such as a recent release or responsive issue handling, before it is adopted; one showing no such evidence over a sustained period **SHOULD** be treated as stale. `std-code-dependency-selection-02`
+3. A dependency's adoption by the wider community, such as its download volume or use by other well-established projects, **SHOULD** be weighed before it is adopted; a dependency with minimal external adoption carries materially higher risk if it is abandoned or later found to be compromised. `std-code-dependency-selection-03`
 
 ### Related Standards
 
@@ -32,9 +32,9 @@ A dependency's licence is checked for compatibility before adoption, and any inc
 
 ### Standards
 
-1. `std-code-licence-compatibility-01` A dependency's licence **MUST** be reviewed for compatibility with how the service will use it before the dependency is adopted.
-2. `std-code-licence-compatibility-02` A dependency whose licence is incompatible or unclear **MUST NOT** be adopted.
-3. `std-code-licence-compatibility-03` A licence incompatibility discovered in an already-adopted dependency **MUST** be remediated, whether by replacing the dependency or obtaining a compatible licence.
+1. A dependency's licence **MUST** be reviewed for compatibility with how the service will use it before the dependency is adopted. `std-code-licence-compatibility-01`
+2. A dependency whose licence is incompatible or unclear **MUST NOT** be adopted. `std-code-licence-compatibility-02`
+3. A licence incompatibility discovered in an already-adopted dependency **MUST** be remediated, whether by replacing the dependency or obtaining a compatible licence. `std-code-licence-compatibility-03`
 
 ### Implements These Principles
 
@@ -48,9 +48,9 @@ A dependency is sourced only through a governed internal proxy, with its integri
 
 ### Standards
 
-1. `std-code-dependency-sources-01` A dependency **MUST** be sourced only through a governed internal proxy service.
-2. `std-code-dependency-sources-02` A governed internal proxy **MUST** be configured to allow, restrict, cache, or block a specific registry or package according to organisational policy.
-3. `std-code-dependency-sources-03` A dependency's integrity **MUST** be verifiable before it is installed, whether via a checksum or signature recorded in a lockfile, or automatically verified against the source repository's checksum.
+1. A dependency **MUST** be sourced only through a governed internal proxy service. `std-code-dependency-sources-01`
+2. A governed internal proxy **MUST** be configured to allow, restrict, cache, or block a specific registry or package according to organisational policy. `std-code-dependency-sources-02`
+3. A dependency's integrity **MUST** be verifiable before it is installed, whether via a checksum or signature recorded in a lockfile, or automatically verified against the source repository's checksum. `std-code-dependency-sources-03`
 
 ### Related Standards
 
@@ -68,8 +68,8 @@ Every direct dependency is explicitly declared with an appropriate version const
 
 ### Standards
 
-1. `std-code-dependency-declaration-01` A codebase **MUST** explicitly declare every direct dependency in a version-controlled dependency manifest using a version constraint appropriate to its package ecosystem.
-2. `std-code-dependency-declaration-02` A codebase **MUST NOT** rely on an undeclared dependency, such as one installed globally, or available only as a transitive dependency of another.
+1. A codebase **MUST** explicitly declare every direct dependency in a version-controlled dependency manifest using a version constraint appropriate to its package ecosystem. `std-code-dependency-declaration-01`
+2. A codebase **MUST NOT** rely on an undeclared dependency, such as one installed globally, or available only as a transitive dependency of another. `std-code-dependency-declaration-02`
 
 ### Implements These Principles
 
@@ -83,10 +83,10 @@ A build uses its package ecosystem's reproducible resolution mechanism so depend
 
 ### Standards
 
-1. `std-code-reproducible-resolution-01` Where a package ecosystem supports a lockfile, a codebase's complete resolved dependency set, including every transitive dependency, **MUST** be captured in that lockfile and committed to version control.
-2. `std-code-reproducible-resolution-02` Where a lockfile is used, a build or deployment **MUST** install the exact dependency versions it records.
-3. `std-code-reproducible-resolution-03` A build or deployment **MUST NOT** resolve to dependency versions that differ between equivalent runs.
-4. `std-code-reproducible-resolution-04` A lockfile **MUST** be regenerated and reviewed as part of the same change that adds, removes, or updates a dependency.
+1. Where a package ecosystem supports a lockfile, a codebase's complete resolved dependency set, including every transitive dependency, **MUST** be captured in that lockfile and committed to version control. `std-code-reproducible-resolution-01`
+2. Where a lockfile is used, a build or deployment **MUST** install the exact dependency versions it records. `std-code-reproducible-resolution-02`
+3. A build or deployment **MUST NOT** resolve to dependency versions that differ between equivalent runs. `std-code-reproducible-resolution-03`
+4. A lockfile **MUST** be regenerated and reviewed as part of the same change that adds, removes, or updates a dependency. `std-code-reproducible-resolution-04`
 
 ### Related Standards
 
@@ -105,8 +105,8 @@ A team remains responsible for the operational and security impact of direct and
 
 ### Standards
 
-1. `std-code-transitive-dependencies-01` A team **MUST** remain responsible for the operational and security impact of each direct and transitive dependency.
-2. `std-code-transitive-dependencies-02` A transitive dependency problem **MUST** be remediated: upgrading the direct dependency that introduces it, overriding the affected version where safe, or replacing the dependency path entirely.
+1. A team **MUST** remain responsible for the operational and security impact of each direct and transitive dependency. `std-code-transitive-dependencies-01`
+2. A transitive dependency problem **MUST** be remediated: upgrading the direct dependency that introduces it, overriding the affected version where safe, or replacing the dependency path entirely. `std-code-transitive-dependencies-02`
 
 ### Related Standards
 
@@ -124,11 +124,11 @@ Every release generates a machine-readable SBOM of its actual resolved dependenc
 
 ### Standards
 
-1. `std-code-software-bill-of-materials-sbom-01` An SBOM reflecting a service's actual resolved dependency versions, including transitive dependencies, **MUST** be generated for every release artifact built.
-2. `std-code-software-bill-of-materials-sbom-02` An SBOM **MUST** be generated from the resolved dependency set so it reflects what the built artifact actually contains.
-3. `std-code-software-bill-of-materials-sbom-03` An SBOM **MUST** be produced in a standard, machine-readable format, such as [SPDX](https://spdx.dev/) or [CycloneDX](https://cyclonedx.org/).
-4. `std-code-software-bill-of-materials-sbom-04` A generated SBOM **MUST** be retained or published in a location accessible for later inspection, for at least as long as the release artifact it describes remains supported.
-5. `std-code-software-bill-of-materials-sbom-05` An SBOM **MUST** be available to support rapid identification of an affected service when a new vulnerability in a dependency is disclosed.
+1. An SBOM reflecting a service's actual resolved dependency versions, including transitive dependencies, **MUST** be generated for every release artifact built. `std-code-software-bill-of-materials-sbom-01`
+2. An SBOM **MUST** be generated from the resolved dependency set so it reflects what the built artifact actually contains. `std-code-software-bill-of-materials-sbom-02`
+3. An SBOM **MUST** be produced in a standard, machine-readable format, such as [SPDX](https://spdx.dev/) or [CycloneDX](https://cyclonedx.org/). `std-code-software-bill-of-materials-sbom-03`
+4. A generated SBOM **MUST** be retained or published in a location accessible for later inspection, for at least as long as the release artifact it describes remains supported. `std-code-software-bill-of-materials-sbom-04`
+5. An SBOM **MUST** be available to support rapid identification of an affected service when a new vulnerability in a dependency is disclosed. `std-code-software-bill-of-materials-sbom-05`
 
 ### Related Standards
 
@@ -149,15 +149,15 @@ Dependencies are updated in small, tested increments on a routine cadence, reass
 
 ### Standards
 
-1. `std-code-dependency-maintenance-01` Available dependency updates **SHOULD** be reviewed on a routine cadence, with automated tooling used to detect and raise them where available.
-2. `std-code-dependency-maintenance-02` A dependency that no longer shows evidence of active maintenance after adoption **SHOULD** be reassessed against the same criteria applied when it was first selected.
-3. `std-code-dependency-maintenance-03` A dependency that no longer meets the criteria applied when it was selected **SHOULD** be replaced.
-4. `std-code-dependency-maintenance-04` A routine dependency update **MUST** be tested and merged through the same change process as any other code change.
-5. `std-code-dependency-maintenance-05` A team **SHOULD** maintain a unit and integration test suite strong enough to give confidence that a dependency update has not introduced a defect.
-6. `std-code-dependency-maintenance-06` A dependency no longer referenced by a codebase **SHOULD** be removed from its dependency manifest and lockfile in the same change that removes its last use.
-7. `std-code-dependency-maintenance-07` A dependency with a known vulnerability **MUST** be remediated within its own risk-proportionate timeframe.
-8. `std-code-dependency-maintenance-08` A dependency with a known vulnerability **MUST NOT** be deferred to the routine dependency-update cadence.
-9. `std-code-dependency-maintenance-09` A dependency update **SHOULD** be applied in small, frequent increments; deferring it into an infrequent, large-scale upgrade compounds risk and effort.
+1. Available dependency updates **SHOULD** be reviewed on a routine cadence, with automated tooling used to detect and raise them where available. `std-code-dependency-maintenance-01`
+2. A dependency that no longer shows evidence of active maintenance after adoption **SHOULD** be reassessed against the same criteria applied when it was first selected. `std-code-dependency-maintenance-02`
+3. A dependency that no longer meets the criteria applied when it was selected **SHOULD** be replaced. `std-code-dependency-maintenance-03`
+4. A routine dependency update **MUST** be tested and merged through the same change process as any other code change. `std-code-dependency-maintenance-04`
+5. A team **SHOULD** maintain a unit and integration test suite strong enough to give confidence that a dependency update has not introduced a defect. `std-code-dependency-maintenance-05`
+6. A dependency no longer referenced by a codebase **SHOULD** be removed from its dependency manifest and lockfile in the same change that removes its last use. `std-code-dependency-maintenance-06`
+7. A dependency with a known vulnerability **MUST** be remediated within its own risk-proportionate timeframe. `std-code-dependency-maintenance-07`
+8. A dependency with a known vulnerability **MUST NOT** be deferred to the routine dependency-update cadence. `std-code-dependency-maintenance-08`
+9. A dependency update **SHOULD** be applied in small, frequent increments; deferring it into an infrequent, large-scale upgrade compounds risk and effort. `std-code-dependency-maintenance-09`
 
 ### Related Standards
 
@@ -179,10 +179,10 @@ A service uses a supported runtime version, prefers a long-term-support channel 
 
 ### Standards
 
-1. `std-code-runtime-maintenance-01` A service **MUST** run on a language or platform runtime version still receiving security updates from its publisher.
-2. `std-code-runtime-maintenance-02` A version that has reached end-of-life **MUST NOT** be used in production.
-3. `std-code-runtime-maintenance-03` Where a runtime's publisher offers a long-term-support release channel, a production service **SHOULD** use it because it requires supported upgrades less often.
-4. `std-code-runtime-maintenance-04` A runtime version approaching the end of its supported life **SHOULD** be upgraded proactively, before it reaches end-of-life.
+1. A service **MUST** run on a language or platform runtime version still receiving security updates from its publisher. `std-code-runtime-maintenance-01`
+2. A version that has reached end-of-life **MUST NOT** be used in production. `std-code-runtime-maintenance-02`
+3. Where a runtime's publisher offers a long-term-support release channel, a production service **SHOULD** use it because it requires supported upgrades less often. `std-code-runtime-maintenance-03`
+4. A runtime version approaching the end of its supported life **SHOULD** be upgraded proactively, before it reaches end-of-life. `std-code-runtime-maintenance-04`
 
 ### Related Standards
 
