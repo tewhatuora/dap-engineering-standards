@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-09-21
 ---
 
 # Quality Engineering
@@ -29,6 +29,12 @@ Outcome driven assurance connects quality questions, acceptance criteria, tests,
 Quality evidence is retained in shared locations where responsible teams and decision-makers can access it while it remains relevant.
 
 [Read more](evidence-reporting.md).
+
+### Quality Roles & Responsibilities
+
+Quality and testing activities have explicit role assignments, shared accountability, and QA oversight across their lifecycle.
+
+[Read more](quality-roles-responsibilities.md).
 
 ### Unit Testing
 

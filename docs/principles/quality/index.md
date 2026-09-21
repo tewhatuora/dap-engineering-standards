@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-09-21
 ---
 
 # Quality
@@ -41,6 +41,12 @@ Quality decisions are supported by clear, traceable evidence and reporting suite
 Quality is a shared responsibility and is considered from discovery through operation.
 
 [Read more](quality-by-design.md).
+
+### Quality Roles & Responsibilities
+
+Explicit allocation of quality activities preserves shared ownership and coherent QA oversight.
+
+[Read more](quality-roles-responsibilities.md).
 
 ### Quality Intelligence & Improvement
 
