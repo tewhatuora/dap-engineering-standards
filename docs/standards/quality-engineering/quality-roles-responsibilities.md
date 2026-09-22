@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-21
+last_edited: 2026-09-22
 ---
 
 # Quality Roles & Responsibilities
@@ -23,6 +23,7 @@ Quality and testing activities have documented role assignments that establish r
 ### Implements These Principles
 
 - [Defined Quality Roles and Responsibilities](../../principles/quality/quality-roles-responsibilities.md#defined-quality-roles-and-responsibilities)
+- [People Remain Responsible](../../principles/quality/ai-assisted-quality-engineering.md#people-remain-responsible)
 
 ## Assigned Activities and Shared Quality Ownership
 
@@ -39,6 +40,7 @@ Quality responsibilities are allocated across the roles whose decisions and work
 ### Implements These Principles
 
 - [Assigned Activities and Shared Quality Ownership](../../principles/quality/quality-roles-responsibilities.md#assigned-activities-and-shared-quality-ownership)
+- [People Remain Responsible](../../principles/quality/ai-assisted-quality-engineering.md#people-remain-responsible)
 
 ## QA Oversight Across Quality Activities
 
@@ -61,3 +63,4 @@ The QA function has visibility of and evaluates quality and testing activities r
 ### Implements These Principles
 
 - [QA Oversight Across Quality Activities](../../principles/quality/quality-roles-responsibilities.md#qa-oversight-across-quality-activities)
+- [AI Broadens What QA Checks](../../principles/quality/ai-assisted-quality-engineering.md#ai-broadens-what-qa-checks)

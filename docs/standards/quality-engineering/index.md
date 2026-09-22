@@ -1,12 +1,12 @@
 ---
-last_edited: 2026-09-21
+last_edited: 2026-09-22
 ---
 
 # Quality Engineering
 
 ## Overview
 
-Quality engineering standards require changes to be verified for correctness, performance, security, and accessibility.
+Quality engineering standards require changes, including work and functionality that utilizes AI, to be verified for correctness, performance, security, and accessibility.
 
 Choose a standard below to read it in full.
 
@@ -17,6 +17,12 @@ Choose a standard below to read it in full.
 Test automation applies risk, value, testability, and maintenance considerations to produce reliable and appropriately scoped evidence.
 
 [Read more](test-automation.md).
+
+### AI-Assisted Quality Engineering
+
+AI-assisted quality engineering includes AI use in testing scope, keeps decisions with people, checks AI work independently, controls agents, and measures results.
+
+[Read more](ai-assisted-quality-engineering.md).
 
 ### Outcome Driven Assurance
 

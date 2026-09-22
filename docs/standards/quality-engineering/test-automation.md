@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-09-22
 ---
 
 # Test Automation
@@ -206,3 +206,4 @@ Automated checks provide repeatable evidence, while risks requiring exploration,
 ### Implements These Principles
 
 - [Test Automation](../../principles/quality/test-automation.md#automation-complements-human-testing)
+- [Human Exploration and Expert Judgement](../../principles/quality/ai-assisted-quality-engineering.md#human-exploration-and-expert-judgement)

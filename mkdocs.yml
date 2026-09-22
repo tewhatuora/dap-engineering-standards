@@ -98,6 +98,7 @@ nav:
     - Quality:
       - principles/quality/index.md
       - Test Automation: principles/quality/test-automation.md
+      - AI-Assisted Quality Engineering: principles/quality/ai-assisted-quality-engineering.md
       - Outcome Driven Assurance: principles/quality/outcome-driven-assurance.md
       - Risk-Based Quality: principles/quality/risk-based-quality.md
       - Evidence & Reporting: principles/quality/evidence-reporting.md
@@ -149,6 +150,7 @@ nav:
     - Quality Engineering:
       - standards/quality-engineering/index.md
       - Test Automation: standards/quality-engineering/test-automation.md
+      - AI-Assisted Quality Engineering: standards/quality-engineering/ai-assisted-quality-engineering.md
       - Outcome Driven Assurance: standards/quality-engineering/outcome-driven-assurance.md
       - Evidence & Reporting: standards/quality-engineering/evidence-reporting.md
       - Quality Roles & Responsibilities: standards/quality-engineering/quality-roles-responsibilities.md

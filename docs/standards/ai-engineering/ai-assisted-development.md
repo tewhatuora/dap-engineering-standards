@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-09-22
 ---
 
 # AI-Assisted Development
@@ -19,6 +19,7 @@ AI assistance does not transfer or reduce the submitting developer's accountabil
 ### Implements These Principles
 
 - [Accountability and Equal Standards](../../principles/engineering-practice/ai-assisted-engineering.md#accountability-and-equal-standards)
+- [People Remain Responsible](../../principles/quality/ai-assisted-quality-engineering.md#people-remain-responsible)
 
 ## Human Oversight
 
@@ -40,6 +41,7 @@ AI-generated output remains subject to developer understanding and human review 
 
 - [Understanding Before Adoption](../../principles/engineering-practice/ai-assisted-engineering.md#understanding-before-adoption)
 - [Automation Supports Human Judgement](../../principles/engineering-practice/automation.md#automation-supports-human-judgement)
+- [People Remain Responsible](../../principles/quality/ai-assisted-quality-engineering.md#people-remain-responsible)
 
 ## Quality, Testing & Security
 
@@ -68,6 +70,8 @@ AI-assisted code meets the same quality, testing, and security gates as any othe
 - [Accountability and Equal Standards](../../principles/engineering-practice/ai-assisted-engineering.md#accountability-and-equal-standards)
 - [Automation Supports Human Judgement](../../principles/engineering-practice/automation.md#automation-supports-human-judgement)
 - [Secure Development](../../principles/security-privacy/security-engineering.md#secure-development)
+- [AI Broadens What QA Checks](../../principles/quality/ai-assisted-quality-engineering.md#ai-broadens-what-qa-checks)
+- [Independent Checks of AI Work and Evidence](../../principles/quality/ai-assisted-quality-engineering.md#independent-checks-of-ai-work-and-evidence)
 
 ## AI Agent Access
 
@@ -89,6 +93,7 @@ An AI agent's access remains limited to what its current task requires and what 
 
 - [Bounded Agent Impact](../../principles/engineering-practice/ai-assisted-engineering.md#bounded-agent-impact)
 - [Least Privilege](../../principles/security-privacy/security-engineering.md#least-privilege)
+- [Controlled and Traceable AI Agents](../../principles/quality/ai-assisted-quality-engineering.md#controlled-and-traceable-ai-agents)
 
 ## AI Agent Change Containment
 
@@ -104,6 +109,7 @@ An AI agent is stopped when it acts outside its delegated task, and any unintend
 ### Implements These Principles
 
 - [Bounded Agent Impact](../../principles/engineering-practice/ai-assisted-engineering.md#bounded-agent-impact)
+- [Controlled and Traceable AI Agents](../../principles/quality/ai-assisted-quality-engineering.md#controlled-and-traceable-ai-agents)
 
 ## High-Risk Use
 
@@ -124,6 +130,7 @@ AI-generated code affecting a high-risk function receives domain-expert review b
 
 - [Scrutiny Based on Impact](../../principles/engineering-practice/ai-assisted-engineering.md#scrutiny-based-on-impact)
 - [Secure Development](../../principles/security-privacy/security-engineering.md#secure-development)
+- [Human Exploration and Expert Judgement](../../principles/quality/ai-assisted-quality-engineering.md#human-exploration-and-expert-judgement)
 
 ## Clinical Decisions & Advice
 
