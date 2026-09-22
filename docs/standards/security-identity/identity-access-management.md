@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-09-22
 ---
 
 # Identity & Access Management
@@ -46,6 +46,7 @@ An AI agent has no write access to a production data store, and its read access 
 
 - [Security Engineering](../../principles/security-privacy/security-engineering.md)
 - [Data Privacy](../../principles/security-privacy/data-privacy.md)
+- [Controlled and Traceable AI Agents](../../principles/quality/ai-assisted-quality-engineering.md#controlled-and-traceable-ai-agents)
 
 ## Automated Process Access
 

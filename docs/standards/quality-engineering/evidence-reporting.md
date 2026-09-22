@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-09-22
 ---
 
 # Evidence & Reporting
@@ -102,3 +102,5 @@ Quality evidence identifies its source and tested context so its applicability t
 ### Implements These Principles
 
 - [Current and Traceable Evidence](../../principles/quality/evidence-reporting.md#current-and-traceable-evidence)
+- [Continuous Checks of Functionality That Utilizes AI](../../principles/quality/ai-assisted-quality-engineering.md#continuous-checks-of-functionality-that-utilizes-ai)
+- [Controlled and Traceable AI Agents](../../principles/quality/ai-assisted-quality-engineering.md#controlled-and-traceable-ai-agents)

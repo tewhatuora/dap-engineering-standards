@@ -1,12 +1,12 @@
 ---
-last_edited: 2026-09-21
+last_edited: 2026-09-22
 ---
 
 # Quality
 
 ## Overview
 
-Quality is designed into products and services from discovery through operation. These principles address early engagement, clear outcomes, effective automation, risk-based decisions, trustworthy evidence, and improvement informed by data.
+Quality is designed into products and services from discovery through operation. These principles address early engagement, clear outcomes, effective automation, responsible AI assistance, risk-based decisions, trustworthy evidence, and improvement informed by data.
 
 Choose a principle below to read its full reasoning.
 
@@ -17,6 +17,12 @@ Choose a principle below to read its full reasoning.
 Test automation provides repeatable evidence about product and service quality while complementing human judgement.
 
 [Read more](test-automation.md).
+
+### AI-Assisted Quality Engineering
+
+AI helps quality engineering do more, while people remain responsible for decisions, focus testing on important risks, and check that evidence can be trusted.
+
+[Read more](ai-assisted-quality-engineering.md).
 
 ### Outcome Driven Assurance
 

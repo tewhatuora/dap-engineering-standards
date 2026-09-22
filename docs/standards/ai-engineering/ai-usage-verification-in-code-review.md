@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-09-22
 ---
 
 # AI Usage & Verification in Code Review
@@ -31,6 +31,8 @@ An author independently establishes that an AI-assisted change meets its stated 
 
 - [Accountability and Equal Standards](../../principles/engineering-practice/ai-assisted-engineering.md#accountability-and-equal-standards)
 - [Secure Development](../../principles/security-privacy/security-engineering.md#secure-development)
+- [AI Broadens What QA Checks](../../principles/quality/ai-assisted-quality-engineering.md#ai-broadens-what-qa-checks)
+- [Independent Checks of AI Work and Evidence](../../principles/quality/ai-assisted-quality-engineering.md#independent-checks-of-ai-work-and-evidence)
 
 ## AI Disclosure
 
@@ -94,6 +96,7 @@ A reviewer may use an approved AI tool to assist review while retaining independ
 
 - [AI Tool Terms and Controls](../../principles/engineering-practice/ai-assisted-engineering.md#ai-tool-terms-and-controls)
 - [Automation Supports Human Judgement](../../principles/engineering-practice/automation.md#automation-supports-human-judgement)
+- [Human Exploration and Expert Judgement](../../principles/quality/ai-assisted-quality-engineering.md#human-exploration-and-expert-judgement)
 
 ## Approval Accountability
 

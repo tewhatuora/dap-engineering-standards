@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-09-22
 last_reviewed: 2026-09-10
 review_cycle: 12 months
 ---
@@ -21,6 +21,7 @@ Each testing activity has a defined purpose and an established test outcome.
 ### Implements These Principles
 
 - [Clear Test Outcomes](../../principles/quality/outcome-driven-assurance.md#clear-test-outcomes)
+- [Continuous Checks of Functionality That Utilizes AI](../../principles/quality/ai-assisted-quality-engineering.md#continuous-checks-of-functionality-that-utilizes-ai)
 
 ## Clear and Useful Test Evidence
 
