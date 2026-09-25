@@ -8,6 +8,14 @@ last_edited: 2026-09-11
 
 Principles state what is valued and why, giving standards their basis and guiding engineering decisions that no specific standard covers.
 
+## Inspiration
+
+These principles are informed by well-known guidance for modern software engineering and DevOps. The DORA research programme, including the [State of DevOps reports](https://www.devops-research.com/research.html) and [Accelerate: The Science of Lean Software and DevOps](https://www.amazon.co.uk/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339) use research based evidence to show that teams with strong quality, automation, and learning habits tend to deliver with more speed and less risk.
+
+The [12-factor app methodology](https://12factor.net/) sets out practical patterns for building software that is portable, scalable, and easier to operate in the cloud. 12 Factor apps are well suited to containerisation and serverless computing.
+
+The [CD Foundation's best-practice guidance](https://bestpractices.cd.foundation/learn/) for adopting Continuous Delivery.
+
 Choose a category below to view its principles.
 
 ## Categories
