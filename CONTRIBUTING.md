@@ -4,11 +4,24 @@ Thank you for helping maintain Health New Zealand's engineering principles and s
 
 ## Scope
 
-A principle or standard **MUST** only cover what its [target audience](README.md#target-audience) should consider for the topic it addresses. Content describing Health New Zealand's internal governance or process **MUST NOT** be included, even if it relates to that topic; if it needs to be documented, it belongs elsewhere, not in this repository.
+- Content describing Health New Zealand's internal governance or process **MUST NOT** be included, even if it relates to the topic being addressed; if it needs to be documented, it belongs elsewhere, not in this repository.
+- Principles and standards **MUST** express technology-agnostic engineering values and outcomes and **MUST NOT** refer to specific programming languages, frameworks, or libraries.
 
-## Proposing Changes
+## Contributing Changes
 
-New principles or standards, and changes to existing ones, **MUST** be proposed via merge request.
+This repository uses a **fork-based** workflow. Propose new principles or standards, and changes to existing ones, via a pull request from a branch in your fork.
+
+1. Fork this repository into your own GitHub account. This repository is the upstream repository; your fork is where you push your changes.
+2. Before starting a change, sync your fork's `main` branch with the upstream `main` branch, then create a separate branch for the proposed change.
+3. Make your changes on that branch, following this guide, and validate them locally as described in [Local Build and Preview](#local-build-and-preview).
+4. Commit your changes and push the branch to your fork.
+5. Open a pull request from your fork's change branch to this repository's `main` branch. Include a change summary in the description.
+
+	**Include your name, team and organisation in the pull request description**, e.g. `Jane Doe (DAP, Health New Zealand)`.
+
+6. Address review feedback by committing and pushing further changes to the same branch; the pull request updates automatically.
+
+Once a code owner approves and merges your pull request, the GitHub Actions workflow automatically builds and publishes the updated site.
 
 ## Documentation Types
 
@@ -84,7 +97,7 @@ The `AGENTS.md` files supplement this guide; they do not replace its contributio
 
 ## Review
 
-Merge requests **MUST** be reviewed and approved by a code owner listed in [`CODEOWNERS`](CODEOWNERS) before merging.
+Pull requests **MUST** be reviewed and approved by a code owner listed in [`CODEOWNERS`](CODEOWNERS) before merging.
 
 ## Adding or Changing a Page
 
@@ -111,7 +124,7 @@ The site is built directly from this repository with [MkDocs](https://www.mkdocs
 - `make serve` starts MkDocs' local live-reloading server at `http://127.0.0.1:8000/`.
 - `make build` builds the static site into `public/`.
 
-GitLab CI only runs once a merge request is merged into the default branch; it does not validate an open merge request beforehand, so check a change locally with `make serve` or `make build` before merging.
+The GitHub Pages workflow runs on pushes to `main` or when triggered manually; it does not validate open pull requests, so check a change locally with `make serve` or `make build` before merging.
 
 ## Mermaid Diagrams
 
