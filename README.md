@@ -5,6 +5,10 @@
 
 These engineering principles and standards guide how software and services are delivered for Health New Zealand, keeping expectations consistent across projects while allowing implementation details to evolve.
 
+## Engineering Philosophy
+
+Read [Our Engineering Philosophy](docs/principles/index.md#our-philosophy) for the commitments that guide how we design, build, deliver, and operate software and services for Health New Zealand.
+
 ## Documentation Hierarchy
 
 ```mermaid
