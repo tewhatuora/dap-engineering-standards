@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-10-20
 ---
 
 # Dependency & Runtime Management
@@ -15,10 +15,6 @@ A dependency is chosen for a verifiable publisher, active maintenance, and adopt
 1. A dependency **SHOULD** be sourced from a publisher with an established, verifiable identity, such as a recognised open-source project, foundation, or organisation; an anonymous or unverifiable publisher carries materially higher risk. `std-code-dependency-selection-01`
 2. A dependency **SHOULD** show evidence of active maintenance, such as a recent release or responsive issue handling, before it is adopted; one showing no such evidence over a sustained period **SHOULD** be treated as stale. `std-code-dependency-selection-02`
 3. A dependency's adoption by the wider community, such as its download volume or use by other well-established projects, **SHOULD** be weighed before it is adopted; a dependency with minimal external adoption carries materially higher risk if it is abandoned or later found to be compromised. `std-code-dependency-selection-03`
-
-### Related Standards
-
-- [Technology Stack Governance](../architecture-system-design/technology-stack-governance.md)
 
 ### Implements These Principles
 
@@ -186,7 +182,6 @@ A service uses a supported runtime version, prefers a long-term-support channel 
 
 ### Related Standards
 
-- [Technology Stack Governance](../architecture-system-design/technology-stack-governance.md)
 - [Vulnerability & Dependency Management](../security-identity/vulnerability-dependency-management.md)
 
 ### Implements These Principles

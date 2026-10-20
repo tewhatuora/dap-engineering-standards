@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-20
 ---
 
 # Vendor Lock-in and Portability
@@ -18,24 +18,7 @@ Defaults and familiarity do not by themselves establish a benefit worth that cos
 
 ### Implemented By These Standards
 
-- [Technology Stack Governance](../../standards/architecture-system-design/technology-stack-governance.md)
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
-
-## Exit Planning
-
-### Summary
-
-The exit path for a costly-to-reverse commitment is assessed before adoption, and any lack of a practical exit is treated as a deliberate risk.
-
-### Reasoning
-
-The cost, time, and disruption of leaving a commitment can determine whether a later change remains practical, regardless of the technical alternatives available at that time. Once the commitment is established, data migration, replacement work, and service disruption can make an otherwise desirable exit unaffordable.
-
-Assessing the exit path before adoption exposes these constraints while other options remain available. If no practical exit exists, recording that condition as a deliberate risk makes the resulting limit on future change part of the decision.
-
-### Implemented By These Standards
-
-- [Technology Stack Governance](../../standards/architecture-system-design/technology-stack-governance.md)
 
 ## Vendor Abstraction
 

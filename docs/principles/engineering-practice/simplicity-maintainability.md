@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-20
 ---
 
 # Simplicity and Maintainability
@@ -58,22 +58,6 @@ A stable interface separates the behaviour used by dependent components from the
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
-
-## Technology Diversity
-
-### Summary
-
-Each technology is justified by the value it provides, and the number of technologies serving similar purposes is kept low.
-
-### Reasoning
-
-Every technology adds ongoing costs for maintenance, security, operational support, and the knowledge needed to use it safely. Its benefits must justify those costs throughout its use.
-
-Using fewer technologies for substantially similar problems concentrates practical experience and avoids duplicating maintenance, support, and learning across equivalent tools.
-
-### Implemented By These Standards
-
-- [Technology Stack Governance](../../standards/architecture-system-design/technology-stack-governance.md)
 
 ## Unused Code and Dependencies
 
