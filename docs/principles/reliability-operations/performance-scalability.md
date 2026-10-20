@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-21
 ---
 
 # Performance and Scalability
@@ -8,13 +8,13 @@ last_edited: 2026-09-11
 
 ### Summary
 
-Service performance and scaling under load are explicit architecture decisions made during design.
+Engineers make explicit architecture decisions about service performance and scaling under load during design.
 
 ### Reasoning
 
-Expected load affects how a service stores data, manages work, uses resources, and interacts with dependencies. These choices shape the architecture and can become costly to change after implementation and dependent systems are established.
+Expected load affects how a service stores data, manages work, uses resources, and interacts with dependencies. These choices shape the architecture and can be costly to change once the service is built and other systems depend on it.
 
-Considering performance and scaling during design shows whether the selected runtime and architecture can support the required behaviour. It also makes known limits visible while the design can still change without major rework.
+Considering performance and scaling during design lets engineers assess whether the runtime and architecture can support the required behaviour. It also makes known limits clear while the design can still change without major rework.
 
 ### Implemented By These Standards
 
@@ -29,9 +29,9 @@ Load, throughput, concurrency, latency, and error rate are measurable requiremen
 
 ### Reasoning
 
-Measurable requirements define the demand a service is expected to handle and the behaviour it must maintain under that demand. They give architecture and implementation decisions a clear target and provide a basis for determining whether testing has demonstrated acceptable performance.
+Measurable requirements define the demand a service is expected to handle and how it needs to behave under that demand. They give engineers clear targets for design and implementation and let them judge whether test results demonstrate acceptable performance.
 
-Requirements based on realistic demand reduce the risk of building too little capacity for expected use or paying for capacity that provides no corresponding value. They also make the assumptions behind a capacity decision visible when demand later changes.
+Requirements based on realistic demand reduce the risk of providing too little capacity or paying for capacity that adds no value. They also make the assumptions behind capacity decisions clear when demand changes.
 
 ### Implemented By These Standards
 
@@ -48,9 +48,9 @@ Services scale horizontally by default, and their capacity adjusts automatically
 
 ### Reasoning
 
-Adding and removing service instances allows capacity to change without depending on how far one instance can be enlarged. It also distributes work across replaceable instances instead of making the service depend on the capacity and availability of a single runtime.
+Adding and removing service instances lets capacity change without relying on how much one instance can grow. It also spreads work across replaceable instances, so the service does not depend on the capacity and availability of a single runtime.
 
-Automatic adjustment responds to sustained changes in demand without waiting for someone to change capacity manually. The runtime model must support that behaviour so instances can be added or removed without breaking state, coordination, or request handling.
+Automatic scaling responds to sustained changes in demand without waiting for someone to adjust capacity manually. The runtime model needs to support adding and removing instances without disrupting state, coordination, or request handling.
 
 ### Implemented By These Standards
 
@@ -61,13 +61,13 @@ Automatic adjustment responds to sustained changes in demand without waiting for
 
 ### Summary
 
-Components that cannot scale independently are identified during design and either addressed or accepted as bounded limitations.
+Engineers identify components that cannot scale independently during design and either address them or accept them as limitations with known bounds.
 
 ### Reasoning
 
-A component that cannot scale independently can limit the capacity of the wider service even when every other component has capacity available. Shared resources and points of contention can create the same limit by forcing increasing demand through one constrained part of the system.
+A component that cannot scale independently can limit the whole service, even when other components have spare capacity. Shared resources and contention can create the same limit when growing demand has to pass through one constrained part of the system.
 
-Identifying the constraint during design allows it to be removed, accommodated, or accepted with a known bound. This prevents expected growth from first revealing the limit through degraded performance or a production failure.
+Finding the constraint during design lets engineers remove it, design around it, or accept it with a known bound. Expected growth then does not have to reveal the limit through poor performance or a production failure.
 
 ### Implemented By These Standards
 
@@ -81,9 +81,9 @@ Data access avoids unnecessary work as demand grows, and every cache has a defin
 
 ### Reasoning
 
-Data access that scans, transfers, or processes more data than a request needs consumes increasing time and capacity as demand and data volume grow. Bounding the work performed for each request and avoiding repeated access prevents that unnecessary cost from growing with the service.
+Scanning, transferring, or processing more data than a request needs takes more time and capacity as demand and data volume grow. Limiting the work per request and avoiding repeated access keeps that unnecessary cost from growing with the service.
 
-A cache reduces repeated work by storing a result beyond the request that produced it, but that result can become outdated when the source changes. A defined invalidation or expiry approach determines when the cached value stops being trusted and limits how long stale data can be served.
+A cache reduces repeated work by keeping a result after the request that produced it. The result can become outdated when the source changes. A defined approach to invalidation or expiry determines when to stop trusting the cached value and limits how long stale data can be served.
 
 ### Implemented By These Standards
 
@@ -94,15 +94,15 @@ A cache reduces repeated work by storing a result beyond the request that produc
 
 ### Summary
 
-Performance and capacity targets are validated before production, as the service evolves, and when demand or sustained degradation challenges its design assumptions.
+Engineers validate performance and capacity targets before production, as the service evolves, and when demand or sustained degradation calls its design assumptions into question.
 
 ### Reasoning
 
-A target does not show that a service can meet it under expected demand. Testing before production provides evidence against a representative workload while a shortfall can still be addressed without affecting users.
+A target alone does not show that a service can handle expected demand. Testing with a representative workload before production shows whether the service meets the target while shortfalls can still be fixed without affecting users.
 
-Changes to code, data, dependencies, and infrastructure can alter performance even when the target remains unchanged. Repeating validation as the service evolves detects these regressions and shows whether previous capacity evidence still applies.
+Changes to code, data, dependencies, and infrastructure can affect performance even when the target stays the same. Repeating validation as the service evolves detects regressions and shows whether earlier capacity results still apply.
 
-Scaling decisions also depend on an expected level and pattern of demand. Growth beyond that basis, sustained degradation, or movement towards a known limit shows when the assumptions behind the current capacity or architecture need to be reassessed.
+Scaling decisions also depend on the expected level and pattern of demand. Growth beyond that expectation, sustained degradation, or an approaching limit signals that engineers need to reassess the assumptions behind the current capacity or architecture.
 
 ### Implemented By These Standards
 

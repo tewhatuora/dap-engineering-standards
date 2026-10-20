@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-21
 ---
 
 # Reuse
@@ -8,13 +8,13 @@ last_edited: 2026-09-11
 
 ### Summary
 
-Existing solutions are evaluated before development begins, with internal reuse preferred over external adoption and custom development used only when neither meets the requirement.
+Engineers evaluate existing solutions before development begins, preferring internal reuse over external adoption and building a custom solution only when neither meets the requirement.
 
 ### Reasoning
 
-Starting development without checking existing options can duplicate capability and waste effort. Checking those options during design avoids committing to a new implementation before users and other systems depend on it.
+Starting development without checking existing options can duplicate capability and waste effort. Evaluating those options during design avoids committing to a new implementation that users and other systems may come to depend on.
 
-Internal reuse avoids creating another implementation and its support burden. When no internal solution meets the requirement, adopting an external solution can avoid the ongoing cost of custom development. Familiarity with a technology or the convenience of building a new solution does not justify rejecting a suitable existing option.
+Reusing an internal solution avoids creating another implementation to support. When no internal solution meets the requirement, an external solution can avoid the ongoing cost of custom development. Familiarity with a technology or the convenience of building something new does not justify rejecting a suitable existing option.
 
 ### Implemented By These Standards
 
@@ -38,9 +38,9 @@ Reusable components, services, and libraries have stable, documented, and versio
 
 ### Reasoning
 
-A documented interface tells consumers what behaviour they can rely on without requiring them to understand the implementation. It prevents internal design choices from becoming dependencies and gives every consumer the same contract.
+A documented interface tells consumers what behaviour they can rely on without understanding the implementation. It keeps them from depending on internal design choices and gives every consumer the same contract.
 
-Stable, versioned interfaces allow providers to improve an implementation without unexpectedly breaking consumers. Versioning also provides a clear migration path when the contract changes. Without a stable contract, changes require coordination between teams that should be able to work independently.
+Stable, versioned interfaces let providers improve an implementation without unexpectedly breaking consumers. Versioning gives consumers a clear migration path when the contract changes. Without a stable contract, teams have to coordinate changes that they should be able to make independently.
 
 ### Implemented By These Standards
 

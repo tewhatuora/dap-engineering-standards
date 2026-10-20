@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-21
 ---
 
 # Distributed Consistency
@@ -12,9 +12,9 @@ A transaction remains within one service's data store and one bounded unit of wo
 
 ### Reasoning
 
-A transaction that spans services makes completion depend on the availability and transaction behaviour of every participant. It also exposes each service's internal data management to coordination that crosses its ownership boundary.
+A transaction that spans services can complete only if every participant is available and handles the transaction as expected. It also requires services to coordinate how they manage data that they own independently.
 
-Keeping the transaction within one service allows participating services to fail, recover, and evolve independently. Bounding it to one unit of work also prevents database resources and locks from being held while an external system responds.
+Keeping transactions within each service lets services fail, recover, and evolve independently. Limiting a transaction to one unit of work also avoids holding database resources and locks while waiting for an external system to respond.
 
 ### Implemented By These Standards
 
@@ -24,13 +24,13 @@ Keeping the transaction within one service allows participating services to fail
 
 ### Summary
 
-State shared across services converges through an explicit eventual-consistency pattern rather than a distributed transaction.
+State shared across services reaches a consistent state through an explicit eventual-consistency pattern rather than a distributed transaction.
 
 ### Reasoning
 
-An atomic transaction across independently owned data stores couples the availability and transaction model of every participating service. A failure or delay in one participant can then prevent the others from completing work within their own boundaries.
+An atomic transaction across independently owned data stores makes services depend on each other's availability and transaction models. A failure or delay in one service can then prevent the others from completing their own work.
 
-Eventual consistency allows each service to commit its state independently while coordinating the changes needed for the wider outcome. An explicit convergence pattern defines how incomplete work is detected, retried, or otherwise brought to a consistent state.
+Eventual consistency lets each service commit its own state while coordinating changes with other services to achieve the overall outcome. The chosen pattern defines how services detect incomplete work, retry it, or otherwise bring it to a consistent state.
 
 ### Implemented By These Standards
 
@@ -44,9 +44,9 @@ A state change and the event or message that announces it are committed as one a
 
 ### Reasoning
 
-When a state change and its announcement are committed separately, either operation can succeed while the other fails. Consumers may then act on an event for state that was not saved or remain unaware of a change they were expected to process.
+When a state change and its announcement are committed separately, one can succeed while the other fails. Consumers may then act on an event for state that was never saved, or miss a change they were expected to process.
 
-Committing both as one outcome preserves the relationship between the service's state and the messages through which other services observe it. This gives consumers a reliable basis for updating their own state without requiring them to detect an unannounced change.
+Committing both as one outcome keeps the service's state consistent with the messages that tell other services about it. Consumers can then update their own state reliably without needing to detect changes that were never announced.
 
 ### Implemented By These Standards
 
@@ -57,13 +57,13 @@ Committing both as one outcome preserves the relationship between the service's 
 
 ### Summary
 
-A workflow spanning multiple services explicitly uses choreography or orchestration as its coordination model.
+A workflow spanning multiple services has an explicit coordination model based on choreography or orchestration.
 
 ### Reasoning
 
-Coordination that emerges implicitly from calls and events leaves no clear account of how the workflow advances or who resolves an incomplete outcome. This makes failure handling difficult to understand because responsibility is spread across interactions that were not designed as one workflow.
+When a workflow grows out of calls and events without an explicit design, it is unclear how work moves forward or who handles incomplete work. Failure handling becomes hard to understand because responsibility is spread across interactions that were not designed as one workflow.
 
-Choosing choreography or orchestration makes the flow of work and its recovery responsibilities part of the design. Engineers can then identify how progress is observed, which component makes each decision, and how the workflow responds when a step does not complete.
+Choosing choreography or orchestration makes the flow of work and responsibility for recovery part of the design. Engineers can then see how progress is tracked, which component makes each decision, and what happens when a step does not complete.
 
 ### Implemented By These Standards
 
@@ -73,13 +73,13 @@ Choosing choreography or orchestration makes the flow of work and its recovery r
 
 ### Summary
 
-A workflow spanning multiple services defines how to compensate completed steps when a later step fails.
+A workflow spanning multiple services defines how to compensate for completed steps when a later step fails.
 
 ### Reasoning
 
-Once an independently owned service commits a step, a transaction controlled by another service cannot simply roll it back. If a later step fails, the workflow can remain partly complete and leave business state that does not represent the intended outcome.
+Once a service commits a step in its own data store, another service's transaction cannot simply roll it back. If a later step fails, the workflow can remain partly complete, leaving business state that does not match the intended outcome.
 
-Defining compensation with the workflow establishes which effects must be reversed, offset, or otherwise resolved. It gives failure handling the same design attention as the successful path instead of leaving recovery to be invented after an incomplete outcome occurs.
+Designing compensation alongside the workflow makes clear which effects need to be reversed, offset, or otherwise resolved. Failure handling then receives the same attention as the successful path, rather than being worked out only after a workflow fails to complete.
 
 ### Implemented By These Standards
 

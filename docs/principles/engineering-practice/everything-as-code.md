@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-21
 ---
 
 # Everything as Code
@@ -12,9 +12,9 @@ Source code and all definitions that control system state are kept in version co
 
 ### Reasoning
 
-Version control provides one place to find the intended state and review its change history. Changes made outside that record can leave the running system in a different state without showing what changed.
+Version control gives engineers one place to find the intended system state and review its history. Changes made outside that record can leave the running system out of sync with its definitions, with no record of what changed.
 
-Infrastructure, configuration, delivery pipelines, database schemas, and automation scripts control system behaviour just as application code does. Prototypes may also be deployed or become dependencies. Recording all these definitions allows teams to review the intended state and recover it when rebuilding a system.
+Infrastructure, configuration, delivery pipelines, database schemas, and automation scripts control system behaviour just as application code does. Prototypes may also be deployed or become dependencies. Keeping these definitions in version control lets teams review the intended state and restore it when rebuilding a system.
 
 ### Implemented By These Standards
 
@@ -38,9 +38,9 @@ Systems and environments can be recreated consistently from code without manual 
 
 ### Reasoning
 
-Recreating systems from code gives development, test, and production environments a consistent starting point. It also prevents recovery from depending on knowledge held by one person. When environments differ, engineers can compare their definitions instead of reconstructing manual actions.
+Recreating systems from code gives development, test, and production environments a consistent starting point. Recovery then does not depend on one person's knowledge. When environments differ, engineers can compare their definitions rather than work out which manual changes were made.
 
-Changes made through manual steps are not captured in code. Each step must be repeated correctly whenever the system is recreated and may be missed or applied inconsistently.
+Manual changes are not captured in code. Engineers have to repeat each step correctly whenever they recreate the system, with a risk of missing a step or carrying it out differently.
 
 ### Implemented By These Standards
 
@@ -57,13 +57,13 @@ Changes made through manual steps are not captured in code. Each step must be re
 
 ### Summary
 
-A generated artifact can be reproduced from its authoritative source and generation process without manual edits.
+A generated artifact can be recreated from its authoritative source using the same generation process, without manual edits.
 
 ### Reasoning
 
-Changes made directly to a generated artifact are lost when it is regenerated. Making the change in the authoritative source ensures it appears in future artifacts.
+Direct edits to a generated artifact are lost when it is regenerated. Changing the authoritative source carries the change through to future artifacts.
 
-Producing the same output from unchanged inputs makes unexpected differences between builds visible. A difference then indicates that the source, declared inputs, or generation process changed.
+Producing the same output from unchanged inputs makes unexpected differences between builds visible. Engineers can then trace a difference to a change in the source, declared inputs, or generation process.
 
 ### Implemented By These Standards
 
@@ -74,13 +74,13 @@ Producing the same output from unchanged inputs makes unexpected differences bet
 
 ### Summary
 
-Changes to system state follow a reviewed, automated process defined in code, and any direct changes to a running system are reflected in that code.
+Changes to system state follow a reviewed, automated process defined in code, and any changes made directly to a running system are also incorporated into that code.
 
 ### Reasoning
 
-Changing state through code creates a reviewable record and allows the state to be recreated. Changing a running system directly creates a difference that the code does not record.
+Changing system state through code gives engineers a record they can review and use to recreate that state. Direct changes to a running system leave the code out of sync with the system.
 
-Direct changes may be necessary to restore service. Recording them in code keeps the authoritative definition accurate and prevents later automation from reversing them.
+Direct changes may be needed to restore service. Recording them in code keeps the authoritative definition accurate and prevents later automation from undoing them.
 
 ### Implemented By These Standards
 
@@ -96,13 +96,13 @@ Direct changes may be necessary to restore service. Recording them in code keeps
 
 ### Summary
 
-Secrets are stored in a dedicated secrets management system, and code refers to them without containing their values.
+Secrets are stored in a dedicated secrets management system, and code references them without including their values.
 
 ### Reasoning
 
-Putting a secret in code can expose it to people and systems through repository history, generated artifacts, and code review. Removing the value from the latest version does not remove it from existing history or copies.
+Putting a secret in code can expose it through repository history, generated artifacts, and code review. Removing the value from the latest version does not remove it from history or existing copies.
 
-Referencing a secret at runtime keeps its storage and access within the secrets management system. Credentials can then be rotated or revoked without changing and rebuilding every code-defined artifact that uses them.
+Referencing a secret at runtime keeps its storage and access within the secrets management system. Engineers can then rotate or revoke credentials without changing and rebuilding every code-defined artifact that uses them.
 
 ### Implemented By These Standards
 
@@ -118,9 +118,9 @@ Engineering documentation is version-controlled and updated in the same change a
 
 ### Reasoning
 
-Keeping documentation in version control preserves its history alongside the source changes it describes. Updating both in the same change allows reviewers to check that the explanation matches the implementation before the new behaviour is adopted.
+Version control keeps documentation history alongside the source changes it describes. Updating both together lets reviewers check that the explanation matches the implementation before the new behaviour is adopted.
 
-Delaying a documentation update leaves engineers working from an outdated description of the system. They may then make changes or respond to incidents based on behaviour that no longer exists.
+Delaying a documentation update leaves engineers with an outdated description of the system. They may make changes or respond to incidents based on behaviour that no longer exists.
 
 ### Implemented By These Standards
 

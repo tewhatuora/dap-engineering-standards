@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-20
+last_edited: 2026-10-21
 ---
 
 # Cost Awareness
@@ -8,15 +8,15 @@ last_edited: 2026-10-20
 
 ### Summary
 
-Design and technology choices compare viable options by lifecycle cost and delivered value before creating a long-term commitment.
+Engineers compare viable design and technology options by lifecycle cost and delivered value before making a long-term commitment.
 
 ### Reasoning
 
-Design and technology decisions establish development, operation, support, and replacement costs that can become difficult to change after implementation. Comparing these costs before commitment shows whether a higher-cost option provides enough value to justify its continuing impact.
+Design and technology decisions set development, operation, support, and replacement costs that can be hard to change once a service is built. Comparing these costs before committing shows whether a more expensive option delivers enough value to justify its ongoing cost.
 
-An option with a lower initial price may cost more to operate or replace, while a higher initial cost may reduce work elsewhere. Considering the full lifecycle gives cost the same attention as reliability, performance, and security instead of allowing the purchase or build cost alone to determine the choice.
+An option that costs less initially may cost more to operate or replace. Paying more initially may reduce work elsewhere. Considering the full lifecycle gives cost the same attention as reliability, performance, and security, rather than letting the purchase or build cost alone decide the choice.
 
-Building a capability that an existing solution already provides creates development and maintenance work without necessarily delivering distinct value. Comparing existing and custom solutions on the same basis establishes whether custom development is justified.
+Building a capability that already exists adds development and maintenance work without necessarily adding distinct value. Comparing existing and custom solutions on the same basis shows whether custom development is justified.
 
 ### Implemented By These Standards
 
@@ -26,15 +26,15 @@ Building a capability that an existing solution already provides creates develop
 
 ### Summary
 
-A service's spend and resource use reflect its demand and value while preserving the capacity and controls needed for reliability, performance, and security.
+A service's spending and resource use reflect its demand and value while preserving the capacity and controls needed for reliability, performance, and security.
 
 ### Reasoning
 
-The capacity, resilience, and redundancy a service requires depend on its demand, criticality, and recovery objectives. Provisioning beyond those needs creates recurring cost without a corresponding reduction in risk, while cutting further can remove capacity or protection on which the service depends.
+The capacity, resilience, and redundancy a service needs depend on its demand, criticality, and recovery objectives. Providing more than it needs adds recurring cost without a matching reduction in risk. Cutting below those needs can remove capacity or protection the service depends on.
 
-Assessing spend against service demand, value, and required service outcomes prevents cost reduction from being treated as an objective in isolation. It keeps necessary protection in place while making excess capacity, idle resources, and retained storage visible as costs that no longer deliver value.
+Assessing spending against demand, value, and required service outcomes keeps cost reduction from becoming a goal on its own. Necessary protection stays in place, while excess capacity, idle resources, and retained storage are visible as costs that no longer add value.
 
-Usage-based engineering tools add another form of variable spend because each request or operation can carry a cost. Matching the selected capability and its use to the task preserves higher-cost options where their additional value is needed without applying that cost to every activity.
+Usage-based engineering tools add variable costs because each request or operation may have a price. Matching the tool's capability and use to the task keeps higher-cost options available where they add needed value, without paying that cost for every activity.
 
 ### Implemented By These Standards
 
@@ -61,9 +61,9 @@ A service is designed so its cost can be measured and attributed to the team res
 
 ### Reasoning
 
-Aggregate spend does not show which service produced a cost, which change affected it, or who can act on it. Without that detail, teams cannot distinguish expected growth from waste or relate spending to the service behaviour that caused it.
+Total spending does not show which service incurred a cost, which change affected it, or who can act on it. Without that detail, teams cannot distinguish expected growth from waste or link spending to the service behaviour that caused it.
 
-Designing for measurement and attribution connects spend to the engineering decisions that control it. The responsible team can then identify changes in cost and assess whether the service's usage and value continue to justify them.
+Designing for cost measurement and attribution links spending to the engineering decisions that control it. The responsible team can then spot cost changes and assess whether the service's usage and value still justify them.
 
 ### Implemented By These Standards
 
@@ -74,13 +74,13 @@ Designing for measurement and attribution connects spend to the engineering deci
 
 ### Summary
 
-The responsible team is alerted when service spend no longer matches expected usage and pricing or changes without an understood cause.
+The responsible team receives alerts when service spending no longer matches expected usage and pricing or changes without a known cause.
 
 ### Reasoning
 
-Service cost can change quickly when demand, configuration, architecture, or provider pricing changes. If a departure from expected usage and pricing remains hidden until routine reporting or billing, unintended spend can continue long after the decision or fault that caused it.
+Service costs can change quickly with demand, configuration, architecture, or provider pricing. If unexpected costs stay hidden until routine reporting or billing, unintended spending can continue long after the decision or fault that caused it.
 
-Early detection gives the responsible team time to identify the cause and determine whether the new cost reflects useful demand or an issue requiring action. It also allows the team to limit further spend while preserving capacity and protection that the service still needs.
+Early detection gives the responsible team time to find the cause and decide whether the new cost reflects useful demand or a problem needing action. The team can then limit further spending while keeping the capacity and protection the service still needs.
 
 ### Implemented By These Standards
 
@@ -90,13 +90,13 @@ Early detection gives the responsible team time to identify the cause and determ
 
 ### Summary
 
-Cost decisions are reassessed as actual usage, spend, and vendor pricing change.
+Engineers reassess cost decisions as actual usage, spending, and vendor pricing change.
 
 ### Reasoning
 
-A cost assumption made during design can stop reflecting the service as usage, scale, access patterns, or vendor pricing change. A choice that matched the original usage and value assumptions may therefore become unnecessarily expensive or stop providing the expected value.
+Cost assumptions made during design can become outdated as usage, scale, access patterns, or vendor pricing change. A choice that once matched the expected usage and value may become unnecessarily expensive or stop delivering that value.
 
-Comparing actual operation and spend with the original basis for the decision makes that change visible. It identifies resources and technology choices that should be resized, replaced, or otherwise reconsidered before their cost becomes accepted as fixed.
+Comparing actual operation and spending with the original assumptions reveals those changes. Engineers can then identify resources and technology choices to resize, replace, or reconsider before their cost is accepted as fixed.
 
 ### Implemented By These Standards
 

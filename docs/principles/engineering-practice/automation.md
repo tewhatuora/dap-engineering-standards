@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-21
 ---
 
 # Automation
@@ -8,13 +8,13 @@ last_edited: 2026-09-11
 
 ### Summary
 
-Automation applies across delivery pipelines and other repeatable engineering and operational work.
+Automation is used for repeatable engineering and operational work, including delivery pipelines.
 
 ### Reasoning
 
-Repeated manual engineering and operational work consumes time and can produce different results depending on who performs it. Automation makes the outcome consistent, shortens routine response times, and reduces reliance on knowledge held by a few people.
+Repeating engineering and operational tasks by hand takes time, and the results can vary depending on who does the work. Automation produces consistent results, speeds up routine responses, and reduces dependence on knowledge held by a few people.
 
-Automation requires development and maintenance of its own. Whether it is worthwhile depends on the effort it saves and the risk it removes.
+Automation also takes effort to develop and maintain. Whether it is worthwhile depends on the effort it saves and the risk it removes.
 
 ### Implemented By These Standards
 
@@ -34,11 +34,11 @@ Automation requires development and maintenance of its own. Whether it is worthw
 
 ### Summary
 
-Repeatable delivery pipeline work is automated by default, and a manual step that can be automated is considered incomplete automation.
+Repeatable delivery pipeline work is automated by default, and automation is incomplete while steps that could be automated remain manual.
 
 ### Reasoning
 
-Manual pipeline steps depend on someone acting correctly at the right time. This can delay delivery and introduce variation between releases. A missed or inconsistent step can change the result without leaving a clear record of what happened.
+Manual pipeline steps depend on someone taking the right action at the right time. This can delay delivery and make releases inconsistent. A missed or incorrectly performed step can change the result without leaving a clear record of what happened.
 
 Automation runs the same steps each time and records the results consistently. Engineers receive faster feedback, can compare failures more easily, and spend less time on routine work.
 
@@ -68,9 +68,9 @@ Automation logic is kept in version control and maintained like any other engine
 
 ### Reasoning
 
-Automation repeats its logic on every run, including any defects it contains. Version control makes changes reviewable and helps engineers trace a failure to the change that introduced it.
+Automation repeats the same logic on every run, including any defects. Version control lets engineers review changes and trace failures to the changes that caused them.
 
-Automation can become outdated as the systems and tasks it supports change. Regular maintenance and testing keep its behaviour aligned with those changes.
+Automation can become outdated as the systems and tasks it supports change. Regular maintenance and testing keep it working as intended.
 
 ### Implemented By These Standards
 
@@ -88,11 +88,11 @@ Automation can become outdated as the systems and tasks it supports change. Regu
 
 ### Summary
 
-Automation checks predefined conditions consistently, while people decide whether a change is appropriate when the decision depends on context or trade-offs.
+Automation checks predefined conditions consistently, while people judge whether a change is appropriate when context or trade-offs matter.
 
 ### Reasoning
 
-Automated checks are limited to the rules and inputs they are given. A passing result shows that those rules were satisfied, but not that the change is right for its users or the system.
+Automated checks can assess only the rules and inputs they are given. Passing those checks does not establish that a change is right for its users or the system.
 
 Human review considers the intended outcome and wider consequences. It can challenge assumptions and weigh trade-offs that automated checks cannot resolve.
 
