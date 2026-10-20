@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-21
 ---
 
 # Version Control
@@ -8,13 +8,13 @@ last_edited: 2026-09-11
 
 ### Summary
 
-Branches have a clear purpose and identifiable starting point, contain a bounded change, and are not used to represent deployment environments.
+Each branch has a clear purpose and identifiable starting point, contains a limited set of changes, and does not represent a deployment environment.
 
 ### Reasoning
 
-Knowing why a branch exists and where it started makes its changes easier to review and trace. Keeping the work bounded prevents unrelated changes from obscuring what must be integrated or reverted.
+Knowing why a branch exists and where it started makes its changes easier to review and trace. Limiting its scope keeps unrelated changes from hiding what needs to be integrated or reverted.
 
-Using branches to represent deployment environments gives each environment a separate code history. Those histories can diverge, making it harder to know whether environments contain the intended reviewed changes.
+Using branches to represent deployment environments gives each environment a separate code history. Those histories can diverge, making it harder to tell whether each environment contains the intended reviewed changes.
 
 ### Implemented By These Standards
 

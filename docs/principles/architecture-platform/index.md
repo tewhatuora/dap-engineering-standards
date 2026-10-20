@@ -1,12 +1,12 @@
 ---
-last_edited: 2026-10-20
+last_edited: 2026-10-21
 ---
 
 # Architecture and Platform
 
 ## Overview
 
-Architecture and platform decisions establish the boundaries, dependencies, and technology commitments that determine whether systems can integrate and change independently. These principles align those decisions with domain and workload needs while preserving future choice.
+Architecture and platform decisions set system boundaries, dependencies, and technology commitments. These choices shape how systems integrate and whether they can change independently. These principles guide choices that meet domain and workload needs while keeping future options open.
 
 Choose a principle below to read its full reasoning.
 
@@ -14,24 +14,24 @@ Choose a principle below to read its full reasoning.
 
 ### [Shared Platform](shared-platform.md)
 
-Runtime and deployment choices reflect each workload's requirements, with alternatives used only where shared platform capabilities cannot meet them.
+Runtime and deployment choices are based on each workload's requirements, with alternatives used only where the shared platform cannot meet them.
 
 ### [Domain-Aligned Services](domain-aligned-services.md)
 
-Service boundaries follow cohesive business domains so services can own their decisions and change independently.
+Service boundaries follow cohesive business domains, giving each service responsibility for its decisions and the ability to change independently.
 
 ### [Distributed Consistency](distributed-consistency.md)
 
-Cross-service workflows preserve service-local transactions through explicit consistency and recovery models.
+Workflows across services keep transactions within each service and explicitly define how to reach a consistent state and recover from failures.
 
 ### [Vendor Lock-in and Portability](vendor-lock-in-portability.md)
 
-Technology choices make vendor coupling explicit and preserve the ability to extract data and replace dependencies.
+Technology choices make the extent of vendor dependence clear and preserve the ability to extract data and replace dependencies.
 
 ### [Interoperability](interoperability.md)
 
-Services integrate through explicit, reusable contracts that preserve shared meaning and evolve without breaking consumers.
+Services integrate through explicit, reusable contracts that keep data meaning consistent and can evolve without breaking consumers.
 
 ### [Stateless Architecture](stateless-architecture.md)
 
-Services keep request handling independent of individual instances so they can scale, recover, and retry safely.
+Services handle requests without depending on a particular instance so they can scale, recover, and retry safely.

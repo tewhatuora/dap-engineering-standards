@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-21
 ---
 
 # Observability
@@ -8,13 +8,13 @@ last_edited: 2026-09-11
 
 ### Summary
 
-Observability is designed and built with a service before a production incident exposes missing visibility.
+Engineers design and build observability alongside a service, before a production incident reveals missing information.
 
 ### Reasoning
 
-Instrumentation depends on understanding the behaviour, decisions, and dependencies that a service needs to explain. Designing it with that behaviour makes the necessary evidence available when the service is released, while the relevant context is still clear to the engineers building it.
+Designing instrumentation requires an understanding of the service's behaviour, decisions, and dependencies. Developing instrumentation alongside the service makes the necessary telemetry available at release, while engineers still have the design context.
 
-Adding observability only after an incident means the missing evidence cannot help diagnose that incident. Responders must work with an incomplete account of the service behaviour at the point when accurate information is most important.
+Observability added after an incident cannot supply the evidence that responders needed during the incident. Responders have to rely on an incomplete picture of service behaviour when accurate information matters most.
 
 ### Implemented By These Standards
 
@@ -28,9 +28,9 @@ Telemetry needed to operate services is available through one established observ
 
 ### Reasoning
 
-When operational telemetry is spread across service-specific systems, responders must know where each service stores its signals before they can investigate an incident. This delays diagnosis and makes cross-service behaviour harder to reconstruct when several systems contribute to the same failure.
+When each service stores operational telemetry in a separate system, responders need to find those systems before investigating an incident. This delays diagnosis and makes it harder to trace behaviour across services when several systems contribute to the same failure.
 
-A shared platform provides one place to query and correlate the evidence needed across service boundaries. It also applies common access, retention, and operating controls instead of requiring each team to build and support a separate telemetry path.
+A shared platform gives responders one place to query and correlate evidence across services. It also applies common access, retention, and operating controls, so each team does not need to build and support a separate telemetry system.
 
 ### Implemented By These Standards
 
@@ -45,9 +45,9 @@ Services use consistent instrumentation conventions and telemetry semantics.
 
 ### Reasoning
 
-Consistent names, attributes, units, and meanings allow telemetry from different services to be queried and compared in the same way. Responders can combine signals without first translating the conventions used by each team or service.
+Consistent names, attributes, units, and meanings let responders query and compare telemetry from different services in the same way. They can combine signals without first translating each team's or service's conventions.
 
-When every service describes similar behaviour differently, dashboards, alerts, and investigations depend on local knowledge. Common semantics preserve the meaning of a signal across service boundaries and make shared operational analysis possible.
+When services describe similar behaviour differently, dashboards, alerts, and investigations depend on knowledge specific to each service. Shared meanings keep signals consistent across services, so engineers can analyse them together.
 
 ### Implemented By These Standards
 
@@ -57,13 +57,13 @@ When every service describes similar behaviour differently, dashboards, alerts, 
 
 ### Summary
 
-A service emits structured logs, metrics, and traces that explain its behaviour and dependencies without requiring direct inspection of its running state.
+A service produces structured logs, metrics, and traces that explain its behaviour and dependencies without engineers needing to inspect its running state directly.
 
 ### Reasoning
 
-Logs, metrics, and traces provide complementary evidence about service health, performance, events, and transactions. Using them together gives engineers enough context to move from detecting a problem to understanding the behaviour that produced it.
+Logs, metrics, and traces each provide different evidence about service health, performance, events, and transactions. Together, they give engineers enough context to detect a problem and understand the behaviour that caused it.
 
-Together these signals allow engineers to diagnose behaviour without relying on access to a specific running instance, which may already have restarted or disappeared. Covering dependencies and integration points also helps distinguish a failure within the service from one caused by an external interaction.
+Engineers can use these signals without accessing a particular running instance, which may already have restarted or disappeared. Including dependencies and integration points helps distinguish an internal failure from one caused by an external interaction.
 
 ### Implemented By These Standards
 
@@ -79,13 +79,13 @@ Together these signals allow engineers to diagnose behaviour without relying on 
 
 ### Summary
 
-Telemetry remains correlatable across service boundaries so a transaction can be traced from end to end.
+Telemetry can be correlated across services so engineers can trace a transaction from end to end.
 
 ### Reasoning
 
-A transaction often crosses several services through both synchronous calls and asynchronous messages. Without shared context, each service records an isolated part of the work and responders cannot reliably determine which events belong to the same transaction.
+A transaction often crosses several services through synchronous calls and asynchronous messages. Without shared context, each service records only its own part, and responders cannot reliably tell which events belong to the same transaction.
 
-Preserving correlation information across those boundaries joins the separate signals into an end-to-end account. This shows where time was spent, where the transaction failed, and which services or dependencies contributed to the outcome.
+Passing correlation information between services lets responders reconstruct the full transaction from their telemetry. This shows where time was spent, where the transaction failed, and which services or dependencies contributed to the outcome.
 
 ### Implemented By These Standards
 
@@ -98,13 +98,13 @@ Preserving correlation information across those boundaries joins the separate si
 
 ### Summary
 
-Telemetry includes sensitive data only when diagnosis requires it and protects any sensitive data that cannot be excluded.
+Telemetry includes sensitive data only when needed for diagnosis, with protection for any sensitive data that cannot be excluded.
 
 ### Reasoning
 
-Telemetry is copied, retained, searched, and accessed for operational analysis, which gives sensitive data more opportunities to be exposed. Collecting only what diagnosis requires reduces this exposure without removing the information needed to understand service behaviour.
+Telemetry is copied, retained, searched, and accessed for operational analysis. Each use gives sensitive data more opportunities to be exposed. Collecting only what diagnosis requires reduces that exposure while keeping the information needed to understand service behaviour.
 
-Some sensitive data may be necessary to investigate a specific class of problem. Protecting that data limits who can access it and reduces the chance that operational telemetry reveals it beyond the purpose for which it was collected.
+Some sensitive data may be needed to investigate a particular type of problem. Protecting it limits who can access it and reduces the chance of exposure beyond the purpose for which it was collected.
 
 ### Implemented By These Standards
 
@@ -116,13 +116,13 @@ Some sensitive data may be necessary to investigate a specific class of problem.
 
 ### Summary
 
-Telemetry is tied to real impact and a decision it can inform; signals that support no action are not collected or used for alerts.
+Telemetry reflects real impact and can inform a decision; signals that support no action are not collected or used for alerts.
 
 ### Reasoning
 
-Every collected signal consumes storage and processing capacity, while every alert competes for attention. Low-value and redundant signals increase those costs and make the evidence needed for an operational decision harder to find among routine noise.
+Every collected signal uses storage and processing capacity, and every alert demands attention. Low-value and redundant signals add cost and make useful evidence harder to find.
 
-Linking telemetry to a decision makes clear why the signal is collected and how it will be used. Alerts tied to operational or business impact direct attention to conditions that require a response and reduce the repeated interruption that causes alert fatigue.
+Linking telemetry to a decision makes clear why it is collected and how it will be used. Alerts tied to operational or business impact direct attention to conditions that need a response, reducing the repeated interruptions that cause alert fatigue.
 
 ### Implemented By These Standards
 
@@ -139,9 +139,9 @@ Observability detects operational issues as early as possible, and incident tele
 
 ### Reasoning
 
-Automated detection can expose a developing failure before reports from affected users become the primary signal. Earlier detection gives responders more time to investigate the issue and limit its impact.
+Automated detection can identify a developing failure before reports from affected users become the main signal. Earlier detection gives responders more time to investigate and limit the impact.
 
-An alert or dashboard may exist without providing accurate or usable information when a failure occurs. Testing alerts and validating dashboards in advance provides evidence that the expected telemetry is available, understandable, and connected to the condition responders need to assess.
+An alert or dashboard may exist but fail to provide accurate, usable information during a failure. Testing alerts and checking dashboards in advance shows whether telemetry is available, understandable, and relevant to the condition responders need to assess.
 
 ### Implemented By These Standards
 

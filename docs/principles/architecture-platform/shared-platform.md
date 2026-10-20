@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-21
 ---
 
 # Shared Platform
@@ -12,9 +12,9 @@ A workload's runtime model and deployment location are explicit design decisions
 
 ### Reasoning
 
-Runtime and deployment choices determine the capabilities, constraints, operating model, and provider dependencies a workload inherits. Once implementation relies on those characteristics, moving the workload can require changes to its design, delivery, and support arrangements.
+Runtime and deployment choices determine a workload's capabilities, constraints, operating model, and provider dependencies. Once the implementation depends on those choices, moving the workload can mean changing its design, delivery, and support arrangements.
 
-Making the choice during design shows whether the runtime and location support the workload's functional and operational needs before those dependencies become established. A choice that suits one workload does not establish that it suits another, so a shared default cannot replace consideration of each workload's requirements.
+Choosing the runtime and deployment location during design lets engineers check that both meet the workload's functional and operational needs before the implementation depends on those choices. A choice that suits one workload may not suit another. Each workload's requirements still need to be considered when using a shared default.
 
 ### Implemented By These Standards
 
@@ -25,13 +25,13 @@ Making the choice during design shows whether the runtime and location support t
 
 ### Summary
 
-An alternative to the shared platform is adopted only when the platform cannot meet a specific workload requirement and remains in use only while that limitation persists.
+An alternative to the shared platform is used only when, and for as long as, the platform cannot meet a specific workload requirement.
 
 ### Reasoning
 
-An alternative introduces a separate technology and operating model that must be secured, supported, and maintained alongside the shared platform. A limited evaluation tests whether it meets the unmet requirement before the organisation commits to those continuing costs and dependencies.
+An alternative adds technology and an operating model to secure, support, and maintain alongside the shared platform. A limited evaluation tests whether it meets the requirement before the organisation takes on those ongoing costs and dependencies.
 
-Where the missing capability would benefit other workloads, adding it to the shared platform avoids creating a team-specific parallel solution. Reassessment as requirements and platform capabilities change prevents an alternative from remaining after its benefit no longer justifies the additional cost and risk.
+Where the missing capability would benefit other workloads, adding it to the shared platform avoids a separate solution for one team. Reassessing the alternative as requirements and platform capabilities change prevents it from staying in use after its benefit no longer justifies the extra cost and risk.
 
 ### Implemented By These Standards
 

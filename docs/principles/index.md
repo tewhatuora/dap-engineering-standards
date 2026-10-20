@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-20
+last_edited: 2026-10-21
 ---
 
 # Principles
@@ -28,15 +28,15 @@ We maintain traceability from expected outcomes through tests, findings, and rel
 
 ### We Prioritise Simplicity and Maintainability
 
-We choose the simplest solution that meets requirements and justify additional complexity. We introduce abstractions and configuration options to solve identified problems, not speculative future requirements, because each adds behaviour to test and maintain.
+We choose the simplest solution that meets current requirements and justify additional complexity. We introduce abstractions and configuration options only to meet identified needs, since each adds behaviour to test and maintain.
 
-We define clear domain boundaries to limit coupling and write readable code so engineers can understand and assess changes. We track and prioritise technical debt according to its effect on maintenance, reliability, and delivery, and address it as part of ongoing engineering work.
+We define clear domain boundaries to limit coupling and write readable code so engineers can understand and assess changes. We track and prioritise technical debt by its effect on maintenance, reliability, and delivery, and address it during related code changes before it makes maintenance difficult.
 
 ### We Prioritise Reuse and Shared Platforms
 
-We evaluate existing components and shared platforms before building bespoke solutions. We assess their functional fit, support, security, and integration requirements before adopting them. Reusing a suitable solution avoids duplicating implementation and maintenance, while shared platforms provide capabilities that teams would otherwise build and operate separately.
+We evaluate existing solutions before development begins, preferring internal reuse over external adoption and building a custom solution only when neither meets the requirement. We assess functional fit, support, security, and integration needs before adoption. Reusing a suitable solution avoids duplicate implementations and maintenance, while shared platforms provide capabilities that teams would otherwise build and operate separately.
 
-We introduce new technology when its benefits justify the additional maintenance, security, and operational overhead. We favour a consistent set of established technologies for similar problems so teams can share expertise and tooling.
+We select runtimes and deployment locations based on each workload's requirements. We use an alternative to the shared platform only when the platform cannot meet a specific workload requirement, and only while that limitation remains. New technology also needs to justify its maintenance, security, and operational overhead. We favour a consistent set of established technologies for similar problems so teams can share expertise and tooling.
 
 ### We Design for Interoperability
 
@@ -46,45 +46,45 @@ We keep contracts current and verify that implementations conform to them. We pr
 
 ### We Preserve Portability and Manage Vendor Lock-In
 
-We consider vendor lock-in and migration costs when selecting technologies and services. We weigh the benefits of vendor-specific capabilities against the effort and cost of replacing them.
+We assess vendor lock-in when selecting technologies and services. We accept it only when the capability gained justifies the loss of choice and replacement effort, and reassess that trade-off as capabilities, alternatives, or provider terms change.
 
-We preserve the ability to export data, migrate services, and replace dependencies. We assess the code changes, data conversion, and operational work needed for migration. We use portability abstractions only when the reduction in migration effort justifies their implementation and maintenance cost.
+We preserve the ability to export data, migrate services, and replace dependencies. We assess the code changes, data conversion, and operational effort needed for migration. We use vendor abstractions only when the reduction in vendor-specific changes, migration effort, and replacement risk justifies their implementation and maintenance cost.
 
 ### We Account for Cost and Sustainability Throughout the Lifecycle
 
-We assess cost and environmental impact during design and operation. We include ongoing support and maintenance costs, not just infrastructure spending.
+We assess cost and environmental impact during design and operation. We compare lifecycle cost and delivered value, including the costs of development, operation, maintenance, support, and replacement.
 
-We track spending and resource use against service demand and the value the service provides, and reduce unnecessary consumption. We use demand and utilisation data to size capacity while meeting reliability and performance requirements. We assess environmental impact separately from price, because lower spending does not necessarily mean lower resource consumption or emissions.
+We track spending and resource use against service demand and value, and reduce unnecessary resource use. We use demand and utilisation data to size capacity while meeting reliability, performance, and security requirements. We assess environmental impact separately from price, because lower spending does not necessarily mean lower resource use or emissions.
 
 ### We Design for Security and Privacy
 
-We build security and privacy into service design, limit access to authorised users and systems, and minimise the personal and health information we collect and retain. We assess threats and privacy risks during design and use the findings to select appropriate controls.
+We build security and privacy into service design, limit access to what each authorised user or system needs, and minimise the personal or health data we collect, process, and retain. We assess threats and privacy risks during design and use the findings to select appropriate controls.
 
 We apply software supply chain security controls to our dependencies, build and delivery pipelines, and artifacts. We test that controls work as intended, address identified vulnerabilities, and review protections as services, threats, and dependencies change.
 
 ### We Engineer for Reliability, Resilience, and Performance
 
-We design services to meet expected demand and withstand dependency failures. We set reliability, performance, and recovery targets according to user needs and the consequences of disruption. We account for peak demand, contain failures, and design for graceful degradation to preserve essential functionality where possible.
+We design services for expected demand and for failures in components, dependencies, and infrastructure. We set reliability, performance, and recovery targets according to user needs and the consequences of disruption. We account for peak demand, contain failures and overload, and preserve functionality the service can still support safely.
 
 We test performance, scaling, failure containment, and recovery under conditions representative of production before deployment. We use test results to identify capacity limits, recovery constraints, and failure modes, and prioritise improvements needed to meet the agreed targets.
 
 ### We Design for Testability and Fast Feedback
 
-We prevent failures through clear requirements and early feedback. We design behaviour to be observable and test conditions to be controllable and repeatable. We treat test assets as maintained and accessible code: reviewed, versioned, and reusable where appropriate.
+We reduce the risk of failure through clear requirements and early feedback. We design behaviour to be observable and test conditions to be controllable and repeatable. We treat test assets as maintained and accessible code: reviewed, versioned, and reusable where appropriate.
 
-We invest in automation where it provides lasting value, alongside human exploration and judgement. We investigate unreliable tests rather than bypassing them, and use findings, and user feedback to improve both our systems and our assurance. We measure success by useful evidence, reduced risk, and better outcomes, not testing activity alone.
+We invest in automation where it provides lasting value, alongside human exploration and judgement. We fix or remove unreliable checks rather than repeatedly rerunning, ignoring, or bypassing them. We use findings and user feedback to improve systems and assurance. We measure success by useful evidence, reduced risk, and better outcomes, rather than testing activity alone.
 
 ### We Manage Everything as Code
 
-We keep software, infrastructure, configuration, tests, and pipeline definitions in version control. These definitions are the source of truth for the intended system state. We review changes, retain their history, and reproduce environments from these definitions rather than relying on undocumented manual steps.
+We keep software, infrastructure, configuration, tests, and pipeline definitions in version control as the authoritative record of intended system state. We review changes, preserve their history, and recreate environments from those definitions without manual steps.
 
 We keep secrets out of source control and version non-secret configuration for each environment. We detect and resolve differences between deployed environments and their definitions so subsequent deployments do not depend on unrecorded changes.
 
 ### We Retain Accountability for AI-Assisted Engineering
 
-We use approved AI tools for development, testing, and investigation without exposing sensitive information. We review and verify AI-assisted work against the same engineering standards as other work and remain responsible for it.
+We use approved AI tools for development, testing, and investigation, with provider terms and submission controls that protect sensitive information. The same engineering standards apply whether or not AI is used. We review and verify AI-assisted output and remain accountable for the results.
 
-We challenge assumptions in AI-generated output and check technical claims against the codebase and authoritative documentation. We verify that generated tests exercise the intended requirements, not simply reproduce assumptions in the implementation. Engineers must understand and be able to maintain the changes they accept.
+We challenge assumptions in AI-generated output and check technical claims against the codebase and authoritative documentation. We verify that generated tests exercise the intended requirements rather than simply reproduce assumptions in the implementation. Engineers accept AI-assisted output only when they can explain, justify, and maintain it. We review AI-assisted output more thoroughly as its potential impact on security, patient safety, or regulatory compliance increases, involving domain experts where needed.
 
 ### We Document Decisions and Share Engineering Knowledge
 
@@ -94,9 +94,9 @@ We keep design decisions, interface contracts, and operational guidance up to da
 
 ### We Practise Continuous Integration and Delivery
 
-We integrate small changes frequently and use automated CI/CD pipelines to build, test, and deliver software. Small changes make integration failures easier to diagnose and reduce the work needed to resolve conflicting changes. We keep pipeline feedback timely and reliable, and address failed checks before further changes obscure the cause.
+We integrate small changes frequently and use automated CI/CD pipelines to build, test, and deliver software. Small changes make integration failures easier to diagnose and reduce the effort needed to resolve conflicting changes. We keep pipeline feedback timely and reliable, and address failed checks before further changes obscure the cause.
 
-We build each artifact once and promote it unchanged through delivery environments so verification applies to the artifact we deploy. We keep software deployable without relying on manual build or packaging steps.
+We build each artifact once and promote it unchanged through delivery environments so verification applies to the artifact we deploy. We automate repeatable pipeline steps by default and maintain their definitions as code so software stays deployable without manual build or packaging steps.
 
 ### We Control Releases and Plan for Recovery
 
@@ -106,9 +106,9 @@ We plan recovery before changing production, accounting for compatibility betwee
 
 ### We Design for Observability and Learn from Production
 
-We instrument services so engineers can understand request processing, dependency interactions, and failures from production telemetry. We correlate logs, metrics, and traces to diagnose faults and investigate incidents.
+We build instrumentation alongside services so engineers can understand request processing, dependency interactions, and failures from production telemetry. We correlate logs, metrics, and traces across services to diagnose faults and investigate incidents.
 
-We monitor service behaviour against reliability and performance targets, not just infrastructure health. We configure actionable alerts with enough context to support investigation and recovery. We use production data, defect trends, and user feedback to improve services, refine test coverage, and reproduce failure conditions that earlier testing did not expose.
+We monitor service behaviour against reliability and performance targets as well as infrastructure health. We configure actionable alerts with enough context to support investigation and recovery, and test alerts and dashboards before responders need them. We use production data, defect trends, and user feedback to improve services, refine test coverage, and reproduce failure conditions that earlier testing did not expose.
 
 ### We Maintain Services Throughout Their Lifecycle
 

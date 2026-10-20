@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-21
 ---
 
 # Data Privacy
@@ -12,9 +12,9 @@ Only personal or health data needed for a defined purpose is collected, processe
 
 ### Reasoning
 
-Collecting or retaining data beyond a defined purpose increases the amount available for accidental disclosure or misuse without providing current value. Each additional dataset or copy also extends the work needed to control access, apply deletion, and understand the impact of an incident.
+Collecting or keeping data that is not needed for a defined purpose leaves more data exposed to accidental disclosure or misuse without adding current value. Each extra dataset or copy also adds work to control access, delete data, and understand an incident's impact.
 
-Limiting data at the point of collection prevents unnecessary exposure from spreading through later processing and storage. It also makes the remaining data easier to locate, protect, and remove when its purpose ends.
+Collecting only what is needed prevents unnecessary data exposure during later processing and storage. It also makes the remaining data easier to find, protect, and remove when its purpose ends.
 
 ### Implemented By These Standards
 
@@ -28,13 +28,13 @@ Limiting data at the point of collection prevents unnecessary exposure from spre
 
 ### Summary
 
-The most privacy-protective settings apply by default, and reducing that protection requires an explicit choice.
+Settings that provide the most privacy protection apply by default, and reducing that protection requires an explicit choice.
 
 ### Reasoning
 
-Settings often remain unchanged throughout use, so their initial state determines how personal or health data is handled in many cases. A less protective starting point can therefore expose data because no one changed a setting, rather than because someone decided that the exposure was justified.
+Settings often stay unchanged, so defaults frequently determine how personal or health data is handled. A less protective default can expose data simply because no one changed a setting, without anyone deciding that the exposure was justified.
 
-A protective starting point makes any reduction in privacy a visible decision that requires consideration of whether wider collection, use, or access justifies the resulting risk.
+A protective default makes any reduction in privacy a clear decision. The person making it needs to weigh wider collection, use, or access against the resulting risk.
 
 ### Implemented By These Standards
 
@@ -46,13 +46,13 @@ A protective starting point makes any reduction in privacy a visible decision th
 
 ### Summary
 
-Access to personal or health data is limited to what a legitimate need requires and removed when that need ends.
+Access to personal or health data is limited to what is needed for a legitimate purpose and removed when that need ends.
 
 ### Reasoning
 
-Every permission creates another way for personal or health data to be viewed, changed, copied, or disclosed. Broad permissions increase the amount of data and the range of actions available when a person makes a mistake or an account or service is compromised.
+Every permission creates another way to view, change, copy, or disclose personal or health data. Broad permissions expose more data and allow more actions when someone makes a mistake or an account or service is compromised.
 
-Permissions that remain after their legitimate purpose ends preserve access without supporting current work. Restricting access to the required data and actions, then removing it when the need ends, limits both the opportunity and impact of misuse.
+Permissions left in place after their legitimate purpose ends allow access that no current task needs. Limiting access to the required data and actions, then removing it when the need ends, reduces both the opportunity for misuse and its impact.
 
 ### Implemented By These Standards
 
@@ -66,13 +66,13 @@ Permissions that remain after their legitimate purpose ends preserve access with
 
 ### Summary
 
-Synthetic or de-identified data is preferred when work does not require identifiable personal or health data.
+Synthetic or de-identified data is preferred when a task does not require identifiable personal or health data.
 
 ### Reasoning
 
-Many engineering and analysis tasks depend on the structure, distribution, or behaviour of data without needing to identify the people represented. A suitable synthetic or de-identified dataset can preserve the characteristics needed for the work while reducing the harm that disclosure could cause.
+Many engineering and analysis tasks need the structure, distribution, or behaviour of data without needing to identify the people it represents. Suitable synthetic or de-identified data can keep the characteristics needed for those tasks while reducing the harm of disclosure.
 
-Using a substitute also reduces the number of systems, tools, and people that handle identifiable data. This confines the more sensitive form of the data to activities whose purpose genuinely depends on identity.
+Using a substitute also reduces how many systems, tools, and people handle identifiable data. Identifiable data then stays limited to activities that genuinely need to identify people.
 
 ### Implemented By These Standards
 
@@ -84,13 +84,13 @@ Using a substitute also reduces the number of systems, tools, and people that ha
 
 ### Summary
 
-Personal or health data is retained only as long as needed and then deleted automatically from primary storage, backups, and archives.
+Personal or health data is kept only as long as needed, then deleted automatically from primary storage, backups, and archives.
 
 ### Reasoning
 
-Retaining personal or health data beyond its purpose extends the period in which it can be disclosed or misused without providing corresponding value. A defined retention period limits that exposure, while automated deletion prevents disposal from depending on someone remembering to perform a manual task.
+Keeping personal or health data after its purpose ends leaves it exposed to disclosure or misuse for longer without adding value. A defined retention period limits that exposure. Automatic deletion avoids relying on someone to remember to delete the data.
 
-Deleting data from primary storage is incomplete when recoverable copies remain in backups or archives. Applying deletion across every retained copy prevents data from remaining available after the system appears to have removed it.
+Deleting data from primary storage is incomplete if recoverable copies remain in backups or archives. Deleting every retained copy prevents data from staying available after the system appears to have removed it.
 
 ### Implemented By These Standards
 

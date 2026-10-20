@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-21
 ---
 
 # Interoperability
@@ -8,13 +8,13 @@ last_edited: 2026-09-11
 
 ### Summary
 
-A service's integration needs are identified while its design can still respond to them.
+Engineers identify a service's integration needs while they can still adapt its design to meet them.
 
 ### Reasoning
 
-A design cannot account for interfaces and data exchanges that have not been identified. Discovering them after implementation can expose assumptions about ownership, data, latency, or availability that the chosen architecture cannot support without rework.
+A design cannot account for interfaces and data exchanges that engineers have not identified. Discovering them after implementation can reveal assumptions about ownership, data, latency, or availability that the architecture cannot support without rework.
 
-Establishing which systems and consumers exchange data or functionality, what they exchange, and the required format makes those constraints part of the design. The service can then define boundaries and contracts that account for ownership, data, latency, and availability before consumers depend on its implementation.
+Identifying which systems and consumers exchange data or functionality, what they exchange, and the required format makes these constraints part of the design. Engineers can then define service boundaries and contracts that account for ownership, data, latency, and availability before consumers depend on the implementation.
 
 ### Implemented By These Standards
 
@@ -28,9 +28,9 @@ An integration uses synchronous or asynchronous communication according to its c
 
 ### Reasoning
 
-Communication mode determines whether a caller waits for an immediate result and whether work depends on both participants being available at the same time. It also affects when state changes become visible and how failures are detected and recovered.
+The communication mode determines whether a caller waits for an immediate result and whether both participants need to be available at the same time. It also affects when state changes become visible and how services detect and recover from failures.
 
-Choosing the mode during design makes these consequences explicit before they become an accidental property of the implementation. Synchronous communication supports work that requires an immediate response, while asynchronous communication reduces temporal coupling when work can proceed independently.
+Choosing the communication mode during design makes these consequences explicit rather than leaving them to emerge from implementation. Synchronous communication suits operations that need an immediate response. Asynchronous communication reduces the need for participants to be available at the same time when operations can proceed independently.
 
 ### Implemented By These Standards
 
@@ -40,13 +40,13 @@ Choosing the mode during design makes these consequences explicit before they be
 
 ### Summary
 
-A service exposes shared data and functionality through an explicit, documented, and discoverable interface that remains current with its behaviour.
+A service shares data and functionality through an explicit interface with documentation that is easy to find and reflects the interface's current behaviour.
 
 ### Reasoning
 
-An explicit interface contract tells consumers what data, behaviour, and failure conditions they can rely on without depending on undocumented knowledge or the provider's implementation. This allows the provider to change its internals while preserving the behaviour on which consumers depend.
+An explicit interface contract tells consumers what data, behaviour, and failure conditions to expect without relying on undocumented knowledge or the provider's implementation. The provider can then change its internals while preserving the behaviour consumers depend on.
 
-The contract is useful only when it reflects the interface's actual behaviour and can be found by the people who need it. Current, discoverable documentation allows consumers to assess and use the interface without direct access to the provider's source code or engineering team.
+The contract is useful only when it matches the interface's actual behaviour and people can find it. Up-to-date, accessible documentation lets consumers assess and use the interface without direct access to the provider's source code or engineering team.
 
 ### Implemented By These Standards
 
@@ -59,13 +59,13 @@ The contract is useful only when it reflects the interface's actual behaviour an
 
 ### Summary
 
-An asynchronous consumer relies only on delivery and ordering guarantees explicitly provided by its channel.
+An asynchronous consumer relies only on delivery and ordering guarantees that its channel explicitly provides.
 
 ### Reasoning
 
-Delivery and ordering behaviour determines whether a consumer may receive a message more than once, miss it, or observe messages in a different sequence. If the consumer assumes stronger behaviour than the channel provides, it can produce incorrect state even while the channel operates as designed.
+Delivery and ordering behaviour determines whether a consumer may receive a message more than once, miss it, or receive messages out of order. A consumer that assumes stronger guarantees than the channel provides can produce incorrect state even when the channel works as designed.
 
-Explicit guarantees give consumers a reliable basis for duplicate handling, ordering, and recovery from missed processing. They also make clear which safeguards belong in the consumer instead of leaving correctness dependent on undocumented channel behaviour.
+Explicit guarantees let consumers handle duplicates, ordering, and recovery from missed processing reliably. They also make clear which safeguards the consumer needs, so correct behaviour does not depend on undocumented channel behaviour.
 
 ### Implemented By These Standards
 
@@ -79,9 +79,9 @@ Open, widely adopted standards are preferred wherever they meet a service's need
 
 ### Reasoning
 
-Open, widely adopted protocols, data formats, and interface patterns give providers and consumers a shared basis for integration. Existing knowledge and compatible implementations reduce the amount of custom interpretation and support needed for each new connection.
+Open, widely adopted protocols, data formats, and interface patterns give providers and consumers a shared basis for integration. Existing knowledge and compatible implementations reduce the effort needed to interpret and support each new connection.
 
-Proprietary or organisation-specific alternatives require consumers to learn and maintain separate conventions and can restrict future integration choices. They remain justified when no open standard supports required behaviour, because interoperability does not justify adopting a contract that cannot meet the service's needs.
+Proprietary or organisation-specific alternatives require consumers to learn and maintain separate conventions and can limit future integration choices. They remain justified when no open standard supports the required behaviour. An open standard that cannot meet the service's needs does not provide a suitable contract.
 
 ### Implemented By These Standards
 
@@ -95,13 +95,13 @@ Proprietary or organisation-specific alternatives require consumers to learn and
 
 ### Summary
 
-The format and meaning of exchanged data are consistent and reconciled across systems.
+Systems use consistent formats and meanings for exchanged data and reconcile any differences.
 
 ### Reasoning
 
-Matching field names or data types does not establish that two systems interpret the information in the same way. Differences in units, identifiers, allowed values, or the meaning of a concept can pass through an interface while producing an incorrect result in the receiving system.
+Matching field names or data types does not mean two systems interpret information in the same way. Differences in units, identifiers, allowed values, or the meaning of a concept can pass through an interface and produce an incorrect result in the receiving system.
 
-Agreed formats and meanings give the receiver enough information to interpret data without separate clarification. Reconciling different representations also makes the required transformation explicit instead of allowing a semantic difference to remain hidden within the integration.
+Agreed formats and meanings let the receiver interpret data without asking for clarification. Reconciling different representations makes the required transformation clear, so differences in meaning do not stay hidden in the integration.
 
 ### Implemented By These Standards
 
@@ -113,13 +113,13 @@ Agreed formats and meanings give the receiver enough information to interpret da
 
 ### Summary
 
-An interface remains independent of any one consumer's implementation and is reusable when several systems need the same data or capability.
+An interface is independent of any one consumer's implementation and can be reused by systems that need the same data or capability.
 
 ### Reasoning
 
-An interface designed around one consumer's internal implementation makes those details part of the provider's contract. Later consumers must either adopt the same assumptions or require another interface for substantially the same data or capability.
+Designing an interface around one consumer's internal implementation makes those details part of the provider's contract. Later consumers have to adopt the same assumptions or request another interface for essentially the same data or capability.
 
-A consumer-independent contract describes the shared need rather than one implementation. This allows additional systems to integrate without inheriting unrelated details and avoids maintaining separate point-to-point paths for the same exchange.
+A contract independent of any one consumer describes the shared need rather than one implementation. Other systems can then integrate without depending on unrelated details, and the provider avoids maintaining separate point-to-point paths for the same exchange.
 
 ### Implemented By These Standards
 
@@ -130,13 +130,13 @@ A consumer-independent contract describes the shared need rather than one implem
 
 ### Summary
 
-A published interface or data contract remains compatible with existing consumers and uses a defined versioning approach when a breaking change is unavoidable.
+A published interface or data contract stays compatible with existing consumers, with a defined versioning approach for unavoidable breaking changes.
 
 ### Reasoning
 
-Existing consumers build and release against the established contract of a published interface. An unexpected breaking change can cause those consumers to fail or force them to coordinate their release with the provider.
+Existing consumers build and release against a published interface's established contract. An unexpected breaking change can cause them to fail or force them to coordinate releases with the provider.
 
-Preserving compatibility allows providers and consumers to evolve independently, while additive changes avoid forcing immediate version adoption. When a breaking change is unavoidable, deliberate versioning and notice give consumers a defined path and enough time to move to the new contract.
+Preserving compatibility lets providers and consumers evolve independently. Additive changes avoid forcing consumers to adopt a new version immediately. When a breaking change is unavoidable, planned versioning and notice give consumers a clear path and enough time to move to the new contract.
 
 ### Implemented By These Standards
 
@@ -155,9 +155,9 @@ Contract or integration testing verifies that integration points work as defined
 
 ### Reasoning
 
-An integration can fail even when each participating system works correctly in isolation because their assumptions about data, behaviour, or failure handling may differ. Contract testing verifies that an implementation conforms to its published interface, while integration testing shows whether the participating systems work together.
+An integration can fail even when each system works correctly on its own. The systems may make different assumptions about data, behaviour, or failure handling. Contract testing checks that an implementation meets its published contract, while integration testing checks that the systems work together.
 
-Testing a change against actual consumers or contracts that represent them exposes incompatible assumptions before release. This gives providers evidence that the change preserves the behaviour consumers rely on rather than treating a valid standalone implementation as proof that the integration remains sound.
+Testing a change against actual consumers or contracts that represent them reveals incompatible assumptions before release. Providers then have evidence that the change preserves the behaviour consumers rely on. An implementation working correctly on its own does not prove that the integration still works.
 
 ### Implemented By These Standards
 

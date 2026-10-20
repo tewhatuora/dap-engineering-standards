@@ -1,12 +1,12 @@
 ---
-last_edited: 2026-10-20
+last_edited: 2026-10-21
 ---
 
 # Cost and Sustainability
 
 ## Overview
 
-Cost and sustainability principles make financial and environmental impact part of service design and operation. They align spending and resource use with actual demand and required service outcomes.
+These principles make financial and environmental impact part of service design and operation. Spending and resource use reflect actual demand and the outcomes the service needs to deliver.
 
 Choose a principle below to read its full reasoning.
 
@@ -14,8 +14,8 @@ Choose a principle below to read its full reasoning.
 
 ### [Cost Awareness](cost-awareness.md)
 
-Lifecycle spend remains visible and aligned with service demand and value as usage and pricing change.
+Spending throughout a service's lifecycle stays visible and reflects its demand and value as usage and pricing change.
 
 ### [Sustainability](sustainability.md)
 
-Engineering decisions minimise unnecessary resource consumption and environmental impact throughout a service's lifecycle.
+Engineering decisions minimise unnecessary resource use and environmental impact throughout a service's lifecycle.

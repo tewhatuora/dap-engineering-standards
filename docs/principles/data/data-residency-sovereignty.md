@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-20
+last_edited: 2026-10-21
 ---
 
 # Data Residency and Sovereignty
@@ -8,17 +8,17 @@ last_edited: 2026-10-20
 
 ### Summary
 
-A service's data jurisdiction requirements, including every jurisdiction that can compel access, are established before selecting its infrastructure, provider, or location.
+Before choosing infrastructure, a provider, or a location, engineers establish the service's data jurisdiction requirements and identify every jurisdiction that can compel access.
 
 ### Reasoning
 
-Selecting infrastructure or beginning implementation before defining where data may be stored, processed, or made legally accessible can create a commitment that cannot meet the data's requirements. Changing provider or location later may require redesign, migration, and interruption after the service already depends on that arrangement.
+Choosing infrastructure or starting implementation before defining where data may be stored, processed, or legally accessed can commit a service to an arrangement that cannot meet the data's requirements. Changing provider or location once the service depends on it may require redesign, migration, and service interruption.
 
-Defining the permitted jurisdictions first makes them an input to architecture, provider, and location decisions while viable options remain available. It prevents residency and sovereignty from being treated as a check performed after the design has already constrained the answer.
+Defining permitted jurisdictions first lets engineers use them to choose the architecture, provider, and location while viable options are still available. Residency and sovereignty then shape the design rather than being checked after design choices have limited the options.
 
-Physical storage location does not by itself determine which legal authorities can compel access to data. The provider and the organisations controlling the service may be subject to other jurisdictions, so a location claim alone is not sufficient evidence of sovereignty.
+Physical storage location alone does not determine which legal authorities can compel access to data. The provider and the organisations controlling the service may be subject to other jurisdictions. A location claim therefore does not, on its own, demonstrate sovereignty.
 
-A general compliance certification also does not establish where a specific service will hold or process data or which authorities can reach it. Confirming the actual jurisdictions prevents a broad assurance from substituting for evidence that the selected service meets the data's requirements.
+A general compliance certification does not establish where a particular service holds or processes data, or which authorities can access it. Confirming the actual jurisdictions provides evidence that the selected service meets the data's requirements rather than relying on a broad assurance.
 
 ### Implemented By These Standards
 
@@ -28,13 +28,13 @@ A general compliance certification also does not establish where a specific serv
 
 ### Summary
 
-Infrastructure and configuration keep stored and processed data within permitted jurisdictions, with the actual locations verified at defined intervals and after changes that can affect storage or processing location.
+Infrastructure and configuration keep data storage and processing within permitted jurisdictions, and actual locations are verified at defined intervals and after changes that can affect those locations.
 
 ### Reasoning
 
-A provider's default location or configuration may place stored or processed data outside the jurisdictions permitted for it. Explicit controls prevent those defaults from determining location and make the required boundary part of the deployed configuration.
+A provider's default location or configuration may place data storage or processing outside permitted jurisdictions. Explicit controls set the permitted locations in the deployed configuration instead of relying on provider defaults.
 
-The actual location can diverge from the design as configurations, services, and provider behaviour change. Periodic verification detects that divergence and provides current evidence instead of treating the original selection as proof that the requirement remains satisfied.
+Actual locations can differ from the design as configurations, services, and provider behaviour change. Regular checks detect those differences and provide current evidence. The original choice alone does not prove that the service still meets the requirement.
 
 ### Implemented By These Standards
 
@@ -44,13 +44,13 @@ The actual location can diverge from the design as configurations, services, and
 
 ### Summary
 
-Cross-border data flows, including those introduced by third parties, remain within the data's jurisdiction requirements.
+Cross-border data flows, including those introduced by third parties, meet the data's jurisdiction requirements.
 
 ### Reasoning
 
-Data can cross a jurisdictional boundary through providers, support services, integrations, or other third parties even when the responsible engineering team did not implement a direct transfer. An indirect flow creates the same residency and sovereignty concern as movement initiated by the service itself.
+Data can cross borders through providers, support services, integrations, or other third parties even when the engineering team has not built a direct transfer. These indirect flows raise the same residency and sovereignty concerns as transfers made by the service itself.
 
-Identifying each flow and constraining it to an approved path makes the destination and responsible parties visible. This prevents a third-party arrangement from moving data beyond its permitted jurisdictions without being considered as part of the service design.
+Identifying each flow and limiting it to an approved path makes clear where data goes and who is responsible. This brings third-party flows into the service design and prevents unassessed transfers outside permitted jurisdictions.
 
 ### Implemented By These Standards
 
@@ -62,13 +62,13 @@ Identifying each flow and constraining it to an approved path makes the destinat
 
 ### Summary
 
-Backup, replication, and disaster recovery copies remain within the same jurisdiction requirements as the primary data.
+Backup, replication, and disaster recovery copies meet the same jurisdiction requirements as the primary data.
 
 ### Reasoning
 
-Backup, replication, and disaster recovery create additional copies and storage locations outside the primary data path. Provider defaults or recovery design can place those copies in a different jurisdiction even when the primary location is compliant.
+Backup, replication, and disaster recovery add copies and storage locations outside the primary data path. Provider defaults or recovery design can place these copies in another jurisdiction even when the primary location meets the requirements.
 
-Applying the same requirements to every recovery copy prevents a resilience measure from moving data to a jurisdiction where it cannot be held. It also keeps recovery usable without requiring a choice between restoring the service and meeting the data's jurisdiction obligations.
+Applying the same requirements to every recovery copy prevents recovery arrangements from moving data to a jurisdiction where it cannot be held. The service can then be restored without choosing between recovery and meeting the data's jurisdiction obligations.
 
 ### Implemented By These Standards
 

@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-21
 ---
 
 # Fast Feedback
@@ -8,11 +8,11 @@ last_edited: 2026-09-11
 
 ### Summary
 
-Checks run at the earliest stage where they can reliably detect an issue, and local development provides fast feedback without relying on shared environments.
+Checks run as early as they can reliably detect an issue, and local development gives engineers fast feedback without relying on shared environments.
 
 ### Reasoning
 
-Running a check later than necessary increases the time and rework needed to correct an issue. Early feedback reaches the engineer while the change is still familiar and before the change reaches shared environments or later pipeline stages.
+Delaying a check increases the time and rework needed to fix an issue. Early checks give engineers feedback before a change reaches shared environments or later pipeline stages, while its details are still familiar.
 
 Local checks do not depend on the availability or current state of a shared environment. Engineers can repeat them as they work instead of waiting for access or another deployment.
 
@@ -32,11 +32,11 @@ Local checks do not depend on the availability or current state of a shared envi
 
 ### Summary
 
-A failure signal clearly identifies what failed and which change caused it, giving an engineer enough information to act.
+Failure feedback clearly identifies what failed and which change caused it, giving engineers enough information to act.
 
 ### Reasoning
 
-Clear feedback directs engineers to the cause of a failure. Without that information, time is spent finding evidence and determining what happened.
+Clear feedback helps engineers find the cause of a failure. Without it, they spend time gathering evidence and working out what happened.
 
 ### Implemented By These Standards
 
@@ -50,13 +50,13 @@ Clear feedback directs engineers to the cause of a failure. Without that informa
 
 ### Summary
 
-Feedback that gives inconsistent results is fixed or removed rather than repeatedly rerun, ignored, or worked around.
+Engineers fix or remove the source of inconsistent feedback rather than repeatedly rerunning checks, ignoring results, or working around the problem.
 
 ### Reasoning
 
-When the same input produces different results, engineers cannot tell whether a failure is genuine. Rerunning or bypassing the check may unblock one change but leaves every later result uncertain.
+When the same input produces different results, engineers cannot tell whether a failure is genuine. Rerunning or bypassing the check may allow one change to proceed, but later results remain uncertain.
 
-Frequent false or unexplained failures erode trust in the check. Engineers may then overlook genuine failures or spend time verifying every result independently.
+Frequent false or unexplained failures make the check harder to trust. Engineers may then overlook genuine failures or spend time verifying every result independently.
 
 ### Implemented By These Standards
 
@@ -68,13 +68,13 @@ Frequent false or unexplained failures erode trust in the check. Engineers may t
 
 ### Summary
 
-Engineering teams run fast, high-signal pipeline checks first and improve stages that are slow or unreliable.
+Fast pipeline checks that reliably identify problems run first, and engineering teams improve slow or unreliable stages.
 
 ### Reasoning
 
-Running fast, high-signal checks first finds failures before slower or dependent stages begin. Engineers receive an actionable result sooner, and the pipeline avoids work that cannot succeed.
+Running these checks first catches failures before slower or dependent stages begin. Engineers get results they can act on sooner, and the pipeline avoids running stages that cannot succeed.
 
-A slow stage can determine how long the entire pipeline takes, increasing feedback time and execution cost for every change. An unreliable stage creates uncertainty and may require reruns before engineers can trust the result.
+A slow stage can delay the whole pipeline, making engineers wait longer and increasing the cost of each run. An unreliable stage leaves engineers unsure of the result and may need reruns before they can trust it.
 
 ### Implemented By These Standards
 
@@ -85,13 +85,13 @@ A slow stage can determine how long the entire pipeline takes, increasing feedba
 
 ### Summary
 
-Delivery pipeline and test execution times are measured so sustained slowdowns can be found and investigated.
+Teams measure delivery pipeline and test execution times to find and investigate sustained slowdowns.
 
 ### Reasoning
 
-Gradual increases in pipeline or test duration are easy to miss in individual runs. Measuring them over time reveals sustained slowdowns before longer waits become accepted as normal.
+Gradual increases in pipeline or test duration are easy to miss in individual runs. Measurements over time reveal sustained slowdowns before teams accept longer waits as normal.
 
-Stage-level measurements show where a delay was introduced. Teams can address the source instead of treating the entire pipeline as slow.
+Measuring each stage shows where a delay started. Teams can address the cause rather than treating the whole pipeline as slow.
 
 ### Implemented By These Standards
 
@@ -102,11 +102,11 @@ Stage-level measurements show where a delay was introduced. Teams can address th
 
 ### Summary
 
-A production change is observed during a limited rollout so unexpected behaviour can be found before full release.
+Teams observe a production change during a limited rollout to find unexpected behaviour before full release.
 
 ### Reasoning
 
-A limited rollout reduces the number of users and systems affected if a change behaves unexpectedly. Observing its behaviour shows whether the rollout should continue before it reaches more users and systems.
+A limited rollout reduces the number of users and systems affected if a change behaves unexpectedly. Teams can observe the change and decide whether to continue before exposing more users and systems to it.
 
 ### Implemented By These Standards
 
