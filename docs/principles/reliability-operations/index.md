@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-20
 ---
 
 # Reliability and Operations
@@ -12,20 +12,14 @@ Choose a principle below to read its full reasoning.
 
 ## Principles
 
-### Reliability and Resilience
+### [Reliability and Resilience](reliability-resilience.md)
 
 Services contain failure and overload while preserving supportable functionality and tested recovery paths.
 
-[Read more](reliability-resilience.md).
-
-### Performance and Scalability
+### [Performance and Scalability](performance-scalability.md)
 
 Services make performance and scaling explicit design decisions validated against realistic demand.
 
-[Read more](performance-scalability.md).
-
-### Observability
+### [Observability](observability.md)
 
 Services produce consistent, correlatable telemetry that explains behaviour and supports operational decisions and incident response.
-
-[Read more](observability.md).

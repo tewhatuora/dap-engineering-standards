@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-20
 ---
 
 # Cost and Sustainability
@@ -12,14 +12,10 @@ Choose a principle below to read its full reasoning.
 
 ## Principles
 
-### Cost Awareness
+### [Cost Awareness](cost-awareness.md)
 
 Lifecycle spend remains visible and aligned with service demand and value as usage and pricing change.
 
-[Read more](cost-awareness.md).
-
-### Sustainability
+### [Sustainability](sustainability.md)
 
 Engineering decisions minimise unnecessary resource consumption and environmental impact throughout a service's lifecycle.
-
-[Read more](sustainability.md).

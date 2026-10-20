@@ -121,11 +121,9 @@ Choose a principle below to read its full reasoning.
 
 ## Principles
 
-### <Page Title>
+### [<Page Title>](<page>.md)
 
 <One short sentence stating the page's core principle.>
-
-[Read more](<page>.md).
 ```
 
 The root `docs/principles/index.md` uses the same structure with `# Principles`, `## Categories`, and a sentence directing the reader to choose a category.

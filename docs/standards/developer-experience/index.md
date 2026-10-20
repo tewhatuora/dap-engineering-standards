@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-10-20
 ---
 
 # Developer Experience
@@ -12,8 +12,6 @@ Choose a standard below to read it in full.
 
 ## Standards
 
-### Local Development Environment
+### [Local Development Environment](local-development-environment.md)
 
 A local development environment supports the service workflow without depending on shared infrastructure.
-
-[Read more](local-development-environment.md).

@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-10-20
 ---
 
 # Platform & Infrastructure
@@ -12,38 +12,26 @@ Choose a standard below to read it in full.
 
 ## Standards
 
-### Containerisation
+### [Containerisation](containerisation.md)
 
 A container image is kept minimal, current, and operated with least privilege by default.
 
-[Read more](containerisation.md).
-
-### Container Orchestration
+### [Container Orchestration](container-orchestration.md)
 
 A containerised workload is right-sized, scales according to demand, and remains isolated from other workloads.
 
-[Read more](container-orchestration.md).
-
-### Serverless
+### [Serverless](serverless.md)
 
 A serverless function is sized to its workload and designed for portability, trace-context propagation, and cost attribution.
 
-[Read more](serverless.md).
-
-### Managed Services
+### [Managed Services](managed-services.md)
 
 A managed service is configured and verified against the workload's own requirements.
 
-[Read more](managed-services.md).
-
-### Environment Strategy
+### [Environment Strategy](environment-strategy.md)
 
 Every environment has a purpose, with its operational cost justified.
 
-[Read more](environment-strategy.md).
-
-### Infrastructure as Code
+### [Infrastructure as Code](infrastructure-as-code.md)
 
 Infrastructure is defined as versioned code, with planned changes applied through an automated, reviewed pipeline.
-
-[Read more](infrastructure-as-code.md).

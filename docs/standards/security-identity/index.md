@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-10-20
 ---
 
 # Security & Identity
@@ -12,20 +12,14 @@ Choose a standard below to read it in full.
 
 ## Standards
 
-### Identity & Access Management
+### [Identity & Access Management](identity-access-management.md)
 
 Production access follows least privilege, with privileged and emergency access separately controlled and audited.
 
-[Read more](identity-access-management.md).
-
-### Vulnerability & Dependency Management
+### [Vulnerability & Dependency Management](vulnerability-dependency-management.md)
 
 Continuous assessment detects vulnerabilities, and remediation follows within a timeframe proportionate to their risk.
 
-[Read more](vulnerability-dependency-management.md).
-
-### Software Supply Chain Security
+### [Software Supply Chain Security](software-supply-chain-security.md)
 
 The software supply chain protects internal namespaces, verifies build dependencies, and prevents compromised components from further use.
-
-[Read more](software-supply-chain-security.md).

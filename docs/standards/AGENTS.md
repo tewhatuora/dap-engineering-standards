@@ -167,11 +167,9 @@ Choose a standard below to read it in full.
 
 ## Standards
 
-### <Page Title>
+### [<Page Title>](<page>.md)
 
 <One sentence describing the page's standards.>
-
-[Read more](<page>.md).
 ```
 
 The root `docs/standards/index.md` uses the same structure with `# Standards`, `## Categories`, and a sentence directing the reader to choose a category.

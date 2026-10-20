@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-22
+last_edited: 2026-10-20
 ---
 
 # Quality
@@ -12,62 +12,42 @@ Choose a principle below to read its full reasoning.
 
 ## Principles
 
-### Test Automation
+### [Test Automation](test-automation.md)
 
 Test automation provides repeatable evidence about product and service quality while complementing human judgement.
 
-[Read more](test-automation.md).
-
-### AI-Assisted Quality Engineering
+### [AI-Assisted Quality Engineering](ai-assisted-quality-engineering.md)
 
 AI helps quality engineering do more, while people remain responsible for decisions, focus testing on important risks, and check that evidence can be trusted.
 
-[Read more](ai-assisted-quality-engineering.md).
-
-### Outcome Driven Assurance
+### [Outcome Driven Assurance](outcome-driven-assurance.md)
 
 Every quality activity has a defined purpose, expected outcome, and basis for evaluation.
 
-[Read more](outcome-driven-assurance.md).
-
-### Risk-Based Quality
+### [Risk-Based Quality](risk-based-quality.md)
 
 Quality effort is prioritised according to the likelihood and consequence of failure.
 
-[Read more](risk-based-quality.md).
-
-### Evidence & Reporting
+### [Evidence & Reporting](evidence-reporting.md)
 
 Quality decisions are supported by clear, traceable evidence and reporting suited to its audience.
 
-[Read more](evidence-reporting.md).
-
-### Quality by Design
+### [Quality by Design](quality-by-design.md)
 
 Quality is a shared responsibility and is considered from discovery through operation.
 
-[Read more](quality-by-design.md).
-
-### Quality Roles & Responsibilities
+### [Quality Roles & Responsibilities](quality-roles-responsibilities.md)
 
 Explicit allocation of quality activities preserves shared ownership and coherent QA oversight.
 
-[Read more](quality-roles-responsibilities.md).
-
-### Quality Intelligence & Improvement
+### [Quality Intelligence & Improvement](quality-intelligence-improvement.md)
 
 Quality evidence reveals patterns and drives continuous improvement in products and assurance.
 
-[Read more](quality-intelligence-improvement.md).
-
-### Testability
+### [Testability](testability.md)
 
 Systems expose observable behaviour and support controlled, repeatable verification as they change.
 
-[Read more](testability.md).
-
-### Accessibility
+### [Accessibility](accessibility.md)
 
 Every interface is subject to accessibility requirements and verification throughout its lifecycle.
-
-[Read more](accessibility.md).

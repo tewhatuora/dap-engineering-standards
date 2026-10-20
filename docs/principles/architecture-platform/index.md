@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-20
 ---
 
 # Architecture and Platform
@@ -12,38 +12,26 @@ Choose a principle below to read its full reasoning.
 
 ## Principles
 
-### Shared Platform
+### [Shared Platform](shared-platform.md)
 
 Runtime and deployment choices reflect each workload's requirements, with alternatives used only where shared platform capabilities cannot meet them.
 
-[Read more](shared-platform.md).
-
-### Domain-Aligned Services
+### [Domain-Aligned Services](domain-aligned-services.md)
 
 Service boundaries follow cohesive business domains so services can own their decisions and change independently.
 
-[Read more](domain-aligned-services.md).
-
-### Distributed Consistency
+### [Distributed Consistency](distributed-consistency.md)
 
 Cross-service workflows preserve service-local transactions through explicit consistency and recovery models.
 
-[Read more](distributed-consistency.md).
-
-### Vendor Lock-in and Portability
+### [Vendor Lock-in and Portability](vendor-lock-in-portability.md)
 
 Technology choices make vendor coupling explicit and preserve the ability to extract data and replace dependencies.
 
-[Read more](vendor-lock-in-portability.md).
-
-### Interoperability
+### [Interoperability](interoperability.md)
 
 Services integrate through explicit, reusable contracts that preserve shared meaning and evolve without breaking consumers.
 
-[Read more](interoperability.md).
-
-### Stateless Architecture
+### [Stateless Architecture](stateless-architecture.md)
 
 Services keep request handling independent of individual instances so they can scale, recover, and retry safely.
-
-[Read more](stateless-architecture.md).

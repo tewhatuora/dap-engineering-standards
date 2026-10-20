@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-10-20
 ---
 
 # Standards
@@ -12,68 +12,46 @@ Choose a category below to view its standards.
 
 ## Categories
 
-### Architecture & System Design
+### [Architecture & System Design](architecture-system-design/index.md)
 
 Design a system so it can be operated, changed, and integrated without breaking its consumers.
 
-[Read more](architecture-system-design/index.md).
-
-### Code Implementation
+### [Code Implementation](code-implementation/index.md)
 
 Write and maintain code so it stays easy to understand, review, secure, and change.
 
-[Read more](code-implementation/index.md).
-
-### Quality Engineering
+### [Quality Engineering](quality-engineering/index.md)
 
 Test every change for correctness, performance, security, and accessibility before it ships.
 
-[Read more](quality-engineering/index.md).
-
-### Delivery & Release
+### [Delivery & Release](delivery-release/index.md)
 
 Treat shipping a change as routine, automated, and low-risk, not a rare, high-stakes event.
 
-[Read more](delivery-release/index.md).
-
-### Platform & Infrastructure
+### [Platform & Infrastructure](platform-infrastructure/index.md)
 
 Choose infrastructure deliberately, so a system is deployed, operated, scaled, and maintained in a predictable way.
 
-[Read more](platform-infrastructure/index.md).
-
-### Operations & Observability
+### [Operations & Observability](operations-observability/index.md)
 
 Give production systems enough visibility to understand their behaviour, detect problems, and recover quickly.
 
-[Read more](operations-observability/index.md).
-
-### Security & Identity
+### [Security & Identity](security-identity/index.md)
 
 Secure access, data, and dependencies throughout a system's development and operation, from the outset.
 
-[Read more](security-identity/index.md).
-
-### Cost & Sustainability
+### [Cost & Sustainability](cost-sustainability/index.md)
 
 Weigh a system's cost and resource consumption alongside its functional requirements from the outset.
 
-[Read more](cost-sustainability/index.md).
-
-### AI Engineering
+### [AI Engineering](ai-engineering/index.md)
 
 Use AI tools to speed up engineering work without losing control of data, accountability, or cost.
 
-[Read more](ai-engineering/index.md).
-
-### Developer Experience
+### [Developer Experience](developer-experience/index.md)
 
 Give engineers a consistent local environment and fast feedback, so problems surface before shared environments do.
 
-[Read more](developer-experience/index.md).
-
-### Documentation & Collaboration
+### [Documentation & Collaboration](documentation-collaboration/index.md)
 
 Document engineering knowledge so it outlives any one person's memory and stays useful as systems change.
-
-[Read more](documentation-collaboration/index.md).
