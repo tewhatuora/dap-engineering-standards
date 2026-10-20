@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-20
 ---
 
 # Data
@@ -12,14 +12,10 @@ Choose a principle below to read its full reasoning.
 
 ## Principles
 
-### Data Residency and Sovereignty
+### [Data Residency and Sovereignty](data-residency-sovereignty.md)
 
 Data remains subject to its jurisdiction requirements throughout its lifecycle.
 
-[Read more](data-residency-sovereignty.md).
-
-### Data Quality and Integrity
+### [Data Quality and Integrity](data-quality-integrity.md)
 
 Data remains valid, consistent, and traceable throughout its lifecycle.
-
-[Read more](data-quality-integrity.md).

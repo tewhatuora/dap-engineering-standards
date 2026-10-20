@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-10-20
 ---
 
 # Operations & Observability
@@ -12,44 +12,30 @@ Choose a standard below to read it in full.
 
 ## Standards
 
-### Structured Logging
+### [Structured Logging](structured-logging.md)
 
 A service's log output is structured, traceable, and free of sensitive data or unnecessary detail.
 
-[Read more](structured-logging.md).
-
-### Metrics, Monitoring & Alerting
+### [Metrics, Monitoring & Alerting](metrics-monitoring-alerting.md)
 
 A service's metrics remain accurate, visible, and bounded, with automated and actionable alerts.
 
-[Read more](metrics-monitoring-alerting.md).
-
-### Distributed Tracing
+### [Distributed Tracing](distributed-tracing.md)
 
 Trace context propagates end-to-end through accurately structured spans and deliberate sampling.
 
-[Read more](distributed-tracing.md).
-
-### Telemetry Instrumentation
+### [Telemetry Instrumentation](telemetry-instrumentation.md)
 
 Telemetry remains consistent across services, safe to introduce, and delivered alongside the change it observes.
 
-[Read more](telemetry-instrumentation.md).
-
-### Observability Platform Integration
+### [Observability Platform Integration](observability-platform-integration.md)
 
 Telemetry is centralised, portable, and available for resilient operations.
 
-[Read more](observability-platform-integration.md).
-
-### Backup & Disaster Recovery
+### [Backup & Disaster Recovery](backup-disaster-recovery.md)
 
 Recovery is designed and validated against defined objectives.
 
-[Read more](backup-disaster-recovery.md).
-
-### Runbooks
+### [Runbooks](runbooks.md)
 
 A runbook documents and validates the steps to resolve known failures and perform high-risk procedures.
-
-[Read more](runbooks.md).

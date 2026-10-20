@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-20
 ---
 
 # Security and Privacy
@@ -12,14 +12,10 @@ Choose a principle below to read its full reasoning.
 
 ## Principles
 
-### Security Engineering
+### [Security Engineering](security-engineering.md)
 
 Security controls limit exposure and remain effective throughout a system's lifecycle.
 
-[Read more](security-engineering.md).
-
-### Data Privacy
+### [Data Privacy](data-privacy.md)
 
 Privacy is protected by limiting personal or health data exposure throughout its lifecycle.
-
-[Read more](data-privacy.md).

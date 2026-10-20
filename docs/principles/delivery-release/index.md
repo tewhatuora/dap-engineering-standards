@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-10-20
 ---
 
 # Delivery and Release
@@ -12,14 +12,10 @@ Choose a principle below to read its full reasoning.
 
 ## Principles
 
-### Immutable Artifacts
+### [Immutable Artifacts](immutable-artifacts.md)
 
 Built artifacts retain an immutable identity and are promoted unchanged through delivery environments.
 
-[Read more](immutable-artifacts.md).
-
-### Safe Delivery
+### [Safe Delivery](safe-delivery.md)
 
 Small, verified changes progress to production through consistent validation, with recovery prepared and release managed separately from deployment.
-
-[Read more](safe-delivery.md).
