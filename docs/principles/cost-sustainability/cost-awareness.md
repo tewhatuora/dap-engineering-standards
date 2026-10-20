@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-20
 ---
 
 # Cost Awareness
@@ -21,7 +21,6 @@ Building a capability that an existing solution already provides creates develop
 ### Implemented By These Standards
 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
-- [Technology Stack Governance](../../standards/architecture-system-design/technology-stack-governance.md)
 
 ## Spend Aligned with Demand and Value
 
@@ -40,7 +39,6 @@ Usage-based engineering tools add another form of variable spend because each re
 ### Implemented By These Standards
 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
-- [Technology Stack Governance](../../standards/architecture-system-design/technology-stack-governance.md)
 - [AI Tooling Cost Management](../../standards/ai-engineering/ai-tooling-cost-management.md)
 - [Resource Efficiency & Optimisation](../../standards/cost-sustainability/resource-efficiency-optimisation.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
@@ -103,6 +101,5 @@ Comparing actual operation and spend with the original basis for the decision ma
 ### Implemented By These Standards
 
 - [AI Tooling Cost Management](../../standards/ai-engineering/ai-tooling-cost-management.md)
-- [Technology Stack Governance](../../standards/architecture-system-design/technology-stack-governance.md)
 - [Resource Efficiency & Optimisation](../../standards/cost-sustainability/resource-efficiency-optimisation.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)

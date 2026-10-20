@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-20
 ---
 
 # Data Residency and Sovereignty
@@ -23,7 +23,6 @@ A general compliance certification also does not establish where a specific serv
 ### Implemented By These Standards
 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
-- [Technology Stack Governance](../../standards/architecture-system-design/technology-stack-governance.md)
 
 ## Jurisdiction Enforcement and Verification
 

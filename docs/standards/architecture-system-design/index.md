@@ -1,12 +1,12 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-10-20
 ---
 
 # Architecture & System Design
 
 ## Overview
 
-Architecture standards govern how systems are structured, integrated, operated, modified, and supported by approved technology.
+Architecture standards govern how systems are structured, integrated, operated, and modified.
 
 Choose a standard below to read it in full.
 
@@ -47,9 +47,3 @@ Health data is exchanged using recognised interoperability standards and shared 
 A workload's packaging, runtime model, and deployment location are selected according to its requirements.
 
 [Read more](runtime-architecture.md).
-
-### Technology Stack Governance
-
-Every technology is classified as approved, trial, or deprecated, and a new technology is approved before adoption.
-
-[Read more](technology-stack-governance.md).
