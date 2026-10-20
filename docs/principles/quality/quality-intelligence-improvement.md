@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-10-21
 ---
 
 # Quality Intelligence & Improvement
@@ -18,11 +18,17 @@ Using test outcomes, operational experience, incidents, and trend analysis to re
 
 ### Implemented By These Standards
 
-- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 - [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
 - [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
-- [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Outcome Driven Assurance](../../standards/quality-engineering/outcome-driven-assurance.md)
+- [Quality Roles & Responsibilities](../../standards/quality-engineering/quality-roles-responsibilities.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## QA Is Empowered to Challenge
 
@@ -38,8 +44,7 @@ QA explains an improvement opportunity using evidence and its effect on quality,
 
 ### Implemented By These Standards
 
-- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
-- [Code Review](../../standards/code-implementation/code-review.md)
+- [Quality Roles & Responsibilities](../../standards/quality-engineering/quality-roles-responsibilities.md)
 
 ## Meaningful Quality Measures
 
@@ -57,10 +62,15 @@ Useful data can include defects by severity, affected component, or user journey
 
 ### Implemented By These Standards
 
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
 - [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
+- [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
+- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
+- [Serverless](../../standards/platform-infrastructure/serverless.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Evidence & Reporting](../../standards/quality-engineering/evidence-reporting.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Quality Trends and Patterns
 
@@ -76,11 +86,11 @@ Trend and pattern analysis distinguishes isolated variation from a broader quali
 
 ### Implemented By These Standards
 
-- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
-- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
 - [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
-- [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
-- [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
 
 ## Operational Experience Informs Quality
 
@@ -96,12 +106,11 @@ Operational indicators, incidents, support reports, and user feedback show wheth
 
 ### Implemented By These Standards
 
-- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
-- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
-- [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
+- [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
-- [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
-- [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
+- [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
+- [Runbooks](../../standards/operations-observability/runbooks.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 
 ## Recurring Problems Drive Prevention
 
@@ -117,9 +126,6 @@ Grouping related evidence and investigating common causes allows the team to imp
 
 ### Implemented By These Standards
 
-- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
+- [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
-- [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
-- [Code Review](../../standards/code-implementation/code-review.md)
-- [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
-- [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)

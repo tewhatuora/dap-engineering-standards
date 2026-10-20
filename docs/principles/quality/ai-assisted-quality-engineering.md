@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-22
+last_edited: 2026-10-21
 ---
 
 # AI-Assisted Quality Engineering
@@ -18,10 +18,10 @@ QA checks each point where AI affects a product or quality decision. The finishe
 
 ### Implemented By These Standards
 
-- [QA Scope for AI Use](../../standards/quality-engineering/ai-assisted-quality-engineering.md#qa-scope-for-ai-use)
-- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md#quality-testing-security)
-- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md#pre-submission-verification)
-- [QA Oversight Across Quality Activities](../../standards/quality-engineering/quality-roles-responsibilities.md#qa-oversight-across-quality-activities)
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
+- [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
+- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 
 ## People Remain Responsible
 
@@ -37,11 +37,11 @@ Responsible people define the expected outcome, review the evidence in context, 
 
 ### Implemented By These Standards
 
-- [Responsibility for AI-Informed Quality Decisions](../../standards/quality-engineering/ai-assisted-quality-engineering.md#responsibility-for-ai-informed-quality-decisions)
-- [Developer Accountability](../../standards/ai-engineering/ai-assisted-development.md#developer-accountability)
-- [Human Oversight](../../standards/ai-engineering/ai-assisted-development.md#human-oversight)
-- [Defined Quality Roles and Responsibilities](../../standards/quality-engineering/quality-roles-responsibilities.md#defined-quality-roles-and-responsibilities)
-- [Assigned Activities and Shared Quality Ownership](../../standards/quality-engineering/quality-roles-responsibilities.md#assigned-activities-and-shared-quality-ownership)
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
+- [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
+- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
+- [Version Control](../../standards/code-implementation/version-control.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 
 ## Independent Checks of AI Work and Evidence
 
@@ -57,9 +57,11 @@ Checks against agreed requirements, observed system behaviour, repeatable tests,
 
 ### Implemented By These Standards
 
-- [Independent Checks of AI Work and Evidence](../../standards/quality-engineering/ai-assisted-quality-engineering.md#independent-checks-of-ai-work-and-evidence)
-- [Quality, Testing & Security](../../standards/ai-engineering/ai-assisted-development.md#quality-testing-security)
-- [Pre-Submission Verification](../../standards/ai-engineering/ai-usage-verification-in-code-review.md#pre-submission-verification)
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
+- [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
+- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
+- [Code Review](../../standards/code-implementation/code-review.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 
 ## Continuous Checks of Functionality That Utilizes AI
 
@@ -75,9 +77,7 @@ Tests cover common use, edge cases, and harmful inputs to show how the system be
 
 ### Implemented By These Standards
 
-- [Testing Functionality That Utilizes AI](../../standards/quality-engineering/ai-assisted-quality-engineering.md#testing-functionality-that-utilizes-ai)
-- [Clear Test Outcomes](../../standards/quality-engineering/outcome-driven-assurance.md#clear-test-outcomes)
-- [Current and Traceable Evidence](../../standards/quality-engineering/evidence-reporting.md#current-and-traceable-evidence)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 
 ## Controlled and Traceable AI Agents
 
@@ -93,11 +93,9 @@ Limits on access, actions, duration, and stop conditions reduce the harm an erro
 
 ### Implemented By These Standards
 
-- [Controlled and Traceable AI Agents](../../standards/quality-engineering/ai-assisted-quality-engineering.md#controlled-and-traceable-ai-agents)
-- [AI Agent Access](../../standards/ai-engineering/ai-assisted-development.md#ai-agent-access)
-- [AI Agent Change Containment](../../standards/ai-engineering/ai-assisted-development.md#ai-agent-change-containment)
-- [AI Agent Access Controls](../../standards/security-identity/identity-access-management.md#ai-agent-access)
-- [Current and Traceable Evidence](../../standards/quality-engineering/evidence-reporting.md#current-and-traceable-evidence)
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Identity & Access Management](../../standards/security-identity/identity-access-management.md)
 
 ## Human Exploration and Expert Judgement
 
@@ -113,10 +111,10 @@ People can follow new evidence, recognise missing context, explore unexpected be
 
 ### Implemented By These Standards
 
-- [Human Exploration and Expert Judgement](../../standards/quality-engineering/ai-assisted-quality-engineering.md#human-exploration-and-expert-judgement)
-- [AI-Assisted Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md#ai-assisted-review)
-- [High-Risk Use](../../standards/ai-engineering/ai-assisted-development.md#high-risk-use)
-- [Automation Complements Human Testing](../../standards/quality-engineering/test-automation.md#automation-complements-human-testing)
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
+- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
+- [Code Review](../../standards/code-implementation/code-review.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 
 ## Adoption Is Measured by Results
 
@@ -132,4 +130,4 @@ Comparing results and total effort with the position before AI was introduced sh
 
 ### Implemented By These Standards
 
-- [Measuring AI Adoption](../../standards/quality-engineering/ai-assisted-quality-engineering.md#measuring-ai-adoption)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)

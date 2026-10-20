@@ -21,6 +21,7 @@ Users experience the system's behaviour regardless of how its code or design was
 - [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
 - [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 
 ## Understanding Before Adoption
 
@@ -54,6 +55,8 @@ Domain experts bring knowledge that the code alone does not provide. Their revie
 ### Implemented By These Standards
 
 - [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
+- [Code Review](../../standards/code-implementation/code-review.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 
 ## Human Clinical Judgement
 
@@ -86,6 +89,7 @@ Limiting what an agent can access and change reduces the consequences of an inco
 ### Implemented By These Standards
 
 - [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
+- [Identity & Access Management](../../standards/security-identity/identity-access-management.md)
 
 ## AI Contribution Traceability
 
@@ -103,6 +107,7 @@ The record also helps explain a decision when an assumption is later challenged 
 
 - [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
 - [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 
 ## AI Tool Terms and Controls
 
@@ -118,7 +123,7 @@ Submission controls prevent personal data, secrets, and other restricted informa
 
 ### Implemented By These Standards
 
-- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
 - [Approved AI Tooling](../../standards/ai-engineering/approved-ai-tooling.md)
 - [Prompt Data Handling](../../standards/ai-engineering/prompt-data-handling.md)
 
@@ -151,7 +156,6 @@ Removing the material from a later prompt cannot undo any storage, access, or re
 ### Implemented By These Standards
 
 - [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
-- [Prompt Data Handling](../../standards/ai-engineering/prompt-data-handling.md)
 
 ## Intellectual Property
 
@@ -168,3 +172,4 @@ Missing attribution does not mean the output is free of third-party rights. Engi
 ### Implemented By These Standards
 
 - [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
+- [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)

@@ -18,14 +18,17 @@ Reusing an internal solution avoids creating another implementation to support. 
 
 ### Implemented By These Standards
 
+- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 - [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
 - [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
+- [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
 - [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
 - [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 - [Test Automation](../../standards/quality-engineering/test-automation.md)
@@ -48,7 +51,8 @@ Stable, versioned interfaces let providers improve an implementation without une
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
 - [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
+- [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 - [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
 - [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
-- [Serverless](../../standards/platform-infrastructure/serverless.md)
+- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
 - [Test Automation](../../standards/quality-engineering/test-automation.md)

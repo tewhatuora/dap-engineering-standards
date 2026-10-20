@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-10-21
 ---
 
 # Test Automation
@@ -18,9 +18,17 @@ A passing automated suite only provides evidence for the behaviours and conditio
 
 ### Implemented By These Standards
 
-- [Test Automation](../../standards/quality-engineering/test-automation.md#investment-in-automation)
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
+- [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
+- [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
+- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
+- [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
+- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Automation Is Considered Early
 
@@ -36,7 +44,7 @@ Early consideration allows QA and the wider team to shape testable outcomes and 
 
 ### Implemented By These Standards
 
-- [Test Automation](../../standards/quality-engineering/test-automation.md#automation-is-considered-early)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 
 ## Risk and Value-Driven Automation
 
@@ -52,8 +60,7 @@ Choosing automation by test count or coverage alone can leave important risks un
 
 ### Implemented By These Standards
 
-- [Test Automation](../../standards/quality-engineering/test-automation.md#risk-and-value-driven-automation)
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 
 ## Appropriate Test Level
 
@@ -69,9 +76,9 @@ Using broader tests for behaviour that can be checked at a lower level slows fee
 
 ### Implemented By These Standards
 
-- [Test Automation](../../standards/quality-engineering/test-automation.md#appropriate-test-level)
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Test Assets Are Maintained as Code
 
@@ -87,11 +94,15 @@ Poorly designed or outdated tests can reject valid changes, miss defects, or pro
 
 ### Implemented By These Standards
 
-- [Test Automation](../../standards/quality-engineering/test-automation.md#test-assets-are-maintained-as-code)
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
-- [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
+- [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
+- [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
+- [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
+- [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
+- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
+- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Accessible Automation Source
 
@@ -107,8 +118,8 @@ Generic test components used across products need a shared repository with clear
 
 ### Implemented By These Standards
 
-- [Test Automation](../../standards/quality-engineering/test-automation.md#accessible-automation-source)
 - [Version Control](../../standards/code-implementation/version-control.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 
 ## Reuse Before Duplication
 
@@ -124,7 +135,7 @@ Reuse remains tied to a genuine shared need. Forcing product-specific tests into
 
 ### Implemented By These Standards
 
-- [Test Automation](../../standards/quality-engineering/test-automation.md#reuse-before-duplication)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 
 ## Shared Automation Ownership
 
@@ -140,10 +151,7 @@ Sharing the code, configuration, operating instructions, access requirements, an
 
 ### Implemented By These Standards
 
-- [Test Automation](../../standards/quality-engineering/test-automation.md#shared-automation-ownership)
-- [Version Control](../../standards/code-implementation/version-control.md)
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Test Data Management](../../standards/quality-engineering/test-data-management.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 
 ## Authoritative Test Results
 
@@ -159,10 +167,12 @@ Repeatedly bypassing failures makes teams less likely to trust and act on test r
 
 ### Implemented By These Standards
 
-- [Test Automation](../../standards/quality-engineering/test-automation.md#authoritative-test-results)
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Automation Complements Human Testing
 
@@ -178,6 +188,6 @@ Human testers can follow new information, explore uncertain risks, and assess ou
 
 ### Implemented By These Standards
 
-- [Test Automation](../../standards/quality-engineering/test-automation.md#automation-complements-human-testing)
 - [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
-- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)

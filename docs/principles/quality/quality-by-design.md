@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-10-21
 ---
 
 # Quality by Design
@@ -18,10 +18,10 @@ Shared ownership gives each contributor responsibility for the quality consequen
 
 ### Implemented By These Standards
 
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
-- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
-- [Release Strategy](../../standards/delivery-release/release-strategy.md)
-- [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
+- [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
+- [Quality Roles & Responsibilities](../../standards/quality-engineering/quality-roles-responsibilities.md)
 
 ## Shift-Left Quality Involvement
 
@@ -37,10 +37,8 @@ Early QA involvement brings questions about risk and verification into decisions
 
 ### Implemented By These Standards
 
-- [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
-- [API Design](../../standards/architecture-system-design/api-design.md)
-- [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
-- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
+- [Outcome Driven Assurance](../../standards/quality-engineering/outcome-driven-assurance.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 
 ## Quality Failure Prevention
 
@@ -56,10 +54,25 @@ QA uses testing, findings, trends, and operational evidence to evaluate how effe
 
 ### Implemented By These Standards
 
-- [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
+- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 - [API Design](../../standards/architecture-system-design/api-design.md)
+- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
+- [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
+- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
+- [Branching Strategy](../../standards/code-implementation/branching-strategy.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
+- [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
+- [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
+- [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
 - [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
+- [Version Control](../../standards/code-implementation/version-control.md)
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
+- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
+- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Outcome Driven Assurance](../../standards/quality-engineering/outcome-driven-assurance.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## End-to-End Quality Outcomes
 
@@ -75,7 +88,8 @@ Teams define complete outcomes early and consider every part involved. Assurance
 
 ### Implemented By These Standards
 
-- [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
+- [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)

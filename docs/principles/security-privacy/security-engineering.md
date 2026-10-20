@@ -27,7 +27,6 @@ Denying access by default prevents accidental grants when no one has made an acc
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Containerisation](../../standards/platform-infrastructure/containerisation.md)
 - [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
-- [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 - [Identity & Access Management](../../standards/security-identity/identity-access-management.md)
@@ -64,8 +63,10 @@ An explicit change makes any reduction in protection visible. The person changin
 
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Containerisation](../../standards/platform-infrastructure/containerisation.md)
+- [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
 
 ## Attack Surface Reduction
 
@@ -82,6 +83,8 @@ Removing unused capabilities leaves less behaviour to secure, monitor, update, a
 ### Implemented By These Standards
 
 - [API Design](../../standards/architecture-system-design/api-design.md)
+- [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
+- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Containerisation](../../standards/platform-infrastructure/containerisation.md)
 
 ## Defence in Depth
@@ -98,8 +101,11 @@ Independent controls mean that compromising one does not bypass every form of pr
 
 ### Implemented By These Standards
 
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
+- [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
+- [Identity & Access Management](../../standards/security-identity/identity-access-management.md)
 
 ## Secure Development
 
@@ -121,6 +127,7 @@ Automated analysis can consistently find known patterns in each change. Informed
 - [Code Review](../../standards/code-implementation/code-review.md)
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
 - [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
 
@@ -142,6 +149,7 @@ Services and threats change, so earlier test results do not remain sufficient in
 - [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
+- [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
 
 ## Temporary Security Exceptions
 
@@ -174,6 +182,7 @@ Keeping dependencies current and scanning them reveals known weaknesses so engin
 ### Implemented By These Standards
 
 - [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
+- [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Containerisation](../../standards/platform-infrastructure/containerisation.md)
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)

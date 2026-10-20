@@ -19,6 +19,7 @@ Being a default or a familiar choice does not by itself justify that cost. Alter
 ### Implemented By These Standards
 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
+- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
 
 ## Vendor Abstraction
 

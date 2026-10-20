@@ -18,9 +18,15 @@ When several solutions meet the requirement equally well, the simplest one leave
 
 ### Implemented By These Standards
 
+- [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
+- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
+- [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
+- [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
+- [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
+- [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
+- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
-- [Containerisation](../../standards/platform-infrastructure/containerisation.md)
 
 ## Readable, Consistent Code
 
@@ -36,9 +42,12 @@ Consistent naming, formatting, and structure help engineers focus on what the co
 
 ### Implemented By These Standards
 
+- [Code Review](../../standards/code-implementation/code-review.md)
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 - [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
-- [Code Review](../../standards/code-implementation/code-review.md)
+- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Component Modularity
 
@@ -54,9 +63,10 @@ A stable interface defines the behaviour that other components rely on. The impl
 
 ### Implemented By These Standards
 
-- [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 - [API Design](../../standards/architecture-system-design/api-design.md)
+- [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 
 ## Unused Code and Dependencies
@@ -75,8 +85,10 @@ Unused code, features, configuration, and dependencies still take effort to unde
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 - [Configuration Management](../../standards/code-implementation/configuration-management.md)
 - [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
-- [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
+- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Maintainability and Technical Debt
 
@@ -92,5 +104,7 @@ As technical debt grows and more code depends on it, routine changes become more
 
 ### Implemented By These Standards
 
+- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
+- [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
 - [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)

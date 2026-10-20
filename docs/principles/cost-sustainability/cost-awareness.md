@@ -21,6 +21,8 @@ Building a capability that already exists adds development and maintenance work 
 ### Implemented By These Standards
 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 
 ## Spend Aligned with Demand and Value
 
@@ -38,19 +40,22 @@ Usage-based engineering tools may charge per request or operation. Matching the 
 
 ### Implemented By These Standards
 
-- [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 - [AI Tooling Cost Management](../../standards/ai-engineering/ai-tooling-cost-management.md)
+- [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 - [Resource Efficiency & Optimisation](../../standards/cost-sustainability/resource-efficiency-optimisation.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
-- [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
+- [Distributed Tracing](../../standards/operations-observability/distributed-tracing.md)
 - [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
 - [Structured Logging](../../standards/operations-observability/structured-logging.md)
-- [Distributed Tracing](../../standards/operations-observability/distributed-tracing.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 
 ## Cost Visibility and Attribution
@@ -103,3 +108,4 @@ Comparing actual operation and spending with the original assumptions reveals th
 - [AI Tooling Cost Management](../../standards/ai-engineering/ai-tooling-cost-management.md)
 - [Resource Efficiency & Optimisation](../../standards/cost-sustainability/resource-efficiency-optimisation.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)

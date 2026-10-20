@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-21
 ---
 
 # Testability
@@ -19,7 +19,9 @@ When an outcome is visible only through internal inspection or manual observatio
 ### Implemented By These Standards
 
 - [API Design](../../standards/architecture-system-design/api-design.md)
+- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Controllable Test Boundaries
 
@@ -35,10 +37,12 @@ Isolation from production prevents verification from exposing production data or
 
 ### Implemented By These Standards
 
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
-- [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Deterministic Tests
@@ -55,9 +59,10 @@ An intermittent result breaks that link because the same code can appear both va
 
 ### Implemented By These Standards
 
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Test Depth by Risk and Complexity
 
@@ -73,6 +78,8 @@ Designing functionality for automated verification allows the same behaviour to 
 
 ### Implemented By These Standards
 
+- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Non-Functional Testability
@@ -89,6 +96,10 @@ Automated testing provides repeatable evidence and makes regressions visible as 
 
 ### Implemented By These Standards
 
-- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
-- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
+- [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
+- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
