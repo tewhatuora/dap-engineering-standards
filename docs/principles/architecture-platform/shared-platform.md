@@ -18,21 +18,5 @@ Choosing the runtime and deployment location during design lets engineers check 
 
 ### Implemented By These Standards
 
-- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
-
-## Justified Platform Alternatives
-
-### Summary
-
-An alternative to the shared platform is used only when, and for as long as, the platform cannot meet a specific workload requirement.
-
-### Reasoning
-
-An alternative adds technology and an operating model to secure, support, and maintain alongside the shared platform. A limited evaluation tests whether it meets the requirement before the organisation takes on those ongoing costs and dependencies.
-
-Where the missing capability would benefit other workloads, adding it to the shared platform avoids a separate solution for one team. Reassessing the alternative as requirements and platform capabilities change prevents it from staying in use after its benefit no longer justifies the extra cost and risk.
-
-### Implemented By These Standards
-
-- [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
+- [Serverless](../../standards/platform-infrastructure/serverless.md)

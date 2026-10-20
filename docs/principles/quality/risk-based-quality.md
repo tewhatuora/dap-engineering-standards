@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-10-21
 ---
 
 # Risk-Based Quality
@@ -18,11 +18,12 @@ Understanding these risks gives QA a clear basis for deciding what needs to be t
 
 ### Implemented By These Standards
 
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
-- [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
-- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 
 ## Highest Risks First
 
@@ -38,10 +39,7 @@ Lower priority does not mean no testing is needed. It means the amount and timin
 
 ### Implemented By These Standards
 
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
-- [Code Review](../../standards/code-implementation/code-review.md)
-- [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 
 ## Proportionate Assurance
 
@@ -57,11 +55,15 @@ Proportionate assurance matches the strength of the evidence to the possible har
 
 ### Implemented By These Standards
 
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
-- [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
-- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
+- [Runbooks](../../standards/operations-observability/runbooks.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
+- [Software Supply Chain Security](../../standards/security-identity/software-supply-chain-security.md)
 
 ## Risk Is Reassessed
 
@@ -77,9 +79,13 @@ Reassessment keeps testing focused on the product as it exists now. It allows QA
 
 ### Implemented By These Standards
 
-- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Code Review](../../standards/code-implementation/code-review.md)
 - [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
+- [Outcome Driven Assurance](../../standards/quality-engineering/outcome-driven-assurance.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 - [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
 
 ## Remaining Risk Stays Visible
@@ -96,8 +102,15 @@ QA makes the remaining risk and its supporting evidence clear. A person accounta
 
 ### Implemented By These Standards
 
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
+- [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
+- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
+- [Evidence & Reporting](../../standards/quality-engineering/evidence-reporting.md)
+- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Outcome Driven Assurance](../../standards/quality-engineering/outcome-driven-assurance.md)
+- [Quality Roles & Responsibilities](../../standards/quality-engineering/quality-roles-responsibilities.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 - [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
-- [Release Strategy](../../standards/delivery-release/release-strategy.md)

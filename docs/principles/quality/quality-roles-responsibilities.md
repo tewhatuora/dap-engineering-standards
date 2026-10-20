@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-21
+last_edited: 2026-10-21
 ---
 
 # Quality Roles & Responsibilities
@@ -18,7 +18,10 @@ A shared responsibility model, such as RASCI, records who is responsible and acc
 
 ### Implemented By These Standards
 
-- [Defined Quality Roles and Responsibilities](../../standards/quality-engineering/quality-roles-responsibilities.md#defined-quality-roles-and-responsibilities)
+- [Code Review](../../standards/code-implementation/code-review.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Quality Roles & Responsibilities](../../standards/quality-engineering/quality-roles-responsibilities.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 
 ## Assigned Activities and Shared Quality Ownership
 
@@ -34,7 +37,9 @@ Shared ownership allows specialist roles to contribute their expertise without b
 
 ### Implemented By These Standards
 
-- [Assigned Activities and Shared Quality Ownership](../../standards/quality-engineering/quality-roles-responsibilities.md#assigned-activities-and-shared-quality-ownership)
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
+- [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
+- [Quality Roles & Responsibilities](../../standards/quality-engineering/quality-roles-responsibilities.md)
 
 ## QA Oversight Across Quality Activities
 
@@ -50,4 +55,5 @@ QA maintains a view of planned and completed assurance, challenges whether the a
 
 ### Implemented By These Standards
 
-- [QA Oversight Across Quality Activities](../../standards/quality-engineering/quality-roles-responsibilities.md#qa-oversight-across-quality-activities)
+- [Outcome Driven Assurance](../../standards/quality-engineering/outcome-driven-assurance.md)
+- [Quality Roles & Responsibilities](../../standards/quality-engineering/quality-roles-responsibilities.md)

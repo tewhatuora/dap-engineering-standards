@@ -35,6 +35,7 @@ Applying the same criteria consistently makes the path to production repeatable 
 
 ### Implemented By These Standards
 
+- [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
 - [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 
 ## Deployment Risk Reduction
@@ -57,6 +58,7 @@ Exposing a change gradually limits the number of users and systems affected whil
 - [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
+- [Release Strategy](../../standards/delivery-release/release-strategy.md)
 - [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
 
 ## Independent Release Decision
@@ -74,4 +76,5 @@ A separate release decision lets engineers make a deployed change available to u
 ### Implemented By These Standards
 
 - [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
+- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Release Strategy](../../standards/delivery-release/release-strategy.md)

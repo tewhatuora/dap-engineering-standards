@@ -86,7 +86,9 @@ Proprietary or organisation-specific alternatives require consumers to learn and
 ### Implemented By These Standards
 
 - [API Design](../../standards/architecture-system-design/api-design.md)
+- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
+- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
 - [Distributed Tracing](../../standards/operations-observability/distributed-tracing.md)
 - [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
 - [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
@@ -107,6 +109,7 @@ Agreed formats and meanings let the receiver interpret data without asking for c
 
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
+- [Distributed Tracing](../../standards/operations-observability/distributed-tracing.md)
 - [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
 
 ## Reusable Interfaces for Multiple Consumers
@@ -125,6 +128,7 @@ A contract independent of any one consumer describes the shared need rather than
 
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
+- [Serverless](../../standards/platform-infrastructure/serverless.md)
 
 ## Backward Compatibility
 
@@ -142,10 +146,10 @@ Preserving compatibility lets providers and consumers evolve independently. Addi
 
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
-- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
-- [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
+- [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
+- [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
 - [Release Strategy](../../standards/delivery-release/release-strategy.md)
-- [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
+- [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
 
 ## Contract and Integration Testing
 

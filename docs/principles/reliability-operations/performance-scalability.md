@@ -19,7 +19,9 @@ Considering performance and scaling during design lets engineers assess whether 
 ### Implemented By These Standards
 
 - [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
+- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
 - [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
+- [Serverless](../../standards/platform-infrastructure/serverless.md)
 
 ## Performance and Capacity Requirements
 
@@ -37,8 +39,6 @@ Requirements based on realistic demand reduce the risk of providing too little c
 
 - [Resource Efficiency & Optimisation](../../standards/cost-sustainability/resource-efficiency-optimisation.md)
 - [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
-- [Managed Services](../../standards/platform-infrastructure/managed-services.md)
-- [Serverless](../../standards/platform-infrastructure/serverless.md)
 
 ## Horizontal and Elastic Scaling
 
@@ -71,6 +71,7 @@ Identifying constraints during design lets engineers remove them, design around 
 
 ### Implemented By These Standards
 
+- [Runtime Architecture](../../standards/architecture-system-design/runtime-architecture.md)
 - [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
 
 ## Efficient Data Access
@@ -107,5 +108,7 @@ Scaling decisions also depend on the expected level and pattern of demand. Growt
 ### Implemented By These Standards
 
 - [Service & Domain Design](../../standards/architecture-system-design/service-domain-design.md)
+- [Resource Efficiency & Optimisation](../../standards/cost-sustainability/resource-efficiency-optimisation.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
+- [Serverless](../../standards/platform-infrastructure/serverless.md)
 - [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)

@@ -18,15 +18,16 @@ Local checks do not depend on the availability or current state of a shared envi
 
 ### Implemented By These Standards
 
-- [Configuration Management](../../standards/code-implementation/configuration-management.md)
+- [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
 - [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
 - [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
+- [Version Control](../../standards/code-implementation/version-control.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Local Development Environment](../../standards/developer-experience/local-development-environment.md)
 - [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Clear, Actionable Feedback
 
@@ -42,9 +43,13 @@ Clear feedback helps engineers find the cause of a failure. Without it, they spe
 
 - [Code Review](../../standards/code-implementation/code-review.md)
 - [Configuration Management](../../standards/code-implementation/configuration-management.md)
+- [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
+- [Evidence & Reporting](../../standards/quality-engineering/evidence-reporting.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Outcome Driven Assurance](../../standards/quality-engineering/outcome-driven-assurance.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Unreliable Feedback
 
@@ -61,8 +66,10 @@ Frequent false or unexplained failures make the check harder to trust. Engineers
 ### Implemented By These Standards
 
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Fast Pipeline Feedback
 
@@ -95,7 +102,6 @@ Measuring each stage shows where a delay started. Teams can address the cause ra
 
 ### Implemented By These Standards
 
-- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
 
 ## Rollouts with Limited Exposure
@@ -110,5 +116,5 @@ A limited rollout reduces the number of users and systems affected if a change b
 
 ### Implemented By These Standards
 
-- [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
+- [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)

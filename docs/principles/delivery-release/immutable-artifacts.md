@@ -36,5 +36,6 @@ Promoting an artifact unchanged preserves its provenance and keeps verification 
 
 ### Implemented By These Standards
 
+- [Configuration Management](../../standards/code-implementation/configuration-management.md)
 - [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)

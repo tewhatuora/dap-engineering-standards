@@ -25,6 +25,8 @@ Deployment models that share capacity or adjust it with demand can use infrastru
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
+- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)
 
 ## Lower Carbon Deployment
@@ -57,7 +59,9 @@ Storage designed for frequent or rapid access can use more resources than infreq
 
 ### Implemented By These Standards
 
+- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
 - [Resource Efficiency & Optimisation](../../standards/cost-sustainability/resource-efficiency-optimisation.md)
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
 - [Test Data Management](../../standards/quality-engineering/test-data-management.md)

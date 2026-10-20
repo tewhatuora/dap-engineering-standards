@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-09
+last_edited: 2026-10-21
 ---
 
 # Outcome Driven Assurance
@@ -18,12 +18,17 @@ Connecting the activity, its stated outcome, and its evidence allows QA and the 
 
 ### Implemented By These Standards
 
-- [Clear Test Outcomes](../../standards/quality-engineering/outcome-driven-assurance.md#clear-test-outcomes)
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
-- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [API Design](../../standards/architecture-system-design/api-design.md)
+- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
+- [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
+- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
-- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Outcome Driven Assurance](../../standards/quality-engineering/outcome-driven-assurance.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Clear and Useful Test Evidence
 
@@ -39,12 +44,14 @@ Keeping this evidence accessible allows the wider team to understand the outcome
 
 ### Implemented By These Standards
 
-- [Clear and Useful Test Evidence](../../standards/quality-engineering/outcome-driven-assurance.md#clear-and-useful-test-evidence)
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Evidence & Reporting](../../standards/quality-engineering/evidence-reporting.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
+- [Outcome Driven Assurance](../../standards/quality-engineering/outcome-driven-assurance.md)
 - [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
-- [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
-- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Quality Acceptance Criteria
 
@@ -60,10 +67,9 @@ Criteria chosen or adjusted after results are known allow an unfavourable result
 
 ### Implemented By These Standards
 
-- [Quality Acceptance Criteria](../../standards/quality-engineering/outcome-driven-assurance.md#quality-acceptance-criteria)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Outcome Driven Assurance](../../standards/quality-engineering/outcome-driven-assurance.md)
 - [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
-- [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
-- [API Design](../../standards/architecture-system-design/api-design.md)
 
 ## Traceable Assurance Outcomes
 
@@ -79,8 +85,8 @@ Linking these records throughout delivery shows the assurance status of each fea
 
 ### Implemented By These Standards
 
-- [Traceable Assurance Outcomes](../../standards/quality-engineering/outcome-driven-assurance.md#traceable-assurance-outcomes)
-- [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
-- [Version Control](../../standards/code-implementation/version-control.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
-- [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
+- [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Evidence & Reporting](../../standards/quality-engineering/evidence-reporting.md)
+- [Outcome Driven Assurance](../../standards/quality-engineering/outcome-driven-assurance.md)

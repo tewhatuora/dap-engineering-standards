@@ -18,11 +18,9 @@ Redundancy removes dependence on a component whose failure would prevent require
 
 ### Implemented By These Standards
 
-- [Progressive Delivery](../../standards/delivery-release/progressive-delivery.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
-- [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)
 
 ## Dependency Failure Containment
@@ -61,7 +59,6 @@ Some operations are more important than others, and one consumer can use capacit
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
-- [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 
 ## Graceful Degradation
@@ -79,6 +76,7 @@ Reduced functionality gives users a predictable result during recovery and limit
 ### Implemented By These Standards
 
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
+- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 
 ## Graceful Service Termination
 
@@ -111,6 +109,8 @@ Recovery depends on infrastructure, data, dependencies, and procedures working t
 
 ### Implemented By These Standards
 
+- [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 - [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)
@@ -129,7 +129,9 @@ Services and their dependencies change, so a procedure that once worked can beco
 
 ### Implemented By These Standards
 
+- [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
 - [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
+- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Runbooks](../../standards/operations-observability/runbooks.md)
 
 ## Defined Failure Recovery Paths
@@ -146,7 +148,11 @@ A defined path records the expected response, the state to restore, and how to t
 
 ### Implemented By These Standards
 
+- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
+- [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
 - [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
+- [Release Strategy](../../standards/delivery-release/release-strategy.md)
+- [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Runbooks](../../standards/operations-observability/runbooks.md)
 
@@ -164,4 +170,6 @@ Linking a known failure signal to its procedure gives responders a direct path f
 
 ### Implemented By These Standards
 
+- [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
+- [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
 - [Runbooks](../../standards/operations-observability/runbooks.md)

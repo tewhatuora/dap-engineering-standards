@@ -19,6 +19,7 @@ Collecting only what is needed prevents unnecessary data exposure during later p
 ### Implemented By These Standards
 
 - [Prompt Data Handling](../../standards/ai-engineering/prompt-data-handling.md)
+- [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Structured Logging](../../standards/operations-observability/structured-logging.md)
 - [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
@@ -38,6 +39,7 @@ A protective default makes any reduction in privacy a clear decision. The person
 
 ### Implemented By These Standards
 
+- [Approved AI Tooling](../../standards/ai-engineering/approved-ai-tooling.md)
 - [Prompt Data Handling](../../standards/ai-engineering/prompt-data-handling.md)
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
@@ -56,6 +58,7 @@ Permissions left in place after their legitimate purpose ends allow access that 
 
 ### Implemented By These Standards
 
+- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)

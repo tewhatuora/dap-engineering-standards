@@ -51,6 +51,8 @@ When services describe similar behaviour differently, dashboards, alerts, and in
 
 ### Implemented By These Standards
 
+- [Distributed Tracing](../../standards/operations-observability/distributed-tracing.md)
+- [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
 - [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
 
 ## Diagnostic Signal Coverage
@@ -90,6 +92,7 @@ Passing correlation information between services lets responders reconstruct the
 ### Implemented By These Standards
 
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
+- [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
 - [Distributed Tracing](../../standards/operations-observability/distributed-tracing.md)
 - [Structured Logging](../../standards/operations-observability/structured-logging.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
@@ -108,6 +111,7 @@ Some sensitive data may be needed to investigate a particular type of problem. P
 
 ### Implemented By These Standards
 
+- [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)
 - [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
 - [Structured Logging](../../standards/operations-observability/structured-logging.md)
 - [Telemetry Instrumentation](../../standards/operations-observability/telemetry-instrumentation.md)
@@ -126,9 +130,9 @@ Linking telemetry to a decision makes clear why it is collected and how it will 
 
 ### Implemented By These Standards
 
+- [Resource Efficiency & Optimisation](../../standards/cost-sustainability/resource-efficiency-optimisation.md)
 - [Distributed Tracing](../../standards/operations-observability/distributed-tracing.md)
 - [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
-- [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
 - [Structured Logging](../../standards/operations-observability/structured-logging.md)
 
 ## Incident Detection and Readiness
@@ -153,3 +157,4 @@ An alert or dashboard may exist but fail to provide accurate, usable information
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
 - [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
+- [Managed Services](../../standards/platform-infrastructure/managed-services.md)

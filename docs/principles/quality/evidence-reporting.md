@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-11
+last_edited: 2026-10-21
 ---
 
 # Evidence & Reporting
@@ -18,10 +18,12 @@ Accessible evidence gives the team a shared view of quality and allows others to
 
 ### Implemented By These Standards
 
-- [Accessible Quality Evidence](../../standards/quality-engineering/evidence-reporting.md#accessible-quality-evidence)
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
+- [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
+- [Evidence & Reporting](../../standards/quality-engineering/evidence-reporting.md)
+- [Outcome Driven Assurance](../../standards/quality-engineering/outcome-driven-assurance.md)
+- [Quality Roles & Responsibilities](../../standards/quality-engineering/quality-roles-responsibilities.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Complete Quality Reporting
 
@@ -37,27 +39,11 @@ A complete report makes both confidence and uncertainty visible. This allows the
 
 ### Implemented By These Standards
 
-- [Complete Quality Reporting](../../standards/quality-engineering/evidence-reporting.md#complete-quality-reporting)
-- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
-- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
-- [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
-
-## Reporting for the Audience
-
-### Summary
-
-QA presents quality information in language and detail suited to the audience and the decision they need to make.
-
-### Reasoning
-
-Engineers need enough detail to diagnose and correct a problem, while product owners, leaders, assurance functions, and vendors may need a clear view of impact, confidence, and remaining risk. One report can be too technical for one audience and too limited for another.
-
-Audience-focused reporting explains what matters without removing access to the supporting evidence. This helps each audience understand the quality position and act within its responsibility.
-
-### Implemented By These Standards
-
-- [Release Strategy](../../standards/delivery-release/release-strategy.md)
-- [Metrics, Monitoring & Alerting](../../standards/operations-observability/metrics-monitoring-alerting.md)
+- [Accessibility Testing](../../standards/quality-engineering/accessibility-testing.md)
+- [Evidence & Reporting](../../standards/quality-engineering/evidence-reporting.md)
+- [Outcome Driven Assurance](../../standards/quality-engineering/outcome-driven-assurance.md)
+- [Quality Roles & Responsibilities](../../standards/quality-engineering/quality-roles-responsibilities.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 
 ## Actionable Findings
 
@@ -73,12 +59,11 @@ An actionable finding gives the team enough information to understand the proble
 
 ### Implemented By These Standards
 
-- [Actionable Findings](../../standards/quality-engineering/evidence-reporting.md#actionable-findings)
+- [Code Review](../../standards/code-implementation/code-review.md)
+- [Evidence & Reporting](../../standards/quality-engineering/evidence-reporting.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
 - [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
-- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
-- [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
-- [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
+- [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Shared Defect Standard
 
@@ -94,13 +79,7 @@ A shared standard establishes a common vocabulary, minimum record content, and l
 
 ### Implemented By These Standards
 
-- [Shared Defect Standard](../../standards/quality-engineering/evidence-reporting.md#shared-defect-standard)
-- [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
-- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
-- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
-- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
-- [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
-- [Vulnerability & Dependency Management](../../standards/security-identity/vulnerability-dependency-management.md)
+- [Evidence & Reporting](../../standards/quality-engineering/evidence-reporting.md)
 
 ## Current and Traceable Evidence
 
@@ -116,8 +95,8 @@ Current, traceable evidence shows where a result can be applied and allows the t
 
 ### Implemented By These Standards
 
-- [Current and Traceable Evidence](../../standards/quality-engineering/evidence-reporting.md#current-and-traceable-evidence)
-- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
-- [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
-- [Version Control](../../standards/code-implementation/version-control.md)
+- [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
+- [Evidence & Reporting](../../standards/quality-engineering/evidence-reporting.md)
+- [Outcome Driven Assurance](../../standards/quality-engineering/outcome-driven-assurance.md)
+- [Performance & Load Testing](../../standards/quality-engineering/performance-load-testing.md)

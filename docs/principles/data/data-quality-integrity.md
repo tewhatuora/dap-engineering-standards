@@ -19,6 +19,7 @@ When invalid data cannot be rejected, an explicit flag identifies it for later h
 ### Implemented By These Standards
 
 - [API Design](../../standards/architecture-system-design/api-design.md)
+- [Configuration Management](../../standards/code-implementation/configuration-management.md)
 
 ## Structural and Referential Integrity
 
@@ -68,6 +69,7 @@ Automated tests repeat the same checks and reveal regressions when a rule or rel
 
 ### Implemented By These Standards
 
+- [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)
 - [Unit Testing](../../standards/quality-engineering/unit-testing.md)
 
 ## Data Change Traceability

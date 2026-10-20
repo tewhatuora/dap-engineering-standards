@@ -20,15 +20,18 @@ Infrastructure, configuration, delivery pipelines, database schemas, and automat
 
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
+- [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 - [Configuration Management](../../standards/code-implementation/configuration-management.md)
 - [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
 - [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
+- [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
 - [Version Control](../../standards/code-implementation/version-control.md)
+- [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
-- [Feature Flagging](../../standards/delivery-release/feature-flagging.md)
-- [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
+- [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
+- [Test Automation](../../standards/quality-engineering/test-automation.md)
 
 ## Reproducible State
 
@@ -47,7 +50,6 @@ Manual changes are not captured in code. Engineers have to repeat each step corr
 - [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
 - [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
 - [Dependency & Runtime Management](../../standards/code-implementation/dependency-runtime-management.md)
-- [Build & Artifact Management](../../standards/delivery-release/build-artifact-management.md)
 - [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Backup & Disaster Recovery](../../standards/operations-observability/backup-disaster-recovery.md)
 - [Environment Strategy](../../standards/platform-infrastructure/environment-strategy.md)
@@ -84,13 +86,14 @@ Direct changes may be needed to restore service. Recording them in code keeps th
 
 ### Implemented By These Standards
 
-- [Branching Strategy](../../standards/code-implementation/branching-strategy.md)
+- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
 - [Configuration Management](../../standards/code-implementation/configuration-management.md)
 - [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
-- [Code Review](../../standards/code-implementation/code-review.md)
 - [Continuous Delivery & Deployment](../../standards/delivery-release/continuous-delivery-deployment.md)
-- [Schema Design & Evolution](../../standards/architecture-system-design/schema-design-evolution.md)
+- [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Infrastructure as Code](../../standards/platform-infrastructure/infrastructure-as-code.md)
+- [Serverless](../../standards/platform-infrastructure/serverless.md)
+- [Identity & Access Management](../../standards/security-identity/identity-access-management.md)
 
 ## Secrets Outside Code
 
@@ -107,7 +110,10 @@ Referencing a secret at runtime keeps its storage and access within the secrets 
 ### Implemented By These Standards
 
 - [Configuration Management](../../standards/code-implementation/configuration-management.md)
+- [Version Control](../../standards/code-implementation/version-control.md)
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
+- [Containerisation](../../standards/platform-infrastructure/containerisation.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 
 ## Documentation Changes with Behaviour
