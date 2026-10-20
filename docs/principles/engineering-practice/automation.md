@@ -12,7 +12,7 @@ Automation is used for repeatable engineering and operational work, including de
 
 ### Reasoning
 
-Repeating engineering and operational tasks by hand takes time, and the results can vary depending on who does the work. Automation produces consistent results, speeds up routine responses, and reduces dependence on knowledge held by a few people.
+Repeating engineering and operational tasks by hand takes time, and the results can vary depending on who performs them. Automation produces consistent results, speeds up routine responses, and reduces dependence on knowledge held by a few people.
 
 Automation also takes effort to develop and maintain. Whether it is worthwhile depends on the effort it saves and the risk it removes.
 
@@ -34,13 +34,13 @@ Automation also takes effort to develop and maintain. Whether it is worthwhile d
 
 ### Summary
 
-Repeatable delivery pipeline work is automated by default, and automation is incomplete while steps that could be automated remain manual.
+Repeatable delivery pipeline tasks are automated by default, and automation is incomplete while steps that could be automated remain manual.
 
 ### Reasoning
 
 Manual pipeline steps depend on someone taking the right action at the right time. This can delay delivery and make releases inconsistent. A missed or incorrectly performed step can change the result without leaving a clear record of what happened.
 
-Automation runs the same steps each time and records the results consistently. Engineers receive faster feedback, can compare failures more easily, and spend less time on routine work.
+Automation runs the same steps each time and records the results consistently. Engineers receive faster feedback, can compare failures more easily, and spend less time performing routine pipeline steps.
 
 ### Implemented By These Standards
 
@@ -92,7 +92,7 @@ Automation checks predefined conditions consistently, while people judge whether
 
 ### Reasoning
 
-Automated checks can assess only the rules and inputs they are given. Passing those checks does not establish that a change is right for its users or the system.
+Automated checks are limited to their rules and inputs. Passing those checks does not establish that a change is right for its users or the system.
 
 Human review considers the intended outcome and wider consequences. It can challenge assumptions and weigh trade-offs that automated checks cannot resolve.
 

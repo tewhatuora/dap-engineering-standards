@@ -8,7 +8,7 @@ last_edited: 2026-10-21
 
 ### Summary
 
-Engineers establish a service's data jurisdiction requirements, including every jurisdiction that can compel access, before choosing its infrastructure, provider, or location.
+Before choosing infrastructure, a provider, or a location, engineers establish the service's data jurisdiction requirements and identify every jurisdiction that can compel access.
 
 ### Reasoning
 
@@ -32,7 +32,7 @@ Infrastructure and configuration keep data storage and processing within permitt
 
 ### Reasoning
 
-A provider's default location or configuration may place data storage or processing outside permitted jurisdictions. Explicit controls keep defaults from deciding the location and make jurisdiction limits part of the deployed configuration.
+A provider's default location or configuration may place data storage or processing outside permitted jurisdictions. Explicit controls set the permitted locations in the deployed configuration instead of relying on provider defaults.
 
 Actual locations can differ from the design as configurations, services, and provider behaviour change. Regular checks detect those differences and provide current evidence. The original choice alone does not prove that the service still meets the requirement.
 
@@ -44,13 +44,13 @@ Actual locations can differ from the design as configurations, services, and pro
 
 ### Summary
 
-Cross-border data flows meet the data's jurisdiction requirements, including flows introduced by third parties.
+Cross-border data flows, including those introduced by third parties, meet the data's jurisdiction requirements.
 
 ### Reasoning
 
 Data can cross borders through providers, support services, integrations, or other third parties even when the engineering team has not built a direct transfer. These indirect flows raise the same residency and sovereignty concerns as transfers made by the service itself.
 
-Identifying each flow and limiting it to an approved path makes clear where data goes and who is responsible. This keeps third-party data flows within the service design, so they do not move data outside permitted jurisdictions without being considered.
+Identifying each flow and limiting it to an approved path makes clear where data goes and who is responsible. This brings third-party flows into the service design and prevents unassessed transfers outside permitted jurisdictions.
 
 ### Implemented By These Standards
 

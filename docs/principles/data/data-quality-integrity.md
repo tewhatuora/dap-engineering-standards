@@ -24,7 +24,7 @@ When invalid data cannot be rejected, an explicit flag identifies it for later h
 
 ### Summary
 
-The data store enforces structural and referential integrity where it supports them, and the responsible service enforces them where it does not.
+The data store enforces structural and referential integrity where supported, and the responsible service enforces any constraints the store cannot.
 
 ### Reasoning
 
@@ -82,7 +82,7 @@ Operational, financial, and clinical decisions depend on being able to explain t
 
 The current value alone does not explain the inputs and transformations that produced it. Tracing those changes lets engineers and reviewers reconstruct the history without relying on what the people involved remember or know informally.
 
-This history provides evidence to investigate an incident, challenge a result, or explain a decision after the original change.
+This history provides the evidence needed to investigate incidents, challenge results, or explain decisions later.
 
 ### Implemented By These Standards
 

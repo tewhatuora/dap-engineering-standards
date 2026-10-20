@@ -12,7 +12,7 @@ Checks run as early as they can reliably detect an issue, and local development 
 
 ### Reasoning
 
-Delaying a check increases the time and rework needed to fix an issue. Early feedback reaches engineers while the change is still familiar, before it reaches shared environments or later pipeline stages.
+Delaying a check increases the time and rework needed to fix an issue. Early checks give engineers feedback before a change reaches shared environments or later pipeline stages, while its details are still familiar.
 
 Local checks do not depend on the availability or current state of a shared environment. Engineers can repeat them as they work instead of waiting for access or another deployment.
 
@@ -50,7 +50,7 @@ Clear feedback helps engineers find the cause of a failure. Without it, they spe
 
 ### Summary
 
-Engineers fix or remove feedback that gives inconsistent results rather than repeatedly rerunning, ignoring, or working around it.
+Engineers fix or remove the source of inconsistent feedback rather than repeatedly rerunning checks, ignoring results, or working around the problem.
 
 ### Reasoning
 
@@ -68,11 +68,11 @@ Frequent false or unexplained failures make the check harder to trust. Engineers
 
 ### Summary
 
-Engineering teams run fast pipeline checks that reliably identify problems first and improve slow or unreliable stages.
+Fast pipeline checks that reliably identify problems run first, and engineering teams improve slow or unreliable stages.
 
 ### Reasoning
 
-Fast checks that reliably identify problems can find failures before slower or dependent stages begin. Engineers get a result they can act on sooner, and the pipeline avoids work that cannot succeed.
+Running these checks first catches failures before slower or dependent stages begin. Engineers get results they can act on sooner, and the pipeline avoids running stages that cannot succeed.
 
 A slow stage can delay the whole pipeline, making engineers wait longer and increasing the cost of each run. An unreliable stage leaves engineers unsure of the result and may need reruns before they can trust it.
 

@@ -30,7 +30,7 @@ An integration uses synchronous or asynchronous communication according to its c
 
 The communication mode determines whether a caller waits for an immediate result and whether both participants need to be available at the same time. It also affects when state changes become visible and how services detect and recover from failures.
 
-Choosing the mode during design makes these consequences clear before implementation fixes them in place. Synchronous communication supports work that needs an immediate response. Asynchronous communication reduces the need for participants to be available at the same time when work can proceed independently.
+Choosing the communication mode during design makes these consequences explicit rather than leaving them to emerge from implementation. Synchronous communication suits operations that need an immediate response. Asynchronous communication reduces the need for participants to be available at the same time when operations can proceed independently.
 
 ### Implemented By These Standards
 
@@ -40,7 +40,7 @@ Choosing the mode during design makes these consequences clear before implementa
 
 ### Summary
 
-A service shares data and functionality through an explicit interface whose documentation is easy to find and kept up to date with its behaviour.
+A service shares data and functionality through an explicit interface with documentation that is easy to find and reflects the interface's current behaviour.
 
 ### Reasoning
 
@@ -155,7 +155,7 @@ Contract or integration testing verifies that integration points work as defined
 
 ### Reasoning
 
-An integration can fail even when each system works correctly on its own. The systems may make different assumptions about data, behaviour, or failure handling. Contract testing checks that an implementation follows its published interface, while integration testing checks that the systems work together.
+An integration can fail even when each system works correctly on its own. The systems may make different assumptions about data, behaviour, or failure handling. Contract testing checks that an implementation meets its published contract, while integration testing checks that the systems work together.
 
 Testing a change against actual consumers or contracts that represent them reveals incompatible assumptions before release. Providers then have evidence that the change preserves the behaviour consumers rely on. An implementation working correctly on its own does not prove that the integration still works.
 

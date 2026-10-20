@@ -8,7 +8,7 @@ last_edited: 2026-10-21
 
 ### Summary
 
-Each branch has a clear purpose, an identifiable starting point, and a limited scope of change, and does not represent a deployment environment.
+Each branch has a clear purpose and identifiable starting point, contains a limited set of changes, and does not represent a deployment environment.
 
 ### Reasoning
 

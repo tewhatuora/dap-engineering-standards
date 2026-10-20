@@ -12,7 +12,7 @@ Services and identities receive only the access needed for their defined functio
 
 ### Reasoning
 
-Every permission gives a service or identity more access to systems, actions, or data. Unneeded access lets mistakes, misuse, or compromise affect resources outside the legitimate work.
+Every permission gives a service or identity more access to systems, actions, or data. Unneeded access lets mistakes, misuse, or compromise affect resources outside the service's or identity's intended function.
 
 Denying access by default prevents accidental grants when no one has made an access decision. Limited permissions reduce the immediate impact of a failure. Removing them when the need ends keeps old access from staying available unnoticed.
 
@@ -58,7 +58,7 @@ The most secure configuration applies by default, and reducing that protection r
 
 Settings often stay unchanged, so an insecure default can expose a service or its data without anyone accepting the risk. A secure default protects the system when a setting is overlooked or left unchanged.
 
-An explicit change makes any reduction in protection visible. The person making it decides that the less secure configuration is needed, rather than getting it because no one changed a setting.
+An explicit change makes any reduction in protection visible. The person changing the setting decides that the less secure configuration is needed rather than receiving it by default.
 
 ### Implemented By These Standards
 
@@ -153,7 +153,7 @@ A temporary security exception is explicit, justified, and backed by compensatin
 
 An immediate fix is not always feasible, but the unresolved weakness still exposes the affected systems and data. An informal exception hides that exposure. An indefinite exception lets temporary acceptance become a permanent gap in protection.
 
-Recording the scope, justification, and compensating controls makes the accepted risk clear and shows how it is limited until a fix is made. An expiry limits how long the fix can be deferred and returns the weakness to active work when that period ends.
+Recording the scope, justification, and compensating controls makes the accepted risk clear and shows how it is limited until a fix is made. An expiry limits how long the fix can be deferred; remediation resumes when that period ends.
 
 ### Implemented By These Standards
 
@@ -188,7 +188,7 @@ Secrets stay outside source control and are managed in a dedicated system that l
 
 ### Reasoning
 
-A secret committed to source control stays in repository history even after it is removed from the latest version. Clones, backups, artifacts, or logs containing that history can keep the value and expose it to people and systems that do not need it.
+A secret committed to source control stays in repository history even after it is removed from the latest version. Clones, backups, artifacts, or logs containing that history can retain the secret and expose it to people and systems that do not need it.
 
 A dedicated secrets system limits access to identities that need the value and records secret handling separately from source code. It also supports rotation without changing or rebuilding the code, configuration, and deployment artifacts that reference the secret.
 

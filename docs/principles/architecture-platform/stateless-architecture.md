@@ -12,7 +12,7 @@ Any instance can handle any request without relying on state left by an earlier 
 
 ### Reasoning
 
-When state is held only in an instance's memory or local disk, later related requests need to reach that same instance to be handled correctly. If the instance stops or traffic moves elsewhere, the next instance lacks the state needed to continue.
+When state is held only in an instance's memory or on its local disk, later related requests need to reach that same instance to be handled correctly. If the instance stops or traffic moves elsewhere, the next instance lacks the state needed to continue.
 
 An external store keeps required state available regardless of which instance handles a request, with durability and consistency suited to that state. Traffic can then move between instances, and replacement instances can handle requests without recovering another instance's local history.
 

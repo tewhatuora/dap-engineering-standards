@@ -28,7 +28,7 @@ An abstraction isolates a vendor-specific dependency when the reduction in vendo
 
 ### Reasoning
 
-When vendor-specific behaviour is spread throughout a system, replacing the dependency requires changes to more components. Keeping that integration behind a defined interface limits the work and keeps the vendor's model out of unrelated application logic.
+When vendor-specific behaviour is spread throughout a system, replacing the dependency requires changes to more components. Keeping that integration behind a defined interface limits replacement effort and keeps the vendor's model out of unrelated application logic.
 
 The abstraction adds code, maintenance, and constraints of its own. It may not hide every important difference between providers. It improves portability only when the reduction in vendor-specific changes, migration effort, and replacement risk justifies those costs.
 
@@ -47,7 +47,7 @@ Data held by a vendor or platform can be extracted in a usable, non-proprietary 
 
 ### Reasoning
 
-Replacing a vendor or platform is not practical if its data cannot be extracted or understood outside that system. A proprietary format or lack of an export mechanism may not prevent normal use, but can prevent data from moving when the service needs to leave.
+Replacing a vendor or platform is not practical if the data it holds cannot be extracted or interpreted elsewhere. A proprietary format or lack of an export mechanism may not prevent normal use, but can prevent data from moving when the service needs to migrate.
 
 A usable, non-proprietary export keeps data independent of the current platform. Regular checks show whether exports remain complete and usable, revealing a loss of portability before a migration depends on them.
 

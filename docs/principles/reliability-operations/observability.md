@@ -12,9 +12,9 @@ Engineers design and build observability alongside a service, before a productio
 
 ### Reasoning
 
-Designing instrumentation requires an understanding of the service's behaviour, decisions, and dependencies. Building it alongside the service makes the evidence available at release, while the engineers building it still have that context.
+Designing instrumentation requires an understanding of the service's behaviour, decisions, and dependencies. Developing instrumentation alongside the service makes the necessary telemetry available at release, while engineers still have the design context.
 
-Adding observability after an incident cannot provide the evidence that was missing during it. Responders have to work with an incomplete picture of service behaviour when accurate information matters most.
+Observability added after an incident cannot supply the evidence that responders needed during the incident. Responders have to rely on an incomplete picture of service behaviour when accurate information matters most.
 
 ### Implemented By These Standards
 
@@ -85,7 +85,7 @@ Telemetry can be correlated across services so engineers can trace a transaction
 
 A transaction often crosses several services through synchronous calls and asynchronous messages. Without shared context, each service records only its own part, and responders cannot reliably tell which events belong to the same transaction.
 
-Passing correlation information between services lets responders link their signals into an end-to-end account. This shows where time was spent, where the transaction failed, and which services or dependencies contributed to the outcome.
+Passing correlation information between services lets responders reconstruct the full transaction from their telemetry. This shows where time was spent, where the transaction failed, and which services or dependencies contributed to the outcome.
 
 ### Implemented By These Standards
 
@@ -116,7 +116,7 @@ Some sensitive data may be needed to investigate a particular type of problem. P
 
 ### Summary
 
-Telemetry reflects real impact and can inform a decision, and signals that support no action are not collected or used for alerts.
+Telemetry reflects real impact and can inform a decision; signals that support no action are not collected or used for alerts.
 
 ### Reasoning
 

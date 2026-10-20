@@ -14,7 +14,7 @@ A workload's runtime model and deployment location are explicit design decisions
 
 Runtime and deployment choices determine a workload's capabilities, constraints, operating model, and provider dependencies. Once the implementation depends on those choices, moving the workload can mean changing its design, delivery, and support arrangements.
 
-Choosing during design lets engineers check that the runtime and location meet the workload's functional and operational needs before the implementation depends on them. A choice that suits one workload may not suit another. Each workload's requirements still need to be considered when using a shared default.
+Choosing the runtime and deployment location during design lets engineers check that both meet the workload's functional and operational needs before the implementation depends on those choices. A choice that suits one workload may not suit another. Each workload's requirements still need to be considered when using a shared default.
 
 ### Implemented By These Standards
 

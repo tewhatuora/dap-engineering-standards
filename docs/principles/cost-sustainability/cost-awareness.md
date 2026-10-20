@@ -14,7 +14,7 @@ Engineers compare viable design and technology options by lifecycle cost and del
 
 Design and technology decisions set development, operation, support, and replacement costs that can be hard to change once a service is built. Comparing these costs before committing shows whether a more expensive option delivers enough value to justify its ongoing cost.
 
-An option that costs less initially may cost more to operate or replace. Paying more initially may reduce work elsewhere. Considering the full lifecycle gives cost the same attention as reliability, performance, and security, rather than letting the purchase or build cost alone decide the choice.
+An option that costs less initially may cost more to operate or replace. Paying more initially may reduce work elsewhere. Considering the full lifecycle gives cost the same attention as reliability, performance, and security, rather than making purchase or build cost the only deciding factor.
 
 Building a capability that already exists adds development and maintenance work without necessarily adding distinct value. Comparing existing and custom solutions on the same basis shows whether custom development is justified.
 
@@ -34,7 +34,7 @@ The capacity, resilience, and redundancy a service needs depend on its demand, c
 
 Assessing spending against demand, value, and required service outcomes keeps cost reduction from becoming a goal on its own. Necessary protection stays in place, while excess capacity, idle resources, and retained storage are visible as costs that no longer add value.
 
-Usage-based engineering tools add variable costs because each request or operation may have a price. Matching the tool's capability and use to the task keeps higher-cost options available where they add needed value, without paying that cost for every activity.
+Usage-based engineering tools may charge per request or operation. Matching the tool's capability and use to the task keeps higher-cost options available where their additional value is needed, without paying that cost for every activity.
 
 ### Implemented By These Standards
 

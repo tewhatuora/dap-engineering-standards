@@ -24,13 +24,13 @@ Keeping transactions within each service lets services fail, recover, and evolve
 
 ### Summary
 
-State shared across services reaches a consistent state through an explicit eventual-consistency pattern rather than a distributed transaction.
+State shared across services converges through an explicit eventual-consistency pattern rather than a distributed transaction.
 
 ### Reasoning
 
-An atomic transaction across independently owned data stores makes services depend on each other's availability and transaction models. A failure or delay in one service can then prevent the others from completing their own work.
+An atomic transaction across independently owned data stores makes services depend on each other's availability and transaction models. A failure or delay in one service can then prevent the others from completing their own operations.
 
-Eventual consistency lets each service commit its own state while coordinating changes with other services to achieve the overall outcome. The chosen pattern defines how services detect incomplete work, retry it, or otherwise bring it to a consistent state.
+Eventual consistency lets each service commit its own state while coordinating changes with other services to achieve the overall outcome. The chosen pattern defines how services detect and retry incomplete operations or otherwise bring shared state into agreement.
 
 ### Implemented By These Standards
 
@@ -61,9 +61,9 @@ A workflow spanning multiple services has an explicit coordination model based o
 
 ### Reasoning
 
-When a workflow grows out of calls and events without an explicit design, it is unclear how work moves forward or who handles incomplete work. Failure handling becomes hard to understand because responsibility is spread across interactions that were not designed as one workflow.
+When calls and events coordinate a workflow without an explicit design, it is unclear how the workflow progresses or who handles incomplete steps. Failure handling becomes hard to understand because responsibility is spread across interactions that were not designed as one workflow.
 
-Choosing choreography or orchestration makes the flow of work and responsibility for recovery part of the design. Engineers can then see how progress is tracked, which component makes each decision, and what happens when a step does not complete.
+Choosing choreography or orchestration defines how workflow steps progress and who is responsible for recovery. Engineers can then see how progress is tracked, which component makes each decision, and what happens when a step does not complete.
 
 ### Implemented By These Standards
 

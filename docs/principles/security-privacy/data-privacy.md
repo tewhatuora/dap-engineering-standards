@@ -52,7 +52,7 @@ Access to personal or health data is limited to what is needed for a legitimate 
 
 Every permission creates another way to view, change, copy, or disclose personal or health data. Broad permissions expose more data and allow more actions when someone makes a mistake or an account or service is compromised.
 
-Permissions left in place after their legitimate purpose ends give access that current work does not need. Limiting access to the required data and actions, then removing it when the need ends, reduces both the opportunity for misuse and its impact.
+Permissions left in place after their legitimate purpose ends allow access that no current task needs. Limiting access to the required data and actions, then removing it when the need ends, reduces both the opportunity for misuse and its impact.
 
 ### Implemented By These Standards
 
@@ -66,11 +66,11 @@ Permissions left in place after their legitimate purpose ends give access that c
 
 ### Summary
 
-Synthetic or de-identified data is preferred when work does not require identifiable personal or health data.
+Synthetic or de-identified data is preferred when a task does not require identifiable personal or health data.
 
 ### Reasoning
 
-Many engineering and analysis tasks need the structure, distribution, or behaviour of data without needing to identify the people it represents. Suitable synthetic or de-identified data can keep the characteristics needed for the work while reducing the harm of disclosure.
+Many engineering and analysis tasks need the structure, distribution, or behaviour of data without needing to identify the people it represents. Suitable synthetic or de-identified data can keep the characteristics needed for those tasks while reducing the harm of disclosure.
 
 Using a substitute also reduces how many systems, tools, and people handle identifiable data. Identifiable data then stays limited to activities that genuinely need to identify people.
 
@@ -88,7 +88,7 @@ Personal or health data is kept only as long as needed, then deleted automatical
 
 ### Reasoning
 
-Keeping personal or health data after its purpose ends leaves it exposed to disclosure or misuse for longer without adding value. A defined retention period limits that exposure. Automatic deletion removes the need for someone to remember a manual task.
+Keeping personal or health data after its purpose ends leaves it exposed to disclosure or misuse for longer without adding value. A defined retention period limits that exposure. Automatic deletion avoids relying on someone to remember to delete the data.
 
 Deleting data from primary storage is incomplete if recoverable copies remain in backups or archives. Deleting every retained copy prevents data from staying available after the system appears to have removed it.
 

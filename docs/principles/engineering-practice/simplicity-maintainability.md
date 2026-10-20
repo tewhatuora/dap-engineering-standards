@@ -63,11 +63,11 @@ A stable interface defines the behaviour that other components rely on. The impl
 
 ### Summary
 
-Engineers remove code, features, configuration, and dependencies once their final use and any required transition have ended.
+Engineers remove code, features, configuration, and dependencies once they are no longer used and any required transition is complete.
 
 ### Reasoning
 
-Unused code, features, configuration, and dependencies still take effort to understand, test, maintain, and secure. Leaving retired functionality beside its replacement makes it harder to tell which implementation to use. Later changes may then affect or depend on retired functionality. Once the final use and transition have ended, keeping this material adds cost and risk without providing value.
+Unused code, features, configuration, and dependencies still take effort to understand, test, maintain, and secure. That effort adds no value once they are no longer needed and any required transition is complete. Leaving retired functionality beside its replacement makes it harder to tell which implementation to use. Later changes may then affect or depend on retired functionality.
 
 ### Implemented By These Standards
 
@@ -88,7 +88,7 @@ Engineers identify unnecessary complexity and technical debt during code changes
 
 Complexity is easier to address before other code depends on it. Code review identifies unnecessary complexity in a change, while static analysis reveals increasing complexity and duplication over time.
 
-As technical debt grows and more code depends on it, routine changes become more costly and risky. Tracking debt keeps it visible so engineers can address it during related work rather than put it off indefinitely.
+As technical debt grows and more code depends on it, routine changes become more costly and risky. Tracking debt keeps it visible so engineers can address it alongside related code changes rather than defer it indefinitely.
 
 ### Implemented By These Standards
 

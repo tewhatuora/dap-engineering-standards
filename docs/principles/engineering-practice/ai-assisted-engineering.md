@@ -12,9 +12,9 @@ The engineer directing AI-assisted work remains fully accountable for it, and th
 
 ### Reasoning
 
-When engineers use AI output in a system, they take on its defects, security risks, and maintenance needs. The engineer directing the work has the context and authority to decide whether it is fit for use and remains accountable for that decision.
+Engineers who adopt AI output are responsible for its defects, security risks, and maintenance needs. The engineer directing the AI has the context and authority to decide whether the output is fit for use and remains accountable for that decision.
 
-Users experience the system's behaviour regardless of how its code or design was produced. Using AI does not lower the expected quality, safety, or maintainability of the finished work.
+Users experience the system's behaviour regardless of how its code or design was produced. Using AI does not lower the expected quality, safety, or maintainability of the resulting code or design.
 
 ### Implemented By These Standards
 
@@ -32,7 +32,7 @@ Engineers adopt AI-assisted output only when they can explain, justify, and main
 
 AI output can contain assumptions and design choices that the generated code or explanation does not make clear. Engineers need to identify and justify those choices to assess the behaviour reliably, maintain the code or design, and diagnose failures.
 
-Other engineers need to understand those decisions to review and maintain the work. Otherwise, each later change requires them to rediscover decisions that the implementation and its context should make clear.
+Other engineers need to understand those decisions to review and maintain the code or design. Otherwise, each later change requires them to rediscover decisions that the implementation and its context should make clear.
 
 ### Implemented By These Standards
 
@@ -43,11 +43,11 @@ Other engineers need to understand those decisions to review and maintain the wo
 
 ### Summary
 
-Review of AI-assisted work becomes more thorough as its potential impact on security, patient safety, or regulatory compliance increases, and domain experts review risks that need their expertise.
+AI-assisted output receives more thorough review as its potential impact on security, patient safety, or regulatory compliance increases, and domain experts assess risks that need their expertise.
 
 ### Reasoning
 
-AI output can look convincing even when it contains errors that only checks against security controls, patient-safety functions, or regulatory requirements reveal. General engineering review may miss risks that need specialised security, clinical, or regulatory knowledge.
+AI output can look convincing while containing errors that become clear only when checked against security controls, patient-safety functions, or regulatory requirements. General engineering review may miss risks that need specialised security, clinical, or regulatory knowledge.
 
 Domain experts bring knowledge that the code alone does not provide. Their review reduces the chance of missing a security flaw, patient-safety issue, or regulatory breach.
 
@@ -108,7 +108,7 @@ The record also helps explain a decision when an assumption is later challenged 
 
 ### Summary
 
-AI tools used for engineering protect submitted information through their provider terms and limit what can be submitted through controls.
+AI tools used for engineering have provider terms that protect submitted information and controls that limit what can be submitted.
 
 ### Reasoning
 

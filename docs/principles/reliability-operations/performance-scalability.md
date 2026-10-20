@@ -8,7 +8,7 @@ last_edited: 2026-10-21
 
 ### Summary
 
-Engineers make explicit architecture decisions about service performance and scaling under load during design.
+During design, engineers make explicit architectural decisions about service performance and scaling under load.
 
 ### Reasoning
 
@@ -61,13 +61,13 @@ Automatic scaling responds to sustained changes in demand without waiting for so
 
 ### Summary
 
-Engineers identify components that cannot scale independently during design and either address them or accept them as limitations with known bounds.
+During design, engineers identify components that cannot scale independently and either resolve the constraints or accept their known limits.
 
 ### Reasoning
 
 A component that cannot scale independently can limit the whole service, even when other components have spare capacity. Shared resources and contention can create the same limit when growing demand has to pass through one constrained part of the system.
 
-Finding the constraint during design lets engineers remove it, design around it, or accept it with a known bound. Expected growth then does not have to reveal the limit through poor performance or a production failure.
+Identifying constraints during design lets engineers remove them, design around them, or accept known limits before growth causes poor performance or a production failure.
 
 ### Implemented By These Standards
 
@@ -81,9 +81,9 @@ Data access avoids unnecessary work as demand grows, and every cache has a defin
 
 ### Reasoning
 
-Scanning, transferring, or processing more data than a request needs takes more time and capacity as demand and data volume grow. Limiting the work per request and avoiding repeated access keeps that unnecessary cost from growing with the service.
+Scanning, transferring, or processing more data than a request needs takes more time and capacity as demand and data volume grow. Limiting how much data each request handles and avoiding repeated access keeps unnecessary costs from growing with the service.
 
-A cache reduces repeated work by keeping a result after the request that produced it. The result can become outdated when the source changes. A defined approach to invalidation or expiry determines when to stop trusting the cached value and limits how long stale data can be served.
+A cache avoids repeated data access or processing by keeping results after the requests that produced them. Those results can become outdated when the source changes. A defined approach to invalidation or expiry determines when to stop trusting cached values and limits how long stale data can be served.
 
 ### Implemented By These Standards
 

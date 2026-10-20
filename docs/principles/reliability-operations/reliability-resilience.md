@@ -33,9 +33,9 @@ Dependency calls use timeouts and limited retries, and failures are isolated bef
 
 ### Reasoning
 
-Waiting indefinitely for an unresponsive dependency keeps using resources that other work needs. A timeout releases those resources. Limited retries with backoff give a temporary failure time to recover without continually adding pressure to the struggling dependency.
+Waiting indefinitely for an unresponsive dependency holds resources needed by other operations. A timeout releases those resources. Limited retries with backoff give a dependency time to recover from a temporary failure without continually adding pressure.
 
-Without isolation, waiting work and repeated calls can exhaust connected services and spread the failure beyond the original dependency. Isolating the affected interaction keeps unrelated functionality working and gives the dependency time to recover.
+Without isolation, pending operations and repeated calls can exhaust the capacity of connected services and spread the failure beyond the original dependency. Isolating the affected interaction keeps unrelated functionality working and gives the dependency time to recover.
 
 ### Implemented By These Standards
 
@@ -52,9 +52,9 @@ Services protect their capacity from excess demand using demand controls, priori
 
 ### Reasoning
 
-When demand exceeds what a service can process, queued requests and resource use can grow until the service stops responding. Limiting or shedding work keeps enough capacity available to prevent overload from becoming a full outage.
+When demand exceeds what a service can process, queued requests and resource use can grow until the service stops responding. Limiting or shedding load keeps enough capacity available to prevent overload from becoming a full outage.
 
-Not all work has the same importance, and one consumer can use capacity that others need. Prioritisation and resource isolation keep critical functionality available and stop lower-priority or disproportionate demand from using the service's entire capacity.
+Some operations are more important than others, and one consumer can use capacity that others need. Prioritisation and resource isolation keep critical functionality available and stop lower-priority or disproportionate demand from using the service's entire capacity.
 
 ### Implemented By These Standards
 
@@ -72,7 +72,7 @@ During failure or overload, services preserve the functionality they can continu
 
 ### Reasoning
 
-A failure or overload may affect one capability while others can still work. Separating non-critical functionality lets the service keep those other capabilities available rather than turning a partial failure into a complete outage.
+A failure or overload may affect one capability without disabling the rest of the service. Separating non-critical functionality keeps the remaining capabilities available rather than turning a partial failure into a complete outage.
 
 Reduced functionality gives users a predictable result during recovery and limits how many workflows the failure disrupts. This works only if the service can safely support that reduced functionality under the failure or overload conditions.
 
@@ -84,13 +84,13 @@ Reduced functionality gives users a predictable result during recovery and limit
 
 ### Summary
 
-A terminating service instance finishes work in progress and shuts down within a bounded period.
+A terminating service instance finishes operations already in progress and shuts down within a bounded period.
 
 ### Reasoning
 
-Service instances stop during routine deployment, scaling, and recovery as well as during failure. Stopping an instance mid-task can leave requests incomplete, cause duplicate side effects on retry, or leave resources without an orderly release.
+Service instances stop during routine deployment, scaling, and recovery as well as during failure. Stopping an instance mid-task can leave requests incomplete, cause duplicate side effects on retry, or leave resources unreleased.
 
-Letting work in progress finish reduces these inconsistent outcomes while the service stops accepting new work. A bounded shutdown period gives that work time to finish without letting one stalled task block termination indefinitely.
+Allowing active operations to finish while the instance stops accepting new ones reduces these inconsistent outcomes. A bounded shutdown period gives active operations time to finish without letting one stalled task block termination indefinitely.
 
 ### Implemented By These Standards
 

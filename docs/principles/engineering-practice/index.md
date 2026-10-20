@@ -30,7 +30,7 @@ Repository branches have a limited scope, are traceable, and do not represent de
 
 ### [Automation](automation.md)
 
-Maintained automation handles repeatable work, while people make decisions that need human judgement and review.
+Automation handles repeatable tasks through maintained code, while people make decisions that need judgement and review.
 
 ### [Fast Feedback](fast-feedback.md)
 

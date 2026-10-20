@@ -30,7 +30,7 @@ By default, a service can be deployed and released independently of other servic
 
 When services have to be deployed or released together, they can change only when all participants are ready. Recovery is also harder because restoring one service may require coordinated changes to others.
 
-Independent delivery lets each service change, be validated, be released, and recover according to its own needs while preserving its published contracts. Where coordination is unavoidable, an explicit exception makes the dependency and recovery approach clear rather than allowing coordinated changes to become routine.
+Independent delivery lets engineers change, validate, release, and recover each service according to its needs while preserving its published contracts. Where coordination is unavoidable, an explicit exception makes the dependency and recovery approach clear rather than allowing coordinated changes to become routine.
 
 ### Implemented By These Standards
 

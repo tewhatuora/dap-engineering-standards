@@ -47,11 +47,11 @@ Comparable information about energy sources and operational emissions lets engin
 
 ### Summary
 
-Data storage is limited to the retention period, copies, and performance needed for its purpose and access pattern.
+Data storage matches the retention period, number of copies, and performance needed for the data's purpose and access pattern.
 
 ### Reasoning
 
-Data kept after its purpose ends still uses storage and resources to secure, back up, and operate it. Defined points for deletion or archival limit that resource use. Limiting copies avoids repeated cost and environmental impact where extra copies add no distinct value.
+Data kept after its purpose ends still needs storage, protection, backups, and operational support. Defined points for deletion or archival limit that resource use. Limiting copies avoids repeated cost and environmental impact where extra copies add no distinct value.
 
 Storage designed for frequent or rapid access can use more resources than infrequently used data needs. Moving data to a tier that matches its access pattern keeps it usable for its purpose without spending resources on unneeded performance.
 

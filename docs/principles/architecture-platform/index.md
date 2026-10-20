@@ -6,7 +6,7 @@ last_edited: 2026-10-21
 
 ## Overview
 
-Architecture and platform decisions set system boundaries, dependencies, and technology commitments. These choices shape how systems integrate and whether they can change independently. These principles base those choices on domain and workload needs while keeping future options open.
+Architecture and platform decisions set system boundaries, dependencies, and technology commitments. These choices shape how systems integrate and whether they can change independently. These principles guide choices that meet domain and workload needs while keeping future options open.
 
 Choose a principle below to read its full reasoning.
 
