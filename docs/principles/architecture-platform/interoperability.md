@@ -79,7 +79,7 @@ Open, widely adopted standards are preferred wherever they meet a service's need
 
 ### Reasoning
 
-Open, widely adopted protocols, data formats, and interface patterns give providers and consumers a shared basis for integration. Existing knowledge and compatible implementations reduce the work needed to interpret and support each new connection.
+Open, widely adopted protocols, data formats, and interface patterns give providers and consumers a shared basis for integration. Existing knowledge and compatible implementations reduce the effort needed to interpret and support each new connection.
 
 Proprietary or organisation-specific alternatives require consumers to learn and maintain separate conventions and can limit future integration choices. They remain justified when no open standard supports the required behaviour. An open standard that cannot meet the service's needs does not provide a suitable contract.
 
