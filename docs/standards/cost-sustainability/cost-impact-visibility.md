@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Cost & Impact Visibility
+# Cost & Impact Visibility {: .standard-references }
 
 ## Cost Attribution
 

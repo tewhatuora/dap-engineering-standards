@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Distributed Tracing
+# Distributed Tracing {: .standard-references }
 
 ## Trace Context
 

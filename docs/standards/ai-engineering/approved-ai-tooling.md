@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Approved AI Tooling
+# Approved AI Tooling {: .standard-references }
 
 ## Approved Tools
 

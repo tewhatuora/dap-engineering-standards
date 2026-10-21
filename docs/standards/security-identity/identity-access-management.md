@@ -2,7 +2,7 @@
 last_edited: 2026-09-22
 ---
 
-# Identity & Access Management
+# Identity & Access Management {: .standard-references }
 
 ## Individual Access
 

@@ -4,7 +4,7 @@ last_reviewed: 2026-09-10
 review_cycle: 12 months
 ---
 
-# Outcome Driven Assurance
+# Outcome Driven Assurance {: .standard-references }
 
 ## Clear Test Outcomes
 

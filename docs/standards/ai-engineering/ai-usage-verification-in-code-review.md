@@ -2,7 +2,7 @@
 last_edited: 2026-09-22
 ---
 
-# AI Usage & Verification in Code Review
+# AI Usage & Verification in Code Review {: .standard-references }
 
 ## Pre-Submission Verification
 

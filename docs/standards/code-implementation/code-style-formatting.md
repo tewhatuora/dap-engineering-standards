@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Code Style & Formatting
+# Code Style & Formatting {: .standard-references }
 
 ## Style Guide
 

@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# API Design
+# API Design {: .standard-references }
 
 > Developers and vendors delivering APIs for the organisation should also consult the [Health New Zealand API Standards](https://apistandards.digital.health.nz) for protocol-specific design and implementation guidance.
 

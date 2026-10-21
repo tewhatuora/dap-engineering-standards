@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Feature Flagging
+# Feature Flagging {: .standard-references }
 
 ## Flag Purpose & Scope
 

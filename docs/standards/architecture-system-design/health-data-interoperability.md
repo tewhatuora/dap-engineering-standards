@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Health Data Interoperability
+# Health Data Interoperability {: .standard-references }
 
 > Developers and vendors implementing health data exchange should also consult the [Health New Zealand API Standards](https://apistandards.digital.health.nz) for protocol-specific design and implementation guidance.
 

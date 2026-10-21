@@ -33,7 +33,7 @@ Internal governance and process are out of scope, as defined in [`CONTRIBUTING.m
 A standards file sits under `docs/standards/<category>/`. A file is a topic and may contain several standard groupings. Keep each grouping separate within the file:
 
 ```markdown
-# <Topic Name>
+# <Topic Name> {: .standard-references }
 
 ## <Standard Grouping Name>
 

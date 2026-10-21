@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Resource Efficiency & Optimisation
+# Resource Efficiency & Optimisation {: .standard-references }
 
 ## Resource Sizing
 

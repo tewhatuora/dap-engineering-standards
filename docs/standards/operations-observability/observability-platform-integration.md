@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Observability Platform Integration
+# Observability Platform Integration {: .standard-references }
 
 ## Telemetry Ingestion
 

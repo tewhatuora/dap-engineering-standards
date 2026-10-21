@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Rollback Strategy
+# Rollback Strategy {: .standard-references }
 
 ## Triggers
 

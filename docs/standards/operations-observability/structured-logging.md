@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Structured Logging
+# Structured Logging {: .standard-references }
 
 ## Log Format
 

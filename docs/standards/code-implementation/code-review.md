@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Code Review
+# Code Review {: .standard-references }
 
 ## Reviewable Changes
 

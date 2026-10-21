@@ -56,8 +56,11 @@ Each file covers a topic and may contain more than one principle or standard gro
 
 ### Standard Format
 
+- Standard obligations **MUST** use the [Documentation Terminology](README.md#documentation-terminology).
+- Omit `Exceptions` and `Related Standards` when they do not add relevant information.
+
 ```markdown
-# <Topic Name>
+# <Topic Name> {: .standard-references }
 
 ## <Standard Grouping Name>
 
@@ -67,7 +70,7 @@ Each file covers a topic and may contain more than one principle or standard gro
 
 ### Standards
 
-1. `std-<category>-<grouping>-<nn>` <One verifiable obligation.>
+1. <One verifiable obligation using an RFC 2119 keyword.> `std-<category>-<grouping>-01`
 
 ### Exceptions
 
@@ -81,10 +84,6 @@ Each file covers a topic and may contain more than one principle or standard gro
 
 - [<Principle>](<relative-path>)
 ```
-
-`Exceptions` and `Related Standards` are optional. Omit them when they do not add relevant information.
-
-Standard obligations **MUST** use the language defined in the `README`'s [Documentation Terminology](README.md#documentation-terminology) section.
 
 ## AGENTS Files
 

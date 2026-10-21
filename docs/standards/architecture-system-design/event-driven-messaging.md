@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Event-Driven Messaging
+# Event-Driven Messaging {: .standard-references }
 
 ## Communication Style
 

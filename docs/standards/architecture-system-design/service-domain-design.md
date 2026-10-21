@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Service & Domain Design
+# Service & Domain Design {: .standard-references }
 
 ## Domain Boundaries
 

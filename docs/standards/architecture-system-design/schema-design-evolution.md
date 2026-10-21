@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Schema Design & Evolution
+# Schema Design & Evolution {: .standard-references }
 
 ## Schema Ownership
 

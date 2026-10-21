@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Metrics, Monitoring & Alerting
+# Metrics, Monitoring & Alerting {: .standard-references }
 
 ## Metric Types
 

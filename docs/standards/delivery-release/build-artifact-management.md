@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Build & Artifact Management
+# Build & Artifact Management {: .standard-references }
 
 ## Automated Builds
 

@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Prompt Data Handling
+# Prompt Data Handling {: .standard-references }
 
 ## Prohibited & Restricted Data
 

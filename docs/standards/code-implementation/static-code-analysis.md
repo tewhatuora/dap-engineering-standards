@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Static Code Analysis
+# Static Code Analysis {: .standard-references }
 
 ## Analysis Coverage
 

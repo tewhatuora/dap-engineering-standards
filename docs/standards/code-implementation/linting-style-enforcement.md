@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Linting & Style Enforcement
+# Linting & Style Enforcement {: .standard-references }
 
 ## Linting Coverage
 

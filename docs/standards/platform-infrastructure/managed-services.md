@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Managed Services
+# Managed Services {: .standard-references }
 
 ## Service Quotas
 
