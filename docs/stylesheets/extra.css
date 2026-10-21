@@ -190,6 +190,10 @@
   padding-right: 0;
 }
 
+.md-typeset details.section-disclosure:focus-within {
+  box-shadow: none;
+}
+
 /* The first disclosure also prevents the H1 and H2 margins from collapsing. */
 .md-typeset > h1 + .section-disclosure {
   margin-top: -0.96rem;
@@ -238,4 +242,52 @@
 
 .section-disclosure__content > :last-child {
   margin-bottom: 0;
+}
+
+.md-typeset:has(> h1.standard-references) ol > li {
+  margin-bottom: 1em;
+}
+
+.md-typeset .standard-reference__tag:not([hidden]) {
+  background: none;
+  color: var(--md-default-fg-color--light);
+  display: block;
+  font-size: 0.85em;
+  margin-bottom: 0.2em;
+  padding: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.standard-reference__toggle {
+  align-items: center;
+  color: var(--md-typeset-a-color);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  height: 1.75em;
+  justify-content: center;
+  padding: 0.25em;
+  vertical-align: middle;
+  width: 1.75em;
+}
+
+.standard-reference__toggle svg {
+  fill: none;
+  height: 1em;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  width: 1em;
+}
+
+.standard-reference__toggle:hover,
+.standard-reference__toggle[aria-expanded="true"] {
+  color: var(--md-accent-fg-color);
+}
+
+.standard-reference__toggle:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
 }

@@ -2,7 +2,7 @@
 last_edited: 2026-09-22
 ---
 
-# Quality Roles & Responsibilities
+# Quality Roles & Responsibilities {: .standard-references }
 
 ## Defined Quality Roles and Responsibilities
 

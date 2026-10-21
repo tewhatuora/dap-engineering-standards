@@ -2,7 +2,7 @@
 last_edited: 2026-09-09
 ---
 
-# Local Development Environment
+# Local Development Environment {: .standard-references }
 
 ## Local Build and Execution
 

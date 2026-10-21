@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Software Supply Chain Security
+# Software Supply Chain Security {: .standard-references }
 
 ## Namespace Isolation
 

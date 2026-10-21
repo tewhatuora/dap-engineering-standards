@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Telemetry Instrumentation
+# Telemetry Instrumentation {: .standard-references }
 
 ## Planning & Delivery
 

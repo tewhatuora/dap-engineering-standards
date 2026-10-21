@@ -1,8 +1,8 @@
 ---
-last_edited: 2026-09-22
+last_edited: 2026-10-21
 ---
 
-# AI-Assisted Development
+# AI-Assisted Development {: .standard-references }
 
 ## Developer Accountability
 

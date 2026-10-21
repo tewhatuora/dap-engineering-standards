@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Release Strategy
+# Release Strategy {: .standard-references }
 
 ## Release & Deployment
 

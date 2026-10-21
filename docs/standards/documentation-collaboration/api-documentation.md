@@ -2,7 +2,7 @@
 last_edited: 2026-09-09
 ---
 
-# API Documentation
+# API Documentation {: .standard-references }
 
 ## Summary
 

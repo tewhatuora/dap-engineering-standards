@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Database Migration Tooling
+# Database Migration Tooling {: .standard-references }
 
 ## Migration Tooling
 

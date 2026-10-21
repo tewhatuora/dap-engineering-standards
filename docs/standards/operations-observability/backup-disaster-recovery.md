@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Backup & Disaster Recovery
+# Backup & Disaster Recovery {: .standard-references }
 
 ## Recovery Strategy
 

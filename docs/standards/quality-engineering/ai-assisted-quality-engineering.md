@@ -2,7 +2,7 @@
 last_edited: 2026-09-22
 ---
 
-# AI-Assisted Quality Engineering
+# AI-Assisted Quality Engineering {: .standard-references }
 
 ## QA Scope for AI Use
 

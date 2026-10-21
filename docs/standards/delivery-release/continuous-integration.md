@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Continuous Integration
+# Continuous Integration {: .standard-references }
 
 ## Pipeline as Code
 

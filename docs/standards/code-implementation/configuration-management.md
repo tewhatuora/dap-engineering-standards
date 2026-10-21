@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Configuration Management
+# Configuration Management {: .standard-references }
 
 ## Externalised Configuration
 

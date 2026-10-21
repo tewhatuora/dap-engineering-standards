@@ -61,8 +61,9 @@ extra_css:
 extra_javascript:
   - assets/javascripts/mermaid-glightbox.js
   - assets/javascripts/section-disclosures.js
+  - assets/javascripts/standard-references.js
 markdown_extensions:
-  # - attr_list
+  - attr_list
   - toc:
       toc_depth: "1-2"   # include H1 and H2 only, hide H3+
   - pymdownx.superfences:

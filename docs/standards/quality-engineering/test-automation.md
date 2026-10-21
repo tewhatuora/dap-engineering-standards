@@ -2,7 +2,7 @@
 last_edited: 2026-09-22
 ---
 
-# Test Automation
+# Test Automation {: .standard-references }
 
 ## Investment in Automation
 

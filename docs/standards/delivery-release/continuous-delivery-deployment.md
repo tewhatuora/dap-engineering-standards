@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Continuous Delivery & Deployment
+# Continuous Delivery & Deployment {: .standard-references }
 
 ## Deployment Pipeline
 

@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Version Control
+# Version Control {: .standard-references }
 
 ## Authoritative Repository
 

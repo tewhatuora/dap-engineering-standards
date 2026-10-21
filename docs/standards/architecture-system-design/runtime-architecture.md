@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Runtime Architecture
+# Runtime Architecture {: .standard-references }
 
 ## Runtime Selection
 

@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Infrastructure as Code
+# Infrastructure as Code {: .standard-references }
 
 ## Ownership & Repositories
 

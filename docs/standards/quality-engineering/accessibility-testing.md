@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Accessibility Testing
+# Accessibility Testing {: .standard-references }
 
 ## Interface Scope
 

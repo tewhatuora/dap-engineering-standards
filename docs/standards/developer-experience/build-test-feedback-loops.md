@@ -2,7 +2,7 @@
 last_edited: 2026-09-09
 ---
 
-# Build & Test Feedback Loops
+# Build & Test Feedback Loops {: .standard-references }
 
 ## Summary
 

@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# AI-Assisted Incident Investigation
+# AI-Assisted Incident Investigation {: .standard-references }
 
 ## Approved Tooling
 

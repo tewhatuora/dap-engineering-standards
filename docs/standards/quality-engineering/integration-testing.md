@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Integration Testing
+# Integration Testing {: .standard-references }
 
 ## Integration Test Scope
 

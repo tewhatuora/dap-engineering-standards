@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# Data Access & Transaction Management
+# Data Access & Transaction Management {: .standard-references }
 
 ## Data Access Layer
 

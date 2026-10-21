@@ -2,7 +2,7 @@
 last_edited: 2026-09-14
 ---
 
-# AI Tooling Cost Management
+# AI Tooling Cost Management {: .standard-references }
 
 > Developers using AI tools should also consult the [Token Optimization Best Practises - Visual Guide](https://ashy-dune-0b4215a0f.7.azurestaticapps.net/index.html#) for practical guidance on reducing token usage and its associated cost.
 

@@ -2,7 +2,7 @@
 last_edited: 2026-10-20
 ---
 
-# Dependency & Runtime Management
+# Dependency & Runtime Management {: .standard-references }
 
 ## Dependency Selection
 
