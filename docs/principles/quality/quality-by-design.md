@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-21
+last_edited: 2026-10-23
 ---
 
 # Quality by Design
@@ -54,7 +54,6 @@ QA uses testing, findings, trends, and operational evidence to evaluate how effe
 
 ### Implemented By These Standards
 
-- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 - [Health Data Interoperability](../../standards/architecture-system-design/health-data-interoperability.md)

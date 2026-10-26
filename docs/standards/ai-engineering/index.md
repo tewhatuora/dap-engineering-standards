@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-20
+last_edited: 2026-10-23
 ---
 
 # AI Engineering
@@ -23,10 +23,6 @@ Information submitted to an AI tool remains within its authorised disclosure bou
 ### [AI-Assisted Development](ai-assisted-development.md)
 
 AI-assisted development remains under developer control and is subject to the same engineering, safety, security, and legal constraints as other work.
-
-### [AI Usage & Verification in Code Review](ai-usage-verification-in-code-review.md)
-
-AI-assisted changes remain transparent, independently verified, and subject to accountable reviewer judgement.
 
 ### [AI-Assisted Incident Investigation](ai-assisted-incident-investigation.md)
 

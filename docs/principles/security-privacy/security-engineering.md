@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-21
+last_edited: 2026-10-27
 ---
 
 # Security Engineering
@@ -122,7 +122,6 @@ Automated analysis can consistently find known patterns in each change. Informed
 ### Implemented By These Standards
 
 - [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
-- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
 - [Data Access & Transaction Management](../../standards/code-implementation/data-access-transaction-management.md)

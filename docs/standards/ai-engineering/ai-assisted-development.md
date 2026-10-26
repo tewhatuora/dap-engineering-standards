@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-21
+last_edited: 2026-10-27
 ---
 
 # AI-Assisted Development {: .standard-references }
@@ -8,57 +8,69 @@ last_edited: 2026-10-21
 
 ### Summary
 
-AI assistance does not transfer or reduce the submitting developer's accountability for the code.
+Developers remain accountable for AI-assisted code changes.
 
 ### Standards
 
-1. The developer who submits or merges code **MUST** remain fully accountable for its correctness, security, quality, and compliance, regardless of AI assistance used in its creation. `std-ai-developer-accountability-01`
-2. AI tools **MUST NOT** be recorded or represented as the author of record. `std-ai-developer-accountability-02`
-3. AI assistance **MUST NOT** justify reduced diligence, testing, or review effort. `std-ai-developer-accountability-03`
+1. Developers **MUST** understand AI-assisted code changes and take responsibility for the resulting code's correctness, security, quality, and consistency with engineering standards and stated requirements. `std-ai-developer-accountability-01`
+2. AI assistance **MUST NOT** be accepted as a reason to reduce the diligence, testing, or review otherwise required for a change. `std-ai-developer-accountability-02`
+3. Developers **MUST** verify that dependencies introduced through AI assistance have permissive licences and that the licence conditions are met. `std-ai-intellectual-property-licensing-03`
+4. AI tools **SHOULD NOT** be recorded or represented as the author of record. `std-ai-developer-accountability-04`
+
+### Related Standards
+
+- [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md#licence-compatibility)
+- [Code Review](../code-implementation/code-review.md#risk-based-review)
 
 ### Implements These Principles
 
 - [Accountability and Equal Standards](../../principles/engineering-practice/ai-assisted-engineering.md#accountability-and-equal-standards)
 - [People Remain Responsible](../../principles/quality/ai-assisted-quality-engineering.md#people-remain-responsible)
+- [Intellectual Property](../../principles/engineering-practice/ai-assisted-engineering.md#intellectual-property)
+- [Understanding Before Adoption](../../principles/engineering-practice/ai-assisted-engineering.md#understanding-before-adoption)
+- [Automation Supports Human Judgement](../../principles/engineering-practice/automation.md#automation-supports-human-judgement)
 
-## Human Oversight
+## AI Agent Access
 
 ### Summary
 
-AI-generated output remains subject to developer understanding and human review before submission or delivery.
+AI agents are subject to the resource's authentication and authorisation policies, regardless of the access method.
 
 ### Standards
 
-1. Developers **MUST** review and understand AI-generated or AI-modified output before committing, merging, or deploying it. `std-ai-human-oversight-01`
-2. Developers **MUST NOT** submit AI-generated code that they cannot explain, justify, or maintain. `std-ai-human-oversight-02`
-3. AI tools **MUST NOT** be used unattended or autonomously to commit, approve, merge, or deploy code without human review. `std-ai-human-oversight-03`
+1. Resource owners **MUST** enforce authentication and authorisation in the system being accessed, rather than relying on the AI tool or agent to enforce access restrictions. `std-ai-agent-access-01`
+2. Resource owners **MUST** authorise actions performed by an AI agent on a user's behalf against that user's permissions. `std-ai-agent-access-02`
+3. The person or team provisioning a separate identity or access grant for an AI agent **MUST** limit its permissions to the resources and operations required for its intended use. `std-ai-agent-access-03`
+4. The person or team granting additional temporary access for an AI agent's task **MUST** revoke that grant when the task ends. `std-ai-agent-access-04`
 
 ### Related Standards
 
-- [AI Usage & Verification in Code Review](ai-usage-verification-in-code-review.md#pre-submission-verification)
+- [Identity & Access Management](../security-identity/identity-access-management.md#ai-agent-access)
 
 ### Implements These Principles
 
-- [Understanding Before Adoption](../../principles/engineering-practice/ai-assisted-engineering.md#understanding-before-adoption)
-- [Automation Supports Human Judgement](../../principles/engineering-practice/automation.md#automation-supports-human-judgement)
-- [People Remain Responsible](../../principles/quality/ai-assisted-quality-engineering.md#people-remain-responsible)
+- [Bounded Agent Impact](../../principles/engineering-practice/ai-assisted-engineering.md#bounded-agent-impact)
+- [Least Privilege](../../principles/security-privacy/security-engineering.md#least-privilege)
+- [Least Privilege Access](../../principles/security-privacy/data-privacy.md#least-privilege-access)
+- [Controlled and Traceable AI Agents](../../principles/quality/ai-assisted-quality-engineering.md#controlled-and-traceable-ai-agents)
 
 ## Quality, Testing & Security
 
 ### Summary
 
-AI-assisted code meets the same quality, testing, and security gates as any other change.
+AI-assisted changes are subject to the same quality, testing, and security requirements as other changes.
 
 ### Standards
 
 1. Code produced with AI assistance **MUST** meet the same coding, linting, static analysis, and test coverage requirements as code without AI assistance. `std-ai-quality-testing-security-01`
 2. AI-assisted contributions **MUST NOT** bypass, weaken, or be exempted from quality gates, security scanning, or approval workflows required for the repository and change. `std-ai-quality-testing-security-02`
-3. AI tools **MAY** be used to help generate automated tests; generated tests **MUST** be reviewed for correctness and coverage adequacy. `std-ai-quality-testing-security-03`
-4. A test or quality check required for a change **MUST NOT** be removed, disabled, or weakened to obtain a passing result for an AI-assisted change. `std-ai-quality-testing-security-04`
+3. AI tools **MAY** be used to help generate automated tests. `std-ai-quality-testing-security-03`
+4. AI-generated automated tests **MUST** be reviewed for correctness and coverage adequacy before adoption. `std-ai-quality-testing-security-04`
+5. A test or quality check required for an AI-assisted change **MUST NOT** be removed, disabled, or weakened to obtain a passing result. `std-ai-quality-testing-security-05`
 
 ### Related Standards
 
-- [AI Usage & Verification in Code Review](ai-usage-verification-in-code-review.md#pre-submission-verification)
+- [Code Review](../code-implementation/code-review.md#code-quality-security)
 - [Code Style & Formatting](../code-implementation/code-style-formatting.md#codebase-coverage)
 - [Linting & Style Enforcement](../code-implementation/linting-style-enforcement.md#linting-pipeline-gate)
 - [Static Code Analysis](../code-implementation/static-code-analysis.md#analysis-pipeline-gate)
@@ -72,96 +84,39 @@ AI-assisted code meets the same quality, testing, and security gates as any othe
 - [Secure Development](../../principles/security-privacy/security-engineering.md#secure-development)
 - [AI Broadens What QA Checks](../../principles/quality/ai-assisted-quality-engineering.md#ai-broadens-what-qa-checks)
 - [Independent Checks of AI Work and Evidence](../../principles/quality/ai-assisted-quality-engineering.md#independent-checks-of-ai-work-and-evidence)
+- [Authoritative Test Results](../../principles/quality/test-automation.md#authoritative-test-results)
 
-## AI Agent Access
+## Code Review
 
 ### Summary
 
-An AI agent's access remains limited to what its current task requires and what is authorised for the target systems and data.
+Review checks may be automated, manual, or a combination, while a human assesses the evidence and remains accountable for approval.
+
+!!! tip "Review guidance"
+
+    AI code generation can outpace line-by-line manual review. Review can use commercial review tools, custom review agents, CI checks, or targeted manual inspection, preferably in combination.
+
+    Use commercial code review tools or team-built code review agents to flag defects, code smells, design issues, and inconsistencies with engineering standards.
+
+    Use CI test results and findings from linting, SAST, secret scanning, and dependency vulnerability scanning as review evidence.
+
+    Apply system and domain knowledge through targeted manual review to identify logic errors and assess design trade-offs, integration behaviour, and consistency with engineering standards and stated requirements.
+
 
 ### Standards
 
-1. Access granted to an AI agent **MUST** be read-only unless its task requires write access that is authorised for the target systems and data. `std-ai-agent-access-01`
-2. Access granted to an AI agent **MUST** be limited to the systems, data, and actions required for its task. `std-ai-agent-access-02`
-3. Temporary access granted to an AI agent **MUST** be revoked when its task ends. `std-ai-agent-access-03`
+1. Before merge, at least one authorised human reviewer **MUST** approve the change after assessing the review evidence and any unresolved findings. `std-ai-code-review-01`
+2. The human approver **MUST** remain accountable for the approval decision. `std-ai-code-review-02`
 
 ### Related Standards
 
-- [Identity & Access Management](../security-identity/identity-access-management.md#ai-agent-access)
+- [Approved AI Tooling](approved-ai-tooling.md#approved-tools)
+- [Code Review](../code-implementation/code-review.md#independent-review)
+- [Continuous Integration](../delivery-release/continuous-integration.md#required-checks)
 
 ### Implements These Principles
 
-- [Bounded Agent Impact](../../principles/engineering-practice/ai-assisted-engineering.md#bounded-agent-impact)
-- [Least Privilege](../../principles/security-privacy/security-engineering.md#least-privilege)
-- [Controlled and Traceable AI Agents](../../principles/quality/ai-assisted-quality-engineering.md#controlled-and-traceable-ai-agents)
-
-## AI Agent Change Containment
-
-### Summary
-
-An AI agent is stopped when it acts outside its delegated task, and any unintended change it makes is promptly contained.
-
-### Standards
-
-1. An AI agent's execution **MUST** be stopped when it is identified as acting outside its delegated task. `std-ai-agent-change-containment-01`
-2. An unintended change made by an AI agent **MUST** be isolated or reversed as soon as it is identified. `std-ai-agent-change-containment-02`
-
-### Implements These Principles
-
-- [Bounded Agent Impact](../../principles/engineering-practice/ai-assisted-engineering.md#bounded-agent-impact)
-- [Controlled and Traceable AI Agents](../../principles/quality/ai-assisted-quality-engineering.md#controlled-and-traceable-ai-agents)
-
-## High-Risk Use
-
-### Summary
-
-AI-generated code affecting a high-risk function receives domain-expert review before adoption.
-
-### Standards
-
-1. AI-generated code **MUST** be classified as high-risk when it implements or modifies a security control, clinical decision, patient-safety function, or regulatory requirement. `std-ai-high-risk-use-01`
-2. AI-generated code classified as high-risk, together with its AI-generated tests, **MUST** be reviewed by a reviewer with expertise in the affected function or requirement. `std-ai-high-risk-use-02`
-
-### Related Standards
-
-- [Code Review](../code-implementation/code-review.md#risk-based-review)
-
-### Implements These Principles
-
-- [Scrutiny Based on Impact](../../principles/engineering-practice/ai-assisted-engineering.md#scrutiny-based-on-impact)
-- [Secure Development](../../principles/security-privacy/security-engineering.md#secure-development)
-- [Human Exploration and Expert Judgement](../../principles/quality/ai-assisted-quality-engineering.md#human-exploration-and-expert-judgement)
-
-## Clinical Decisions & Advice
-
-### Summary
-
-Authorised and qualified people retain responsibility for clinical decisions and advice informed by AI-generated output.
-
-### Standards
-
-1. A clinical decision informed by AI-generated output **MUST** be made by a person authorised and qualified to make that decision. `std-ai-clinical-decisions-advice-01`
-2. AI-generated output **MUST** be reviewed by a person with relevant clinical expertise before it is presented to a clinician as clinical advice. `std-ai-clinical-decisions-advice-02`
-
-### Implements These Principles
-
-- [Human Clinical Judgement](../../principles/engineering-practice/ai-assisted-engineering.md#human-clinical-judgement)
-- [Scrutiny Based on Impact](../../principles/engineering-practice/ai-assisted-engineering.md#scrutiny-based-on-impact)
+- [Accountability and Equal Standards](../../principles/engineering-practice/ai-assisted-engineering.md#accountability-and-equal-standards)
 - [Automation Supports Human Judgement](../../principles/engineering-practice/automation.md#automation-supports-human-judgement)
-
-## Intellectual Property & Licensing
-
-### Summary
-
-AI-assisted work uses third-party material lawfully and preserves the confidentiality of information submitted to AI tools.
-
-### Standards
-
-1. Developers **SHOULD** inspect AI-generated code for evidence that it reproduces third-party material before inclusion. `std-ai-intellectual-property-licensing-01`
-2. Developers **MUST NOT** adopt identified third-party material unless its licence permits the intended use and its conditions are met. `std-ai-intellectual-property-licensing-02`
-3. Developers **MUST NOT** submit confidential or proprietary information to an AI tool unless it is authorised to receive that information and its terms prevent unapproved retention or reuse. `std-ai-intellectual-property-licensing-03`
-
-### Implements These Principles
-
-- [Intellectual Property](../../principles/engineering-practice/ai-assisted-engineering.md#intellectual-property)
-- [Confidentiality](../../principles/engineering-practice/ai-assisted-engineering.md#confidentiality)
+- [Independent Checks of AI Work and Evidence](../../principles/quality/ai-assisted-quality-engineering.md#independent-checks-of-ai-work-and-evidence)
+- [People Remain Responsible](../../principles/quality/ai-assisted-quality-engineering.md#people-remain-responsible)

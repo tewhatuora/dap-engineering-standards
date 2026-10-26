@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-21
+last_edited: 2026-10-27
 ---
 
 # Observability
@@ -34,6 +34,7 @@ A shared platform gives responders one place to query and correlate evidence acr
 
 ### Implemented By These Standards
 
+- [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
 - [Observability Platform Integration](../../standards/operations-observability/observability-platform-integration.md)
 - [Managed Services](../../standards/platform-infrastructure/managed-services.md)
 

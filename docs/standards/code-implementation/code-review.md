@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-10-23
 ---
 
 # Code Review {: .standard-references }
@@ -26,23 +26,26 @@ A change remains scoped to the smallest reviewable unit and provides enough cont
 
 ### Summary
 
-Every change is reviewed and approved by someone other than its author before it merges, regardless of size or urgency.
+A person other than the author approves each change based on evidence from automated review, manual inspection, or both.
 
 ### Standards
 
-1. A change **MUST** be reviewed and approved by at least one reviewer, other than its author, familiar with the affected code, system, or domain, before it is merged into a shared or protected branch. `std-code-independent-review-01`
+1. A change **MUST** be approved by at least one person other than its author, familiar with the affected code, system, or domain, before it is merged into a shared or protected branch. `std-code-independent-review-01`
 2. Approval **MUST NOT** be granted as part of a reciprocal arrangement in which reviewers approve each other's changes without applying meaningful scrutiny. `std-code-independent-review-02`
-3. Where a path's ownership is declared in a `CODEOWNERS` file, review from the designated owner **MUST** be enforced before a change to that path can merge. `std-code-independent-review-03`
-4. The independent review requirement **MUST** apply regardless of a change's size, the seniority of its author, or the outcome of any automated check. `std-code-independent-review-04`
+3. Where a path's ownership is declared in a `CODEOWNERS` file, approval from the designated owner **MUST** be enforced before a change to that path can merge. `std-code-independent-review-03`
+4. The independent review and human approval requirements **MUST** apply regardless of a change's size, the seniority of its author, or the review methods used. `std-code-independent-review-04`
+5. Review checks **MAY** be performed by approved AI agents, CI jobs, manual inspection, or a combination. `std-code-independent-review-05`
 
 ### Related Standards
 
 - [Branching Strategy](branching-strategy.md)
+- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#code-review)
+- [Continuous Integration](../delivery-release/continuous-integration.md#required-checks)
 
 ### Implements These Principles
 
 - [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
-- [Automation](../../principles/engineering-practice/automation.md)
+- [Automation Supports Human Judgement](../../principles/engineering-practice/automation.md#automation-supports-human-judgement)
 
 ## Risk-Based Review
 
@@ -96,7 +99,7 @@ A reviewer checks a change's correctness, simplicity, maintainability, and secur
 
 - [Code Style & Formatting](code-style-formatting.md)
 - [Static Code Analysis](static-code-analysis.md)
-- [AI Usage & Verification in Code Review](../ai-engineering/ai-usage-verification-in-code-review.md)
+- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#code-review)
 
 ### Implements These Principles
 
@@ -208,7 +211,7 @@ An approval is recorded through the merge request mechanism, attributable to its
 ### Related Standards
 
 - [Branching Strategy](branching-strategy.md)
-- [AI Usage & Verification in Code Review](../ai-engineering/ai-usage-verification-in-code-review.md)
+- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#code-review)
 
 ### Implements These Principles
 

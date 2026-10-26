@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-10-21
 ---
 
 # Continuous Integration {: .standard-references }
@@ -234,5 +234,6 @@ A pipeline controls cost by caching dependencies, measuring stage cost, allocati
 
 ### Implements These Principles
 
-- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+- [Spend Aligned with Demand and Value](../../principles/cost-sustainability/cost-awareness.md#spend-aligned-with-demand-and-value)
+- [Cost Visibility and Attribution](../../principles/cost-sustainability/cost-awareness.md#cost-visibility-and-attribution)
 - [Sustainability](../../principles/cost-sustainability/sustainability.md)

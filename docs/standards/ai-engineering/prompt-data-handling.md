@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-10-27
 ---
 
 # Prompt Data Handling {: .standard-references }
@@ -8,14 +8,19 @@ last_edited: 2026-09-14
 
 ### Summary
 
-AI tools receive only data permitted by their authorisation and the organisation's data-handling restrictions.
+AI submissions must exclude prohibited data and meet the conditions for restricted data.
 
 ### Standards
 
-1. Personal or health information **MUST NOT** be submitted to an AI tool unless the Approved Tooling Register marks it as allowed for that tool. `std-ai-prohibited-restricted-data-01`
+#### Prohibited Data
+
+1. Secrets, credentials, API keys, access tokens, and cryptographic material **MUST NOT** be submitted to an AI tool under any circumstances. `std-ai-prohibited-restricted-data-01`
 2. An NHI identifier that identifies a real person **MUST NOT** be submitted to an AI tool. `std-ai-prohibited-restricted-data-02`
-3. Secrets, credentials, API keys, access tokens, and cryptographic material **MUST NOT** be submitted to an AI tool under any circumstances. `std-ai-prohibited-restricted-data-03`
-4. A production export, database dump, or log containing personal or health information **MUST NOT** be submitted to an AI tool. `std-ai-prohibited-restricted-data-04`
+
+#### Restricted Data
+
+3. PII or PHI **MUST NOT** be submitted to an AI tool unless the [Approved Tooling Register](approved-ai-tooling.md#approved-tooling-register) marks it as allowed for that tool. `std-ai-prohibited-restricted-data-03`
+4. Developers **MUST NOT** submit confidential or proprietary information to an AI tool unless it is authorised to receive that information and its terms prevent unapproved retention or reuse. `std-ai-intellectual-property-licensing-04`
 
 ### Related Standards
 
@@ -25,19 +30,18 @@ AI tools receive only data permitted by their authorisation and the organisation
 
 - [AI Tool Terms and Controls](../../principles/engineering-practice/ai-assisted-engineering.md#ai-tool-terms-and-controls)
 - [Confidentiality](../../principles/engineering-practice/ai-assisted-engineering.md#confidentiality)
-- [Privacy by Default](../../principles/security-privacy/data-privacy.md#privacy-by-default)
 
 ## Data Minimisation
 
 ### Summary
 
-Personal or health information used in authorised AI-assisted work is limited to the minimum reasonably necessary for the task.
+Where submission of PII or PHI to an AI tool is authorised, only the minimum needed for the task should be included, and unrelated information must be removed or redacted before submission.
 
 ### Standards
 
-1. Prompts containing personal or health information **SHOULD** include only the minimum data reasonably necessary for the task. `std-ai-data-minimisation-01`
-2. Files, datasets, or repository content containing personal or health information **SHOULD NOT** be submitted where a smaller, relevant excerpt is sufficient. `std-ai-data-minimisation-02`
-3. Unrelated personal or health information in the surrounding context **MUST** be removed or redacted before submission. `std-ai-data-minimisation-03`
+1. Prompts containing PII or PHI **SHOULD** include only the minimum data reasonably necessary for the task. `std-ai-data-minimisation-01`
+2. Unrelated PII or PHI in the surrounding context **MUST** be removed or redacted before submission. `std-ai-data-minimisation-02`
+3. Entire files or datasets containing PII or PHI **SHOULD NOT** be submitted where a smaller, relevant excerpt is sufficient. `std-ai-data-minimisation-03`
 
 ### Implements These Principles
 
@@ -47,12 +51,12 @@ Personal or health information used in authorised AI-assisted work is limited to
 
 ### Summary
 
-Personal or health information used in authorised AI-assisted work is kept in the least identifiable form that meets the task's needs.
+Synthetic, de-identified, or masked data should replace identifiable PII or PHI where the task does not require it.
 
 ### Standards
 
-1. For authorised use involving personal or health information, prompt content **SHOULD** be de-identified, masked, or replaced with synthetic data unless the use case requires personal or health information. `std-ai-de-identification-synthetic-data-01`
-2. Synthetic or de-identified data **SHOULD** be used instead of production personal or health information for AI-assisted testing, debugging, and documentation. `std-ai-de-identification-synthetic-data-02`
+1. For authorised use involving PII or PHI, prompt content **SHOULD** be de-identified, masked, or replaced with synthetic data unless the use case requires identifiable PII or PHI. `std-ai-de-identification-synthetic-data-01`
+2. Synthetic or de-identified data **MUST** be used instead of PII or PHI for AI-assisted testing, debugging, and documentation. `std-ai-de-identification-synthetic-data-02`
 
 ### Related Standards
 

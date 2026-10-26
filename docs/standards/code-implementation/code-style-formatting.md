@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-10-21
 ---
 
 # Code Style & Formatting {: .standard-references }
@@ -68,7 +68,7 @@ The adopted style guide applies uniformly, whether code was written by an engine
 ### Implements These Principles
 
 - [Simplicity & Maintainability](../../principles/engineering-practice/simplicity-maintainability.md)
-- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+- [Accountability and Equal Standards](../../principles/engineering-practice/ai-assisted-engineering.md#accountability-and-equal-standards)
 - [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
 
 ## Comments & Documentation

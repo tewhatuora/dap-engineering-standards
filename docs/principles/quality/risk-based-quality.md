@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-21
+last_edited: 2026-10-27
 ---
 
 # Risk-Based Quality
@@ -18,7 +18,6 @@ Understanding these risks gives QA a clear basis for deciding what needs to be t
 
 ### Implemented By These Standards
 
-- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
 - [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 - [Application Security Testing](../../standards/quality-engineering/application-security-testing.md)
@@ -55,7 +54,6 @@ Proportionate assurance matches the strength of the evidence to the possible har
 
 ### Implemented By These Standards
 
-- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
 - [Runbooks](../../standards/operations-observability/runbooks.md)
 - [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)

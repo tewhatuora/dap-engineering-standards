@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-21
+last_edited: 2026-10-27
 ---
 
 # Quality Intelligence & Improvement
@@ -18,7 +18,6 @@ Using test outcomes, operational experience, incidents, and trend analysis to re
 
 ### Implemented By These Standards
 
-- [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
 - [Code Style & Formatting](../../standards/code-implementation/code-style-formatting.md)
 - [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
 - [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
@@ -86,7 +85,6 @@ Trend and pattern analysis distinguishes isolated variation from a broader quali
 
 ### Implemented By These Standards
 
-- [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
 - [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)
 - [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 - [Integration Testing](../../standards/quality-engineering/integration-testing.md)
@@ -106,7 +104,6 @@ Operational indicators, incidents, support reports, and user feedback show wheth
 
 ### Implemented By These Standards
 
-- [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
 - [Rollback Strategy](../../standards/delivery-release/rollback-strategy.md)
 - [Runbooks](../../standards/operations-observability/runbooks.md)

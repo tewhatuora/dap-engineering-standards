@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-22
+last_edited: 2026-10-23
 ---
 
 # AI-Assisted Quality Engineering {: .standard-references }
@@ -42,7 +42,7 @@ Every quality decision informed by AI-generated evidence is made by an identifie
 ### Related Standards
 
 - [Quality Roles & Responsibilities](quality-roles-responsibilities.md#defined-quality-roles-and-responsibilities)
-- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#high-risk-use)
+- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#developer-accountability)
 
 ### Implements These Principles
 
@@ -64,7 +64,6 @@ AI-produced work and AI-generated evidence are checked against a reliable source
 ### Related Standards
 
 - [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#quality-testing-security)
-- [AI Usage & Verification in Code Review](../ai-engineering/ai-usage-verification-in-code-review.md#pre-submission-verification)
 - [Evidence & Reporting](evidence-reporting.md#current-and-traceable-evidence)
 
 ### Implements These Principles
@@ -116,6 +115,7 @@ An AI agent performing quality activities works within recorded limits, produces
 
 ### Implements These Principles
 
+- [Bounded Agent Impact](../../principles/engineering-practice/ai-assisted-engineering.md#bounded-agent-impact)
 - [Controlled and Traceable AI Agents](../../principles/quality/ai-assisted-quality-engineering.md#controlled-and-traceable-ai-agents)
 
 ## Human Exploration and Expert Judgement
@@ -133,8 +133,7 @@ People investigate risks and results that need exploration, context, or expert j
 ### Related Standards
 
 - [Test Automation](test-automation.md#automation-complements-human-testing)
-- [AI Usage & Verification in Code Review](../ai-engineering/ai-usage-verification-in-code-review.md#ai-assisted-review)
-- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#high-risk-use)
+- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#code-review)
 
 ### Implements These Principles
 
