@@ -24,7 +24,7 @@ AI submissions must exclude prohibited data and meet the conditions for restrict
 
 ### Related Standards
 
-- [Approved AI Tooling](approved-ai-tooling.md#approved-tools)
+- [Approved AI Tooling: Approved Tools](approved-ai-tooling.md#approved-tools)
 
 ### Implements These Principles
 
@@ -60,7 +60,7 @@ Synthetic, de-identified, or masked data should replace identifiable PII or PHI 
 
 ### Related Standards
 
-- [Test Data Management](../quality-engineering/test-data-management.md#data-sources)
+- [Test Data Management: Data Sources](../quality-engineering/test-data-management.md#data-sources)
 
 ### Implements These Principles
 

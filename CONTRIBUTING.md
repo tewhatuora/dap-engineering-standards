@@ -58,6 +58,7 @@ Each file covers a topic and may contain more than one principle or standard gro
 
 - Standard obligations **MUST** use the [Documentation Terminology](README.md#documentation-terminology).
 - Omit `Exceptions` and `Related Standards` when they do not add relevant information.
+- `Related Standards` links **MUST** use `<Standard Page>: <Standard Grouping>` as their labels and target the relevant grouping's heading anchor.
 
 ```markdown
 # <Topic Name> {: .standard-references }
@@ -78,7 +79,7 @@ Each file covers a topic and may contain more than one principle or standard gro
 
 ### Related Standards
 
-- [<Standard>](<relative-path>)
+- [<Standard Page>: <Standard Grouping>](<relative-path>#<grouping-anchor>)
 
 ### Implements These Principles
 

@@ -26,7 +26,7 @@ AI tools may be used only as authorised in the Approved Tooling Register.
 
 ### Related Standards
 
-- [Prompt Data Handling](prompt-data-handling.md#prohibited-restricted-data)
+- [Prompt Data Handling: Prohibited & Restricted Data](prompt-data-handling.md#prohibited-restricted-data)
 
 ### Implements These Principles
 

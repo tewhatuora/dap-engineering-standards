@@ -53,14 +53,16 @@ A standards file sits under `docs/standards/<category>/`. A file is a topic and 
 
 ### Related Standards
 
-- [<Standard Page>](../<category>/<page>.md#<grouping-anchor>)
+- [<Standard Page>: <Standard Grouping>](../<category>/<page>.md#<grouping-anchor>)
 
 ### Implements These Principles
 
 - [<Principle>](../../principles/<page>.md)
 ```
 
-Do not add a page-level summary, tagline, or tag. Do not introduce `Scope`, `Verification`, or other undefined sections. Use `####` beneath `### Standards` only when the numbered list needs subdivisions. Include `Related Standards` only where another standard grouping has a genuine relationship, always link directly to that grouping's heading anchor, and use the standard page title as the link text.
+Do not add a page-level summary, tagline, or tag. Do not introduce `Scope`, `Verification`, or other undefined sections. Use `####` beneath `### Standards` only when the numbered list needs subdivisions. Include `Related Standards` only where another standard grouping has a genuine relationship and always link directly to that grouping's heading anchor.
+
+Use `<Standard Page>: <Standard Grouping>` as the link text, taking both titles from the destination page and heading. Include both titles even when the page appears only once in the list. Keep separate bullets for links to different groupings on the same page.
 
 ## Creating Standards
 

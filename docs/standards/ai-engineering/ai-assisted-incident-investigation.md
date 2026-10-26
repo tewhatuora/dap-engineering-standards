@@ -17,9 +17,9 @@ AI tools and human responders use the same telemetry, without separate instrumen
 
 ### Related Standards
 
-- [Telemetry Instrumentation](../operations-observability/telemetry-instrumentation.md#instrumentation-standards)
-- [Distributed Tracing](../operations-observability/distributed-tracing.md#trace-context)
-- [Observability Platform Integration](../operations-observability/observability-platform-integration.md#telemetry-ingestion)
+- [Telemetry Instrumentation: Instrumentation Standards](../operations-observability/telemetry-instrumentation.md#instrumentation-standards)
+- [Distributed Tracing: Trace Context](../operations-observability/distributed-tracing.md#trace-context)
+- [Observability Platform Integration: Telemetry Ingestion](../operations-observability/observability-platform-integration.md#telemetry-ingestion)
 
 ### Implements These Principles
 
@@ -38,7 +38,7 @@ AI-assisted incident remediation is applied or approved by a human responder.
 
 ### Related Standards
 
-- [Identity & Access Management](../security-identity/identity-access-management.md#ai-agent-access)
+- [Identity & Access Management: AI Agent Access](../security-identity/identity-access-management.md#ai-agent-access)
 
 ### Implements These Principles
 

@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-23
+last_edited: 2026-10-27
 ---
 
 # Code Review {: .standard-references }
@@ -39,8 +39,8 @@ A person other than the author approves each change based on evidence from autom
 ### Related Standards
 
 - [Branching Strategy](branching-strategy.md)
-- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#code-review)
-- [Continuous Integration](../delivery-release/continuous-integration.md#required-checks)
+- [AI-Assisted Development: Code Review](../ai-engineering/ai-assisted-development.md#code-review)
+- [Continuous Integration: Required Checks](../delivery-release/continuous-integration.md#required-checks)
 
 ### Implements These Principles
 
@@ -99,7 +99,7 @@ A reviewer checks a change's correctness, simplicity, maintainability, and secur
 
 - [Code Style & Formatting](code-style-formatting.md)
 - [Static Code Analysis](static-code-analysis.md)
-- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#code-review)
+- [AI-Assisted Development: Code Review](../ai-engineering/ai-assisted-development.md#code-review)
 
 ### Implements These Principles
 
@@ -211,7 +211,7 @@ An approval is recorded through the merge request mechanism, attributable to its
 ### Related Standards
 
 - [Branching Strategy](branching-strategy.md)
-- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#code-review)
+- [AI-Assisted Development: Code Review](../ai-engineering/ai-assisted-development.md#code-review)
 
 ### Implements These Principles
 

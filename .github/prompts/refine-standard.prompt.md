@@ -74,11 +74,20 @@ Follow these directional conventions:
 
 | Location | Link text | Target |
 | --- | --- | --- |
-| Standards: `Related Standards` | Standard page title | Standard page plus its relevant grouping anchor |
+| Standards: `Related Standards` | `<Standard Page>: <Standard Grouping>` | Standard page plus its relevant grouping anchor |
 | Standards: `Implements These Principles` | Specific principle heading | Principle page plus that principle's heading anchor |
 | Principles: `Implemented By These Standards` | Standard page title | Standard page only, without a section anchor |
 
-Within each principle, list each implementing standard page once. Do not use `Page: Grouping` labels or duplicate a page for each implementing grouping. Keep the exact obligation-to-principle mapping in your working analysis, not in the published prose or a new audit file.
+In `Related Standards`, take the page title and grouping title from the destination's actual headings, joined by a colon and a space. Include both titles for every anchored link, even when the page appears only once. Use separate bullets for different groupings on the same page:
+
+```markdown
+### Related Standards
+
+- [Code Review: Independent Review](../code-implementation/code-review.md#independent-review)
+- [Code Review: Risk-Based Review](../code-implementation/code-review.md#risk-based-review)
+```
+
+Within each principle's `Implemented By These Standards` section, list each implementing standard page once. Use only the page title, without `Page: Grouping` labels or a duplicate page for each implementing grouping. Keep the exact obligation-to-principle mapping in your working analysis, not in the published prose or a new audit file.
 
 Update materially changed pages' metadata. Update a principle index description when its page's position has broadened, using one concise unifying statement rather than a list of sections. Change navigation only if a new page actually requires it.
 
@@ -91,7 +100,7 @@ Before declaring the work complete, confirm:
 - Principle prose matches the surrounding pages and remains distinct from normative standards.
 - Summaries, conditions, exceptions, and related obligations are consistent.
 - Existing effective wording is preserved; each prose change adds concrete value beyond stylistic preference.
-- Local links and heading anchors resolve; reference sections are not empty; principle backlinks have no duplicate pages or section anchors.
+- Local links and heading anchors resolve; anchored Related Standards labels match `<Standard Page>: <Standard Grouping>` using the destination's actual headings; reference sections are not empty; principle backlinks have no duplicate pages or section anchors.
 - Reciprocal references are present using the intentionally different page-level and grouping-level conventions above.
 - Existing tags and intended obligation strengths are preserved. Secondary standards have not changed outside the necessary references and metadata.
 

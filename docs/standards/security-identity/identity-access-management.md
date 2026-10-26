@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-22
+last_edited: 2026-10-27
 ---
 
 # Identity & Access Management {: .standard-references }
@@ -39,7 +39,7 @@ An AI agent has no write access to a production data store, and its read access 
 
 ### Related Standards
 
-- [AI-Assisted Incident Investigation](../ai-engineering/ai-assisted-incident-investigation.md#human-verification-approval)
+- [AI-Assisted Incident Investigation: Human Verification & Approval](../ai-engineering/ai-assisted-incident-investigation.md#human-verification-approval)
 - [Environment Strategy](../platform-infrastructure/environment-strategy.md)
 
 ### Implements These Principles

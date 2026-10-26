@@ -19,8 +19,8 @@ Developers remain accountable for AI-assisted code changes.
 
 ### Related Standards
 
-- [Dependency & Runtime Management](../code-implementation/dependency-runtime-management.md#licence-compatibility)
-- [Code Review](../code-implementation/code-review.md#risk-based-review)
+- [Dependency & Runtime Management: Licence Compatibility](../code-implementation/dependency-runtime-management.md#licence-compatibility)
+- [Code Review: Risk-Based Review](../code-implementation/code-review.md#risk-based-review)
 
 ### Implements These Principles
 
@@ -45,7 +45,7 @@ AI agents are subject to the resource's authentication and authorisation policie
 
 ### Related Standards
 
-- [Identity & Access Management](../security-identity/identity-access-management.md#ai-agent-access)
+- [Identity & Access Management: AI Agent Access](../security-identity/identity-access-management.md#ai-agent-access)
 
 ### Implements These Principles
 
@@ -70,12 +70,12 @@ AI-assisted changes are subject to the same quality, testing, and security requi
 
 ### Related Standards
 
-- [Code Review](../code-implementation/code-review.md#code-quality-security)
-- [Code Style & Formatting](../code-implementation/code-style-formatting.md#codebase-coverage)
-- [Linting & Style Enforcement](../code-implementation/linting-style-enforcement.md#linting-pipeline-gate)
-- [Static Code Analysis](../code-implementation/static-code-analysis.md#analysis-pipeline-gate)
-- [Unit Testing](../quality-engineering/unit-testing.md#test-coverage)
-- [Application Security Testing](../quality-engineering/application-security-testing.md#static-testing-sast)
+- [Code Review: Code Quality & Security](../code-implementation/code-review.md#code-quality-security)
+- [Code Style & Formatting: Codebase Coverage](../code-implementation/code-style-formatting.md#codebase-coverage)
+- [Linting & Style Enforcement: Linting Pipeline Gate](../code-implementation/linting-style-enforcement.md#linting-pipeline-gate)
+- [Static Code Analysis: Analysis Pipeline Gate](../code-implementation/static-code-analysis.md#analysis-pipeline-gate)
+- [Unit Testing: Test Coverage](../quality-engineering/unit-testing.md#test-coverage)
+- [Application Security Testing: Static Testing (SAST)](../quality-engineering/application-security-testing.md#static-testing-sast)
 
 ### Implements These Principles
 
@@ -110,9 +110,9 @@ Review checks may be automated, manual, or a combination, while a human assesses
 
 ### Related Standards
 
-- [Approved AI Tooling](approved-ai-tooling.md#approved-tools)
-- [Code Review](../code-implementation/code-review.md#independent-review)
-- [Continuous Integration](../delivery-release/continuous-integration.md#required-checks)
+- [Approved AI Tooling: Approved Tools](approved-ai-tooling.md#approved-tools)
+- [Code Review: Independent Review](../code-implementation/code-review.md#independent-review)
+- [Continuous Integration: Required Checks](../delivery-release/continuous-integration.md#required-checks)
 
 ### Implements These Principles
 
