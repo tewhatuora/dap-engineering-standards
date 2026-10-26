@@ -30,6 +30,9 @@ plugins:
   #     enabled_if_env: ENABLE_PDF_EXPORT
 theme:
   name: material
+  icon:
+    admonition:
+      tip: material/lightbulb-outline
   features:
     - navigation.indexes
     # - navigation.tabs
@@ -63,6 +66,7 @@ extra_javascript:
   - assets/javascripts/section-disclosures.js
   - assets/javascripts/standard-references.js
 markdown_extensions:
+  - admonition
   - attr_list
   - toc:
       toc_depth: "1-2"   # include H1 and H2 only, hide H3+
@@ -200,7 +204,6 @@ nav:
       - Approved AI Tooling: standards/ai-engineering/approved-ai-tooling.md
       - Prompt Data Handling: standards/ai-engineering/prompt-data-handling.md
       - AI-Assisted Development: standards/ai-engineering/ai-assisted-development.md
-      - AI Usage & Verification in Code Review: standards/ai-engineering/ai-usage-verification-in-code-review.md
       - AI-Assisted Incident Investigation: standards/ai-engineering/ai-assisted-incident-investigation.md
       - AI Tooling Cost Management: standards/ai-engineering/ai-tooling-cost-management.md
     - Developer Experience:

@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-22
+last_edited: 2026-10-27
 ---
 
 # Evidence & Reporting {: .standard-references }
@@ -18,7 +18,7 @@ Quality evidence is retained in a shared location that remains accessible to the
 
 ### Related Standards
 
-- [Clear and Useful Test Evidence](outcome-driven-assurance.md#clear-and-useful-test-evidence)
+- [Outcome Driven Assurance: Clear and Useful Test Evidence](outcome-driven-assurance.md#clear-and-useful-test-evidence)
 
 ### Implements These Principles
 
@@ -38,8 +38,8 @@ Quality reporting presents the tested scope, outcomes, material gaps, open findi
 
 ### Related Standards
 
-- [Clear and Useful Test Evidence](outcome-driven-assurance.md#clear-and-useful-test-evidence)
-- [Traceable Assurance Outcomes](outcome-driven-assurance.md#traceable-assurance-outcomes)
+- [Outcome Driven Assurance: Clear and Useful Test Evidence](outcome-driven-assurance.md#clear-and-useful-test-evidence)
+- [Outcome Driven Assurance: Traceable Assurance Outcomes](outcome-driven-assurance.md#traceable-assurance-outcomes)
 
 ### Implements These Principles
 
@@ -59,7 +59,7 @@ Quality findings contain the information needed to understand the problem, asses
 
 ### Related Standards
 
-- [Traceable Assurance Outcomes](outcome-driven-assurance.md#traceable-assurance-outcomes)
+- [Outcome Driven Assurance: Traceable Assurance Outcomes](outcome-driven-assurance.md#traceable-assurance-outcomes)
 
 ### Implements These Principles
 
@@ -77,7 +77,7 @@ Delivery teams and vendors use a shared standard to record, classify, prioritise
 
 ### Related Standards
 
-- [Traceable Assurance Outcomes](outcome-driven-assurance.md#traceable-assurance-outcomes)
+- [Outcome Driven Assurance: Traceable Assurance Outcomes](outcome-driven-assurance.md#traceable-assurance-outcomes)
 
 ### Implements These Principles
 
@@ -96,8 +96,8 @@ Quality evidence identifies its source and tested context so its applicability t
 
 ### Related Standards
 
-- [Traceable Assurance Outcomes](outcome-driven-assurance.md#traceable-assurance-outcomes)
-- [Artifact Identity & Immutability](../delivery-release/build-artifact-management.md#artifact-identity-immutability)
+- [Outcome Driven Assurance: Traceable Assurance Outcomes](outcome-driven-assurance.md#traceable-assurance-outcomes)
+- [Build & Artifact Management: Artifact Identity & Immutability](../delivery-release/build-artifact-management.md#artifact-identity-immutability)
 
 ### Implements These Principles
 

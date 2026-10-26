@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-10-27
 ---
 
 # Version Control {: .standard-references }
@@ -125,6 +125,6 @@ A change remains traceable from its branch through its merge request and commit 
 ### Implements These Principles
 
 - [Everything as Code](../../principles/engineering-practice/everything-as-code.md)
-- [AI-Assisted Engineering](../../principles/engineering-practice/ai-assisted-engineering.md)
+- [Accountability and Equal Standards](../../principles/engineering-practice/ai-assisted-engineering.md#accountability-and-equal-standards)
 
 - [Automation](../../principles/engineering-practice/automation.md)

@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-22
+last_edited: 2026-10-27
 ---
 
 # Quality Roles & Responsibilities {: .standard-references }
@@ -18,7 +18,7 @@ Quality and testing activities have documented role assignments that establish r
 
 ### Related Standards
 
-- [Clear Test Outcomes](outcome-driven-assurance.md#clear-test-outcomes)
+- [Outcome Driven Assurance: Clear Test Outcomes](outcome-driven-assurance.md#clear-test-outcomes)
 
 ### Implements These Principles
 
@@ -57,8 +57,8 @@ The QA function has visibility of and evaluates quality and testing activities r
 
 ### Related Standards
 
-- [Clear and Useful Test Evidence](outcome-driven-assurance.md#clear-and-useful-test-evidence)
-- [Complete Quality Reporting](evidence-reporting.md#complete-quality-reporting)
+- [Outcome Driven Assurance: Clear and Useful Test Evidence](outcome-driven-assurance.md#clear-and-useful-test-evidence)
+- [Evidence & Reporting: Complete Quality Reporting](evidence-reporting.md#complete-quality-reporting)
 
 ### Implements These Principles
 

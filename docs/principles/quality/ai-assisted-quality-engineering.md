@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-21
+last_edited: 2026-10-27
 ---
 
 # AI-Assisted Quality Engineering
@@ -19,8 +19,6 @@ QA checks each point where AI affects a product or quality decision. The finishe
 ### Implemented By These Standards
 
 - [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
-- [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
-- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 - [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 
 ## People Remain Responsible
@@ -39,7 +37,6 @@ Responsible people define the expected outcome, review the evidence in context, 
 
 - [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
 - [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
-- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 - [Version Control](../../standards/code-implementation/version-control.md)
 - [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 
@@ -59,7 +56,6 @@ Checks against agreed requirements, observed system behaviour, repeatable tests,
 
 - [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
 - [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
-- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
 - [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 
@@ -111,8 +107,6 @@ People can follow new evidence, recognise missing context, explore unexpected be
 
 ### Implemented By These Standards
 
-- [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
-- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
 - [AI-Assisted Quality Engineering](../../standards/quality-engineering/ai-assisted-quality-engineering.md)
 

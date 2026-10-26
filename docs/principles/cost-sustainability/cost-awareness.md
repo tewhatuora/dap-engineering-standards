@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-21
+last_edited: 2026-10-27
 ---
 
 # Cost Awareness
@@ -28,7 +28,7 @@ Building a capability that already exists adds development and maintenance work 
 
 ### Summary
 
-A service's spending and resource use reflect its demand and value while preserving the capacity and controls needed for reliability, performance, and security.
+Spending and resource use for services and engineering tools reflect their demand and value while preserving the capacity and controls needed for reliability, performance, and security.
 
 ### Reasoning
 
@@ -62,17 +62,19 @@ Usage-based engineering tools may charge per request or operation. Matching the 
 
 ### Summary
 
-A service is designed so its cost can be measured and attributed to the team responsible for it.
+The cost of services and engineering tools is measurable and attributable to the teams responsible for it.
 
 ### Reasoning
 
-Total spending does not show which service incurred a cost, which change affected it, or who can act on it. Without that detail, teams cannot distinguish expected growth from waste or link spending to the service behaviour that caused it.
+Aggregate spending does not show which service or engineering tool incurred a cost, which change affected it, or who can act on it. Without that detail, teams cannot distinguish expected growth from waste or link spending to the activity that caused it.
 
-Designing for cost measurement and attribution links spending to the engineering decisions that control it. The responsible team can then spot cost changes and assess whether the service's usage and value still justify them.
+Measuring and attributing cost links spending to the engineering decisions that control it. The responsible team can then spot cost changes and assess whether actual usage and value still justify them.
 
 ### Implemented By These Standards
 
+- [AI Tooling Cost Management](../../standards/ai-engineering/ai-tooling-cost-management.md)
 - [Cost & Impact Visibility](../../standards/cost-sustainability/cost-impact-visibility.md)
+- [Continuous Integration](../../standards/delivery-release/continuous-integration.md)
 - [Serverless](../../standards/platform-infrastructure/serverless.md)
 
 ## Cost Change Detection
@@ -106,6 +108,7 @@ Comparing actual operation and spending with the original assumptions reveals th
 ### Implemented By These Standards
 
 - [AI Tooling Cost Management](../../standards/ai-engineering/ai-tooling-cost-management.md)
+- [Cost & Impact Visibility](../../standards/cost-sustainability/cost-impact-visibility.md)
 - [Resource Efficiency & Optimisation](../../standards/cost-sustainability/resource-efficiency-optimisation.md)
 - [Container Orchestration](../../standards/platform-infrastructure/container-orchestration.md)
 - [Test Automation](../../standards/quality-engineering/test-automation.md)

@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-21
+last_edited: 2026-10-27
 ---
 
 # Data Privacy
@@ -39,8 +39,6 @@ A protective default makes any reduction in privacy a clear decision. The person
 
 ### Implemented By These Standards
 
-- [Approved AI Tooling](../../standards/ai-engineering/approved-ai-tooling.md)
-- [Prompt Data Handling](../../standards/ai-engineering/prompt-data-handling.md)
 - [API Design](../../standards/architecture-system-design/api-design.md)
 - [Event-Driven Messaging](../../standards/architecture-system-design/event-driven-messaging.md)
 

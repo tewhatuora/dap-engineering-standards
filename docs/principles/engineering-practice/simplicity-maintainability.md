@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-21
+last_edited: 2026-10-23
 ---
 
 # Simplicity and Maintainability
@@ -104,7 +104,6 @@ As technical debt grows and more code depends on it, routine changes become more
 
 ### Implemented By These Standards
 
-- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
 - [Linting & Style Enforcement](../../standards/code-implementation/linting-style-enforcement.md)
 - [Static Code Analysis](../../standards/code-implementation/static-code-analysis.md)

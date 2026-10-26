@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-10-21
 ---
 
 # Cost & Impact Visibility {: .standard-references }
@@ -19,7 +19,7 @@ A service's recurring cost is measurable separately from aggregate spend, attrib
 
 ### Implements These Principles
 
-- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+- [Cost Visibility and Attribution](../../principles/cost-sustainability/cost-awareness.md#cost-visibility-and-attribution)
 
 ## Cost Alerting
 
@@ -40,7 +40,9 @@ A service alerts its responsible team when measured or forecast cost exceeds a d
 
 ### Implements These Principles
 
-- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+- [Cost Visibility and Attribution](../../principles/cost-sustainability/cost-awareness.md#cost-visibility-and-attribution)
+- [Cost Change Detection](../../principles/cost-sustainability/cost-awareness.md#cost-change-detection)
+- [Cost Reassessment](../../principles/cost-sustainability/cost-awareness.md#cost-reassessment)
 - [Automation](../../principles/engineering-practice/automation.md)
 
 ## Environmental Impact Records

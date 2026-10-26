@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-10-21
 ---
 
 # Serverless {: .standard-references }
@@ -193,4 +193,4 @@ Invocation flows propagate trace context where available, with duration and cost
 ### Implements These Principles
 
 - [Observability](../../principles/reliability-operations/observability.md)
-- [Cost Awareness](../../principles/cost-sustainability/cost-awareness.md)
+- [Cost Visibility and Attribution](../../principles/cost-sustainability/cost-awareness.md#cost-visibility-and-attribution)

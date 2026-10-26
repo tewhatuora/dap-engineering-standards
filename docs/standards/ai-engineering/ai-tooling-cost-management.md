@@ -1,21 +1,19 @@
 ---
-last_edited: 2026-09-14
+last_edited: 2026-10-27
 ---
 
 # AI Tooling Cost Management {: .standard-references }
-
-> Developers using AI tools should also consult the [Token Optimization Best Practises - Visual Guide](https://ashy-dune-0b4215a0f.7.azurestaticapps.net/index.html#) for practical guidance on reducing token usage and its associated cost.
 
 ## Context Scoping
 
 ### Summary
 
-An AI tool request is limited to the minimum context required for the task.
+AI session context should be proportionate to the scope of the task.
 
 ### Standards
 
 1. AI tool requests **SHOULD** contain only context relevant and reasonably necessary to complete the task. `std-ai-context-scoping-01`
-2. Broad, whole-repository context **SHOULD** be reserved for cases where narrower, targeted context has already failed. `std-ai-context-scoping-02`
+2. Broad, whole-repository context **SHOULD** be reserved for repository-wide analysis or cases where narrower, targeted context has already failed. `std-ai-context-scoping-02`
 
 ### Implements These Principles
 
@@ -25,7 +23,7 @@ An AI tool request is limited to the minimum context required for the task.
 
 ### Summary
 
-An AI tool session maintains bounded context relevant to its current task.
+AI tool sessions should maintain bounded context relevant to their current task.
 
 ### Standards
 
@@ -40,7 +38,7 @@ An AI tool session maintains bounded context relevant to its current task.
 
 ### Summary
 
-Model choice and reasoning effort are proportionate to the task's complexity.
+Model choice and reasoning effort should be proportionate to the task's complexity.
 
 ### Standards
 
@@ -55,13 +53,13 @@ Model choice and reasoning effort are proportionate to the task's complexity.
 
 ### Summary
 
-AI tooling configuration reduces repeated processing of custom instructions and tool definitions.
+AI tooling configuration should reduce repeated processing of custom instructions and tool definitions.
 
 ### Standards
 
 1. Organisation-wide and project-level custom instructions **SHOULD** contain only context that applies across the requests that receive them. `std-ai-custom-instructions-tooling-01`
 2. Organisation-wide and project-level custom instructions **SHOULD** remain stable between requests to benefit from provider-side caching and avoid repeated cost. `std-ai-custom-instructions-tooling-02`
-3. Tools, extensions, or integrations not required for the current project **SHOULD** be disabled because their definitions may be included in every request regardless of use. `std-ai-custom-instructions-tooling-03`
+3. Tools, extensions, or integrations not required for the current task **SHOULD** be disabled because their definitions may be included in every request regardless of use. `std-ai-custom-instructions-tooling-03`
 
 ### Implements These Principles
 
@@ -71,13 +69,13 @@ AI tooling configuration reduces repeated processing of custom instructions and 
 
 ### Summary
 
-AI tooling cost remains visible, attributable, and subject to reassessment when pricing changes materially.
+AI tooling cost or usage should be monitored and attributed to the responsible team, and usage practices are reassessed after material pricing changes.
 
 ### Standards
 
 1. Cost or usage attributable to AI tooling **SHOULD** be monitored. `std-ai-cost-monitoring-pricing-01`
-2. Cost or usage attributable to AI tooling **SHOULD** be attributed. `std-ai-cost-monitoring-pricing-02`
-4. The team responsible for AI tooling adoption **MUST** reassess usage practices after a material change to a vendor's billing or pricing model. `std-ai-cost-monitoring-pricing-03`
+2. Cost or usage attributable to AI tooling **SHOULD** be attributed to the team responsible for incurring it. `std-ai-cost-monitoring-pricing-02`
+3. The team responsible for AI tooling adoption **SHOULD** reassess usage practices after a material change to a vendor's billing or pricing model. `std-ai-cost-monitoring-pricing-03`
 
 ### Implements These Principles
 
@@ -88,7 +86,7 @@ AI tooling cost remains visible, attributable, and subject to reassessment when 
 
 ### Summary
 
-Teams periodically measure and evaluate cost-optimisation practices in their own context.
+Teams should periodically measure and evaluate cost-optimisation practices in their own context.
 
 ### Standards
 

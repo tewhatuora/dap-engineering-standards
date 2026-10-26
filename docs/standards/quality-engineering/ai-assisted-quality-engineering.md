@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-09-22
+last_edited: 2026-10-27
 ---
 
 # AI-Assisted Quality Engineering {: .standard-references }
@@ -18,9 +18,9 @@ Each use of AI that affects engineering work, product functionality, or quality 
 
 ### Related Standards
 
-- [Outcome Driven Assurance](outcome-driven-assurance.md#clear-test-outcomes)
-- [Quality Roles & Responsibilities](quality-roles-responsibilities.md#qa-oversight-across-quality-activities)
-- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#quality-testing-security)
+- [Outcome Driven Assurance: Clear Test Outcomes](outcome-driven-assurance.md#clear-test-outcomes)
+- [Quality Roles & Responsibilities: QA Oversight Across Quality Activities](quality-roles-responsibilities.md#qa-oversight-across-quality-activities)
+- [AI-Assisted Development: Quality, Testing & Security](../ai-engineering/ai-assisted-development.md#quality-testing-security)
 
 ### Implements These Principles
 
@@ -41,8 +41,8 @@ Every quality decision informed by AI-generated evidence is made by an identifie
 
 ### Related Standards
 
-- [Quality Roles & Responsibilities](quality-roles-responsibilities.md#defined-quality-roles-and-responsibilities)
-- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#high-risk-use)
+- [Quality Roles & Responsibilities: Defined Quality Roles and Responsibilities](quality-roles-responsibilities.md#defined-quality-roles-and-responsibilities)
+- [AI-Assisted Development: Developer Accountability](../ai-engineering/ai-assisted-development.md#developer-accountability)
 
 ### Implements These Principles
 
@@ -63,9 +63,8 @@ AI-produced work and AI-generated evidence are checked against a reliable source
 
 ### Related Standards
 
-- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#quality-testing-security)
-- [AI Usage & Verification in Code Review](../ai-engineering/ai-usage-verification-in-code-review.md#pre-submission-verification)
-- [Evidence & Reporting](evidence-reporting.md#current-and-traceable-evidence)
+- [AI-Assisted Development: Quality, Testing & Security](../ai-engineering/ai-assisted-development.md#quality-testing-security)
+- [Evidence & Reporting: Current and Traceable Evidence](evidence-reporting.md#current-and-traceable-evidence)
 
 ### Implements These Principles
 
@@ -87,9 +86,9 @@ Functionality that utilizes AI is tested against defined quality goals under var
 
 ### Related Standards
 
-- [Outcome Driven Assurance](outcome-driven-assurance.md#quality-acceptance-criteria)
-- [Evidence & Reporting](evidence-reporting.md#current-and-traceable-evidence)
-- [Metrics, Monitoring & Alerting](../operations-observability/metrics-monitoring-alerting.md#dashboards)
+- [Outcome Driven Assurance: Quality Acceptance Criteria](outcome-driven-assurance.md#quality-acceptance-criteria)
+- [Evidence & Reporting: Current and Traceable Evidence](evidence-reporting.md#current-and-traceable-evidence)
+- [Metrics, Monitoring & Alerting: Dashboards](../operations-observability/metrics-monitoring-alerting.md#dashboards)
 
 ### Implements These Principles
 
@@ -110,12 +109,13 @@ An AI agent performing quality activities works within recorded limits, produces
 
 ### Related Standards
 
-- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#ai-agent-access)
-- [Identity & Access Management](../security-identity/identity-access-management.md#ai-agent-access)
-- [Evidence & Reporting](evidence-reporting.md#current-and-traceable-evidence)
+- [AI-Assisted Development: AI Agent Access](../ai-engineering/ai-assisted-development.md#ai-agent-access)
+- [Identity & Access Management: AI Agent Access](../security-identity/identity-access-management.md#ai-agent-access)
+- [Evidence & Reporting: Current and Traceable Evidence](evidence-reporting.md#current-and-traceable-evidence)
 
 ### Implements These Principles
 
+- [Bounded Agent Impact](../../principles/engineering-practice/ai-assisted-engineering.md#bounded-agent-impact)
 - [Controlled and Traceable AI Agents](../../principles/quality/ai-assisted-quality-engineering.md#controlled-and-traceable-ai-agents)
 
 ## Human Exploration and Expert Judgement
@@ -132,9 +132,8 @@ People investigate risks and results that need exploration, context, or expert j
 
 ### Related Standards
 
-- [Test Automation](test-automation.md#automation-complements-human-testing)
-- [AI Usage & Verification in Code Review](../ai-engineering/ai-usage-verification-in-code-review.md#ai-assisted-review)
-- [AI-Assisted Development](../ai-engineering/ai-assisted-development.md#high-risk-use)
+- [Test Automation: Automation Complements Human Testing](test-automation.md#automation-complements-human-testing)
+- [AI-Assisted Development: Code Review](../ai-engineering/ai-assisted-development.md#code-review)
 
 ### Implements These Principles
 
@@ -155,8 +154,8 @@ AI use in quality engineering is compared with defined quality, risk, effort, an
 
 ### Related Standards
 
-- [Evidence & Reporting](evidence-reporting.md#complete-quality-reporting)
-- [AI Tooling Cost Management](../ai-engineering/ai-tooling-cost-management.md#cost-optimisation-review)
+- [Evidence & Reporting: Complete Quality Reporting](evidence-reporting.md#complete-quality-reporting)
+- [AI Tooling Cost Management: Cost Optimisation Review](../ai-engineering/ai-tooling-cost-management.md#cost-optimisation-review)
 
 ### Implements These Principles
 

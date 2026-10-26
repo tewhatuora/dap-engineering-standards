@@ -1,5 +1,5 @@
 ---
-last_edited: 2026-10-21
+last_edited: 2026-10-23
 ---
 
 # Automation
@@ -125,7 +125,6 @@ Human review considers the intended outcome and wider consequences. It can chall
 
 - [AI-Assisted Development](../../standards/ai-engineering/ai-assisted-development.md)
 - [AI-Assisted Incident Investigation](../../standards/ai-engineering/ai-assisted-incident-investigation.md)
-- [AI Usage & Verification in Code Review](../../standards/ai-engineering/ai-usage-verification-in-code-review.md)
 - [Branching Strategy](../../standards/code-implementation/branching-strategy.md)
 - [Code Review](../../standards/code-implementation/code-review.md)
 - [Database Migration Tooling](../../standards/code-implementation/database-migration-tooling.md)
